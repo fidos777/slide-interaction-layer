@@ -10,8 +10,23 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 ## [Unreleased]
 
 ### Planned
-- **v0.3** — more patterns: timeline, before/after slider, drag-match, ranking.
+- **v0.3.1** — optional machine-readable `ontology.json` sidecar (schema designed against real decks).
+- **patterns** — timeline, before/after slider, drag-match, ranking.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.3.0] — 2026-06-26
+### Added
+- **Element Ontology** semantic layer in `ontology/` (docs only) — classifies *what* content is
+  (`E1`–`E15`) before choosing *how* to present it (`P0`–`P8`):
+  `README.md`, `element-ontology.md` (15 element types), `element-to-pattern-map.md`
+  (mapping + gating justification), `metadata-format.md`, `audit-checks.md`.
+- `SKILL.md` gains an **Ontology-first** flow (recommended for learning/courseware, optional for
+  everyday decks): classify → map → select (taxonomy) → gate.
+- README **Element ontology** section + roadmap update.
+### Notes
+- Element IDs are `E`-prefixed and do not collide with `P0`–`P8`. Docs only — **no runtime, no
+  components, no taxonomy ID changes**. Optional; core decks are unaffected. The `ontology.json`
+  sidecar is deferred to v0.3.1.
 
 ## [0.2.0] — 2026-06-26
 ### Added
@@ -76,7 +91,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.4...v0.1.5

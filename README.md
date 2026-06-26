@@ -133,6 +133,19 @@ in to **completion gating**: forward navigation waits until a slide's required a
 It's opt-in, **fail-open** (no JS → fully navigable), accessible, and needs no component changes.
 Full details and per-interaction overrides: [`gating/README.md`](gating/README.md).
 
+## Element ontology (optional, recommended for learning)
+
+A semantic layer **above** the taxonomy: it names *what* a piece of content is (`E1`–`E15`) before
+you pick *how* to present it (`P0`–`P8`). It renders nothing — pure classification that makes pattern
+choice consistent and auditable. Recommended for learning/courseware; skippable for everyday decks.
+
+```
+Element Ontology (WHAT) → Taxonomy P0–P8 (HOW) → Gating (SHOULD progression wait)
+```
+
+Catalog, mapping, metadata format, and governance checks: [`ontology/`](ontology/). Element IDs are
+`E`-prefixed and never collide with the `P` patterns.
+
 ## Design constraints (so it stays compatible with `frontend-slides`)
 
 - Single self-contained HTML files. No npm, no build step.
@@ -170,8 +183,9 @@ The core layer stays universal. Optional, namespaced extensions add domain-speci
 ## Roadmap
 
 - **v0.1** — 8 MVP patterns, taxonomy, decision rules, working components, demo decks.
-- **v0.2 (current)** — ✅ optional completion-gating runtime (`gating/gate.js`) + gated example.
-- **v0.3** — more patterns (timeline, before/after slider, drag-match, ranking).
+- **v0.2** — ✅ optional completion-gating runtime (`gating/gate.js`) + gated example.
+- **v0.3 (current)** — ✅ Element Ontology semantic layer (`ontology/`). Next: more patterns
+  (timeline, before/after slider, drag-match, ranking) and the optional `ontology.json` sidecar (v0.3.1).
 - **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
 
 ## Changelog

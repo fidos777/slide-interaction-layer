@@ -54,6 +54,22 @@ Put this as an HTML comment above the slide so the choice is auditable:
      fallback: static labeled diagram -->
 ```
 
+## Ontology-first (optional — recommended for learning/courseware)
+
+For learning or courseware decks, classify the content **before** choosing a pattern. This makes
+choices consistent and auditable. For everyday presentation decks, **skip this** and go straight to
+the Decision shortcut below — the ontology is never required.
+
+```
+A. CLASSIFY (ontology)     — name the element type (E1–E15) + the learning objective.
+B. MAP (ontology→taxonomy) — get candidate pattern(s) for that element.
+C. SELECT (taxonomy)       — apply the Decision shortcut / decision rules to pick the final pattern.
+D. GATE (gating, opt-in)   — if courseware + required + gateable, set the gating rule.
+```
+
+Catalog + mapping live in [`ontology/`](ontology/) (`element-ontology.md`,
+`element-to-pattern-map.md`). Element IDs are `E`-prefixed and never collide with the `P` patterns.
+
 ## Decision shortcut
 
 If the slide content is mainly…
