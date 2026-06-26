@@ -116,6 +116,22 @@ Open these single-file decks in any browser (← → / Space to navigate; click 
   practice — picking the right interaction per slide for a genuine business topic, with static
   intro/closing slides and ~67% interactive (teaching-deck budget), every interactive slide carrying
   its `interaction / reason / completion_rule / fallback` metadata.
+- [`examples/gated-training-demo.html`](examples/gated-training-demo.html) — the **optional
+  completion-gating** runtime in action: forward navigation is blocked on each slide until its
+  activity is finished (reveal/hotspot/quiz/branching/calculator). Backward always works.
+
+## Completion gating (optional)
+
+By default decks are **ungated** — nothing blocks navigation. For training / e-learning you can opt
+in to **completion gating**: forward navigation waits until a slide's required activity is complete.
+
+```html
+<script src="gating/gate.js"></script>
+<div id="stage" data-sil-gating="training">…</div>   <!-- off (default) | on | training -->
+```
+
+It's opt-in, **fail-open** (no JS → fully navigable), accessible, and needs no component changes.
+Full details and per-interaction overrides: [`gating/README.md`](gating/README.md).
 
 ## Design constraints (so it stays compatible with `frontend-slides`)
 
@@ -153,8 +169,8 @@ The core layer stays universal. Optional, namespaced extensions add domain-speci
 
 ## Roadmap
 
-- **v0.1 (this)** — 8 MVP patterns, taxonomy, decision rules, working components, demo deck.
-- **v0.2** — completion-gating (require all hotspots clicked before "next"), per-slide metadata.
+- **v0.1** — 8 MVP patterns, taxonomy, decision rules, working components, demo decks.
+- **v0.2 (current)** — ✅ optional completion-gating runtime (`gating/gate.js`) + gated example.
 - **v0.3** — more patterns (timeline, before/after slider, drag-match, ranking).
 - **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
 

@@ -10,10 +10,26 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 ## [Unreleased]
 
 ### Planned
-- **v0.2** — opt-in completion-gating runtime (block "next" until e.g. `all_hotspots_clicked` /
-  `answered_correctly`) + per-slide metadata polish. Behavioral; the core never depends on it.
 - **v0.3** — more patterns: timeline, before/after slider, drag-match, ranking.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.2.0] — 2026-06-26
+### Added
+- **Optional completion-gating runtime** `gating/gate.js` — blocks forward navigation on a slide
+  until its required interaction is complete. **Opt-in** (`data-sil-gating="on" | "training"`),
+  **off by default**, **fail-open** (no JS → fully navigable), engine-agnostic, accessible
+  (`aria-disabled` next control, focus to the incomplete activity, polite live hint), backward
+  navigation always allowed. Reads existing component signals — **no component changes**.
+- `gating/README.md` — how to enable, modes, gateable patterns, overrides, a11y, fail-open.
+- `examples/gated-training-demo.html` — a gated deck exercising all five gateable patterns
+  (reveal cards, hotspot, quiz, branching, calculator) in `training` mode.
+- README **Completion gating** section + gallery entry; roadmap marks v0.2 delivered.
+### Notes
+- Calculator uses strict `user_changed` (does not count the on-load worked example); quiz training
+  default is `answered_correctly`. No core taxonomy ID changes; core decks remain ungated.
+### Compatibility
+- Backward compatible. Decks without `data-sil-gating` (and without `gate.js`) behave exactly as
+  v0.1.6 — verified.
 
 ## [0.1.6] — 2026-06-26
 ### Added
@@ -60,7 +76,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.6...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.3...v0.1.4
