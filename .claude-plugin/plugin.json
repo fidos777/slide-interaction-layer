@@ -1,0 +1,12 @@
+{
+  "name": "slide-interaction-layer",
+  "version": "0.1.2",
+  "description": "Interaction design system for AI-generated HTML slide decks. Decides which interaction pattern fits each slide (reveal cards, accordion, tooltip, modal, hotspot, quiz, branching, calculator) and builds accessible, presentation-friendly HTML/CSS/JS. Works with frontend-slides.",
+  "author": {
+    "name": "fidos777"
+  },
+  "homepage": "https://github.com/fidos777/slide-interaction-layer",
+  "repository": "https://github.com/fidos777/slide-interaction-layer",
+  "license": "MIT",
+  "keywords": ["slides", "presentation", "interaction-design", "frontend-slides", "html", "taxonomy", "e-learning"]
+}

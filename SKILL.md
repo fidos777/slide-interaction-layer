@@ -79,3 +79,28 @@ Working code to adapt: `components/<pattern>/`.
 - [ ] Keyboard + reduced-motion + focus states present
 - [ ] No slide overflows or scrolls the 1920×1080 stage
 - [ ] Verified in a rendered screenshot, not just by reading the code
+
+## Maintainer Mode
+
+When asked to maintain this repository, operate as its maintainer in a goal-driven loop — not as
+a one-off task runner. Follow `MAINTAINER.md` for the operating loop and Definition of Done.
+
+Loop each iteration:
+
+1. Inspect the repository (structure, README, SKILL.md, examples, open gaps).
+2. Identify the single highest-impact improvement toward the stated goal.
+3. Plan the smallest safe change that delivers it.
+4. Implement it.
+5. Verify with checks (links resolve, examples still run, JS parses, no temp/nested-archive files).
+6. Update docs (README/SKILL.md) if behavior changed.
+7. Commit a meaningful, scoped change.
+8. Recommend a release only when the change is user-facing.
+
+Stop only when one of these is true:
+
+- the loop's success criteria / Definition of Done are met,
+- a blocker needs the user's decision, or
+- the next step requires publishing or credential access (pushing, releasing, admin console).
+
+Every maintainer report must include: what changed, why it matters, how it was verified, the
+risks, and the next highest-value task.
