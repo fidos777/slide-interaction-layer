@@ -160,6 +160,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
   <div id="stage">
 
     <!-- 1 — P0 Static (title; never interactive) -->
+    <!-- element: E14 motivation/framing
+         objective: "Hook SME owners: run the business, let AI run the busywork"
+         pattern: P0 static
+         gating: none (ungated presentation deck)
+         rationale: "a title/hook sets tone — never interactive" -->
     <!-- interaction: P0 static | reason: title slide | fallback: n/a -->
     <section class="slide active">
       <div class="topbar"><span>AI Workflow / SME Edition</span><span class="idx">01 — 09</span></div>
@@ -169,6 +174,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 2 — P0 Static (narrative hook with stats) -->
+    <!-- element: E9 fact/data
+         objective: "Quantify the cost of admin so the problem feels real"
+         pattern: P0 static
+         gating: none (ungated presentation deck)
+         rationale: "reference figures must stay visible — never hidden behind a click" -->
     <!-- interaction: P0 static | reason: scene-setting, not exploration | fallback: n/a -->
     <section class="slide">
       <div class="topbar"><span>Where the hours go</span><span class="idx">02 — 09</span></div>
@@ -183,6 +193,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 3 — P1 Reveal Cards -->
+    <!-- element: E2 principle/rule
+         objective: "Internalize the four shifts from tools to workflows"
+         pattern: P1 reveal-cards
+         gating: none (ungated presentation deck)
+         rationale: "4 short parallel principles → reveal one at a time" -->
     <!-- interaction: P1 reveal-cards | reason: 4 short parallel ideas (a mindset shift) | completion: all_cards_revealed | fallback: cards readable when dim -->
     <section class="slide">
       <div class="topbar"><span>The mindset shift</span><span class="idx">03 — 09</span></div>
@@ -199,6 +214,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 4 — P5 Hotspot -->
+    <!-- element: E3 process/procedure
+         objective: "Learn the four stages of an AI workflow: Capture → Draft → Review → Send"
+         pattern: P5 hotspot
+         gating: none (ungated presentation deck; would gate all_hotspots_clicked in training mode)
+         rationale: "a staged process with discrete parts → explore each stage" -->
     <!-- interaction: P5 hotspot | reason: a 4-stage workflow map with discrete parts | completion: all_hotspots_clicked | fallback: labeled static diagram -->
     <section class="slide">
       <div class="topbar"><span>The AI workflow map</span><span class="idx">04 — 09</span></div>
@@ -220,6 +240,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 5 — P2 Accordion + P3 Tooltip -->
+    <!-- element: E5 classification
+         objective: "See the categories of work where AI fits across the week"
+         pattern: P2 accordion (+ P3 tooltip for the term "AI workflow")
+         gating: none (ungated presentation deck)
+         rationale: "self-selectable categories of business function → accordion" -->
     <!-- interaction: P2 accordion | reason: optional detail by business function | completion: at_least_one_opened | fallback: all panels open -->
     <section class="slide">
       <div class="topbar"><span>Where AI fits your week</span><span class="idx">05 — 09</span></div>
@@ -240,6 +265,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 6 — P7 Branching -->
+    <!-- element: E10 decision/judgment
+         objective: "Decide which automation to build first and see the consequence"
+         pattern: P7 branching
+         gating: none (ungated presentation deck; would gate reached_an_ending in training mode)
+         rationale: "a choice with consequences → branching scenario" -->
     <!-- interaction: P7 branching | reason: a decision (which automation first) with consequences | completion: reached_an_ending | fallback: linear summary -->
     <section class="slide">
       <div class="topbar"><span>Choose your first move</span><span class="idx">06 — 09</span></div>
@@ -263,6 +293,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 7 — P8 Calculator -->
+    <!-- element: E12 calculation/estimation
+         objective: "Estimate the personal payback of automating one task"
+         pattern: P8 calculator
+         gating: none (ungated presentation deck; would gate user_changed in training mode)
+         rationale: "numbers in → tailored result → calculator" -->
     <!-- interaction: P8 calculator | reason: numbers in -> personalized result | completion: produced_a_result | fallback: worked example on load -->
     <section class="slide">
       <div class="topbar"><span>The payback, your numbers</span><span class="idx">07 — 09</span></div>
@@ -280,6 +315,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 8 — P6 Quiz -->
+    <!-- element: E11 assessment/check
+         objective: "Confirm the key takeaway: build the workflow before the automation"
+         pattern: P6 quiz
+         gating: none (ungated presentation deck; would gate answered_correctly in training mode)
+         rationale: "a recall check → quiz" -->
     <!-- interaction: P6 quiz | reason: end-of-deck recall check | completion: answered_correctly | fallback: correct answer marked -->
     <section class="slide">
       <div class="topbar"><span>Quick recap</span><span class="idx">08 — 09</span></div>
@@ -295,6 +335,11 @@ h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:60px;margin-
     </section>
 
     <!-- 9 — P0 Static (closing / CTA) -->
+    <!-- element: E14 motivation/framing
+         objective: "Leave the viewer with one concrete next step"
+         pattern: P0 static
+         gating: none (ungated presentation deck)
+         rationale: "a closing CTA sets resolve — never interactive" -->
     <!-- interaction: P0 static | reason: closing statement | fallback: n/a -->
     <section class="slide">
       <div class="topbar"><span>AI Workflow / SME Edition</span><span class="idx">09 — 09</span></div>

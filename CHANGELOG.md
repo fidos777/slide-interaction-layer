@@ -10,10 +10,20 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 ## [Unreleased]
 
 ### Planned
-- **v0.4.1** — `improvement/run-gate.sh` automating the mechanical AUDIT checks + scorecard scaffold.
+- **run-gate.sh** — automate the mechanical RRI AUDIT checks + scorecard scaffold.
 - **ontology.json sidecar** — optional machine-readable per-deck file (schema vs real decks).
 - **patterns** — timeline, before/after slider, drag-match, ranking.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.4.1] — 2026-06-27
+### Added
+- Annotated `examples/ai-workflow-for-smes.html` with **Element Ontology metadata** on every slide
+  (`element` E1–E15 + objective + pattern + gating + rationale), making it a worked example of the
+  ontology-first flow. README Demo Gallery notes the annotation.
+### Notes
+- Example/docs only — **no runtime, component, taxonomy ID, or ontology ID changes**. The deck's
+  behavior is unchanged (annotations are HTML comments). Elements used: E2, E3, E5, E9, E10, E11,
+  E12, E14 — all valid; patterns referenced: P0, P1, P2, P5, P6, P7, P8 — all valid.
 
 ## [0.4.0] — 2026-06-27
 ### Added
@@ -116,7 +126,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.2.0...v0.3.0

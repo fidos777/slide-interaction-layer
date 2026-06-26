@@ -115,7 +115,9 @@ Open these single-file decks in any browser (← → / Space to navigate; click 
   to a **real use case**: an "AI Workflow for SMEs" teaching deck. It shows the decision system in
   practice — picking the right interaction per slide for a genuine business topic, with static
   intro/closing slides and ~67% interactive (teaching-deck budget), every interactive slide carrying
-  its `interaction / reason / completion_rule / fallback` metadata.
+  its `interaction / reason / completion_rule / fallback` metadata. **It is also ontology-annotated**:
+  each slide has an `element` (E1–E15) + objective + pattern + gating + rationale comment, so it
+  doubles as a worked example of the ontology-first flow (see [`ontology/`](ontology/)).
 - [`examples/gated-training-demo.html`](examples/gated-training-demo.html) — the **optional
   completion-gating** runtime in action: forward navigation is blocked on each slide until its
   activity is finished (reveal/hotspot/quiz/branching/calculator). Backward always works.
