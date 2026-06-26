@@ -188,6 +188,16 @@ The core layer stays universal. Optional, namespaced extensions add domain-speci
   (timeline, before/after slider, drag-match, ranking) and the optional `ontology.json` sidecar (v0.3.1).
 - **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
 
+## Maintainer & philosophy
+
+This repo is maintained by **compound engineering** — every change leaves behind a reusable asset
+(spec, script, decision record) so the next change is easier. The maintainer runs the **CORD**
+cycle: **C**lassify → **O**perationalize → **R**euse → **D**ocument.
+
+- Operating model: [`docs/compound-engineering.md`](docs/compound-engineering.md)
+- Maintainer loop + CORD: [`MAINTAINER.md`](MAINTAINER.md)
+- Decision records (ADRs): [`decisions/`](decisions/)
+
 ## Changelog
 
 See [`CHANGELOG.md`](CHANGELOG.md) for the full release history (v0.1.0 → today).

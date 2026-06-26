@@ -10,9 +10,20 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 ## [Unreleased]
 
 ### Planned
-- **v0.3.1** — optional machine-readable `ontology.json` sidecar (schema designed against real decks).
+- **ontology.json sidecar** — optional machine-readable per-deck file (schema vs real decks).
 - **patterns** — timeline, before/after slider, drag-match, ranking.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.3.1] — 2026-06-26
+### Added
+- `docs/compound-engineering.md` — the compound-engineering operating model and the **CORD Method**
+  (Classify → Operationalize → Reuse → Document).
+- `decisions/` — Architecture Decision Records: ADR-0001 (P0–P8 taxonomy), ADR-0002 (gating runtime),
+  ADR-0003 (element ontology), ADR-0004 (ontology recommended-not-required), ADR-0005 (defer
+  ontology.json sidecar).
+- `MAINTAINER.md` gains a **CORD Method** section; README gains a **Maintainer & philosophy** note.
+### Notes
+- Docs only — **no runtime, component, taxonomy ID, or ontology ID changes**. Core decks unaffected.
 
 ## [0.3.0] — 2026-06-26
 ### Added
@@ -91,7 +102,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.5...v0.1.6

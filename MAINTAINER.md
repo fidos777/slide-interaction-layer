@@ -20,6 +20,21 @@ PLAN → IMPLEMENT → VERIFY → CRITIQUE → IMPROVE → COMMIT → (RELEASE o
 Each pass: pick the single highest-impact change, make the smallest safe version of it, verify it,
 then commit. Prefer many small correct commits over one big risky one.
 
+## CORD Method (Compound Engineering)
+
+Run each loop so it compounds — every change leaves behind a reusable asset. CORD is the cycle:
+
+1. **Classify** — name what the work *is* before acting (area, element/pattern, kind of change).
+2. **Operationalize** — make the smallest safe change, with a verification step and, if shipping, a
+   repeatable push script.
+3. **Reuse** — extend existing patterns/components/scripts/conventions; add capability opt-in and
+   additive so nothing it touches must change.
+4. **Document** — record what changed and *why* (CHANGELOG; an ADR in `decisions/` for real
+   decisions; README/SKILL updates).
+
+CORD is the "how"; the Loop above is the "when". Full model: [`docs/compound-engineering.md`](docs/compound-engineering.md).
+Decision records: [`decisions/`](decisions/).
+
 ## Definition of Done (per loop)
 
 A change is "done" only when all of these hold:
