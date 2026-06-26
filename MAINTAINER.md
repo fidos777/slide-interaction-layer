@@ -51,6 +51,24 @@ script) instead of doing it.
 - **Risks:** anything to watch.
 - **Next:** the next highest-value task.
 
+## E-learning Governance Mode
+
+When the task is producing **regulated e-learning / courseware** (not everyday slides), operate in
+this mode in addition to the base loop. It is defined by the optional extension
+`extensions/mmd-elearning/` — load that folder and follow its specs.
+
+- **Loop:** `REVIEW → SCAN → ROUTE → ASSEMBLE → QC → GATE → EVIDENCE → REPORT`
+  (see `extensions/mmd-elearning/cowork-operating-loop.md`).
+- **Tighter defaults:** completion-gating ON, required interactions tracked, fallbacks mandatory
+  (see `extensions/mmd-elearning/interaction-decision-sop.md`).
+- **Tracking surface:** the S0 readiness board, routed **dry-run / read-only**
+  (see `extensions/mmd-elearning/s0-board-governance.md`).
+- **Extra guardrails:** never publish/upload to an LMS, never write to a live board or system of
+  record, and never alter the **core** taxonomy/components from inside the extension — hand off
+  instead. (These add to, never relax, the base guardrails above.)
+
+This mode is **opt-in**. For normal decks, ignore it and use the base loop only.
+
 ## Roadmap reference
 
 - **v0.2** — completion-gating (block "next" until e.g. all hotspots clicked), per-slide metadata.

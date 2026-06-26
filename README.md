@@ -142,6 +142,15 @@ Anthropic skills and by `frontend-slides` itself.
 - **Other agents (Codex, Cursor):** there's no install step — just tell the agent to read
   `SKILL.md` and the `taxonomy/` folder as context (see `prompts/`).
 
+## Extensions (optional)
+
+The core layer stays universal. Optional, namespaced extensions add domain-specific governance
+**without changing** the core taxonomy, components, or pattern IDs — load them only when relevant.
+
+- [`extensions/mmd-elearning/`](extensions/mmd-elearning/) — **MMD E-learning Governance** (spec):
+  SOPs and vocabulary for producing regulated courseware (completion gating defaults, media
+  assembly, an S0 readiness board, and an AI maintainer loop). Ignore it for everyday decks.
+
 ## Roadmap
 
 - **v0.1 (this)** — 8 MVP patterns, taxonomy, decision rules, working components, demo deck.
