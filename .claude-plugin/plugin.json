@@ -1,6 +1,6 @@
 {
   "name": "slide-interaction-layer",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Interaction design system for AI-generated HTML slide decks. Decides which interaction pattern fits each slide (reveal cards, accordion, tooltip, modal, hotspot, quiz, branching, calculator) and builds accessible, presentation-friendly HTML/CSS/JS. Works with frontend-slides.",
   "author": {
     "name": "fidos777"

@@ -127,6 +127,9 @@ Open these single-file decks in any browser (← → / Space to navigate; click 
 
 ## Installation & compatibility
 
+> **New here?** [`INSTALL.md`](INSTALL.md) walks through three beginner-friendly install paths:
+> local agent usage, Claude plugin (local/manual), and the org-wide private marketplace.
+
 The skill entrypoint is **`SKILL.md`** (uppercase) — the convention used by Claude Code /
 Anthropic skills and by `frontend-slides` itself.
 
