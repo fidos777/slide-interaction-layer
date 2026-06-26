@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/fidos777/slide-interaction-layer/ontology/schema.json",
+  "title": "Slide Interaction Layer — deck ontology sidecar",
+  "description": "Machine-readable contract for a deck's Element Ontology. One sidecar per deck, generated FROM the deck's HTML element comments. Optional and recommended; the runtime does not read it.",
+  "type": "object",
+  "required": ["sidecarVersion", "deck", "slideCount", "slides"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "sidecarVersion": { "const": "1.0" },
+    "deck": { "type": "string", "description": "Relative path to the deck HTML file." },
+    "deckTitle": { "type": "string" },
+    "slideCount": { "type": "integer", "minimum": 1 },
+    "gatingMode": { "enum": ["off", "on", "training"], "default": "off" },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["index", "element", "objective", "pattern", "gating"],
+        "additionalProperties": false,
+        "properties": {
+          "index": { "type": "integer", "minimum": 1, "description": "1-based slide order, contiguous 1..slideCount." },
+          "element": { "type": "string", "pattern": "^E([1-9]|1[0-5])$", "description": "Element ID E1-E15 (see ontology/element-ontology.md)." },
+          "objective": { "type": "string", "minLength": 1, "description": "Learning objective in plain language (required)." },
+          "pattern": { "type": "string", "pattern": "^P[0-8]$", "description": "Interaction pattern ID P0-P8 (see taxonomy/)." },
+          "gating": {
+            "type": "string",
+            "description": "Completion rule, or 'none' for ungated. Required.",
+            "enum": ["none", "all_cards_revealed", "all_hotspots_clicked", "answered_correctly", "reached_an_ending", "user_changed", "at_least_one_opened", "attempted"]
+          },
+          "required": { "type": "boolean", "default": false, "description": "Whether engaging this interaction is required (gating)." },
+          "bloom": { "enum": ["remember", "understand", "apply", "analyze", "evaluate", "create"] },
+          "rationale": { "type": "string" }
+        }
+      }
+    }
+  }
+}

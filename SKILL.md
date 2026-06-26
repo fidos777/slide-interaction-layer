@@ -70,6 +70,13 @@ D. GATE (gating, opt-in)   — if courseware + required + gateable, set the gati
 Catalog + mapping live in [`ontology/`](ontology/) (`element-ontology.md`,
 `element-to-pattern-map.md`). Element IDs are `E`-prefixed and never collide with the `P` patterns.
 
+**Optional sidecar (recommended for courseware):** after annotating a deck with element comments, you
+may also emit a machine-readable `<deck>.ontology.json` next to it, conforming to
+[`ontology/schema.json`](ontology/schema.json) (worked example:
+`examples/ai-workflow-for-smes.ontology.json`). Generate it **from** the comments (one-way; comments
+stay the source of truth); keep `slideCount`/`index` in sync. It's for tooling — the runtime never
+reads it.
+
 ## Decision shortcut
 
 If the slide content is mainly…

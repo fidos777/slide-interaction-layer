@@ -44,8 +44,16 @@ The element comment is the *semantic* layer; the existing interaction comment
 (`interaction / reason / completion_rule / fallback`) is the *mechanics* layer. For courseware, write
 the element comment first (it explains the pattern choice), then the interaction comment.
 
-## Deferred: machine-readable sidecar (`ontology.json`)
+## Machine-readable sidecar (`<deck>.ontology.json`)
 
-A per-deck `ontology.json` (slide → element/objective/pattern/gating) is **planned for v0.3.1**. It
-is intentionally **not** specified here yet, so its schema can be designed against real decks. For
-v0.3.0, the annotation comment above is the source of truth.
+A per-deck sidecar carries the same fields in a deterministic JSON form for tooling (validators,
+course compilers, agents). The HTML comments stay the **human source of truth**; the sidecar is
+generated **from** them (one-way) and is **optional but recommended** for learning/courseware.
+
+- Schema (validation contract): [`schema.json`](schema.json)
+- Worked example: [`../examples/ai-workflow-for-smes.ontology.json`](../examples/ai-workflow-for-smes.ontology.json)
+- Convention: name it `<deck-basename>.ontology.json` next to the deck; keep `slideCount` and each
+  `index` in sync with the deck.
+
+The runtime does **not** read the sidecar; it is for tooling only. A validator CLI is planned for
+v0.5.1 — for now, validate against `schema.json` with any JSON Schema (draft 2020-12) tool.

@@ -10,10 +10,24 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 ## [Unreleased]
 
 ### Planned
+- **v0.5.1** — ontology sidecar validator CLI (enforces the schema + rules programmatically).
 - **run-gate.sh** — automate the mechanical RRI AUDIT checks + scorecard scaffold.
-- **ontology.json sidecar** — optional machine-readable per-deck file (schema vs real decks).
 - **patterns** — timeline, before/after slider, drag-match, ranking.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.5.0] — 2026-06-27
+### Added
+- **Machine-readable ontology sidecar** — `ontology/schema.json` (JSON Schema, draft 2020-12) and a
+  worked example `examples/ai-workflow-for-smes.ontology.json` mirroring the deck's 9 annotations.
+  Deterministic per-deck JSON (`element`/`objective`/`pattern`/`gating`/…) for validators, course
+  compilers, and agents.
+- `ontology/metadata-format.md`, `ontology/README.md`, and `SKILL.md` now document the sidecar;
+  `improvement/ontology-mapping-verifier.md` notes optional sidecar validation.
+### Notes
+- **Recommended, not required.** Generated **from** the HTML comments (one-way; comments remain the
+  source of truth). The runtime does **not** read the sidecar; a validator CLI is deferred to v0.5.1.
+  Schema hard-encodes valid IDs (E1–E15, P0–P8). No runtime, component, taxonomy ID, or ontology ID
+  changes.
 
 ## [0.4.1] — 2026-06-27
 ### Added
@@ -126,7 +140,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.0...v0.3.1

@@ -1,0 +1,19 @@
+{
+  "$schema": "../ontology/schema.json",
+  "sidecarVersion": "1.0",
+  "deck": "examples/ai-workflow-for-smes.html",
+  "deckTitle": "AI Workflow for SMEs",
+  "slideCount": 9,
+  "gatingMode": "off",
+  "slides": [
+    { "index": 1, "element": "E14", "objective": "Hook SME owners: run the business, let AI run the busywork", "pattern": "P0", "gating": "none", "rationale": "title/hook sets tone — never interactive" },
+    { "index": 2, "element": "E9", "objective": "Quantify the cost of admin so the problem feels real", "pattern": "P0", "gating": "none", "rationale": "reference figures must stay visible" },
+    { "index": 3, "element": "E2", "objective": "Internalize the four shifts from tools to workflows", "pattern": "P1", "gating": "none", "rationale": "4 short parallel principles -> reveal one at a time" },
+    { "index": 4, "element": "E3", "objective": "Learn the four stages of an AI workflow: Capture -> Draft -> Review -> Send", "pattern": "P5", "gating": "none", "rationale": "a staged process with discrete parts -> explore each stage" },
+    { "index": 5, "element": "E5", "objective": "See the categories of work where AI fits across the week", "pattern": "P2", "gating": "none", "rationale": "self-selectable categories of business function -> accordion" },
+    { "index": 6, "element": "E10", "objective": "Decide which automation to build first and see the consequence", "pattern": "P7", "gating": "none", "rationale": "a choice with consequences -> branching scenario" },
+    { "index": 7, "element": "E12", "objective": "Estimate the personal payback of automating one task", "pattern": "P8", "gating": "none", "rationale": "numbers in -> tailored result -> calculator" },
+    { "index": 8, "element": "E11", "objective": "Confirm the key takeaway: build the workflow before the automation", "pattern": "P6", "gating": "none", "rationale": "a recall check -> quiz" },
+    { "index": 9, "element": "E14", "objective": "Leave the viewer with one concrete next step", "pattern": "P0", "gating": "none", "rationale": "a closing CTA sets resolve — never interactive" }
+  ]
+}

@@ -24,5 +24,12 @@ grep -oE '^## E([1-9]|1[0-5])\b' ontology/element-ontology.md | sort -u | wc -l
 grep -oE '\bP[0-9]+\b' ontology/element-to-pattern-map.md | sort -u | grep -vE '^P[0-8]$'
 ```
 
+## Optional: validate the sidecar (if present)
+
+If a deck ships a `<deck>.ontology.json` sidecar, also validate it against
+[`../ontology/schema.json`](../ontology/schema.json): valid `E1`–`E15` / `P0`–`P8`, `objective` and
+`gating` present, `slideCount` == the deck's `.slide` count, and `index` contiguous `1..slideCount`.
+(A standalone validator CLI is planned for v0.5.1; until then use any JSON Schema draft 2020-12 tool.)
+
 ## Output
 PASS / FAIL + the offending IDs. A FAIL is a **blocker** for any release that changed the ontology.

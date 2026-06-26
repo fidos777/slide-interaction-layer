@@ -31,6 +31,7 @@ e-learning governance checks something concrete to verify.
 | [`element-to-pattern-map.md`](element-to-pattern-map.md) | Element → `P0`–`P8` mapping + when gating is justified. |
 | [`metadata-format.md`](metadata-format.md) | How to annotate slides/blocks (semantic comment + `data-sil-element`). |
 | [`audit-checks.md`](audit-checks.md) | Governance audit checks for courseware decks. |
+| [`schema.json`](schema.json) | JSON Schema for the optional machine-readable sidecar (`<deck>.ontology.json`). |
 
 ## How to use it (ontology-first flow)
 
@@ -46,8 +47,17 @@ D. GATE (gating, opt-in)   — if courseware + required + gateable, set the gati
 See the **"Ontology-first" section in [`../SKILL.md`](../SKILL.md)**. For non-learning decks, skip
 A–B and use the taxonomy directly.
 
+## Machine-readable sidecar
+
+A deck may carry an optional `<deck>.ontology.json` sidecar (same fields, deterministic JSON) for
+tooling. Schema: [`schema.json`](schema.json); worked example:
+[`../examples/ai-workflow-for-smes.ontology.json`](../examples/ai-workflow-for-smes.ontology.json).
+Generated **from** the HTML comments (one-way); the runtime does not read it. See
+[`metadata-format.md`](metadata-format.md).
+
 ## Status
 
-- **v0.3.0 (this):** docs only — the ontology, mapping, metadata guide, and audit checks.
-- **v0.3.1 (planned):** optional machine-readable `ontology.json` sidecar (deferred so its schema can
-  be designed against real decks).
+- **v0.3.0:** docs — ontology, mapping, metadata guide, audit checks.
+- **v0.5.0 (this):** optional machine-readable sidecar — `schema.json` + a worked example. **Recommended,
+  not required.**
+- **v0.5.1 (planned):** a validator CLI to enforce the schema/rules programmatically.

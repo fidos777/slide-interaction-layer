@@ -186,8 +186,10 @@ The core layer stays universal. Optional, namespaced extensions add domain-speci
 
 - **v0.1** — 8 MVP patterns, taxonomy, decision rules, working components, demo decks.
 - **v0.2** — ✅ optional completion-gating runtime (`gating/gate.js`) + gated example.
-- **v0.3 (current)** — ✅ Element Ontology semantic layer (`ontology/`). Next: more patterns
-  (timeline, before/after slider, drag-match, ranking) and the optional `ontology.json` sidecar (v0.3.1).
+- **v0.3** — ✅ Element Ontology semantic layer (`ontology/`).
+- **v0.4** — ✅ Recursive Repository Improvement (`improvement/`): pre-release gate + scorecards.
+- **v0.5 (current)** — ✅ machine-readable ontology sidecar (`ontology/schema.json` + example).
+  Next: validator CLI (v0.5.1) and more patterns (timeline, before/after slider, drag-match).
 - **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
 
 ## Maintainer & philosophy
