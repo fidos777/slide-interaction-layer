@@ -13,6 +13,39 @@ HTML/CSS/JS.
 
 ---
 
+## Quickstart (under 5 minutes)
+
+**1 · See it work (30s).** Open a demo in any browser, then use ← → / Space and click the interactions:
+
+- [`examples/demo-deck.html`](examples/demo-deck.html) — one slide per interaction pattern, each labeled.
+- [`examples/ai-workflow-for-smes.html`](examples/ai-workflow-for-smes.html) — the taxonomy applied to a real topic.
+
+**2 · Use it (1 prompt).** Point any AI coding agent at this folder and paste:
+
+```
+Read ./slide-interaction-layer/SKILL.md as a skill.
+Then use frontend-slides to build an interactive HTML deck about <your topic>.
+Apply the taxonomy to pick the right interaction per slide. Don't overuse popups.
+```
+
+**3 · Know the choices (at a glance).** The agent picks one pattern per slide:
+
+| If the slide is mainly… | Pattern |
+| ----------------------- | ------- |
+| a title, quote, or pure narrative | **P0** Static |
+| 3–6 short parallel ideas | **P1** Reveal Cards |
+| layered / optional detail, FAQ | **P2** Accordion |
+| a few inline terms to define | **P3** Tooltip |
+| one optional deep dive (rare) | **P4** Modal |
+| an image/diagram with parts | **P5** Hotspot |
+| a recall / knowledge check | **P6** Quiz |
+| a decision with consequences | **P7** Branching |
+| numbers in → tailored result | **P8** Calculator |
+
+That's the whole idea. Everything below is depth: the rules, the components, and how it plugs into `frontend-slides`.
+
+---
+
 ## The problem it solves
 
 When you ask an AI to "make an interactive deck," it usually does one of two bad things:
@@ -55,9 +88,9 @@ slide-interaction-layer/
     use-with-frontend-slides.md  ← copy-paste prompts
 ```
 
-## Quick start
+## Example prompt (fuller)
 
-Point your agent at this folder, then ask it to build a deck:
+A more complete prompt than the Quickstart one above:
 
 ```
 Read ./slide-interaction-layer/SKILL.md as a skill.
@@ -68,7 +101,8 @@ reveal cards, accordions, hotspots, quiz, branching, or calculator.
 Do not overuse popups.
 ```
 
-See [`prompts/use-with-frontend-slides.md`](prompts/use-with-frontend-slides.md) for more.
+See [`prompts/use-with-frontend-slides.md`](prompts/use-with-frontend-slides.md) for more recipes
+(add interactivity to an existing deck, build a gated training module, decision-only mode).
 
 ## Demo Gallery
 
