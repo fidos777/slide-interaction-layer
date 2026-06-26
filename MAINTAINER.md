@@ -84,6 +84,26 @@ this mode in addition to the base loop. It is defined by the optional extension
 
 This mode is **opt-in**. For normal decks, ignore it and use the base loop only.
 
+## Pre-release RRI gate (run before cutting any tag)
+
+Recursive Repository Improvement: every release measures itself and the result prioritizes the next.
+Run this loop before each release; full artifacts in [`improvement/`](improvement/).
+
+```
+LOAD   → improvement/repo-memory-loading-checklist.md   (state; live vs local freshness)
+AUDIT  → improvement/release-audit-checklist.md          (HARD gate; blockers stop the release)
+SCORE  → improvement/compound-scorecard.md               (8 axes, 1–10; deltas vs previous)
+VERIFY → improvement/ontology-mapping-verifier.md + improvement/example-quality-score.md
+REVIEW → improvement/decision-log-review.md              (ADR present if user-facing)
+ROUTE  → record the weakest axis as the NEXT release's candidate priority
+DECIDE → READY or BLOCKED (only READY proceeds to the push script)
+```
+
+- **AUDIT is fail-closed** (a red audit never ships); **SCORE/VERIFY are advisory** but a regression
+  needs a written reason.
+- **ROUTE closes the loop:** the weakest axis becomes the next loop's CORD *Classify* input.
+- Save a filled scorecard per release in `improvement/scorecards/<version>.md`.
+
 ## Roadmap reference
 
 - **v0.2** — completion-gating (block "next" until e.g. all hotspots clicked), per-slide metadata.

@@ -197,6 +197,10 @@ cycle: **C**lassify → **O**perationalize → **R**euse → **D**ocument.
 - Operating model: [`docs/compound-engineering.md`](docs/compound-engineering.md)
 - Maintainer loop + CORD: [`MAINTAINER.md`](MAINTAINER.md)
 - Decision records (ADRs): [`decisions/`](decisions/)
+- Recursive Repository Improvement (pre-release gate + scorecards): [`improvement/`](improvement/)
+
+Every release runs an RRI gate (LOAD → AUDIT → SCORE → VERIFY → REVIEW → ROUTE → DECIDE), so each
+release's weakest area becomes the next release's priority.
 
 ## Changelog
 

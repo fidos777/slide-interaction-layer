@@ -10,9 +10,23 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 ## [Unreleased]
 
 ### Planned
+- **v0.4.1** — `improvement/run-gate.sh` automating the mechanical AUDIT checks + scorecard scaffold.
 - **ontology.json sidecar** — optional machine-readable per-deck file (schema vs real decks).
 - **patterns** — timeline, before/after slider, drag-match, ranking.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.4.0] — 2026-06-27
+### Added
+- **Recursive Repository Improvement (RRI)** layer in `improvement/` (docs/manual) — a pre-release
+  gate that makes each release improve the next: `README.md`, `release-audit-checklist.md` (hard
+  gate), `compound-scorecard.md`, `ontology-mapping-verifier.md`, `example-quality-score.md`,
+  `decision-log-review.md`, `repo-memory-loading-checklist.md`, and `scorecards/v0.4.0.md`
+  (first real scorecard).
+- `MAINTAINER.md` gains the **RRI gate**: LOAD → AUDIT → SCORE → VERIFY → REVIEW → ROUTE → DECIDE.
+- README **Maintainer & philosophy** note points at the gate.
+### Notes
+- Docs only — **no runtime, taxonomy ID, ontology ID, or new interaction-pattern changes**. The
+  automation script (`run-gate.sh`) is deferred to v0.4.1. Scoring is 1–10 unweighted.
 
 ## [0.3.1] — 2026-06-26
 ### Added
@@ -102,7 +116,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.1.6...v0.2.0
