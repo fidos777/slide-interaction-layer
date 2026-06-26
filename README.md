@@ -158,6 +158,10 @@ The core layer stays universal. Optional, namespaced extensions add domain-speci
 - **v0.3** — more patterns (timeline, before/after slider, drag-match, ranking).
 - **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
 
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md) for the full release history (v0.1.0 → today).
+
 ## License
 
 MIT — use it, fork it, ship it.
