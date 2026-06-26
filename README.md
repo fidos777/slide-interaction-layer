@@ -1,0 +1,104 @@
+# Slide Interaction Layer
+
+An interaction design system for AI-generated HTML slide decks.
+
+It teaches AI coding agents (Claude Code, Codex, Cursor, and others) **when** to use which
+interaction pattern for a slide — reveal cards, accordions, tooltips, hotspots, quizzes,
+branching scenarios, calculators — and **how** to build them as accessible, presentation-friendly
+HTML/CSS/JS.
+
+> **It is not a slide generator.** It is the *interaction layer* that sits on top of one.
+> Works best with [`frontend-slides`](https://github.com/zarazhangrui/frontend-slides) and any other
+> HTML slide engine.
+
+---
+
+## The problem it solves
+
+When you ask an AI to "make an interactive deck," it usually does one of two bad things:
+
+1. Makes everything a popup/modal until the deck is unusable, or
+2. Makes nothing interactive and ships static text on a dark background.
+
+The missing piece is a **decision system**: a taxonomy of interaction patterns plus rules for
+*when each one is appropriate* and *when it is not*. That is what this layer provides.
+
+```
+content intent  →  choose interaction pattern  →  generate component  →  inject HTML/CSS/JS  →  validate usability
+```
+
+## Positioning
+
+| Layer | Job | Example |
+| ----- | --- | ------- |
+| Slide engine (`frontend-slides`) | Visual design, layout, animation, fixed 16:9 stage | The "car" |
+| **Slide Interaction Layer (this)** | Decide & build the right interaction per slide | The "driving mode" |
+
+The engine makes beautiful decks. This layer makes them **interactive, structured, and
+learning-ready** — without overusing popups.
+
+## What's inside
+
+```
+slide-interaction-layer/
+  README.md              ← you are here
+  SKILL.md               ← the instruction an AI agent reads
+  taxonomy/
+    interaction-taxonomy.md   ← the 8-pattern catalog (the "dictionary")
+    decision-rules.md         ← when to use / avoid each pattern (the "brain")
+  components/            ← real, working HTML/CSS/JS for each pattern
+    reveal-card/  accordion/  tooltip/  modal/
+    hotspot/      quiz/       branching/ calculator/
+  examples/
+    demo-deck.html       ← a full deck that uses the layer (proof it works)
+  prompts/
+    use-with-frontend-slides.md  ← copy-paste prompts
+```
+
+## Quick start
+
+Point your agent at this folder, then ask it to build a deck:
+
+```
+Read ./slide-interaction-layer/SKILL.md as a skill.
+Then use frontend-slides to create a 10-slide interactive HTML deck about
+"How small businesses can use AI to cut admin work."
+Apply the Slide Interaction Layer taxonomy to decide which slides are static,
+reveal cards, accordions, hotspots, quiz, branching, or calculator.
+Do not overuse popups.
+```
+
+See [`prompts/use-with-frontend-slides.md`](prompts/use-with-frontend-slides.md) for more.
+
+## Design constraints (so it stays compatible with `frontend-slides`)
+
+- Single self-contained HTML files. No npm, no build step.
+- Respects the fixed **1920×1080** stage — interactions never reflow the slide.
+- Every interactive pattern has a **static fallback** if JS is disabled or fails.
+- Keyboard-accessible and `prefers-reduced-motion` aware.
+- Interactions are scoped to the active slide only.
+
+## Installation & compatibility
+
+The skill entrypoint is **`SKILL.md`** (uppercase) — the convention used by Claude Code /
+Anthropic skills and by `frontend-slides` itself.
+
+- **Claude Code / Cowork / Anthropic skills:** point the agent at this folder; `SKILL.md` is
+  read automatically. No rename needed.
+- **Case-insensitive filesystems (macOS, Windows):** do **not** add a second `skill.md` — it
+  collides with `SKILL.md`. Keep one file.
+- **An installer that strictly expects lowercase `skill.md`:** on a case-sensitive filesystem
+  (most Linux) run `cp SKILL.md skill.md`; on macOS/Windows just rename `SKILL.md` → `skill.md`.
+- **Other agents (Codex, Cursor):** there's no install step — just tell the agent to read
+  `SKILL.md` and the `taxonomy/` folder as context (see `prompts/`).
+
+## Roadmap
+
+- **v0.1 (this)** — 8 MVP patterns, taxonomy, decision rules, working components, demo deck.
+- **v0.2** — completion-gating (require all hotspots clicked before "next"), per-slide metadata.
+- **v0.3** — more patterns (timeline, before/after slider, drag-match, ranking).
+- **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
+
+## License
+
+MIT — use it, fork it, ship it.

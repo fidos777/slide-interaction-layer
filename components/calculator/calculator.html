@@ -1,0 +1,44 @@
+<!-- P8 Calculator / Simulation — numbers in -> tailored result. completion: produced_a_result.
+     Static fallback: a worked example with default numbers (shown on load). -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P8 Calculator</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-calc{max-width:560px;background:var(--sil-panel);border:1px solid var(--sil-line);border-radius:16px;padding:26px}
+  .sil-calc h3{margin:0 0 18px}
+  .sil-row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:14px}
+  .sil-row label{color:var(--sil-muted);font-size:15px}
+  .sil-row input{width:120px;background:#0C0E12;border:1px solid var(--sil-line);color:var(--sil-ink);
+    border-radius:8px;padding:9px 11px;font:15px system-ui;text-align:right}
+  .sil-row input:focus-visible{outline:none;border-color:var(--sil-accent)}
+  .sil-out{margin-top:20px;border-top:1px solid var(--sil-line);padding-top:18px}
+  .sil-out .big{font:700 38px system-ui;color:var(--sil-accent)}
+  .sil-out .lbl{color:var(--sil-muted);font-size:14px}
+</style></head><body>
+
+<div class="sil-calc" data-sil="calculator" data-completion="produced_a_result">
+  <h3>How much could automation save you?</h3>
+  <div class="sil-row"><label for="hrs">Hours/week on admin</label><input id="hrs" type="number" value="10" min="0"></div>
+  <div class="sil-row"><label for="rate">Cost per hour (RM)</label><input id="rate" type="number" value="40" min="0"></div>
+  <div class="sil-row"><label for="auto">% automatable</label><input id="auto" type="number" value="60" min="0" max="100"></div>
+  <div class="sil-out">
+    <div class="big" data-sil-result>RM0</div>
+    <div class="lbl">estimated savings per year</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('[data-sil="calculator"]');
+  var hrs=root.querySelector('#hrs'), rate=root.querySelector('#rate'), auto=root.querySelector('#auto');
+  var out=root.querySelector('[data-sil-result]');
+  function calc(){
+    var v=(+hrs.value)*(+rate.value)*((+auto.value)/100)*52;
+    out.textContent='RM'+(isFinite(v)?Math.round(v).toLocaleString():'0');
+    root.setAttribute('data-complete','true');
+  }
+  [hrs,rate,auto].forEach(function(i){ i.addEventListener('input',calc); });
+  calc(); // worked example on load = static fallback
+})();
+</script>
+</body></html>

@@ -1,0 +1,44 @@
+<!-- P4 Modal (Deep Dive) — USE SPARINGLY. One optional deep dive per slide.
+     Static fallback: summary on slide; deep-dive content also present below the fold. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P4 Modal</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:50px}
+  .sil-open{background:var(--sil-accent);color:#0C0E12;border:0;border-radius:10px;padding:12px 20px;
+    font:600 16px system-ui;cursor:pointer}
+  .sil-open:focus-visible{outline:none;box-shadow:0 0 0 3px #fff}
+  .sil-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50}
+  .sil-overlay.is-open{display:flex}
+  .sil-dialog{background:var(--sil-panel);border:1px solid var(--sil-line);border-radius:16px;
+    max-width:540px;padding:32px;position:relative}
+  .sil-dialog h3{margin:0 0 12px}
+  .sil-dialog p{color:var(--sil-muted);line-height:1.6;margin:0}
+  .sil-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--sil-muted);
+    font-size:26px;cursor:pointer;line-height:1}
+  .sil-close:focus-visible{outline:none;color:var(--sil-accent)}
+</style></head><body>
+
+<p>Skills become an operating system for knowledge work.
+  <button class="sil-open" data-sil-open="dlg1">Read the case study →</button></p>
+
+<div class="sil-overlay" id="dlg1" data-sil="modal" role="dialog" aria-modal="true" aria-labelledby="dlg1-t">
+  <div class="sil-dialog">
+    <button class="sil-close" data-sil-close aria-label="Close">×</button>
+    <h3 id="dlg1-t">Case study: the chef analogy</h3>
+    <p>A chef's recipe is a skill. Automate the recipe and the chef can "cook" for thousands at once.
+       The expertise scales without the chef being present — the same leverage a Skill gives you.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var overlay=document.getElementById('dlg1');
+  function open(){ overlay.classList.add('is-open'); overlay.querySelector('.sil-close').focus(); }
+  function close(){ overlay.classList.remove('is-open'); }
+  document.querySelector('[data-sil-open="dlg1"]').addEventListener('click',open);
+  overlay.querySelector('[data-sil-close]').addEventListener('click',close);
+  overlay.addEventListener('click',function(e){ if(e.target===overlay) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
+</body></html>

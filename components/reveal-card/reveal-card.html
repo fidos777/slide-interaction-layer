@@ -1,0 +1,45 @@
+<!-- P1 Reveal Cards — self-contained demo. Copy the .sil-reveal block into a slide.
+     Theme via CSS vars: --sil-ink, --sil-accent, --sil-panel, --sil-line.
+     Static fallback: if JS fails, add class "sil-revealed" in markup or all cards stay visible. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P1 Reveal Cards</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.10); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-reveal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1100px}
+  .sil-card{background:var(--sil-panel);border:1px solid var(--sil-line);border-radius:14px;padding:22px;
+    opacity:.18;transform:translateY(10px);transition:opacity .45s,transform .45s;cursor:pointer;outline:none}
+  .sil-card.is-on{opacity:1;transform:none}
+  .sil-card:focus-visible{box-shadow:0 0 0 3px var(--sil-accent)}
+  .sil-card .n{font:700 13px/1 monospace;color:var(--sil-accent);letter-spacing:.1em}
+  .sil-card h3{margin:10px 0 6px;font-size:20px}
+  .sil-card p{margin:0;color:var(--sil-muted);font-size:15px;line-height:1.5}
+  .sil-hint{margin-top:16px;color:var(--sil-muted);font:13px monospace}
+  @media (prefers-reduced-motion:reduce){.sil-card{transition:none}}
+</style></head><body>
+
+<div class="sil-reveal" data-sil="reveal-cards" data-completion="all_cards_revealed">
+  <button class="sil-card"><span class="n">01</span><h3>Clarity</h3><p>One idea per card. Click to reveal.</p></button>
+  <button class="sil-card"><span class="n">02</span><h3>Focus</h3><p>Dimmed until revealed, guiding attention.</p></button>
+  <button class="sil-card"><span class="n">03</span><h3>Pace</h3><p>You control the build during a talk.</p></button>
+  <button class="sil-card"><span class="n">04</span><h3>Recall</h3><p>Active reveal beats passive reading.</p></button>
+</div>
+<p class="sil-hint" data-sil-status>0 / 4 revealed</p>
+
+<script>
+(function(){
+  // Scope to this component only (in a deck, scope to the active .slide).
+  var root = document.querySelector('[data-sil="reveal-cards"]');
+  var cards = [].slice.call(root.querySelectorAll('.sil-card'));
+  var status = document.querySelector('[data-sil-status]');
+  function update(){ var n=root.querySelectorAll('.is-on').length;
+    if(status) status.textContent = n+' / '+cards.length+' revealed';
+    if(n===cards.length) root.setAttribute('data-complete','true'); }
+  cards.forEach(function(c){
+    c.addEventListener('click', function(){ c.classList.add('is-on'); update(); });
+    c.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); c.click(); }});
+  });
+  // Fallback: if JS-disabled, cards are dim but still readable; uncomment to force-show:
+  // cards.forEach(function(c){c.classList.add('is-on');});
+})();
+</script>
+</body></html>

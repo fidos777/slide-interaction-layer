@@ -1,0 +1,49 @@
+<!-- P5 Hotspot Discovery — explore parts of a diagram/image/map. completion: all_hotspots_clicked.
+     Static fallback: labels rendered next to each hotspot when JS off. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P5 Hotspot</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-stage{position:relative;width:680px;max-width:100%;aspect-ratio:16/9;border:1px solid var(--sil-line);
+    border-radius:16px;background:
+      radial-gradient(circle at 25% 40%,rgba(198,242,78,.10),transparent 40%),var(--sil-panel)}
+  .sil-spot{position:absolute;width:34px;height:34px;border-radius:50%;border:2px solid var(--sil-accent);
+    background:rgba(198,242,78,.18);color:var(--sil-accent);font:700 15px monospace;cursor:pointer;
+    display:grid;place-items:center;animation:pulse 2s infinite}
+  .sil-spot:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(198,242,78,.4)}
+  .sil-spot.is-seen{background:var(--sil-accent);color:#0C0E12;animation:none}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(198,242,78,.5)}50%{box-shadow:0 0 0 10px rgba(198,242,78,0)}}
+  .sil-panel-out{margin-top:18px;min-height:64px;background:var(--sil-panel);border:1px solid var(--sil-line);
+    border-radius:12px;padding:16px 18px;max-width:680px}
+  .sil-panel-out h4{margin:0 0 4px;color:var(--sil-accent)}
+  .sil-panel-out p{margin:0;color:var(--sil-muted);line-height:1.5}
+  .sil-count{margin-top:10px;font:13px monospace;color:var(--sil-muted)}
+  @media (prefers-reduced-motion:reduce){.sil-spot{animation:none}}
+</style></head><body>
+
+<div class="sil-stage" data-sil="hotspot" data-completion="all_hotspots_clicked">
+  <button class="sil-spot" style="left:18%;top:30%" data-title="Problem" data-body="Everything starts with a repeated problem worth solving.">1</button>
+  <button class="sil-spot" style="left:48%;top:55%" data-title="Workflow" data-body="You solve it manually many times and refine the steps.">2</button>
+  <button class="sil-spot" style="left:75%;top:35%" data-title="Skill" data-body="Freeze the refined workflow into a reusable Skill.">3</button>
+</div>
+<div class="sil-panel-out" data-sil-out><h4>Tap a hotspot</h4><p>Explore each part of the workflow.</p></div>
+<p class="sil-count" data-sil-count>0 / 3 explored</p>
+
+<script>
+(function(){
+  var root=document.querySelector('[data-sil="hotspot"]');
+  var spots=[].slice.call(root.querySelectorAll('.sil-spot'));
+  var out=document.querySelector('[data-sil-out]'), count=document.querySelector('[data-sil-count]');
+  function update(){ var n=root.querySelectorAll('.is-seen').length;
+    count.textContent=n+' / '+spots.length+' explored';
+    if(n===spots.length) root.setAttribute('data-complete','true'); }
+  spots.forEach(function(s){
+    s.addEventListener('click',function(){
+      s.classList.add('is-seen');
+      out.innerHTML='<h4>'+s.dataset.title+'</h4><p>'+s.dataset.body+'</p>';
+      update();
+    });
+  });
+})();
+</script>
+</body></html>

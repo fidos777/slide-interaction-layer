@@ -1,0 +1,43 @@
+<!-- P6 Quiz / Knowledge Check — recall & confirm. completion: answered_correctly.
+     Static fallback: correct answer marked in markup. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P6 Quiz</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; --sil-ok:#4ade80; --sil-no:#f87171; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-quiz{max-width:640px}
+  .sil-quiz h3{margin:0 0 18px;font-size:22px}
+  .sil-opt{display:block;width:100%;text-align:left;background:var(--sil-panel);color:var(--sil-ink);
+    border:1px solid var(--sil-line);border-radius:12px;padding:15px 18px;margin-bottom:10px;font:500 16px system-ui;cursor:pointer}
+  .sil-opt:focus-visible{outline:none;box-shadow:0 0 0 3px var(--sil-accent)}
+  .sil-opt.is-ok{border-color:var(--sil-ok);background:rgba(74,222,128,.12)}
+  .sil-opt.is-no{border-color:var(--sil-no);background:rgba(248,113,113,.12)}
+  .sil-fb{margin-top:14px;min-height:24px;font-size:15px;color:var(--sil-muted)}
+</style></head><body>
+
+<div class="sil-quiz" data-sil="quiz" data-completion="answered_correctly">
+  <h3>What should you build first?</h3>
+  <button class="sil-opt" data-correct="false">A polished product</button>
+  <button class="sil-opt" data-correct="true">A repeatable manual workflow</button>
+  <button class="sil-opt" data-correct="false">A landing page</button>
+  <div class="sil-fb" data-sil-fb aria-live="polite"></div>
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('[data-sil="quiz"]');
+  var opts=[].slice.call(root.querySelectorAll('.sil-opt'));
+  var fb=root.querySelector('[data-sil-fb]'); var done=false;
+  opts.forEach(function(o){
+    o.addEventListener('click',function(){
+      if(done) return;
+      var ok=o.dataset.correct==='true';
+      o.classList.add(ok?'is-ok':'is-no');
+      if(ok){ done=true; fb.textContent='Correct — workflow first, product later.';
+        fb.style.color='var(--sil-ok)'; root.setAttribute('data-complete','true');
+        opts.forEach(function(x){ if(x.dataset.correct==='true') x.classList.add('is-ok'); });
+      } else { fb.textContent='Not quite — try again.'; fb.style.color='var(--sil-no)'; }
+    });
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,42 @@
+<!-- P2 Accordion — layered/optional detail, FAQ. Static fallback: all panels open. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P2 Accordion</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.10); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-acc{max-width:760px;display:grid;gap:10px}
+  .sil-item{border:1px solid var(--sil-line);border-radius:12px;background:var(--sil-panel);overflow:hidden}
+  .sil-q{width:100%;text-align:left;background:none;border:0;color:var(--sil-ink);font:600 17px system-ui;
+    padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  .sil-q:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--sil-accent)}
+  .sil-q .ic{color:var(--sil-accent);transition:transform .3s;font-size:22px;line-height:1}
+  .sil-item.is-open .ic{transform:rotate(45deg)}
+  .sil-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .sil-a p{margin:0;padding:0 20px 18px;color:var(--sil-muted);line-height:1.6}
+  @media (prefers-reduced-motion:reduce){.sil-a,.sil-q .ic{transition:none}}
+</style></head><body>
+
+<div class="sil-acc" data-sil="accordion" data-completion="at_least_one_opened">
+  <div class="sil-item"><button class="sil-q" aria-expanded="false">What is an AI Skill? <span class="ic">+</span></button>
+    <div class="sil-a"><p>A reusable workflow: your expertise, SOP, and taste frozen into something an agent can run.</p></div></div>
+  <div class="sil-item"><button class="sil-q" aria-expanded="false">Do I need to code? <span class="ic">+</span></button>
+    <div class="sil-a"><p>No. You describe the workflow; the agent handles the HTML/CSS/JS underneath.</p></div></div>
+  <div class="sil-item"><button class="sil-q" aria-expanded="false">Where do I start? <span class="ic">+</span></button>
+    <div class="sil-a"><p>Start with a manual workflow you repeat, refine it, then freeze it into a Skill.</p></div></div>
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('[data-sil="accordion"]');
+  var items=[].slice.call(root.querySelectorAll('.sil-item'));
+  items.forEach(function(it){
+    var q=it.querySelector('.sil-q'), a=it.querySelector('.sil-a');
+    q.addEventListener('click',function(){
+      var open=it.classList.toggle('is-open');
+      q.setAttribute('aria-expanded',open);
+      a.style.maxHeight = open ? a.scrollHeight+'px' : 0;
+      if(open) root.setAttribute('data-complete','true');
+    });
+  });
+})();
+</script>
+</body></html>

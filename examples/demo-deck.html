@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Interaction Layer — Demo Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   THEME — every interaction component reads these CSS vars.
+   This is how the Slide Interaction Layer stays theme-aware.
+   ============================================================ */
+:root{
+  --bg:#0C0E12; --panel:#0F1217; --ink:#EDEFF2; --muted:#7C828C;
+  --accent:#C6F24E; --line:rgba(255,255,255,.08);
+  --ok:#4ade80; --no:#f87171;
+  /* aliases the components expect */
+  --sil-bg:var(--bg); --sil-panel:var(--panel); --sil-ink:var(--ink);
+  --sil-muted:var(--muted); --sil-accent:var(--accent); --sil-line:rgba(255,255,255,.12);
+  --sil-ok:var(--ok); --sil-no:var(--no);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',sans-serif;overflow:hidden}
+
+/* ============================================================
+   FIXED 16:9 STAGE — 1920x1080, scaled uniformly (frontend-slides rule)
+   ============================================================ */
+#viewport{position:fixed;inset:0;display:grid;place-items:center;background:var(--bg)}
+#stage{position:relative;width:1920px;height:1080px;transform-origin:center center}
+.slide{
+  position:absolute;inset:0;
+  padding:96px 130px;
+  display:flex;flex-direction:column;justify-content:center;
+  visibility:hidden;opacity:0;pointer-events:none;transition:opacity .5s ease;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:96px 96px;
+}
+.slide.active{visibility:visible;opacity:1;pointer-events:auto}
+.slide::after{content:"";position:absolute;bottom:-25%;left:-8%;width:50vw;height:50vw;max-width:760px;max-height:760px;
+  background:radial-gradient(circle,rgba(198,242,78,.10),transparent 60%);pointer-events:none}
+
+/* shared slide chrome */
+.kicker{display:inline-flex;align-items:center;gap:14px;font-family:'Space Mono',monospace;
+  font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:30px}
+.kicker::before{content:"";width:46px;height:2px;background:var(--accent)}
+h1{font-weight:700;line-height:.98;letter-spacing:-.02em;font-size:120px;text-transform:uppercase}
+h2{font-weight:700;line-height:1.02;letter-spacing:-.01em;font-size:66px;margin-bottom:14px}
+.lede{color:var(--muted);font-size:26px;max-width:1100px;line-height:1.5;margin-top:8px}
+.hl{color:var(--accent)}
+
+/* topbar + nav */
+.topbar{position:absolute;top:46px;left:130px;right:130px;display:flex;justify-content:space-between;
+  font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.topbar .idx{color:var(--accent)}
+.dots{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:30}
+.dots button{width:11px;height:11px;border-radius:50%;border:1px solid var(--muted);background:none;cursor:pointer;padding:0}
+.dots button.on{background:var(--accent);border-color:var(--accent)}
+.meta-badge{position:absolute;top:46px;right:130px;font-family:'Space Mono',monospace;font-size:13px;
+  color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:5px 14px}
+
+/* ---- component styles (P1,P2,P5,P6,P7,P8) reading the --sil-* vars ---- */
+.sil-reveal{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:40px}
+.sil-card{background:var(--sil-panel);border:1px solid var(--sil-line);border-radius:18px;padding:34px;
+  opacity:.2;transform:translateY(14px);transition:opacity .45s,transform .45s;cursor:pointer;text-align:left;outline:none}
+.sil-card.is-on{opacity:1;transform:none}
+.sil-card:focus-visible{box-shadow:0 0 0 4px var(--sil-accent)}
+.sil-card .n{font:700 18px/1 'Space Mono',monospace;color:var(--sil-accent)}
+.sil-card h3{margin:16px 0 10px;font-size:30px}
+.sil-card p{color:var(--sil-muted);font-size:20px;line-height:1.5}
+
+.sil-acc{max-width:1200px;display:grid;gap:16px;margin-top:34px}
+.sil-item{border:1px solid var(--sil-line);border-radius:16px;background:var(--sil-panel);overflow:hidden}
+.sil-q{width:100%;text-align:left;background:none;border:0;color:var(--sil-ink);font:600 28px 'Space Grotesk';
+  padding:26px 30px;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.sil-q:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--sil-accent)}
+.sil-q .ic{color:var(--sil-accent);transition:transform .3s;font-size:34px;line-height:1}
+.sil-item.is-open .ic{transform:rotate(45deg)}
+.sil-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.sil-a p{padding:0 30px 26px;color:var(--sil-muted);font-size:22px;line-height:1.55}
+
+.sil-stage-hs{position:relative;width:1100px;aspect-ratio:16/7;margin-top:36px;border:1px solid var(--sil-line);
+  border-radius:22px;background:radial-gradient(circle at 22% 45%,rgba(198,242,78,.10),transparent 42%),var(--sil-panel)}
+.sil-spot{position:absolute;width:52px;height:52px;border-radius:50%;border:2px solid var(--sil-accent);
+  background:rgba(198,242,78,.18);color:var(--sil-accent);font:700 22px 'Space Mono',monospace;cursor:pointer;
+  display:grid;place-items:center;animation:pulse 2s infinite;transform:translate(-50%,-50%)}
+.sil-spot:focus-visible{outline:none;box-shadow:0 0 0 6px rgba(198,242,78,.4)}
+.sil-spot.is-seen{background:var(--sil-accent);color:#0C0E12;animation:none}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(198,242,78,.5)}50%{box-shadow:0 0 0 16px rgba(198,242,78,0)}}
+.sil-spot .cap{position:absolute;top:-16px;left:64px;white-space:nowrap;font:600 18px 'Space Grotesk';color:var(--sil-muted)}
+.hs-wrap{display:flex;gap:40px;align-items:flex-start}
+.sil-panel-out{margin-top:36px;width:560px;min-height:150px;background:var(--sil-panel);border:1px solid var(--sil-line);
+  border-radius:18px;padding:30px}
+.sil-panel-out h4{color:var(--sil-accent);font-size:26px;margin-bottom:10px}
+.sil-panel-out p{color:var(--sil-muted);font-size:21px;line-height:1.5}
+.sil-count{margin-top:14px;font:16px 'Space Mono',monospace;color:var(--sil-muted)}
+
+.sil-branch{max-width:1100px;margin-top:30px}
+.sil-node{display:none}.sil-node.is-active{display:block;animation:fin .35s}
+@keyframes fin{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+.sil-node>p{font-size:34px;line-height:1.4;margin-bottom:26px}
+.sil-choice{display:block;width:100%;max-width:760px;text-align:left;background:var(--sil-panel);color:var(--sil-ink);
+  border:1px solid var(--sil-line);border-radius:14px;padding:22px 26px;margin-bottom:14px;font:500 24px 'Space Grotesk';cursor:pointer}
+.sil-choice:focus-visible{outline:none;box-shadow:0 0 0 3px var(--sil-accent)}
+.sil-end{color:var(--sil-accent);font-weight:600}
+.sil-restart{background:none;border:1px solid var(--sil-line);color:var(--sil-muted);border-radius:10px;padding:12px 18px;cursor:pointer;font:18px 'Space Grotesk';margin-top:6px}
+
+.sil-calc{max-width:780px;background:var(--sil-panel);border:1px solid var(--sil-line);border-radius:22px;padding:40px;margin-top:30px}
+.sil-row{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}
+.sil-row label{color:var(--sil-muted);font-size:24px}
+.sil-row input{width:170px;background:#0C0E12;border:1px solid var(--sil-line);color:var(--sil-ink);
+  border-radius:10px;padding:13px 15px;font:22px 'Space Grotesk';text-align:right}
+.sil-row input:focus-visible{outline:none;border-color:var(--sil-accent)}
+.sil-out{margin-top:24px;border-top:1px solid var(--sil-line);padding-top:24px}
+.sil-out .big{font:700 64px 'Space Grotesk';color:var(--sil-accent)}
+.sil-out .lbl{color:var(--sil-muted);font-size:20px}
+
+.sil-quiz{max-width:1000px;margin-top:30px}
+.sil-opt{display:block;width:100%;text-align:left;background:var(--sil-panel);color:var(--sil-ink);
+  border:1px solid var(--sil-line);border-radius:14px;padding:22px 26px;margin-bottom:14px;font:500 24px 'Space Grotesk';cursor:pointer}
+.sil-opt:focus-visible{outline:none;box-shadow:0 0 0 3px var(--sil-accent)}
+.sil-opt.is-ok{border-color:var(--sil-ok);background:rgba(74,222,128,.12)}
+.sil-opt.is-no{border-color:var(--sil-no);background:rgba(248,113,113,.12)}
+.sil-fb{margin-top:18px;min-height:30px;font-size:22px;color:var(--sil-muted)}
+
+/* tooltip (P3) inline */
+.sil-term{position:relative;color:var(--accent);border-bottom:2px dotted var(--accent);cursor:help;
+  background:none;border-top:0;border-left:0;border-right:0;font:inherit;padding:0}
+.sil-term:focus-visible{outline:none;background:rgba(198,242,78,.15)}
+.sil-tip{position:absolute;left:0;bottom:150%;width:360px;background:var(--panel);border:1px solid var(--sil-line);
+  border-radius:12px;padding:16px 18px;font-size:18px;line-height:1.45;color:var(--muted);
+  opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s;z-index:5}
+.sil-term:hover .sil-tip,.sil-term:focus .sil-tip,.sil-term.is-open .sil-tip{opacity:1;visibility:visible;transform:none}
+
+.hint{position:absolute;bottom:96px;left:130px;font:15px 'Space Mono',monospace;color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="viewport">
+  <div id="stage">
+
+    <!-- ===== SLIDE 1 — P0 Static (title; never interactive) ===== -->
+    <!-- interaction: P0 static | reason: title slide sets tone | fallback: n/a -->
+    <section class="slide active">
+      <div class="topbar"><span>Slide Interaction Layer</span><span class="idx">01 — 08</span></div>
+      <span class="kicker">A demo of the system itself</span>
+      <h1>Beautiful<br>decks that<br><span class="hl">react.</span></h1>
+      <p class="lede">Every slide below was chosen by the taxonomy — the right interaction for the right intent, nothing forced. Use ← → or Space to move.</p>
+    </section>
+
+    <!-- ===== SLIDE 2 — P1 Reveal Cards ===== -->
+    <!-- interaction: P1 reveal-cards | reason: 4 short parallel ideas | completion: all_cards_revealed | fallback: cards readable when dim -->
+    <section class="slide">
+      <div class="topbar"><span>The four big ideas</span><span class="idx">02 — 08</span></div>
+      <span class="meta-badge">P1 · Reveal Cards</span>
+      <h2>Click each card to reveal</h2>
+      <p class="lede">A framework of parallel points — revealed one at a time to control pace.</p>
+      <div class="sil-reveal" data-sil="reveal-cards" data-completion="all_cards_revealed">
+        <button class="sil-card"><span class="n">01</span><h3>Skill &gt; App</h3><p>Call a skill, skip the toolchain.</p></button>
+        <button class="sil-card"><span class="n">02</span><h3>Expertise = Product</h3><p>Freeze your workflow; sell the leverage.</p></button>
+        <button class="sil-card"><span class="n">03</span><h3>AI loves HTML</h3><p>Trained on the web — output feels modern.</p></button>
+        <button class="sil-card"><span class="n">04</span><h3>Workflow first</h3><p>Repeat 20×, refine, then freeze.</p></button>
+      </div>
+      <p class="sil-count" data-sil-count>0 / 4 revealed</p>
+    </section>
+
+    <!-- ===== SLIDE 3 — P5 Hotspot ===== -->
+    <!-- interaction: P5 hotspot | reason: a workflow diagram with discrete parts | completion: all_hotspots_clicked | fallback: labeled static diagram -->
+    <section class="slide">
+      <div class="topbar"><span>How a skill is born</span><span class="idx">03 — 08</span></div>
+      <span class="meta-badge">P5 · Hotspot</span>
+      <h2>Explore the workflow</h2>
+      <div class="hs-wrap">
+        <div class="sil-stage-hs" data-sil="hotspot" data-completion="all_hotspots_clicked">
+          <button class="sil-spot" style="left:18%;top:50%" data-title="Problem" data-body="Start with a problem you keep solving by hand."><span>1</span><span class="cap">Problem</span></button>
+          <button class="sil-spot" style="left:50%;top:50%" data-title="Workflow" data-body="Refine the manual steps over many repeats."><span>2</span><span class="cap">Workflow</span></button>
+          <button class="sil-spot" style="left:82%;top:50%" data-title="Skill" data-body="Freeze the refined workflow into a reusable Skill."><span>3</span><span class="cap">Skill</span></button>
+        </div>
+        <div>
+          <div class="sil-panel-out" data-sil-out><h4>Tap a hotspot</h4><p>Each point reveals a stage of the journey.</p></div>
+          <p class="sil-count" data-sil-count>0 / 3 explored</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 4 — P2 Accordion (+ P3 tooltip inline) ===== -->
+    <!-- interaction: P2 accordion | reason: optional FAQ-style detail | completion: at_least_one_opened | fallback: all panels open -->
+    <section class="slide">
+      <div class="topbar"><span>Common questions</span><span class="idx">04 — 08</span></div>
+      <span class="meta-badge">P2 · Accordion + P3 · Tooltip</span>
+      <h2>Drill into what you need</h2>
+      <p class="lede">A
+        <button class="sil-term">Skill<span class="sil-tip" role="tooltip">A reusable workflow that freezes your expertise so an agent can run it on demand.</span></button>
+        is supplementary detail — open only what matters to you.</p>
+      <div class="sil-acc" data-sil="accordion" data-completion="at_least_one_opened">
+        <div class="sil-item"><button class="sil-q" aria-expanded="false">Do I need to code? <span class="ic">+</span></button>
+          <div class="sil-a"><p>No. You describe the workflow; the agent writes the HTML/CSS/JS underneath.</p></div></div>
+        <div class="sil-item"><button class="sil-q" aria-expanded="false">Where do I start? <span class="ic">+</span></button>
+          <div class="sil-a"><p>With a manual workflow you repeat weekly. Refine it, then freeze it into a Skill.</p></div></div>
+        <div class="sil-item"><button class="sil-q" aria-expanded="false">Why not just slides? <span class="ic">+</span></button>
+          <div class="sil-a"><p>Because interaction drives recall and decisions — when used deliberately, not everywhere.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 5 — P7 Branching ===== -->
+    <!-- interaction: P7 branching | reason: a decision with consequences | completion: reached_an_ending | fallback: linear summary -->
+    <section class="slide">
+      <div class="topbar"><span>Make the call</span><span class="idx">05 — 08</span></div>
+      <span class="meta-badge">P7 · Branching Scenario</span>
+      <h2 style="margin-bottom:6px">Scenario</h2>
+      <div class="sil-branch" data-sil="branching" data-completion="reached_an_ending">
+        <div class="sil-node is-active" data-node="start">
+          <p>You want to ship an AI product. What do you build first?</p>
+          <button class="sil-choice" data-go="good">A repeatable manual workflow</button>
+          <button class="sil-choice" data-go="bad">A polished product right away</button>
+        </div>
+        <div class="sil-node" data-node="good">
+          <p class="sil-end">Right. You learn the best workflow before freezing it — the product almost designs itself.</p>
+          <button class="sil-restart" data-restart>Replay</button>
+        </div>
+        <div class="sil-node" data-node="bad">
+          <p>You build before you know the workflow, and rebuild later. Back up a step.</p>
+          <button class="sil-choice" data-go="good">Start from the workflow instead</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 6 — P8 Calculator ===== -->
+    <!-- interaction: P8 calculator | reason: numbers in -> personalized result | completion: produced_a_result | fallback: worked example on load -->
+    <section class="slide">
+      <div class="topbar"><span>The value, personalized</span><span class="idx">06 — 08</span></div>
+      <span class="meta-badge">P8 · Calculator</span>
+      <h2>What could automation save you?</h2>
+      <div class="sil-calc" data-sil="calculator" data-completion="produced_a_result">
+        <div class="sil-row"><label for="hrs">Hours/week on admin</label><input id="hrs" type="number" value="10" min="0"></div>
+        <div class="sil-row"><label for="rate">Cost per hour (RM)</label><input id="rate" type="number" value="40" min="0"></div>
+        <div class="sil-row"><label for="auto">% automatable</label><input id="auto" type="number" value="60" min="0" max="100"></div>
+        <div class="sil-out"><div class="big" data-sil-result>RM0</div><div class="lbl">estimated savings per year</div></div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 7 — P6 Quiz ===== -->
+    <!-- interaction: P6 quiz | reason: end-of-deck recall check | completion: answered_correctly | fallback: correct answer marked -->
+    <section class="slide">
+      <div class="topbar"><span>Quick recap</span><span class="idx">07 — 08</span></div>
+      <span class="meta-badge">P6 · Quiz</span>
+      <h2>One question before you go</h2>
+      <div class="sil-quiz" data-sil="quiz" data-completion="answered_correctly">
+        <p class="lede" style="margin-bottom:24px">When should a slide be interactive?</p>
+        <button class="sil-opt" data-correct="false">Always — interaction is the point</button>
+        <button class="sil-opt" data-correct="true">Only when it serves the slide's intent</button>
+        <button class="sil-opt" data-correct="false">Never — keep decks static</button>
+        <div class="sil-fb" data-sil-fb aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 8 — P0 Static (closing) ===== -->
+    <!-- interaction: P0 static | reason: closing statement | fallback: n/a -->
+    <section class="slide">
+      <div class="topbar"><span>Slide Interaction Layer</span><span class="idx">08 — 08</span></div>
+      <span class="kicker">That's the layer</span>
+      <h1>Right<br>interaction.<br><span class="hl">Every slide.</span></h1>
+      <p class="lede">8 patterns, a taxonomy, and decision rules — so an agent never just hentam popup on everything.</p>
+    </section>
+
+  </div>
+</div>
+<div class="dots" id="dots"></div>
+<div class="hint">← → / Space to navigate · click the interactions</div>
+
+<script>
+/* ===== FIXED-STAGE SCALER (frontend-slides pattern) ===== */
+(function(){
+  var stage=document.getElementById('stage');
+  function fit(){ var s=Math.min(innerWidth/1920,innerHeight/1080); stage.style.transform='scale('+s+')'; }
+  addEventListener('resize',fit); fit();
+})();
+
+/* ===== NAVIGATION ===== */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var dots=document.getElementById('dots'), i=0;
+  slides.forEach(function(_,n){ var b=document.createElement('button');
+    b.addEventListener('click',function(){go(n);}); dots.appendChild(b); });
+  function go(n){ i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach(function(s,k){ s.classList.toggle('active',k===i); });
+    [].forEach.call(dots.children,function(d,k){ d.classList.toggle('on',k===i); }); }
+  addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(i+1);}
+    if(e.key==='ArrowLeft'){go(i-1);} });
+  go(0);
+})();
+
+/* ===== INTERACTION COMPONENTS — each scoped to its container ===== */
+// P1 Reveal Cards
+[].forEach.call(document.querySelectorAll('[data-sil="reveal-cards"]'),function(root){
+  var cards=[].slice.call(root.querySelectorAll('.sil-card'));
+  var count=root.parentElement.querySelector('[data-sil-count]');
+  function up(){ var n=root.querySelectorAll('.is-on').length;
+    if(count)count.textContent=n+' / '+cards.length+' revealed';
+    if(n===cards.length)root.setAttribute('data-complete','true'); }
+  cards.forEach(function(c){ c.addEventListener('click',function(){c.classList.add('is-on');up();}); });
+});
+// P2 Accordion
+[].forEach.call(document.querySelectorAll('[data-sil="accordion"]'),function(root){
+  [].forEach.call(root.querySelectorAll('.sil-item'),function(it){
+    var q=it.querySelector('.sil-q'),a=it.querySelector('.sil-a');
+    q.addEventListener('click',function(){ var open=it.classList.toggle('is-open');
+      q.setAttribute('aria-expanded',open); a.style.maxHeight=open?a.scrollHeight+'px':0;
+      if(open)root.setAttribute('data-complete','true'); }); });
+});
+// P3 Tooltip (tap toggle)
+[].forEach.call(document.querySelectorAll('.sil-term'),function(t){
+  t.addEventListener('click',function(e){e.preventDefault();t.classList.toggle('is-open');}); });
+// P5 Hotspot
+[].forEach.call(document.querySelectorAll('[data-sil="hotspot"]'),function(root){
+  var spots=[].slice.call(root.querySelectorAll('.sil-spot'));
+  var wrap=root.closest('.hs-wrap'), out=wrap.querySelector('[data-sil-out]'), count=wrap.querySelector('[data-sil-count]');
+  function up(){ var n=root.querySelectorAll('.is-seen').length;
+    count.textContent=n+' / '+spots.length+' explored';
+    if(n===spots.length)root.setAttribute('data-complete','true'); }
+  spots.forEach(function(s){ s.addEventListener('click',function(){
+    s.classList.add('is-seen'); out.innerHTML='<h4>'+s.dataset.title+'</h4><p>'+s.dataset.body+'</p>'; up(); }); });
+});
+// P7 Branching
+[].forEach.call(document.querySelectorAll('[data-sil="branching"]'),function(root){
+  function show(id){ [].forEach.call(root.querySelectorAll('.sil-node'),function(n){
+    n.classList.toggle('is-active',n.dataset.node===id); });
+    if(root.querySelector('.sil-node.is-active .sil-end'))root.setAttribute('data-complete','true'); }
+  root.addEventListener('click',function(e){ var g=e.target.closest('[data-go]'); if(g)show(g.dataset.go);
+    if(e.target.closest('[data-restart]'))show('start'); });
+});
+// P8 Calculator
+[].forEach.call(document.querySelectorAll('[data-sil="calculator"]'),function(root){
+  var hrs=root.querySelector('#hrs'),rate=root.querySelector('#rate'),auto=root.querySelector('#auto'),out=root.querySelector('[data-sil-result]');
+  function calc(){ var v=(+hrs.value)*(+rate.value)*((+auto.value)/100)*52;
+    out.textContent='RM'+(isFinite(v)?Math.round(v).toLocaleString():'0'); root.setAttribute('data-complete','true'); }
+  [hrs,rate,auto].forEach(function(x){x.addEventListener('input',calc);}); calc();
+});
+// P6 Quiz
+[].forEach.call(document.querySelectorAll('[data-sil="quiz"]'),function(root){
+  var opts=[].slice.call(root.querySelectorAll('.sil-opt')),fb=root.querySelector('[data-sil-fb]'),done=false;
+  opts.forEach(function(o){ o.addEventListener('click',function(){ if(done)return;
+    var ok=o.dataset.correct==='true'; o.classList.add(ok?'is-ok':'is-no');
+    if(ok){done=true;fb.textContent='Correct — interaction serves intent, never decoration.';fb.style.color='var(--ok)';
+      root.setAttribute('data-complete','true');}
+    else{fb.textContent='Not quite — try again.';fb.style.color='var(--no)';} }); });
+});
+</script>
+</body>
+</html>

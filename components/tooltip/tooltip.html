@@ -1,0 +1,32 @@
+<!-- P3 Tooltip / Glossary — clarify inline terms. Works on hover AND tap/keyboard.
+     Static fallback: definition rendered in the tooltip text, readable when forced open. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P3 Tooltip</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:60px;font-size:22px;line-height:1.8}
+  .sil-term{position:relative;color:var(--sil-accent);border-bottom:2px dotted var(--sil-accent);
+    cursor:help;background:none;border-top:0;border-left:0;border-right:0;font:inherit;padding:0}
+  .sil-term:focus-visible{outline:none;background:rgba(198,242,78,.15)}
+  .sil-tip{position:absolute;left:0;bottom:140%;width:260px;background:var(--sil-panel);
+    border:1px solid var(--sil-line);border-radius:10px;padding:12px 14px;font-size:15px;line-height:1.45;
+    color:var(--sil-muted);opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s;z-index:5}
+  .sil-term:hover .sil-tip,.sil-term:focus .sil-tip,.sil-term.is-open .sil-tip{opacity:1;visibility:visible;transform:none}
+  @media (prefers-reduced-motion:reduce){.sil-tip{transition:none}}
+</style></head><body>
+
+<p>The shift is from building apps to building a
+  <button class="sil-term" aria-describedby="t1">Skill<span class="sil-tip" role="tooltip" id="t1">A reusable workflow that freezes your expertise so an agent can run it on demand.</span></button>.
+  Most people start by writing a
+  <button class="sil-term" aria-describedby="t2">workflow<span class="sil-tip" role="tooltip" id="t2">The repeatable steps you actually do by hand, refined over many runs before being frozen.</span></button>
+  first, then freezing it.</p>
+
+<script>
+(function(){
+  // Tap toggles on touch; hover/focus handled by CSS.
+  [].forEach.call(document.querySelectorAll('.sil-term'),function(t){
+    t.addEventListener('click',function(e){ e.preventDefault(); t.classList.toggle('is-open'); });
+    document.addEventListener('click',function(e){ if(!t.contains(e.target)) t.classList.remove('is-open'); });
+  });
+})();
+</script>
+</body></html>
