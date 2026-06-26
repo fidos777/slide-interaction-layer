@@ -70,6 +70,19 @@ Do not overuse popups.
 
 See [`prompts/use-with-frontend-slides.md`](prompts/use-with-frontend-slides.md) for more.
 
+## Demo Gallery
+
+Open these single-file decks in any browser (← → / Space to navigate; click the interactions):
+
+- [`examples/demo-deck.html`](examples/demo-deck.html) — a tour of the layer itself: one slide per
+  interaction pattern (reveal cards, hotspot, accordion + tooltip, branching, calculator, quiz),
+  each labeled with the pattern it uses.
+- [`examples/ai-workflow-for-smes.html`](examples/ai-workflow-for-smes.html) — the taxonomy applied
+  to a **real use case**: an "AI Workflow for SMEs" teaching deck. It shows the decision system in
+  practice — picking the right interaction per slide for a genuine business topic, with static
+  intro/closing slides and ~67% interactive (teaching-deck budget), every interactive slide carrying
+  its `interaction / reason / completion_rule / fallback` metadata.
+
 ## Design constraints (so it stays compatible with `frontend-slides`)
 
 - Single self-contained HTML files. No npm, no build step.
