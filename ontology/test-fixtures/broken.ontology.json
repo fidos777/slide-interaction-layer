@@ -1,0 +1,13 @@
+{
+  "$schema": "../schema.json",
+  "sidecarVersion": "1.0",
+  "deck": "ontology/test-fixtures/broken.html",
+  "deckTitle": "Broken fixture (intentional errors)",
+  "slideCount": 3,
+  "gatingMode": "off",
+  "slides": [
+    { "index": 1, "element": "E16", "objective": "", "pattern": "P9", "gating": "bogus" },
+    { "index": 3, "element": "E13", "objective": "critical info", "pattern": "P0", "gating": "all_hotspots_clicked" },
+    { "index": 2, "element": "E2", "objective": "ok", "pattern": "P1", "gating": "none" }
+  ]
+}

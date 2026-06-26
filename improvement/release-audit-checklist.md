@@ -32,6 +32,8 @@ blocker stops the release** (fail-closed). Tick every item before cutting a tag.
 - [ ] All internal markdown links resolve (README, SKILL, MAINTAINER, docs, decisions, ontology,
       gating, improvement).
 - [ ] `gating/gate.js` passes `node --check` (if present/changed).
+- [ ] `python3 ontology/validate.py --all` exits `0` (if any `*.ontology.json` sidecars exist).
+      Errors are a release **blocker**; warnings are advisory.
 
 ### Examples
 - [ ] Each example deck opens; its interactions fire (verified, not assumed).

@@ -32,6 +32,7 @@ e-learning governance checks something concrete to verify.
 | [`metadata-format.md`](metadata-format.md) | How to annotate slides/blocks (semantic comment + `data-sil-element`). |
 | [`audit-checks.md`](audit-checks.md) | Governance audit checks for courseware decks. |
 | [`schema.json`](schema.json) | JSON Schema for the optional machine-readable sidecar (`<deck>.ontology.json`). |
+| [`validate.py`](validate.py) · [`README-validate.md`](README-validate.md) | Stdlib validator: checks a sidecar against the schema + its deck. |
 
 ## How to use it (ontology-first flow)
 
@@ -58,6 +59,7 @@ Generated **from** the HTML comments (one-way); the runtime does not read it. Se
 ## Status
 
 - **v0.3.0:** docs — ontology, mapping, metadata guide, audit checks.
-- **v0.5.0 (this):** optional machine-readable sidecar — `schema.json` + a worked example. **Recommended,
+- **v0.5.0:** optional machine-readable sidecar — `schema.json` + a worked example. **Recommended,
   not required.**
-- **v0.5.1 (planned):** a validator CLI to enforce the schema/rules programmatically.
+- **v0.5.1 (this):** stdlib validator `validate.py` (+ `README-validate.md`) that enforces the
+  schema/rules and deck-mirror; wired into the RRI release audit.
