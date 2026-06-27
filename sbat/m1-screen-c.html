@@ -186,7 +186,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   @page{margin:14mm}
   body{background:#fff;color:#000}
   /* hide non-handoff UI (criterion 9) */
-  header,.topbar,.handoff-bar,.dashboard,.assetview,#advancedMode,.lockalign,.modetoggle,.filters,.rv-hint{display:none !important}
+  header,.topbar,.handoff-bar,.dashboard,.assetview,.reviewer-panel,#advancedMode,.lockalign,.modetoggle,.filters,.rv-hint{display:none !important}
   /* reveal print-only handoff blocks */
   .handoff-head,.handoff-extra{display:block !important}
   .review{max-width:none;margin:0;padding:0}
@@ -202,6 +202,22 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   .mock-presenter,.mock-tile,.mock-drop{border-color:#999 !important;background:#fafafa !important}
   .mock-implication{border:1px solid #999 !important;border-left:3px solid #777 !important}
 }
+/* ---- M1.7 Reviewer Decision Panel (review-only meeting aid; in-memory DOM state only) ---- */
+.reviewer-panel{border:1px dashed var(--line);border-radius:12px;background:var(--panel2);padding:18px 20px;margin-bottom:18px}
+.reviewer-panel h3{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rp-sub{font-size:12px;color:var(--warn);margin-bottom:12px}
+.rp-options{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.rp-btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:9px 13px;font:600 12.5px system-ui;cursor:pointer}
+.rp-btn:hover{border-color:var(--accent)}
+.rp-btn.active{background:var(--accent);color:#0B0D11;border-color:var(--accent)}
+.rp-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rp-lbl{display:block;font:600 11px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px}
+.rp-note{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:10px 12px;font:14px system-ui;resize:vertical;min-height:60px}
+.rp-note:focus{outline:none;border-color:var(--accent)}
+.rp-summary{margin-top:12px;border-left:3px solid var(--review);padding-left:12px;font-size:13px;color:var(--ink)}
+.rp-summary .rp-line{margin-bottom:4px}
+.rp-summary .rp-k{color:var(--muted);font:600 11px system-ui;text-transform:uppercase;letter-spacing:.04em;margin-right:6px}
+.rp-summary .rp-foot{margin-top:6px;font-size:11px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -315,6 +331,21 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
       <span class="rv-gate-plain" id="rv_gate_plain">—</span>
     </div>
     <div class="rv-hint">Decision gate is shown for review only — nothing is saved here.</div>
+  </div>
+
+  <!-- ===== Reviewer Decision Panel (M1.7 · review-only meeting aid; in-memory DOM only) ===== -->
+  <div class="reviewer-panel" id="reviewerPanel">
+    <h3>Reviewer Decision Panel <span class="pill" style="margin:0">review-only · meeting aid</span></h3>
+    <div class="rp-sub">Review-only meeting note. Not saved or exported. Does not change the authoritative gate. A human must update the authoritative <code>decision_gate</code> separately in Advanced / JSON Mode if needed.</div>
+    <div class="rp-options" id="reviewerOptions" role="group" aria-label="Reviewer decision">
+      <button type="button" class="rp-btn" data-choice="agree" aria-pressed="false">Agree / Proceed with current recommendation</button>
+      <button type="button" class="rp-btn" data-choice="sb" aria-pressed="false">Need SB confirmation</button>
+      <button type="button" class="rp-btn" data-choice="asset" aria-pressed="false">Need Asset / Visual confirmation</button>
+      <button type="button" class="rp-btn" data-choice="mmd" aria-pressed="false">Need MMD clarification</button>
+    </div>
+    <label class="rp-lbl" for="reviewerNote">Reviewer meeting note</label>
+    <textarea id="reviewerNote" class="rp-note" placeholder="Optional meeting note (review-only — not saved, not exported)…"></textarea>
+    <div class="rp-summary" id="reviewerSummary"></div>
   </div>
 
   <!-- ===== Print / Handoff facts + dependency + disclaimer (M1.5 · print-only) ===== -->
@@ -790,6 +821,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     var p=PILOTS[key]; if(!p) return;
     currentMeta=p; $("pilotSelect").value=key;
     setForm(JSON.parse(JSON.stringify(p.record)));
+    resetReviewerPanel(); // M1.7: clear review-only reviewer selection/note for the new record
   }
   function setMode(m){
     var rev = (m !== "advanced");
@@ -799,6 +831,32 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     $("modeAdvBtn").classList.toggle("active", !rev);
     $("modeReviewBtn").setAttribute("aria-pressed", rev ? "true" : "false");
     $("modeAdvBtn").setAttribute("aria-pressed", rev ? "false" : "true");
+  }
+  // ---- M1.7 Reviewer Decision Panel: review-only meeting aid. State lives only in the DOM +
+  // this in-memory variable. It is NEVER persisted, NEVER read by getRecord(), and NEVER changes
+  // decision_gate or any authoritative field. A human edits the real gate in Advanced / JSON Mode. ----
+  var REVIEWER_CHOICES = {
+    agree:"Agree / Proceed with current recommendation",
+    sb:"Need SB confirmation",
+    asset:"Need Asset / Visual confirmation",
+    mmd:"Need MMD clarification"
+  };
+  var reviewerChoice = null; // display-only; not persisted; not in getRecord()/export
+  function renderReviewerSummary(){
+    var sel = reviewerChoice ? REVIEWER_CHOICES[reviewerChoice] : "(none selected)";
+    var note = ($("reviewerNote").value||"").trim();
+    $("reviewerSummary").innerHTML =
+        '<div class="rp-line"><span class="rp-k">Reviewer selection:</span>'+esc(sel)+'</div>'
+      + '<div class="rp-line"><span class="rp-k">Reviewer note:</span>'+(note?esc(note):"(none)")+'</div>'
+      + '<div class="rp-foot">Review-only meeting aid. Not saved. Not exported. Does not change the authoritative gate.</div>';
+  }
+  function resetReviewerPanel(){
+    reviewerChoice = null;
+    if($("reviewerNote")) $("reviewerNote").value = "";
+    Array.prototype.forEach.call(document.querySelectorAll("#reviewerOptions .rp-btn"),function(b){
+      b.classList.remove("active"); b.setAttribute("aria-pressed","false");
+    });
+    renderReviewerSummary();
   }
   function renderDashCounters(){
     var recs = DASH_KEYS.map(function(k){ return PILOTS[k].record; });
@@ -856,6 +914,16 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   $("modeReviewBtn").addEventListener("click",function(){ setMode("review"); });
   $("modeAdvBtn").addEventListener("click",function(){ setMode("advanced"); });
   $("printBtn").addEventListener("click",function(){ window.print(); }); // M1.5 browser-native print → Save as PDF
+  // M1.7 reviewer decision panel — display-only; updates DOM summary only, never authoritative fields
+  $("reviewerOptions").addEventListener("click",function(e){
+    var b=e.target.closest(".rp-btn"); if(!b) return;
+    reviewerChoice=b.getAttribute("data-choice");
+    Array.prototype.forEach.call(document.querySelectorAll("#reviewerOptions .rp-btn"),function(x){
+      var on=(x===b); x.classList.toggle("active",on); x.setAttribute("aria-pressed", on?"true":"false");
+    });
+    renderReviewerSummary();
+  });
+  $("reviewerNote").addEventListener("input",renderReviewerSummary);
   $("dashRows").addEventListener("click",function(e){ var tr=e.target.closest("tr[data-key]"); if(tr) dashActivate(tr); });
   $("dashRows").addEventListener("keydown",function(e){
     if(e.key==="Enter"||e.key===" "){ var tr=e.target.closest("tr[data-key]"); if(tr){ e.preventDefault(); dashActivate(tr); } }
