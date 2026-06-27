@@ -49,6 +49,57 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 .placeholder{margin-top:18px;border:1px dashed var(--line);border-radius:10px;padding:16px;color:var(--muted);font-size:13px;background:var(--panel2)}
 .placeholder b{color:var(--ink)}
 .pill{display:inline-block;font:600 11px monospace;color:var(--warn);border:1px solid var(--line);border-radius:999px;padding:3px 9px;margin-left:6px}
+/* ---- M1.1 review additions (Bariah / Laila review-ready UI) ---- */
+.pilotbar{margin-bottom:16px}
+.pilotbar label{display:block;font:600 11px system-ui;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.reviewcard{border:1px solid var(--line);border-radius:10px;background:var(--panel2);padding:14px 15px;margin-bottom:18px}
+.reviewcard h3{margin:0 0 4px;font-size:13px;letter-spacing:.04em;color:var(--accent)}
+.reviewcard .rc-sub{font-size:11px;color:var(--muted);margin-bottom:8px}
+.rc-row{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:12.5px}
+.rc-row .k{color:var(--muted);font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+.rc-row .v{color:var(--ink);white-space:pre-wrap;word-break:break-word;line-height:1.45}
+.rc-gate{display:inline-block;font:600 11px monospace;padding:3px 9px;border-radius:6px;border:1px solid var(--line)}
+.rc-class{font:600 12px monospace;color:var(--review)}
+.rc-q{color:var(--accent)}
+.lockalign{margin-top:18px;border:1px dashed var(--line);border-radius:10px;padding:13px 15px;background:var(--panel2);font-size:12px;color:var(--muted)}
+.lockalign b{color:var(--ink);display:block;margin-bottom:8px;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em}
+.lockalign ul{margin:0;padding-left:16px;line-height:1.75}
+.lockalign li.later{color:var(--warn)}
+/* ---- M1.1 Review Mode (Bariah / Laila default view) ---- */
+[hidden]{display:none !important}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 28px;border-bottom:1px solid var(--line);background:var(--panel)}
+.tb-pilot{display:flex;align-items:center;gap:10px}
+.tb-pilot label{font:600 11px system-ui;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tb-pilot select{min-width:300px}
+.modetoggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.modetoggle button{background:none;color:var(--muted);border:0;border-radius:0;padding:8px 16px;font:600 12px system-ui;cursor:pointer}
+.modetoggle button.active{background:var(--accent);color:#0B0D11}
+.modetoggle button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.review{padding:26px 28px;max-width:1120px;margin:0 auto}
+.rv-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.rv-card{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px}
+.rv-card h3{margin:0 0 12px;font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);display:flex;align-items:center;gap:8px}
+.rv-vo{font-size:17px;line-height:1.6;color:var(--ink)}
+.rv-block{margin-bottom:14px}
+.rv-block:last-child{margin-bottom:0}
+.rv-block .lbl{font:600 11px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:5px}
+.rv-block .txt{font-size:14px;line-height:1.55;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.rv-note{border-left:3px solid var(--review);padding-left:12px}
+.rv-note.amend{border-left-color:var(--warn)}
+.rv-rec{border:1px solid var(--accent);border-radius:12px;background:var(--panel2);padding:18px 20px;margin-bottom:18px}
+.rv-rec h3{margin:0 0 10px;font-size:13px;color:var(--accent);letter-spacing:.03em;text-transform:uppercase}
+.rv-rec .rec-text{font-size:16px;line-height:1.55;color:var(--ink);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{font:600 11px monospace;border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--ink);background:var(--bg)}
+.chip .ck{color:var(--muted);font-weight:400;margin-right:5px}
+.rv-q{font-size:14px;color:var(--accent);line-height:1.5}
+.rv-decide{border:1px dashed var(--line);border-radius:12px;padding:16px 20px;margin-bottom:18px;background:var(--panel)}
+.rv-decide .q{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.rv-decide .gatewrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rv-gate{display:inline-block;font:600 12px monospace;padding:5px 12px;border-radius:8px;border:1px solid var(--line)}
+.rv-gate-plain{font-size:13px;color:var(--muted)}
+.rv-hint{font-size:11px;color:var(--muted);margin-top:8px}
+.review .lockalign{max-width:none;margin-top:0}
 </style>
 </head>
 <body>
@@ -60,7 +111,81 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   <span class="badge" id="recBadge">record: s06</span>
 </header>
 
-<div class="wrap">
+<!-- ========== GLOBAL TOP BAR: pilot loader + view mode ========== -->
+<div class="topbar">
+  <div class="tb-pilot">
+    <label for="pilotSelect">Load pilot record</label>
+    <select id="pilotSelect">
+      <option value="s06">Default / s06 sample</option>
+      <option value="pl1t3-s2">PL1T3 s2 — character swap</option>
+      <option value="pl3t1-s28">PL3T1 s28 — quiz gap</option>
+      <option value="pl5t3-s4">PL5T3 s4 — visual asset + drag/drop</option>
+    </select>
+  </div>
+  <div class="modetoggle" role="group" aria-label="View mode">
+    <button id="modeReviewBtn" class="active" type="button" aria-pressed="true">Review Mode</button>
+    <button id="modeAdvBtn" type="button" aria-pressed="false">Advanced / JSON Mode</button>
+  </div>
+</div>
+
+<!-- ========== REVIEW MODE (default — Bariah / Laila) ========== -->
+<div class="review" id="reviewMode">
+
+  <div class="rv-cols">
+    <div class="rv-card">
+      <h3>VO script <span class="pill" style="color:var(--accent);margin:0">VO-first</span></h3>
+      <div class="rv-vo" id="rv_vo">—</div>
+    </div>
+    <div class="rv-card">
+      <h3>Screen text + MMD notes</h3>
+      <div class="rv-block"><div class="lbl">On-screen text (AI-derived)</div><div class="txt" id="rv_screen">—</div></div>
+      <div class="rv-block"><div class="lbl">MMD graphics / production notes</div><div class="txt" id="rv_mmd">—</div></div>
+    </div>
+  </div>
+
+  <div class="rv-card" style="margin-bottom:18px">
+    <h3>AMEND-K1 + Laila convergence</h3>
+    <div class="rv-block rv-note amend"><div class="lbl">AMEND-K1 governance</div><div class="txt" id="rv_amend">—</div></div>
+    <div class="rv-block rv-note"><div class="lbl">Laila production / visual</div><div class="txt" id="rv_laila">—</div></div>
+  </div>
+
+  <div class="rv-rec">
+    <h3>SBAT recommendation</h3>
+    <div class="rec-text" id="rv_rec">—</div>
+    <div class="chips">
+      <span class="chip"><span class="ck">convergence</span><span id="rv_chip_conv">—</span></span>
+      <span class="chip"><span class="ck">pattern</span><span id="rv_chip_pat">—</span></span>
+      <span class="chip"><span class="ck">provenance</span><span id="rv_chip_prov">—</span></span>
+      <span class="chip"><span class="ck">decision gate</span><span id="rv_chip_gate">—</span></span>
+    </div>
+    <div class="rv-q" id="rv_q">—</div>
+  </div>
+
+  <div class="rv-decide">
+    <div class="q">Can MMD proceed?</div>
+    <div class="gatewrap">
+      <span class="rv-gate" id="rv_gate">—</span>
+      <span class="rv-gate-plain" id="rv_gate_plain">—</span>
+    </div>
+    <div class="rv-hint">Decision gate is shown for review only — nothing is saved here.</div>
+  </div>
+
+  <div class="lockalign">
+    <b>Bariah lock alignment</b>
+    <ul>
+      <li>VO-first</li>
+      <li>AI-derived screen text</li>
+      <li>MMD notes</li>
+      <li>AMEND-K1 + Laila convergence</li>
+      <li>Human decision gate</li>
+      <li class="later">WYSIWYG / PDF review = later phase</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ========== ADVANCED / JSON MODE (full editor) ========== -->
+<div class="wrap" id="advancedMode" hidden>
   <!-- ========== FORM (left) ========== -->
   <div class="form">
 
@@ -139,7 +264,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     </div>
   </div>
 
-  <!-- ========== LIVE PREVIEW (right) ========== -->
+  <!-- ========== LIVE JSON (Advanced / JSON Mode only) ========== -->
   <div class="side">
     <h2>Live planning record (JSON)</h2>
     <pre id="preview">{}</pre>
@@ -189,6 +314,96 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     source_status:"REVIEW", owner:"", decision_gate:"REVIEW", handoff:{pdf_preview:"placeholder"}
   };
 
+  // ---- M1.1 committed pilot records (embedded verbatim from sbat/samples/*.sample.json) ----
+  // Records use committed M1 enum values only. issueSummary / reviewQuestion are review-card
+  // display text only (Bariah/Laila aid); they are NOT part of the record and never exported.
+  var PILOTS = {
+    "s06": {
+      label:"Default / s06 sample",
+      issueSummary:"Unratified overview slide — kept moving via REVIEW / PROVISIONAL rather than blocked by old workshop gates.",
+      recommendation:"This overview slide is still in review. Confirm the method labels and the approved presenter against source before MMD locks it.",
+      reviewQuestion:"Confirm the third method label and the approved presenter against source before lock.",
+      record: SAMPLE
+    },
+    "pl1t3-s2": {
+      label:"PL1T3 s2 — character swap",
+      issueSummary:"On-screen presenter does not match the approved character bank for this PL.",
+      recommendation:"MMD should not lock this slide until the approved presenter/persona is confirmed. Build action is a character swap only.",
+      reviewQuestion:"Bariah: which ratified presenter persona should replace the current on-screen character?",
+      record:{
+        sbatVersion:"m1", slide_id:"pl1t3-s2", title:"Topic intro — on-screen presenter",
+        implementation_status:{storyboard_present:true,implemented_in_repo:false,in_navigation:false,declared_in_scope:false,status:"missing-impl"},
+        vo:"A short on-screen introduction before the topic begins.",
+        onscreen_text:"Welcome to this topic.",
+        mmd_graphics_notes:"Single presenter on screen with a lower-third name strip; gentle fade-in, no other motion.",
+        register_cross_reference:{
+          amend_note:"AMEND-K1: the on-screen presenter does not match the approved character bank for this PL. Swap to the ratified persona before lock; awaiting SB confirmation of the correct presenter.",
+          laila_note:"Laila: keep the background plate and lower-third; replace only the presenter render once the approved character is confirmed.",
+          convergence_type:"character-swap", provenance:"confirmed-from-file"
+        },
+        interaction_metadata:{pattern:"P0",completion_rule:"none",element:""},
+        source_status:"needs-review", owner:"", decision_gate:"BLOCKED_PENDING_SB", handoff:{pdf_preview:"placeholder"}
+      }
+    },
+    "pl3t1-s28": {
+      label:"PL3T1 s28 — quiz gap",
+      issueSummary:"Quiz screen is empty/placeholder — no stem, options, correct-answer mark, or feedback in the approved source.",
+      recommendation:"MMD should hold final quiz build until the ratified question, options, answer and feedback are supplied.",
+      reviewQuestion:"Bariah: please supply the ratified question stem, options, correct answer, and feedback.",
+      record:{
+        sbatVersion:"m1", slide_id:"pl3t1-s28", title:"Topic check — single-answer quiz",
+        implementation_status:{storyboard_present:true,implemented_in_repo:false,in_navigation:false,declared_in_scope:false,status:"missing-impl"},
+        vo:"Let us check what you remember from this topic.",
+        onscreen_text:"Choose the best answer.",
+        mmd_graphics_notes:"Standard quiz screen: stem, four options, feedback panel, and a retry control.",
+        register_cross_reference:{
+          amend_note:"AMEND-K1: the quiz screen is empty/placeholder — stem, options, the correct-answer mark and feedback are not present in the approved source. Awaiting SB to supply ratified question content.",
+          laila_note:"Laila: build the quiz on the standard interaction shell; hold final layout until the source-backed items arrive.",
+          convergence_type:"quiz-gap", provenance:"confirmed-from-file"
+        },
+        interaction_metadata:{pattern:"P6",completion_rule:"answered_correctly",element:""},
+        source_status:"needs-review", owner:"", decision_gate:"BLOCKED_PENDING_SB", handoff:{pdf_preview:"placeholder"}
+      }
+    },
+    "pl5t3-s4": {
+      label:"PL5T3 s4 — visual asset + drag/drop",
+      issueSummary:"Storyboard requires real photographic images for each drag-match pair; imagery not yet selected. Requirement is confirmed from file — asset absence is NOT.",
+      recommendation:"MMD can prepare the drag-match shell and review available real images. Requirement for real images is confirmed; missing approved assets are not confirmed.",
+      reviewQuestion:"Laila / Bariah: review available imagery. The requirement is confirmed; this is a REVIEW, not a confirmed missing-asset block.",
+      record:{
+        sbatVersion:"m1", slide_id:"pl5t3-s4", title:"Match the items — drag activity",
+        implementation_status:{storyboard_present:true,implemented_in_repo:false,in_navigation:false,declared_in_scope:false,status:"missing-impl"},
+        vo:"Drag each item to its matching pair.",
+        onscreen_text:"Match each item to its pair.",
+        mmd_graphics_notes:"Drag-match interaction with paired tiles; the storyboard specifies real photographic images for each pair rather than icons.",
+        register_cross_reference:{
+          amend_note:"AMEND-K1: the approved source specifies real photographic images for each pair. This is a confirmed requirement read from the storyboard, not a confirmed absence of an approved asset; route for review of available imagery.",
+          laila_note:"Laila: source or produce the photographic tiles per the storyboard note, then wire them into the drag-match shell once imagery is selected.",
+          convergence_type:"asset-gap", provenance:"confirmed-from-file"
+        },
+        interaction_metadata:{pattern:"P11",completion_rule:"all_pairs_matched_correctly",element:""},
+        source_status:"REVIEW", owner:"", decision_gate:"REVIEW", handoff:{pdf_preview:"placeholder"}
+      }
+    }
+  };
+  var BLANK_META = {issueSummary:"(no pilot loaded)", reviewQuestion:"(no pilot loaded)"};
+  var currentMeta = BLANK_META;
+  var PATTERN_LABEL = {}; PATTERNS.forEach(function(p){ PATTERN_LABEL[p[0]] = p[1]; });
+  var GATE_TONE = {COMMITTED:"var(--ok)", REVIEW:"var(--review)", PROVISIONAL:"var(--warn)",
+    READY_TO_PATCH:"var(--review)", PATCHED_NOT_COMMITTED:"var(--review)", REPORT_ONLY:"var(--muted)",
+    BLOCKED_PENDING_SB:"#f87171", BLOCKED_PENDING_ASSET:"#f87171"};
+  // Plain-language answer to "Can MMD proceed?" — display only, derived from the committed gate.
+  var GATE_PLAIN = {
+    COMMITTED:"Yes — committed.",
+    REVIEW:"Proceed to review — examine before lock.",
+    PROVISIONAL:"Provisional — keep moving; not yet locked.",
+    READY_TO_PATCH:"Ready to patch.",
+    PATCHED_NOT_COMMITTED:"Patched — awaiting commit.",
+    REPORT_ONLY:"Report only — no change.",
+    BLOCKED_PENDING_SB:"Not yet — blocked pending SB sign-off.",
+    BLOCKED_PENDING_ASSET:"Not yet — blocked pending asset."
+  };
+
   var $ = function(id){return document.getElementById(id);};
   function fill(sel,opts){ sel.innerHTML=""; opts.forEach(function(o){
     var v=Array.isArray(o)?o[0]:o, t=Array.isArray(o)?(o[0]+" — "+o[1]):(o||"(none)");
@@ -222,13 +437,45 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     var b=$("implStatus"); b.textContent="status: "+st;
     b.className="statusbadge "+({complete:"s-complete",PROVISIONAL:"s-prov","scope-mismatch":"s-mismatch"}[st]||"s-review");
   }
+  function renderReview(r){
+    var x=r.register_cross_reference||{}, im=r.interaction_metadata||{};
+    $("rv_vo").textContent     = r.vo || "—";
+    $("rv_screen").textContent = r.onscreen_text || "—";
+    $("rv_mmd").textContent    = r.mmd_graphics_notes || "—";
+    $("rv_amend").textContent  = x.amend_note || "—";
+    $("rv_laila").textContent  = x.laila_note || "—";
+    $("rv_rec").textContent    = currentMeta.recommendation || "—";
+    $("rv_chip_conv").textContent = x.convergence_type || "—";
+    $("rv_chip_pat").textContent  = (im.pattern || "—") + (PATTERN_LABEL[im.pattern] ? " " + PATTERN_LABEL[im.pattern] : "");
+    $("rv_chip_prov").textContent = x.provenance || "—";
+    $("rv_chip_gate").textContent = r.decision_gate || "—";
+    $("rv_q").textContent = currentMeta.reviewQuestion ? ("Review question: " + currentMeta.reviewQuestion) : "—";
+    var g=$("rv_gate"); g.textContent = r.decision_gate || "—";
+    g.style.color = GATE_TONE[r.decision_gate] || "var(--ink)";
+    $("rv_gate_plain").textContent = GATE_PLAIN[r.decision_gate] || "";
+  }
   function refresh(){
     syncCompletion();
     var r=getRecord();
     renderStatusBadge(r.implementation_status.status);
     $("recBadge").textContent="record: "+(r.slide_id||"—");
     $("preview").textContent=JSON.stringify(r,null,2);
-    window.SBAT.record=r;
+    renderReview(r);
+    if(window.SBAT) window.SBAT.record=r;
+  }
+  function loadPilot(key){
+    var p=PILOTS[key]; if(!p) return;
+    currentMeta=p; $("pilotSelect").value=key;
+    setForm(JSON.parse(JSON.stringify(p.record)));
+  }
+  function setMode(m){
+    var rev = (m !== "advanced");
+    $("reviewMode").hidden = !rev;
+    $("advancedMode").hidden = rev;
+    $("modeReviewBtn").classList.toggle("active", rev);
+    $("modeAdvBtn").classList.toggle("active", !rev);
+    $("modeReviewBtn").setAttribute("aria-pressed", rev ? "true" : "false");
+    $("modeAdvBtn").setAttribute("aria-pressed", rev ? "false" : "true");
   }
   function setForm(d){
     $("slide_id").value=d.slide_id||""; $("title").value=d.title||"";
@@ -249,8 +496,11 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   ["storyboard_present","implemented_in_repo","in_navigation","declared_in_scope"]
     .forEach(function(id){ $(id).addEventListener("change",refresh); });
 
-  $("loadBtn").addEventListener("click",function(){ setForm(JSON.parse(JSON.stringify(SAMPLE))); });
-  $("resetBtn").addEventListener("click",function(){ setForm({slide_id:"",interaction_metadata:{pattern:"P0"}}); });
+  $("pilotSelect").addEventListener("change",function(){ loadPilot(this.value); });
+  $("modeReviewBtn").addEventListener("click",function(){ setMode("review"); });
+  $("modeAdvBtn").addEventListener("click",function(){ setMode("advanced"); });
+  $("loadBtn").addEventListener("click",function(){ loadPilot("s06"); });
+  $("resetBtn").addEventListener("click",function(){ currentMeta=BLANK_META; setForm({slide_id:"",interaction_metadata:{pattern:"P0"}}); });
   $("exportBtn").addEventListener("click",function(){
     var r=getRecord(), blob=new Blob([JSON.stringify(r,null,2)],{type:"application/json"});
     var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
@@ -258,8 +508,9 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   });
 
   // public surface for tests
-  window.SBAT={ getRecord:getRecord, loadSample:function(){setForm(JSON.parse(JSON.stringify(SAMPLE)));}, PATTERNS:PATTERNS, record:null };
-  refresh(); // initial render (empty-ish record; status PROVISIONAL)
+  window.SBAT={ getRecord:getRecord, loadSample:function(){loadPilot("s06");}, loadPilot:loadPilot, setMode:setMode, PILOTS:PILOTS, PATTERNS:PATTERNS, record:null };
+  setMode("review");   // default experience = Bariah / Laila Review Mode
+  loadPilot("s06");    // populate with the default sample
 })();
 </script>
 </body>
