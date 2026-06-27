@@ -100,6 +100,26 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 .rv-gate-plain{font-size:13px;color:var(--muted)}
 .rv-hint{font-size:11px;color:var(--muted);margin-top:8px}
 .review .lockalign{max-width:none;margin-top:0}
+/* ---- M1.2 MMD Readiness Dashboard ---- */
+.dashboard{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:20px}
+.dashboard h2{font-size:14px;letter-spacing:.04em;color:var(--accent);margin:0 0 14px;text-transform:uppercase}
+.counters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.counter{flex:1 1 0;min-width:118px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);padding:10px 12px}
+.counter .num{font:700 22px system-ui;color:var(--ink)}
+.counter .lab{font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.filters button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 14px;font:600 12px system-ui;cursor:pointer}
+.filters button.active{background:var(--accent);color:#0B0D11;border-color:var(--accent)}
+.filters button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dash-table{width:100%;border-collapse:collapse;font-size:13px}
+.dash-table th{text-align:left;font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
+.dash-table td{padding:11px 10px;border-bottom:1px solid var(--line);color:var(--ink)}
+.dash-table tbody tr{cursor:pointer}
+.dash-table tbody tr:hover{background:var(--panel2)}
+.dash-table tbody tr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.dash-gate{display:inline-block;font:600 11px monospace;padding:3px 9px;border-radius:6px;border:1px solid var(--line)}
+.dash-class{font:600 11px monospace;color:var(--review)}
+.dash-empty{padding:14px 10px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
@@ -130,6 +150,25 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 
 <!-- ========== REVIEW MODE (default — Bariah / Laila) ========== -->
 <div class="review" id="reviewMode">
+
+  <!-- ===== MMD Readiness Dashboard (M1.2) ===== -->
+  <div class="dashboard" id="dashboard">
+    <h2>MMD Readiness Dashboard</h2>
+    <div class="counters" id="dashCounters"></div>
+    <div class="filters" id="dashFilters" role="group" aria-label="Dashboard filters">
+      <button type="button" data-filter="all" class="active">All</button>
+      <button type="button" data-filter="blocked-sb">Blocked SB</button>
+      <button type="button" data-filter="review">Review</button>
+      <button type="button" data-filter="asset">Asset</button>
+      <button type="button" data-filter="quiz">Quiz</button>
+      <button type="button" data-filter="character">Character</button>
+    </div>
+    <table class="dash-table">
+      <thead><tr><th>Slide</th><th>Pattern</th><th>Decision gate</th><th>Reviewer</th><th>SBAT class</th></tr></thead>
+      <tbody id="dashRows"></tbody>
+    </table>
+    <div class="rv-hint" style="margin-top:10px">Click a row to load that pilot record into Review Mode below.</div>
+  </div>
 
   <div class="rv-cols">
     <div class="rv-card">
@@ -327,6 +366,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     },
     "pl1t3-s2": {
       label:"PL1T3 s2 — character swap",
+      reviewer:"Bariah",
       issueSummary:"On-screen presenter does not match the approved character bank for this PL.",
       recommendation:"MMD should not lock this slide until the approved presenter/persona is confirmed. Build action is a character swap only.",
       reviewQuestion:"Bariah: which ratified presenter persona should replace the current on-screen character?",
@@ -347,6 +387,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     },
     "pl3t1-s28": {
       label:"PL3T1 s28 — quiz gap",
+      reviewer:"Bariah",
       issueSummary:"Quiz screen is empty/placeholder — no stem, options, correct-answer mark, or feedback in the approved source.",
       recommendation:"MMD should hold final quiz build until the ratified question, options, answer and feedback are supplied.",
       reviewQuestion:"Bariah: please supply the ratified question stem, options, correct answer, and feedback.",
@@ -367,6 +408,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     },
     "pl5t3-s4": {
       label:"PL5T3 s4 — visual asset + drag/drop",
+      reviewer:"Laila-Bariah",
       issueSummary:"Storyboard requires real photographic images for each drag-match pair; imagery not yet selected. Requirement is confirmed from file — asset absence is NOT.",
       recommendation:"MMD can prepare the drag-match shell and review available real images. Requirement for real images is confirmed; missing approved assets are not confirmed.",
       reviewQuestion:"Laila / Bariah: review available imagery. The requirement is confirmed; this is a REVIEW, not a confirmed missing-asset block.",
@@ -403,6 +445,19 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     BLOCKED_PENDING_SB:"Not yet — blocked pending SB sign-off.",
     BLOCKED_PENDING_ASSET:"Not yet — blocked pending asset."
   };
+
+  // ---- M1.2 dashboard: the three pilot records (s06 sample excluded) ----
+  var DASH_KEYS = ["pl1t3-s2","pl3t1-s28","pl5t3-s4"];
+  var currentFilter = "all";
+  var DASH_FILTERS = {
+    "all":        function(){ return true; },
+    "blocked-sb": function(r){ return r.decision_gate === "BLOCKED_PENDING_SB"; },
+    "review":     function(r){ return r.decision_gate === "REVIEW"; },
+    "asset":      function(r){ return (r.register_cross_reference||{}).convergence_type === "asset-gap"; },
+    "quiz":       function(r){ return (r.register_cross_reference||{}).convergence_type === "quiz-gap"; },
+    "character":  function(r){ return (r.register_cross_reference||{}).convergence_type === "character-swap"; }
+  };
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];}); }
 
   var $ = function(id){return document.getElementById(id);};
   function fill(sel,opts){ sel.innerHTML=""; opts.forEach(function(o){
@@ -477,6 +532,39 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     $("modeReviewBtn").setAttribute("aria-pressed", rev ? "true" : "false");
     $("modeAdvBtn").setAttribute("aria-pressed", rev ? "false" : "true");
   }
+  function renderDashCounters(){
+    var recs = DASH_KEYS.map(function(k){ return PILOTS[k].record; });
+    function n(fn){ return recs.filter(fn).length; }
+    var data = [
+      ["Total records", recs.length],
+      ["Blocked pending SB", n(DASH_FILTERS["blocked-sb"])],
+      ["Review", n(DASH_FILTERS["review"])],
+      ["Asset-gap", n(DASH_FILTERS["asset"])],
+      ["Quiz-gap", n(DASH_FILTERS["quiz"])],
+      ["Character-swap", n(DASH_FILTERS["character"])]
+    ];
+    $("dashCounters").innerHTML = data.map(function(d){
+      return '<div class="counter"><div class="num">'+d[1]+'</div><div class="lab">'+esc(d[0])+'</div></div>';
+    }).join("");
+  }
+  function renderDashRows(){
+    var pred = DASH_FILTERS[currentFilter] || DASH_FILTERS["all"];
+    var keys = DASH_KEYS.filter(function(k){ return pred(PILOTS[k].record); });
+    var tb = $("dashRows");
+    if(!keys.length){ tb.innerHTML = '<tr><td class="dash-empty" colspan="5">No records match this filter.</td></tr>'; return; }
+    tb.innerHTML = keys.map(function(k){
+      var p=PILOTS[k], r=p.record, x=r.register_cross_reference||{}, im=r.interaction_metadata||{};
+      var tone = GATE_TONE[r.decision_gate] || "var(--ink)";
+      return '<tr tabindex="0" data-key="'+esc(k)+'">'
+        + '<td>'+esc(p.label)+'</td>'
+        + '<td>'+esc(im.pattern||"—")+(PATTERN_LABEL[im.pattern]?" "+esc(PATTERN_LABEL[im.pattern]):"")+'</td>'
+        + '<td><span class="dash-gate" style="color:'+tone+'">'+esc(r.decision_gate||"—")+'</span></td>'
+        + '<td>'+esc(p.reviewer||"—")+'</td>'
+        + '<td class="dash-class">'+esc(x.convergence_type||"—")+'</td>'
+        + '</tr>';
+    }).join("");
+  }
+  function dashActivate(tr){ var k=tr&&tr.getAttribute("data-key"); if(k && PILOTS[k]){ setMode("review"); loadPilot(k); } }
   function setForm(d){
     $("slide_id").value=d.slide_id||""; $("title").value=d.title||"";
     var i=d.implementation_status||{};
@@ -499,6 +587,17 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   $("pilotSelect").addEventListener("change",function(){ loadPilot(this.value); });
   $("modeReviewBtn").addEventListener("click",function(){ setMode("review"); });
   $("modeAdvBtn").addEventListener("click",function(){ setMode("advanced"); });
+  $("dashRows").addEventListener("click",function(e){ var tr=e.target.closest("tr[data-key]"); if(tr) dashActivate(tr); });
+  $("dashRows").addEventListener("keydown",function(e){
+    if(e.key==="Enter"||e.key===" "){ var tr=e.target.closest("tr[data-key]"); if(tr){ e.preventDefault(); dashActivate(tr); } }
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#dashFilters button"),function(b){
+    b.addEventListener("click",function(){
+      currentFilter=b.getAttribute("data-filter");
+      Array.prototype.forEach.call(document.querySelectorAll("#dashFilters button"),function(x){ x.classList.toggle("active", x===b); });
+      renderDashRows();
+    });
+  });
   $("loadBtn").addEventListener("click",function(){ loadPilot("s06"); });
   $("resetBtn").addEventListener("click",function(){ currentMeta=BLANK_META; setForm({slide_id:"",interaction_metadata:{pattern:"P0"}}); });
   $("exportBtn").addEventListener("click",function(){
@@ -509,8 +608,10 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 
   // public surface for tests
   window.SBAT={ getRecord:getRecord, loadSample:function(){loadPilot("s06");}, loadPilot:loadPilot, setMode:setMode, PILOTS:PILOTS, PATTERNS:PATTERNS, record:null };
-  setMode("review");   // default experience = Bariah / Laila Review Mode
-  loadPilot("s06");    // populate with the default sample
+  renderDashCounters(); // M1.2 dashboard summary counters
+  renderDashRows();     // M1.2 dashboard rows (current filter = all)
+  setMode("review");    // default experience = Bariah / Laila Review Mode
+  loadPilot("s06");     // populate with the default sample
 })();
 </script>
 </body>
