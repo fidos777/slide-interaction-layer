@@ -145,6 +145,11 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 .mock-implication .mi-lbl{display:block;font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:5px}
 .mock-implication.blocked{border-left-color:#f87171}
 .mock-implication.review{border-left-color:var(--review)}
+.mock-implication .mi-gate{margin-top:6px;font:600 11px monospace;color:var(--muted)}
+/* ---- M1.6 editable WYSIWYG-lite: live treatment note derived from mmd_graphics_notes ---- */
+.mock-treatment{margin-top:12px;border:1px dashed var(--line);border-radius:8px;background:var(--panel2);padding:10px 12px}
+.mock-treatment .mt-lbl{display:block;font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
+.mock-treatment .mt-txt{display:block;font-size:12.5px;line-height:1.5;color:var(--ink);white-space:pre-wrap;word-break:break-word}
 /* ---- M1.4 Asset Requirement View (display-only dependency overview) ---- */
 .assetview{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:20px}
 .assetview h2{font-size:14px;letter-spacing:.04em;color:var(--accent);margin:0 0 4px;text-transform:uppercase}
@@ -193,7 +198,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   .chip .ck,.mm .k{color:#555 !important}
   .mock-stage{background:#fff !important;border:1px solid #bbb !important}
   .mock-slide{background:#fff !important;border:1px solid #999 !important;min-height:0}
-  .mock-tag,.mock-lbl,.mock-ai,.mock-ost,.mock-stem,.mock-options li,.mock-feedback,.mock-tile,.mock-implication,.mock-generic-note{color:#000 !important;background:#fff !important;border-color:#999 !important}
+  .mock-tag,.mock-lbl,.mock-ai,.mock-ost,.mock-stem,.mock-options li,.mock-feedback,.mock-tile,.mock-implication,.mock-generic-note,.mock-treatment,.mock-treatment .mt-txt,.mock-implication .mi-gate{color:#000 !important;background:#fff !important;border-color:#999 !important}
   .mock-presenter,.mock-tile,.mock-drop{border-color:#999 !important;background:#fafafa !important}
   .mock-implication{border:1px solid #999 !important;border-left:3px solid #777 !important}
 }
@@ -275,13 +280,14 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     </div>
   </div>
 
-  <!-- ===== Slide Mock Preview (M1.3 · WYSIWYG-lite, read-only) ===== -->
+  <!-- ===== Slide Mock Preview (M1.3 · WYSIWYG-lite · M1.6 live-editable from form fields) ===== -->
   <div class="rv-card mockwrap" style="margin-bottom:18px">
-    <h3>Slide Mock Preview <span class="pill" style="margin:0">WYSIWYG-lite · read-only</span></h3>
+    <h3>Slide Mock Preview <span class="pill" style="margin:0">WYSIWYG-lite · live preview</span></h3>
     <div class="mock-meta" id="mock_meta"></div>
     <div class="mock-stage" id="mock_stage"></div>
+    <div class="mock-treatment" id="mock_treatment"></div>
     <div class="mock-implication" id="mock_implication"></div>
-    <div class="rv-hint">Visual mock only — a read-only preview of the slide treatment. Not an authoring canvas; nothing here is saved or exported.</div>
+    <div class="rv-hint">Live preview from existing review fields. Preview only — not final MMD design. Edit the fields in Advanced / JSON Mode and this treatment updates live. Not an authoring canvas, no drag/drop; nothing here is saved or exported. Requires human ratification before MMD lock.</div>
   </div>
 
   <div class="rv-card" style="margin-bottom:18px">
@@ -614,8 +620,9 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     g.style.color = GATE_TONE[r.decision_gate] || "var(--ink)";
     $("rv_gate_plain").textContent = GATE_PLAIN[r.decision_gate] || "";
   }
-  // ---- M1.3 WYSIWYG-lite mock preview (display only; derived from the committed record,
-  // never written back into getRecord() / the exported JSON) ----
+  // ---- M1.3 WYSIWYG-lite mock preview (display only; M1.6 makes it live-editable by reading
+  // the active record r — which getRecord() builds from the existing form fields. The preview
+  // is never written back into getRecord() / the exported JSON; the edit source is the form) ----
   function mockMeta(r){
     var im=r.interaction_metadata||{}, x=r.register_cross_reference||{};
     var pat=(im.pattern||"—")+(PATTERN_LABEL[im.pattern]?" "+PATTERN_LABEL[im.pattern]:"");
@@ -623,6 +630,8 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
       ["pattern", pat, ""],
       ["completion rule", im.completion_rule||"—", ""],
       ["decision gate", r.decision_gate||"—", GATE_TONE[r.decision_gate]||"var(--ink)"],
+      ["source status", r.source_status||"—", ""],
+      ["convergence", x.convergence_type||"—", ""],
       ["provenance", x.provenance||"—", ""]
     ];
     return rows.map(function(m){
@@ -676,9 +685,15 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
       cls="review";
     } else {
       txt=GATE_PLAIN[gate]||"Review the slide before lock.";
-      cls=blocked?"blocked":"review";
     }
-    return '<div class="mock-implication '+cls+'"><span class="mi-lbl">MMD implication — display-only interpretation</span>'+esc(txt)+'</div>';
+    // M1.6: styling follows the live decision_gate so gate edits restyle the implication.
+    // asset-gap with its REVIEW gate stays review-toned (PL5T3 remains REVIEW, never blocked).
+    cls = blocked ? "blocked" : "review";
+    return '<div class="mock-implication '+cls+'">'
+      + '<span class="mi-lbl">MMD implication — display-only interpretation</span>'
+      + esc(txt)
+      + '<div class="mi-gate">Decision gate: '+esc(gate||"—")+' — '+esc(GATE_PLAIN[gate]||"")+'</div>'
+      + '</div>';
   }
   function renderMockPreview(r){
     var pat=(r.interaction_metadata||{}).pattern;
@@ -688,6 +703,9 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
               : mockStageGeneric(r);
     $("mock_meta").innerHTML = mockMeta(r);
     $("mock_stage").innerHTML = stage;
+    $("mock_treatment").innerHTML =
+        '<span class="mt-lbl">MMD treatment note — derived from production notes (display-only)</span>'
+      + '<span class="mt-txt">'+esc(r.mmd_graphics_notes||"—")+'</span>';
     $("mock_implication").innerHTML = mockImplication(r);
   }
   // ---- M1.4 Asset Requirement View (display-only; derived from committed records.
