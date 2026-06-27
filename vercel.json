@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/sbat/m1-screen-c.html"
+    }
+  ]
+}
