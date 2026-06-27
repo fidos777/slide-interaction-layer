@@ -145,6 +145,22 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 .mock-implication .mi-lbl{display:block;font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:5px}
 .mock-implication.blocked{border-left-color:#f87171}
 .mock-implication.review{border-left-color:var(--review)}
+/* ---- M1.4 Asset Requirement View (display-only dependency overview) ---- */
+.assetview{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:20px}
+.assetview h2{font-size:14px;letter-spacing:.04em;color:var(--accent);margin:0 0 4px;text-transform:uppercase}
+.av-sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.av-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:12px}
+.av-card{border:1px solid var(--line);border-radius:10px;background:var(--panel2);padding:14px 15px}
+.av-card h4{margin:0 0 8px;font-size:13px;color:var(--ink);letter-spacing:.02em}
+.av-dep{display:inline-block;font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--line);border-radius:999px;padding:3px 9px;margin-bottom:10px;color:var(--ink)}
+.av-dep.sb{color:#f87171}
+.av-dep.review{color:var(--review)}
+.av-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.av-meta .mm{font:600 10.5px monospace;border:1px solid var(--line);border-radius:6px;padding:3px 8px;color:var(--ink);background:var(--bg)}
+.av-meta .mm .k{color:var(--muted);font-weight:400;margin-right:4px}
+.av-impl{font-size:12.5px;line-height:1.5;color:var(--ink);border-left:3px solid var(--line);padding-left:10px}
+.av-impl.sb{border-left-color:#f87171}
+.av-impl.review{border-left-color:var(--review)}
 </style>
 </head>
 <body>
@@ -193,6 +209,13 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
       <tbody id="dashRows"></tbody>
     </table>
     <div class="rv-hint" style="margin-top:10px">Click a row to load that pilot record into Review Mode below.</div>
+  </div>
+
+  <!-- ===== Asset Requirement View (M1.4 · display-only dependency overview) ===== -->
+  <div class="assetview" id="assetView">
+    <h2>Asset Requirement View</h2>
+    <div class="av-sub">MMD production dependencies derived from the committed pilot records — display-only. Distinguishes SB/content dependency, character dependency, quiz-content dependency, and visual/asset review dependency. Nothing here is saved or exported.</div>
+    <div class="av-cards" id="assetCards"></div>
   </div>
 
   <div class="rv-cols">
@@ -619,6 +642,46 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     $("mock_stage").innerHTML = stage;
     $("mock_implication").innerHTML = mockImplication(r);
   }
+  // ---- M1.4 Asset Requirement View (display-only; derived from committed records.
+  // Reads PILOTS only, writes to its own DOM container; never touches the form,
+  // getRecord(), or the exported JSON) ----
+  function assetDependency(r){
+    var conv=(r.register_cross_reference||{}).convergence_type;
+    if(conv==="character-swap") return {
+      label:"Character dependency · SB/content dependency", tone:"sb",
+      impl:"Approved presenter/persona must be confirmed before final MMD lock. This is a character dependency (presenter dependency), not an asset-block."
+    };
+    if(conv==="quiz-gap") return {
+      label:"Quiz-content dependency · SB/content dependency", tone:"sb",
+      impl:"Ratified stem, options, correct answer and feedback are required before final quiz build. This is a quiz-content dependency, not an asset-block."
+    };
+    if(conv==="asset-gap") return {
+      label:"Visual / asset review dependency", tone:"review",
+      impl:"Real-image requirement is confirmed from source, but missing approved assets are not confirmed — this is a visual/asset review dependency that stays REVIEW, not a missing-asset block."
+    };
+    return {
+      label:"No distinct asset dependency", tone:"",
+      impl:"No distinct asset or content dependency derived for this record."
+    };
+  }
+  function renderAssetView(){
+    $("assetCards").innerHTML = DASH_KEYS.map(function(k){
+      var p=PILOTS[k], r=p.record, x=r.register_cross_reference||{}, im=r.interaction_metadata||{};
+      var dep=assetDependency(r), tone=GATE_TONE[r.decision_gate]||"var(--ink)";
+      var pat=(im.pattern||"—")+(PATTERN_LABEL[im.pattern]?" "+PATTERN_LABEL[im.pattern]:"");
+      return '<div class="av-card">'
+        + '<h4>'+esc(p.label)+'</h4>'
+        + '<span class="av-dep '+dep.tone+'">'+esc(dep.label)+'</span>'
+        + '<div class="av-meta">'
+        +   '<span class="mm"><span class="k">pattern</span>'+esc(pat)+'</span>'
+        +   '<span class="mm"><span class="k">convergence</span>'+esc(x.convergence_type||"—")+'</span>'
+        +   '<span class="mm"><span class="k">gate</span><span style="color:'+tone+'">'+esc(r.decision_gate||"—")+'</span></span>'
+        +   '<span class="mm"><span class="k">source</span>'+esc(r.source_status||"—")+'</span>'
+        + '</div>'
+        + '<div class="av-impl '+dep.tone+'">'+esc(dep.impl)+'</div>'
+        + '</div>';
+    }).join("");
+  }
   function refresh(){
     syncCompletion();
     var r=getRecord();
@@ -721,6 +784,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   window.SBAT={ getRecord:getRecord, loadSample:function(){loadPilot("s06");}, loadPilot:loadPilot, setMode:setMode, PILOTS:PILOTS, PATTERNS:PATTERNS, record:null };
   renderDashCounters(); // M1.2 dashboard summary counters
   renderDashRows();     // M1.2 dashboard rows (current filter = all)
+  renderAssetView();    // M1.4 asset requirement view (display-only dependency overview)
   setMode("review");    // default experience = Bariah / Laila Review Mode
   loadPilot("s06");     // populate with the default sample
 })();
