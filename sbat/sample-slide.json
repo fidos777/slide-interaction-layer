@@ -1,0 +1,30 @@
+{
+  "sbatVersion": "m1",
+  "slide_id": "s06",
+  "title": "Waterproofing methods — overview",
+  "implementation_status": {
+    "storyboard_present": true,
+    "implemented_in_repo": false,
+    "in_navigation": false,
+    "declared_in_scope": false,
+    "status": "PROVISIONAL"
+  },
+  "vo": "In this section we walk through the main waterproofing methods used on site, one at a time.",
+  "onscreen_text": "Waterproofing methods\n• Liquid-applied\n• Sheet membrane\n• Cementitious",
+  "mmd_graphics_notes": "Diagram of a wall section with three labelled layers; subtle highlight as each method is named in VO.",
+  "register_cross_reference": {
+    "amend_note": "AMEND-K1: confirm the third method label against the approved source before lock.",
+    "laila_note": "Laila: animate each layer label in sync with VO; keep the wall-section illustration, swap to the approved presenter.",
+    "convergence_type": "both-registers",
+    "provenance": "review"
+  },
+  "interaction_metadata": {
+    "pattern": "P9",
+    "completion_rule": "all_points_visited",
+    "element": "E3"
+  },
+  "source_status": "REVIEW",
+  "owner": "",
+  "decision_gate": "REVIEW",
+  "handoff": { "pdf_preview": "placeholder" }
+}

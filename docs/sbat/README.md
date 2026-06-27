@@ -6,6 +6,10 @@
 > executed by any deck at runtime. This repo is distributed downstream as a plugin/marketplace
 > package; nothing in `docs/sbat/` is plugin/runtime code. No code, schema, or validator exists yet.
 
+> **M1 prototype now exists:** the first implementation surface lives at
+> [`../../sbat/m1-screen-c.html`](../../sbat/m1-screen-c.html) (one-slide MMD planning). These docs
+> remain the planning record behind it.
+
 ## What SBAT is
 
 SBAT is a **pre-commit authoring governor** (per ADR Decision 3): it sits *before* the build/runtime
