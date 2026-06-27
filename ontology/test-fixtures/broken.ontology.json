@@ -6,7 +6,7 @@
   "slideCount": 3,
   "gatingMode": "off",
   "slides": [
-    { "index": 1, "element": "E16", "objective": "", "pattern": "P9", "gating": "bogus" },
+    { "index": 1, "element": "E16", "objective": "", "pattern": "P12", "gating": "bogus" },
     { "index": 3, "element": "E13", "objective": "critical info", "pattern": "P0", "gating": "all_hotspots_clicked" },
     { "index": 2, "element": "E2", "objective": "ok", "pattern": "P1", "gating": "none" }
   ]

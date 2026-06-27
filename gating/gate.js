@@ -20,7 +20,8 @@
       var mode = (stage.getAttribute('data-sil-gating') || 'off').toLowerCase();
       if (mode !== 'on' && mode !== 'training') return;    // off => inert
 
-      var GATEABLE = ['reveal-cards', 'hotspot', 'quiz', 'branching', 'calculator'];
+      var GATEABLE = ['reveal-cards', 'hotspot', 'quiz', 'branching', 'calculator',
+                      'timeline', 'before-after', 'drag-match'];  // +P9/P10/P11 (v0.6.0)
       var slideSel = stage.getAttribute('data-sil-slide-selector') || '.slide';
       var slides = [].slice.call(stage.querySelectorAll(slideSel));
       var userChanged = new WeakMap();   // calculator strict "user_changed"

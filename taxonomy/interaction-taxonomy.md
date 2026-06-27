@@ -95,6 +95,34 @@ The categories below map cleanly to *what the viewer is being asked to do*.
 
 ---
 
+## Pattern Expansion v1 (added in v0.6.0 — append-only, see ADR-0006)
+
+## P9 — Timeline
+- **Verb:** advance through an ordered sequence
+- **Use when:** events/steps are chronological or staged — history, project phases, a process over time.
+- **Avoid when:** the items are parallel/unordered (use `P1`) or spatial (use `P5`).
+- **Completion rule:** `all_points_visited`.
+- **Component:** `components/timeline/`.
+- **PPT support:** limited.
+
+## P10 — Before/After Slider
+- **Verb:** wipe between two states of one frame
+- **Use when:** comparing two states of the *same* thing — before/after, old/new, problem/solution.
+- **Avoid when:** comparing many items or non-visual attributes (use `P0` table / `P1`).
+- **Completion rule:** `moved_past_threshold` (strict — does not auto-complete on load).
+- **Component:** `components/before-after/`.
+- **PPT support:** none.
+
+## P11 — Drag-Match / Matching
+- **Verb:** pair items across two sets
+- **Use when:** matching term↔definition, cause↔effect, tool↔use, item↔category.
+- **Avoid when:** it's a single-answer check (use `P6`).
+- **Completion rule:** `all_pairs_matched_correctly` (or `all_pairs_matched`).
+- **Component:** `components/drag-match/`.
+- **PPT support:** none.
+
+---
+
 ## Pattern selection at a glance
 
 ```
@@ -107,4 +135,7 @@ Image/diagram/map with labeled parts?            → P5 Hotspot
 Recall / knowledge check / recap?                → P6 Quiz
 A decision with consequences / roleplay?         → P7 Branching
 Numbers in → personalized result out?            → P8 Calculator
+Ordered / chronological sequence?                → P9 Timeline
+Two states of one frame (before/after)?          → P10 Before/After Slider
+Pair items across two sets (matching)?           → P11 Drag-Match
 ```

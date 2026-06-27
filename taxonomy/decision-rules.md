@@ -18,9 +18,13 @@ Ask: *what is the viewer being asked to do on this slide?*
 | Recall, recap, end-of-section reinforcement | **P6 Quiz** |
 | A decision with consequences; roleplay; "what would you do?" | **P7 Branching** |
 | ROI, pricing, savings, time saved, budget, payback, any "numbers in → result out" | **P8 Calculator** |
+| Ordered/chronological sequence; history; project phases; a process over time | **P9 Timeline** |
+| Two states of the same frame compared visually (before/after, old/new, problem/solution) | **P10 Before/After Slider** |
+| Pairing across two sets (term↔definition, cause↔effect, tool↔use, item↔category) | **P11 Drag-Match** |
 
 If two patterns seem to fit, pick the one whose **verb** matches the slide's real goal
-(read / reveal / explore / assess / decide / simulate). When still tied, prefer the **simpler**
+(read / reveal / explore / assess / decide / simulate / sequence / compare / pair). When still tied,
+prefer the **simpler**
 pattern (a Reveal Card over a Modal; a Tooltip over a Modal).
 
 ## Step 2 — Apply the interaction budget

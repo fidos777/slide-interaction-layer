@@ -21,16 +21,18 @@ SCHEMA_PATH = os.path.join(HERE, "schema.json")
 # Allowed element -> pattern mapping (mirrors ontology/element-to-pattern-map.md).
 # Used only for the advisory "mapping fidelity" warning (check 15).
 ALLOWED = {
-    "E1": {"P1", "P3", "P0"}, "E2": {"P1", "P0", "P2"}, "E3": {"P5", "P1"},
-    "E4": {"P5", "P0"}, "E5": {"P2", "P1"}, "E6": {"P0", "P1"},
-    "E7": {"P7", "P5", "P0"}, "E8": {"P4", "P0"}, "E9": {"P0", "P3"},
+    "E1": {"P1", "P3", "P0", "P11"}, "E2": {"P1", "P0", "P2"}, "E3": {"P5", "P1", "P9"},
+    "E4": {"P5", "P0"}, "E5": {"P2", "P1", "P11"}, "E6": {"P10", "P0", "P1"},
+    "E7": {"P7", "P5", "P0", "P11"}, "E8": {"P4", "P0"}, "E9": {"P0", "P3"},
     "E10": {"P7"}, "E11": {"P6"}, "E12": {"P8"}, "E13": {"P0"},
     "E14": {"P0"}, "E15": {"P1", "P6"},
 }
 GATING_ENUM = {"none", "all_cards_revealed", "all_hotspots_clicked", "answered_correctly",
-               "reached_an_ending", "user_changed", "at_least_one_opened", "attempted"}
+               "reached_an_ending", "user_changed", "at_least_one_opened", "attempted",
+               "all_points_visited", "moved_past_threshold", "all_pairs_matched",
+               "all_pairs_matched_correctly"}
 RE_E = re.compile(r"^E([1-9]|1[0-5])$")
-RE_P = re.compile(r"^P[0-8]$")
+RE_P = re.compile(r"^P(?:[0-9]|1[01])$")
 TOP_KEYS = {"$schema", "sidecarVersion", "deck", "deckTitle", "slideCount", "gatingMode", "slides"}
 SLIDE_KEYS = {"index", "element", "objective", "pattern", "gating", "required", "bloom", "rationale"}
 
@@ -86,7 +88,7 @@ def validate(sidecar_path, deck_arg=None, schema=None):
         if "element" in s and not RE_E.match(str(s["element"])):
             err(5, 'element %r out of range (expected E1-E15)' % s.get("element"), idx)
         if "pattern" in s and not RE_P.match(str(s["pattern"])):
-            err(6, 'pattern %r out of range (expected P0-P8)' % s.get("pattern"), idx)
+            err(6, 'pattern %r out of range (expected P0-P11)' % s.get("pattern"), idx)
         if "objective" in s and not (isinstance(s["objective"], str) and s["objective"].strip()):
             err(7, "objective is empty", idx)
         if "gating" in s and s["gating"] not in GATING_ENUM:
@@ -126,8 +128,8 @@ def validate(sidecar_path, deck_arg=None, schema=None):
         idxs = [s.get("index") for s in slides if isinstance(s, dict)]
         if idxs != list(range(1, len(slides) + 1)):
             err(11, "slides[].index must be contiguous 1..%d (got %s)" % (len(slides), idxs))
-        deck_els = re.findall(r"element:\s*(E\d+)", html)
-        deck_pats = re.findall(r"pattern:\s*(P\d)", html)
+        deck_els = re.findall(r"element:\s*(E\d{1,2})", html)
+        deck_pats = re.findall(r"pattern:\s*(P\d{1,2})", html)
         json_els = [s.get("element") for s in slides if isinstance(s, dict)]
         json_pats = [s.get("pattern") for s in slides if isinstance(s, dict)]
         if deck_els and deck_els != json_els:

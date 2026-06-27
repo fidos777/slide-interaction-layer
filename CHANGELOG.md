@@ -11,8 +11,26 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 
 ### Planned
 - **run-gate.sh** — automate the mechanical RRI AUDIT checks + scorecard scaffold.
-- **patterns** — timeline, before/after slider, drag-match, ranking.
+- **patterns** — ranking, filter-explorer, software-mockup simulation.
 - **v1.0** — installable plugin distribution; theme-aware component styling.
+
+## [0.6.0] — 2026-06-27
+### Added (Pattern Expansion v1 — append-only, ADR-0006)
+- **P9 Timeline** (`components/timeline/`) — ordered/chronological sequence; `all_points_visited`.
+- **P10 Before/After Slider** (`components/before-after/`) — two states of one frame; strict
+  `moved_past_threshold` (no auto-complete on load).
+- **P11 Drag-Match** (`components/drag-match/`) — pair across two sets; `all_pairs_matched_correctly`;
+  keyboard-first (drag is an enhancement).
+- New showcase deck `examples/patterns-p9-p11-demo.html` + validated `.ontology.json` sidecar.
+- `decisions/ADR-0006` (append-only taxonomy expansion).
+### Changed
+- Extended (additively): `taxonomy/interaction-taxonomy.md`, `taxonomy/decision-rules.md`,
+  `SKILL.md` shortcut, `ontology/element-to-pattern-map.md`; `gating/gate.js` `GATEABLE` += 3;
+  `ontology/schema.json` `pattern` → `^P(?:[0-9]|1[01])$` + new gating rules; `ontology/validate.py`
+  `RE_P`/`GATING_ENUM`/`ALLOWED` widened to P0–P11.
+### Notes
+- **`P0`–`P8` IDs and behavior unchanged.** New patterns are gateable + accessible with static
+  fallbacks. The existing example sidecar still validates; the new showcase sidecar validates.
 
 ## [0.5.1] — 2026-06-27
 ### Added
@@ -154,7 +172,8 @@ IDs (`P0`–`P8`), components, or runtime behavior**.
 - `examples/demo-deck.html` (one slide per pattern), `prompts/use-with-frontend-slides.md`,
   `README.md`, `SKILL.md`.
 
-[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/fidos777/slide-interaction-layer/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/fidos777/slide-interaction-layer/compare/v0.4.0...v0.4.1

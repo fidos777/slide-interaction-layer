@@ -1,0 +1,49 @@
+<!-- P10 Before/After Slider — wipe between two states of one frame.
+     completion: moved_past_threshold (STRICT — does NOT auto-complete on load).
+     Static fallback: both states shown labeled if JS off. Theme via --sil-* vars.
+     a11y: divider is a real <input type="range">, keyboard-operable; endpoints labeled. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P10 Before/After</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-ba{max-width:720px}
+  .sil-frame{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--sil-line);border-radius:16px;overflow:hidden}
+  .sil-layer{position:absolute;inset:0;display:grid;place-items:center;font:700 40px system-ui;text-align:center;padding:20px}
+  .sil-after{background:linear-gradient(135deg,#15321f,#0F1217);color:var(--sil-accent)}
+  .sil-before{background:linear-gradient(135deg,#3a1d1d,#0F1217);color:#f7c1c1;clip-path:inset(0 50% 0 0)}
+  .sil-tag{position:absolute;top:10px;font:600 13px monospace;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.5)}
+  .sil-tag.b{left:10px;color:#f7c1c1}.sil-tag.a{right:10px;color:var(--sil-accent)}
+  .sil-range{width:100%;margin-top:16px}
+  .sil-range:focus-visible{outline:2px solid var(--sil-accent);outline-offset:4px}
+  .sil-hint{margin-top:8px;font:13px monospace;color:var(--sil-muted)}
+  .sil-ba[data-complete="true"] .sil-hint{color:var(--sil-accent)}
+</style></head><body>
+
+<div class="sil-ba" data-sil="before-after" data-completion="moved_past_threshold">
+  <div class="sil-frame">
+    <div class="sil-layer sil-after">AUTOMATED<br>10× output</div>
+    <div class="sil-layer sil-before" data-sil-before>MANUAL<br>all by hand</div>
+    <span class="sil-tag b">Before</span><span class="sil-tag a">After</span>
+  </div>
+  <label for="ba" style="font-size:14px;color:var(--sil-muted)">Drag to compare before / after</label>
+  <input class="sil-range" id="ba" type="range" min="0" max="100" value="50"
+         aria-label="Reveal more of before (left) or after (right)">
+  <p class="sil-hint" data-sil-hint>Move the slider to compare</p>
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('[data-sil="before-after"]');
+  var range=root.querySelector('#ba'), before=root.querySelector('[data-sil-before]'), hint=root.querySelector('[data-sil-hint]');
+  var start=parseInt(range.value,10), THRESH=10, done=false;
+  function apply(){ before.style.clipPath='inset(0 '+(100-range.value)+'% 0 0)'; }
+  range.addEventListener('input',function(){
+    apply();
+    if(!done && Math.abs(parseInt(range.value,10)-start)>=THRESH){
+      done=true; root.setAttribute('data-complete','true'); hint.textContent='Compared ✓';
+    }
+  });
+  apply(); // render initial position only — does NOT mark complete (strict)
+})();
+</script>
+</body></html>

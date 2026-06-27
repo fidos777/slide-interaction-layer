@@ -24,11 +24,11 @@
           "index": { "type": "integer", "minimum": 1, "description": "1-based slide order, contiguous 1..slideCount." },
           "element": { "type": "string", "pattern": "^E([1-9]|1[0-5])$", "description": "Element ID E1-E15 (see ontology/element-ontology.md)." },
           "objective": { "type": "string", "minLength": 1, "description": "Learning objective in plain language (required)." },
-          "pattern": { "type": "string", "pattern": "^P[0-8]$", "description": "Interaction pattern ID P0-P8 (see taxonomy/)." },
+          "pattern": { "type": "string", "pattern": "^P(?:[0-9]|1[01])$", "description": "Interaction pattern ID P0-P11 (see taxonomy/)." },
           "gating": {
             "type": "string",
             "description": "Completion rule, or 'none' for ungated. Required.",
-            "enum": ["none", "all_cards_revealed", "all_hotspots_clicked", "answered_correctly", "reached_an_ending", "user_changed", "at_least_one_opened", "attempted"]
+            "enum": ["none", "all_cards_revealed", "all_hotspots_clicked", "answered_correctly", "reached_an_ending", "user_changed", "at_least_one_opened", "attempted", "all_points_visited", "moved_past_threshold", "all_pairs_matched", "all_pairs_matched_correctly"]
           },
           "required": { "type": "boolean", "default": false, "description": "Whether engaging this interaction is required (gating)." },
           "bloom": { "enum": ["remember", "understand", "apply", "analyze", "evaluate", "create"] },

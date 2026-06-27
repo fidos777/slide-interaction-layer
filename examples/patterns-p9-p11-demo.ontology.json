@@ -1,0 +1,15 @@
+{
+  "$schema": "../ontology/schema.json",
+  "sidecarVersion": "1.0",
+  "deck": "examples/patterns-p9-p11-demo.html",
+  "deckTitle": "Pattern Expansion v1 — P9 / P10 / P11",
+  "slideCount": 5,
+  "gatingMode": "off",
+  "slides": [
+    { "index": 1, "element": "E14", "objective": "Introduce the three new interaction patterns", "pattern": "P0", "gating": "none", "rationale": "title sets context — never interactive" },
+    { "index": 2, "element": "E3", "objective": "Walk an ordered, dated sequence of milestones", "pattern": "P9", "gating": "none", "rationale": "chronological/ordered sequence -> timeline" },
+    { "index": 3, "element": "E6", "objective": "Compare the manual vs automated state of the same work", "pattern": "P10", "gating": "none", "rationale": "two states of one frame -> before/after slider" },
+    { "index": 4, "element": "E7", "objective": "Match each term to its definition", "pattern": "P11", "gating": "none", "rationale": "pairing across two sets -> drag-match" },
+    { "index": 5, "element": "E14", "objective": "Reinforce that the expansion is additive and safe", "pattern": "P0", "gating": "none", "rationale": "closing statement — never interactive" }
+  ]
+}

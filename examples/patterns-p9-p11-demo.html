@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pattern Expansion v1 — P9 / P10 / P11</title>
+<!--
+  Showcase deck for the v0.6.0 pattern expansion (P9 Timeline, P10 Before/After, P11 Drag-Match).
+  Built with frontend-slides architecture + Slide Interaction Layer. Ungated tour (one pattern per
+  slide). Each interactive slide carries element + interaction metadata. Navigate: arrow / Space.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0D11;--panel:#10141B;--ink:#EEF1F5;--muted:#828A98;--accent:#C6F24E;--accent2:#5BE0C8;--line:rgba(255,255,255,.08);--ok:#4ade80;--no:#f87171;
+  --sil-bg:var(--bg);--sil-panel:var(--panel);--sil-ink:var(--ink);--sil-muted:var(--muted);--sil-accent:var(--accent);--sil-line:rgba(255,255,255,.12);--sil-ok:var(--ok);--sil-no:var(--no);
+}
+*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Sora',sans-serif;overflow:hidden}
+#viewport{position:fixed;inset:0;display:grid;place-items:center}
+#stage{position:relative;width:1920px;height:1080px;transform-origin:center center}
+.slide{position:absolute;inset:0;padding:104px 130px;display:flex;flex-direction:column;justify-content:center;
+  visibility:hidden;opacity:0;pointer-events:none;transition:opacity .4s;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:104px 104px}
+.slide.active{visibility:visible;opacity:1;pointer-events:auto}
+.topbar{position:absolute;top:50px;left:130px;right:130px;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:15px;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
+.topbar .idx{color:var(--accent)}
+.meta-badge{position:absolute;top:46px;right:130px;font:13px 'Space Mono',monospace;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:6px 15px}
+.kicker{display:inline-flex;align-items:center;gap:14px;font-family:'Space Mono',monospace;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
+.kicker::before{content:"";width:46px;height:2px;background:var(--accent)}
+h1{font-weight:800;line-height:.98;letter-spacing:-.025em;font-size:104px}
+h2{font-weight:700;line-height:1.02;font-size:56px;margin-bottom:14px}
+.lede{color:var(--muted);font-size:24px;max-width:1100px;line-height:1.5;margin-top:8px}
+.hl{color:var(--accent)}
+.dots{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:30}
+.dots button{width:11px;height:11px;border-radius:50%;border:1px solid var(--muted);background:none;cursor:pointer;padding:0}
+.dots button.on{background:var(--accent);border-color:var(--accent)}
+.hint{position:absolute;bottom:104px;left:130px;font:15px 'Space Mono',monospace;color:var(--muted)}
+
+/* P9 timeline */
+.sil-tl{margin-top:30px;max-width:1300px}
+.sil-track{position:relative;display:flex;justify-content:space-between;margin:20px 0 24px}
+.sil-track::before{content:"";position:absolute;top:27px;left:0;right:0;height:2px;background:var(--sil-line)}
+.sil-pt{position:relative;background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--sil-muted);font:inherit;flex:1}
+.sil-pt .dot{width:56px;height:56px;border-radius:50%;border:2px solid var(--sil-line);background:var(--bg);display:grid;place-items:center;font:700 20px 'Space Mono',monospace}
+.sil-pt[aria-current="step"] .dot{border-color:var(--accent);color:var(--accent)}
+.sil-pt.is-visited .dot{background:var(--accent);color:#0B0D11;border-color:var(--accent)}
+.sil-pt:focus-visible .dot{box-shadow:0 0 0 5px rgba(198,242,78,.4)}
+.sil-pt .lbl{font-size:18px}
+.sil-detail{background:var(--panel);border:1px solid var(--sil-line);border-radius:16px;padding:28px;min-height:120px}
+.sil-detail h4{margin:0 0 8px;color:var(--accent);font-size:26px}.sil-detail p{margin:0;color:var(--muted);font-size:21px}
+.sil-count{margin-top:14px;font:15px 'Space Mono',monospace;color:var(--muted)}
+
+/* P10 before/after */
+.sil-ba{max-width:980px;margin-top:24px}
+.sil-frame{position:relative;width:100%;aspect-ratio:16/8;border:1px solid var(--sil-line);border-radius:18px;overflow:hidden}
+.sil-layer{position:absolute;inset:0;display:grid;place-items:center;font:800 56px 'Sora';text-align:center}
+.sil-after{background:linear-gradient(135deg,#15321f,#10141B);color:var(--accent)}
+.sil-before{background:linear-gradient(135deg,#3a1d1d,#10141B);color:#f7c1c1;clip-path:inset(0 50% 0 0)}
+.sil-tag{position:absolute;top:14px;font:600 15px 'Space Mono',monospace;padding:5px 12px;border-radius:999px;background:rgba(0,0,0,.5)}
+.sil-tag.b{left:14px;color:#f7c1c1}.sil-tag.a{right:14px;color:var(--accent)}
+.sil-range{width:100%;margin-top:18px}.sil-range:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.ba-hint{margin-top:8px;font:15px 'Space Mono',monospace;color:var(--muted)}
+
+/* P11 drag-match */
+.sil-dm{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:1200px;margin-top:24px}
+.sil-col h4{margin:0 0 14px;color:var(--muted);font:600 15px 'Space Mono',monospace;text-transform:uppercase;letter-spacing:.1em}
+.sil-item{display:block;width:100%;text-align:left;background:var(--panel);color:var(--ink);border:1px solid var(--sil-line);border-radius:14px;padding:20px 24px;margin-bottom:14px;font:500 23px 'Sora';cursor:pointer}
+.sil-item:focus-visible{outline:none;box-shadow:0 0 0 3px var(--accent)}
+.sil-item[aria-grabbed="true"]{border-color:var(--accent);background:rgba(198,242,78,.12)}
+.sil-item.is-matched{border-color:var(--ok);background:rgba(74,222,128,.12);opacity:.7;cursor:default}
+.sil-item.is-wrong{border-color:var(--no);animation:bounce .3s}
+@keyframes bounce{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.sil-status{grid-column:1/3;font:16px 'Space Mono',monospace;color:var(--muted);min-height:24px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+
+  <!-- 1 — P0 Static (title) -->
+  <!-- element: E14 motivation/framing
+       objective: "Introduce the three new interaction patterns"
+       pattern: P0 static
+       gating: none (ungated showcase deck)
+       rationale: "title sets context — never interactive" -->
+  <section class="slide active">
+    <div class="topbar"><span>Pattern Expansion v1</span><span class="idx">01 — 05</span></div>
+    <span class="kicker">Three new patterns</span>
+    <h1>Timeline.<br>Before/After.<br><span class="hl">Matching.</span></h1>
+    <p class="lede">P9, P10, P11 — added without changing P0–P8. Use ← → / Space; try each interaction.</p>
+  </section>
+
+  <!-- 2 — P9 Timeline -->
+  <!-- element: E3 process/procedure
+       objective: "Walk an ordered, dated sequence of milestones"
+       pattern: P9 timeline
+       gating: none (ungated showcase deck; gates all_points_visited in training)
+       rationale: "chronological/ordered sequence → timeline" -->
+  <section class="slide">
+    <div class="topbar"><span>P9 · Timeline</span><span class="idx">02 — 05</span></div>
+    <span class="meta-badge">P9 · Timeline</span>
+    <h2>Click through the milestones</h2>
+    <div class="sil-tl" data-sil="timeline" data-completion="all_points_visited">
+      <div class="sil-track" role="list">
+        <button class="sil-pt" role="listitem" data-title="2019 · Founded" data-body="Two people, one spreadsheet."><span class="dot">1</span><span class="lbl">2019</span></button>
+        <button class="sil-pt" role="listitem" data-title="2021 · First hire" data-body="The process gets written down."><span class="dot">2</span><span class="lbl">2021</span></button>
+        <button class="sil-pt" role="listitem" data-title="2023 · Automated" data-body="Repeatable parts become workflows."><span class="dot">3</span><span class="lbl">2023</span></button>
+        <button class="sil-pt" role="listitem" data-title="2026 · Scaled" data-body="Same team, ten times the output."><span class="dot">4</span><span class="lbl">2026</span></button>
+      </div>
+      <div class="sil-detail" data-sil-detail><h4>Click a point</h4><p>Move through the timeline in order.</p></div>
+      <p class="sil-count" data-sil-count>0 / 4 visited</p>
+    </div>
+  </section>
+
+  <!-- 3 — P10 Before/After -->
+  <!-- element: E6 comparison
+       objective: "Compare the manual vs automated state of the same work"
+       pattern: P10 before-after
+       gating: none (ungated showcase deck; gates moved_past_threshold in training)
+       rationale: "two states of one frame → before/after slider" -->
+  <section class="slide">
+    <div class="topbar"><span>P10 · Before/After</span><span class="idx">03 — 05</span></div>
+    <span class="meta-badge">P10 · Before/After Slider</span>
+    <h2>Drag to compare</h2>
+    <div class="sil-ba" data-sil="before-after" data-completion="moved_past_threshold">
+      <div class="sil-frame">
+        <div class="sil-layer sil-after">AUTOMATED</div>
+        <div class="sil-layer sil-before" data-sil-before>MANUAL</div>
+        <span class="sil-tag b">Before</span><span class="sil-tag a">After</span>
+      </div>
+      <label for="ba" style="font-size:16px;color:var(--muted)">Drag the slider to reveal before / after</label>
+      <input class="sil-range" id="ba" type="range" min="0" max="100" value="50" aria-label="Reveal more of before (left) or after (right)">
+      <p class="ba-hint" data-sil-hint>Move the slider to compare</p>
+    </div>
+  </section>
+
+  <!-- 4 — P11 Drag-Match -->
+  <!-- element: E7 cause & effect
+       objective: "Match each term to its definition"
+       pattern: P11 drag-match
+       gating: none (ungated showcase deck; gates all_pairs_matched_correctly in training)
+       rationale: "pairing across two sets → drag-match" -->
+  <section class="slide">
+    <div class="topbar"><span>P11 · Drag-Match</span><span class="idx">04 — 05</span></div>
+    <span class="meta-badge">P11 · Drag-Match</span>
+    <h2>Match term to definition</h2>
+    <div class="sil-dm" data-sil="drag-match" data-completion="all_pairs_matched_correctly">
+      <div class="sil-col"><h4>Term</h4>
+        <button class="sil-item" data-role="src" data-key="a">Workflow</button>
+        <button class="sil-item" data-role="src" data-key="b">Skill</button>
+        <button class="sil-item" data-role="src" data-key="c">Gating</button>
+      </div>
+      <div class="sil-col"><h4>Definition</h4>
+        <button class="sil-item" data-role="tgt" data-key="b">Frozen, reusable expertise</button>
+        <button class="sil-item" data-role="tgt" data-key="c">Blocks next until complete</button>
+        <button class="sil-item" data-role="tgt" data-key="a">A repeatable sequence of steps</button>
+      </div>
+      <p class="sil-status" data-sil-status aria-live="polite">Select a term, then its definition. 0 / 3 matched.</p>
+    </div>
+  </section>
+
+  <!-- 5 — P0 Static (closing) -->
+  <!-- element: E14 motivation/framing
+       objective: "Reinforce that the expansion is additive and safe"
+       pattern: P0 static
+       gating: none (ungated showcase deck)
+       rationale: "closing statement — never interactive" -->
+  <section class="slide">
+    <div class="topbar"><span>Pattern Expansion v1</span><span class="idx">05 — 05</span></div>
+    <span class="kicker">Append-only</span>
+    <h1>Nine became<br><span class="hl">twelve.</span></h1>
+    <p class="lede">P0–P8 unchanged. P9–P11 are additive, gateable, and accessible — same contract as the rest.</p>
+  </section>
+
+</div></div>
+<div class="dots" id="dots"></div>
+<div class="hint">← → / Space · click the interactions</div>
+
+<script>
+/* fixed-stage scaler */
+(function(){var s=document.getElementById('stage');function f(){s.style.transform='scale('+Math.min(innerWidth/1920,innerHeight/1080)+')';}addEventListener('resize',f);f();})();
+/* navigation */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')),dots=document.getElementById('dots'),i=0;
+  slides.forEach(function(_,n){var b=document.createElement('button');b.addEventListener('click',function(){go(n);});dots.appendChild(b);});
+  window.__deckGo=function(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach(function(s,k){s.classList.toggle('active',k===i);});[].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===i);});};
+  function go(n){window.__deckGo(n);}
+  addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(i+1);}if(e.key==='ArrowLeft'){go(i-1);}});
+  go(0);
+})();
+/* P9 timeline */
+[].forEach.call(document.querySelectorAll('[data-sil="timeline"]'),function(root){
+  var pts=[].slice.call(root.querySelectorAll('.sil-pt')),detail=root.querySelector('[data-sil-detail]'),count=root.querySelector('[data-sil-count]');
+  function show(i){pts.forEach(function(p,k){p.setAttribute('aria-current',k===i?'step':'false');});var p=pts[i];p.classList.add('is-visited');
+    detail.innerHTML='<h4>'+p.dataset.title+'</h4><p>'+p.dataset.body+'</p>';var n=root.querySelectorAll('.is-visited').length;count.textContent=n+' / '+pts.length+' visited';if(n===pts.length)root.setAttribute('data-complete','true');}
+  pts.forEach(function(p,i){p.addEventListener('click',function(){show(i);});p.addEventListener('keydown',function(e){if(e.key==='ArrowRight'&&pts[i+1]){e.preventDefault();pts[i+1].focus();}if(e.key==='ArrowLeft'&&pts[i-1]){e.preventDefault();pts[i-1].focus();}});});
+});
+/* P10 before/after (strict) */
+[].forEach.call(document.querySelectorAll('[data-sil="before-after"]'),function(root){
+  var range=root.querySelector('#ba'),before=root.querySelector('[data-sil-before]'),hint=root.querySelector('[data-sil-hint]'),start=parseInt(range.value,10),done=false;
+  function apply(){before.style.clipPath='inset(0 '+(100-range.value)+'% 0 0)';}
+  range.addEventListener('input',function(){apply();if(!done&&Math.abs(parseInt(range.value,10)-start)>=10){done=true;root.setAttribute('data-complete','true');hint.textContent='Compared ✓';}});
+  apply();
+});
+/* P11 drag-match */
+[].forEach.call(document.querySelectorAll('[data-sil="drag-match"]'),function(root){
+  var status=root.querySelector('[data-sil-status]'),srcs=[].slice.call(root.querySelectorAll('[data-role="src"]')),sel=null;
+  function matched(){return root.querySelectorAll('[data-role="src"].is-matched').length;}
+  function announce(m){status.textContent=m+' '+matched()+' / '+srcs.length+' matched.';}
+  function pick(el){if(el.classList.contains('is-matched'))return;if(sel)sel.setAttribute('aria-grabbed','false');sel=el;el.setAttribute('aria-grabbed','true');announce('Now pick the match for "'+el.textContent+'".');}
+  function tryMatch(t){if(!sel||t.classList.contains('is-matched'))return;
+    if(t.dataset.key===sel.dataset.key){sel.classList.add('is-matched');t.classList.add('is-matched');sel.setAttribute('aria-grabbed','false');sel=null;announce('Matched.');if(matched()===srcs.length){root.setAttribute('data-complete','true');status.textContent='All matched correctly ✓';}}
+    else{t.classList.add('is-wrong');setTimeout(function(){t.classList.remove('is-wrong');},300);announce('Not a match — try again.');}}
+  root.addEventListener('click',function(e){var it=e.target.closest('.sil-item');if(!it)return;if(it.dataset.role==='src')pick(it);else tryMatch(it);});
+  [].forEach.call(root.querySelectorAll('[data-role="src"]'),function(s){s.draggable=true;s.addEventListener('dragstart',function(){pick(s);});});
+  [].forEach.call(root.querySelectorAll('[data-role="tgt"]'),function(t){t.addEventListener('dragover',function(e){e.preventDefault();});t.addEventListener('drop',function(e){e.preventDefault();tryMatch(t);});});
+});
+</script>
+</body>
+</html>

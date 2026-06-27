@@ -1,0 +1,57 @@
+<!-- P9 Timeline — advance through an ordered sequence. completion: all_points_visited.
+     Static fallback: all points + details visible if JS off (remove .is-dim via no-JS).
+     Theme via --sil-* vars. Keyboard: points are buttons; ← → move between them. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>P9 Timeline</title>
+<style>
+  :root{ --sil-ink:#EDEFF2; --sil-muted:#7C828C; --sil-accent:#C6F24E; --sil-panel:#0F1217; --sil-line:rgba(255,255,255,.12); --sil-bg:#0C0E12; }
+  body{background:var(--sil-bg);color:var(--sil-ink);font-family:system-ui,sans-serif;padding:40px}
+  .sil-tl{max-width:900px}
+  .sil-track{position:relative;display:flex;justify-content:space-between;margin:30px 0 24px}
+  .sil-track::before{content:"";position:absolute;top:21px;left:0;right:0;height:2px;background:var(--sil-line)}
+  .sil-pt{position:relative;background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--sil-muted);font:inherit;flex:1}
+  .sil-pt .dot{width:44px;height:44px;border-radius:50%;border:2px solid var(--sil-line);background:var(--sil-bg);
+    display:grid;place-items:center;font:700 16px monospace;transition:.2s}
+  .sil-pt[aria-current="step"] .dot{border-color:var(--sil-accent);color:var(--sil-accent)}
+  .sil-pt.is-visited .dot{background:var(--sil-accent);color:#0C0E12;border-color:var(--sil-accent)}
+  .sil-pt:focus-visible .dot{box-shadow:0 0 0 4px rgba(198,242,78,.4)}
+  .sil-pt .lbl{font-size:14px}
+  .sil-detail{background:var(--sil-panel);border:1px solid var(--sil-line);border-radius:14px;padding:24px;min-height:90px}
+  .sil-detail h4{margin:0 0 6px;color:var(--sil-accent)}.sil-detail p{margin:0;color:var(--sil-muted);line-height:1.5}
+  .sil-count{margin-top:12px;font:13px monospace;color:var(--sil-muted)}
+  @media (prefers-reduced-motion:reduce){.sil-pt .dot{transition:none}}
+</style></head><body>
+
+<div class="sil-tl" data-sil="timeline" data-completion="all_points_visited">
+  <div class="sil-track" role="list">
+    <button class="sil-pt" role="listitem" data-title="2019 · Founded" data-body="Two people, one spreadsheet."><span class="dot">1</span><span class="lbl">2019</span></button>
+    <button class="sil-pt" role="listitem" data-title="2021 · First hire" data-body="Process written down for the first time."><span class="dot">2</span><span class="lbl">2021</span></button>
+    <button class="sil-pt" role="listitem" data-title="2023 · Automated" data-body="The repeatable parts became workflows."><span class="dot">3</span><span class="lbl">2023</span></button>
+    <button class="sil-pt" role="listitem" data-title="2026 · Scaled" data-body="Same team, ten times the output."><span class="dot">4</span><span class="lbl">2026</span></button>
+  </div>
+  <div class="sil-detail" data-sil-detail><h4>Click a point</h4><p>Move through the timeline in order.</p></div>
+  <p class="sil-count" data-sil-count>0 / 4 visited</p>
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('[data-sil="timeline"]');
+  var pts=[].slice.call(root.querySelectorAll('.sil-pt'));
+  var detail=root.querySelector('[data-sil-detail]'), count=root.querySelector('[data-sil-count]');
+  function show(i){
+    pts.forEach(function(p,k){ p.setAttribute('aria-current', k===i?'step':'false'); });
+    var p=pts[i]; p.classList.add('is-visited');
+    detail.innerHTML='<h4>'+p.dataset.title+'</h4><p>'+p.dataset.body+'</p>';
+    var n=root.querySelectorAll('.is-visited').length;
+    count.textContent=n+' / '+pts.length+' visited';
+    if(n===pts.length) root.setAttribute('data-complete','true');
+  }
+  pts.forEach(function(p,i){
+    p.addEventListener('click',function(){show(i);});
+    p.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'&&pts[i+1]){e.preventDefault();pts[i+1].focus();}
+      if(e.key==='ArrowLeft'&&pts[i-1]){e.preventDefault();pts[i-1].focus();}
+    });
+  });
+})();
+</script>
+</body></html>

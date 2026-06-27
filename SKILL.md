@@ -89,6 +89,9 @@ If the slide content is mainly…
 - **a knowledge check / recap** → Quiz (`P6`)
 - **a decision or roleplay** → Branching Scenario (`P7`)
 - **numbers in → custom result out (ROI, savings, time)** → Calculator (`P8`)
+- **an ordered / chronological sequence** → Timeline (`P9`)
+- **two states of one frame compared (before/after)** → Before/After Slider (`P10`)
+- **pairing items across two sets (matching)** → Drag-Match (`P11`)
 - **a title, quote, transition, or pure narrative** → Static (`P0`)
 
 Full rules: `taxonomy/decision-rules.md`. Catalog: `taxonomy/interaction-taxonomy.md`.

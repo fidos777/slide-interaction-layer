@@ -41,6 +41,9 @@ Apply the taxonomy to pick the right interaction per slide. Don't overuse popups
 | a recall / knowledge check | **P6** Quiz |
 | a decision with consequences | **P7** Branching |
 | numbers in → tailored result | **P8** Calculator |
+| an ordered / chronological sequence | **P9** Timeline |
+| two states of one frame (before/after) | **P10** Before/After Slider |
+| pair items across two sets (matching) | **P11** Drag-Match |
 
 That's the whole idea. Everything below is depth: the rules, the components, and how it plugs into `frontend-slides`.
 
@@ -121,6 +124,9 @@ Open these single-file decks in any browser (← → / Space to navigate; click 
 - [`examples/gated-training-demo.html`](examples/gated-training-demo.html) — the **optional
   completion-gating** runtime in action: forward navigation is blocked on each slide until its
   activity is finished (reveal/hotspot/quiz/branching/calculator). Backward always works.
+- [`examples/patterns-p9-p11-demo.html`](examples/patterns-p9-p11-demo.html) — **Pattern Expansion v1**:
+  a tour of the three new patterns **P9 Timeline**, **P10 Before/After Slider**, **P11 Drag-Match**
+  (ontology-annotated; ships with a validated `.ontology.json` sidecar).
 
 ## Completion gating (optional)
 
@@ -188,9 +194,10 @@ The core layer stays universal. Optional, namespaced extensions add domain-speci
 - **v0.2** — ✅ optional completion-gating runtime (`gating/gate.js`) + gated example.
 - **v0.3** — ✅ Element Ontology semantic layer (`ontology/`).
 - **v0.4** — ✅ Recursive Repository Improvement (`improvement/`): pre-release gate + scorecards.
-- **v0.5 (current)** — ✅ machine-readable ontology sidecar (`ontology/schema.json` + example) and
-  ✅ a stdlib sidecar validator (`ontology/validate.py`, v0.5.1). Next: more patterns (timeline,
-  before/after slider, drag-match).
+- **v0.5** — ✅ machine-readable ontology sidecar (`ontology/schema.json` + example) and
+  ✅ a stdlib sidecar validator (`ontology/validate.py`).
+- **v0.6 (current)** — ✅ **Pattern Expansion v1**: P9 Timeline, P10 Before/After Slider,
+  P11 Drag-Match (append-only; P0–P8 unchanged).
 - **v1.0** — packaged as an installable skill/plugin; theme-aware component styling.
 
 ## Maintainer & philosophy
