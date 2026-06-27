@@ -161,6 +161,42 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 .av-impl{font-size:12.5px;line-height:1.5;color:var(--ink);border-left:3px solid var(--line);padding-left:10px}
 .av-impl.sb{border-left-color:#f87171}
 .av-impl.review{border-left-color:var(--review)}
+/* ---- M1.5 Print / Handoff View (browser print → Save as PDF; no PDF library) ---- */
+.handoff-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.handoff-head{display:none}
+.handoff-extra{display:none}
+.ho-kicker{font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.08em;color:#555;margin-bottom:4px}
+.ho-title{font-size:20px;margin:0 0 8px;color:#000}
+.ho-disclaim{font-size:12px;color:#222;border:1px solid #bbb;border-radius:6px;padding:8px 10px;background:#f5f5f5}
+.ho-block{margin-top:14px;break-inside:avoid;page-break-inside:avoid}
+.ho-h{font:700 11px system-ui;text-transform:uppercase;letter-spacing:.06em;color:#333;margin-bottom:6px;border-bottom:1px solid #ccc;padding-bottom:3px}
+.ho-facts{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}
+.ho-fact{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;border-bottom:1px dotted #ccc;padding:3px 0}
+.ho-k{color:#555;text-transform:uppercase;font:600 10px system-ui;letter-spacing:.04em}
+.ho-v{color:#000;font-weight:600;text-align:right}
+.ho-dep{font:600 12px system-ui;color:#000;margin-bottom:4px}
+.ho-impl{font-size:12.5px;color:#222;line-height:1.5}
+.ho-note{margin-top:14px;font-size:11.5px;color:#333;border-top:1px solid #ccc;padding-top:8px}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff;color:#000}
+  /* hide non-handoff UI (criterion 9) */
+  header,.topbar,.handoff-bar,.dashboard,.assetview,#advancedMode,.lockalign,.modetoggle,.filters,.rv-hint{display:none !important}
+  /* reveal print-only handoff blocks */
+  .handoff-head,.handoff-extra{display:block !important}
+  .review{max-width:none;margin:0;padding:0}
+  .rv-cols{display:block}
+  .rv-card,.rv-rec,.rv-decide{border:1px solid #bbb !important;background:#fff !important;color:#000 !important;margin:0 0 12px !important;break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  .rv-card h3,.rv-rec h3,.lbl{color:#333 !important}
+  .rv-vo,.txt,.rec-text,.rv-q,.rv-gate-plain,.rv-decide .q{color:#000 !important}
+  .chip,.mm,.rv-gate,.dash-gate{border:1px solid #999 !important;background:#fff !important;color:#000 !important}
+  .chip .ck,.mm .k{color:#555 !important}
+  .mock-stage{background:#fff !important;border:1px solid #bbb !important}
+  .mock-slide{background:#fff !important;border:1px solid #999 !important;min-height:0}
+  .mock-tag,.mock-lbl,.mock-ai,.mock-ost,.mock-stem,.mock-options li,.mock-feedback,.mock-tile,.mock-implication,.mock-generic-note{color:#000 !important;background:#fff !important;border-color:#999 !important}
+  .mock-presenter,.mock-tile,.mock-drop{border-color:#999 !important;background:#fafafa !important}
+  .mock-implication{border:1px solid #999 !important;border-left:3px solid #777 !important}
+}
 </style>
 </head>
 <body>
@@ -191,6 +227,15 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 
 <!-- ========== REVIEW MODE (default — Bariah / Laila) ========== -->
 <div class="review" id="reviewMode">
+
+  <!-- ===== Print / Handoff header (M1.5 · print-only, populated by renderHandoff) ===== -->
+  <div class="handoff-head" id="handoffHead"></div>
+
+  <!-- ===== Print / Handoff control (M1.5 · hidden in print output) ===== -->
+  <div class="handoff-bar" id="handoffBar">
+    <button type="button" id="printBtn" class="ghost">Print / Save PDF</button>
+    <span class="rv-hint" style="margin:0">Opens the browser print dialog — choose “Save as PDF” for a print-ready review handoff of the active slide. No PDF library is used.</span>
+  </div>
 
   <!-- ===== MMD Readiness Dashboard (M1.2) ===== -->
   <div class="dashboard" id="dashboard">
@@ -265,6 +310,9 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     </div>
     <div class="rv-hint">Decision gate is shown for review only — nothing is saved here.</div>
   </div>
+
+  <!-- ===== Print / Handoff facts + dependency + disclaimer (M1.5 · print-only) ===== -->
+  <div class="handoff-extra" id="handoffExtra"></div>
 
   <div class="lockalign">
     <b>Bariah lock alignment</b>
@@ -682,6 +730,33 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
         + '</div>';
     }).join("");
   }
+  // ---- M1.5 Print / Handoff View (display-only; built from the active record + currentMeta,
+  // surfaced only in @media print. Never touches the form, getRecord(), or exported JSON) ----
+  function renderHandoff(r){
+    var im=r.interaction_metadata||{}, x=r.register_cross_reference||{}, dep=assetDependency(r);
+    $("handoffHead").innerHTML =
+        '<div class="ho-kicker">SBAT · Review Handoff (print)</div>'
+      + '<h1 class="ho-title">'+esc(r.slide_id||"—")+' — '+esc(r.title||"(untitled)")+'</h1>'
+      + '<div class="ho-disclaim">Review handoff only. AI-derived and display-only sections require human ratification before final MMD lock.</div>';
+    var facts=[
+      ["decision gate", r.decision_gate],
+      ["source status", r.source_status],
+      ["convergence type", x.convergence_type],
+      ["provenance", x.provenance],
+      ["interaction pattern", (im.pattern||"—")+(PATTERN_LABEL[im.pattern]?" "+PATTERN_LABEL[im.pattern]:"")],
+      ["completion rule", im.completion_rule],
+      ["can MMD proceed?", GATE_PLAIN[r.decision_gate]||"—"]
+    ];
+    var factsHtml=facts.map(function(f){
+      return '<div class="ho-fact"><span class="ho-k">'+esc(f[0])+'</span><span class="ho-v">'+esc(f[1]||"—")+'</span></div>';
+    }).join("");
+    $("handoffExtra").innerHTML =
+        '<div class="ho-block"><div class="ho-h">Handoff facts — active slide</div><div class="ho-facts">'+factsHtml+'</div></div>'
+      + '<div class="ho-block"><div class="ho-h">Asset / dependency summary — active record</div>'
+      +   '<div class="ho-dep">'+esc(dep.label)+'</div>'
+      +   '<div class="ho-impl">'+esc(dep.impl)+'</div></div>'
+      + '<div class="ho-note">AI-derived, display-only and review-only material in this handoff is not approved final content. The human decision gate above must be cleared before final MMD lock.</div>';
+  }
   function refresh(){
     syncCompletion();
     var r=getRecord();
@@ -690,6 +765,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     $("preview").textContent=JSON.stringify(r,null,2);
     renderReview(r);
     renderMockPreview(r);   // M1.3 read-only slide mock (display only)
+    renderHandoff(r);       // M1.5 print/handoff blocks (display only; @media print)
     if(window.SBAT) window.SBAT.record=r;
   }
   function loadPilot(key){
@@ -761,6 +837,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   $("pilotSelect").addEventListener("change",function(){ loadPilot(this.value); });
   $("modeReviewBtn").addEventListener("click",function(){ setMode("review"); });
   $("modeAdvBtn").addEventListener("click",function(){ setMode("advanced"); });
+  $("printBtn").addEventListener("click",function(){ window.print(); }); // M1.5 browser-native print → Save as PDF
   $("dashRows").addEventListener("click",function(e){ var tr=e.target.closest("tr[data-key]"); if(tr) dashActivate(tr); });
   $("dashRows").addEventListener("keydown",function(e){
     if(e.key==="Enter"||e.key===" "){ var tr=e.target.closest("tr[data-key]"); if(tr){ e.preventDefault(); dashActivate(tr); } }
