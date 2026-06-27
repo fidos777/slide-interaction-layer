@@ -186,7 +186,8 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   @page{margin:14mm}
   body{background:#fff;color:#000}
   /* hide non-handoff UI (criterion 9) */
-  header,.topbar,.handoff-bar,.dashboard,.assetview,.reviewer-panel,#advancedMode,.lockalign,.modetoggle,.filters,.rv-hint{display:none !important}
+  header,.topbar,.handoff-bar,.dashboard,.assetview,.reviewer-panel,.workflow-note,.flow-h,#advancedMode,.lockalign,.modetoggle,.filters,.rv-hint{display:none !important}
+  .step{display:none !important}
   /* reveal print-only handoff blocks */
   .handoff-head,.handoff-extra{display:block !important}
   .review{max-width:none;margin:0;padding:0}
@@ -218,6 +219,16 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 .rp-summary .rp-line{margin-bottom:4px}
 .rp-summary .rp-k{color:var(--muted);font:600 11px system-ui;text-transform:uppercase;letter-spacing:.04em;margin-right:6px}
 .rp-summary .rp-foot{margin-top:6px;font-size:11px;color:var(--muted)}
+/* ---- M1.8 UX polish: workflow orientation note + step hierarchy ---- */
+.workflow-note{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:16px 20px;margin-bottom:22px}
+.workflow-note h2{font-size:14px;letter-spacing:.04em;color:var(--accent);margin:0 0 10px;text-transform:uppercase}
+.workflow-note ol{margin:0;padding-left:22px;font-size:12.5px;line-height:1.8;color:var(--ink)}
+.workflow-note ol li{margin-bottom:3px}
+.workflow-note .wf-foot{margin-top:12px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:9px}
+.step{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#0B0D11;font:700 11px system-ui;margin-right:9px;flex:0 0 auto;vertical-align:middle}
+.flow-h{display:flex;align-items:center;font:700 13px system-ui;text-transform:uppercase;letter-spacing:.07em;color:var(--ink);margin:0 0 12px}
+.dashboard h2,.assetview h2{display:flex;align-items:center}
+.review .rv-decide .q{display:flex;align-items:center}
 </style>
 </head>
 <body>
@@ -252,15 +263,24 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
   <!-- ===== Print / Handoff header (M1.5 · print-only, populated by renderHandoff) ===== -->
   <div class="handoff-head" id="handoffHead"></div>
 
-  <!-- ===== Print / Handoff control (M1.5 · hidden in print output) ===== -->
-  <div class="handoff-bar" id="handoffBar">
-    <button type="button" id="printBtn" class="ghost">Print / Save PDF</button>
-    <span class="rv-hint" style="margin:0">Opens the browser print dialog — choose “Save as PDF” for a print-ready review handoff of the active slide. No PDF library is used.</span>
+  <!-- ===== M1.8 · workflow orientation note (screen-only; hidden in print) ===== -->
+  <div class="workflow-note" id="workflowNote">
+    <h2>How to use this screen — MMD review workflow</h2>
+    <ol>
+      <li>Select a pilot record — use the dropdown above, or click a row in the dashboard.</li>
+      <li>Review the slide evidence — VO script, on-screen text, MMD notes and governance.</li>
+      <li>Check asset / dependency status in the Asset Requirement View.</li>
+      <li>Inspect the WYSIWYG-lite preview — display-only, not final MMD design.</li>
+      <li>Decide whether MMD can proceed — read the authoritative decision gate.</li>
+      <li>Record a meeting decision if needed — Reviewer Decision Panel (review-only, not saved / not exported).</li>
+      <li>Print / Save PDF of the handoff for discussion.</li>
+    </ol>
+    <div class="wf-foot">Review-only screen. Display-only interpretations and AI-derived text require human ratification before final MMD lock. The authoritative gate is changed only in Advanced / JSON Mode.</div>
   </div>
 
-  <!-- ===== MMD Readiness Dashboard (M1.2) ===== -->
+  <!-- ===== MMD Readiness Dashboard (M1.2 · step 1) ===== -->
   <div class="dashboard" id="dashboard">
-    <h2>MMD Readiness Dashboard</h2>
+    <h2><span class="step">1</span>MMD Readiness Dashboard</h2>
     <div class="counters" id="dashCounters"></div>
     <div class="filters" id="dashFilters" role="group" aria-label="Dashboard filters">
       <button type="button" data-filter="all" class="active">All</button>
@@ -279,11 +299,12 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 
   <!-- ===== Asset Requirement View (M1.4 · display-only dependency overview) ===== -->
   <div class="assetview" id="assetView">
-    <h2>Asset Requirement View</h2>
+    <h2><span class="step">2</span>Asset Requirement View</h2>
     <div class="av-sub">MMD production dependencies derived from the committed pilot records — display-only. Distinguishes SB/content dependency, character dependency, quiz-content dependency, and visual/asset review dependency. Nothing here is saved or exported.</div>
     <div class="av-cards" id="assetCards"></div>
   </div>
 
+  <h2 class="flow-h"><span class="step">3</span>Slide Review</h2>
   <div class="rv-cols">
     <div class="rv-card">
       <h3>VO script <span class="pill" style="color:var(--accent);margin:0">VO-first</span></h3>
@@ -294,16 +315,6 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
       <div class="rv-block"><div class="lbl">On-screen text (AI-derived)</div><div class="txt" id="rv_screen">—</div></div>
       <div class="rv-block"><div class="lbl">MMD graphics / production notes</div><div class="txt" id="rv_mmd">—</div></div>
     </div>
-  </div>
-
-  <!-- ===== Slide Mock Preview (M1.3 · WYSIWYG-lite · M1.6 live-editable from form fields) ===== -->
-  <div class="rv-card mockwrap" style="margin-bottom:18px">
-    <h3>Slide Mock Preview <span class="pill" style="margin:0">WYSIWYG-lite · live preview</span></h3>
-    <div class="mock-meta" id="mock_meta"></div>
-    <div class="mock-stage" id="mock_stage"></div>
-    <div class="mock-treatment" id="mock_treatment"></div>
-    <div class="mock-implication" id="mock_implication"></div>
-    <div class="rv-hint">Live preview from existing review fields. Preview only — not final MMD design. Edit the fields in Advanced / JSON Mode and this treatment updates live. Not an authoring canvas, no drag/drop; nothing here is saved or exported. Requires human ratification before MMD lock.</div>
   </div>
 
   <div class="rv-card" style="margin-bottom:18px">
@@ -324,8 +335,19 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     <div class="rv-q" id="rv_q">—</div>
   </div>
 
+  <!-- ===== Slide Mock Preview (M1.3 · WYSIWYG-lite · M1.6 live-editable · M1.8 step 4) ===== -->
+  <h2 class="flow-h"><span class="step">4</span>WYSIWYG-lite Slide Mock Preview</h2>
+  <div class="rv-card mockwrap" style="margin-bottom:18px">
+    <h3>Slide Mock Preview <span class="pill" style="margin:0">WYSIWYG-lite · live preview</span></h3>
+    <div class="mock-meta" id="mock_meta"></div>
+    <div class="mock-stage" id="mock_stage"></div>
+    <div class="mock-treatment" id="mock_treatment"></div>
+    <div class="mock-implication" id="mock_implication"></div>
+    <div class="rv-hint">WYSIWYG-lite preview — display-only, not final MMD design. Live from the existing review fields (edit them in Advanced / JSON Mode). Nothing here is saved or exported. Requires human ratification before final MMD lock.</div>
+  </div>
+
   <div class="rv-decide">
-    <div class="q">Can MMD proceed?</div>
+    <div class="q"><span class="step">5</span>Can MMD proceed?</div>
     <div class="gatewrap">
       <span class="rv-gate" id="rv_gate">—</span>
       <span class="rv-gate-plain" id="rv_gate_plain">—</span>
@@ -335,7 +357,7 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 
   <!-- ===== Reviewer Decision Panel (M1.7 · review-only meeting aid; in-memory DOM only) ===== -->
   <div class="reviewer-panel" id="reviewerPanel">
-    <h3>Reviewer Decision Panel <span class="pill" style="margin:0">review-only · meeting aid</span></h3>
+    <h3><span class="step">6</span>Reviewer Decision Panel <span class="pill" style="margin:0">review-only · meeting aid</span></h3>
     <div class="rp-sub">Review-only meeting note. Not saved or exported. Does not change the authoritative gate. A human must update the authoritative <code>decision_gate</code> separately in Advanced / JSON Mode if needed.</div>
     <div class="rp-options" id="reviewerOptions" role="group" aria-label="Reviewer decision">
       <button type="button" class="rp-btn" data-choice="agree" aria-pressed="false">Agree / Proceed with current recommendation</button>
@@ -346,6 +368,13 @@ pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
     <label class="rp-lbl" for="reviewerNote">Reviewer meeting note</label>
     <textarea id="reviewerNote" class="rp-note" placeholder="Optional meeting note (review-only — not saved, not exported)…"></textarea>
     <div class="rp-summary" id="reviewerSummary"></div>
+  </div>
+
+  <!-- ===== Print / Handoff control (M1.5 · M1.8 moved to end as step 7; hidden in print) ===== -->
+  <div class="handoff-bar" id="handoffBar">
+    <span class="step">7</span>
+    <button type="button" id="printBtn" class="ghost">Print / Save PDF</button>
+    <span class="rv-hint" style="margin:0">Opens the browser print dialog — choose “Save as PDF” for a print-ready review handoff of the active slide. No PDF library is used.</span>
   </div>
 
   <!-- ===== Print / Handoff facts + dependency + disclaimer (M1.5 · print-only) ===== -->
