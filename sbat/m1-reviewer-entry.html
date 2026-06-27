@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBAT · Reviewer Entry / Validation Mode (MMD-0)</title>
+<!--
+  SBAT M1.11 — Reviewer Entry + Validation Comment Capture (MOCK).
+  This is NOT a login/auth system, NOT a database, NOT persistence, NOT production approval.
+  Static single page, in-memory only. It identifies the reviewer for MMD-0 validation and
+  lets them capture comments + suggested gate/readiness, then export a Markdown note for
+  Firdaus to ratify manually. It never mutates MMD_READINESS_REGISTER.csv.
+-->
+<style>
+:root{
+  --bg:#0B0D11;--panel:#10141B;--panel2:#161B26;--ink:#EEF1F5;--muted:#828A98;--accent:#C6F24E;
+  --line:rgba(255,255,255,.10);--ok:#4ade80;--warn:#fbbf24;--review:#5BE0C8;--danger:#f87171;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,'Segoe UI',sans-serif;line-height:1.45}
+a{color:var(--accent)}
+header{padding:22px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+header h1{font-size:20px;margin:0}
+header .sub{color:var(--muted);font-size:13px}
+.pill{display:inline-block;font:600 11px monospace;color:var(--warn);border:1px solid var(--line);border-radius:999px;padding:3px 9px;margin-left:6px}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 28px}
+.card{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin-bottom:20px}
+.card h2{font-size:14px;letter-spacing:.04em;color:var(--accent);margin:0 0 8px;text-transform:uppercase}
+.note{font-size:12.5px;color:var(--warn);margin-bottom:12px}
+.muted{color:var(--muted);font-size:12.5px}
+label.lbl{display:block;font:600 11px system-ui;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:10px 0 5px}
+select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:9px 11px;font:14px system-ui}
+select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea.ta{resize:vertical;min-height:60px}
+.reviewer-row{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end}
+.reviewer-row > div{flex:1 1 240px}
+.modelabel{display:inline-block;font:600 11px monospace;color:var(--review);border:1px solid var(--line);border-radius:999px;padding:4px 11px;margin-top:10px}
+.panel{border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:16px 18px;margin-bottom:16px}
+.panel h3{margin:0 0 10px;font-size:14px;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.panel h3 .tag{font:600 11px monospace;color:var(--review);border:1px solid var(--line);border-radius:999px;padding:3px 9px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.facts .f{font:600 11px monospace;border:1px solid var(--line);border-radius:6px;padding:3px 8px;color:var(--ink);background:var(--bg)}
+.facts .f .fk{color:var(--muted);font-weight:400;margin-right:5px}
+.meta{font-size:12.5px;color:var(--ink);margin:4px 0}
+.meta b{color:var(--muted);font:600 10.5px system-ui;text-transform:uppercase;letter-spacing:.04em}
+.meta.allow{border-left:3px solid var(--review);padding-left:10px}
+.meta.block{border-left:3px solid var(--danger);padding-left:10px}
+.row3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:6px}
+.warn{margin-top:10px;border:1px solid var(--danger);border-left:4px solid var(--danger);border-radius:8px;background:rgba(248,113,113,.08);color:#ffd7d7;font-size:12.5px;padding:9px 12px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0}
+button{background:var(--accent);color:#0B0D11;border:0;border-radius:8px;padding:10px 16px;font:600 13px system-ui;cursor:pointer}
+button.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+pre,textarea#noteOut{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;font:12px/1.5 ui-monospace,monospace;white-space:pre-wrap;word-break:break-word;color:#cfe;width:100%;min-height:220px}
+.copystatus{font-size:12px;color:var(--review);margin-top:6px;min-height:16px}
+.footer{border:1px dashed var(--line);border-radius:12px;background:var(--panel2);padding:14px 18px;color:var(--muted);font-size:12px}
+.footer ul{margin:6px 0 0;padding-left:18px;line-height:1.7}
+.backlink{font-size:13px;margin-bottom:16px}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>SBAT · Reviewer Entry <span class="pill">validation mock</span></h1>
+    <div class="sub">MMD-0 reviewer validation — capture comments &amp; suggested gates · not login, not saved, not approval</div>
+  </div>
+  <span class="modelabel">MMD-0 validation: 3 pilot records only</span>
+</header>
+
+<div class="wrap">
+  <div class="backlink"><a href="m1-screen-c.html">← Back to SBAT M1 review pilot</a></div>
+
+  <!-- ===== A · Reviewer Entry ===== -->
+  <div class="card">
+    <h2>Reviewer Entry / Validation Mode</h2>
+    <div class="note">This is not a login system. It only identifies the reviewer for MMD-0 validation. Comments are not saved to a database.</div>
+    <div class="reviewer-row">
+      <div>
+        <label class="lbl" for="reviewerSel">Reviewer</label>
+        <select id="reviewerSel">
+          <option value="Bariah">Bariah — ID Lead / SB Governance</option>
+          <option value="Laila">Laila — MMD Lead / Visual Production</option>
+        </select>
+      </div>
+      <div>
+        <div class="lbl">Role</div>
+        <div id="reviewerRole" class="meta" style="margin:0">—</div>
+        <div id="reviewerLanes" class="muted" style="margin-top:4px"></div>
+      </div>
+    </div>
+    <span class="modelabel">MMD-0 validation: 3 pilot records only</span>
+  </div>
+
+  <!-- ===== B · Per-record validation panels (rendered by JS) ===== -->
+  <div id="recordsWrap"></div>
+
+  <!-- ===== C · Validation summary / export ===== -->
+  <div class="card">
+    <h2>Validation note</h2>
+    <div class="btns">
+      <button type="button" id="genBtn">Generate validation note</button>
+      <button type="button" id="copyBtn" class="ghost">Copy validation note</button>
+    </div>
+    <textarea id="noteOut" readonly placeholder="Click “Generate validation note” to build a copyable Markdown summary of your review…"></textarea>
+    <div class="copystatus" id="copyStatus"></div>
+  </div>
+
+  <!-- ===== D · Non-goal / honesty footer ===== -->
+  <div class="footer">
+    <b style="color:var(--ink)">Reviewer validation mock — honesty notes</b>
+    <ul>
+      <li>Not real login.</li>
+      <li>Not persisted (in-memory only — no database, no localStorage).</li>
+      <li>Not final approval.</li>
+      <li>Not CSV mutation — the MMD Readiness Register is never changed from this page.</li>
+      <li>AI suggests; humans ratify.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var REVIEWERS = {
+    Bariah:{ role:"ID Lead / SB Governance", lanes:["SB/content/quiz/character","blocker ratification","readiness validation"] },
+    Laila: { role:"MMD Lead / Visual Production", lanes:["visual/MMD feasibility","asset/interactivity treatment","shell/final build clarity"] }
+  };
+  // Static MMD-0 register values (embedded; not fetched, not parsed from CSV).
+  var RECORDS = [
+    { key:"pl1t3-s2", id:"PL1T3-s2", issue:"character-swap", pattern:"P0",
+      gate:"BLOCKED_PENDING_SB", readiness:"BLOCKED_PENDING_SB", owner:"Bariah",
+      mmd_action:"prepare static shell only; wait for SB/persona confirmation",
+      allowed:"static shell / placeholder treatment only",
+      blocked:"final character lock, final VO/persona lock",
+      purpose:"confirm character/persona/VO lock status" },
+    { key:"pl3t1-s28", id:"PL3T1-s28", issue:"quiz-gap", pattern:"P6",
+      gate:"BLOCKED_PENDING_SB", readiness:"READY_FOR_SHELL_ONLY", owner:"Bariah",
+      mmd_action:"prepare quiz shell only; wait for quiz content",
+      allowed:"quiz shell / layout / interaction container",
+      blocked:"final quiz stem, options, correct answer, feedback, scoring",
+      purpose:"confirm quiz stem/options/answer/feedback/scoring needs" },
+    { key:"pl5t3-s4", id:"PL5T3-s4", issue:"asset-gap / drag-match review", pattern:"P11",
+      gate:"REVIEW", readiness:"REVIEW_REQUIRED", owner:"Laila + Bariah",
+      mmd_action:"prepare drag-match treatment discussion; do not mark asset as missing unless confirmed",
+      allowed:"drag-match treatment discussion, shell concept, asset requirement list",
+      blocked:"final asset lock, final drag/drop pair lock, final MMD build",
+      purpose:"confirm drag-match / visual treatment review", guard:true }
+  ];
+  var DECISIONS = ["Confirm current status","Suggest change","Need discussion"];
+  var GATES = ["KEEP_CURRENT","REVIEW","BLOCKED_PENDING_SB","BLOCKED_PENDING_ASSET","CLEAR_FOR_MMD"];
+  var READYS = ["KEEP_CURRENT","REVIEW_REQUIRED","READY_FOR_SHELL_ONLY","READY_FOR_MMD","BLOCKED_PENDING_SB","BLOCKED_PENDING_ASSET"];
+
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];}); }
+  function $(id){ return document.getElementById(id); }
+  function opts(arr){ return arr.map(function(o){ return '<option value="'+esc(o)+'">'+esc(o)+'</option>'; }).join(""); }
+  function fact(k,v){ return '<span class="f"><span class="fk">'+esc(k)+'</span>'+esc(v)+'</span>'; }
+
+  function renderReviewer(){
+    var name=$("reviewerSel").value, r=REVIEWERS[name];
+    $("reviewerRole").textContent = r ? r.role : "—";
+    $("reviewerLanes").textContent = r ? ("Decision lanes: "+r.lanes.join(" · ")) : "";
+  }
+  function recordPanel(rec){
+    return '<div class="panel" id="panel_'+rec.key+'">'
+      + '<h3>'+esc(rec.id)+' <span class="tag">'+esc(rec.issue)+' · '+esc(rec.pattern)+'</span></h3>'
+      + '<div class="facts">'+fact("current gate",rec.gate)+fact("current readiness",rec.readiness)+fact("current owner",rec.owner)+'</div>'
+      + '<div class="meta"><b>Purpose:</b> '+esc(rec.purpose)+'</div>'
+      + '<div class="meta"><b>MMD action:</b> '+esc(rec.mmd_action)+'</div>'
+      + '<div class="meta allow"><b>Allowed work:</b> '+esc(rec.allowed)+'</div>'
+      + '<div class="meta block"><b>Blocked work:</b> '+esc(rec.blocked)+'</div>'
+      + '<label class="lbl" for="cmt_'+rec.key+'">Reviewer comment</label>'
+      + '<textarea id="cmt_'+rec.key+'" class="ta" placeholder="Your validation comment (in-memory only — not saved)…"></textarea>'
+      + '<div class="row3">'
+      +   '<div><label class="lbl" for="dec_'+rec.key+'">Decision</label><select id="dec_'+rec.key+'">'+opts(DECISIONS)+'</select></div>'
+      +   '<div><label class="lbl" for="gate_'+rec.key+'">Suggested gate</label><select id="gate_'+rec.key+'">'+opts(GATES)+'</select></div>'
+      +   '<div><label class="lbl" for="rdy_'+rec.key+'">Suggested readiness</label><select id="rdy_'+rec.key+'">'+opts(READYS)+'</select></div>'
+      + '</div>'
+      + '<div class="warn" id="warn_'+rec.key+'" hidden>&#9888; PL5T3 is currently REVIEW / REVIEW_REQUIRED. Do not asset-block unless missing approved assets are explicitly confirmed.</div>'
+      + '</div>';
+  }
+  function checkGuard(rec){
+    if(!rec.guard) return false;
+    var bad = ($("gate_"+rec.key).value==="BLOCKED_PENDING_ASSET" || $("rdy_"+rec.key).value==="BLOCKED_PENDING_ASSET");
+    $("warn_"+rec.key).hidden = !bad;
+    return bad;
+  }
+  function generateNote(){
+    var name=$("reviewerSel").value, r=REVIEWERS[name], L=[];
+    L.push("# MMD-0 Reviewer Validation Note");
+    L.push("");
+    L.push("- Reviewer: "+name);
+    L.push("- Role: "+(r?r.role:"—"));
+    L.push("- Generated: "+new Date().toLocaleString());
+    L.push("- Scope: MMD-0 validation — 3 pilot records only");
+    L.push("");
+    var anyWarn=false;
+    RECORDS.forEach(function(rec){
+      var cmt=($("cmt_"+rec.key).value||"").trim();
+      var dec=$("dec_"+rec.key).value, g=$("gate_"+rec.key).value, rd=$("rdy_"+rec.key).value;
+      if(checkGuard(rec)) anyWarn=true;
+      L.push("## "+rec.id+" — "+rec.issue+" ("+rec.pattern+")");
+      L.push("- Current gate: "+rec.gate);
+      L.push("- Current readiness: "+rec.readiness);
+      L.push("- Decision: "+dec);
+      L.push("- Suggested gate: "+g);
+      L.push("- Suggested readiness: "+rd);
+      L.push("- Comment: "+(cmt?cmt:"(none)"));
+      if(checkGuard(rec)){
+        L.push("- ⚠ WARNING: "+rec.id+" was suggested as BLOCKED_PENDING_ASSET, but missing approved assets are NOT confirmed. This contradicts the current REVIEW / REVIEW_REQUIRED state and must not be applied without explicit asset confirmation.");
+      }
+      L.push("");
+    });
+    if(anyWarn){ L.push("> ⚠ One or more asset-block suggestions were flagged. Review carefully before ratification."); L.push(""); }
+    L.push("---");
+    L.push("This is reviewer input only. It does not update the MMD Readiness Register until ratified by Firdaus / project owner.");
+    $("noteOut").value = L.join("\n");
+    $("copyStatus").textContent = "";
+  }
+  function fallback(ta){ ta.focus(); ta.select(); $("copyStatus").textContent = "Clipboard unavailable — text selected; press Cmd/Ctrl+C to copy."; }
+  function copyNote(){
+    var ta=$("noteOut");
+    if(!ta.value){ generateNote(); }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(ta.value).then(function(){ $("copyStatus").textContent="Copied to clipboard."; }, function(){ fallback(ta); });
+    } else { fallback(ta); }
+  }
+
+  // init
+  $("recordsWrap").innerHTML = RECORDS.map(recordPanel).join("");
+  renderReviewer();
+  $("reviewerSel").addEventListener("change", renderReviewer);
+  RECORDS.forEach(function(rec){
+    if(rec.guard){
+      $("gate_"+rec.key).addEventListener("change", function(){ checkGuard(rec); });
+      $("rdy_"+rec.key).addEventListener("change", function(){ checkGuard(rec); });
+    }
+  });
+  $("genBtn").addEventListener("click", generateNote);
+  $("copyBtn").addEventListener("click", copyNote);
+})();
+</script>
+</body>
+</html>
