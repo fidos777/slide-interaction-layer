@@ -1,0 +1,30 @@
+{
+  "sbatVersion": "m1",
+  "slide_id": "pl3t1-s28",
+  "title": "Topic check — single-answer quiz",
+  "implementation_status": {
+    "storyboard_present": true,
+    "implemented_in_repo": false,
+    "in_navigation": false,
+    "declared_in_scope": false,
+    "status": "missing-impl"
+  },
+  "vo": "Let us check what you remember from this topic.",
+  "onscreen_text": "Choose the best answer.",
+  "mmd_graphics_notes": "Standard quiz screen: stem, four options, feedback panel, and a retry control.",
+  "register_cross_reference": {
+    "amend_note": "AMEND-K1: the quiz screen is empty/placeholder — stem, options, the correct-answer mark and feedback are not present in the approved source. Awaiting SB to supply ratified question content.",
+    "laila_note": "Laila: build the quiz on the standard interaction shell; hold final layout until the source-backed items arrive.",
+    "convergence_type": "quiz-gap",
+    "provenance": "confirmed-from-file"
+  },
+  "interaction_metadata": {
+    "pattern": "P6",
+    "completion_rule": "answered_correctly",
+    "element": ""
+  },
+  "source_status": "needs-review",
+  "owner": "",
+  "decision_gate": "BLOCKED_PENDING_SB",
+  "handoff": { "pdf_preview": "placeholder" }
+}

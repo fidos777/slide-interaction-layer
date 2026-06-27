@@ -1,0 +1,30 @@
+{
+  "sbatVersion": "m1",
+  "slide_id": "pl5t3-s4",
+  "title": "Match the items — drag activity",
+  "implementation_status": {
+    "storyboard_present": true,
+    "implemented_in_repo": false,
+    "in_navigation": false,
+    "declared_in_scope": false,
+    "status": "missing-impl"
+  },
+  "vo": "Drag each item to its matching pair.",
+  "onscreen_text": "Match each item to its pair.",
+  "mmd_graphics_notes": "Drag-match interaction with paired tiles; the storyboard specifies real photographic images for each pair rather than icons.",
+  "register_cross_reference": {
+    "amend_note": "AMEND-K1: the approved source specifies real photographic images for each pair. This is a confirmed requirement read from the storyboard, not a confirmed absence of an approved asset; route for review of available imagery.",
+    "laila_note": "Laila: source or produce the photographic tiles per the storyboard note, then wire them into the drag-match shell once imagery is selected.",
+    "convergence_type": "asset-gap",
+    "provenance": "confirmed-from-file"
+  },
+  "interaction_metadata": {
+    "pattern": "P11",
+    "completion_rule": "all_pairs_matched_correctly",
+    "element": ""
+  },
+  "source_status": "REVIEW",
+  "owner": "",
+  "decision_gate": "REVIEW",
+  "handoff": { "pdf_preview": "placeholder" }
+}

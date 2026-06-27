@@ -1,0 +1,30 @@
+{
+  "sbatVersion": "m1",
+  "slide_id": "pl1t3-s2",
+  "title": "Topic intro — on-screen presenter",
+  "implementation_status": {
+    "storyboard_present": true,
+    "implemented_in_repo": false,
+    "in_navigation": false,
+    "declared_in_scope": false,
+    "status": "missing-impl"
+  },
+  "vo": "A short on-screen introduction before the topic begins.",
+  "onscreen_text": "Welcome to this topic.",
+  "mmd_graphics_notes": "Single presenter on screen with a lower-third name strip; gentle fade-in, no other motion.",
+  "register_cross_reference": {
+    "amend_note": "AMEND-K1: the on-screen presenter does not match the approved character bank for this PL. Swap to the ratified persona before lock; awaiting SB confirmation of the correct presenter.",
+    "laila_note": "Laila: keep the background plate and lower-third; replace only the presenter render once the approved character is confirmed.",
+    "convergence_type": "character-swap",
+    "provenance": "confirmed-from-file"
+  },
+  "interaction_metadata": {
+    "pattern": "P0",
+    "completion_rule": "none",
+    "element": ""
+  },
+  "source_status": "needs-review",
+  "owner": "",
+  "decision_gate": "BLOCKED_PENDING_SB",
+  "handoff": { "pdf_preview": "placeholder" }
+}
