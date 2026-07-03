@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meja Keputusan CAIR — Module 2–5</title>
+<style>
+  :root{
+    --paper:#FBF9F4; --ink:#1C1A17; --ink-soft:#5A5550; --ink-faint:#8C857C;
+    --line:#E4DECF; --line-soft:#EFEAE0;
+    --beku:#7A8B6F; --cair:#B5662E; --cair-bg:#F7EBDF;
+    --ok:#3F7A52; --ok-bg:#E6F0E6; --hold:#A6402E; --hold-bg:#F6E5E1; --amend:#B5862E; --amend-bg:#F6EFDD;
+    --accent:#B5662E; --accent-ink:#fff;
+    --canon:#3F7A52; --offcanon:#A6402E;
+    --font-d:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --font-b:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-m:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-b);line-height:1.5;padding-bottom:7rem}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(251,249,244,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.9rem 1.1rem}
+  .head-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:760px;margin:0 auto}
+  .title{font-family:var(--font-d);font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+  .title small{display:block;font-family:var(--font-m);font-size:.62rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:.15rem}
+  .count{font-family:var(--font-m);font-size:.72rem;color:var(--ink-soft);text-align:right;white-space:nowrap}
+  .count b{font-size:1.05rem;color:var(--accent);font-weight:700}
+  .prog{height:3px;background:var(--line-soft);border-radius:2px;margin-top:.7rem;max-width:760px;margin-left:auto;margin-right:auto;overflow:hidden}
+  .prog-fill{height:100%;background:var(--accent);width:0;transition:width .3s}
+
+  main{max-width:760px;margin:0 auto;padding:1.1rem}
+
+  /* Casting intent layer */
+  .intent-reason{font-weight:600;color:var(--cair);margin-bottom:.4rem;font-size:.8rem}
+  .intent-suggest{background:var(--cair-bg);border:1px solid #E8D2BC;border-radius:8px;padding:.6rem .7rem;margin:.4rem 0 .2rem;font-size:.78rem;color:var(--ink-soft)}
+  .sug-chip{display:inline-flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid var(--cair);border-radius:6px;padding:.3rem .6rem;margin:.3rem .3rem 0 0;cursor:pointer;font-family:var(--font-b);font-size:.8rem;color:var(--cair);font-weight:600;-webkit-tap-highlight-color:transparent}
+  .sug-chip span{font-weight:400;font-size:.66rem;color:var(--ink-faint);margin-top:.1rem}
+  .sug-chip:active{transform:translateY(1px)}
+  .sug-note{display:block;margin-top:.4rem;font-size:.7rem;color:var(--ink-faint);font-style:italic}
+  .freq-line{font-size:.74rem;color:var(--ink-faint);margin:.2rem 0 .1rem}
+  .freq-pill{display:inline-block;background:var(--ink-100);border-radius:100px;padding:.12rem .5rem;margin:.15rem .25rem 0 0;font-family:var(--font-m);font-size:.7rem}
+  .freq-pill b{color:var(--ink-soft)}
+
+  /* CAIR progress strip */
+  .cair-progress{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1.2rem}
+  .cp-head{margin-bottom:.8rem}
+  .cp-title{font-family:var(--font-d);font-size:1.02rem;font-weight:700;display:block}
+  .cp-warn{display:block;font-size:.74rem;color:var(--hold);margin-top:.3rem;line-height:1.4}
+  .cp-warn b{font-weight:700}
+  .cp-rows{display:flex;flex-direction:column;gap:.55rem}
+  .cp-row{display:grid;grid-template-columns:2.2rem 1fr 3.2rem;gap:.7rem;align-items:center}
+  .cp-k{font-family:var(--font-m);font-size:.78rem;font-weight:600;color:var(--ink-soft)}
+  .cp-bar{height:.7rem;background:var(--line-soft);border-radius:100px;overflow:hidden;position:relative}
+  .cp-bar-fill{height:100%;background:var(--cair);border-radius:100px;width:0;transition:width .3s}
+  .cp-bar-fill.full{background:var(--ok)}
+  .cp-n{font-family:var(--font-m);font-size:.74rem;color:var(--ink-soft);text-align:right}
+  .cp-n.full{color:var(--ok);font-weight:600}
+  .cp-foot{margin-top:.8rem;padding-top:.7rem;border-top:1px dashed var(--line-soft);font-size:.76rem;color:var(--ink-faint);line-height:1.4}
+  .cp-foot b{color:var(--ink-soft)}
+
+  /* Filter chips */
+  .filters{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem}
+  .chip{font-family:var(--font-m);font-size:.7rem;letter-spacing:.03em;padding:.4rem .7rem;border:1px solid var(--line);border-radius:100px;background:#fff;color:var(--ink-soft);cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+  .chip:hover{border-color:var(--ink-faint)}
+  .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .chip .n{opacity:.6;margin-left:.3rem}
+
+  /* Card */
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.1rem 1.2rem;margin-bottom:.9rem;scroll-margin-top:5rem}
+  .card.done{border-color:var(--ok);background:linear-gradient(#fff,#fff) padding-box}
+  .card.done::before{content:"✓ DIPUTUSKAN";display:inline-block;font-family:var(--font-m);font-size:.6rem;letter-spacing:.1em;color:var(--ok);margin-bottom:.6rem}
+  .meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem}
+  .badge{font-family:var(--font-m);font-size:.64rem;letter-spacing:.05em;padding:.2rem .5rem;border-radius:5px;font-weight:600}
+  .b-loc{background:#F1EEE6;color:var(--ink-soft)}
+  .b-type{background:var(--cair-bg);color:var(--cair)}
+  .b-type.refl{background:#E9EFF2;color:#3a6478}
+  .b-type.pair{background:#EDE8F2;color:#6a4a8a}
+  .ask{font-size:.92rem;color:var(--ink-soft);margin-bottom:1rem;line-height:1.45}
+
+  label.fld{display:block;font-family:var(--font-m);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin:.9rem 0 .35rem}
+  select,textarea,input[type=text]{width:100%;font-family:var(--font-b);font-size:.92rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:8px;padding:.6rem .7rem;-webkit-appearance:none;appearance:none}
+  select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%238C857C' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");background-repeat:no-repeat;background-position:right .7rem center;padding-right:2rem}
+  select:focus,textarea:focus,input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--cair-bg)}
+  textarea{resize:vertical;min-height:3.2rem;line-height:1.5}
+  .hint{font-size:.74rem;color:var(--ink-faint);margin-top:.3rem;line-height:1.4}
+  .hint b{color:var(--cair);font-weight:600}
+
+  /* character option styling via optgroup */
+  optgroup{font-family:var(--font-b);font-style:normal}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+  @media(max-width:480px){.two{grid-template-columns:1fr}}
+
+  .save{margin-top:1.1rem;display:flex;gap:.5rem;align-items:center}
+  .btn{font-family:var(--font-b);font-size:.85rem;font-weight:600;padding:.55rem 1rem;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .btn.ghost{background:#fff;color:var(--ink)}
+  .btn:active{transform:translateY(1px)}
+  .saved-tick{font-family:var(--font-m);font-size:.7rem;color:var(--ok);opacity:0;transition:.2s}
+  .saved-tick.show{opacity:1}
+
+  /* Apply-pattern banner */
+  .pattern{background:var(--cair-bg);border:1px solid #E8D2BC;border-radius:12px;padding:1rem 1.1rem;margin-bottom:1.3rem}
+  .pattern h3{font-family:var(--font-d);font-size:1rem;margin-bottom:.3rem}
+  .pattern p{font-size:.82rem;color:var(--ink-soft);margin-bottom:.7rem;line-height:1.45}
+  .pattern .row{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+  .pattern select{max-width:230px}
+
+  /* Audit panel */
+  .audit{position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--paper);border-top:2px solid var(--ink);box-shadow:0 -8px 24px rgba(28,26,23,.12);transform:translateY(100%);transition:transform .28s cubic-bezier(.2,.7,.2,1);max-height:74vh;overflow-y:auto}
+  .audit.show{transform:translateY(0)}
+  .audit-in{max-width:760px;margin:0 auto;padding:1.3rem 1.1rem 5.5rem;position:relative}
+  .audit-in h3{font-family:var(--font-d);font-size:1.2rem;margin-bottom:1rem}
+  .audit-close{position:absolute;top:1.1rem;right:1.1rem;background:none;border:none;font-size:1.1rem;color:var(--ink-faint);cursor:pointer;padding:.3rem}
+  .au-stat{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.1rem}
+  .au-box{flex:1;min-width:120px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem}
+  .au-box .k{font-family:var(--font-m);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+  .au-box .v{font-family:var(--font-d);font-size:1.7rem;font-weight:700;line-height:1.1;margin-top:.2rem}
+  .au-box.ok .v{color:var(--ok)} .au-box.warn .v{color:var(--hold)} .au-box.risk .v{color:var(--cair)}
+  .au-line{display:flex;align-items:flex-start;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line-soft);font-size:.85rem;line-height:1.4}
+  .au-line:last-child{border-bottom:none}
+  .au-ico{flex-shrink:0;width:1.3rem;height:1.3rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;margin-top:.05rem}
+  .au-ico.good{background:var(--ok-bg);color:var(--ok)} .au-ico.bad{background:var(--hold-bg);color:var(--hold)}
+  .au-line .loc{font-family:var(--font-m);font-size:.74rem;color:var(--ink-soft)}
+  .au-line .gap{color:var(--hold);font-weight:600}
+  .au-sec-title{font-family:var(--font-m);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin:1rem 0 .3rem}
+  .au-clear{background:var(--ok-bg);border:1px solid var(--ok);border-radius:8px;padding:.7rem .9rem;font-size:.85rem;color:#1f4d2e;margin-bottom:1rem}
+  .au-actions{position:absolute;bottom:0;left:0;right:0;background:rgba(251,249,244,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:.8rem 1.1rem;display:flex;gap:.6rem;justify-content:flex-end}
+
+  /* footer bar */
+  .bar{position:fixed;bottom:0;left:0;right:0;background:rgba(251,249,244,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:.7rem 1.1rem}
+  .bar-in{max-width:760px;margin:0 auto;display:flex;gap:.6rem;align-items:center;justify-content:space-between}
+  .bar .lead{font-family:var(--font-m);font-size:.7rem;color:var(--ink-soft)}
+  .bar .lead b{color:var(--accent)}
+
+  .empty{text-align:center;padding:3rem 1rem;color:var(--ink-faint);font-size:.9rem}
+  details.note{margin-bottom:1.2rem;border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
+  details.note summary{cursor:pointer;padding:.7rem .9rem;font-family:var(--font-m);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);list-style:none}
+  details.note summary::-webkit-details-marker{display:none}
+  details.note summary::before{content:"▸ ";color:var(--ink-faint)}
+  details.note[open] summary::before{content:"▾ "}
+  details.note .body{padding:0 .9rem .9rem;font-size:.82rem;color:var(--ink-soft);line-height:1.5}
+  details.note .body b{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+  <div class="head-row">
+    <div class="title">Meja Keputusan CAIR<small>Module 2–5 · ID Desk Bariah</small></div>
+    <div class="count"><b id="doneN">0</b>/<span id="totN">75</span><br>diputuskan</div>
+  </div>
+  <div class="prog"><div class="prog-fill" id="progFill"></div></div>
+</header>
+
+<main>
+
+  <!-- Progres CAIR per-kursus (JUJUR: CAIR sahaja, BUKAN kesediaan MMD) -->
+  <div class="cair-progress" id="cairProgress">
+    <div class="cp-head">
+      <span class="cp-title">Progres CAIR per kursus</span>
+      <span class="cp-warn">⚠ Ini progres isi CAIR sahaja — <b>BUKAN</b> kesediaan MMD. PL "ready" perlu verdict Bariah berasingan (Layer B).</span>
+    </div>
+    <div class="cp-rows" id="cpRows"></div>
+    <div class="cp-foot" id="cpFoot"></div>
+  </div>
+
+  <details class="note">
+    <summary>Cara guna meja ini</summary>
+    <div class="body">
+      Setiap kad = satu keputusan CAIR yang <b>perlu pertimbangan ID</b> (bukan kerja assemble).
+      Pilihan dalam dropdown ditarik dari <b>sumber sebenar</b> — register watak, jenis CAIR, worklist.
+      Anda <b>pilih</b>; sistem assemble. Tetapkan corak casting sekali di atas → ia auto-cadang untuk semua blok Scenario (anda masih boleh ubah per-PL).
+      Bila siap, tekan <b>Eksport keputusan</b> → fail CSV untuk dimasukkan balik ke worklist.
+      <br><br><b>Tiada apa-apa dihantar ke mana-mana.</b> Semua kekal dalam pelayar anda sampai anda eksport sendiri.
+    </div>
+  </details>
+
+  <!-- Pattern setter -->
+  <div class="pattern">
+    <h3>Corak casting — tetapkan sekali</h3>
+    <p>Penghadang #1. Kunci corak di sini → 31 blok Scenario jadi "sahkan + kecualian", bukan reka satu-satu. Pilihan datang dari register watak K1.</p>
+    <div class="row">
+      <select id="patternSel">
+        <option value="">— pilih corak —</option>
+        <option value="canon">[A] Haziq (perantis) + Encik Roslan (mentor) — kanonikal, default semua PL</option>
+        <option value="canon_plus">[B] Kanonikal + watak khusus bila perlu (juruukur, pegawai keselamatan…)</option>
+        <option value="perpl">[C] Tiada corak tetap — tentukan setiap PL (beban penuh)</option>
+      </select>
+      <button class="btn ghost" id="applyPattern">Cadang ke semua Scenario</button>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters" id="filters"></div>
+
+  <div id="cards"></div>
+  <div class="empty" id="empty" style="display:none">Tiada blok untuk penapis ini.</div>
+</main>
+
+<div class="audit" id="auditPanel">
+  <div class="audit-in">
+    <button class="audit-close" id="auditClose">✕</button>
+    <h3>Semakan sebelum eksport</h3>
+    <div id="auditBody"></div>
+  </div>
+</div>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="lead"><b id="barDone">0</b> diputuskan · <span id="barLeft">75</span> tinggal</div>
+    <div style="display:flex;gap:.5rem">
+      <button class="btn ghost" id="clearBtn">Kosongkan</button>
+      <button class="btn" id="exportBtn">Semak & eksport ↓</button>
+    </div>
+  </div>
+</div>
+
+<script>window.BARIAH_DATA={"cair": [{"Kursus": "K3", "PL": "PL01", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL01", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL01", "Slide": "s12", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan item↔jawapan untuk aktiviti drag-drop (dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL02", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL02", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL03", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL03", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL03", "Slide": "s08", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan item↔jawapan untuk aktiviti drag-drop (dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL04", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL04", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL04", "Slide": "s10", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan item↔jawapan untuk aktiviti drag-drop (dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL05", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL05", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL06", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL06", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL06", "Slide": "s08", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan item↔jawapan untuk aktiviti drag-drop (dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL07", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL07", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL07", "Slide": "s12", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan item↔jawapan untuk aktiviti drag-drop (dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL08", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL08", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL08", "Slide": "s08", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan item↔jawapan untuk aktiviti drag-drop (dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL09", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Tentukan jalan cerita pembuka & watak siapa (Haziq/Roslan/baru?). VO hook + babak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K3", "PL": "PL09", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "Tulis/sahkan soalan refleksi pembuka (1 soalan, kaitkan dgn objektif topik).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL01", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengenalan Modul Pembinaan Landasan (T'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Peranan rel., Jenis-jenis landasan., Formasi dan komponen landasan.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL01", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengenalan Modul Pembinaan Landasan (T'. Kaitkan dgn: Peranan rel.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL01", "Slide": "s13", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Pengenalan Modul Pembinaan Landasan (T' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL02", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Operasi Perniagaan Pembinaa'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Struktur pelaporan teknikal dan dokumentasi projek., Regulasi dan 1. AKTA Keretapi 1991 (463).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL02", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Operasi Perniagaan Pembinaa'. Kaitkan dgn: Struktur pelaporan teknikal dan dokumentasi p", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL03", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Regulasi dan Pematuhan Industri Rel'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: AKTA Pengangkutan Darat Awam 2010 (715) dan keperluan pe, AKTA Kualiti Alam Sekeliling 1974 (AKTA 127)., AKTA 520 CIDB.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL03", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Regulasi dan Pematuhan Industri Rel'. Kaitkan dgn: AKTA Pengangkutan Darat Awam 2010 (715) dan k", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL03", "Slide": "s12", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Regulasi dan Pematuhan Industri Rel' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL04", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Inovasi & Teknologi Digital Serta Auto'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Penggunaan teknologi BIM untuk rekabentuk rel., Pemetaan digital dan sistem pengesanan lokasi., Inovasi bahan tahan lama dan mesra alam.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL04", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Inovasi & Teknologi Digital Serta Auto'. Kaitkan dgn: Penggunaan teknologi BIM untuk rekabentuk rel", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL04", "Slide": "s09", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Inovasi & Teknologi Digital Serta Auto' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL05", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Tender Dalam Pembinaan Land'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Dokumen tender landasan., Penilaian kontraktor berdasarkan pengalaman teknikal., Proses tender.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL05", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Tender Dalam Pembinaan Land'. Kaitkan dgn: Dokumen tender landasan.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL05", "Slide": "s09", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Pengurusan Tender Dalam Pembinaan Land' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL06", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pemberian & Penerimaan Kontrak Pembina'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Pengurusan keperluan dan dokumentasi kontrak., Pengurusan pensijilan dan keperluan kontrak., Perancangan Dan 1. Perancangan dan 1. Penyediaan Work Br", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL06", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pemberian & Penerimaan Kontrak Pembina'. Kaitkan dgn: Pengurusan keperluan dan dokumentasi kontrak.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL06", "Slide": "s08", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Pemberian & Penerimaan Kontrak Pembina' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL07", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Kaedah Kerja & Pengurusan Risiko Pembi'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Penyediaan program kerja dan penjadualan., Pengurusan 1. Pengurusan 1. Pengurusan kualiti projek pe", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL07", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Kaedah Kerja & Pengurusan Risiko Pembi'. Kaitkan dgn: Penyediaan program kerja dan penjadualan.", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL08", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Kualiti Projek Pembinaan La'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Pengurusan keselamatan dan kesihatan pekerjaan (KKP) pem, Perlindungan dan penambahbaikan alam sekitar pembinaan l, Pengurusan trafik pembinaan landasan", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL08", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Kualiti Projek Pembinaan La'. Kaitkan dgn: Pengurusan keselamatan dan kesihatan pekerjaa", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL08", "Slide": "s12", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Pengurusan Kualiti Projek Pembinaan La' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL09", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengujian, Pentauliahan & Penyerahan P'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Jenis kecacatan (types of defect)., MOHD RAMZAN BIN HAJI AHMAD, CIDB MALAYSIA", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL09", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengujian, Pentauliahan & Penyerahan P'. Kaitkan dgn: Jenis kecacatan (types of defect).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K2", "PL": "PL09", "Slide": "s19", "Jenis Keputusan": "Interaction Pairing", "Apa Bariah Perlu Buat": "Sahkan pasangan drag-drop untuk 'Pengujian, Pentauliahan & Penyerahan P' (item dari Jadual sumber).", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL01", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengenalan Kerja –Kerja Lif, Eskalator'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Definisi Lif, Eskalator & Laluan Gerak, Akta dan Peraturan Berkaitan, Orang Kompeten (OK)", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL01", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengenalan Kerja –Kerja Lif, Eskalator'. Kaitkan dgn: Definisi Lif, Eskalator & Laluan Gerak", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL02", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Tender dan Kontrak'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Mengenal Pasti Skop Projek, Senarai Kuantiti (Bill of Quantity (BQ)), Spesifikasi", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL02", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Tender dan Kontrak'. Kaitkan dgn: Mengenal Pasti Skop Projek", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL03", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Perancangan dan Penjadualan Projek'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Menyedia Carta Perbatuan (Gantt Chart), Pengurusan Risiko", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL03", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Perancangan dan Penjadualan Projek'. Kaitkan dgn: Menyedia Carta Perbatuan (Gantt Chart)", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL04", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Operasi Pembinaan'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Pemasangan Lif, Eskalator & Laluan Gerak, Pengujian & Pentauliahan Lif, Eskalator & Laluan Gerak, Penyelenggaraan Lif, Eskalator & Laluan Gerak", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL04", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Operasi Pembinaan'. Kaitkan dgn: Pemasangan Lif, Eskalator & Laluan Gerak", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL05", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Penyerahan Projek'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Menyedia Dokumen Serahan, Pengurusan Liabiliti Kecacatan dan CMGD (Certificate of Making Good Defects), Menyedia Dokumen Akaun Akhir", "Keputusan Bariah (isi)": ""}, {"Kursus": "K4", "PL": "PL05", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Penyerahan Projek'. Kaitkan dgn: Menyedia Dokumen Serahan", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL01", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengenalan Dan Latar Belakang Industri'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Pengenalan dan Latar Belakang Industri Landskap Luar, Konsep Seni Bina Landskap, Kategori Landskap Luar", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL01", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengenalan Dan Latar Belakang Industri'. Kaitkan dgn: Pengenalan dan Latar Belakang Industri Landsk", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL02", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Operasi Perniagaan'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Pasukan Pelaksana Projek Pembinaan Landskap Luar, Pasukan Perunding Teknikal dan Pakar, Organisasi Landskap Projek Luar", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL02", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Operasi Perniagaan'. Kaitkan dgn: Pasukan Pelaksana Projek Pembinaan Landskap L", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL03", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Tender'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Tender, Sebut Harga, Lukisan Tender", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL03", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Tender'. Kaitkan dgn: Tender", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL04", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pelaksanaan Dan Pengurusan Kontrak'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Pengurusan Keperluan dan Dokumentasi Kontrak, Pengurusan Penentuan dan Penamatan Kontrak", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL04", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pelaksanaan Dan Pengurusan Kontrak'. Kaitkan dgn: Pengurusan Keperluan dan Dokumentasi Kontrak", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL05", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Perancangan Dan Penjadualan Projek'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Penyediaan Work Breakdown Structure, Penyediaan Program Kerja", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL05", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Perancangan Dan Penjadualan Projek'. Kaitkan dgn: Penyediaan Work Breakdown Structure", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL06", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Pengurusan Operasi Pembinaan Landskap'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Proses Memula Kerja, Elemen Pembinaan Landskap, Komponen Landskap", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL06", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Pengurusan Operasi Pembinaan Landskap'. Kaitkan dgn: Proses Memula Kerja", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL07", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Penyerahan Projek'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Penyediaan Dokumen Serahan, Menguruskan Liabiliti Kecacatan dan CMGD, Organisasi Landskap Projek Luar", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL07", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Penyerahan Projek'. Kaitkan dgn: Penyediaan Dokumen Serahan", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL08", "Slide": "s02", "Jenis Keputusan": "Scenario + Casting", "Apa Bariah Perlu Buat": "Babak pembuka untuk 'Inovasi & Teknologi Landskap'. Tentukan jalan cerita + watak (Haziq/Roslan/baru). Topik teras: Aplikasi Teknologi dan Inovasi Dalam Pembinaan", "Keputusan Bariah (isi)": ""}, {"Kursus": "K5", "PL": "PL08", "Slide": "s03", "Jenis Keputusan": "Reflection Prompt", "Apa Bariah Perlu Buat": "1 soalan refleksi untuk 'Inovasi & Teknologi Landskap'. Kaitkan dgn: Aplikasi Teknologi dan Inovasi Dalam Pembinaa", "Keputusan Bariah (isi)": ""}], "chars": [{"name": "Haziq", "role": "Apprentice / learner", "status": "CANONICAL"}, {"name": "Encik Roslan", "role": "Mentor / expert", "status": "CANONICAL"}, {"name": "Hilmi", "role": "Course narrator (VO-only)", "status": "LOCKED (memory)"}, {"name": "Encik Fahmi", "role": "Contractor / manager", "status": "OFF-CANON → being replaced by Aril"}, {"name": "Encik Aril", "role": "Replaces Fahmi (instructed)", "status": "OFF-CANON (new, replacement)"}, {"name": "Puan Suraya", "role": "Admin / contracts", "status": "OFF-CANON"}, {"name": "Puan Yati", "role": "Operations manager", "status": "OFF-CANON"}, {"name": "Puan Hana", "role": "New contractor (PM)", "status": "OFF-CANON"}, {"name": "Mr. Jason", "role": "Radio host", "status": "OFF-CANON"}, {"name": "Encik Zulkifli", "role": "Safety Officer", "status": "OFF-CANON"}, {"name": "Puan Aishah", "role": "EHS / Environment Officer", "status": "OFF-CANON"}]};</script>
+<script>
+const D = window.BARIAH_DATA;
+const CAIR = D.cair.map((r,i)=>({
+  i, kursus:r["Kursus"], pl:r["PL"], slide:r["Slide"],
+  jenis:r["Jenis Keputusan"], ask:r["Apa Bariah Perlu Buat"]
+}));
+const CHARS = D.chars;
+const decisions = {}; // i -> committed decision (has real content)
+const suggestions = {}; // i -> pre-filled casting suggestion, NOT yet a decision
+
+const typeClass = j => j.startsWith("Reflection")?"refl": j.startsWith("Interaction")?"pair":"";
+const shortType = j => j.startsWith("Reflection")?"REFLECTION": j.startsWith("Interaction")?"PAIRING":"SCENARIO+CAST";
+
+// ---- Filters ----
+let activeFilter = "ALL";
+const kursusList = [...new Set(CAIR.map(c=>c.kursus))].sort();
+function buildFilters(){
+  const f = document.getElementById("filters");
+  const mk=(key,label,n)=>`<button class="chip ${activeFilter===key?'on':''}" data-f="${key}">${label}<span class="n">${n}</span></button>`;
+  let html = mk("ALL","Semua",CAIR.length);
+  kursusList.forEach(k=> html+= mk(k,k, CAIR.filter(c=>c.kursus===k).length));
+  ["Scenario","Reflection","Interaction"].forEach(t=>{
+    const lbl = t==="Scenario"?"Scenario+Cast":t==="Interaction"?"Pairing":"Reflection";
+    html+= mk("T:"+t, lbl, CAIR.filter(c=>c.jenis.startsWith(t)).length);
+  });
+  html+= mk("TODO","Belum diputus", "·");
+  f.innerHTML=html;
+  f.querySelectorAll(".chip").forEach(ch=>ch.onclick=()=>{activeFilter=ch.dataset.f;render();});
+}
+
+function visible(){
+  return CAIR.filter(c=>{
+    if(activeFilter==="ALL") return true;
+    if(activeFilter==="TODO") return !decisions[c.i];
+    if(activeFilter.startsWith("T:")) return c.jenis.startsWith(activeFilter.slice(2));
+    return c.kursus===activeFilter;
+  });
+}
+
+// ---- Character dropdown source ----
+// ---- Casting Intent map (derived from register ROLES, not invented) ----
+// Each intent suggests characters whose register role fits that pedagogical function.
+// This REORDERS/highlights — it never removes options. Bariah still picks freely.
+// ---- Pedagogy Pattern Library (P1-P7) ----
+// ID picks the LEARNING STRATEGY first, then the character that carries it.
+// Each pattern's suggested characters come from register ROLES (not invented).
+// This REORDERS/highlights — never removes. Bariah still picks freely.
+const INTENT_MAP = {
+  "p1_explain":     { group:"INFORM", label:"P1 Explain — terang konsep", reason:"Sesuai untuk definisi, teori, konsep baharu.", ph:"Hari ni kita akan belajar tentang…", suggest:["Encik Roslan","Haziq"] },
+  "p2_demonstrate": { group:"SHOW", label:"P2 Demonstrate — tunjuk langkah", reason:"Sesuai untuk SOP, pemasangan, proses kerja.", ph:"Roslan tunjuk Haziq cara…", suggest:["Encik Roslan","Haziq"] },
+  "p3_coach":       { group:"SHOW", label:"P3 Coach — mentor bimbing", reason:"Sesuai untuk amalan terbaik, bimbingan pekerja.", ph:"Roslan bimbing Haziq semasa dia mencuba…", suggest:["Encik Roslan","Haziq"] },
+  "p4_challenge":   { group:"THINK", label:"P4 Challenge — uji pemikiran", reason:"Sesuai untuk refleksi, pancing pemikiran.", ph:"Haziq, kalau kita terus pasang tanpa…, apa akan jadi?", suggest:["Encik Roslan","Haziq"] },
+  "p5_casestudy":   { group:"THINK", label:"P5 Case Study — selesai masalah", reason:"Sesuai untuk troubleshooting, masalah tapak sebenar.", ph:"Di tapak, berlaku masalah… macam mana nak selesai?", suggest:["Puan Hana","Puan Yati"] },
+  "p6_inspection":  { group:"VERIFY", label:"P6 Inspection — cari kesilapan", reason:"Sesuai untuk audit, QA/QC, safety, compliance.", ph:"Roslan jumpa satu kesilapan semasa pemeriksaan…", suggest:["Encik Zulkifli","Puan Aishah"] },
+  "p7_assessment":  { group:"VERIFY", label:"P7 Assess — semak kefahaman", reason:"Sesuai untuk kuiz, latihan, sahkan faham.", ph:"Mari kita semak apa yang anda dah faham…", suggest:["Hilmi","Encik Roslan"] }
+};
+// Map character -> role (from register, for the "why this fits" line)
+const CHAR_ROLE = {};
+CHARS.forEach(c=>{ CHAR_ROLE[c.name]=c.role; });
+
+// Live frequency: how many times each character is used in COMMITTED decisions this session
+function charFrequency(){
+  const freq={};
+  CAIR.forEach(c=>{
+    const d=decisions[c.i];
+    if(d && isComplete(c,d)){
+      [d.mentor,d.learner].forEach(n=>{ if(n) freq[n]=(freq[n]||0)+1; });
+    }
+  });
+  return freq;
+}
+
+function charOptions(sel, intent){
+  const opt = c=>`<option value="${c.name}" ${sel===c.name?"selected":""}>${c.name} — ${c.role}</option>`;
+  let suggestedGroup = "";
+  if(intent && INTENT_MAP[intent]){
+    // suggested names for this pattern, EXCLUDING characters being replaced (off-canon retired)
+    const sugNames = INTENT_MAP[intent].suggest.filter(n=>{
+      const ch = CHARS.find(c=>c.name===n);
+      return ch && !/replac/i.test(ch.status); // drop "being replaced" (e.g. Fahmi)
+    });
+    const sugChars = sugNames.map(n=>CHARS.find(c=>c.name===n)).filter(Boolean);
+    if(sugChars.length){
+      suggestedGroup = `<optgroup label="↑ Cadangan untuk pola ini">${sugChars.map(opt).join("")}</optgroup>`;
+    }
+  }
+  const canon = CHARS.filter(c=>c.status.includes("CANONICAL"));
+  const off = CHARS.filter(c=>!c.status.includes("CANONICAL"));
+  return `<option value="" ${!sel?"selected":""}>— pilih watak —</option>`+
+         suggestedGroup+
+         `<optgroup label="Kanonikal (selamat)">${canon.map(opt).join("")}</optgroup>`+
+         `<optgroup label="Off-canon (perlu sebab)">${off.map(opt).join("")}</optgroup>`;
+}
+
+// ---- Card builder per type ----
+function cardHTML(c){
+  const d = decisions[c.i] || suggestions[c.i] || {};
+  const done = !!decisions[c.i];
+  let body="";
+  if(c.jenis.startsWith("Scenario")){
+    const freq=charFrequency();
+    const groupOrder=["INFORM","SHOW","THINK","VERIFY"];
+    const intentOpts=groupOrder.map(g=>{
+      const inG=Object.entries(INTENT_MAP).filter(([k,v])=>v.group===g);
+      if(!inG.length) return "";
+      return `<optgroup label="${g}">`+inG.map(([k,v])=>
+        `<option value="${k}" ${d.intent===k?"selected":""}>${v.label}</option>`).join("")+`</optgroup>`;
+    }).join("");
+    // suggestion line based on chosen intent
+    let suggestLine="";
+    if(d.intent && INTENT_MAP[d.intent]){
+      const sug=INTENT_MAP[d.intent].suggest;
+      suggestLine=`<div class="intent-suggest"><div class="intent-reason">${INTENT_MAP[d.intent].reason}</div>Cadangan watak (dari peranan Bible): `+
+        sug.map(n=>`<button type="button" class="sug-chip" data-i="${c.i}" data-sug="${n}">${n}<span>${CHAR_ROLE[n]||""}</span></button>`).join("")+
+        `<span class="sug-note">Cadangan sahaja — semua watak masih boleh dipilih di bawah.</span></div>`;
+    }
+    // frequency hint (real data from this session's committed decisions)
+    const freqEntries=Object.entries(freq).sort((a,b)=>b[1]-a[1]);
+    let freqLine = freqEntries.length
+      ? `<div class="freq-line">Digunakan sesi ini: `+freqEntries.map(([n,c2])=>`<span class="freq-pill">${n} <b>${c2}×</b></span>`).join("")+`</div>`
+      : "";
+    body = `
+      <label class="fld">① Cara ajar (pola pedagogi) — pilih strategi dulu</label>
+      <select data-i="${c.i}" data-k="intent">
+        <option value="">— pilih cara ajar —</option>${intentOpts}
+      </select>
+      <div class="hint" style="margin-top:.2rem">Boleh ubah watak manual di bawah kalau cadangan tak sesuai.</div>
+      ${suggestLine}
+      <label class="fld">② Watak pembuka (mentor)</label>
+      <select data-i="${c.i}" data-k="mentor">${charOptions(d.mentor, d.intent)}</select>
+      <label class="fld">③ Watak pembuka (pelajar/lain)</label>
+      <select data-i="${c.i}" data-k="learner">${charOptions(d.learner, d.intent)}</select>
+      ${freqLine}
+      <label class="fld">④ Jalan cerita pembuka (VO hook ringkas)</label>
+      <textarea data-i="${c.i}" data-k="hook" placeholder="${(d.intent&&INTENT_MAP[d.intent]&&INTENT_MAP[d.intent].ph)?('cth: '+INTENT_MAP[d.intent].ph):'cth: Haziq tiba di tapak, tanya Roslan kenapa penstabilan perlu sebelum bina…'}">${d.hook||""}</textarea>
+      <div class="hint">Watak <b>off-canon</b> perlu sebab (peranan teknikal sebenar). Default kanonikal lebih selamat — elak biak-watak macam K1.</div>`;
+  } else if(c.jenis.startsWith("Reflection")){
+    body = `
+      <label class="fld">Bentuk soalan refleksi</label>
+      <select data-i="${c.i}" data-k="rform">
+        <option value="">— pilih templat —</option>
+        <option value="tahu" ${d.rform==="tahu"?"selected":""}>"Apa yang anda tahu tentang [topik]?"</option>
+        <option value="kenapa" ${d.rform==="kenapa"?"selected":""}>"Kenapa [topik] penting dalam kerja anda?"</option>
+        <option value="pernah" ${d.rform==="pernah"?"selected":""}>"Pernahkah anda hadapi [situasi]?"</option>
+        <option value="custom" ${d.rform==="custom"?"selected":""}>Tulis sendiri ↓</option>
+      </select>
+      <label class="fld">Soalan penuh (isi [topik] dari objektif PL)</label>
+      <textarea data-i="${c.i}" data-k="rtext" placeholder="Sahkan/tulis soalan penuh…">${d.rtext||""}</textarea>
+      <div class="hint">Topik diambil dari <b>OBJEKTIF sumber</b> PL ini — anda sahkan bentuk, bukan reka konteks.</div>`;
+  } else { // Pairing
+    body = `
+      <label class="fld">Keputusan pairing</label>
+      <select data-i="${c.i}" data-k="pair">
+        <option value="">— pilih —</option>
+        <option value="sahkan" ${d.pair==="sahkan"?"selected":""}>Sahkan terus — padanan Jadual sumber betul</option>
+        <option value="trim" ${d.pair==="trim"?"selected":""}>Trim + split — terlalu banyak item, pecahkan</option>
+        <option value="skip" ${d.pair==="skip"?"selected":""}>Skip — bukan konsep boleh-pasang</option>
+      </select>
+      <label class="fld">Nota (jika trim/skip)</label>
+      <input type="text" data-i="${c.i}" data-k="pnote" placeholder="cth: pecah jadi 2 set 4-item" value="${d.pnote||""}">
+      <div class="hint">Item <b>sudah ditarik dari Jadual sumber</b> — anda sahkan padanan, sifar dicipta.</div>`;
+  }
+  // ---- Rationale block (per-type prompt, risk-aware) ----
+  const rationalePrompt = c.jenis.startsWith("Scenario")
+      ? "Kenapa watak & jalan cerita ini? (WAJIB jika off-canon — nyatakan peranan teknikal sebenar)"
+    : c.jenis.startsWith("Reflection")
+      ? "Kenapa bentuk soalan ini sesuai dengan objektif PL?"
+      : "Kenapa keputusan pairing ini? (WAJIB jika trim/skip)";
+  const rationale = `
+      <label class="fld" style="color:var(--cair)">⚖ Rasional keputusan</label>
+      <textarea data-i="${c.i}" data-k="why" placeholder="${rationalePrompt}">${d.why||""}</textarea>
+      <label class="fld">Rujukan sumber (seksyen / Jadual / objektif PL)</label>
+      <input type="text" data-i="${c.i}" data-k="ref" placeholder="cth: PL03 OBJEKTIF §2, Jadual 3" value="${d.ref||""}">
+      <div class="hint" id="whyflag-${c.i}"></div>`;
+
+  return `<div class="card ${done?'done':''}" id="card-${c.i}">
+    <div class="meta">
+      <span class="badge b-loc">${c.kursus} · ${c.pl} · ${c.slide}</span>
+      <span class="badge b-type ${typeClass(c.jenis)}">${shortType(c.jenis)}</span>
+    </div>
+    <div class="ask">${c.ask}</div>
+    ${body}
+    ${rationale}
+    <div class="save">
+      <button class="btn" data-save="${c.i}">Simpan keputusan</button>
+      <button class="btn ghost" data-reset="${c.i}">Buang</button>
+      <span class="saved-tick" id="tick-${c.i}">✓ disimpan</span>
+    </div>
+  </div>`;
+}
+
+function render(){
+  buildFilters();
+  const wrap=document.getElementById("cards");
+  const vis=visible();
+  document.getElementById("empty").style.display = vis.length?"none":"block";
+  wrap.innerHTML = vis.map(cardHTML).join("");
+  // NOTE: no live draft capture into `decisions` — saveCard reads straight from the DOM.
+  // This keeps `decisions` holding ONLY committed, complete decisions (single source of truth).
+  // intent selector: re-render card so suggestion line appears
+  wrap.querySelectorAll('[data-k="intent"]').forEach(sel=>{
+    sel.addEventListener("change",()=>{
+      const i=+sel.dataset.i;
+      decisions[i]=decisions[i]||suggestions[i]||{};
+      decisions[i].intent=sel.value;
+      // keep as suggestion-tier if not yet complete (don't fake a decision)
+      if(!isComplete(CAIR[i],decisions[i])){ suggestions[i]=decisions[i]; delete decisions[i]; }
+      render();
+    });
+  });
+  // suggestion chips: fill mentor first, then learner
+  wrap.querySelectorAll(".sug-chip").forEach(b=>{
+    b.onclick=()=>{
+      const i=+b.dataset.i, name=b.dataset.sug;
+      const card=document.getElementById("card-"+i);
+      const m=card.querySelector('[data-k="mentor"]'), l=card.querySelector('[data-k="learner"]');
+      if(m && !m.value) m.value=name;
+      else if(l && !l.value) l.value=name;
+      else if(m) m.value=name;
+    };
+  });
+  wrap.querySelectorAll("[data-save]").forEach(b=>b.onclick=()=>saveCard(+b.dataset.save));
+  wrap.querySelectorAll("[data-reset]").forEach(b=>b.onclick=()=>{delete decisions[b.dataset.reset];render();updateCounts();});
+  updateCounts();
+}
+
+// Is this a high-risk decision that REQUIRES a rationale?
+function needsWhy(c,d){
+  if(c.jenis.startsWith("Scenario")){
+    const canon=["Haziq","Encik Roslan","Hilmi"];
+    const offcanon=[d.mentor,d.learner].some(n=>n && !canon.includes(n));
+    return offcanon; // off-canon casting must be justified
+  }
+  if(c.jenis.startsWith("Interaction")){
+    return d.pair==="trim" || d.pair==="skip"; // changing source pairing must be justified
+  }
+  return false;
+}
+
+// Does this decision have its REAL required content (not just browser defaults)?
+function isComplete(c,d){
+  if(!d) return false;
+  if(c.jenis.startsWith("Scenario")) return !!(d.hook||"").trim();      // jalan cerita wajib
+  if(c.jenis.startsWith("Reflection")) return !!(d.rtext||"").trim();   // soalan penuh wajib
+  if(c.jenis.startsWith("Interaction")) return !!(d.pair||"").trim();   // keputusan pairing wajib
+  return false;
+}
+
+function saveCard(i){
+  const card=document.getElementById("card-"+i);
+  const c=CAIR[i];
+  const d=decisions[i]||{};
+  card.querySelectorAll("[data-i]").forEach(el=>{ d[el.dataset.k]=el.value; });
+  // drop empty fields so browser-default blanks never count as decisions
+  Object.keys(d).forEach(k=>{ if(typeof d[k]==="string" && d[k].trim()==="") delete d[k]; });
+  const flag=document.getElementById("whyflag-"+i);
+  // enforce rationale on risky decisions
+  if(needsWhy(c,d) && !(d.why||"").trim()){
+    if(flag){ flag.innerHTML='<b style="color:var(--hold)">⚠ Keputusan berisiko (off-canon / ubah sumber) — rasional WAJIB sebelum simpan.</b>'; }
+    const why=card.querySelector('[data-k="why"]'); if(why){ why.focus(); why.style.borderColor="var(--hold)"; }
+    return;
+  }
+  if(flag) flag.innerHTML="";
+  // commit only if the type's REAL required content is present
+  if(isComplete(c,d)) decisions[i]=d;
+  else { delete decisions[i];
+    if(flag) flag.innerHTML='<b style="color:var(--hold)">⚠ Belum lengkap — '+
+      (c.jenis.startsWith("Scenario")?"jalan cerita (hook) wajib diisi.":
+       c.jenis.startsWith("Reflection")?"soalan refleksi penuh wajib diisi.":
+       "pilih keputusan pairing.")+'</b>';
+    card.classList.remove("done"); updateCounts(); return;
+  }
+  const tick=document.getElementById("tick-"+i);
+  tick.classList.add("show"); setTimeout(()=>tick.classList.remove("show"),1200);
+  card.classList.toggle("done", !!decisions[i]);
+  updateCounts();
+}
+
+function applyPattern(){
+  const v=document.getElementById("patternSel").value;
+  if(!v) return;
+  // clear stale casting suggestions before re-applying (e.g. switching A->C)
+  Object.keys(suggestions).forEach(k=>delete suggestions[k]);
+  let mentor="", learner="";
+  if(v==="canon"||v==="canon_plus"){ mentor="Encik Roslan"; learner="Haziq"; }
+  if(mentor){
+    // pre-fill casting suggestion only; does NOT mark done (hook still required)
+    CAIR.filter(c=>c.jenis.startsWith("Scenario")).forEach(c=>{
+      // don't overwrite a scenario Bariah already committed
+      if(decisions[c.i]) return;
+      suggestions[c.i]={mentor,learner,_pattern:v};
+    });
+  }
+  // v==="perpl": no auto-fill — suggestions stay cleared, committed decisions untouched
+  render();
+}
+
+function renderCairProgress(){
+  const rows=document.getElementById("cpRows");
+  const kursusList=[...new Set(CAIR.map(c=>c.kursus))].sort();
+  let html="", totalDone=0, plFullCount=0;
+  // group by kursus
+  kursusList.forEach(k=>{
+    const inK=CAIR.filter(c=>c.kursus===k);
+    const doneK=inK.filter(c=>isComplete(c,decisions[c.i])).length;
+    totalDone+=doneK;
+    const pct=inK.length?(doneK/inK.length*100):0;
+    const full=doneK===inK.length && inK.length>0;
+    html+=`<div class="cp-row">
+      <span class="cp-k">${k}</span>
+      <div class="cp-bar"><div class="cp-bar-fill ${full?'full':''}" style="width:${pct}%"></div></div>
+      <span class="cp-n ${full?'full':''}">${doneK}/${inK.length}</span>
+    </div>`;
+  });
+  rows.innerHTML=html;
+
+  // count PLs whose CAIR is FULLY filled (eligible for Layer-B verdict, NOT auto-ready)
+  const plMap={};
+  CAIR.forEach(c=>{ const key=c.kursus+"|"+c.pl; (plMap[key]=plMap[key]||[]).push(c); });
+  Object.values(plMap).forEach(blocks=>{
+    if(blocks.every(c=>isComplete(c,decisions[c.i]))) plFullCount++;
+  });
+  const totalPL=Object.keys(plMap).length;
+  document.getElementById("cpFoot").innerHTML=
+    `<b>${plFullCount}/${totalPL} PL</b> sudah CAIR penuh → <b>layak untuk verdict Bariah</b> (Layer B: MMD-Ready / Amend / Hold). `+
+    `CAIR penuh ≠ PL ready — verdict + semakan sumber masih perlu.`;
+}
+
+function updateCounts(){
+  const n=CAIR.filter(c=>isComplete(c,decisions[c.i])).length;
+  document.getElementById("doneN").textContent=n;
+  document.getElementById("barDone").textContent=n;
+  document.getElementById("barLeft").textContent=CAIR.length-n;
+  document.getElementById("progFill").style.width=(n/CAIR.length*100)+"%";
+  renderCairProgress();
+}
+
+function exportCSV(){
+  const head=["Kursus","PL","Slide","Jenis Keputusan","Pola Pedagogi","Keputusan Bariah","Detail","Rasional","Rujukan Sumber","Risiko"];
+  const rows=[head];
+  CAIR.forEach(c=>{
+    const d=decisions[c.i];
+    let dec="", detail="", risk="", peda="";
+    if(d){
+      if(c.jenis.startsWith("Scenario")){
+        dec=`${d.mentor||"?"} + ${d.learner||"?"}`; detail=(d.hook||"").replace(/\n/g," ");
+        risk = needsWhy(c,d) ? "OFF-CANON" : "kanonikal";
+        peda = (d.intent && INTENT_MAP[d.intent]) ? INTENT_MAP[d.intent].label : "";
+      }
+      else if(c.jenis.startsWith("Reflection")){ dec=d.rform||""; detail=(d.rtext||"").replace(/\n/g," "); }
+      else { dec=d.pair||""; detail=d.pnote||""; risk = needsWhy(c,d) ? "UBAH-SUMBER" : ""; }
+    }
+    rows.push([c.kursus,c.pl,c.slide,c.jenis,peda,dec,detail,(d&&d.why||"").replace(/\n/g," "),(d&&d.ref||""),risk]);
+  });
+  const csv=rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\r\n");
+  const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="BARIAH-CAIR-KEPUTUSAN-"+new Date().toISOString().slice(0,10)+".csv";
+  a.click();
+}
+
+function buildAudit(){
+  const decided = CAIR.filter(c=>isComplete(c,decisions[c.i]));
+  const undecided = CAIR.length - decided.length;
+  // risky items
+  const risky = decided.filter(c=>needsWhy(c,decisions[c.i]));
+  const riskyJustified = risky.filter(c=>(decisions[c.i].why||"").trim());
+  const riskyMissing = risky.filter(c=>!(decisions[c.i].why||"").trim());
+  // off-canon breakdown
+  const offcanon = decided.filter(c=>c.jenis.startsWith("Scenario") && needsWhy(c,decisions[c.i]));
+  const pairChanged = decided.filter(c=>c.jenis.startsWith("Interaction") && needsWhy(c,decisions[c.i]));
+
+  let h = `<div class="au-stat">
+    <div class="au-box"><div class="k">Diputuskan</div><div class="v">${decided.length}<span style="font-size:.9rem;color:var(--ink-faint)">/${CAIR.length}</span></div></div>
+    <div class="au-box ${undecided?'warn':'ok'}"><div class="k">Belum diputus</div><div class="v">${undecided}</div></div>
+    <div class="au-box risk"><div class="k">Keputusan berisiko</div><div class="v">${risky.length}</div></div>
+    <div class="au-box ${riskyMissing.length?'warn':'ok'}"><div class="k">Risiko tanpa sebab</div><div class="v">${riskyMissing.length}</div></div>
+  </div>`;
+
+  if(risky.length===0){
+    h += `<div class="au-clear">✓ Tiada keputusan berisiko. Semua casting kanonikal & pairing ikut sumber — tiada off-canon, tiada ubah-sumber.</div>`;
+  } else {
+    if(riskyMissing.length){
+      h += `<div class="au-sec-title">⚠ Perlu rasional sebelum eksport (${riskyMissing.length})</div>`;
+      riskyMissing.forEach(c=>{
+        const d=decisions[c.i];
+        const what = c.jenis.startsWith("Scenario") ? `off-canon: ${d.mentor||""} / ${d.learner||""}` : `pairing: ${d.pair}`;
+        h += `<div class="au-line"><span class="au-ico bad">!</span><span><span class="loc">${c.kursus}·${c.pl}·${c.slide}</span> — ${what} <span class="gap">— RASIONAL KOSONG</span></span></div>`;
+      });
+    }
+    if(riskyJustified.length){
+      h += `<div class="au-sec-title">✓ Berisiko tapi sudah dijustify (${riskyJustified.length})</div>`;
+      riskyJustified.forEach(c=>{
+        const d=decisions[c.i];
+        const what = c.jenis.startsWith("Scenario") ? `off-canon: ${d.mentor||""} / ${d.learner||""}` : `pairing: ${d.pair}`;
+        const why = (d.why||"").slice(0,70);
+        h += `<div class="au-line"><span class="au-ico good">✓</span><span><span class="loc">${c.kursus}·${c.pl}·${c.slide}</span> — ${what}<br><span style="color:var(--ink-faint);font-size:.78rem">"${why}${(d.why||"").length>70?"…":""}"</span></span></div>`;
+      });
+    }
+  }
+
+  // breakdown note
+  h += `<div class="au-sec-title">Pecahan risiko</div>
+    <div class="au-line"><span class="au-ico ${offcanon.length?'bad':'good'}">${offcanon.length||'✓'}</span><span>Casting <b>off-canon</b> (watak luar Haziq/Roslan) — punca cautionary-tale K1</span></div>
+    <div class="au-line"><span class="au-ico ${pairChanged.length?'bad':'good'}">${pairChanged.length||'✓'}</span><span>Pairing <b>diubah dari sumber</b> (trim/skip)</span></div>`;
+
+  document.getElementById("auditBody").innerHTML = h;
+
+  // actions footer
+  const canExport = true; // export always allowed, but blocked items flagged
+  const blocked = riskyMissing.length>0;
+  const actions = `<div class="au-actions">
+    <button class="btn ghost" id="auditBack">Kembali isi</button>
+    <button class="btn" id="doExport" ${blocked?'style="opacity:.5"':''}>${blocked?`Eksport tetap (${riskyMissing.length} tanpa sebab)`:'Eksport CSV ↓'}</button>
+  </div>`;
+  document.getElementById("auditBody").insertAdjacentHTML("afterend", actions);
+  document.getElementById("auditBack").onclick=()=>{
+    closeAudit();
+    if(riskyMissing.length){ // jump to first missing
+      const first=riskyMissing[0];
+      activeFilter="ALL"; render();
+      setTimeout(()=>{const el=document.getElementById("card-"+first.i); if(el){el.scrollIntoView({behavior:"smooth",block:"center"});}},80);
+    }
+  };
+  document.getElementById("doExport").onclick=()=>{ exportCSV(); closeAudit(); };
+}
+
+function openAudit(){
+  // clear any prior action footer
+  const old=document.querySelector(".au-actions"); if(old) old.remove();
+  buildAudit();
+  document.getElementById("auditPanel").classList.add("show");
+}
+function closeAudit(){ document.getElementById("auditPanel").classList.remove("show"); }
+
+document.getElementById("applyPattern").onclick=applyPattern;
+document.getElementById("exportBtn").onclick=openAudit;
+document.getElementById("auditClose").onclick=closeAudit;
+document.getElementById("clearBtn").onclick=()=>{ if(confirm("Kosongkan semua keputusan?")){ for(const k in decisions) delete decisions[k]; render(); } };
+document.getElementById("totN").textContent=CAIR.length;
+
+render();
+</script>
+</body>
+</html>
