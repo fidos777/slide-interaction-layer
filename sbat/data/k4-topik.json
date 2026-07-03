@@ -1,0 +1,490 @@
+{
+  "kursus": "K4 — Kerja-Kerja Lif, Eskalator dan Laluan Gerak",
+  "source_md5": "f8a58d5ffe172be66102a0b99df23c5b",
+  "source_file": "K4__PROOFREAD_FINAL__SKP_2025_LIF__ESKALATOR___LALUAN_GERAK_300426.docx",
+  "hierarki": "Kursus > PL > Topik (baris SUB MODUL)",
+  "nota_penting": "K4 TIADA Jadual perbandingan literal dalam mana-mana topik (jadual_literal=0 semua 20 topik) — disahkan grep sesi ini, bukan sesi lalu. Pairing = 0 untuk seluruh K4. Cadangan interaktiviti guna kriteria bentuk kandungan (rajah/visual, kepadatan sub-bahagian, panjang teks) — SISTEM CADANG SAHAJA, Bariah boleh tolak/tukar/tambah setiap satu.",
+  "jumlah_topik": 20,
+  "topik": [
+    {
+      "pl": "PL01",
+      "topik": "T1",
+      "tajuk": "Definisi Lif, Eskalator & Laluan Gerak",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 3,
+        "sub_bahagian": 3,
+        "panjang_aksara": 893
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Teks penerangan ringkas/berurutan — sesuai bina sebagai situasi mudah",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Soalan renungan pelengkap — topik ringkas cukup dengan satu semakan",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL01",
+      "topik": "T2",
+      "tajuk": "Akta dan Peraturan Berkaitan",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 6,
+        "sub_bahagian": 16,
+        "panjang_aksara": 8524
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (16) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL01",
+      "topik": "T3",
+      "tajuk": "Orang Kompeten (OK)",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 4,
+        "sub_bahagian": 50,
+        "panjang_aksara": 6463
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Struktur amat padat (50 sub-bahagian, 6463 aksara) — navigasi kad perlu, bukan skrol panjang",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Satu senario aplikasi ringkas untuk uji pemindahan pengetahuan, bukan hafalan sahaja",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL01",
+      "topik": "T4",
+      "tajuk": "Skop Kerja Berkaitan",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 0,
+        "sub_bahagian": 25,
+        "panjang_aksara": 3359
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (25) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL01",
+      "topik": "T5",
+      "tajuk": "Pemasangan",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 1,
+        "sub_bahagian": 23,
+        "panjang_aksara": 3388
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (23) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL02",
+      "topik": "T1",
+      "tajuk": "Mengenal Pasti Skop Projek",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 0,
+        "sub_bahagian": 26,
+        "panjang_aksara": 4263
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (26) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL02",
+      "topik": "T2",
+      "tajuk": "Senarai Kuantiti (BQ)",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 1,
+        "sub_bahagian": 16,
+        "panjang_aksara": 4408
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (16) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL02",
+      "topik": "T3",
+      "tajuk": "Spesifikasi",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 2,
+        "sub_bahagian": 34,
+        "panjang_aksara": 4874
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (34) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL02",
+      "topik": "T4",
+      "tajuk": "Menyedia Data Kos, Anggaran dan Tender",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 0,
+        "sub_bahagian": 28,
+        "panjang_aksara": 4315
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (28) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL02",
+      "topik": "T5",
+      "tajuk": "Mengurus Keperluan & Dokumentasi Kontrak",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 4,
+        "sub_bahagian": 12,
+        "panjang_aksara": 5356
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Teks penerangan ringkas/berurutan — sesuai bina sebagai situasi mudah",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Soalan renungan pelengkap — topik ringkas cukup dengan satu semakan",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL02",
+      "topik": "T6",
+      "tajuk": "Kajian Kes",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 0,
+        "sub_bahagian": 18,
+        "panjang_aksara": 2463
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (18) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL03",
+      "topik": "T1",
+      "tajuk": "Menyedia Carta Perbatuan (Gantt Chart)",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 4,
+        "sub_bahagian": 39,
+        "panjang_aksara": 4458
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (39) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL03",
+      "topik": "T2",
+      "tajuk": "Pengurusan Risiko",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 0,
+        "sub_bahagian": 53,
+        "panjang_aksara": 13007
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Struktur amat padat (53 sub-bahagian, 13007 aksara) — navigasi kad perlu, bukan skrol panjang",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Satu senario aplikasi ringkas untuk uji pemindahan pengetahuan, bukan hafalan sahaja",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL04",
+      "topik": "T1",
+      "tajuk": "Pemasangan Lif, Eskalator & Laluan Gerak",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 18,
+        "sub_bahagian": 32,
+        "panjang_aksara": 7585
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Rajah/visual tinggi (18) — perlu situasi bergambar, bukan senarai kering",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Fakta sokongan (32 sub-bahagian) — kad rujukan pantas selepas scenario",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL04",
+      "topik": "T2",
+      "tajuk": "Pengujian & Pentauliahan",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 10,
+        "sub_bahagian": 21,
+        "panjang_aksara": 4803
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Rajah/visual tinggi (10) — perlu situasi bergambar, bukan senarai kering",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Fakta sokongan (21 sub-bahagian) — kad rujukan pantas selepas scenario",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL04",
+      "topik": "T3",
+      "tajuk": "Penyelenggaraan",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 5,
+        "sub_bahagian": 9,
+        "panjang_aksara": 2316
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Teks penerangan ringkas/berurutan — sesuai bina sebagai situasi mudah",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Soalan renungan pelengkap — topik ringkas cukup dengan satu semakan",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL05",
+      "topik": "T1",
+      "tajuk": "Menyedia Dokumen Serahan",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 12,
+        "sub_bahagian": 70,
+        "panjang_aksara": 8606
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Rajah/visual tinggi (12) — perlu situasi bergambar, bukan senarai kering",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Fakta sokongan (70 sub-bahagian) — kad rujukan pantas selepas scenario",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL05",
+      "topik": "T2",
+      "tajuk": "Pengurusan Liabiliti Kecacatan & CMGD",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 3,
+        "sub_bahagian": 106,
+        "panjang_aksara": 9337
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Struktur amat padat (106 sub-bahagian, 9337 aksara) — navigasi kad perlu, bukan skrol panjang",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Satu senario aplikasi ringkas untuk uji pemindahan pengetahuan, bukan hafalan sahaja",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL05",
+      "topik": "T3",
+      "tajuk": "Menyedia Dokumen Akaun Akhir",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 3,
+        "sub_bahagian": 47,
+        "panjang_aksara": 6710
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Struktur amat padat (47 sub-bahagian, 6710 aksara) — navigasi kad perlu, bukan skrol panjang",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Scenario with Questions",
+          "rasional": "Satu senario aplikasi ringkas untuk uji pemindahan pengetahuan, bukan hafalan sahaja",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    },
+    {
+      "pl": "PL05",
+      "topik": "T4",
+      "tajuk": "Kajian Kes",
+      "provenans": "BEKU",
+      "bentuk_source": {
+        "jadual_literal": 0,
+        "rajah": 0,
+        "sub_bahagian": 18,
+        "panjang_aksara": 2463
+      },
+      "interaktiviti_cadangan": [
+        {
+          "jenis": "Click-and-Show",
+          "rasional": "Senarai/sub-bahagian jelas (18) — sesuai kad ringkas",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        },
+        {
+          "jenis": "Reflection",
+          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
+          "status": "cadangan — Bariah putus/tolak/tambah"
+        }
+      ]
+    }
+  ]
+}
