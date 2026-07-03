@@ -153,7 +153,7 @@
       </div>
     </div>
     <div style="font-weight:600;margin-top:.35rem">ID Authoring · CAIR Decision Desk</div>
-    <div id="cwNote" style="opacity:.7;margin-top:.1rem">Browser-only prototype · eksport CSV manual · tidak disimpan ke database · keputusan manusia diperlukan</div>
+    <div id="cwNote" style="opacity:.7;margin-top:.1rem">Disegerak ke Supabase (auto-save) · eksport CSV = snapshot sahaja · keputusan manusia diperlukan</div>
     <nav style="display:flex;gap:.45rem;flex-wrap:wrap;margin-top:.6rem">
       <a href="/sbat/cair-decision-desk.html" style="display:inline-block;padding:.35rem .75rem;border:1px solid #C6F24E;border-radius:100px;background:#C6F24E;color:#15171C;text-decoration:none;white-space:nowrap;font-weight:700">CAIR Decision Desk</a>
       <a href="/sbat/m1-screen-c.html" style="display:inline-block;padding:.35rem .75rem;border:1px solid rgba(255,255,255,.22);border-radius:100px;color:#EEF1F5;text-decoration:none;white-space:nowrap">Review Desk</a>
@@ -162,7 +162,7 @@
   </div>
   <script>
   (function(){
-    var BM="Browser-only prototype · eksport CSV manual · tidak disimpan ke database · keputusan manusia diperlukan";
+    var BM="Disegerak ke Supabase (auto-save) · eksport CSV = snapshot sahaja · keputusan manusia diperlukan";
     var EN="Browser-only prototype · manual CSV export · not saved to database · human decision required";
     var n=document.getElementById("cwNote"),b=document.getElementById("cwLangBM"),e=document.getElementById("cwLangEN");
     function set(l){var en=l==="EN";n.textContent=en?EN:BM;
