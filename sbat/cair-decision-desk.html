@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- CAIR Desk M2.0 · topik-level K4 + INTENT_MAP + lock · 2026-07-03 -->
+<!-- CAIR Desk M2.1 · kanon watak K4 + peraturan per-topik · 2026-07-03 -->
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
@@ -138,6 +138,8 @@
 .ix-del{border:none;background:none;color:#A6402E;cursor:pointer;font-size:.9rem;padding:.1rem .3rem}
 .ix-add{font-size:.76rem;padding:.35rem .6rem}
 .warn-inline{color:#A6402E;font-size:.76rem;margin-left:.5rem}
+.cadangan-tag{font-weight:400;font-size:.68rem;color:#3F7A52;background:#EAF0E6;border-radius:100px;padding:.1rem .45rem}
+.cadangan-note{font-size:.72rem;color:var(--ink-faint,#8C857C);margin:.25rem 0 .2rem;font-style:italic}
 </style>
 </head>
 <body>
@@ -333,20 +335,30 @@ function interakRow(i,idx,it){
         <button class="ix-del" data-i="${i}" data-ixdel="${idx}" title="Buang">✕</button></div>
       <input type="text" data-i="${i}" data-ixk="rasional" data-ix="${idx}" placeholder="Rasional / rujukan sumber" value="${esc(it.rasional||"")}"></div>`;
 }
+// ===== Kanon watak K4 (RATIFIED PRD Bariah 03/07) — CADANGAN per-topik; Bariah boleh tolak/tukar =====
+function watakCadangan(t){
+  // Peraturan PRD: PL01 T1/T2 = narasi Maya sahaja (tiada watak scene). Selainnya cadang kanon Amir + Encik Zul.
+  if(t.pl==="PL01" && (t.topik==="T1"||t.topik==="T2")){
+    return { value:"Maya (narasi sahaja)", note:"Peraturan PRD: tiada watak scene untuk topik ini — cadangan, boleh tolak" };
+  }
+  return { value:"Amir + Encik Zul", note:"Kanon K4 (PRD Bariah) · sekunder jika perlu: Encik Danial (komersial/tender), Puan Sarah (HR/safety)" };
+}
 function cardHTML(t){
   const d=decisions[t.i]||{};
   const done=isComplete(d);
   let ix=interakList(d);
   if(ix.length===0) ix=t.cadangan.map(c=>({jenis:c.jenis,rasional:c.rasional,sumber:"cadangan-sistem"}));
-  const reason=(d.intent&&INTENT_MAP[d.intent])?`<div class="intent-suggest">${esc(INTENT_MAP[d.intent].reason)} · <i>watak K4 belum diratifikasi — tiada cadangan watak</i></div>`:"";
+  const reason=(d.intent&&INTENT_MAP[d.intent])?`<div class="intent-suggest">${esc(INTENT_MAP[d.intent].reason)}</div>`:"";
   const ph=(d.intent&&INTENT_MAP[d.intent])?INTENT_MAP[d.intent].ph:"babak pembuka ringkas…";
+  const cad=watakCadangan(t);
   return `<div class="card ${done?'done':''}" id="card-${t.i}">
     <div class="meta"><span class="badge b-loc">K4 · ${t.pl} · ${t.topik}</span><span class="badge b-type">TOPIK</span></div>
     <div class="ask">${esc(t.tajuk)}</div>
     <div class="sec"><div class="sec-h">① Cara ajar (pola pedagogi) + watak</div>
       <label class="fld">Pola pedagogi (INTENT_MAP P1–P7)</label>${intentSelect(t.i,d.intent)}${reason}
-      <label class="fld">Watak</label>
-      <input type="text" data-i="${t.i}" data-k="watak" placeholder="Menunggu ratifikasi watak K4 — cadangan: tulis sendiri" value="${esc(d.watak||"")}">
+      <label class="fld">Watak <span class="cadangan-tag">[cadangan — PRD Bariah]</span></label>
+      <input type="text" data-i="${t.i}" data-k="watak" placeholder="${esc(cad.value)}" value="${esc(d.watak || cad.value)}">
+      <div class="cadangan-note">${esc(cad.note)}</div>
       <label class="fld">Jalan cerita / hook pembuka</label>
       <textarea data-i="${t.i}" data-k="scenario_hook" placeholder="cth: ${esc(ph)}">${esc(d.scenario_hook||"")}</textarea></div>
     <div class="sec"><div class="sec-h">② Reflection</div>
