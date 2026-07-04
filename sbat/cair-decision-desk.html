@@ -275,13 +275,13 @@ window.K4_TOPIK = window.K4_DATA.topik;
 <script>
 // ===== INTENT_MAP (port dari Meja-Keputusan 665; suggest[] KOSONG — watak K4 belum diratifikasi) =====
 const INTENT_MAP = {
-  "P1":     { group:"INFORM", label:"P1 Explain — terang konsep",      reason:"Sesuai untuk definisi, teori, konsep baharu.", ph:"Hari ni kita akan belajar tentang…", suggest:[] },
-  "P2": { group:"SHOW",   label:"P2 Demonstrate — tunjuk langkah", reason:"Sesuai untuk SOP, pemasangan, proses kerja.", ph:"Mentor tunjuk cara…", suggest:[] },
-  "P3":       { group:"SHOW",   label:"P3 Coach — mentor bimbing",       reason:"Sesuai untuk amalan terbaik, bimbingan pekerja.", ph:"Mentor bimbing pelajar semasa dia mencuba…", suggest:[] },
-  "P4":   { group:"THINK",  label:"P4 Challenge — uji pemikiran",     reason:"Sesuai untuk refleksi, pancing pemikiran.", ph:"Kalau kita terus pasang tanpa…, apa akan jadi?", suggest:[] },
-  "P5":   { group:"THINK",  label:"P5 Case Study — selesai masalah",  reason:"Sesuai untuk troubleshooting, masalah tapak sebenar.", ph:"Di tapak berlaku masalah… macam mana nak selesai?", suggest:[] },
-  "P6":  { group:"VERIFY", label:"P6 Inspection — cari kesilapan",   reason:"Sesuai untuk audit, QA/QC, safety, compliance.", ph:"Jumpa satu kesilapan semasa pemeriksaan…", suggest:[] },
-  "P7":  { group:"VERIFY", label:"P7 Assess — semak kefahaman",      reason:"Sesuai untuk kuiz, latihan, sahkan faham.", ph:"Mari kita semak apa yang anda dah faham…", suggest:[] }
+  "I1": { group:"INFORM", name:"Explain — terang konsep",      csv:"I1 Explain",     reason:"Sesuai untuk definisi, teori, konsep baharu.", ph:"Hari ni kita akan belajar tentang…", suggest:[] },
+  "I2": { group:"SHOW",   name:"Demonstrate — tunjuk langkah", csv:"I2 Demonstrate", reason:"Sesuai untuk SOP, pemasangan, proses kerja.", ph:"Mentor tunjuk cara…", suggest:[] },
+  "I3": { group:"SHOW",   name:"Coach — mentor bimbing",       csv:"I3 Coach",       reason:"Sesuai untuk amalan terbaik, bimbingan pekerja.", ph:"Mentor bimbing pelajar semasa dia mencuba…", suggest:[] },
+  "I4": { group:"THINK",  name:"Challenge — uji pemikiran",    csv:"I4 Challenge",   reason:"Sesuai untuk refleksi, pancing pemikiran.", ph:"Kalau kita terus pasang tanpa…, apa akan jadi?", suggest:[] },
+  "I5": { group:"THINK",  name:"Case Study — selesai masalah", csv:"I5 Case Study",  reason:"Sesuai untuk troubleshooting, masalah tapak sebenar.", ph:"Di tapak berlaku masalah… macam mana nak selesai?", suggest:[] },
+  "I6": { group:"VERIFY", name:"Inspection — cari kesilapan",  csv:"I6 Inspection",  reason:"Sesuai untuk audit, QA/QC, safety, compliance.", ph:"Jumpa satu kesilapan semasa pemeriksaan…", suggest:[] },
+  "I7": { group:"VERIFY", name:"Assess — semak kefahaman",     csv:"I7 Assess",      reason:"Sesuai untuk kuiz, latihan, sahkan faham.", ph:"Mari kita semak apa yang anda dah faham…", suggest:[] }
 };
 const INTERAK_TYPES = ["Scenario with Questions","Click-and-Show","Drag-and-Drop","Reflection"];
 const OPEN_COURSES = ["K4"]; // hanya K4 terbuka; K2/K3/K5 dikunci
@@ -322,7 +322,7 @@ function intentSelect(i,cur){
   const groups=["INFORM","SHOW","THINK","VERIFY"];
   const opts=groups.map(g=>{
     const inG=Object.entries(INTENT_MAP).filter(([k,v])=>v.group===g);
-    return `<optgroup label="${g}">`+inG.map(([k,v])=>`<option value="${k}" ${cur===k?"selected":""}>${esc(v.label)}</option>`).join("")+`</optgroup>`;
+    return `<optgroup label="${g}">`+inG.map(([k,v])=>`<option value="${k}" ${cur===k?"selected":""}>${esc(v.name)}</option>`).join("")+`</optgroup>`;
   }).join("");
   return `<select data-i="${i}" data-k="intent"><option value="">— pilih cara ajar —</option>${opts}</select>`;
 }
@@ -355,7 +355,7 @@ function cardHTML(t){
     <div class="meta"><span class="badge b-loc">K4 · ${t.pl} · ${t.topik}</span><span class="badge b-type">TOPIK</span></div>
     <div class="ask">${esc(t.tajuk)}</div>
     <div class="sec"><div class="sec-h">① Cara ajar (pola pedagogi) + watak</div>
-      <label class="fld">Pola pedagogi (INTENT_MAP P1–P7)</label>${intentSelect(t.i,d.intent)}${reason}
+      <label class="fld">Cara Mengajar</label>${intentSelect(t.i,d.intent)}${reason}
       <label class="fld">Watak <span class="cadangan-tag">[cadangan — PRD Bariah]</span></label>
       <input type="text" data-i="${t.i}" data-k="watak" placeholder="${esc(cad.value)}" value="${esc(d.watak || cad.value)}">
       <div class="cadangan-note">${esc(cad.note)}</div>
@@ -438,7 +438,7 @@ function exportCSV(){
   const rows=[head];
   TOPIK.forEach(t=>{ const d=decisions[t.i]; if(!isComplete(d)) return;
     const ix=interakList(d).map(x=>x.jenis+(x.rasional?(" ("+x.rasional+")"):"")).join(" | ");
-    rows.push(["K4",t.pl,t.topik,t.tajuk,(INTENT_MAP[d.intent]?INTENT_MAP[d.intent].label:""),d.watak||"",(d.scenario_hook||"").replace(/\n/g," "),(d.reflection||"").replace(/\n/g," "),ix,d.ref||""]); });
+    rows.push(["K4",t.pl,t.topik,t.tajuk,(INTENT_MAP[d.intent]?INTENT_MAP[d.intent].csv:""),d.watak||"",(d.scenario_hook||"").replace(/\n/g," "),(d.reflection||"").replace(/\n/g," "),ix,d.ref||""]); });
   const csv=rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\r\n");
   const blob=new Blob(["﻿"+csv],{type:"text/csv;charset=utf-8"});
   const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="CAIR-K4-TOPIK-"+new Date().toISOString().slice(0,10)+".csv"; a.click();
