@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courseware Studio — CIDB Cycle 7</title>
+<style>
+  :root{
+    --paper:#FBF9F4; --ink:#1C1A17; --ink-soft:#5A5550; --ink-faint:#8C857C;
+    --line:#E4DECF; --line-soft:#EFEAE0; --ink-100:#EFEAE0;
+    --beku:#7A8B6F; --beku-bg:#EDF0E9;
+    --cair:#B5662E; --cair-bg:#F7EBDF;
+    --draf:#B5862E; --draf-bg:#F6EFDD;
+    --ok:#3F7A52; --ok-bg:#E6F0E6;
+    --hold:#A6402E; --hold-bg:#F6E5E1;
+    --accent:#B5662E; --accent-ink:#fff;
+    --font-d:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --font-b:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-m:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-b);line-height:1.5;padding-bottom:6rem}
+  .topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.25rem;position:sticky;top:0;z-index:50}
+  .topbar-in{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .title{font-family:var(--font-d);font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+  .title small{display:block;font-family:var(--font-m);font-size:.62rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:.15rem}
+  .tabs{display:flex;gap:.4rem;max-width:960px;margin:1rem auto 0;padding:0 1.25rem;flex-wrap:wrap}
+  .tab{font-family:var(--font-b);font-size:.82rem;font-weight:600;color:var(--ink-soft);background:transparent;border:1px solid var(--line);border-radius:100px;padding:.4rem .9rem;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .tab.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .wrap{max-width:960px;margin:1.25rem auto 0;padding:0 1.25rem}
+  .pane{display:none}
+  .pane.active{display:block}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:1rem}
+  .card h3{font-family:var(--font-d);font-size:1.02rem;font-weight:700;margin-bottom:.5rem}
+  .lbl{font-family:var(--font-m);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.3rem}
+  /* PM tab */
+  .countdown{display:flex;align-items:baseline;gap:.5rem;margin:.3rem 0}
+  .cd-num{font-family:var(--font-d);font-size:2.4rem;font-weight:700;color:var(--cair);line-height:1}
+  .cd-unit{font-size:.9rem;color:var(--ink-soft)}
+  .milestone{display:flex;align-items:center;gap:.7rem;padding:.6rem 0;border-bottom:1px dashed var(--line-soft)}
+  .milestone:last-child{border-bottom:none}
+  .ms-dot{width:.85rem;height:.85rem;border-radius:50%;flex-shrink:0}
+  .ms-body{flex:1}
+  .ms-name{font-weight:600;font-size:.9rem}
+  .ms-meta{font-family:var(--font-m);font-size:.7rem;color:var(--ink-faint)}
+  .ms-status{font-family:var(--font-m);font-size:.66rem;padding:.15rem .5rem;border-radius:100px;white-space:nowrap}
+  .st-done{background:var(--ok-bg);color:var(--ok)}
+  .st-active{background:var(--cair-bg);color:var(--cair)}
+  .st-plan{background:var(--line-soft);color:var(--ink-faint)}
+  /* Storyboard draft tab */
+  .prov{display:inline-block;font-family:var(--font-m);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;padding:.18rem .5rem;border-radius:4px;font-weight:600}
+  .prov-beku{background:var(--beku-bg);color:var(--beku)}
+  .prov-cair{background:var(--cair-bg);color:var(--cair)}
+  .sel-row{display:flex;gap:.6rem;flex-wrap:wrap}
+  .sel-row select{font-family:var(--font-b);font-size:.85rem;padding:.45rem .6rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);flex:1;min-width:200px}
+  .sel-status{font-family:var(--font-m);font-size:.72rem;color:var(--ink-faint);margin-top:.6rem}
+  .sect-head{display:flex;align-items:center;gap:.5rem;margin:1.2rem 0 .6rem}
+  .sect-head .prov{font-size:.66rem}
+  .sect-head .sect-count{font-family:var(--font-m);font-size:.7rem;color:var(--ink-faint)}
+  .sect-desc{font-size:.78rem;color:var(--ink-soft);margin-bottom:.5rem}
+  .cmt-box{margin-top:.5rem}
+  .cmt-toggle{font-family:var(--font-m);font-size:.68rem;color:var(--cair);background:none;border:none;cursor:pointer;padding:.2rem 0;-webkit-tap-highlight-color:transparent}
+  .cmt-area{display:none;margin-top:.4rem}
+  .cmt-area.open{display:block}
+  .cmt-area textarea{width:100%;font-family:var(--font-b);font-size:.8rem;padding:.5rem .6rem;border:1px solid var(--line);border-radius:6px;resize:vertical;min-height:44px;background:var(--paper)}
+  .cmt-flag{display:inline-block;font-family:var(--font-m);font-size:.6rem;color:var(--hold);background:var(--hold-bg);border-radius:4px;padding:.1rem .4rem;margin-left:.4rem}
+  .cast-box{background:var(--cair-bg);border:1px solid var(--line);border-radius:8px;padding:.7rem .8rem;margin-top:.5rem}
+  .cast-lbl{font-family:var(--font-m);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.3rem}
+  .cast-sugg{font-size:.82rem;color:var(--ink);margin:.3rem 0;font-weight:600}
+  .cast-link{font-family:var(--font-m);font-size:.7rem;color:#fff;background:var(--cair);border:none;border-radius:6px;padding:.35rem .7rem;margin-top:.4rem;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .full-slide{border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;margin-bottom:.7rem;background:var(--paper)}
+  .full-head{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
+  .full-n{font-family:var(--font-m);font-size:.68rem;color:var(--ink-faint)}
+  .full-title{font-family:var(--font-d);font-weight:700;font-size:.94rem;flex:1}
+  .full-crumb{font-family:var(--font-m);font-size:.6rem;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:.4rem}
+  .full-content{font-size:.84rem;color:var(--ink);margin:.3rem 0}
+  .full-cast{background:var(--cair-bg);border-radius:6px;padding:.4rem .6rem;font-size:.76rem;color:var(--ink-soft);margin:.4rem 0}
+  .full-note{font-size:.72rem;color:var(--ink-faint);font-style:italic;margin-top:.3rem;border-top:1px dashed var(--line-soft);padding-top:.3rem}
+  .cast-pill{font-family:var(--font-m);font-size:.68rem;color:var(--cair);font-weight:600}
+  .cast-hint{font-size:.72rem;color:var(--ink-faint);font-style:italic;margin-top:.3rem}
+  .sb-row{display:flex;gap:.8rem;padding:.75rem 0;border-bottom:1px solid var(--line-soft);align-items:flex-start}
+  .sb-row:last-child{border-bottom:none}
+  .sb-num{font-family:var(--font-m);font-size:.7rem;color:var(--ink-faint);width:2.2rem;flex-shrink:0;padding-top:.15rem}
+  .sb-main{flex:1}
+  .sb-slide-title{font-weight:600;font-size:.9rem;margin-bottom:.25rem}
+  .sb-content{font-size:.82rem;color:var(--ink-soft);margin:.3rem 0}
+  .sb-note{font-size:.74rem;color:var(--ink-faint);font-style:italic;margin-top:.3rem}
+  .gate-flag{background:var(--draf-bg);border-left:3px solid var(--draf);border-radius:0 6px 6px 0;padding:.5rem .7rem;margin-top:.4rem;font-size:.76rem;color:var(--ink-soft)}
+  .note-box{background:var(--cair-bg);border:1px solid var(--line);border-radius:8px;padding:.7rem .8rem;font-size:.78rem;color:var(--ink-soft);margin-bottom:1rem}
+  .note-box b{color:var(--cair)}
+  .frame{width:100%;height:calc(100vh - 180px);min-height:520px;border:1px solid var(--line);border-radius:12px;background:#fff}
+  .placeholder{text-align:center;padding:3rem 1rem;color:var(--ink-faint)}
+  .placeholder .ph-icon{font-size:2rem;margin-bottom:.5rem}
+
+  .cair-frame-wrap{width:100%;height:calc(100vh - 200px);min-height:720px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .cair-frame-wrap iframe{width:100%;height:100%;border:0;display:block}
+  .pl-block{margin-bottom:1.4rem}
+  .pl-head{font-family:var(--font-d);font-weight:700;font-size:1rem;margin-bottom:.2rem}
+  .pl-sub{font-family:var(--font-m);font-size:.66rem;color:var(--ink-faint);margin-bottom:.6rem}
+  .topik-row{display:flex;align-items:center;gap:.7rem;padding:.6rem .8rem;border:1px solid var(--line);border-radius:8px;margin-bottom:.4rem;background:#fff}
+  .topik-id{font-family:var(--font-m);font-size:.68rem;color:var(--cair);font-weight:600;flex-shrink:0;width:2.2rem}
+  .topik-nama{flex:1;font-size:.85rem}
+  .topik-status{font-family:var(--font-m);font-size:.62rem;padding:.15rem .5rem;border-radius:100px;white-space:nowrap}
+  .ts-wait{background:var(--line-soft);color:var(--ink-faint)}
+  .prog-bar{height:6px;background:var(--line-soft);border-radius:3px;overflow:hidden;margin:.4rem 0}
+  .prog-fill{height:100%;background:var(--cair);transition:width .3s}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="title">Courseware Studio<small>CIDB Cycle 7 · SME Cloud</small></div>
+    <div style="font-family:var(--font-m);font-size:.66rem;color:var(--ink-faint)">Bariah · ID workspace</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" data-pane="pm">Project Tracking</button>
+  <button class="tab" data-pane="sb">Storyboard Generator</button>
+  <button class="tab" data-pane="cair">CAIR Desk</button>
+  <button class="tab" data-pane="full">Storyboard Penuh</button>
+</div>
+
+<div class="wrap">
+
+  <div class="pane active" id="pane-pm">
+    <div class="card"><div class="lbl">Bengkel seterusnya</div><div id="cd-b2"></div></div>
+    <div class="card"><div class="lbl">Kemajuan keputusan CAIR — Kursus 4 (topik-level)</div><div id="cair-progress"></div></div>
+    <div class="card"><div class="lbl">Timeline bengkel (dari minit 30 Jun 2026)</div><div id="milestones"></div></div>
+    <div class="note-box"><b>Sumber:</b> Tarikh dari Minit Mesyuarat 30 Jun 2026. Countdown dikira dari tarikh hari ini — bukan anggaran.</div>
+  </div>
+
+  <div class="pane" id="pane-sb">
+    <div class="note-box"><b>Storyboard Generator</b> — susun struktur per topik. Bahagian <span class="prov prov-beku">BEKU</span> di-assemble dari source (md5-lock) bila modul di-drill. Bahagian <span class="prov prov-cair">CAIR</span> diputus di CAIR Desk. AI tidak mengarang.</div>
+    <div class="note-box" style="background:var(--draf-bg);border-color:var(--draf)"><b>Status semasa:</b> Kursus 4 = 20 topik dikenal pasti dari source (md5 f8a58d5f). Isi BEKU per-topik <b>belum di-drill</b>. Struktur di bawah = rangka topik.</div>
+    <div id="sb-body"></div>
+  </div>
+
+  <div class="pane" id="pane-cair">
+    <div class="note-box"><b>CAIR Desk</b> — meja keputusan sebenar (casting, pola pedagogi I1–I7, reflection, interaktiviti). Bariah putus; AI cadang. Dimuat terus dari desk tunggal — satu sumber kebenaran.</div>
+    <div class="cair-frame-wrap"><iframe src="cair-decision-desk.html" title="CAIR Decision Desk"></iframe></div>
+  </div>
+
+  <div class="pane" id="pane-full">
+    <div class="note-box"><b>Storyboard Penuh</b> — draf lengkap format PPT selepas keputusan CAIR. BEKU dari source, casting dari keputusan CAIR.</div>
+    <div class="note-box" style="background:var(--draf-bg);border-color:var(--draf)"><b>Status semasa:</b> Dijana selepas BEKU di-drill + keputusan CAIR dibuat. Setakat ini keputusan CAIR belum wujud (jadual kosong). Rangka topik di bawah tunjuk apa akan diisi.</div>
+    <div id="full-body"></div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".tab").forEach(t=>{
+  t.onclick=()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".pane").forEach(x=>x.classList.remove("active"));
+    t.classList.add("active");
+    document.getElementById("pane-"+t.dataset.pane).classList.add("active");
+  };
+});
+
+const K4_TOPIK={"PL01": {"nama": "Pengenalan Kerja Lif, Eskalator & Laluan Gerak", "topik": [["T1", "Definisi Lif, Eskalator & Laluan Gerak"], ["T2", "Akta dan Peraturan Berkaitan"], ["T3", "Orang Kompeten (OK)"], ["T4", "Skop Kerja Berkaitan"], ["T5", "Pemasangan"]]}, "PL02": {"nama": "Pengurusan Tender dan Kontrak", "topik": [["T1", "Mengenal Pasti Skop Projek"], ["T2", "Senarai Kuantiti (BQ)"], ["T3", "Spesifikasi"], ["T4", "Menyedia Data Kos, Anggaran dan Tender"], ["T5", "Mengurus Keperluan & Dokumentasi Kontrak"], ["T6", "Kajian Kes"]]}, "PL03": {"nama": "Perancangan dan Penjadualan Projek", "topik": [["T1", "Menyedia Carta Perbatuan (Gantt Chart)"], ["T2", "Pengurusan Risiko"]]}, "PL04": {"nama": "Pengurusan Operasi Pembinaan", "topik": [["T1", "Pemasangan Lif, Eskalator & Laluan Gerak"], ["T2", "Pengujian & Pentauliahan"], ["T3", "Penyelenggaraan"]]}, "PL05": {"nama": "Penyerahan Projek", "topik": [["T1", "Menyedia Dokumen Serahan"], ["T2", "Pengurusan Liabiliti Kecacatan & CMGD"], ["T3", "Menyedia Dokumen Akaun Akhir"], ["T4", "Kajian Kes"]]}};
+const K4_TOTAL=Object.values(K4_TOPIK).reduce((a,v)=>a+v.topik.length,0);
+
+const MILESTONES=[
+  {name:"ID Storyboard — Kursus 1", meta:"Hujung Jun 2026", date:"2026-06-30", status:"done"},
+  {name:"Bengkel 2 · ID Storyboard Kursus 2-5", meta:"15 Ogos 2026 onwards", date:"2026-08-15", status:"active"},
+  {name:"Bengkel 3 · MMD Review (min 2 kursus)", meta:"Awal September 2026", date:"2026-09-01", status:"plan"},
+  {name:"Bengkel 4 · MMD Review (min 3 kursus)", meta:"Pertengahan Oktober 2026", date:"2026-10-15", status:"plan"}
+];
+function daysTo(d){
+  const now=new Date(); now.setHours(0,0,0,0);
+  const t=new Date(d+"T00:00:00");
+  return Math.round((t-now)/86400000);
+}
+function renderPM(){
+  const b2=MILESTONES.find(m=>m.status==="active");
+  const dd=daysTo(b2.date);
+  document.getElementById("cd-b2").innerHTML=
+    `<div style="font-weight:600;font-size:.92rem;margin-bottom:.2rem">${b2.name}</div>`+
+    `<div class="countdown"><span class="cd-num">${dd>=0?dd:0}</span><span class="cd-unit">hari lagi · ${b2.meta}</span></div>`;
+  document.getElementById("milestones").innerHTML=MILESTONES.map(m=>{
+    const cls=m.status==="done"?"st-done":m.status==="active"?"st-active":"st-plan";
+    const dotc=m.status==="done"?"var(--ok)":m.status==="active"?"var(--cair)":"var(--line)";
+    const lbl=m.status==="done"?"SIAP":m.status==="active"?"AKTIF":"DIRANCANG";
+    const dtxt=m.status!=="done"?`${daysTo(m.date)} hari`:"selesai";
+    return `<div class="milestone"><div class="ms-dot" style="background:${dotc}"></div><div class="ms-body"><div class="ms-name">${m.name}</div><div class="ms-meta">${m.meta} · ${dtxt}</div></div><div class="ms-status ${cls}">${lbl}</div></div>`;
+  }).join("");
+}
+renderPM();
+
+function renderProgress(decided){
+  decided=decided||0;
+  const pct=Math.round(decided/K4_TOTAL*100);
+  document.getElementById("cair-progress").innerHTML=
+    `<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem"><span style="font-weight:600;font-size:.9rem">${decided} / ${K4_TOTAL} topik diputuskan</span><span style="font-family:var(--font-m);font-size:.72rem;color:var(--ink-faint)">${pct}%</span></div><div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div><div style="font-family:var(--font-m);font-size:.66rem;color:var(--ink-faint);margin-top:.3rem">Kemajuan sebenar dari CAIR Desk. Wujud bila Bariah mula putus keputusan.</div>`;
+}
+renderProgress(0);
+
+function renderTopikRangka(mountId, mode){
+  let html="";
+  for(const [pl,v] of Object.entries(K4_TOPIK)){
+    html+=`<div class="pl-block"><div class="pl-head">${pl} · ${v.nama}</div><div class="pl-sub">${v.topik.length} topik</div>`;
+    for(const [tid,tnama] of v.topik){
+      const statusTxt=mode==="sb"?"BEKU belum di-drill":"Tunggu keputusan CAIR";
+      html+=`<div class="topik-row"><span class="topik-id">${tid}</span><span class="topik-nama">${tnama}</span><span class="topik-status ts-wait">${statusTxt}</span></div>`;
+    }
+    html+=`</div>`;
+  }
+  document.getElementById(mountId).innerHTML=html;
+}
+renderTopikRangka("sb-body","sb");
+renderTopikRangka("full-body","full");
+</script>
+
+</body>
+</html>
