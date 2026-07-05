@@ -142,6 +142,17 @@
 .cadangan-note{font-size:.72rem;color:var(--ink-faint,#8C857C);margin:.25rem 0 .2rem;font-style:italic}
 /* Dalam iframe (shell): sorok chrome gelap Courseware Studio — shell dah ada sendiri */
 body.in-iframe .cw-shell{display:none}
+/* Ringkasan keputusan (render dari objek choice yang sama ke saveCard) */
+.dsum{margin-top:1.1rem;border:1px solid var(--line,#E4DECF);border-radius:10px;background:#FCFAF5;padding:.7rem .85rem}
+.dsum-h{font-family:var(--font-m);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint,#8C857C);margin-bottom:.5rem}
+.dsum-row{display:flex;gap:.6rem;padding:.28rem 0;border-top:1px solid var(--line-soft,#EFEAE0);font-size:.82rem;line-height:1.4}
+.dsum-row:first-of-type{border-top:0}
+.dsum-k{flex:0 0 8.5rem;color:var(--ink-soft,#5A5550);font-weight:600}
+.dsum-v{flex:1;color:var(--ink,#1C1A17);word-break:break-word}
+.dsum-empty{color:var(--ink-faint,#8C857C);font-style:italic}
+.dsum-code{font-family:var(--font-m);font-size:.7rem;color:var(--accent,#B5662E);border:1px solid #E8D2BC;border-radius:100px;padding:.02rem .4rem;margin-left:.25rem}
+.dsum-ix{margin:.1rem 0}
+.dsum-ix .ix-src{margin-left:.35rem}
 </style>
 </head>
 <body>
@@ -191,8 +202,8 @@ body.in-iframe .cw-shell{display:none}
   <details class="note">
     <summary>Cara guna meja ini (K4 topik-level)</summary>
     <div class="body">
-      Setiap kad = <b>satu topik K4</b>. Isi 3 bahagian: ① pola pedagogi (INTENT_MAP P1–P7) + watak, ② refleksi, ③ interaktiviti (min 2 — cadangan sistem pra-isi, anda putus / tukar / tambah).
-      Kad "siap" bila pola + refleksi + ≥2 interaktiviti diisi. Tekan <b>Simpan</b> → segerak ke Supabase (satu topik = satu baris).
+      Setiap kad = <b>satu topik K4</b>, disusun enam soalan berturutan: ① Cara mengajar (pola pedagogi) · ② Watak · ③ Scenario hook · ④ Reflection · ⑤ Interaktiviti (min 2 — cadangan sistem pra-isi, anda putus / tukar / tambah) · ⑥ Rujukan sumber. Panel <b>Ringkasan keputusan</b> di bawah setiap kad papar keputusan semasa untuk semak sebelum Simpan.
+      Kad "siap" bila cara mengajar + reflection + ≥2 interaktiviti diisi. Tekan <b>Simpan</b> → segerak ke Supabase (satu topik = satu baris).
       <br><br><b>Watak K4 belum diratifikasi</b> — medan watak taip sendiri, tiada cadangan. <b>K2 / K3 / K5 dikunci</b> sehingga drill sumber per-kursus siap.
     </div>
   </details>
@@ -339,6 +350,33 @@ function watakCadangan(t){
   }
   return { value:"Amir + Encik Zul", note:"Kanon K4 (PRD Bariah) · sekunder jika perlu: Encik Danial (komersial/tender), Puan Sarah (HR/safety)" };
 }
+// ===== Ringkasan keputusan — render TERUS dari objek choice yang sama ke saveCard (tiada state kedua) =====
+function sumRow(label, valHtml, empty){
+  const isEmpty = valHtml==null || String(valHtml).trim()==="";
+  const v = isEmpty ? `<span class="dsum-empty">${empty||"—"}</span>` : valHtml;
+  return `<div class="dsum-row"><span class="dsum-k">${label}</span><span class="dsum-v">${v}</span></div>`;
+}
+function summaryHTML(d){
+  d = d || {};
+  const intent = (d.intent && INTENT_MAP[d.intent])
+    ? `${esc(INTENT_MAP[d.intent].name)}<span class="dsum-code">${esc(d.intent)}</span>`
+    : "";
+  const ix = interakList(d).filter(x=>x && (x.jenis||"").trim());
+  const ixHtml = ix.length
+    ? ix.map(x=>{
+        const sys=(x.sumber||"cadangan-sistem")==="cadangan-sistem";
+        const tag=sys?'<span class="ix-src sys">Cadangan sistem</span>':'<span class="ix-src bar">Pilihan manusia</span>';
+        return `<div class="dsum-ix">${esc(x.jenis)}${tag}</div>`;
+      }).join("")
+    : "";
+  // Urutan ①–⑥ ikut urutan medan sebenar dalam borang (kod), bukan disusun semula.
+  return sumRow("① Cara mengajar", intent, "belum diputuskan")
+       + sumRow("② Watak", d.watak && d.watak.trim()?esc(d.watak):"", "belum diputuskan")
+       + sumRow("③ Scenario hook", d.scenario_hook && d.scenario_hook.trim()?esc(d.scenario_hook):"", "belum diputuskan")
+       + sumRow("④ Reflection", d.reflection && d.reflection.trim()?esc(d.reflection):"", "belum diputuskan")
+       + sumRow("⑤ Interaktiviti", ixHtml, "belum diputuskan")
+       + sumRow("⑥ Rujukan sumber", d.ref && d.ref.trim()?esc(d.ref):"", "—");
+}
 function cardHTML(t){
   const d=decisions[t.i]||{};
   const done=isComplete(d);
@@ -350,21 +388,25 @@ function cardHTML(t){
   return `<div class="card ${done?'done':''}" id="card-${t.i}">
     <div class="meta"><span class="badge b-loc">K4 · ${t.pl} · ${t.topik}</span><span class="badge b-type">TOPIK</span></div>
     <div class="ask">${esc(t.tajuk)}</div>
-    <div class="sec"><div class="sec-h">① Cara ajar (pola pedagogi) + watak</div>
-      <label class="fld">Cara Mengajar</label>${intentSelect(t.i,d.intent)}${reason}
+    <div class="sec"><div class="sec-h">① Cara mengajar (pola pedagogi)</div>
+      <label class="fld">Cara Mengajar</label>${intentSelect(t.i,d.intent)}${reason}</div>
+    <div class="sec"><div class="sec-h">② Watak</div>
       <label class="fld">Watak <span class="cadangan-tag">[cadangan — PRD Bariah]</span></label>
       <input type="text" data-i="${t.i}" data-k="watak" placeholder="${esc(cad.value)}" value="${esc(d.watak || cad.value)}">
-      <div class="cadangan-note">${esc(cad.note)}</div>
+      <div class="cadangan-note">${esc(cad.note)}</div></div>
+    <div class="sec"><div class="sec-h">③ Scenario hook</div>
       <label class="fld">Jalan cerita / hook pembuka</label>
       <textarea data-i="${t.i}" data-k="scenario_hook" placeholder="cth: ${esc(ph)}">${esc(d.scenario_hook||"")}</textarea></div>
-    <div class="sec"><div class="sec-h">② Reflection</div>
+    <div class="sec"><div class="sec-h">④ Reflection</div>
       <label class="fld">Soalan refleksi (kaitkan dgn objektif topik)</label>
       <textarea data-i="${t.i}" data-k="reflection" placeholder="cth: Apa yang anda tahu tentang ${esc(t.tajuk)}?">${esc(d.reflection||"")}</textarea></div>
-    <div class="sec"><div class="sec-h">③ Interaktiviti <span class="sec-note">min 2 — cadangan pra-isi, Bariah putus/tukar/tambah</span></div>
+    <div class="sec"><div class="sec-h">⑤ Interaktiviti <span class="sec-note">min 2 — cadangan pra-isi, Bariah putus/tukar/tambah</span></div>
       <div class="ix-list" id="ixlist-${t.i}">${ix.map((it,idx)=>interakRow(t.i,idx,it)).join("")}</div>
       <button class="btn ghost ix-add" data-ixadd="${t.i}">+ Tambah interaktiviti</button></div>
-    <label class="fld">Rujukan sumber</label>
-    <input type="text" data-i="${t.i}" data-k="ref" placeholder="cth: K4 ${t.pl} ${t.topik} SUB MODUL" value="${esc(d.ref||"")}">
+    <div class="sec"><div class="sec-h">⑥ Rujukan sumber</div>
+      <label class="fld">Rujukan sumber</label>
+      <input type="text" data-i="${t.i}" data-k="ref" placeholder="cth: K4 ${t.pl} ${t.topik} SUB MODUL" value="${esc(d.ref||"")}"></div>
+    <div class="dsum" id="dsum-${t.i}"><div class="dsum-h">Ringkasan keputusan — semak sebelum simpan</div>${summaryHTML(d)}</div>
     <div class="save"><button class="btn" data-save="${t.i}">Simpan keputusan</button>
       <button class="btn ghost" data-reset="${t.i}">Buang</button>
       <span class="saved-tick" id="tick-${t.i}">✓ disimpan</span>
@@ -412,6 +454,9 @@ function render(){
   wrap.querySelectorAll("[data-reset]").forEach(b=>b.onclick=()=>{ delete decisions[+b.dataset.reset]; render(); });
   wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:"Reflection",rasional:"",sumber:"manusia"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
   wrap.querySelectorAll("[data-ixdel]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, idx=+b.dataset.ixdel; const d=readCard(i); if(d.interaktiviti) d.interaktiviti.splice(idx,1); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  // Panel ringkasan: refresh langsung dari readCard (objek payload sama ke saveCard) — bukan state kedua
+  list.forEach(t=>{ const card=document.getElementById("card-"+t.i); const sum=document.getElementById("dsum-"+t.i);
+    if(card && sum) card.addEventListener("input", ()=>{ sum.innerHTML='<div class="dsum-h">Ringkasan keputusan — semak sebelum simpan</div>'+summaryHTML(readCard(t.i)); }); });
   updateCounts();
 }
 // ===== Simpan: satu topik = satu baris; onConflict course_code,pl,topik =====
