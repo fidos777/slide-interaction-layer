@@ -222,53 +222,47 @@ window.K4_TOPIK = window.K4_DATA.topik;
 </script>
 <!-- ===== SUPABASE SYNC LAYER ===== -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-client.js"></script>
 <script>
-  const SB_URL = "https://rlndyibqspcuhpgwlajl.supabase.co";
-  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJsbmR5aWJxc3BjdWhwZ3dsYWpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MTkyMTAsImV4cCI6MjA5ODM5NTIxMH0.E1WPAL90Q-bldg7mP8GMtJkMfhHzfkm0YFMtRE0ewyE";
-  const GATE_PASSWORD = "CIDB-Cycle7";
-
-  let CAIR_USER = localStorage.getItem("cair_user");
-  const sb = window.supabase.createClient(SB_URL, SB_ANON);
+  // ===== A2: identiti dari sesi Google (client kongsi window.SB). Tiada password gate. =====
+  const sb = window.SB;
+  let CAIR_USER = null;                    // diterbit dari email sesi
+  const EMAIL_MAP = {                      // mapping MUKTAMAD
+    "bariahoahmad@gmail.com":   "Bariah",
+    "firdaus.ismail@gmail.com": "Firdaus",
+    "firdaus@courseware.my":    "Firdaus",
+    "firdaus@smecloud.my":      "Firdaus"
+  };
   function rowKey(c){ return c.kursus+"|"+c.pl+"|"+c.slide; }
 
-  // ---- Gate HTML kemas (password + pilih nama) ----
-  function showGate(onPass){
-    if(sessionStorage.getItem("cair_gate")==="ok" && (CAIR_USER==="Bariah"||CAIR_USER==="Firdaus")){ onPass(); return; }
+  // ---- Skrin auth (OAuth top-level sahaja; dalam iframe = mesej sahaja) ----
+  function inIframe(){ try{ return window.self!==window.top; }catch(e){ return true; } }
+  function clearAuthOverlay(){ const o=document.getElementById("authOverlay"); if(o) o.remove(); }
+  function authOverlay(inner){
+    clearAuthOverlay();
     const ov=document.createElement("div");
+    ov.id="authOverlay";
     ov.style.cssText="position:fixed;inset:0;z-index:9999;background:#1C1A17;display:flex;align-items:center;justify-content:center;font-family:-apple-system,sans-serif";
-    ov.innerHTML=`
-      <div style="background:#FBF9F4;color:#1C1A17;max-width:340px;width:90%;padding:1.8rem;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.4)">
-        <div style="font-family:Georgia,serif;font-size:1.2rem;font-weight:700;margin-bottom:.3rem">Meja Keputusan CAIR</div>
-        <div style="font-size:.78rem;color:#8C857C;margin-bottom:1.3rem;letter-spacing:.04em">AKSES TERHAD · PASUKAN DALAMAN</div>
-        <label style="font-size:.8rem;color:#5A5550;display:block;margin-bottom:.35rem">Kata laluan</label>
-        <input id="g_pw" type="password" style="width:100%;padding:.6rem .7rem;border:1px solid #E4DECF;border-radius:8px;font-size:.95rem;margin-bottom:1rem" autofocus>
-        <label style="font-size:.8rem;color:#5A5550;display:block;margin-bottom:.45rem">Siapa anda?</label>
-        <div style="display:flex;gap:.5rem;margin-bottom:1.2rem">
-          <button id="g_b" class="g_who" data-u="Bariah" style="flex:1;padding:.6rem;border:1.5px solid #E4DECF;border-radius:8px;background:#fff;cursor:pointer;font-size:.9rem">Bariah</button>
-          <button id="g_f" class="g_who" data-u="Firdaus" style="flex:1;padding:.6rem;border:1.5px solid #E4DECF;border-radius:8px;background:#fff;cursor:pointer;font-size:.9rem">Firdaus</button>
-        </div>
-        <div id="g_err" style="color:#A6402E;font-size:.78rem;min-height:1rem;margin-bottom:.6rem"></div>
-        <button id="g_go" style="width:100%;padding:.7rem;border:none;border-radius:8px;background:#B5662E;color:#fff;font-size:.95rem;font-weight:600;cursor:pointer">Masuk</button>
-      </div>`;
+    ov.innerHTML=`<div style="background:#FBF9F4;color:#1C1A17;max-width:360px;width:90%;padding:1.9rem;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.4);text-align:center">${inner}</div>`;
     document.body.appendChild(ov);
-    let picked = (CAIR_USER==="Bariah"||CAIR_USER==="Firdaus") ? CAIR_USER : "";
-    const whoBtns=ov.querySelectorAll(".g_who");
-    function paint(){ whoBtns.forEach(b=>{ const on=b.dataset.u===picked; b.style.borderColor=on?"#B5662E":"#E4DECF"; b.style.background=on?"#F7EBDF":"#fff"; }); }
-    whoBtns.forEach(b=>b.onclick=()=>{ picked=b.dataset.u; paint(); });
-    paint();
-    function submit(){
-      const pw=ov.querySelector("#g_pw").value;
-      const err=ov.querySelector("#g_err");
-      if(pw!==GATE_PASSWORD){ err.textContent="Kata laluan salah."; return; }
-      if(picked!=="Bariah" && picked!=="Firdaus"){ err.textContent="Sila pilih nama anda."; return; }
-      sessionStorage.setItem("cair_gate","ok");
-      localStorage.setItem("cair_user",picked);
-      CAIR_USER=picked;
-      ov.remove();
-      onPass();
-    }
-    ov.querySelector("#g_go").onclick=submit;
-    ov.querySelector("#g_pw").addEventListener("keydown",e=>{ if(e.key==="Enter") submit(); });
+    return ov;
+  }
+  function showStandaloneLogin(){
+    const ov=authOverlay(
+      '<div style="font-family:Georgia,serif;font-size:1.2rem;font-weight:700;margin-bottom:.3rem">Meja Keputusan CAIR</div>'+
+      '<div style="font-size:.78rem;color:#8C857C;margin-bottom:1.5rem;letter-spacing:.04em">AKSES TERHAD · PASUKAN DALAMAN</div>'+
+      '<button id="cairLogin" style="width:100%;padding:.75rem;border:1px solid #E4DECF;border-radius:8px;background:#fff;font-size:.95rem;font-weight:600;cursor:pointer">Log masuk dengan Google</button>');
+    ov.querySelector("#cairLogin").onclick=()=>sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.href}});
+  }
+  function showIframeLoginMsg(){
+    authOverlay('<div style="font-family:Georgia,serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem">Belum log masuk</div>'+
+      '<div style="font-size:.85rem;color:#5A5550;line-height:1.5">Sila log masuk di <b>Courseware Studio</b> untuk guna meja keputusan.</div>');
+  }
+  function showNoAccess(email){
+    const ov=authOverlay('<div style="font-family:Georgia,serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:#A6402E">Akaun tiada akses</div>'+
+      '<div style="font-size:.85rem;color:#5A5550;line-height:1.5">'+esc(email||"")+' tiada kebenaran untuk meja ini. Sila guna akaun pasukan.</div>'+
+      '<button id="cairLogout" style="margin-top:1.2rem;padding:.5rem 1rem;border:1px solid #E4DECF;border-radius:8px;background:#fff;cursor:pointer">Log keluar</button>');
+    const b=ov.querySelector("#cairLogout"); if(b) b.onclick=()=>sb.auth.signOut();
   }
 </script>
 <!-- ===== END SYNC LAYER ===== -->
@@ -414,6 +408,7 @@ function render(){
 function saveCard(i){
   const t=TOPIK[i];
   if(OPEN_COURSES.indexOf(t.kursus)<0){ console.warn("saveCard ditolak — kursus terkunci:", t.kursus); return; } // LOCK lapis-fungsi
+  if(!CAIR_USER){ console.warn("saveCard ditolak — tiada identiti sesi (akaun tiada akses)"); return; } // A2 guard identiti
   const d=readCard(i);
   decisions[i]=d;
   const warn=document.getElementById("warn-"+i);
@@ -446,12 +441,33 @@ function exportCSV(){
 document.getElementById("exportBtn").onclick=exportCSV;
 document.getElementById("clearBtn").onclick=()=>{ if(confirm("Kosongkan paparan keputusan K4? (DB tidak diubah)")){ for(const k in decisions) delete decisions[k]; render(); } };
 
-showGate(function(){
+// ===== A2 boot: baca sesi kongsi (window.SB), terbitkan CAIR_USER dari email =====
+let deskStarted=false;
+function startDesk(){
+  if(deskStarted) return; deskStarted=true;
+  clearAuthOverlay();
   render();
   loadFromSupabase();
   sb.channel("cair_live")
     .on("postgres_changes", { event:"*", schema:"public", table:"cair_decisions" }, ()=>loadFromSupabase())
     .subscribe();
+}
+function applySession(session){
+  if(session && session.user){
+    const email=(session.user.email||"").toLowerCase();
+    CAIR_USER = EMAIL_MAP[email] || null;
+    if(!CAIR_USER){ showNoAccess(session.user.email); return; }   // email luar senarai → BLOK
+    startDesk();
+  } else {
+    CAIR_USER=null;
+    if(inIframe()) showIframeLoginMsg(); else showStandaloneLogin();   // iframe: mesej sahaja, tiada OAuth
+  }
+}
+sb.auth.getSession().then(res=>applySession(res.data.session));
+sb.auth.onAuthStateChange((_e,session)=>{
+  if(session && session.user){ applySession(session); }
+  else if(deskStarted){ location.reload(); }   // logout selepas mula → reset bersih
+  else { applySession(null); }
 });
 
 </script>
