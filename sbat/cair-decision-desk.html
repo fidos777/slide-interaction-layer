@@ -329,7 +329,7 @@ function interakRow(i,idx,it){
   return `<div class="ix-row" data-ix="${idx}">
       <div class="ix-head"><select data-i="${i}" data-ixk="jenis" data-ix="${idx}">${opts}</select> ${tag}
         <button class="ix-del" data-i="${i}" data-ixdel="${idx}" title="Buang">✕</button></div>
-      <input type="text" data-i="${i}" data-ixk="rasional" data-ix="${idx}" placeholder="Rasional / rujukan sumber" value="${esc(it.rasional||"")}"></div>`;
+      <input type="text" data-i="${i}" data-ixk="rasional" data-ix="${idx}" placeholder="Rasional pilihan (pilihan)" value="${esc(it.rasional||"")}"></div>`;
 }
 // ===== Kanon watak K4 (RATIFIED PRD Bariah 03/07) — CADANGAN per-topik; Bariah boleh tolak/tukar =====
 function watakCadangan(t){
