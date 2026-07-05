@@ -140,6 +140,8 @@
 .warn-inline{color:#A6402E;font-size:.76rem;margin-left:.5rem}
 .cadangan-tag{font-weight:400;font-size:.68rem;color:#3F7A52;background:#EAF0E6;border-radius:100px;padding:.1rem .45rem}
 .cadangan-note{font-size:.72rem;color:var(--ink-faint,#8C857C);margin:.25rem 0 .2rem;font-style:italic}
+/* Dalam iframe (shell): sorok chrome gelap Courseware Studio — shell dah ada sendiri */
+body.in-iframe .cw-shell{display:none}
 </style>
 </head>
 <body>
@@ -398,6 +400,14 @@ function render(){
   document.getElementById("empty").style.display=list.length?"none":"block";
   wrap.innerHTML=list.map(cardHTML).join("");
   wrap.querySelectorAll('[data-k="intent"]').forEach(sel=>{ sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i)); render(); }; });
+  // Tukar jenis interaktiviti → rasional lama tak sah lagi: kosongkan + tanggal tag "cadangan sistem"
+  wrap.querySelectorAll('[data-ixk="jenis"]').forEach(sel=>{ sel.onchange=()=>{
+    const i=+sel.dataset.i, idx=+sel.dataset.ix;
+    const d=readCard(i);
+    if(d.interaktiviti && d.interaktiviti[idx]){ d.interaktiviti[idx].rasional=""; d.interaktiviti[idx].sumber="bariah"; }
+    decisions[i]=Object.assign(decisions[i]||{}, d);
+    render();
+  }; });
   wrap.querySelectorAll("[data-save]").forEach(b=>b.onclick=()=>saveCard(+b.dataset.save));
   wrap.querySelectorAll("[data-reset]").forEach(b=>b.onclick=()=>{ delete decisions[+b.dataset.reset]; render(); });
   wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:"Reflection",rasional:"",sumber:"bariah"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
@@ -442,6 +452,7 @@ document.getElementById("exportBtn").onclick=exportCSV;
 document.getElementById("clearBtn").onclick=()=>{ if(confirm("Kosongkan paparan keputusan K4? (DB tidak diubah)")){ for(const k in decisions) delete decisions[k]; render(); } };
 
 // ===== A2 boot: baca sesi kongsi (window.SB), terbitkan CAIR_USER dari email =====
+if(inIframe()) document.body.classList.add("in-iframe");   // sorok chrome gelap bila embed dalam shell
 let deskStarted=false;
 function startDesk(){
   if(deskStarted) return; deskStarted=true;
