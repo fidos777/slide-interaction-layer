@@ -325,7 +325,7 @@ function intentSelect(i,cur){
 function interakRow(i,idx,it){
   const opts=INTERAK_TYPES.map(t=>`<option value="${t}" ${it.jenis===t?"selected":""}>${esc(t)}</option>`).join("");
   const sys=(it.sumber||"cadangan-sistem")==="cadangan-sistem";
-  const tag=sys?'<span class="ix-src sys">cadangan sistem</span>':'<span class="ix-src bar">Bariah</span>';
+  const tag=sys?'<span class="ix-src sys">cadangan sistem</span>':'<span class="ix-src bar">Pilihan manusia</span>';
   return `<div class="ix-row" data-ix="${idx}">
       <div class="ix-head"><select data-i="${i}" data-ixk="jenis" data-ix="${idx}">${opts}</select> ${tag}
         <button class="ix-del" data-i="${i}" data-ixdel="${idx}" title="Buang">✕</button></div>
@@ -378,7 +378,7 @@ function readCard(i){
   d.interaktiviti=rows.map(r=>({
     jenis:r.querySelector('[data-ixk="jenis"]').value,
     rasional:r.querySelector('[data-ixk="rasional"]').value,
-    sumber: r.querySelector(".ix-src.sys")?"cadangan-sistem":"bariah"
+    sumber: r.querySelector(".ix-src.sys")?"cadangan-sistem":"manusia"
   })).filter(x=>x.jenis);
   Object.keys(d).forEach(k=>{ if(typeof d[k]==="string" && d[k].trim()==="") delete d[k]; });
   return d;
@@ -404,13 +404,13 @@ function render(){
   wrap.querySelectorAll('[data-ixk="jenis"]').forEach(sel=>{ sel.onchange=()=>{
     const i=+sel.dataset.i, idx=+sel.dataset.ix;
     const d=readCard(i);
-    if(d.interaktiviti && d.interaktiviti[idx]){ d.interaktiviti[idx].rasional=""; d.interaktiviti[idx].sumber="bariah"; }
+    if(d.interaktiviti && d.interaktiviti[idx]){ d.interaktiviti[idx].rasional=""; d.interaktiviti[idx].sumber="manusia"; }
     decisions[i]=Object.assign(decisions[i]||{}, d);
     render();
   }; });
   wrap.querySelectorAll("[data-save]").forEach(b=>b.onclick=()=>saveCard(+b.dataset.save));
   wrap.querySelectorAll("[data-reset]").forEach(b=>b.onclick=()=>{ delete decisions[+b.dataset.reset]; render(); });
-  wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:"Reflection",rasional:"",sumber:"bariah"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:"Reflection",rasional:"",sumber:"manusia"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
   wrap.querySelectorAll("[data-ixdel]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, idx=+b.dataset.ixdel; const d=readCard(i); if(d.interaktiviti) d.interaktiviti.splice(idx,1); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
   updateCounts();
 }
