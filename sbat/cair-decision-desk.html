@@ -254,7 +254,7 @@ window.K4_TOPIK = window.K4_DATA.topik;
       '<div style="font-family:Georgia,serif;font-size:1.2rem;font-weight:700;margin-bottom:.3rem">Meja Keputusan CAIR</div>'+
       '<div style="font-size:.78rem;color:#8C857C;margin-bottom:1.5rem;letter-spacing:.04em">AKSES TERHAD · PASUKAN DALAMAN</div>'+
       '<button id="cairLogin" style="width:100%;padding:.75rem;border:1px solid #E4DECF;border-radius:8px;background:#fff;font-size:.95rem;font-weight:600;cursor:pointer">Log masuk dengan Google</button>');
-    ov.querySelector("#cairLogin").onclick=()=>sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.href}});
+    ov.querySelector("#cairLogin").onclick=()=>sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname}}); // tanpa hash/query — elak double-hash
   }
   function showIframeLoginMsg(){
     authOverlay('<div style="font-family:Georgia,serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem">Belum log masuk</div>'+
@@ -457,6 +457,7 @@ let deskStarted=false;
 function startDesk(){
   if(deskStarted) return; deskStarted=true;
   clearAuthOverlay();
+  if(location.hash) history.replaceState(null,"", location.origin+location.pathname); // bersih sisa fragment (standalone)
   render();
   loadFromSupabase();
   sb.channel("cair_live")
@@ -475,10 +476,10 @@ function applySession(session){
   }
 }
 sb.auth.getSession().then(res=>applySession(res.data.session));
-sb.auth.onAuthStateChange((_e,session)=>{
-  if(session && session.user){ applySession(session); }
-  else if(deskStarted){ location.reload(); }   // logout selepas mula → reset bersih
-  else { applySession(null); }
+sb.auth.onAuthStateChange((event,session)=>{
+  // Reload/reset HANYA pada SIGNED_OUT. TOKEN_REFRESHED/SIGNED_IN/INITIAL_SESSION → repaint sahaja (startDesk berpagar deskStarted).
+  if(event==="SIGNED_OUT"){ if(deskStarted) location.reload(); else applySession(null); return; }
+  applySession(session);
 });
 
 </script>

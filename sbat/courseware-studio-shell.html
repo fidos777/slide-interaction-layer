@@ -235,6 +235,8 @@ renderTopikRangka("full-body","full");
   if(!window.SB){ console.error("window.SB tiada — supabase-client.js gagal muat"); return; }
   function paintAuth(session){
     if(session && session.user){
+      // Sesi sah — buang sisa fragment OAuth (#access_token…) supaya URL bersih & tak double-hash
+      if(location.hash) history.replaceState(null,"", location.origin+location.pathname);
       overlay.style.display="none";
       authInfo.innerHTML='<span>'+session.user.email+'</span>'+
         '<button id="logoutBtn" style="font-family:inherit;font-size:.66rem;padding:.2rem .55rem;border:1px solid var(--line);border-radius:100px;background:#fff;color:var(--ink-soft);cursor:pointer">Log keluar</button>';
@@ -246,7 +248,8 @@ renderTopikRangka("full-body","full");
     }
   }
   document.getElementById("googleLoginBtn").onclick=function(){
-    window.SB.auth.signInWithOAuth({ provider:"google", options:{ redirectTo: location.href } });
+    // redirectTo TANPA hash/query — location.href boleh bawa "#" sedia ada → double-hash (##access_token)
+    window.SB.auth.signInWithOAuth({ provider:"google", options:{ redirectTo: location.origin + location.pathname } });
   };
   window.SB.auth.getSession().then(function(res){ paintAuth(res.data.session); });
   window.SB.auth.onAuthStateChange(function(_e, session){ paintAuth(session); });
