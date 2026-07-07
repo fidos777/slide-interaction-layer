@@ -18,8 +18,8 @@ Header fail (sekali per fail output):
 
 ```json
 {
-  "taxonomy_version": "v0.3",
-  "taxonomy_md5": "f9deab7c07f57e7986d20ed19816661b",
+  "taxonomy_version": "v0.4",
+  "taxonomy_md5": "d6cf96061bbbfddde6829074930eea98",
   "source_file": "<nama fail sumber>",
   "source_md5": "<md5 sumber>"
 }

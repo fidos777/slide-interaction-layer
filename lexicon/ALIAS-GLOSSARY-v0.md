@@ -1,7 +1,7 @@
 # ALIAS-GLOSSARY-v0
 **Sasaran repo:** `slide-interaction-layer/lexicon/ALIAS-GLOSSARY-v0.md` · Status: **v0 draf**
 **Tujuan:** Senarai kanon alias kontrak/client yang DILULUSKAN, dipetakan ke nama kanon taxonomy. Alias membantu terjemahan sahaja — nama kanon kekal satu-satunya nilai `jenis_taxonomy`.
-**Pin taxonomy:** v0.3 · md5 `f9deab7c07f57e7986d20ed19816661b` *(working)* — **WAJIB re-pin selepas v0.3 muktamad jika md5 berubah.**
+**Pin taxonomy:** v0.4 · md5 `d6cf96061bbbfddde6829074930eea98` *(working)* — **WAJIB re-pin selepas v0.4 muktamad jika md5 berubah.**
 
 ## Jadual alias diluluskan
 

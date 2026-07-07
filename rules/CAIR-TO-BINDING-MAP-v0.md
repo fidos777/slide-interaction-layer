@@ -12,7 +12,7 @@
 | `variant_koordinat` | `grammar` + `proposed_binding` | Koordinat sahaja; koordinat tak dikenali = baris AMBIGUOUS |
 | `rasional` | `sb_context` | Verbatim |
 | `status` ("cadangan — Bariah putus…") | `notes` | Kekalkan — peringatan bahawa ini belum kehendak SME |
-| `taxonomy_version` + `taxonomy_md5` | metadata fail binding | **v0.3 · `f9deab7c07f57e7986d20ed19816661b`** — mesti sepadan salinan kanon; tak sepadan = JANGAN mula pass |
+| `taxonomy_version` + `taxonomy_md5` | metadata fail binding | **v0.4 · `d6cf96061bbbfddde6829074930eea98`** — mesti sepadan salinan kanon; tak sepadan = JANGAN mula pass |
 | `source_file` + `source_md5` | `prov_ref` | Wajib — provenance mesti resolve ke fail |
 | — | `provenance` | Sentiasa `confirmed-from-file` — terhadap **fail cadangan**, bukan terhadap kehendak Bariah |
 | — | `decided_by` | Sentiasa `AI-draft` |

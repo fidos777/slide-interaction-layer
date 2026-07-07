@@ -4,7 +4,7 @@
 | | |
 |---|---|
 | **Dokumen** | SMC-CIDB-TAXONOMY-INTERAKSI-001 |
-| **Versi** | 0.3 — draf untuk commit. v0.2→v0.3 (05/07, hasil pass K4 topic-level): +entry Scenario with Questions (jurang entry, pattern G6-proven tercicir), +registry μB tertutup, +paksi topology diserap dari template binding, +glosari vocabulary kontrak SnG |
+| **Versi** | 0.4 — draf untuk commit. v0.3→v0.4 (07/07): entry 3.5A Reflection, prasyarat P12. v0.2→v0.3 (05/07, hasil pass K4 topic-level): +entry Scenario with Questions (jurang entry, pattern G6-proven tercicir), +registry μB tertutup, +paksi topology diserap dari template binding, +glosari vocabulary kontrak SnG |
 | **Tarikh** | 5 Julai 2026 |
 | **Disediakan** | Firdaus Ismail — SME Cloud |
 | **Sasaran repo** | `slide-interaction-layer/taxonomy/interaction-patterns-v0.md` |
@@ -252,6 +252,21 @@ multiple-response" [PRD md5 0bc926fe — fail belum diterima]. MR dan TF =
 varian komposisi (+`multiple-response-select` / +`truefalse-select`, μB baru
 → mini-ADR bila PRD sampai), BUKAN P baru. Delta ini juga pembawa
 `cmi.interactions` (asas tracking `interaction-path`).
+
+---
+
+### 3.5A Reflection (kurus) — entry ditambah v0.4 (prasyarat kod P12)
+| | |
+|---|---|
+| **kelas** | P — komposisi minimum |
+| **status** | KANDIDAT-DIBINA — diluluskan untuk montaj K4 pertama sahaja (backlog v1 delta 1) |
+| **provenance** | [inferred — ADR-005 backlog P12 "kurus"; wargame 05/07 §1; BELUM disahkan Bariah — naik LOCKED hanya melalui kad/desk] |
+**composition:** `prompt-display` + `free-text-input (optional)`. TIADA gate (Next bebas), TIADA skor,
+TIADA lms_emit, TIADA persistence v1 (local state sahaja — Laluan A wargame).
+**topology:** flat-set · **tracking:** none.
+**Sempadan keras:** medan evaluation/rubric/evidence-chain = FORBIDDEN dalam JSON (produk Q4, bukan pattern ni).
+**Nota lexicon:** "Reflection" kekal TIADA-PADANAN untuk cadangan CAIR sedia ada SEHINGGA entry ini LOCKED —
+status glosari dikemaskini hanya selepas pengesahan Bariah.
 
 ---
 
