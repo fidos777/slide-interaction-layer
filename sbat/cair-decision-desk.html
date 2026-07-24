@@ -153,6 +153,27 @@ body.in-iframe .cw-shell{display:none}
 .dsum-code{font-family:var(--font-m);font-size:.7rem;color:var(--accent,#B5662E);border:1px solid #E8D2BC;border-radius:100px;padding:.02rem .4rem;margin-left:.25rem}
 .dsum-ix{margin:.1rem 0}
 .dsum-ix .ix-src{margin-left:.35rem}
+/* ---- Step 7A · watak kanon K4 (Badrul/Aina + gate watak tambahan) ---- */
+.legacy-flag{background:#F6E5E1;border:1px solid #E4B7AC;border-radius:8px;padding:.5rem .6rem;margin:.1rem 0 .6rem;font-size:.75rem;color:#7a2c1e;line-height:1.45}
+.legacy-mini{font-size:.6rem;letter-spacing:.06em;color:#A6402E;background:#F6E5E1;border-radius:100px;padding:.05rem .4rem;margin-left:.35rem}
+.legacy-ack{background:#F6EFDD;border:1px solid #E8DEC4;border-radius:8px;padding:.5rem .6rem;margin:0 0 .6rem;font-weight:600;color:#7a5b17;font-size:.78rem}
+.canon-cast{border:1px solid var(--line,#E4DECF);border-radius:8px;padding:.55rem .6rem;background:#FCFAF5;margin-bottom:.6rem}
+.canon-row{display:flex;align-items:center;gap:.4rem;margin-bottom:.1rem}
+.canon-name{font-weight:700;font-size:.86rem}
+.canon-tag{font-size:.64rem;padding:.12rem .45rem;border-radius:100px}
+.canon-tag.mentor{background:#EAF0E6;color:#3F7A52}
+.chk{display:flex;align-items:flex-start;gap:.45rem;font-size:.8rem;color:var(--ink-soft,#5A5550);margin-top:.55rem;line-height:1.35;cursor:pointer}
+.chk input{width:auto;margin-top:.15rem}
+.xchar-wrap{margin-top:.3rem}
+.xchar-h{font-family:var(--font-m);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint,#8C857C);margin-bottom:.35rem}
+.xchar-row{border:1px dashed var(--line,#E4DECF);border-radius:8px;padding:.5rem;margin-bottom:.5rem;background:#fff;display:flex;flex-direction:column;gap:.35rem}
+.xchar-top{display:flex;gap:.4rem;align-items:center}
+.xchar-top input{flex:1}
+.xchar-add{font-size:.76rem;padding:.35rem .6rem}
+.xchar-feed{margin-top:.45rem;font-size:.75rem;line-height:1.5;border-radius:8px;padding:.5rem .6rem}
+.xchar-feed.bad{background:#F6E5E1;border:1px solid #E4B7AC;color:#7a2c1e}
+.xchar-feed.warn{background:#F6EFDD;border:1px solid #E8DEC4;color:#7a5b17}
+.xchar-feed.ok{background:#E6F0E6;border:1px solid #BFD9C2;color:#1f4d2e}
 </style>
 </head>
 <body>
@@ -204,7 +225,7 @@ body.in-iframe .cw-shell{display:none}
     <div class="body">
       Setiap kad = <b>satu topik K4</b>, disusun enam soalan berturutan: ① Cara mengajar (pola pedagogi) · ② Watak · ③ Scenario hook · ④ Reflection · ⑤ Interaktiviti (min 2 — cadangan sistem pra-isi, anda putus / tukar / tambah) · ⑥ Rujukan sumber. Panel <b>Ringkasan keputusan</b> di bawah setiap kad papar keputusan semasa untuk semak sebelum Simpan.
       Kad "siap" bila cara mengajar + reflection + ≥2 interaktiviti diisi. Tekan <b>Simpan</b> → segerak ke Supabase (satu topik = satu baris).
-      <br><br><b>Watak K4 belum diratifikasi</b> — medan watak taip sendiri, tiada cadangan. <b>K2 / K3 / K5 dikunci</b> sehingga drill sumber per-kursus siap.
+      <br><br><b>Watak K4 (kanon):</b> Badrul = mentor kanon · Aina = subordinat / junior (bukan mentor utama) · peranan Badrul sebagai Orang Kompeten = NEEDS_CONFIRMATION. Watak tambahan mesti lulus semakan redundansi (fungsi tersendiri). Nilai watak lama dipapar <b>LEGACY_CHARACTER_REVIEW_REQUIRED</b> sehingga diputus semula — tidak ditulis semula automatik. <b>K2 / K3 / K5 dikunci</b> sehingga drill sumber per-kursus siap.
     </div>
   </details>
 
@@ -342,13 +363,124 @@ function interakRow(i,idx,it){
         <button class="ix-del" data-i="${i}" data-ixdel="${idx}" title="Buang">✕</button></div>
       <input type="text" data-i="${i}" data-ixk="rasional" data-ix="${idx}" placeholder="Rasional pilihan (pilihan)" value="${esc(it.rasional||"")}"></div>`;
 }
-// ===== Kanon watak K4 (RATIFIED PRD Bariah 03/07) — CADANGAN per-topik; Bariah boleh tolak/tukar =====
-function watakCadangan(t){
-  // Peraturan PRD: PL01 T1/T2 = narasi Maya sahaja (tiada watak scene). Selainnya cadang kanon Amir + Encik Zul.
-  if(t.pl==="PL01" && (t.topik==="T1"||t.topik==="T2")){
-    return { value:"Maya (narasi sahaja)", note:"Peraturan PRD: tiada watak scene untuk topik ini — cadangan, boleh tolak" };
-  }
-  return { value:"Amir + Encik Zul", note:"Kanon K4 (PRD Bariah) · sekunder jika perlu: Encik Danial (komersial/tender), Puan Sarah (HR/safety)" };
+// ===== Kanon watak K4 (LOCKED · Step 7A · schema k4-character-rules-1) =====
+// Badrul = mentor kanon. Aina = subordinat / junior (BUKAN mentor utama).
+// Badrul sebagai Orang Kompeten = NEEDS_CONFIRMATION. Tiada lagi cadangan Amir/Encik Zul/
+// Encik Danial, dan tiada lagi peraturan "Maya" sebagai kanon watak K4.
+const K4_SCHEMA = "k4-character-rules-1";
+const K4_CANON_MENTOR = "Badrul";
+const K4_CANON_SUB = "Aina";
+const BADRUL_ROLES = ["Mentor","Mentor + Orang Kompeten","NEEDS_CONFIRMATION"];
+const REDUNDANCY_STATUSES = ["NO_OVERLAP","POSSIBLE_OVERLAP","DUPLICATES_EXISTING_ROLE","APPROVED_EXCEPTION"];
+
+function xchars(d){ return Array.isArray(d && d.extra_chars) ? d.extra_chars : []; }
+// Rekod pra-schema dengan watak bebas lama (Amir/Encik Zul/Encik Danial/Maya, dll) —
+// muat apa adanya, tandai untuk semakan, JANGAN tulis semula automatik.
+function isLegacyChar(d){
+  if(!d) return false;
+  if(d.schema_version===K4_SCHEMA) return false;
+  return String(d.watak||"").trim()!=="";
+}
+// Rekod legacy mesti diakui secara eksplisit sebelum migrasi — tiada auto-migrasi
+// walaupun medan lain diedit. legacy_ack ialah flag UI transien (tidak disimpan).
+function legacyNeedsAck(d){ return isLegacyChar(d) && !(d && d.legacy_ack); }
+// Teks paparan (plain) untuk ringkasan / CSV.
+function watakPlain(d){
+  if(isLegacyChar(d)) return String(d.watak||"");
+  const parts=[K4_CANON_MENTOR+" (mentor kanon)"];
+  if(d && d.aina_included) parts.push(K4_CANON_SUB+" (subordinat)");
+  const role=(d && d.badrul_role)||"NEEDS_CONFIRMATION";
+  let s=parts.join(" + ")+" · Badrul: "+role;
+  const ex=xchars(d).filter(c=>String(c.character_name||"").trim());
+  if(ex.length) s+=" · +"+ex.length+" watak tambahan";
+  return s;
+}
+// Gate watak tambahan → {level:"PASS"|"WARN"|"BLOCK", msgs:[]}
+function validateK4Chars(d){
+  const out={level:"PASS",msgs:[]};
+  const bump=l=>{ if(l==="BLOCK"||out.level==="BLOCK") out.level="BLOCK"; else if(l==="WARN") out.level="WARN"; };
+  xchars(d).forEach((c,idx)=>{
+    const name=String(c.character_name||"").trim();
+    const role=String(c.character_role||"").trim();
+    const fn=String(c.distinct_function||"").trim();
+    const why=String(c.why_badrul_or_aina_cannot||"").trim();
+    const red=String(c.redundancy_status||"").trim();
+    const exc=String(c.exception_rationale||"").trim();
+    if(!(name||role||fn||why||red||exc)) return;                 // baris kosong — abai
+    const label=name||("watak tambahan #"+(idx+1));
+    if(name.toLowerCase()===K4_CANON_MENTOR.toLowerCase() || name.toLowerCase()===K4_CANON_SUB.toLowerCase()){
+      out.msgs.push("✗ "+label+": nama kanon (Badrul/Aina) tak boleh didaftar sebagai watak tambahan."); bump("BLOCK"); return;
+    }
+    if(/mentor/i.test(role) && red!=="APPROVED_EXCEPTION"){       // termasuk cubaan jadikan sesiapa mentor utama
+      out.msgs.push("✗ "+label+": peranan mentor menduplikasi Badrul (mentor kanon) — perlu APPROVED_EXCEPTION + rasional."); bump("BLOCK"); return;
+    }
+    if(!fn){ out.msgs.push("✗ "+label+": distinct_function wajib."); bump("BLOCK"); return; }
+    if(!red){ out.msgs.push("✗ "+label+": redundancy_status wajib."); bump("BLOCK"); return; }
+    if(REDUNDANCY_STATUSES.indexOf(red)<0){ out.msgs.push("✗ "+label+": redundancy_status tak sah."); bump("BLOCK"); return; }
+    if(!why){ out.msgs.push("✗ "+label+": nyatakan kenapa Badrul/Aina tak boleh laksana fungsi ini (rasional redundansi)."); bump("BLOCK"); return; }
+    if(red==="DUPLICATES_EXISTING_ROLE"){
+      out.msgs.push("✗ "+label+": DUPLICATES_EXISTING_ROLE — tukar ke APPROVED_EXCEPTION + exception_rationale untuk benarkan."); bump("BLOCK"); return;
+    }
+    if(red==="APPROVED_EXCEPTION"){
+      if(!exc){ out.msgs.push("✗ "+label+": APPROVED_EXCEPTION perlu exception_rationale."); bump("BLOCK"); return; }
+      return;                                                     // PASS (pengecualian direkod)
+    }
+    if(red==="POSSIBLE_OVERLAP"){
+      out.msgs.push("⚠ "+label+": kemungkinan bertindih dengan peranan sedia ada — semak sebelum guna."); bump("WARN"); return;
+    }
+    // NO_OVERLAP → PASS
+  });
+  return out;
+}
+// ===== Render helpers watak (② Watak) =====
+function xcharRow(i,idx,c){
+  const redOpts=['<option value="">— status redundansi —</option>']
+    .concat(REDUNDANCY_STATUSES.map(s=>`<option value="${s}" ${c.redundancy_status===s?"selected":""}>${s}</option>`)).join("");
+  return `<div class="xchar-row" data-x="${idx}">
+      <div class="xchar-top"><input type="text" data-xk="character_name" data-i="${i}" data-x="${idx}" placeholder="Nama watak" value="${esc(c.character_name||"")}">
+        <button class="ix-del" data-i="${i}" data-xdel="${idx}" title="Buang">✕</button></div>
+      <input type="text" data-xk="character_role" data-i="${i}" data-x="${idx}" placeholder="Peranan watak" value="${esc(c.character_role||"")}">
+      <input type="text" data-xk="distinct_function" data-i="${i}" data-x="${idx}" placeholder="Fungsi tersendiri (distinct_function) — wajib" value="${esc(c.distinct_function||"")}">
+      <input type="text" data-xk="why" data-i="${i}" data-x="${idx}" placeholder="Kenapa Badrul/Aina tak boleh buat ini — wajib" value="${esc(c.why_badrul_or_aina_cannot||"")}">
+      <select data-xk="redundancy_status" data-i="${i}" data-x="${idx}">${redOpts}</select>
+      <input type="text" data-xk="exception_rationale" data-i="${i}" data-x="${idx}" placeholder="Rasional pengecualian (wajib jika APPROVED_EXCEPTION)" value="${esc(c.exception_rationale||"")}"></div>`;
+}
+function watakSectionHTML(t,d){
+  const legacy=isLegacyChar(d);
+  const role=(d&&d.badrul_role)||"NEEDS_CONFIRMATION";
+  const roleOpts=BADRUL_ROLES.map(r=>`<option value="${esc(r)}" ${role===r?"selected":""}>${esc(r)}</option>`).join("");
+  const aina=!!(d&&d.aina_included);
+  const legacyBanner=legacy
+    ? `<div class="legacy-flag"><b>LEGACY_CHARACTER_REVIEW_REQUIRED</b> — nilai lama: “${esc(d.watak)}”. Dimuat apa adanya; tidak ditulis semula sehingga anda putus semula & Simpan.</div>`
+    : "";
+  const legacyAck=legacy
+    ? `<label class="chk legacy-ack"><input type="checkbox" data-i="${t.i}" data-chk="legacy_ack" ${(d&&d.legacy_ack)?"checked":""}> Saya telah menyemak dan mengesahkan pemetaan watak baharu.</label>`
+    : "";
+  const xlist=xchars(d).map((c,idx)=>xcharRow(t.i,idx,c)).join("");
+  const vc=validateK4Chars(d);
+  const vfeed=vc.msgs.length
+    ? `<div class="xchar-feed ${vc.level==='BLOCK'?'bad':(vc.level==='WARN'?'warn':'ok')}">${vc.msgs.map(esc).join("<br>")}</div>`
+    : "";
+  return `<div class="sec"><div class="sec-h">② Watak <span class="sec-note">kanon K4 — Badrul mentor · Aina subordinat</span></div>
+      ${legacyBanner}
+      ${legacyAck}
+      <div class="canon-cast">
+        <div class="canon-row"><span class="canon-name">Badrul</span><span class="canon-tag mentor">mentor kanon</span></div>
+        <label class="fld">Peranan Badrul</label>
+        <select data-i="${t.i}" data-k="badrul_role">${roleOpts}</select>
+        <label class="chk"><input type="checkbox" data-i="${t.i}" data-chk="aina_included" ${aina?"checked":""}> Sertakan <b>Aina</b> (subordinat / junior — bukan mentor utama)</label>
+      </div>
+      <div class="xchar-wrap">
+        <div class="xchar-h">Watak tambahan <span class="sec-note">gate redundansi — mesti ada fungsi tersendiri</span></div>
+        <div class="xchar-list" id="xlist-${t.i}">${xlist}</div>
+        <button class="btn ghost xchar-add" data-xadd="${t.i}">+ Tambah watak lain</button>
+        ${vfeed}
+      </div></div>`;
+}
+function watakSummaryHTML(d){
+  if(isLegacyChar(d)) return esc(d.watak)+' <span class="legacy-mini">LEGACY_REVIEW</span>';
+  const plain=watakPlain(d);
+  return plain?esc(plain):"";
 }
 // ===== Ringkasan keputusan — render TERUS dari objek choice yang sama ke saveCard (tiada state kedua) =====
 function sumRow(label, valHtml, empty){
@@ -371,7 +503,7 @@ function summaryHTML(d){
     : "";
   // Urutan ①–⑥ ikut urutan medan sebenar dalam borang (kod), bukan disusun semula.
   return sumRow("① Cara mengajar", intent, "belum diputuskan")
-       + sumRow("② Watak", d.watak && d.watak.trim()?esc(d.watak):"", "belum diputuskan")
+       + sumRow("② Watak", watakSummaryHTML(d), "belum diputuskan")
        + sumRow("③ Scenario hook", d.scenario_hook && d.scenario_hook.trim()?esc(d.scenario_hook):"", "belum diputuskan")
        + sumRow("④ Reflection", d.reflection && d.reflection.trim()?esc(d.reflection):"", "belum diputuskan")
        + sumRow("⑤ Interaktiviti", ixHtml, "belum diputuskan")
@@ -384,16 +516,12 @@ function cardHTML(t){
   if(ix.length===0) ix=t.cadangan.map(c=>({jenis:c.jenis,rasional:c.rasional,sumber:"cadangan-sistem"}));
   const reason=(d.intent&&INTENT_MAP[d.intent])?`<div class="intent-suggest">${esc(INTENT_MAP[d.intent].reason)}</div>`:"";
   const ph=(d.intent&&INTENT_MAP[d.intent])?INTENT_MAP[d.intent].ph:"babak pembuka ringkas…";
-  const cad=watakCadangan(t);
   return `<div class="card ${done?'done':''}" id="card-${t.i}">
     <div class="meta"><span class="badge b-loc">K4 · ${t.pl} · ${t.topik}</span><span class="badge b-type">TOPIK</span></div>
     <div class="ask">${esc(t.tajuk)}</div>
     <div class="sec"><div class="sec-h">① Cara mengajar (pola pedagogi)</div>
       <label class="fld">Cara Mengajar</label>${intentSelect(t.i,d.intent)}${reason}</div>
-    <div class="sec"><div class="sec-h">② Watak</div>
-      <label class="fld">Watak <span class="cadangan-tag">[cadangan — PRD Bariah]</span></label>
-      <input type="text" data-i="${t.i}" data-k="watak" placeholder="${esc(cad.value)}" value="${esc(d.watak || cad.value)}">
-      <div class="cadangan-note">${esc(cad.note)}</div></div>
+    ${watakSectionHTML(t,d)}
     <div class="sec"><div class="sec-h">③ Scenario hook</div>
       <label class="fld">Jalan cerita / hook pembuka</label>
       <textarea data-i="${t.i}" data-k="scenario_hook" placeholder="cth: ${esc(ph)}">${esc(d.scenario_hook||"")}</textarea></div>
@@ -412,10 +540,25 @@ function cardHTML(t){
       <span class="saved-tick" id="tick-${t.i}">✓ disimpan</span>
       <span class="warn-inline" id="warn-${t.i}"></span></div></div>`;
 }
-function readCard(i){
+function readCard(i, keepEmptyX){
   const card=document.getElementById("card-"+i);
   const d=Object.assign({}, decisions[i]||{});
   card.querySelectorAll("[data-k]").forEach(el=>{ d[el.dataset.k]=el.value; });
+  // ② Watak (Step 7A): checkbox (aina_included + legacy_ack). (watak lama TIDAK diambil semula → legacy kekal)
+  card.querySelectorAll("[data-chk]").forEach(el=>{ d[el.dataset.chk]=!!el.checked; });
+  const xrows=[...card.querySelectorAll(".xchar-row")];
+  if(xrows.length || Array.isArray(d.extra_chars)){
+    let ex=xrows.map(r=>({
+      character_name:(r.querySelector('[data-xk="character_name"]')||{}).value||"",
+      character_role:(r.querySelector('[data-xk="character_role"]')||{}).value||"",
+      distinct_function:(r.querySelector('[data-xk="distinct_function"]')||{}).value||"",
+      why_badrul_or_aina_cannot:(r.querySelector('[data-xk="why"]')||{}).value||"",
+      redundancy_status:(r.querySelector('[data-xk="redundancy_status"]')||{}).value||"",
+      exception_rationale:(r.querySelector('[data-xk="exception_rationale"]')||{}).value||""
+    }));
+    if(!keepEmptyX) ex=ex.filter(c=>Object.values(c).some(v=>String(v).trim()!==""));
+    d.extra_chars=ex;
+  }
   const rows=[...card.querySelectorAll(".ix-row")];
   d.interaktiviti=rows.map(r=>({
     jenis:r.querySelector('[data-ixk="jenis"]').value,
@@ -454,6 +597,12 @@ function render(){
   wrap.querySelectorAll("[data-reset]").forEach(b=>b.onclick=()=>{ delete decisions[+b.dataset.reset]; render(); });
   wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:"Reflection",rasional:"",sumber:"manusia"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
   wrap.querySelectorAll("[data-ixdel]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, idx=+b.dataset.ixdel; const d=readCard(i); if(d.interaktiviti) d.interaktiviti.splice(idx,1); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  // ② Watak: watak tambahan + canon controls (keepEmptyX supaya baris kosong tak hilang semasa edit)
+  wrap.querySelectorAll("[data-xadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.xadd; const d=readCard(i,true); (d.extra_chars=d.extra_chars||[]).push({character_name:"",character_role:"",distinct_function:"",why_badrul_or_aina_cannot:"",redundancy_status:"",exception_rationale:""}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  wrap.querySelectorAll("[data-xdel]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, idx=+b.dataset.xdel; const d=readCard(i,true); if(d.extra_chars) d.extra_chars.splice(idx,1); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  wrap.querySelectorAll('[data-chk]').forEach(el=>el.onchange=()=>{ const i=+el.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
+  wrap.querySelectorAll('[data-k="badrul_role"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
+  wrap.querySelectorAll('[data-xk="redundancy_status"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
   // Panel ringkasan: refresh langsung dari readCard (objek payload sama ke saveCard) — bukan state kedua
   list.forEach(t=>{ const card=document.getElementById("card-"+t.i); const sum=document.getElementById("dsum-"+t.i);
     if(card && sum) card.addEventListener("input", ()=>{ sum.innerHTML='<div class="dsum-h">Ringkasan keputusan — semak sebelum simpan</div>'+summaryHTML(readCard(t.i)); }); });
@@ -467,8 +616,20 @@ function saveCard(i){
   const d=readCard(i);
   decisions[i]=d;
   const warn=document.getElementById("warn-"+i);
+  // Step 7A: rekod legacy mesti diakui eksplisit dulu — tiada auto-migrasi walau hanya medan lain diedit.
+  if(legacyNeedsAck(d)){ if(warn) warn.innerHTML="⚠ Watak — tanda “Saya telah menyemak dan mengesahkan pemetaan watak baharu.” sebelum simpan rekod legacy."; updateCounts(); return; }
+  // Gate watak tambahan — BLOCK simpan jika tak sah / duplikasi tanpa pengecualian diluluskan.
+  const vc=validateK4Chars(d);
+  if(vc.level==="BLOCK"){ if(warn) warn.innerHTML="⚠ Watak — "+esc(vc.msgs.join(" · ")); updateCounts(); return; }
   if(!isComplete(d)){ if(warn) warn.innerHTML="⚠ Belum lengkap — perlu pola pedagogi + refleksi + ≥2 interaktiviti."; updateCounts(); return; }
-  if(warn) warn.innerHTML="";
+  if(warn) warn.innerHTML = vc.level==="WARN" ? ("⚠ Amaran watak — "+esc(vc.msgs.join(" · "))) : "";
+  // Commit watak dianjur manusia. Rekod legacy: simpan nilai asal + tandai migrasi disahkan.
+  const wasLegacy = d.schema_version!==K4_SCHEMA && String(d.watak||"").trim()!=="";
+  if(wasLegacy){ d.legacy_character_raw=d.watak; d.legacy_character_migration_confirmed=true; }
+  delete d.legacy_ack;                               // flag UI transien — jangan simpan ke payload
+  d.schema_version=K4_SCHEMA;
+  d.watak=watakPlain(d);
+  decisions[i]=d;
   sb.from("cair_decisions").upsert({
     course_code:"K4", pl:t.pl, topik:t.topik, slide_ref:null,
     decision_type:"topik-card", choice:JSON.stringify(d),
