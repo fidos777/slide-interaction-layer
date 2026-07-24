@@ -471,20 +471,21 @@
       "provenans": "BEKU",
       "bentuk_source": {
         "jadual_literal": 0,
-        "rajah": 0,
-        "sub_bahagian": 18,
-        "panjang_aksara": 2463
+        "rajah": 1,
+        "sub_bahagian": null,
+        "panjang_aksara": null
       },
+      "metric_status": "CORRECTED 2026-07-25 (separuh): drill PL05 T4 terdahulu disalin bulat-bulat daripada PL02 T6 (bentuk_source lama identik 0/0/18/2463). Sumber canonical (md5 8144d53e4c5bb7a58cf7edbff49ff830) sahkan PL05 T4 ialah topik BERBEZA — 3 kes kajian aplikasi yang lebih panjang dengan 1 rajah (Rajah 77, blok 1920). DISAHKAN dari canonical: jadual_literal=0, rajah=1. sub_bahagian & panjang_aksara = PENDING_RECOMPUTE: nilai lama (18/2463) ialah artifak salinan PL02 T6, sengaja DIBUANG dan BUKAN diganti dengan nombor kaedah-berbeza — menunggu re-drill semua 20 topik guna satu kaedah boleh-ulang.",
       "interaktiviti_cadangan": [
         {
-          "jenis": "Click-and-Show",
-          "rasional": "Senarai/sub-bahagian jelas (18) — sesuai kad ringkas",
-          "status": "cadangan — Bariah putus/tolak/tambah"
+          "jenis": "Scenario with Questions",
+          "rasional": "Kajian kes aplikasi 3 senario keputusan (Pilihan A/B/C, LD/EOT/CIPAA 2012) — sesuai uji pemindahan pengetahuan, bukan hafalan",
+          "status": "SYSTEM_SUGGESTION_REVIEW_REQUIRED — bukan keputusan Bariah; arah cadangan berasas kandungan canonical, tunggu semakan"
         },
         {
-          "jenis": "Reflection",
-          "rasional": "Semakan kefahaman terus selepas kad — topik sederhana tak perlukan scenario penuh",
-          "status": "cadangan — Bariah putus/tolak/tambah"
+          "jenis": "Click-and-Show",
+          "rasional": "Langkah tindakan/penyelesaian setiap kes sebagai kad rujukan pantas selepas scenario",
+          "status": "SYSTEM_SUGGESTION_REVIEW_REQUIRED — bukan keputusan Bariah; arah cadangan berasas kandungan canonical, tunggu semakan"
         }
       ]
     }
