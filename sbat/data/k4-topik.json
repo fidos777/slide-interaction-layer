@@ -1,7 +1,9 @@
 {
   "kursus": "K4 — Kerja-Kerja Lif, Eskalator dan Laluan Gerak",
-  "source_md5": "f8a58d5ffe172be66102a0b99df23c5b",
-  "source_file": "K4__PROOFREAD_FINAL__SKP_2025_LIF__ESKALATOR___LALUAN_GERAK_300426.docx",
+  "source_md5": "8144d53e4c5bb7a58cf7edbff49ff830",
+  "source_file": "K4 [PROOFREAD FINAL] SKP 2025 LIF, ESKALATOR & LALUAN GERAK 300426.docx",
+  "extraction_date": "2026-07-25",
+  "source_verification": "Re-pin MD5 canonical 2026-07-25 (f8a58d… → 8144d53e4c5bb7a58cf7edbff49ff830). Kandungan disahkan struktur identik dengan drill terdahulu: kiraan rajah sepadan 19/20 topik (metrik boleh-ulang), inventori 20 SUB MODUL (TABLE_5) utuh, taburan PL01=5/PL02=6/PL03=2/PL04=3/PL05=4 kekal. Drift MD5 = artifak simpan-semula Word, bukan suntingan kandungan; sumber drill lama (f8a58d) tidak wujud lagi — semua salinan cakera ialah canonical. 'Heading1' ke-21 = 'Koordinasi Pihak Berkepentingan' (orphan di hujung PL04, bukan SUB MODUL). Metrik panjang_aksara & sub_bahagian TIDAK diubah — algoritma drill asal tak boleh diulang tepat; perbezaan ialah noise kaedah, bukan drift. ISU TERBUKA (patch berasingan): PL05 T4 'Kajian Kes' bentuk_source diduplikasi daripada PL02 T6.",
   "hierarki": "Kursus > PL > Topik (baris SUB MODUL)",
   "nota_penting": "K4 TIADA Jadual perbandingan literal dalam mana-mana topik (jadual_literal=0 semua 20 topik) — disahkan grep sesi ini, bukan sesi lalu. Pairing = 0 untuk seluruh K4. Cadangan interaktiviti guna kriteria bentuk kandungan (rajah/visual, kepadatan sub-bahagian, panjang teks) — SISTEM CADANG SAHAJA, Bariah boleh tolak/tukar/tambah setiap satu.",
   "jumlah_topik": 20,
