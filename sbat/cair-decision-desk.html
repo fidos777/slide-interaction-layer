@@ -311,7 +311,7 @@ const INTENT_MAP = {
   "I6": { group:"VERIFY", name:"Inspection — cari kesilapan",  csv:"I6 Inspection",  reason:"Sesuai untuk audit, QA/QC, safety, compliance.", ph:"Jumpa satu kesilapan semasa pemeriksaan…", suggest:[] },
   "I7": { group:"VERIFY", name:"Assess — semak kefahaman",     csv:"I7 Assess",      reason:"Sesuai untuk kuiz, latihan, sahkan faham.", ph:"Mari kita semak apa yang anda dah faham…", suggest:[] }
 };
-const INTERAK_TYPES = ["Scenario with Questions","Click-and-Show","Drag-and-Drop","Reflection"];
+const INTERAK_TYPES = ["Scenario with Questions","Click-and-Show","Drag-and-Drop"];   // Step 7B.1: Reflection dikeluarkan — kini elemen pedagogi (④), bukan interaktiviti
 const OPEN_COURSES = ["K4"]; // hanya K4 terbuka; K2/K3/K5 dikunci
 
 // ===== Model: kad topik K4 =====
@@ -324,12 +324,30 @@ let activePL = PLS[0];
 
 function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function interakList(d){ return Array.isArray(d && d.interaktiviti) ? d.interaktiviti : []; }
+// ===== Reflection ≠ Interaktiviti (LOCKED · Step 7B.1 · schema k4-interaction-reflection-separation-1) =====
+// Reflection kini bahagian keputusan tersendiri (④) — tak boleh dipilih/dikira sebagai interaktiviti untuk
+// rekod baharu/migrasi. Rekod legacy belum-disemak kekal tingkah laku lama sehingga manusia simpan semula.
+const INTERACTION_SCHEMA = "k4-interaction-reflection-separation-1";
+function isReflectionJenis(j){ return String(j||"").trim().toLowerCase()==="reflection"; }   // EXACT normalize sahaja
+function hasLegacyReflectionInteraction(d){ return interakList(d).some(x=>x && isReflectionJenis(x.jenis)); }
+// Rekod legacy belum-migrasi: ada interaksi Reflection DAN tiada penanda interaksi (stabil semasa edit).
+function interactionUnmigrated(d){
+  if(!d) return false;
+  if(d.interaction_schema_version===INTERACTION_SCHEMA) return false;
+  return hasLegacyReflectionInteraction(d);
+}
+// Kelengkapan interaktiviti: legacy belum-migrasi → kira semua (termasuk Reflection) untuk keserasian 4/20;
+// baharu/migrasi → hanya interaksi BUKAN-Reflection dikira.
+function interactionComplete(d){
+  const ix=interakList(d).filter(x=>x && (x.jenis||"").trim());
+  if(interactionUnmigrated(d)) return ix.length>=2;
+  return ix.filter(x=>!isReflectionJenis(x.jenis)).length>=2;
+}
 function isComplete(d){
   if(!d) return false;
   const okIntent=!!(d.intent||"").trim();
   const okRefl=reflectionComplete(d);           // Step 7B: struktur sah / legacy dikekalkan
-  const ix=interakList(d).filter(x=>x && (x.jenis||"").trim());
-  return okIntent && okRefl && ix.length>=2;
+  return okIntent && okRefl && interactionComplete(d);   // Step 7B.1: Reflection tak dikira (kecuali legacy belum-migrasi)
 }
 
 // ===== Supabase: baca (kunci course_code|pl|topik) =====
@@ -355,11 +373,19 @@ function intentSelect(i,cur){
   return `<select data-i="${i}" data-k="intent"><option value="">— pilih cara ajar —</option>${opts}</select>`;
 }
 function interakRow(i,idx,it){
-  const opts=INTERAK_TYPES.map(t=>`<option value="${t}" ${it.jenis===t?"selected":""}>${esc(t)}</option>`).join("");
+  const cur=it.jenis||"";
+  let opts=INTERAK_TYPES.map(t=>`<option value="${esc(t)}" ${cur===t?"selected":""}>${esc(t)}</option>`).join("");
+  const legacyRefl=isReflectionJenis(cur);
+  // Nilai tersimpan yang tak lagi boleh dipilih (legacy Reflection / nilai lain) → kekalkan sebagai option terpilih
+  // supaya select TIDAK menukar nilai secara senyap. Manusia mesti buang/ganti.
+  if(cur && INTERAK_TYPES.indexOf(cur)<0){
+    opts=`<option value="${esc(cur)}" selected>${esc(cur)}${legacyRefl?" — legacy, buang/ganti":" — nilai lama"}</option>`+opts;
+  }
   const sys=(it.sumber||"cadangan-sistem")==="cadangan-sistem";
   const tag=sys?'<span class="ix-src sys">cadangan sistem</span>':'<span class="ix-src bar">Pilihan manusia</span>';
+  const reflTag=legacyRefl?' <span class="legacy-mini">Reflection ≠ interaktiviti</span>':'';
   return `<div class="ix-row" data-ix="${idx}">
-      <div class="ix-head"><select data-i="${i}" data-ixk="jenis" data-ix="${idx}">${opts}</select> ${tag}
+      <div class="ix-head"><select data-i="${i}" data-ixk="jenis" data-ix="${idx}">${opts}</select> ${tag}${reflTag}
         <button class="ix-del" data-i="${i}" data-ixdel="${idx}" title="Buang">✕</button></div>
       <input type="text" data-i="${i}" data-ixk="rasional" data-ix="${idx}" placeholder="Rasional pilihan (pilihan)" value="${esc(it.rasional||"")}"></div>`;
 }
@@ -682,7 +708,8 @@ function summaryHTML(d){
     ? ix.map(x=>{
         const sys=(x.sumber||"cadangan-sistem")==="cadangan-sistem";
         const tag=sys?'<span class="ix-src sys">Cadangan sistem</span>':'<span class="ix-src bar">Pilihan manusia</span>';
-        return `<div class="dsum-ix">${esc(x.jenis)}${tag}</div>`;
+        const refl=isReflectionJenis(x.jenis)?' <span class="legacy-mini">LEGACY — buang/ganti</span>':'';
+        return `<div class="dsum-ix">${esc(x.jenis)}${tag}${refl}</div>`;
       }).join("")
     : "";
   // Urutan ①–⑥ ikut urutan medan sebenar dalam borang (kod), bukan disusun semula.
@@ -698,7 +725,7 @@ function cardHTML(t){
   const d=decisions[t.i]||{};
   const done=isComplete(d);
   let ix=interakList(d);
-  if(ix.length===0) ix=t.cadangan.map(c=>({jenis:c.jenis,rasional:c.rasional,sumber:"cadangan-sistem"}));
+  if(ix.length===0) ix=t.cadangan.filter(c=>!isReflectionJenis(c.jenis)).map(c=>({jenis:c.jenis,rasional:c.rasional,sumber:"cadangan-sistem"}));   // Step 7B.1: jangan pra-isi Reflection sebagai interaktiviti
   const reason=(d.intent&&INTENT_MAP[d.intent])?`<div class="intent-suggest">${esc(INTENT_MAP[d.intent].reason)}</div>`:"";
   const ph=(d.intent&&INTENT_MAP[d.intent])?INTENT_MAP[d.intent].ph:"babak pembuka ringkas…";
   return `<div class="card ${done?'done':''}" id="card-${t.i}">
@@ -711,7 +738,8 @@ function cardHTML(t){
       <label class="fld">Jalan cerita / hook pembuka</label>
       <textarea data-i="${t.i}" data-k="scenario_hook" placeholder="cth: ${esc(ph)}">${esc(d.scenario_hook||"")}</textarea></div>
     ${reflectionSectionHTML(t,d)}
-    <div class="sec"><div class="sec-h">⑤ Interaktiviti <span class="sec-note">min 2 — cadangan pra-isi, Bariah putus/tukar/tambah</span></div>
+    <div class="sec"><div class="sec-h">⑤ Interaktiviti <span class="sec-note">min 2 (bukan Reflection) — Reflection kini di ④</span></div>
+      ${hasLegacyReflectionInteraction(d)?`<div class="legacy-flag"><b>LEGACY_REFLECTION_INTERACTION_REVIEW_REQUIRED</b> — Reflection kini mempunyai bahagian keputusan tersendiri dan tidak lagi dikira sebagai interaktiviti. Buang atau gantikan pilihan legacy ini sebelum menyimpan perubahan.</div>`:""}
       <div class="ix-list" id="ixlist-${t.i}">${ix.map((it,idx)=>interakRow(t.i,idx,it)).join("")}</div>
       <button class="btn ghost ix-add" data-ixadd="${t.i}">+ Tambah interaktiviti</button></div>
     ${assessmentSectionHTML(t,d)}
@@ -796,7 +824,7 @@ function render(){
   }; });
   wrap.querySelectorAll("[data-save]").forEach(b=>b.onclick=()=>saveCard(+b.dataset.save));
   wrap.querySelectorAll("[data-reset]").forEach(b=>b.onclick=()=>{ delete decisions[+b.dataset.reset]; render(); });
-  wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:"Reflection",rasional:"",sumber:"manusia"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  wrap.querySelectorAll("[data-ixadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.ixadd; const d=readCard(i); (d.interaktiviti=d.interaktiviti||[]).push({jenis:INTERAK_TYPES[0],rasional:"",sumber:"manusia"}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });   // Step 7B.1: default bukan Reflection
   wrap.querySelectorAll("[data-ixdel]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, idx=+b.dataset.ixdel; const d=readCard(i); if(d.interaktiviti) d.interaktiviti.splice(idx,1); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
   // ② Watak: watak tambahan + canon controls (keepEmptyX supaya baris kosong tak hilang semasa edit)
   wrap.querySelectorAll("[data-xadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.xadd; const d=readCard(i,true); (d.extra_chars=d.extra_chars||[]).push({character_name:"",character_role:"",distinct_function:"",why_badrul_or_aina_cannot:"",redundancy_status:"",exception_rationale:""}); decisions[i]=Object.assign(decisions[i]||{},d); render(); });
@@ -834,7 +862,9 @@ function saveCard(i){
   // Step 7C: gate pentaksiran — OPSYENAL; jika ada data mesti lengkap (mesej khusus). Bukan sebahagian isComplete.
   const aIssue=assessmentSaveIssue(d);
   if(aIssue){ if(warn) warn.innerHTML="⚠ Pentaksiran — "+esc(aIssue); updateCounts(); return; }
-  if(!isComplete(d)){ if(warn) warn.innerHTML="⚠ Belum lengkap — perlu pola pedagogi + refleksi + ≥2 interaktiviti."; updateCounts(); return; }
+  // Step 7B.1: Reflection bukan interaktiviti — blok jika masih ada interaksi Reflection (walau hanya medan lain diedit).
+  if(hasLegacyReflectionInteraction(d)){ if(warn) warn.innerHTML="⚠ Interaktiviti — Reflection kini bukan interaktiviti; buang atau ganti pilihan legacy Reflection sebelum simpan."; updateCounts(); return; }
+  if(!isComplete(d)){ if(warn) warn.innerHTML="⚠ Belum lengkap — perlu pola pedagogi + refleksi + ≥2 interaktiviti (bukan Reflection)."; updateCounts(); return; }
   if(warn) warn.innerHTML = vc.level==="WARN" ? ("⚠ Amaran watak — "+esc(vc.msgs.join(" · "))) : "";
   // Commit watak dianjur manusia. Rekod legacy: simpan nilai asal + tandai migrasi disahkan.
   const wasLegacy = d.schema_version!==K4_SCHEMA && String(d.watak||"").trim()!=="";
@@ -850,6 +880,8 @@ function saveCard(i){
   d.reflection=String(d.reflection_prompt||"").trim();   // cermin keserasian (authoritative = 3 medan berstruktur)
   // Step 7C: cap schema pentaksiran hanya jika ada data (gate sudah pastikan lengkap). Marker berasingan.
   if(hasAssessmentData(d)) d.assessment_schema_version=ASSESSMENT_SCHEMA; else delete d.assessment_schema_version;
+  // Step 7B.1: gate di atas sudah pastikan tiada interaksi Reflection → cap penanda kontrak interaksi baharu.
+  d.interaction_schema_version=INTERACTION_SCHEMA;
   decisions[i]=d;
   sb.from("cair_decisions").upsert({
     course_code:"K4", pl:t.pl, topik:t.topik, slide_ref:null,
