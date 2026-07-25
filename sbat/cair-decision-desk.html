@@ -574,6 +574,98 @@ function reflectionSectionHTML(t,d){
       <textarea data-i="${t.i}" data-k="reflection_reveal" placeholder="cth: Jawapan model / rumusan / nota penting…">${esc(d.reflection_reveal||"")}</textarea>
       ${feed}</div>`;
 }
+// ===== Pentaksiran berstruktur K4 (LOCKED · Step 7C · schema k4-assessment-structure-1) =====
+// Pentaksiran OPSYENAL. Jika ada data → mesti lengkap sebelum Simpan. TIDAK masuk isComplete().
+// Marker berasingan; tidak menyentuh schema_version (watak) atau reflection_schema_version.
+// Kod TIDAK boleh buktikan distraktor selamat secara fakta — itu kekal semakan manusia (risiko tinggi).
+const ASSESSMENT_SCHEMA = "k4-assessment-structure-1";
+function asmtDistractors(d){ return Array.isArray(d && d.distractors) ? d.distractors : []; }
+function hasAssessmentData(d){
+  if(!d) return false;
+  if(String(d.question||"").trim()) return true;
+  if(String(d.correct_answer||"").trim()) return true;
+  if(asmtDistractors(d).length>0) return true;
+  const of=d.option_feedback||{};
+  if(String(of.correct_answer||"").trim()) return true;
+  if(of.distractors && Object.keys(of.distractors).some(k=>String(of.distractors[k]||"").trim())) return true;
+  const sb=d.source_basis||{};
+  if(String(sb.question||"").trim()||String(sb.correct_answer||"").trim()||String(sb.distractors||"").trim()) return true;
+  return false;
+}
+function nextDistractorId(distractors){
+  let max=0; (distractors||[]).forEach(x=>{ const m=/^D(\d+)$/.exec(String((x&&x.id)||"")); if(m) max=Math.max(max,+m[1]); });
+  return "D"+(max+1);
+}
+// Sebab KHUSUS bila Simpan perlu diblok kerana pentaksiran separa/tidak sah. "" = OK (atau tiada data).
+function assessmentSaveIssue(d){
+  if(!hasAssessmentData(d)) return "";                                  // opsyenal — tiada data = OK
+  if(!String(d.question||"").trim()) return "Masukkan soalan.";
+  if(!String(d.correct_answer||"").trim()) return "Masukkan jawapan betul.";
+  const ds=asmtDistractors(d);
+  if(ds.length<1) return "Tambah sekurang-kurangnya satu distractor.";
+  const of=d.option_feedback||{}; const ofd=of.distractors||{};
+  for(const x of ds){
+    const id=String((x&&x.id)||"").trim();
+    if(!id) return "Distraktor tiada ID stabil.";
+    if(!String((x&&x.text)||"").trim()) return "Lengkapkan teks bagi Distraktor "+id+".";
+    if(!String((x&&x.misconception_basis)||"").trim()) return "Lengkapkan asas salah faham bagi Distraktor "+id+".";
+  }
+  if(!String(of.correct_answer||"").trim()) return "Lengkapkan penjelasan bagi jawapan betul.";
+  for(const x of ds){ const id=String(x.id||"").trim(); if(!String(ofd[id]||"").trim()) return "Lengkapkan penjelasan bagi Distraktor "+id+"."; }
+  const sb=d.source_basis||{};
+  if(!String(sb.question||"").trim()) return "Lengkapkan asas sumber bagi soalan.";
+  if(!String(sb.correct_answer||"").trim()) return "Lengkapkan asas sumber bagi jawapan betul.";
+  if(!String(sb.distractors||"").trim()) return "Lengkapkan asas sumber bagi distraktor.";
+  const caN=String(d.correct_answer||"").trim().toLowerCase();
+  const texts=ds.map(x=>String((x&&x.text)||"").trim().toLowerCase());
+  if(texts.indexOf(caN)>=0) return "Jawapan betul tidak boleh sama dengan distractor.";
+  const seen={}; for(const tx of texts){ if(!tx) continue; if(seen[tx]) return "Distraktor tidak boleh berulang."; seen[tx]=1; }
+  return "";
+}
+function assessmentComplete(d){ return hasAssessmentData(d) && assessmentSaveIssue(d)===""; }
+function assessmentSummaryHTML(d){
+  if(!hasAssessmentData(d)) return "";
+  const q=esc(String(d.question||"").trim()||"(soalan kosong)");
+  const n=asmtDistractors(d).length;
+  const tag=assessmentComplete(d)?'<span class="ix-src sys">lengkap</span>':'<span class="ix-src bar">tak lengkap</span>';
+  return q+' <span class="dsum-code">'+n+' distraktor</span> '+tag;
+}
+function distractorRowHTML(t,x,ofd){
+  const id=String((x&&x.id)||"");
+  return `<div class="xchar-row dtr-row" data-did="${esc(id)}">
+      <div class="xchar-top"><span class="canon-tag">${esc(id)}</span><input type="text" data-dk="text" placeholder="Teks pilihan distraktor" value="${esc((x&&x.text)||"")}">
+        <button class="ix-del" data-i="${t.i}" data-ddel="${esc(id)}" title="Buang distraktor">✕</button></div>
+      <input type="text" data-dk="basis" placeholder="Asas salah faham (misconception) — wajib" value="${esc((x&&x.misconception_basis)||"")}">
+      <input type="text" data-dk="feedback" placeholder="Penjelasan bagi distraktor ini — wajib" value="${esc((ofd&&ofd[id])||"")}"></div>`;
+}
+function assessmentSectionHTML(t,d){
+  const of=d.option_feedback||{}; const ofd=of.distractors||{}; const sb=d.source_basis||{};
+  const ds=asmtDistractors(d);
+  const engaged=hasAssessmentData(d);
+  const drows=ds.map(x=>distractorRowHTML(t,x,ofd)).join("");
+  const issue=assessmentSaveIssue(d);
+  const feed=engaged ? (issue?`<div class="xchar-feed bad">${esc(issue)}</div>`:`<div class="xchar-feed ok">Pentaksiran lengkap.</div>`) : "";
+  const clearBtn=engaged?`<button class="btn ghost asmt-clear" data-aclear="${t.i}">Buang pentaksiran</button>`:"";
+  return `<div class="sec"><div class="sec-h">⑤b Pentaksiran <span class="sec-note">pilihan — jika diisi, mesti lengkap</span></div>
+      <div class="cadangan-note">Semua pilihan jawapan mesti mempunyai penjelasan. Distraktor mesti mewakili salah faham yang munasabah dan kekal dalam sempadan topik/modul.</div>
+      <label class="fld">Soalan</label>
+      <textarea data-i="${t.i}" data-ak="question" placeholder="Soalan kuiz (pilihan)">${esc(d.question||"")}</textarea>
+      <label class="fld">Jawapan betul</label>
+      <input type="text" data-i="${t.i}" data-ak="correct_answer" placeholder="Jawapan betul" value="${esc(d.correct_answer||"")}">
+      <label class="fld">Penjelasan bagi jawapan betul</label>
+      <input type="text" data-i="${t.i}" data-ak="fb_correct" placeholder="Kenapa jawapan betul ini betul — wajib" value="${esc(of.correct_answer||"")}">
+      <div class="xchar-h">Distraktor <span class="sec-note">min 1 · setiap satu: teks + asas salah faham + penjelasan</span></div>
+      <div class="dtr-list" id="dtrlist-${t.i}">${drows}</div>
+      <button class="btn ghost dtr-add" data-dadd="${t.i}">+ Tambah distraktor</button>
+      <label class="fld">Asas sumber — soalan</label>
+      <input type="text" data-i="${t.i}" data-ak="sb_question" placeholder="Rujukan sumber untuk soalan — wajib jika ada pentaksiran" value="${esc(sb.question||"")}">
+      <label class="fld">Asas sumber — jawapan betul</label>
+      <input type="text" data-i="${t.i}" data-ak="sb_correct" placeholder="Rujukan sumber untuk jawapan betul" value="${esc(sb.correct_answer||"")}">
+      <label class="fld">Asas sumber — distraktor</label>
+      <input type="text" data-i="${t.i}" data-ak="sb_distractors" placeholder="Rujukan sumber untuk distraktor" value="${esc(sb.distractors||"")}">
+      ${clearBtn}
+      ${feed}</div>`;
+}
 // ===== Ringkasan keputusan — render TERUS dari objek choice yang sama ke saveCard (tiada state kedua) =====
 function sumRow(label, valHtml, empty){
   const isEmpty = valHtml==null || String(valHtml).trim()==="";
@@ -599,6 +691,7 @@ function summaryHTML(d){
        + sumRow("③ Scenario hook", d.scenario_hook && d.scenario_hook.trim()?esc(d.scenario_hook):"", "belum diputuskan")
        + sumRow("④ Reflection", reflectionSummaryHTML(d), "belum diputuskan")
        + sumRow("⑤ Interaktiviti", ixHtml, "belum diputuskan")
+       + sumRow("Pentaksiran", assessmentSummaryHTML(d), "tiada (pilihan)")
        + sumRow("⑥ Rujukan sumber", d.ref && d.ref.trim()?esc(d.ref):"", "—");
 }
 function cardHTML(t){
@@ -621,6 +714,7 @@ function cardHTML(t){
     <div class="sec"><div class="sec-h">⑤ Interaktiviti <span class="sec-note">min 2 — cadangan pra-isi, Bariah putus/tukar/tambah</span></div>
       <div class="ix-list" id="ixlist-${t.i}">${ix.map((it,idx)=>interakRow(t.i,idx,it)).join("")}</div>
       <button class="btn ghost ix-add" data-ixadd="${t.i}">+ Tambah interaktiviti</button></div>
+    ${assessmentSectionHTML(t,d)}
     <div class="sec"><div class="sec-h">⑥ Rujukan sumber</div>
       <label class="fld">Rujukan sumber</label>
       <input type="text" data-i="${t.i}" data-k="ref" placeholder="cth: K4 ${t.pl} ${t.topik} SUB MODUL" value="${esc(d.ref||"")}"></div>
@@ -648,6 +742,23 @@ function readCard(i, keepEmptyX){
     }));
     if(!keepEmptyX) ex=ex.filter(c=>Object.values(c).some(v=>String(v).trim()!==""));
     d.extra_chars=ex;
+  }
+  // ⑤b Pentaksiran (Step 7C): data-ak (medan) + .dtr-row/data-dk (distraktor) → nama kanonik.
+  if(card.querySelector('[data-ak]')){
+    const gak=k=>{ const el=card.querySelector('[data-ak="'+k+'"]'); return el?el.value:""; };
+    const drows=[...card.querySelectorAll(".dtr-row")].map(r=>({
+      id:r.getAttribute("data-did")||"",
+      text:(r.querySelector('[data-dk="text"]')||{}).value||"",
+      misconception_basis:(r.querySelector('[data-dk="basis"]')||{}).value||"",
+      feedback:(r.querySelector('[data-dk="feedback"]')||{}).value||""
+    }));
+    const ofd={}; drows.forEach(x=>{ if(x.id) ofd[x.id]=x.feedback; });   // dibina semula dari baris semasa → tiada kunci yatim
+    d.question=gak("question");
+    d.correct_answer=gak("correct_answer");
+    d.distractors=drows.map(x=>({id:x.id,text:x.text,misconception_basis:x.misconception_basis}));
+    d.option_feedback={ correct_answer:gak("fb_correct"), distractors:ofd };
+    d.source_basis={ question:gak("sb_question"), correct_answer:gak("sb_correct"), distractors:gak("sb_distractors") };
+    if(!hasAssessmentData(d)){ ["question","correct_answer","distractors","option_feedback","source_basis","assessment_schema_version"].forEach(k=>delete d[k]); }
   }
   const rows=[...card.querySelectorAll(".ix-row")];
   d.interaktiviti=rows.map(r=>({
@@ -695,6 +806,10 @@ function render(){
   wrap.querySelectorAll('[data-xk="redundancy_status"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
   // ④ Reflection (Step 7B): tukar mod respons → repaint (feed + ringkasan)
   wrap.querySelectorAll('[data-k="reflection_response_mode"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
+  // ⑤b Pentaksiran (Step 7C): tambah/buang distraktor + buang pentaksiran (ID stabil, tiada renumber)
+  wrap.querySelectorAll("[data-dadd]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.dadd; const d=readCard(i,true); const ds=Array.isArray(d.distractors)?d.distractors:[]; ds.push({id:nextDistractorId(ds),text:"",misconception_basis:""}); d.distractors=ds; decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  wrap.querySelectorAll("[data-ddel]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, id=b.dataset.ddel; const d=readCard(i,true); if(Array.isArray(d.distractors)) d.distractors=d.distractors.filter(x=>String(x.id)!==String(id)); if(d.option_feedback&&d.option_feedback.distractors) delete d.option_feedback.distractors[id]; decisions[i]=Object.assign(decisions[i]||{},d); render(); });
+  wrap.querySelectorAll("[data-aclear]").forEach(b=>b.onclick=()=>{ const i=+b.dataset.aclear; const d=readCard(i,true); ["question","correct_answer","distractors","option_feedback","source_basis","assessment_schema_version"].forEach(k=>delete d[k]); decisions[i]=d; render(); });
   // Panel ringkasan: refresh langsung dari readCard (objek payload sama ke saveCard) — bukan state kedua
   list.forEach(t=>{ const card=document.getElementById("card-"+t.i); const sum=document.getElementById("dsum-"+t.i);
     if(card && sum) card.addEventListener("input", ()=>{ sum.innerHTML='<div class="dsum-h">Ringkasan keputusan — semak sebelum simpan</div>'+summaryHTML(readCard(t.i)); }); });
@@ -716,6 +831,9 @@ function saveCard(i){
   // Step 7B: gate refleksi — akuan legacy + refleksi berstruktur sah (mesej khusus, bukan ralat generik).
   const rIssue=reflectionSaveIssue(d);
   if(rIssue){ if(warn) warn.innerHTML="⚠ "+esc(rIssue); updateCounts(); return; }
+  // Step 7C: gate pentaksiran — OPSYENAL; jika ada data mesti lengkap (mesej khusus). Bukan sebahagian isComplete.
+  const aIssue=assessmentSaveIssue(d);
+  if(aIssue){ if(warn) warn.innerHTML="⚠ Pentaksiran — "+esc(aIssue); updateCounts(); return; }
   if(!isComplete(d)){ if(warn) warn.innerHTML="⚠ Belum lengkap — perlu pola pedagogi + refleksi + ≥2 interaktiviti."; updateCounts(); return; }
   if(warn) warn.innerHTML = vc.level==="WARN" ? ("⚠ Amaran watak — "+esc(vc.msgs.join(" · "))) : "";
   // Commit watak dianjur manusia. Rekod legacy: simpan nilai asal + tandai migrasi disahkan.
@@ -730,6 +848,8 @@ function saveCard(i){
   delete d.reflection_ack;                            // flag UI transien — jangan simpan ke payload
   d.reflection_schema_version=REFLECTION_SCHEMA;
   d.reflection=String(d.reflection_prompt||"").trim();   // cermin keserasian (authoritative = 3 medan berstruktur)
+  // Step 7C: cap schema pentaksiran hanya jika ada data (gate sudah pastikan lengkap). Marker berasingan.
+  if(hasAssessmentData(d)) d.assessment_schema_version=ASSESSMENT_SCHEMA; else delete d.assessment_schema_version;
   decisions[i]=d;
   sb.from("cair_decisions").upsert({
     course_code:"K4", pl:t.pl, topik:t.topik, slide_ref:null,
