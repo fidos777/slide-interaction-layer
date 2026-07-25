@@ -327,7 +327,7 @@ function interakList(d){ return Array.isArray(d && d.interaktiviti) ? d.interakt
 function isComplete(d){
   if(!d) return false;
   const okIntent=!!(d.intent||"").trim();
-  const okRefl=!!(d.reflection||"").trim();
+  const okRefl=reflectionComplete(d);           // Step 7B: struktur sah / legacy dikekalkan
   const ix=interakList(d).filter(x=>x && (x.jenis||"").trim());
   return okIntent && okRefl && ix.length>=2;
 }
@@ -482,6 +482,98 @@ function watakSummaryHTML(d){
   const plain=watakPlain(d);
   return plain?esc(plain):"";
 }
+// ===== Refleksi berstruktur K4 (LOCKED · Step 7B · schema k4-reflection-structure-1) =====
+// Authoritative = 3 medan: reflection_prompt + reflection_response_mode + reflection_reveal.
+// Medan `reflection` lama = cermin keserasian sahaja (mirror = prompt selepas simpan sah).
+// Penanda schema watak (k4-character-rules-1) TIDAK disentuh.
+const REFLECTION_SCHEMA = "k4-reflection-structure-1";
+const REFLECTION_MODES = ["PAUSE_THINK","SHORT_RESPONSE","CHOOSE_DECISION","DISCUSS_COMPARE"];
+const REFLECTION_MODE_LABELS = {
+  PAUSE_THINK:"Berhenti seketika dan fikir",
+  SHORT_RESPONSE:"Tulis jawapan ringkas",
+  CHOOSE_DECISION:"Pilih satu keputusan",
+  DISCUSS_COMPARE:"Bincang dan bandingkan"
+};
+function hasStructuredReflection(d){
+  if(!d) return false;
+  if(d.reflection_schema_version===REFLECTION_SCHEMA) return true;
+  return !!(String(d.reflection_prompt||"").trim() || String(d.reflection_response_mode||"").trim() || String(d.reflection_reveal||"").trim());
+}
+function structuredReflectionValid(d){
+  const p=String((d&&d.reflection_prompt)||"").trim();
+  const m=String((d&&d.reflection_response_mode)||"").trim();
+  const r=String((d&&d.reflection_reveal)||"").trim();
+  return !!p && REFLECTION_MODES.indexOf(m)>=0 && !!r;
+}
+// Rekod refleksi lama (bebas) yang BELUM di-schema → belum dimigrasi (stabil semasa edit).
+function reflectionUnmigrated(d){
+  if(!d) return false;
+  if(d.reflection_schema_version===REFLECTION_SCHEMA) return false;
+  return String(d.reflection||"").trim()!=="";
+}
+function reflectionNeedsAck(d){ return reflectionUnmigrated(d) && !(d && d.reflection_ack); }
+// Kelengkapan refleksi untuk isComplete: struktur→mesti sah; legacy→kekal tingkah laku lama (ada nilai).
+function reflectionComplete(d){
+  if(!d) return false;
+  if(hasStructuredReflection(d)) return structuredReflectionValid(d);
+  return String(d.reflection||"").trim()!=="";      // legacy: kekal — jaga 4/20 sedia ada
+}
+function reflectionInvalidReason(d){
+  const p=String((d&&d.reflection_prompt)||"").trim();
+  const m=String((d&&d.reflection_response_mode)||"").trim();
+  const r=String((d&&d.reflection_reveal)||"").trim();
+  if(m && REFLECTION_MODES.indexOf(m)<0) return "Refleksi — mod respons tidak sah.";
+  if(!p) return "Refleksi — perlu soalan/prompt refleksi.";
+  if(!m) return "Refleksi — pilih mod respons pelajar.";
+  if(!r) return "Refleksi — perlu reveal / penjelasan.";
+  return "";
+}
+// Sebab KHUSUS bila Save perlu diblok kerana refleksi.
+function reflectionSaveIssue(d){
+  if(reflectionUnmigrated(d)){
+    if(!(d && d.reflection_ack)) return "Refleksi legacy — sila tanda pengesahan semakan refleksi sebelum simpan.";
+    if(!structuredReflectionValid(d)) return reflectionInvalidReason(d) || "Refleksi legacy — lengkapkan prompt, mod respons sah, dan reveal.";
+    return "";
+  }
+  if(!structuredReflectionValid(d)) return reflectionInvalidReason(d);
+  return "";
+}
+function reflectionSummaryHTML(d){
+  if(reflectionUnmigrated(d)) return esc(d.reflection)+' <span class="legacy-mini">LEGACY_REVIEW</span>';
+  const p=String((d&&d.reflection_prompt)||"").trim();
+  const m=String((d&&d.reflection_response_mode)||"").trim();
+  const r=String((d&&d.reflection_reveal)||"").trim();
+  if(!p && !m && !r) return "";
+  const modeLbl=(m && REFLECTION_MODE_LABELS[m])?REFLECTION_MODE_LABELS[m]:(m||"—");
+  return esc(p||"(prompt kosong)")+' <span class="dsum-code">'+esc(modeLbl)+'</span>';
+}
+function reflectionSectionHTML(t,d){
+  const unmig=reflectionUnmigrated(d);
+  const legacyBanner=unmig
+    ? `<div class="legacy-flag"><b>LEGACY_REFLECTION_REVIEW_REQUIRED</b> — refleksi lama: “${esc(d.reflection)}”. Dimuat apa adanya; tidak ditulis semula sehingga refleksi berstruktur dilengkapkan & Simpan.</div>`
+    : "";
+  const legacyAck=unmig
+    ? `<label class="chk legacy-ack"><input type="checkbox" data-i="${t.i}" data-chk="reflection_ack" ${(d&&d.reflection_ack)?"checked":""}> Saya telah menyemak refleksi lama dan memetakannya kepada refleksi berstruktur.</label>`
+    : "";
+  const mode=(d&&d.reflection_response_mode)||"";
+  const modeOpts=['<option value="">— mod respons pelajar —</option>']
+    .concat(REFLECTION_MODES.map(m=>`<option value="${m}" ${mode===m?"selected":""}>${esc(REFLECTION_MODE_LABELS[m])} (${m})</option>`)).join("");
+  const engaged=unmig || hasStructuredReflection(d);
+  const issue=reflectionSaveIssue(d);
+  const feed=engaged
+    ? (issue ? `<div class="xchar-feed bad">${esc(issue)}</div>` : (structuredReflectionValid(d)?`<div class="xchar-feed ok">Refleksi berstruktur lengkap.</div>`:""))
+    : "";
+  return `<div class="sec"><div class="sec-h">④ Reflection <span class="sec-note">refleksi berstruktur — prompt · mod respons · reveal</span></div>
+      ${legacyBanner}
+      ${legacyAck}
+      <label class="fld">Soalan / prompt refleksi (kaitkan dgn objektif topik)</label>
+      <textarea data-i="${t.i}" data-k="reflection_prompt" placeholder="cth: Apa yang anda tahu tentang ${esc(t.tajuk)}?">${esc(d.reflection_prompt||"")}</textarea>
+      <label class="fld">Mod respons pelajar</label>
+      <select data-i="${t.i}" data-k="reflection_response_mode">${modeOpts}</select>
+      <label class="fld">Reveal / penjelasan (apa pelajar patut faham selepas respons)</label>
+      <textarea data-i="${t.i}" data-k="reflection_reveal" placeholder="cth: Jawapan model / rumusan / nota penting…">${esc(d.reflection_reveal||"")}</textarea>
+      ${feed}</div>`;
+}
 // ===== Ringkasan keputusan — render TERUS dari objek choice yang sama ke saveCard (tiada state kedua) =====
 function sumRow(label, valHtml, empty){
   const isEmpty = valHtml==null || String(valHtml).trim()==="";
@@ -505,7 +597,7 @@ function summaryHTML(d){
   return sumRow("① Cara mengajar", intent, "belum diputuskan")
        + sumRow("② Watak", watakSummaryHTML(d), "belum diputuskan")
        + sumRow("③ Scenario hook", d.scenario_hook && d.scenario_hook.trim()?esc(d.scenario_hook):"", "belum diputuskan")
-       + sumRow("④ Reflection", d.reflection && d.reflection.trim()?esc(d.reflection):"", "belum diputuskan")
+       + sumRow("④ Reflection", reflectionSummaryHTML(d), "belum diputuskan")
        + sumRow("⑤ Interaktiviti", ixHtml, "belum diputuskan")
        + sumRow("⑥ Rujukan sumber", d.ref && d.ref.trim()?esc(d.ref):"", "—");
 }
@@ -525,9 +617,7 @@ function cardHTML(t){
     <div class="sec"><div class="sec-h">③ Scenario hook</div>
       <label class="fld">Jalan cerita / hook pembuka</label>
       <textarea data-i="${t.i}" data-k="scenario_hook" placeholder="cth: ${esc(ph)}">${esc(d.scenario_hook||"")}</textarea></div>
-    <div class="sec"><div class="sec-h">④ Reflection</div>
-      <label class="fld">Soalan refleksi (kaitkan dgn objektif topik)</label>
-      <textarea data-i="${t.i}" data-k="reflection" placeholder="cth: Apa yang anda tahu tentang ${esc(t.tajuk)}?">${esc(d.reflection||"")}</textarea></div>
+    ${reflectionSectionHTML(t,d)}
     <div class="sec"><div class="sec-h">⑤ Interaktiviti <span class="sec-note">min 2 — cadangan pra-isi, Bariah putus/tukar/tambah</span></div>
       <div class="ix-list" id="ixlist-${t.i}">${ix.map((it,idx)=>interakRow(t.i,idx,it)).join("")}</div>
       <button class="btn ghost ix-add" data-ixadd="${t.i}">+ Tambah interaktiviti</button></div>
@@ -603,6 +693,8 @@ function render(){
   wrap.querySelectorAll('[data-chk]').forEach(el=>el.onchange=()=>{ const i=+el.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
   wrap.querySelectorAll('[data-k="badrul_role"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
   wrap.querySelectorAll('[data-xk="redundancy_status"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
+  // ④ Reflection (Step 7B): tukar mod respons → repaint (feed + ringkasan)
+  wrap.querySelectorAll('[data-k="reflection_response_mode"]').forEach(sel=>sel.onchange=()=>{ const i=+sel.dataset.i; decisions[i]=Object.assign(decisions[i]||{}, readCard(i,true)); render(); });
   // Panel ringkasan: refresh langsung dari readCard (objek payload sama ke saveCard) — bukan state kedua
   list.forEach(t=>{ const card=document.getElementById("card-"+t.i); const sum=document.getElementById("dsum-"+t.i);
     if(card && sum) card.addEventListener("input", ()=>{ sum.innerHTML='<div class="dsum-h">Ringkasan keputusan — semak sebelum simpan</div>'+summaryHTML(readCard(t.i)); }); });
@@ -621,6 +713,9 @@ function saveCard(i){
   // Gate watak tambahan — BLOCK simpan jika tak sah / duplikasi tanpa pengecualian diluluskan.
   const vc=validateK4Chars(d);
   if(vc.level==="BLOCK"){ if(warn) warn.innerHTML="⚠ Watak — "+esc(vc.msgs.join(" · ")); updateCounts(); return; }
+  // Step 7B: gate refleksi — akuan legacy + refleksi berstruktur sah (mesej khusus, bukan ralat generik).
+  const rIssue=reflectionSaveIssue(d);
+  if(rIssue){ if(warn) warn.innerHTML="⚠ "+esc(rIssue); updateCounts(); return; }
   if(!isComplete(d)){ if(warn) warn.innerHTML="⚠ Belum lengkap — perlu pola pedagogi + refleksi + ≥2 interaktiviti."; updateCounts(); return; }
   if(warn) warn.innerHTML = vc.level==="WARN" ? ("⚠ Amaran watak — "+esc(vc.msgs.join(" · "))) : "";
   // Commit watak dianjur manusia. Rekod legacy: simpan nilai asal + tandai migrasi disahkan.
@@ -629,6 +724,12 @@ function saveCard(i){
   delete d.legacy_ack;                               // flag UI transien — jangan simpan ke payload
   d.schema_version=K4_SCHEMA;
   d.watak=watakPlain(d);
+  // Step 7B: commit refleksi berstruktur (dianjur manusia). Legacy → simpan raw + tandai migrasi disahkan.
+  const reflWasLegacy = d.reflection_schema_version!==REFLECTION_SCHEMA && String(d.reflection||"").trim()!=="";
+  if(reflWasLegacy){ d.legacy_reflection_raw=d.reflection; d.legacy_reflection_migration_confirmed=true; }
+  delete d.reflection_ack;                            // flag UI transien — jangan simpan ke payload
+  d.reflection_schema_version=REFLECTION_SCHEMA;
+  d.reflection=String(d.reflection_prompt||"").trim();   // cermin keserasian (authoritative = 3 medan berstruktur)
   decisions[i]=d;
   sb.from("cair_decisions").upsert({
     course_code:"K4", pl:t.pl, topik:t.topik, slide_ref:null,
