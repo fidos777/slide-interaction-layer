@@ -172,6 +172,7 @@ document.querySelectorAll(".tab").forEach(t=>{
     document.querySelectorAll(".pane").forEach(x=>x.classList.remove("active"));
     t.classList.add("active");
     document.getElementById("pane-"+t.dataset.pane).classList.add("active");
+    if(t.dataset.pane==="pm") loadCairProgress();   // refresh kemajuan setiap kali tab Project Tracking dibuka
   };
 });
 
@@ -211,7 +212,38 @@ function renderProgress(decided){
   document.getElementById("cair-progress").innerHTML=
     `<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem"><span style="font-weight:600;font-size:.9rem">${decided} / ${K4_TOTAL} topik diputuskan</span><span style="font-family:var(--font-m);font-size:.72rem;color:var(--ink-faint)">${pct}%</span></div><div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div><div style="font-family:var(--font-m);font-size:.66rem;color:var(--ink-faint);margin-top:.3rem">Kemajuan sebenar dari CAIR Desk. Wujud bila Bariah mula putus keputusan.</div>`;
 }
-renderProgress(0);
+renderCairMsg("Memuat kemajuan CAIR…");                   // keadaan awal — jangan papar 0/20 sebelum data
+
+// ===== Kemajuan CAIR sebenar dari Supabase (BACA sahaja; rule = CAIR isComplete) =====
+// intent wujud + reflection wujud + ≥2 interaktiviti berjenis. Tiada tulisan ke DB.
+function renderCairMsg(msg, isErr){
+  var el=document.getElementById("cair-progress");
+  if(el) el.innerHTML='<div style="font-family:var(--font-m);font-size:.78rem;color:'+(isErr?"var(--hold)":"var(--ink-faint)")+'">'+msg+'</div>';
+}
+function pmIsComplete(d){
+  if(!d) return false;
+  var okIntent=!!String(d.intent||"").trim();
+  var okRefl=!!String(d.reflection||"").trim();
+  var ix=(Array.isArray(d.interaktiviti)?d.interaktiviti:[]).filter(function(x){ return x && String(x.jenis||"").trim(); });
+  return okIntent && okRefl && ix.length>=2;
+}
+function loadCairProgress(){
+  renderCairMsg("Memuat kemajuan CAIR…");                 // (1) keadaan memuat — bukan 0/20, bukan 0%
+  if(!window.SB){ renderCairMsg("Kemajuan CAIR tidak dapat dimuatkan", true); return; }
+  window.SB.from("cair_decisions").select("course_code,choice").then(function(res){
+    if(res.error) throw res.error;                        // ralat query → catch
+    var done=0;
+    (res.data||[]).forEach(function(row){
+      if(row.course_code!=="K4") return;                  // filter K4 sahaja
+      var d=JSON.parse(row.choice||"{}");                 // ralat parse → catch (bukan fallback senyap)
+      if(pmIsComplete(d)) done++;
+    });
+    renderProgress(done);                                  // (2) berjaya → count + % sebenar (cth 4/20 · 20%)
+  }).catch(function(err){
+    console.error("kemajuan CAIR gagal dimuat", err);
+    renderCairMsg("Kemajuan CAIR tidak dapat dimuatkan", true);  // (3) gagal query/parse — tiada fallback 0/20
+  });
+}
 
 function renderTopikRangka(mountId, mode){
   let html="";
@@ -238,6 +270,7 @@ renderTopikRangka("full-body","full");
       // Sesi sah — buang sisa fragment OAuth (#access_token…) supaya URL bersih & tak double-hash
       if(location.hash) history.replaceState(null,"", location.origin+location.pathname);
       overlay.style.display="none";
+      loadCairProgress();   // sesi sah → muat kemajuan CAIR sebenar (initial + tiap perubahan auth)
       authInfo.innerHTML='<span>'+session.user.email+'</span>'+
         '<button id="logoutBtn" style="font-family:inherit;font-size:.66rem;padding:.2rem .55rem;border:1px solid var(--line);border-radius:100px;background:#fff;color:var(--ink-soft);cursor:pointer">Log keluar</button>';
       var lo=document.getElementById("logoutBtn");
