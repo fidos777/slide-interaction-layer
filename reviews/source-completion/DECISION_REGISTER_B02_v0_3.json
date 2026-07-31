@@ -1,0 +1,217 @@
+{
+ "register": "DECISION_REGISTER_B02_v0_3",
+ "scope": "K5 PL06 T03 B02 — Komponen Landskap — Bariah review build v0.3",
+ "evidence_date": "2026-07-31",
+ "standing": "All entries are confirmed-CAIR-provisional. None is a canonical freeze, a production approval, an MMD build authority or a final source-custody closure.",
+ "build_status": "REVIEW_BUILD_ALLOWED_WITH_CAIR_INTEGRITY_EXCEPTION",
+ "not_asserted": [
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY"
+ ],
+ "decisions": [
+  {
+   "decision_id": "B02-CAIR-INT-001",
+   "title": "Module DOCX SHA-256 integrity exception",
+   "ruling": "The exact module DOCX SHA-256 could not be obtained because all authenticated routes were unavailable and the only remaining MCP route returns the full 16.8 MB file as one unbounded base64 result.",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "scope": "Bariah review build only",
+   "evidence": {
+    "drive_fileId": "16j15Knt75d1ybg1i1E2SWfeUfMRmcbJ4",
+    "filename": "[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+    "byte_size": 16832861,
+    "modifiedTime": "2026-06-07T23:30:02Z",
+    "sha256": null,
+    "attempted_routes": [
+     {
+      "route": "Drive metadata checksum (sha256Checksum / md5Checksum)",
+      "result": "UNAVAILABLE",
+      "detail": "MCP get_file_metadata returns no checksum field of any kind."
+     },
+     {
+      "route": "Authenticated Drive API with container CLOUDSDK_AUTH_ACCESS_TOKEN",
+      "result": "HTTP 401",
+      "detail": "Invalid Credentials — token is a Google Cloud SDK credential without Drive scope."
+     },
+     {
+      "route": "Direct HTTPS download of drive.google.com",
+      "result": "HTTP 403 CONNECT",
+      "detail": "Agent proxy policy denial logged at 2026-07-31T13:32:31.708Z."
+     },
+     {
+      "route": "Chunked / ranged MCP download_file_content",
+      "result": "NO RANGE PARAMETER",
+      "detail": "Schema accepts only fileId and exportMimeType. A 504-byte probe returned the entire file as one base64 string, confirming all-or-nothing behaviour. A 16.8 MB transfer would return ~22.4 MB of base64 in one tool result and has a silent-truncation failure mode that would yield a wrong hash."
+     }
+    ],
+    "independently_hashed_module_pdf": {
+     "path": "K5_PL06_T03_B02_pages_256269.pdf",
+     "byte_size": 429918,
+     "sha256": "30a6903dacbd7e8bce60dc1aa32026fc4ed98439054aeced9e895b5df828a3f4"
+    },
+    "independent_pdf_reconciliation": {
+     "method": "Every physical table row in the rendered PDF classified by geometry alone, without reference to the matrix.",
+     "result": {
+      "DATA": 26,
+      "HEADER": 11,
+      "CONTINUATION": 2,
+      "EMPTY": 1,
+      "TOTAL_PHYSICAL_ROWS": 40
+     },
+     "conclusion": "26 meaningful source rows confirmed from the hashed PDF alone."
+    },
+    "a09_phantom_row_evidence": {
+     "phantom_rows": 7,
+     "carry_proposition": 0,
+     "present_in_rendered_pdf": 0,
+     "mechanism": "Markdown pipe table emitted with an empty header row; correlation 9/9 with the two control components that carry a marked header row.",
+     "effect_on_row_count": "none — not added to the 26"
+    }
+   },
+   "exposure": "Exact DOCX-byte integrity remains unresolved.",
+   "required_before": [
+    "canonical freeze",
+    "production approval",
+    "MMD build authority"
+   ],
+   "substitution_prohibited": "No other file hash, fileId, byte size or modifiedTime is recorded as a substitute for the missing DOCX SHA-256."
+  },
+  {
+   "decision_id": "B02-R-1",
+   "title": "VO source fidelity",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Use proposition-preserving, source-bound VO. VO may restructure source language for narration, but every factual proposition must remain traceable, no unsupported fact, example or claim may be added, every VO record retains a source locator, and unconstrained creative paraphrasing is prohibited.",
+   "supersedes": "S&G v1.0 6.1 verbatim-copy requirement, for this B02 review build only",
+   "implemented": "All 26 popup VO and 9 main-screen VO carry a module page locator in production metadata."
+  },
+  {
+   "decision_id": "B02-R-2",
+   "title": "Table-derived popup VO",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Follow the B02-specific Updated S&G v0.2: every included table-derived popup must contain VO.",
+   "supersedes": "S&G v1.0 5.4.1 general No-VO selection rule for tables and reference lists, for this provisional B02 review build",
+   "implemented": "POPUPS_WITHOUT_VO = 0 across all 26 popup states."
+  },
+  {
+   "decision_id": "B02-R-3",
+   "title": "State representation",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Use runtime states, not a physical learner slide for every status transition. For Bariah review, popup and completion states may be represented as separate PowerPoint review pages. A popup remains a state and does not create navigation Level 3. Maximum learner navigation depth = 2.",
+   "implemented": {
+    "physical_learner_screens": 26,
+    "runtime_states": 46,
+    "review_pages": 63,
+    "max_learner_navigation_depth": 2
+   }
+  },
+  {
+   "decision_id": "B02-R-4",
+   "title": "Closing structure",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah + course navigation owner",
+   "ruling": "Generate Rumusan, Kuiz and Tamat for this Bahagian.",
+   "supersedes": "S&G v1.0 4.3 per-Topik placement, for this bahagian",
+   "implemented": "RUMUSAN, KUIZ and TAMAT generated as physical learner screens."
+  },
+  {
+   "decision_id": "B02-R-5",
+   "title": "Kembali semantics",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Kembali belongs to the Contoh [Nama Komponen] example screen. It starts disabled, enables after all component Level 2 items are viewed, returns to the relevant Level 1 group master, and remains enabled on revisit and LMS resume.",
+   "implemented": "PREMATURE_KEMBALI = 0. Kembali absent from main explanation screens."
+  },
+  {
+   "decision_id": "B02-R-6",
+   "title": "Rumusan structure",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Do not display the learner-facing labels Kepentingan, Apa Yang Dipelajari, Isi Utama or Manfaat. The underlying logic may guide ordering. Use contractor/site-application language and avoid generic 'anda' framing.",
+   "implemented": "rumusan_banned_labels = 0 on the learner canvas."
+  },
+  {
+   "decision_id": "B02-L-01",
+   "title": "PL pronunciation note",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "ruling": "Retain the production note 'VO PL satu, bukan PL kosong satu, dan seterusnya.' It must remain off-canvas.",
+   "implemented": "Present in the S01 off-canvas production panel; absent from every learner canvas."
+  },
+  {
+   "decision_id": "B02-L-02",
+   "title": "S03 Mind Map",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Include a textual Mind Map visual direction on S03. Do not create or embed a final Mind Map asset.",
+   "implemented": "S03 carries a Mind Map specification in text. No Mind Map asset produced."
+  },
+  {
+   "decision_id": "B02-A-05",
+   "title": "Single-row source tables",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Preserve source identity: Papan Tanda = 1 meaningful source row; BBQ Pit = 1 meaningful source row. For this review build create Contoh Papan Tanda and Contoh BBQ Pit, each with one Level 2 clickable item opening one popup, with Kembali enabling after that item is viewed. Do not split these source rows during this run and do not remove their example screens.",
+   "marked": [
+    "PENDING_FINAL_BARIAH_CONFIRMATION",
+    "SINGLE_ITEM_EXAMPLE_TREATMENT"
+   ],
+   "source_identity_unchanged": true,
+   "note": "Interaction decomposition never rewrites source-row identity. SOURCE_ROW_COUNT stays 26 under every A-05 option."
+  },
+  {
+   "decision_id": "B02-A-06",
+   "title": "Heterogeneous table structures",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "ruling": "Use an adaptive popup schema. Display only source-attested fields: Jenis/Bahan when available, Fungsi & Penerangan when available, Contoh when available, and source image or visual direction when available. For missing fields do not render an empty learner-facing heading, do not invent replacement content, and record NOT_PRESENT_IN_SOURCE in production metadata.",
+   "implemented": "Popup fields emitted per row from source presence. Jenis/Bahan is additionally suppressed where it duplicates the popup heading verbatim."
+  },
+  {
+   "decision_id": "B02-A-09",
+   "title": "DOCX / PDF source precedence",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "ruling": "For this review build: DOCX governs textual propositions; the rendered PDF governs visible table structure, row boundaries, pagination and image ownership; conversion-only empty rows with no independent proposition are excluded.",
+   "implemented": "7 phantom rows excluded; 26 DATA rows confirmed independently from the hashed PDF."
+  },
+  {
+   "decision_id": "B02-N-06",
+   "title": "Ambiguous parenthesis in Kerusi Komposit",
+   "status": "confirmed-CAIR-provisional",
+   "authority": "Firdaus / CAIR",
+   "final_confirmation_required": "Bariah",
+   "ruling": "Do not silently correct the unbalanced parenthesis.",
+   "marked": [
+    "NORMALISATION_DECLINED",
+    "REPAIR_MAY_CHANGE_SOURCE_MEANING",
+    "PENDING_HUMAN_REVIEW"
+   ],
+   "source_form": "Kerusi KompositContoh: WPC - Wood-Plastic Composite / Plastik Kitar Semula):",
+   "note": "Two readings exist — a dropped opening parenthesis, or a stray character. Choosing either would change how the cell parses into jenis_bahan and contoh."
+  }
+ ],
+ "source_baseline_preserved": {
+  "COMPONENTS_EXPECTED": 9,
+  "MEANINGFUL_SOURCE_ROWS": 26,
+  "ROWS_MAPPED": 26,
+  "ROWS_EXCLUDED": 0,
+  "ROW_MAPPING_UNRESOLVED": 0,
+  "DUPLICATE_SOURCE_ROW_MAPPINGS": 0,
+  "SOURCE_ASSETS": 14,
+  "ORPHAN_SOURCE_ASSETS": 0,
+  "statement": "No source-row ID, row order, locator or image-ownership finding was altered. No interaction decomposition was converted into a source row."
+ }
+}

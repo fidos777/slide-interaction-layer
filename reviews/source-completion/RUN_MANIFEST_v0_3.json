@@ -1,0 +1,144 @@
+{
+ "run": "K5PL06T03B02_REVIEW_BUILD_v0_3",
+ "evidence_date": "2026-07-31",
+ "repository": "/home/user/slide-interaction-layer",
+ "branch": "claude/verify-powerpoint-file-vpfzkg",
+ "parent_commit": "357eaefa59dea6508150a24fcb981f7e2fb8d9a2",
+ "status_tokens": [
+  "REVIEW_READY",
+  "PROVISIONAL_CAIR_EXECUTION",
+  "CAIR_INTEGRITY_EXCEPTION_FOR_REVIEW_BUILD_ONLY",
+  "PENDING_FINAL_BARIAH_CONFIRMATION",
+  "NOT_FOR_MMD_BUILD",
+  "MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "build_status": "REVIEW_BUILD_ALLOWED_WITH_CAIR_INTEGRITY_EXCEPTION",
+ "reconciliation": {
+  "components": 9,
+  "source_rows": 26,
+  "rows_mapped": 26,
+  "rows_excluded": 0,
+  "row_mapping_unresolved": 0,
+  "duplicate_source_row_mappings": 0,
+  "source_assets": 14,
+  "orphan_source_assets": 0,
+  "physical_learner_screens": 26,
+  "runtime_states": 46,
+  "review_pages": 63,
+  "popup_states": 26,
+  "max_learner_navigation_depth": 2
+ },
+ "inputs": {
+  "sg_v0_2": {
+   "path": "/root/.claude/uploads/12837c42-b6ab-597b-8301-85c5b457471b/5efad61e-K5_PL06_T03_B02_UPDATED_SG_v0.2.docx",
+   "bytes": 51443,
+   "sha256": "d52f0fe123863c0d7ff968efdacda91157331f49ac46f3b3aaf2e630b3c2403a"
+  },
+  "module_pdf": {
+   "path": "/root/.claude/uploads/12837c42-b6ab-597b-8301-85c5b457471b/6a5c03ec-K5_PL06_T03_B02_pages_256269.pdf",
+   "bytes": 429918,
+   "sha256": "30a6903dacbd7e8bce60dc1aa32026fc4ed98439054aeced9e895b5df828a3f4"
+  },
+  "module_docx": {
+   "drive_fileId": "16j15Knt75d1ybg1i1E2SWfeUfMRmcbJ4",
+   "filename": "[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+   "bytes": 16832861,
+   "modifiedTime": "2026-06-07T23:30:02Z",
+   "sha256": null,
+   "note": "NOT OBTAINED — CAIR integrity exception B02-CAIR-INT-001. No substitute hash recorded."
+  },
+  "storyboard_v0_1": {
+   "path": "reviews/source-completion/../storyboard-bariah/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_1.pptx",
+   "bytes": 109954,
+   "sha256": "749b6c90f468bc0a1986b853319e62b1a1cec83600a98cbade628214d5bf8e7a",
+   "note": "preserved baseline — not modified by this run"
+  }
+ },
+ "generator": {
+  "generator/b02_content_v0_3.py": {
+   "bytes": 39037,
+   "sha256": "04e56936cf2aaff5c08915d5a37cf4204055cf874151ff89b14732d5c2746bb2"
+  },
+  "generator/b02_content_v0_3.json": {
+   "bytes": 40319,
+   "sha256": "4401f9b54336f2c830a06e5a363479ba9ac99aefa9c80ffaa34e2161c579ac5a"
+  },
+  "generator/b02_model_v0_3.py": {
+   "bytes": 7620,
+   "sha256": "f05908eea56c111cea2ef918b872cd4a9ebb59ef48de3b5a21bab745870c527b"
+  },
+  "generator/b02_generator_v0_3.py": {
+   "bytes": 39999,
+   "sha256": "1cc9ca74b6ad50ea70c33594fa883e755ee224205048bc71ef0b10b0c76b1d35"
+  },
+  "generator/b02_render_check.py": {
+   "bytes": 11475,
+   "sha256": "e65b6f38e58ea88a21e60d498af99f497af62f8e3ad71c0cc42e1d0f406346e2"
+  },
+  "generator/b02_qa_v0_3.py": {
+   "bytes": 9491,
+   "sha256": "9d98dc164562c2f55e28f0ac5a7ff847c420bc50085596aaad3c0554243a70d4"
+  },
+  "generator/b02_docs_v0_3.py": {
+   "bytes": 8056,
+   "sha256": "56c7777730d7e80ccbf21319aefc7859f4441c6008efe0734d411f86c279be9d"
+  }
+ },
+ "outputs": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3.pptx": {
+   "bytes": 273740,
+   "sha256": "f4e2a3797c8cf24c9d861141a9589ae460659d591c43f691cd248c3719bc4f58"
+  },
+  "DECISION_REGISTER_B02_v0_3.json": {
+   "bytes": 10779,
+   "sha256": "c423d58b9125ce3668d916a80b52f6fdfa51af9f38e6199d12b26d298a1f7256"
+  },
+  "TABLE_ROW_TO_POPUP_MATRIX.md": {
+   "bytes": 83319,
+   "sha256": "29ee3df5e2917f568aa4884679374aa8eb5a8cc4624854b94225b8d3006482e7"
+  },
+  "STORYBOARD_SCREEN_STATE_MAP_v0_3.md": {
+   "bytes": 24074,
+   "sha256": "211d6fba86749b8d693232833a855c0c17480ba033d62e52c3110ec2542aabe9"
+  },
+  "STORYBOARD_SOURCE_MAP_v0_3.md": {
+   "bytes": 8019,
+   "sha256": "af6df1b50093f4a384388f444129e782d7070fbbeb5fedcc1c38fc498f05ad90"
+  },
+  "STORYBOARD_QA_REPORT_v0_3.md": {
+   "bytes": 8124,
+   "sha256": "cb457c7ea93eaf37804a3f853e7106b36864207a676bd84ee08e8e0d786e37b5"
+  },
+  "BARIAH_FEEDBACK_IMPLEMENTATION_MAP.md": {
+   "bytes": 6748,
+   "sha256": "c29b0ff8da374f4210f3736137556821846131c7659dbb5cdcd1a2547b8f80a9"
+  },
+  "BARIAH_REVIEW_CHECKLIST_v0_3.md": {
+   "bytes": 7353,
+   "sha256": "952179b105f8c72dacc03e4f7d63157aad9a0f4d53f4a772510532cea2847448"
+  },
+  "B02_PRE_STAGE2_RULING_EVIDENCE.md": {
+   "bytes": 57060,
+   "sha256": "47c4e980f8b8bdafe1434a0234bd27966ce8ff841b991b9e86af3727e24a450f"
+  }
+ },
+ "render": {
+  "engine": "PIL + Liberation Sans metric-accurate layout, parsed from the generated package",
+  "reason": "libreoffice-core only in this container; no import filter for any document format, and the missing packages return 404 from the archive",
+  "pages_rendered": 63,
+  "text_overflow": 0,
+  "line_clip": 0,
+  "offcanvas_leak": 0,
+  "box_overlap": 80,
+  "box_overlap_note": "all are the popup modal drawn over its own example screen",
+  "panel_content_overrun": 0
+ },
+ "checkable_gates": "16 / 16 PASS",
+ "pending_human": 10,
+ "not_asserted": [
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY"
+ ]
+}

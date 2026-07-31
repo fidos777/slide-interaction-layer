@@ -1,0 +1,774 @@
+{
+ "meta": {
+  "build": "v0_3",
+  "course": "K5",
+  "pl": "PL06",
+  "topik": "T03",
+  "bahagian": "B02",
+  "source_row_count": 26,
+  "components_expected": 9,
+  "source_assets": 14,
+  "status_tokens": [
+   "REVIEW_READY",
+   "PROVISIONAL_CAIR_EXECUTION",
+   "CAIR_INTEGRITY_EXCEPTION_FOR_REVIEW_BUILD_ONLY",
+   "PENDING_FINAL_BARIAH_CONFIRMATION",
+   "NOT_FOR_MMD_BUILD",
+   "MULTIMEDIA_NOT_PRODUCED"
+  ]
+ },
+ "groups": [
+  {
+   "id": "STRUKTUR_TAMAN",
+   "name": "Struktur Taman",
+   "ms": 237,
+   "phys": 256,
+   "instr": "Klik pada setiap struktur untuk penjelasan lanjut.",
+   "vo": "Struktur taman membina fungsi dan estetika landskap merangkumi pelbagai jenis binaan yang mengintegrasikan reka bentuk seni bina dengan landskap semula jadi. Setiap struktur mempunyai tujuan tersendiri, sama ada untuk akses, rekreasi, perlindungan, atau sebagai elemen visual utama. Terdapat empat jenis struktur taman: Struktur Persisir Air, Struktur Teduhan, Kemudahan Awam, dan Water Feature."
+  },
+  {
+   "id": "PERABOT_TAMAN",
+   "name": "Perabot Taman",
+   "ms": 242,
+   "phys": 261,
+   "instr": "Klik pada setiap perabot untuk penjelasan lanjut.",
+   "vo": "Perabot taman merujuk kepada elemen-elemen boleh alih atau kekal yang ditempatkan di ruang landskap untuk meningkatkan fungsi, keselesaan, dan estetika. Ini melibatkan pemahaman tentang bahan, ketahanan, ergonomik, dan kesesuaian reka bentuk dengan tema keseluruhan landskap. Terdapat lima jenis perabot taman: Kerusi Taman, Papan Tanda, Tong Sampah, Drinking Fountain, dan BBQ Pit."
+  }
+ ],
+ "components": [
+  {
+   "id": "STRUKTUR_PERSISIR_AIR",
+   "name": "Struktur Persisir Air",
+   "group": "STRUKTUR_TAMAN",
+   "ms": 238,
+   "phys": 257,
+   "display": [
+    "Meningkatkan akses dan pengalaman pengguna di tepi badan air",
+    "Untuk tasik, sungai atau pantai",
+    "Perlu kepakaran pembinaan di persekitaran lembap dan berpotensi hakisan",
+    "Asas stabil dan rata, dengan saliran permukaan yang berkesan"
+   ],
+   "vo": "Struktur persisir air direka untuk meningkatkan akses dan pengalaman pengguna di tepi badan air seperti tasik, sungai, atau pantai. Ia memerlukan kepakaran dalam pembinaan di persekitaran yang lembap dan berpotensi hakisan. Pembinaannya memerlukan asas yang sangat stabil dan rata, dengan sistem saliran permukaan yang berkesan untuk mengelakkan genangan air. Pemilihan bahan permukaan bergantung pada fungsi utama ruang tersebut.",
+   "visual": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Tidak dibenamkan.]"
+  },
+  {
+   "id": "STRUKTUR_TEDUHAN",
+   "name": "Struktur Teduhan",
+   "group": "STRUKTUR_TAMAN",
+   "ms": 239,
+   "phys": 258,
+   "display": [
+    "Perlindungan daripada matahari dan hujan",
+    "Mewujudkan ruang selesa untuk bersantai atau berinteraksi"
+   ],
+   "vo": "Struktur teduhan direka untuk memberikan perlindungan daripada matahari dan hujan, dan mewujudkan ruang yang selesa untuk bersantai atau berinteraksi.",
+   "visual": "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Tidak dibenamkan.]",
+   "note": "Subseksyen ini tiada blok Aspek Pembinaan dalam modul — satu-satunya dalam 3.3."
+  },
+  {
+   "id": "KEMUDAHAN_AWAM",
+   "name": "Kemudahan Awam",
+   "group": "STRUKTUR_TAMAN",
+   "ms": 240,
+   "phys": 259,
+   "display": [
+    "Perkhidmatan asas untuk keselesaan dan pendidikan pengguna taman",
+    "Reka bentuk berfungsi, tahan lasak dan mudah diselenggara",
+    "Aksesibiliti OKU satu pertimbangan penting",
+    "Bahan tahan vandalisme dan cuaca"
+   ],
+   "vo": "Kemudahan awam ialah bangunan atau struktur yang menyediakan perkhidmatan asas untuk keselesaan dan pendidikan pengguna taman. Ia memerlukan reka bentuk yang berfungsi, tahan lasak, dan mudah diselenggara. Aksesibiliti untuk orang kurang upaya adalah pertimbangan penting, dan bahan yang digunakan harus tahan vandalisme dan cuaca.",
+   "visual": "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: tiga sel berlabel Tandas Awam | Surau | Bangunan Interpretatif. Tidak dilukis, tidak dibenamkan.]"
+  },
+  {
+   "id": "WATER_FEATURE",
+   "name": "Water Feature",
+   "group": "STRUKTUR_TAMAN",
+   "ms": 241,
+   "phys": 260,
+   "ital": true,
+   "display": [
+    "Elemen landskap yang menggunakan air untuk estetika, bunyi atau titik tumpuan",
+    "Perlu sistem paip, pam air, penapisan dan saliran yang betul",
+    "Kawalan kualiti air termasuk pencegahan alga",
+    "Keselamatan: kedalaman dan permukaan yang tidak licin"
+   ],
+   "vo": "Ciri air ialah elemen landskap yang menggunakan air untuk tujuan estetika, bunyi, atau sebagai titik tumpuan. Pembinaannya memerlukan sistem paip, pam air, penapisan, dan sistem saliran yang betul. Kawalan kualiti air, termasuk pencegahan alga, adalah penting. Aspek keselamatan seperti kedalaman dan permukaan yang tidak licin juga perlu diambil kira.",
+   "visual": "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: keratan rentas dengan pam, penapis, paip dan saliran berlabel. Tidak dilukis, tidak dibenamkan.]"
+  },
+  {
+   "id": "KERUSI_TAMAN",
+   "name": "Kerusi Taman",
+   "group": "PERABOT_TAMAN",
+   "ms": 242,
+   "phys": 261,
+   "display": [
+    "Tempat duduk untuk pengguna berehat dan menikmati persekitaran",
+    "Elemen asas keselesaan di ruang awam dan peribadi",
+    "Pemilihan ambil kira keselesaan, ketahanan cuaca dan estetika",
+    "Pemasangan mungkin ditetapkan ke tanah bagi mengelak kecurian"
+   ],
+   "vo": "Kerusi taman menyediakan tempat duduk untuk pengguna berehat dan menikmati persekitaran. Ia merupakan elemen asas untuk keselesaan di mana-mana ruang awam atau peribadi. Pemilihan kerusi yang betul mengambil kira faktor seperti keselesaan, ketahanan terhadap cuaca, dan estetika yang sepadan dengan gaya landskap. Pemasangan mungkin melibatkan penetapan ke tanah untuk mengelakkan kecurian atau pergerakan.",
+   "visual": "[Visual: Foto jadual spesifikasi kerusi taman, modul ms 242–243. Tidak dibenamkan.]"
+  },
+  {
+   "id": "PAPAN_TANDA",
+   "name": "Papan Tanda",
+   "group": "PERABOT_TAMAN",
+   "ms": 243,
+   "phys": 262,
+   "display": [
+    "Elemen penting untuk navigasi, maklumat dan keselamatan dalam ruang landskap",
+    "Jelas, mudah dibaca, diletakkan di lokasi strategik",
+    "Boleh berupa penunjuk arah, peta taman, informasi tumbuhan atau peraturan taman",
+    "Bahan tahan cuaca dan tahan luntur"
+   ],
+   "vo": "Papan tanda ialah elemen penting untuk navigasi, maklumat, dan keselamatan dalam ruang landskap. Papan tanda mesti jelas, mudah dibaca, dan diletakkan di lokasi yang strategik. Ia boleh berupa penunjuk arah, peta taman, informasi tentang tumbuhan atau ciri landskap, atau peraturan taman. Bahan yang digunakan harus tahan cuaca dan tahan luntur.",
+   "visual": "[Visual: Rajah 25 dan Rajah 26, modul ms 245. Tidak dibenamkan.]",
+   "single_item": true
+  },
+  {
+   "id": "TONG_SAMPAH",
+   "name": "Tong Sampah",
+   "group": "PERABOT_TAMAN",
+   "ms": 245,
+   "phys": 264,
+   "display": [
+    "Kemudahan asas pengurusan sisa dan kebersihan ruang landskap",
+    "Bilangan mencukupi, diletakkan di lokasi mudah diakses",
+    "Reka bentuk tahan lama dan mudah dikosongkan",
+    "Menghalang haiwan daripada mengusik sampah"
+   ],
+   "vo": "Tong sampah ialah kemudahan asas untuk pengurusan sisa dan menjaga kebersihan ruang landskap. Tong sampah harus mencukupi dari segi bilangan dan diletakkan di lokasi yang mudah diakses. Reka bentuknya perlu tahan lama, mudah dikosongkan, dan dapat menghalang haiwan daripada mengusik sampah. Sesetengah tong sampah direka untuk pengasingan sisa kitar semula.",
+   "visual": "[Visual: Foto jadual spesifikasi tong sampah, modul ms 246–247. Tidak dibenamkan.]"
+  },
+  {
+   "id": "DRINKING_FOUNTAIN",
+   "name": "Drinking Fountain",
+   "group": "PERABOT_TAMAN",
+   "ms": 247,
+   "phys": 266,
+   "ital": true,
+   "display": [
+    "Akses mudah kepada air bersih untuk pengguna taman",
+    "Dibina dengan bahan yang bersih dan tahan lasak",
+    "Perlu sambungan paip bersih dan saliran berkesan untuk air buangan",
+    "Ketinggian berbeza untuk kanak-kanak dan orang dewasa, serta akses kerusi roda"
+   ],
+   "vo": "Pancutan air minum menyediakan akses mudah kepada air bersih untuk pengguna taman. Ia harus dibina dengan bahan yang bersih dan tahan lasak, serta memerlukan sambungan paip air yang bersih dan sistem saliran yang berkesan untuk air buangan. Ketinggian yang berbeza mungkin diperlukan untuk kanak-kanak dan orang dewasa, serta akses untuk kerusi roda.",
+   "visual": "[Visual: Foto jadual spesifikasi drinking fountain, modul ms 248–249. Tidak dibenamkan.]"
+  },
+  {
+   "id": "BBQ_PIT",
+   "name": "BBQ Pit",
+   "group": "PERABOT_TAMAN",
+   "ms": 249,
+   "phys": 268,
+   "ital": true,
+   "display": [
+    "Kemudahan untuk aktiviti memasak dan bersosial di luar",
+    "Dibina daripada bata, blok konkrit atau batu tahan api",
+    "Reka bentuk yang selamat untuk mengandungi api",
+    "Saliran baik dan jarak selamat dari bahan mudah terbakar"
+   ],
+   "vo": "BBQ pit atau kawasan barbeku menyediakan kemudahan untuk aktiviti memasak dan bersosial di luar. Biasanya ia dibina daripada bata, blok konkrit, atau batu tahan api. Ia memerlukan reka bentuk yang selamat untuk mengandungi api, dengan ruang untuk memanggang dan seringkali kawasan kerja yang berdekatan. Saliran yang baik dan jarak selamat dari bahan mudah terbakar adalah kritikal.",
+   "visual": "[Visual: Foto jadual spesifikasi BBQ pit, modul ms 249. Tidak dibenamkan.]",
+   "single_item": true
+  }
+ ],
+ "rows": [
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-01",
+   "comp": "STRUKTUR_PERSISIR_AIR",
+   "order": 1,
+   "label": "Promenade",
+   "jenis": "Promenade",
+   "fungsi": "Laluan lebar di sepanjang pinggir air, selesa untuk berjalan dan bersantai.",
+   "contoh": "Promenade Tasik Titiwangsa, KL",
+   "visual": null,
+   "ms": 238,
+   "phys": 257,
+   "vo": "Promenade ialah laluan lebar di sepanjang pinggir air, selesa untuk berjalan dan bersantai. Contohnya Promenade Tasik Titiwangsa di Kuala Lumpur."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-02",
+   "comp": "STRUKTUR_PERSISIR_AIR",
+   "order": 2,
+   "label": "Jeti",
+   "jenis": "Jeti",
+   "fungsi": "Platform atau pelantar panjang untuk akses ke air, sering digunakan untuk bot.",
+   "contoh": "Jeti Lumut, Perak",
+   "visual": null,
+   "ms": 238,
+   "phys": 257,
+   "vo": "Jeti ialah platform atau pelantar panjang untuk akses ke air, dan sering digunakan untuk bot. Contohnya Jeti Lumut di Perak."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-03",
+   "comp": "STRUKTUR_PERSISIR_AIR",
+   "order": 3,
+   "label": "Dek Kayu",
+   "jenis": "Dek Kayu",
+   "fungsi": "Ruang kayu terbuka di atas atau berhampiran air untuk rehat & pemandangan.",
+   "contoh": "Wetland Park Putrajaya",
+   "visual": null,
+   "ms": 238,
+   "phys": 257,
+   "vo": "Dek kayu ialah ruang kayu terbuka di atas atau berhampiran air, untuk rehat dan menikmati pemandangan. Contohnya Wetland Park Putrajaya."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-04",
+   "comp": "STRUKTUR_PERSISIR_AIR",
+   "order": 4,
+   "label": "Boardwalk",
+   "jenis": "Boardwalk",
+   "fungsi": "Laluan kayu di atas tanah berpaya/basah, mesra alam dan visual semula jadi.",
+   "contoh": "Boardwalk Paya Indah Wetlands",
+   "visual": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Aset K5PL06T03-B02-IMG-p239-x20. Tidak dibenamkan.]",
+   "ms": 238,
+   "phys": 257,
+   "vo": "Boardwalk ialah laluan kayu di atas tanah berpaya atau basah. Ia mesra alam dan mengekalkan visual semula jadi. Contohnya Boardwalk Paya Indah Wetlands."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-05",
+   "comp": "STRUKTUR_PERSISIR_AIR",
+   "order": 5,
+   "label": "Footbridge",
+   "jenis": "Footbridge",
+   "fungsi": "Jambatan kecil untuk laluan pejalan kaki melintasi aliran air atau longkang besar.",
+   "contoh": "Footbridge Taman Botani Perdana",
+   "visual": null,
+   "ms": 238,
+   "phys": 257,
+   "vo": "Footbridge ialah jambatan kecil untuk laluan pejalan kaki melintasi aliran air atau longkang besar. Contohnya Footbridge Taman Botani Perdana."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-01",
+   "comp": "STRUKTUR_TEDUHAN",
+   "order": 1,
+   "label": "Gazebo",
+   "jenis": "Gazebo",
+   "fungsi": "Struktur berbumbung terbuka untuk bersantai atau menikmati pemandangan.",
+   "contoh": "Taman Tasik Shah Alam",
+   "visual": null,
+   "ms": 239,
+   "phys": 258,
+   "vo": "Gazebo ialah struktur berbumbung terbuka untuk bersantai atau menikmati pemandangan. Contohnya di Taman Tasik Shah Alam."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-02",
+   "comp": "STRUKTUR_TEDUHAN",
+   "order": 2,
+   "label": "Wakaf",
+   "jenis": "Wakaf",
+   "fungsi": "Struktur tradisional Melayu yang digunakan sebagai tempat berehat.",
+   "contoh": "Wakaf di Taman Desa, KL",
+   "visual": null,
+   "ms": 239,
+   "phys": 258,
+   "vo": "Wakaf ialah struktur tradisional Melayu yang digunakan sebagai tempat berehat. Contohnya wakaf di Taman Desa, Kuala Lumpur."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-03",
+   "comp": "STRUKTUR_TEDUHAN",
+   "order": 3,
+   "label": "Pergola",
+   "jenis": "Pergola",
+   "fungsi": "Rangka struktur terbuka yang biasanya ditumbuhi tanaman pemanjat seperti bougainvillea.",
+   "contoh": "Pergola di Laman Herba Putrajaya",
+   "visual": "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Aset K5PL06T03-B02-IMG-p240-x23. Tidak dibenamkan.]",
+   "ms": 239,
+   "phys": 258,
+   "vo": "Pergola ialah rangka struktur terbuka yang biasanya ditumbuhi tanaman pemanjat seperti bougainvillea. Contohnya pergola di Laman Herba Putrajaya."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-04",
+   "comp": "STRUKTUR_TEDUHAN",
+   "order": 4,
+   "label": "Canopy",
+   "jenis": "Canopy",
+   "fungsi": "Struktur kain atau polikarbonat ringan untuk teduhan kawasan aktiviti",
+   "contoh": "Canopy rekreasi di Taman Jaya",
+   "visual": null,
+   "ms": 239,
+   "phys": 258,
+   "vo": "Canopy ialah struktur kain atau polikarbonat ringan untuk meneduhi kawasan aktiviti. Contohnya canopy rekreasi di Taman Jaya."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-05",
+   "comp": "STRUKTUR_TEDUHAN",
+   "order": 5,
+   "label": "Struktur Teduhan Moden",
+   "jenis": "Struktur Teduhan Moden",
+   "fungsi": "Struktur teduhan dengan reka bentuk kontemporari, menggunakan bahan seperti keluli dan panel lutsinar atau berlubang untuk mencipta corak cahaya dan bayangan.",
+   "contoh": "Banyak kawasan awam di Putrajaya",
+   "visual": null,
+   "ms": 239,
+   "phys": 258,
+   "vo": "Struktur teduhan moden mempunyai reka bentuk kontemporari. Ia menggunakan bahan seperti keluli dan panel lutsinar atau berlubang untuk mencipta corak cahaya dan bayangan. Ia banyak digunakan di kawasan awam di Putrajaya."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-01",
+   "comp": "KEMUDAHAN_AWAM",
+   "order": 1,
+   "label": "Tandas Awam",
+   "jenis": null,
+   "fungsi": "Kemudahan sanitasi yang bersih dan boleh diakses. Pembinaannya perlu mematuhi piawaian kebersihan dan mempunyai sistem bekalan air serta saliran yang cekap.",
+   "contoh": "Tandas Awam",
+   "visual": null,
+   "ms": 240,
+   "phys": 259,
+   "vo": "Tandas awam ialah kemudahan sanitasi yang bersih dan boleh diakses. Pembinaannya perlu mematuhi piawaian kebersihan dan mempunyai sistem bekalan air serta saliran yang cekap."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-02",
+   "comp": "KEMUDAHAN_AWAM",
+   "order": 2,
+   "label": "Surau",
+   "jenis": null,
+   "fungsi": "Ruang ibadah yang disediakan untuk umat Islam menunaikan solat. Reka bentuk biasanya ringkas tetapi memenuhi keperluan keagamaan.",
+   "contoh": "Surau",
+   "visual": null,
+   "ms": 240,
+   "phys": 259,
+   "vo": "Surau ialah ruang ibadah yang disediakan untuk umat Islam menunaikan solat. Reka bentuknya biasanya ringkas tetapi memenuhi keperluan keagamaan."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-03",
+   "comp": "KEMUDAHAN_AWAM",
+   "order": 3,
+   "label": "Bangunan Interpretatif",
+   "jenis": null,
+   "fungsi": "Struktur yang menyediakan maklumat pendidikan tentang persekitaran (flora, fauna, sejarah, geologi) melalui pameran, paparan, atau papan tanda.",
+   "contoh": "Bangunan Interpretatif",
+   "visual": null,
+   "ms": 240,
+   "phys": 259,
+   "vo": "Bangunan interpretatif ialah struktur yang menyediakan maklumat pendidikan tentang persekitaran — flora, fauna, sejarah dan geologi — melalui pameran, paparan, atau papan tanda."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-WATER-FEATURE-ROW-01",
+   "comp": "WATER_FEATURE",
+   "order": 1,
+   "label": "Air Pancut (Fountain)",
+   "jenis": null,
+   "fungsi": "Struktur yang mengeluarkan air dalam corak tertentu, mewujudkan bunyi yang menenangkan dan pergerakan visual.",
+   "contoh": "Air Pancut (Fountain)",
+   "visual": null,
+   "ms": 241,
+   "phys": 260,
+   "vo": "Air pancut ialah struktur yang mengeluarkan air dalam corak tertentu. Ia mewujudkan bunyi yang menenangkan dan pergerakan visual."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-WATER-FEATURE-ROW-02",
+   "comp": "WATER_FEATURE",
+   "order": 2,
+   "label": "Kolam (Pond)",
+   "jenis": null,
+   "fungsi": "Kawasan air statik atau perlahan, boleh menjadi kolam hiasan, kolam ikan, atau kolam refleksi.",
+   "contoh": "Kolam (Pond)",
+   "visual": null,
+   "ms": 241,
+   "phys": 260,
+   "vo": "Kolam ialah kawasan air statik atau perlahan. Ia boleh menjadi kolam hiasan, kolam ikan, atau kolam refleksi."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-WATER-FEATURE-ROW-03",
+   "comp": "WATER_FEATURE",
+   "order": 3,
+   "label": "Kolam Renang / Kolam Hiasan Besar (Pool)",
+   "jenis": null,
+   "fungsi": "Kolam berskala lebih besar, sama ada untuk berenang atau sebagai kolam hiasan dengan ciri-ciri reka bentuk yang kompleks.",
+   "contoh": "Kolam Renang/Kolam Hiasan Besar(Pool)",
+   "visual": null,
+   "ms": 241,
+   "phys": 260,
+   "vo": "Kolam renang atau kolam hiasan besar ialah kolam berskala lebih besar, sama ada untuk berenang atau sebagai kolam hiasan dengan ciri-ciri reka bentuk yang kompleks."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-01",
+   "comp": "KERUSI_TAMAN",
+   "order": 1,
+   "label": "Kerusi Kayu Keras",
+   "jenis": "Kerusi Kayu Keras",
+   "fungsi": "Bahan: kayu padu gred perabot luar dengan ketahanan semula jadi tinggi terhadap serangga dan reput, atau kayu dirawat tekanan (pressure-treated).\nDimensi: ketebalan minimum komponen utama 25mm–50mm.\nPenyambungan: skru tahan karat (stainless steel), bolt, atau tanggam kayu (mortise and tenon joints).\nKemasan: sealant luaran, minyak kayu, atau varnis tahan UV dan kelembapan.",
+   "contoh": "Jati, Cengal, Balau",
+   "visual": "[Visual: Foto jadual spesifikasi Kerusi Kayu Keras, modul ms 242. Aset K5PL06T03-B02-IMG-p242-x28. Tidak dibenamkan.]",
+   "ms": 242,
+   "phys": 261,
+   "vo": "Kerusi kayu keras menggunakan kayu padu gred perabot luar dengan ketahanan semula jadi yang tinggi terhadap serangga dan reput, atau kayu yang telah dirawat tekanan. Ketebalan minimum komponen utama, iaitu kaki, tempat duduk dan sandaran, adalah sekitar dua puluh lima hingga lima puluh milimeter untuk kestabilan dan kekuatan. Penyambungan menggunakan skru tahan karat, bolt, atau tanggam kayu yang kuat. Kemasannya menggunakan sealant luaran, minyak kayu, atau varnis yang tahan ultraungu dan kelembapan. Contoh kayunya termasuk jati, cengal dan balau."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-02",
+   "comp": "KERUSI_TAMAN",
+   "order": 2,
+   "label": "Kerusi Konkrit",
+   "jenis": "Kerusi Konkrit",
+   "fungsi": "Bahan: konkrit bertetulang gentian (FRC) atau konkrit pratuang (precast concrete). Pembesaran (expansion joints) mungkin diperlukan bagi mengelak keretakan akibat perubahan suhu.\nKemasan: boleh dibiarkan asli, digilap, dicat, atau bertekstur (exposed aggregate). Permukaan mesti licin, tanpa tepi tajam.",
+   "contoh": null,
+   "visual": "[Visual: Foto jadual spesifikasi Kerusi Konkrit, modul ms 243. Aset K5PL06T03-B02-IMG-p243-x31. Tidak dibenamkan.]",
+   "ms": 243,
+   "phys": 262,
+   "vo": "Kerusi konkrit menggunakan konkrit bertetulang gentian atau konkrit pratuang. Pembesaran mungkin diperlukan untuk mengelakkan keretakan akibat perubahan suhu. Kemasannya boleh dibiarkan asli, digilap, dicat, atau mempunyai kemasan tekstur. Permukaannya mestilah licin untuk keselesaan, tanpa tepi tajam."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-03",
+   "comp": "KERUSI_TAMAN",
+   "order": 3,
+   "label": "Kerusi Komposit",
+   "jenis": "Kerusi Komposit",
+   "fungsi": "Bahan: papan atau profil daripada campuran gentian kayu/selulosa dan plastik kitar semula. Tahan UV, kalis air, tidak reput, kalis serangga.\nKemasan: warna disepadukan dalam bahan; tidak memerlukan cat atau varnis. Tekstur permukaan mungkin meniru urat kayu.",
+   "contoh": "WPC - Wood-Plastic Composite / Plastik Kitar Semula",
+   "visual": "[Visual: Foto jadual spesifikasi Kerusi Komposit, modul ms 243. Aset K5PL06T03-B02-IMG-p243-x32. Tidak dibenamkan.]",
+   "ms": 243,
+   "phys": 262,
+   "vo": "Kerusi komposit dihasilkan daripada campuran gentian kayu atau selulosa dan plastik kitar semula. Ia tahan ultraungu, kalis air, tidak reput dan kalis serangga. Warnanya disepadukan dalam bahan, jadi ia tidak memerlukan cat atau varnis, dan tekstur permukaannya mungkin meniru urat kayu.",
+   "note_n06": true
+  },
+  {
+   "uid": "K5-PL06-T03-B02-PAPAN-TANDA-ROW-01",
+   "comp": "PAPAN_TANDA",
+   "order": 1,
+   "label": "Papan Tanda Arah / Papan Tanda Interpretatif",
+   "jenis": "Papan Tanda Arah / Papan Tanda Interpretatif",
+   "fungsi": "Bahan panel: Aluminium Komposit (ACP) 3–4mm; HPL gred luar 6–10mm; Akrilik terstabil UV 5–10mm; Kayu dirawat tekanan/kayu keras min. 20mm.\nBahan struktur/tiang: keluli bersalut serbuk atau tahan karat, profil 50mm × 50mm ke atas; kayu keras min. 75mm × 75mm.\nGrafik: cetakan UV langsung, cetakan digital pada vinil gred luar, atau ukiran laser. Mesti tahan pudar.\nRekaan: font jelas, saiz teks sesuai jarak pandang, kontras warna tinggi.",
+   "contoh": null,
+   "visual": "[Visual: Rajah 25 — Lukisan Spesifikasi Papan Tanda Informasi, dan Rajah 26 — Spesifikasi Papan Tanda Penunjuk Arah, kedua-duanya modul ms 245. Aset K5PL06T03-B02-IMG-p245-x37 dan K5PL06T03-B02-IMG-p245-x38. Tidak dibenamkan.]",
+   "ms": 244,
+   "phys": 263,
+   "vo": "Papan tanda arah dan papan tanda interpretatif menggunakan beberapa pilihan bahan panel. Aluminium komposit ialah panel sandwic dengan teras polietilena, ringan, tahan cuaca dan stabil dimensi, pada ketebalan tiga hingga empat milimeter. HPL gred luar tahan luntur ultraungu, calar dan lelasan, pada ketebalan enam hingga sepuluh milimeter. Akrilik terstabil ultraungu pula jernih dan ringan, pada ketebalan lima hingga sepuluh milimeter. Kayu dirawat tekanan atau kayu keras digunakan pada ketebalan minimum dua puluh milimeter, dengan ukiran atau cetakan laser. Bagi struktur dan tiang, keluli bersalut serbuk atau tahan karat digunakan dalam profil lima puluh milimeter persegi atau lebih besar dengan salutan anti-karat, manakala tiang kayu keras berukuran minimum tujuh puluh lima milimeter persegi. Grafiknya menggunakan cetakan ultraungu langsung, cetakan digital pada vinil gred luar, atau ukiran laser, dan mesti tahan pudar. Rekaannya memerlukan font yang jelas, saiz teks yang sesuai untuk jarak pandang, dan kontras warna yang tinggi."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-TONG-SAMPAH-ROW-01",
+   "comp": "TONG_SAMPAH",
+   "order": 1,
+   "label": "Tong Sampah Logam",
+   "jenis": "Tong Sampah Logam (Keluli Bersalut Serbuk, Keluli Tahan Karat)",
+   "fungsi": "Bahan: keluli lembut digalvani dan disalut serbuk, atau keluli tahan karat. Ketebalan dinding badan min. 1.2mm.\nCiri-ciri: penutup tahan cuaca dan tahan haiwan; pembukaan pembuangan ergonomik; tong dalam (liner) mudah dikeluarkan.",
+   "contoh": "Tong sampah silinder atau segi empat tepat dengan penutup berayun atau bukaan di atas, sering dilihat di taman bandar.",
+   "visual": "[Visual: Foto jadual spesifikasi Tong Sampah Logam, modul ms 246. Aset K5PL06T03-B02-IMG-p246-x41. Tidak dibenamkan.]",
+   "ms": 246,
+   "phys": 265,
+   "vo": "Tong sampah logam menggunakan keluli lembut yang digalvani dan disalut serbuk, atau keluli tahan karat, dengan ketebalan dinding badan minimum satu perpuluhan dua milimeter. Penutupnya tahan cuaca dan tahan haiwan, dengan pembukaan pembuangan sampah yang ergonomik. Ia dilengkapi tong dalam yang mudah dikeluarkan untuk pengosongan yang mudah."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-TONG-SAMPAH-ROW-02",
+   "comp": "TONG_SAMPAH",
+   "order": 2,
+   "label": "Tong Sampah Konkrit/Batu",
+   "jenis": "Tong Sampah Konkrit/Batu",
+   "fungsi": "Bahan: konkrit bertetulang atau batu asli/tiruan. Berat mencukupi bagi mengelak kecurian atau pergerakan tidak disengajakan.\nCiri-ciri: pembukaan sesuai untuk sampah, dengan atau tanpa tong dalam logam.",
+   "contoh": "Tong sampah berat dan kukuh yang disepadukan dengan reka bentuk landskap.",
+   "visual": "[Visual: Foto jadual spesifikasi Tong Sampah Konkrit/Batu, modul ms 247. Aset K5PL06T03-B02-IMG-p247-x44. Tidak dibenamkan.]",
+   "ms": 246,
+   "phys": 265,
+   "vo": "Tong sampah konkrit atau batu menggunakan konkrit bertetulang atau batu asli atau tiruan. Beratnya mencukupi untuk mengelakkan kecurian atau pergerakan yang tidak disengajakan. Pembukaannya sesuai untuk sampah, dengan atau tanpa tong dalam logam."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-TONG-SAMPAH-ROW-03",
+   "comp": "TONG_SAMPAH",
+   "order": 3,
+   "label": "Tong Sampah Plastik Kitar Semula (HDPE)",
+   "jenis": "Tong Sampah Plastik Kitar Semula (HDPE)",
+   "fungsi": "Bahan: plastik berketumpatan tinggi (HDPE) yang tahan UV, tidak reput dan mudah dibersihkan.\nCiri-ciri: ringan, mudah dialihkan jika tidak dipasang tetap; pelbagai warna untuk pengasingan sisa.",
+   "contoh": "Tong sampah berwarna-warni yang sering digunakan untuk pengasingan sisa kitar semula.",
+   "visual": "[Visual: Dua foto jadual spesifikasi Tong Sampah Plastik HDPE, modul ms 247. Aset K5PL06T03-B02-IMG-p247-x45 dan K5PL06T03-B02-IMG-p247-x46. Tidak dibenamkan.]",
+   "ms": 247,
+   "phys": 266,
+   "vo": "Tong sampah plastik kitar semula menggunakan plastik berketumpatan tinggi yang tahan ultraungu, tidak reput dan mudah dibersihkan. Ia ringan dan mudah dialihkan jika tidak dipasang tetap, dan tersedia dalam pelbagai warna untuk tujuan pengasingan sisa."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-01",
+   "comp": "DRINKING_FOUNTAIN",
+   "order": 1,
+   "label": "Pancutan Air Minum Keluli Tahan Karat",
+   "jenis": "Pancutan Air Minum Keluli Tahan Karat",
+   "fungsi": "Bahan: keluli tahan karat Gred 304 atau 316 (316 lebih tahan kakisan untuk persekitaran pantai). Tebal min. 1.5mm.\nInjap: injap tekan tahan lasak dan tahan vandalisme; mekanisme membersihkan diri satu kelebihan.\nKepala pancutan: aliran stabil dan bersih, dilindungi daripada sentuhan mulut pengguna.\nPenapisan (pilihan): penapis karbon atau sedimen.\nPerpaipan: air bersih (PVC atau HDPE) dan saliran air buangan yang cekap; injap tutup untuk penyelenggaraan.\nAksesibiliti: mengikut piawaian reka bentuk universal.",
+   "contoh": "Unit pancutan air moden dan bersih, biasa ditemui di taman bandar utama seperti KLCC Park atau Taman Botani Perdana, Kuala Lumpur.",
+   "visual": "[Visual: Foto jadual spesifikasi Pancutan Air Minum Keluli Tahan Karat, modul ms 248. Aset K5PL06T03-B02-IMG-p248-x49. Tidak dibenamkan.]",
+   "ms": 248,
+   "phys": 267,
+   "vo": "Pancutan air minum keluli tahan karat menggunakan keluli gred tiga kosong empat atau tiga satu enam, dengan gred tiga satu enam lebih tahan kakisan untuk persekitaran pantai, pada ketebalan minimum satu perpuluhan lima milimeter. Injapnya ialah injap tekan yang tahan lasak dan tahan vandalisme, dan mekanisme pancutan yang membersihkan diri adalah satu kelebihan. Kepala pancutan direka untuk aliran air yang stabil dan bersih, serta dilindungi daripada sentuhan langsung dengan mulut pengguna. Sistem penapisan karbon atau sedimen adalah pilihan untuk meningkatkan kualiti air. Perpaipannya menggunakan paip air bersih dan sistem saliran air buangan yang cekap, dengan injap tutup untuk penyelenggaraan. Aksesibilitinya mengikut piawaian reka bentuk universal, termasuk ketinggian berbeza untuk kanak-kanak dan akses bagi kerusi roda."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-02",
+   "comp": "DRINKING_FOUNTAIN",
+   "order": 2,
+   "label": "Pancutan Air Minum Konkrit/Batu",
+   "jenis": "Pancutan Air Minum Konkrit/Batu",
+   "fungsi": "Bahan: struktur asas konkrit bertetulang atau batu asli/tiruan. Bahagian pancutan (faucet/basin) biasanya kekal keluli tahan karat untuk kebersihan.\nPiawaian kesihatan: mesti mematuhi piawaian kualiti air minuman Kementerian Kesihatan Malaysia atau badan berkaitan.",
+   "contoh": "Unit yang lebih berat dan kukuh, disepadukan dengan reka bentuk taman yang lebih semula jadi atau tradisional.",
+   "visual": "[Visual: Foto jadual spesifikasi Pancutan Air Minum Konkrit/Batu, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x56. Tidak dibenamkan.]",
+   "ms": 248,
+   "phys": 267,
+   "vo": "Pancutan air minum konkrit atau batu menggunakan struktur asas daripada konkrit bertetulang atau batu asli atau tiruan. Bahagian pancutan airnya biasanya masih keluli tahan karat untuk kebersihan. Ia mesti mematuhi piawaian kualiti air minuman yang ditetapkan oleh Kementerian Kesihatan Malaysia atau badan berkaitan."
+  },
+  {
+   "uid": "K5-PL06-T03-B02-BBQ-PIT-ROW-01",
+   "comp": "BBQ_PIT",
+   "order": 1,
+   "label": "BBQ Pit Struktur Kekal",
+   "jenis": "BBQ Pit Struktur Kekal (Bata/Konkrit/Batu)",
+   "fungsi": "Bahan pembinaan: dinding dalam ruang pembakaran daripada bata tahan api (firebrick) atau blok konkrit tahan suhu tinggi, dengan mortar tahan api; dinding luar bata biasa, blok konkrit atau batu; pelat kerja konkrit, jubin seramik tahan haba atau batu granit.\nDimensi: ketinggian memanggang lazimnya 750–900mm dari aras tanah; saiz lubang api mengikut saiz gril.\nGril: keluli tahan karat gred makanan atau besi tuang; tebal palang min. 6mm.\nKeselamatan: pengudaraan di bawah ruang pembakaran; saliran air hujan; cerobong asap (pilihan); ruang persediaan bersebelahan; jarak selamat dari bahan mudah terbakar.",
+   "contoh": "Lubang barbeku yang dibina tetap di taman perumahan, tapak perkhemahan awam, atau kawasan rekreasi keluarga seperti di Taman Rekreasi Bukit Jalil, Kuala Lumpur.",
+   "visual": "[Visual: Foto jadual spesifikasi BBQ Pit Struktur Kekal, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x57. Tidak dibenamkan.]",
+   "ms": 249,
+   "phys": 268,
+   "vo": "BBQ pit struktur kekal dibina daripada bata, konkrit atau batu. Dinding dalam ruang pembakaran menggunakan bata tahan api atau blok konkrit yang tahan suhu tinggi, dengan mortar tahan api. Dinding luar pula menggunakan bata biasa, blok konkrit, atau batu semula jadi atau tiruan, manakala permukaan kerja menggunakan konkrit, jubin seramik tahan haba, atau batu granit. Ketinggian memanggang lazimnya tujuh ratus lima puluh hingga sembilan ratus milimeter dari aras tanah, dan saiz lubang api bergantung pada saiz gril yang digunakan. Grilnya menggunakan keluli tahan karat gred makanan atau besi tuang, dengan tebal palang minimum enam milimeter. Dari segi keselamatan, ia memerlukan pengudaraan di bahagian bawah ruang pembakaran, saliran air hujan di dasar, cerobong asap jika perlu, ruang persediaan bersebelahan, dan jarak selamat dari bahan mudah terbakar mengikut piawaian keselamatan kebakaran."
+  }
+ ],
+ "frames": {
+  "s01": {
+   "course": "PL06: Pengurusan Operasi Pembinaan Landskap",
+   "topic": "Topik 3 Bahagian 2: Komponen Landskap",
+   "title": "Komponen Landskap",
+   "button": "MULA",
+   "vo": "Selamat datang ke Pakej Latihan enam, Pengurusan Operasi Pembinaan Landskap. Topik tiga, Bahagian dua: Komponen Landskap. Klik butang MULA untuk memulakan pembelajaran.",
+   "mmd": "VO PL satu, bukan PL kosong satu, dan seterusnya."
+  },
+  "s02": {
+   "title": "Pengenalan / Komponen Landskap",
+   "dialogue": [
+    [
+     "PELATIH",
+     "Encik, kerja tanaman di tapak ini dah siap. Apa lagi yang tinggal?"
+    ],
+    [
+     "PENYELIA TAPAK",
+     "Tinggal komponen binaan. Dua kumpulan — struktur taman dan perabot taman."
+    ],
+    [
+     "PELATIH",
+     "Saya faham struktur taman itu binaan seperti dek dan teduhan. Perabot taman pula kelengkapan, betul?"
+    ],
+    [
+     "PENYELIA TAPAK",
+     "Betul. Dan fungsi serta kaedah pemasangannya berbeza. Itu yang menentukan cara kita merancang kerja."
+    ],
+    [
+     "PELATIH",
+     "Jadi saya perlu tahu bezanya sebelum menyusun jadual kerja di tapak."
+    ]
+   ],
+   "visual": "[Visual: Latar tapak landskap dalam pembinaan. Dua watak neutral peranan berdiri di kawasan yang sudah ditanam, dengan struktur taman kelihatan di latar belakang.]"
+  },
+  "s03": {
+   "title": "Gambaran Keseluruhan",
+   "reflect": "Cuba fikirkan — jika anda perlu memilih bahan untuk sebuah kerusi taman di tepi tasik, bahan manakah yang anda pilih, dan mengapa?",
+   "mindmap": "[Visual: Mind Map — nod pusat 'Komponen Landskap' bercabang kepada dua kumpulan. Cabang 1 Struktur Taman: Struktur Persisir Air, Struktur Teduhan, Kemudahan Awam, Water Feature. Cabang 2 Perabot Taman: Kerusi Taman, Papan Tanda, Tong Sampah, Drinking Fountain, BBQ Pit. Spesifikasi teks sahaja — aset Mind Map TIDAK dihasilkan pada peringkat ini.]",
+   "visual": "[Visual: Kad narator Hilmi — potret separuh badan, pakaian kerja lapangan, latar tapak landskap kabur.]",
+   "vo": "Hilmi: Tadi anda mendengar perbualan di tapak tentang apa yang tinggal selepas kerja tanaman siap. Bahagian ini meneliti dua kumpulan komponen landskap. Kumpulan pertama ialah Struktur Taman, yang merangkumi Struktur Persisir Air, Struktur Teduhan, Kemudahan Awam, dan Water Feature. Kumpulan kedua ialah Perabot Taman, yang merangkumi Kerusi Taman, Papan Tanda, Tong Sampah, Drinking Fountain, dan BBQ Pit. Cuba fikirkan — jika anda perlu memilih bahan untuk sebuah kerusi taman di tepi tasik, bahan manakah yang anda pilih, dan mengapa? Mari teliti setiap komponen di halaman seterusnya."
+  },
+  "rumusan": {
+   "title": "Rumusan",
+   "heading": "Komponen Landskap — Struktur Taman dan Perabot Taman",
+   "bullets": [
+    [
+     [
+      "Mengenal pasti struktur dan elemen landskap - kerja pembinaan, penyeliaan dan penyelenggaraan dirancang dengan tepat",
+      false
+     ]
+    ],
+    [
+     [
+      "Struktur Taman - Struktur Persisir Air, Struktur Teduhan, Kemudahan Awam, ",
+      false
+     ],
+     [
+      "Water Feature",
+      true
+     ]
+    ],
+    [
+     [
+      "Perabot Taman - Kerusi Taman, Papan Tanda, Tong Sampah, ",
+      false
+     ],
+     [
+      "Drinking Fountain",
+      true
+     ],
+     [
+      " dan ",
+      false
+     ],
+     [
+      "BBQ Pit",
+      true
+     ]
+    ],
+    [
+     [
+      "Kontraktor dapat merancang, melaksana dan menyelenggara setiap komponen landskap mengikut fungsinya di tapak",
+      false
+     ]
+    ]
+   ],
+   "vo": "Komponen Landskap — Struktur Taman dan Perabot Taman. Mengenal pasti struktur dan elemen landskap membolehkan kerja pembinaan, penyeliaan dan penyelenggaraan dirancang dengan tepat. Struktur taman merangkumi Struktur Persisir Air, Struktur Teduhan, Kemudahan Awam dan Water Feature, manakala perabot taman merangkumi Kerusi Taman, Papan Tanda, Tong Sampah, Drinking Fountain dan BBQ Pit. Dengan memahami komponen-komponen ini, kontraktor dapat merancang, melaksana dan menyelenggara setiap komponen landskap mengikut fungsinya di tapak.",
+   "visual": "[Visual: Papan rumusan — dua kumpulan komponen bersebelahan, empat dan lima item. Tidak dibenamkan.]"
+  },
+  "kuiz": {
+   "title": "Kuiz",
+   "items": [
+    {
+     "n": 1,
+     "typ": "MCQ",
+     "stem": "Struktur persisir air dibina di tepi badan air seperti tasik, sungai atau pantai. Apakah keperluan pembinaan yang paling kritikal bagi struktur ini?",
+     "opts": [
+      [
+       "A",
+       "Warna permukaan yang menarik"
+      ],
+      [
+       "B",
+       "Asas yang stabil dan rata dengan saliran permukaan yang berkesan"
+      ],
+      [
+       "C",
+       "Ketinggian struktur melebihi dua meter"
+      ],
+      [
+       "D",
+       "Penggunaan bahan import"
+      ]
+     ],
+     "key": "B",
+     "ok": "Betul. Persekitaran lembap dan berpotensi hakisan memerlukan asas yang stabil dan rata, serta saliran permukaan yang berkesan.",
+     "bad": "Belum tepat. Rujuk semula Struktur Persisir Air — asas yang stabil dan saliran permukaan yang berkesan adalah keperluan kritikal.",
+     "src": "modul ms 238"
+    },
+    {
+     "n": 2,
+     "typ": "MCQ",
+     "stem": "Manakah antara berikut merupakan struktur teduhan tradisional Melayu yang digunakan sebagai tempat berehat?",
+     "opts": [
+      [
+       "A",
+       "Pergola"
+      ],
+      [
+       "B",
+       "Canopy"
+      ],
+      [
+       "C",
+       "Wakaf"
+      ],
+      [
+       "D",
+       "Gazebo"
+      ]
+     ],
+     "key": "C",
+     "ok": "Betul. Wakaf ialah struktur tradisional Melayu yang digunakan sebagai tempat berehat.",
+     "bad": "Belum tepat. Pergola ialah rangka struktur terbuka yang ditumbuhi tanaman pemanjat. Wakaf ialah struktur tradisional Melayu.",
+     "src": "modul ms 239"
+    },
+    {
+     "n": 3,
+     "typ": "MCQ",
+     "stem": "Apakah pertimbangan utama dalam pemilihan bahan bagi kemudahan awam seperti tandas dan surau di taman?",
+     "opts": [
+      [
+       "A",
+       "Bahan yang tahan vandalisme dan cuaca"
+      ],
+      [
+       "B",
+       "Bahan yang paling murah di pasaran"
+      ],
+      [
+       "C",
+       "Bahan yang perlu dicat semula setiap bulan"
+      ],
+      [
+       "D",
+       "Bahan yang seragam dengan perabot taman"
+      ]
+     ],
+     "key": "A",
+     "ok": "Betul. Kemudahan awam memerlukan bahan yang tahan vandalisme dan cuaca, serta mudah diselenggara.",
+     "bad": "Belum tepat. Rujuk semula Kemudahan Awam — ketahanan terhadap vandalisme dan cuaca adalah pertimbangan utama.",
+     "src": "modul ms 240"
+    },
+    {
+     "n": 4,
+     "typ": "MCQ",
+     "stem": "Dalam pembinaan water feature, apakah aspek kawalan kualiti air yang dinyatakan dalam modul?",
+     "opts": [
+      [
+       "A",
+       "Penambahan garam"
+      ],
+      [
+       "B",
+       "Pencegahan alga"
+      ],
+      [
+       "C",
+       "Pemanasan air"
+      ],
+      [
+       "D",
+       "Pewarnaan air"
+      ]
+     ],
+     "key": "B",
+     "ok": "Betul. Kawalan kualiti air termasuk pencegahan alga.",
+     "bad": "Belum tepat. Pencegahan alga adalah sebahagian daripada kawalan kualiti air bagi water feature.",
+     "src": "modul ms 241"
+    },
+    {
+     "n": 5,
+     "typ": "MULTIPLE RESPONSE",
+     "stem": "Pilih SEMUA komponen yang tergolong dalam Perabot Taman.",
+     "opts": [
+      [
+       "A",
+       "Kerusi Taman"
+      ],
+      [
+       "B",
+       "Papan Tanda"
+      ],
+      [
+       "C",
+       "Boardwalk"
+      ],
+      [
+       "D",
+       "Tong Sampah"
+      ],
+      [
+       "E",
+       "Drinking Fountain"
+      ],
+      [
+       "F",
+       "BBQ Pit"
+      ],
+      [
+       "G",
+       "Gazebo"
+      ]
+     ],
+     "key": "A, B, D, E, F",
+     "ok": "Betul. Perabot taman merangkumi Kerusi Taman, Papan Tanda, Tong Sampah, Drinking Fountain dan BBQ Pit.",
+     "bad": "Belum tepat. Boardwalk ialah struktur persisir air dan Gazebo ialah struktur teduhan — kedua-duanya struktur taman, bukan perabot taman.",
+     "src": "modul ms 242–249"
+    }
+   ],
+   "pass_mark": "3/5 = 60%",
+   "vo": "Sekarang mari kita uji kefahaman anda. Terdapat lima soalan berdasarkan komponen landskap yang baru diteliti. Empat soalan pertama adalah aneka pilihan dengan satu jawapan sahaja, dan soalan kelima memerlukan lebih daripada satu jawapan. Bacalah setiap soalan dengan teliti sebelum menghantar jawapan anda."
+  },
+  "tamat": {
+   "title": "Tamat Bahagian",
+   "lines": [
+    "Anda telah melengkapkan Topik 3 Bahagian 2: Komponen Landskap.",
+    "Struktur Taman dan Perabot Taman telah diteroka sepenuhnya."
+   ],
+   "vo": "Anda telah melengkapkan Topik tiga Bahagian dua, Komponen Landskap. Struktur taman dan perabot taman telah diteroka sepenuhnya.",
+   "visual": "[Visual: Papan penutup — sama keluarga dengan imej pembuka S01. Tidak dibenamkan.]"
+  }
+ }
+}

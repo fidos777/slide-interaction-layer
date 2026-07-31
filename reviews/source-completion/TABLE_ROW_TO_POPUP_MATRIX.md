@@ -8,6 +8,13 @@ BLOCKED_MODULE_DOCX_INTEGRITY_NOT_VERIFIED
 NO GENERATOR CHANGED · NO PPTX REGENERATED OR PATCHED · NO COMPONENT PROPAGATED
 ```
 
+> **v0.3 status.** The 26-row source inventory in this document is **unchanged** and was consumed
+> verbatim by the v0.3 review build. Every row maps to exactly one popup state; see
+> `STORYBOARD_SCREEN_STATE_MAP_v0_3.md` §3. The `AUTHORITY_OR_DESIGN_RULINGS_PENDING` list in §8.4 is
+> now answered on a **`confirmed-CAIR-provisional`** basis in `DECISION_REGISTER_B02_v0_3.json`; those
+> rulings still require Bariah's final confirmation. The module DOCX integrity gap remains open under
+> `B02-CAIR-INT-001`.
+
 > **Revision.** Stage 1 issued this document with a readiness verdict of
 > `TABLE_INVENTORY_COMPLETE_READY_FOR_SCREEN_STATE_MAP`. **Stage 1.5 supersedes that verdict.** The
 > source inventory is unchanged — 26 rows, 26 IDs, same locators, same image ownership — but the
