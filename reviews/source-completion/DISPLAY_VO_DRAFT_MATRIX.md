@@ -1,13 +1,13 @@
 # DISPLAY_VO_DRAFT_MATRIX
 
-**Drafts only.** Nothing here enters a PPTX at this gate.
+**Drafts only.** Nothing here enters a PPTX at this gate. **Drafts unchanged by the PDF reconciliation** — only page numbers and asset references are corrected below.
 Budget: split-STATE line box **5.1496 in → 41–45 chars/line**, ceiling ~12.5 lines, target ~10.
 Rules applied: concise display · fuller source-bound VO · no narrator prefix · `reka bentuk` spaced ·
 `Promenade` corrected · italic per the **current 3-term lexicon only** (D-3 unresolved).
 
 ---
 
-## S05 — Struktur Persisir Air · ~p237 · Rajah 23
+## S05 — Struktur Persisir Air · **module p238** · `3.3.1` · asset ×1 (Rajah 23, p239)
 
 **Display** (5 bullets, ~8 lines)
 - Meningkatkan akses dan pengalaman pengguna di tepi badan air
@@ -26,7 +26,7 @@ pada fungsi utama ruang tersebut. Jenisnya termasuk Promenade, Jeti, Dek Kayu, B
 terms present; none italicised under the current 3-term lexicon. **Confidence: HIGH** — display and VO
 trace to the intro, `Aspek Pembinaan` and the 5-row table.
 
-## S06 — Struktur Teduhan · ~p239 · Rajah 24
+## S06 — Struktur Teduhan · **module p239** · `3.3.2` · asset ×1 (Rajah 24, p240)
 
 **Display**
 - Perlindungan daripada matahari dan hujan
@@ -43,7 +43,7 @@ seperti keluli dan panel lutsinar atau berlubang untuk mencipta corak cahaya dan
 italicised. **Confidence: HIGH.** Note: this subsection has **no `Aspek Pembinaan` block** — the only
 one of the four in 3.3 without one.
 
-## S07 — Kemudahan Awam · ~p240 · **no figure**
+## S07 — Kemudahan Awam · **module p240** · `3.3.3` · **`NO_DEDICATED_SOURCE_IMAGE`**
 
 **Display**
 - Perkhidmatan asas untuk keselesaan dan pendidikan pengguna taman
@@ -57,10 +57,9 @@ yang menyediakan perkhidmatan asas untuk keselesaan dan pendidikan pengguna tama
 bentuk yang berfungsi, tahan lasak, dan mudah diselenggara. Aksesibiliti untuk OKU adalah pertimbangan
 penting, dan bahan yang digunakan harus tahan vandalisme dan cuaca.
 
-**Terminology** — `reka bentuk` spaced (D-4). **Confidence: HIGH** for text; **visual pending** — no
-figure exists.
+**Terminology** — `reka bentuk` spaced (D-4). **Confidence: HIGH** for text. **Visual: `NO_DEDICATED_SOURCE_IMAGE`** — confirmed in the rendered PDF, not merely absent from text. Treatment is `DEC-1`.
 
-## S08 — Water Feature · ~p240 · **no figure**
+## S08 — Water Feature · **module p241** · `3.3.4` · **`NO_DEDICATED_SOURCE_IMAGE`**
 
 **Display**
 - Elemen landskap yang menggunakan air untuk estetika, bunyi atau titik tumpuan
@@ -76,9 +75,10 @@ kedalaman dan permukaan yang tidak licin juga perlu diambil kira.
 
 **Terminology** — `Water Feature` **italic** (lexicon). Source calls the concept `Ciri air` in the body
 but `Water Feature` in the heading — both forms are source-attested; the sample uses `Water Feature` as
-its card label. **Confidence: HIGH.**
+its card label. **Confidence: HIGH.** **Visual: `NO_DEDICATED_SOURCE_IMAGE`** — module p241 carries zero
+embedded images. Treatment is `DEC-1`.
 
-## S11 — Kerusi Taman · ~p242 · **no figure**
+## S11 — Kerusi Taman · **module p242** · `3.4.1` ⚠️ · assets ×3 (p242–243)
 
 **Display**
 - Tempat duduk untuk pengguna berehat dan menikmati persekitaran
@@ -97,15 +97,19 @@ pergerakan.
 steel`, `outdoor sealant`, `wood oil`, `precast concrete`, `exposed aggregate` — all Tier-2 (D-3), none
 italicised under the current lexicon. **Confidence: HIGH.**
 
-## S12 — Papan Tanda · ~p244 · Rajah 25 + 26 · **ALREADY ACCEPTED**
+## S12 — Papan Tanda · **module p243** · `3.4.1` ⚠️ · assets ×2 (Rajah 25 + 26, p245) · **ALREADY ACCEPTED**
 
 **Not redrafted.** Display and VO are in the accepted sample and **verified verbatim against the module
 this turn** — the source paragraph matches probe `notesSlide16` exactly. This screen is the calibration
 reference for the other eight. Its locator `IMG-05` / ms 243 stands.
 
-**New from source:** Papan Tanda has **two** figures, not one.
+**New from source:** Papan Tanda has **two** figures, not one — `Rajah 25` and `Rajah 26`, both on
+module p245, both extracted.
 
-## S13 — Tong Sampah · ~p245 · **no figure**
+**Locator vindicated:** the probe's `IMG-05, ms 243` is now measured exactly — `3.4.1 Papan Tanda`
+renders on module **243**. The DOCX interpolation had estimated ~244 and was wrong by one page.
+
+## S13 — Tong Sampah · **module p245** · `3.4.1` ⚠️ · assets ×4 (p246–247)
 
 **Display**
 - Kemudahan asas pengurusan sisa dan kebersihan ruang landskap
@@ -122,7 +126,7 @@ Sesetengah tong sampah direka untuk pengasingan sisa kitar semula.
 **Terminology** — `HDPE` ×3, `liner`, `galvanized and powder-coated steel`, `stainless steel` in table.
 **Confidence: HIGH.**
 
-## S14 — Drinking Fountain · ~p247 · **no figure**
+## S14 — Drinking Fountain · **module p247** · `3.4.2` · assets ×2 (p248–249)
 
 **Display**
 - Akses mudah kepada air bersih untuk pengguna taman
@@ -141,7 +145,7 @@ minum`; the heading and the sample label use `Drinking Fountain` — both source
 Table adds `push-button valve`, `self-cleaning`, `shut-off valve`, `faucet`, `basin`, `Universal
 Design`. **Confidence: HIGH.**
 
-## S15 — BBQ pit · ~p249 · **no figure**
+## S15 — BBQ pit · **module p249** · `3.4.3` · asset ×1 (p249)
 
 **Display**
 - Kemudahan untuk aktiviti memasak dan bersosial di luar
@@ -174,6 +178,23 @@ Table adds `firebrick`, `cast iron`. **Confidence: HIGH.**
 | S15 | 5 | 60 ch | ~8 | ✅ |
 
 All eight fit, with S12's accepted 10 lines as the calibration point. **No draft required cutting.**
+
+## Asset availability per draft
+
+| Screen | Module p | Rendered no. | Assets |
+|---|---:|---|---:|
+| S05 | 238 | `3.3.1` | 1 |
+| S06 | 239 | `3.3.2` | 1 |
+| **S07** | 240 | `3.3.3` | **0 — `NO_DEDICATED_SOURCE_IMAGE`** |
+| **S08** | 241 | `3.3.4` | **0 — `NO_DEDICATED_SOURCE_IMAGE`** |
+| S11 | 242 | `3.4.1` ⚠️ | 3 |
+| S12 | 243 | `3.4.1` ⚠️ | 2 |
+| S13 | 245 | `3.4.1` ⚠️ | 4 |
+| S14 | 247 | `3.4.2` | 2 |
+| S15 | 249 | `3.4.3` | 1 |
+
+⚠️ = the three-way `3.4.1` collision, `SOURCE_DEFECT_REGISTER.md` D-2. Screens are identified by
+heading *title*, which is unique, so the collision does not affect the mapping.
 
 ## Coverage rule
 

@@ -1,8 +1,20 @@
 # SOURCE_ARTIFACT_INVENTORY — K5 PL06 T3 B02 source completion
 
 ```
-GATE STATUS: SOURCE ACQUIRED — TEXT COMPLETE, IMAGES NOT EXTRACTABLE
+GATE STATUS: SOURCE COMPLETE — TEXT (DOCX) + RENDERED PAGINATION & VISUALS (PDF)
+AUTHORITY SPLIT:  DOCX = text extraction  ·  PDF = pagination, heading numbering, visuals
 ```
+
+## 0. Two sources, two authorities
+
+| Artifact | Authority for | Status |
+|---|---|---|
+| `[PROOFREAD FINAL] … 300426.docx` (Drive `16j15Knt…bJ4`, 16.8 MB) | **text extraction** | ✅ accepted, **not redone** |
+| `K5_PL06_T03_B02_pages_256269.pdf` — `sha256 30a6903dacbd7e8bce60dc1aa32026fc4ed98439054aeced9e895b5df828a3f4`, 429,918 B, 14 pp | **rendered pagination · heading numbering · visuals** | ✅ received, extracted |
+
+The DOCX text extraction stands unchanged and the 13/19 text-coverage result is preserved. The PDF
+resolved the three things text could not carry: physical pagination, Word heading numbering, and
+embedded images.
 
 ---
 
@@ -26,11 +38,10 @@ Three attachment attempts did not reach the session. The file was retrieved from
 |---|---|---|---|
 | 1 | `…300426_compressed.pdf` | **`.docx`** | Same document, Word form. Text is *better* for extraction; pagination is worse — see #2 |
 | 2 | 3 MB | **16.8 MB** | The 3 MB figure was presumably the compressed PDF. Size is why attachment failed |
-| 3 | physical PDF pages ~256–269 | **DOCX has no fixed pagination** | **Physical page mapping is impossible.** Module pages are recoverable from the TOC; physical pages are a PDF property this file does not have |
+| 3 | physical PDF pages ~256–269 | DOCX has no fixed pagination | ~~impossible~~ → **RESOLVED by the PDF extract.** Offset measured at **+19** on all 14 pages |
 
-**This is the authoritative `[PROOFREAD FINAL]` document**, so it is the correct source — but the
-physical-page half of the requested mapping cannot be produced from it. If physical page numbers are
-needed downstream, the PDF is still required.
+**This is the authoritative `[PROOFREAD FINAL]` document** and remains the text authority. The
+physical-page half of the mapping, which it could not supply, is now supplied by the PDF extract.
 
 ## 2. Module page scope — confirmed from the table of contents — `MEASURED_FACT`
 
@@ -64,7 +75,17 @@ This is **verbatim** the S04 VO in probe v0.1 `notesSlide4`. The Papan Tanda par
 `notesSlide16` verbatim. **The probe's clone-from-source claim is now independently confirmed against
 the module itself**, not just against its own documentation.
 
-## 4. Images — NOT extractable in this session — `MEASURED_FACT`
+## 4. Images — RESOLVED by the PDF extract — `MEASURED_FACT`
+
+**14 embedded images extracted** to `source-assets/`, covering **7 of 9** mapped screens.
+The earlier "six screens have no figure" finding was an artefact of text extraction: only *captioned*
+`Rajah` figures survive text export, and the module carries **10 further unnumbered photographs inside
+specification tables**. See `B02_ASSET_MANIFEST.md`.
+
+Only **S07 Kemudahan Awam** and **S08 Water Feature** genuinely have no image — confirmed by position
+against their headings in the rendered PDF, not inferred.
+
+### 4.1 Superseded — why the DOCX could not do this
 
 The module contains figures in scope (`Rajah 23`–`26`, see `B02_ASSET_MANIFEST.md`), but **no image
 file could be extracted.**
@@ -75,12 +96,8 @@ file could be extracted.**
 | `download_file_content` | returns base64 of the **whole 16.8 MB** file ≈ 22 MB encoded — exceeds what a tool result can return |
 | Attachment | failed three times |
 
-**`source-assets/` therefore remains empty**, and per the standing instruction no visual is fabricated
-where none can be obtained. The manifest records which figures *exist*, their captions and their bound
-screens — that is real, source-bound information — but the image binaries are still outstanding.
-
-**To close:** the PDF (any route), or the four figures exported individually, or a smaller DOCX
-containing only pages 237–250.
+This is now closed. `source-assets/` holds 14 JPEGs, 408 KB total, each with a recorded crop boundary,
+dimensions and SHA-256.
 
 ## 5. Other evidence held
 
@@ -94,5 +111,5 @@ Still absent: `packet_B02.json`, `asset_manifest.json`, the Tier-1 spec deck.
 
 ## 6. Toolchain
 
-PyMuPDF 1.28.0 installed (unused — no PDF arrived). Extraction was done with the Drive text
-representation plus local Python. Pillow present.
+PyMuPDF 1.28.0 — used for all PDF work: folio reading, heading extraction, image inventory and
+extraction with crop boundaries. Text extraction used the Drive representation plus local Python.

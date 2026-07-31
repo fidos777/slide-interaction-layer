@@ -1,7 +1,8 @@
 # SOURCE_COMPLETION_IMPLEMENTATION_PLAN — K5 PL06 T3 B02
 
 ```
-GATE STATUS: TEXT COMPLETE (13/19) · ASSETS OUTSTANDING (0/19)
+GATE STATUS: TEXT COMPLETE (13/19, preserved) · ASSETS EXTRACTED (14, 7 of 9 screens)
+AUTHORITY: DOCX = text · PDF = rendered pagination, heading numbering, visuals
 No PPTX generated. Accepted visual sample unmodified.
 ```
 
@@ -16,7 +17,9 @@ No PPTX generated. Accepted visual sample unmodified.
 | Sections mapped | 3.3 @ p237, 3.4 @ p242, boundary 3.5 @ p251 |
 | Screens mapped | **9 of 9**, every directed assignment matching a real heading, **no mismatch** |
 | Text extracted | all nine, plus the 3.4 section intro for S10 |
-| Figures identified | 4 (`Rajah 23`–`26`) covering 3 screens; **6 screens have none** |
+| Figures identified | ~~4 covering 3 screens~~ → **14 assets extracted, 7 of 9 screens** (PDF) |
+| Pagination | **measured**, offset +19 on all 14 pages; 3 interpolations corrected |
+| Heading numbering | **measured** — D-2 confirmed, `3.4.1` used three times |
 | Defects | D-1 confirmed · D-2 **not confirmed as stated** · D-3 confirmed and much larger than expected · D-4 confirmed · **D-5 new** |
 | Drafts | display + VO for all 8 outstanding screens, all within budget |
 | Probe corroborated | S04 and S12 source text **matches probe v0.1 verbatim** |
@@ -25,31 +28,32 @@ No PPTX generated. Accepted visual sample unmodified.
 
 | # | Gap | Blocking | Needs |
 |---|---|---|---|
-| **G-1** | **Figure binaries** for S05, S06, S12 | asset binding | PDF · 4 exported images · or a p237–250 DOCX |
-| **G-2** | **Six screens have no source figure** | visual regions on S07, S08, S11, S13, S14, S15 | **a decision, not a file** — see §5 |
+| ~~G-1~~ | ~~Figure binaries~~ | — | ✅ **CLOSED** — 14 extracted with crop boundaries and hashes |
+| **G-2** | **Two screens have no source image** — S07, S08 only | their visual regions | **a decision, not a file** — `DEC-1` |
 | **G-3** | D-3 lexicon scope — 42 terms vs a 3-term list | italic treatment | a human cut-line — see §4 |
-| **G-4** | D-2 numbering | nothing downstream | rendered document |
+| ~~G-4~~ | ~~D-2 numbering~~ | — | ✅ **CLOSED** — `CONFIRMED_IN_RENDERED_PDF` |
 | **G-5** | S02 / S03 / S18 / S19 | 4 screens | ratified decisions and quiz source — **not** the module |
-| **G-6** | Measured per-screen module pages | precision only | rendered pagination |
+| ~~G-6~~ | ~~Measured module pages~~ | — | ✅ **CLOSED** — measured; S05, S08, S12 corrected by one page |
 
-**Only G-1 and G-2 stand between here and a source-bound deck.** G-3 affects styling, not content.
+**Only G-2 and G-3 remain, and both are decisions rather than missing files.** G-2 covers two screens;
+G-3 affects styling, not content.
 
 ## 3. Next steps, in order
 
-### Step 1 — close G-1
-Obtain the four figures. Extract to `source-assets/` as
-`K5PL06T03-B02-IMG-<rajah>__p<module>.png`, hash each, complete the manifest.
+### ~~Step 1 — close G-1~~ ✅ DONE
+14 assets extracted to `source-assets/` with asset_id, source component, module page, physical page,
+crop boundary, file type, dimensions, SHA-256, intended screen and usage status.
 
-### Step 2 — resolve G-2 *(decision required)*
-Six of nine screens have no module figure. Three options, none taken:
+### Step 2 — resolve G-2 for **S07 and S08 only** *(decision required)*
+Both confirmed `NO_DEDICATED_SOURCE_IMAGE` by position in the rendered PDF. Two source-bound options,
+**prepared but not selected and not implemented**:
 
 | Option | Effect |
 |---|---|
-| **A** — visual region carries the **specification table** | source-bound, real content, no fabrication. Table is dense — needs a display-budget check per screen |
-| **B** — visual region stays a `SOURCE PENDING` placeholder | honest, but six of nine detail screens ship with an empty panel |
-| **C** — commission photography | out of scope here; a production request |
+| **A — source-derived native typology diagram** | native shapes built from the screen's own specification table; every label verbatim. Fills the panel, matches the deck's native-geometry approach, scales cleanly. It is a *rendering of* the source, not an image *from* it — provenance must say so |
+| **B — cropped source table** | crop the specification table from the rendered PDF. Unambiguously a module artefact, zero interpretive step. But small type in a 5.8621 × 5.1387 in panel — legibility needs testing, and it duplicates content the display already carries |
 
-**Recommended: A**, with B as the fallback where a table will not fit. Not decided.
+Neither invents imagery; no external image is sourced. **Not selected.**
 
 ### Step 3 — resolve G-3 *(decision required)*
 Pick the lexicon cut-line: Tier 1 (12 terms) · Tier 1+2 (30) · all (42). **Tier 1 recommended** — it
@@ -68,11 +72,13 @@ Package + rule suite, plus new source-fidelity checks: every display proposition
 
 | # | Decision | Recommendation |
 |---|---|---|
-| **DEC-1** | Visual region for the six figure-less screens | **Option A** — specification table |
+| **DEC-1** | Visual region for **S07 and S08** | Option **A** (native typology diagram) or **B** (cropped table) — **not selected** |
 | **DEC-2** | Italic lexicon scope | **Tier 1**, 12 terms |
 | **DEC-3** | `Promenande` → `Promenade` in display/VO | **yes** — heading typo, table is correct |
 | **DEC-4** | `rekabentuk` → `reka bentuk` | **yes** — 131:8 majority |
 | **DEC-5** | Report D-5 heading defect to the module owner | **yes** — affects their TOC, not our deck |
+| **DEC-6** | Report **D-2** `3.4.1` three-way collision to the module owner | **yes** — cross-references and generated navigation are ambiguous |
+| **DEC-7** | Confirm the S14 asset-page refinement (§3 of the manifest) | asset positions put Drinking Fountain images on p248–249, not p247–248 |
 
 All five are recommendations. None is applied.
 
@@ -87,13 +93,20 @@ All five are recommendations. None is applied.
 | Do not fabricate a visual where the module provides none | ✅ six screens recorded as having none; `source-assets/` empty |
 | Keep S02, S03, S18, S19 open | ✅ all four held |
 
-## 6. Honest position on the source
+## 6. Honest position on the two sources
 
-The DOCX is the authoritative `[PROOFREAD FINAL]` document and its **text is fully sufficient** for
-nine screens — better than the PDF would have been for extraction. Two things it cannot give:
+The split works. The DOCX gave clean, complete text for nine screens; the PDF gave the three things
+text cannot carry — fixed pagination, Word heading numbering, and embedded images.
 
-1. **Physical PDF pages** — it has no fixed pagination. The requested ~256–269 mapping is not
-   producible from this file, and per-screen module pages are interpolated, not read.
-2. **Images** — reachable only as base64 of the whole 16.8 MB file, which exceeds a returnable result.
+**What the reconciliation changed:**
 
-Both are file-format limits, not source defects.
+| Finding | Was | Now |
+|---|---|---|
+| D-2 `3.4.1` | `NOT_DETERMINABLE` | **`CONFIRMED_IN_RENDERED_PDF`** — three-way collision |
+| Screens without imagery | 6 | **2** (S07, S08) |
+| Module pages | interpolated | **measured**; S05, S08, S12 each off by one |
+| `IMG-05` / ms 243 | "within interpolation error" | **exactly confirmed** — the probe was right |
+
+**What it did not change:** the text extraction, the display and VO drafts, and the 13/19 text-coverage
+result — all preserved. The DOCX-era `NOT_DETERMINABLE` on D-2 was correct for the evidence then held;
+it did not need to be right, it needed to be honest, and it was superseded rather than overturned.

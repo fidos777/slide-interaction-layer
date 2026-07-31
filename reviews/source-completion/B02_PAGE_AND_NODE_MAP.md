@@ -1,76 +1,82 @@
 # B02_PAGE_AND_NODE_MAP
 
-Source: `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx` (Drive `16j15Knt…bJ4`)
+```
+AUTHORITY: PDF (rendered pagination + heading numbering)  ·  ALL PAGES MEASURED
+```
 
-```
-Module pages: MEASURED from TOC (section level) · ESTIMATED by interpolation (screen level)
-Physical PDF pages: NOT DETERMINABLE — this is a DOCX with no fixed pagination
-```
+Text source: `…300426.docx` · Rendered source: `K5_PL06_T03_B02_pages_256269.pdf`
+(`sha256 30a6903d…f828a3f4`, 429,918 B, 14 pages)
 
 ---
 
-## 1. Section-level map — measured
+## 1. Folio map — measured on every page
 
-| Node | Heading (verbatim) | Module page | Char offset | Status |
-|---|---|---:|---:|---|
-| 3.3 | `Struktur Taman` | **237** | 309,048 | ✅ measured (TOC) |
-| 3.4 | `Perabot Taman` | **242** | 313,807 | ✅ measured (TOC) |
-| 3.5 | `Infrastruktur` | 251 | 323,348 | boundary — out of scope |
+Printed folio reads `Pembinaan Landskap Luar | Mukasurat NNN`. Read on all 14 pages.
 
-Scope span: **14,300 characters over module pages 237–250**.
+| physical | module | | physical | module |
+|---:|---:|---|---:|---:|
+| 256 | 237 | | 263 | 244 |
+| 257 | 238 | | 264 | 245 |
+| 258 | 239 | | 265 | 246 |
+| 259 | 240 | | 266 | 247 |
+| 260 | 241 | | 267 | 248 |
+| 261 | 242 | | 268 | 249 |
+| 262 | 243 | | 269 | 250 |
 
-## 2. Screen-level map
+**Offset = +19, constant across all 14 pages.** Scope `237–250` ↔ `256–269` confirmed exactly as stated.
 
-Sub-headings are **not in the TOC**, so their module pages are **interpolated** from the measured
-anchors at 1,021.4 chars/page. Marked `~` throughout — these are derived, not read off the page.
+## 2. Node map — measured, with rendered numbering
 
-| Screen | Source heading (verbatim) | Module page | Char offset | Table | Figure |
-|---|---|---|---:|---|---|
-| **S05** | `Struktur Persisir Air (Promenande, Jeti, Dek, Boardwalk, footbridge)` | ~237 | 309,348 | ✅ 5 rows | **Rajah 23** |
-| **S06** | `Struktur Teduhan` | ~239 | 310,618 | ✅ 5 rows | **Rajah 24** |
-| **S07** | `Kemudahan Awam` | ~240 | 311,619 | ✅ 3 rows | — none |
-| **S08** | `Water Feature (Fountain, Pond, Pool)` | ~240 | 312,573 | ✅ 3 rows | — none |
-| **S11** | `Kerusi Taman` | ~242 | 314,102 | ✅ 3 rows | — none |
-| **S12** | `Papan Tanda` | ~244 | 316,112 | ✅ 1 row | **Rajah 25 + 26** |
-| **S13** | `Tong Sampah` | ~245 | 317,573 | ✅ 3 rows | — none |
-| **S14** | `Drinking Fountain` | ~247 | 319,283 | ✅ 2 rows | — none |
-| **S15** | `BBQ pit` | ~249 | 321,361 | ✅ 1 row | — none |
+| Rendered no. | Heading (verbatim) | mod p | phys p | Screen | Table | Assets |
+|---|---|---:|---:|---|---|---:|
+| `3.3.` | Struktur Taman | 237 | 256 | S04 base | — | 0 |
+| `3.3.1` | Struktur Persisir Air (Promenande, Jeti, Dek, Boardwalk, footbridge) | **238** | 257 | **S05** | ✅ 5 rows | 1 |
+| `3.3.2` | Struktur Teduhan | **239** | 258 | **S06** | ✅ 5 rows | 1 |
+| `3.3.3` | Kemudahan Awam | **240** | 259 | **S07** | ✅ 3 rows | **0** |
+| `3.3.4` | Water Feature (Fountain, Pond, Pool) | **241** | 260 | **S08** | ✅ 3 rows | **0** |
+| `3.4.` | Perabot Taman | 242 | 261 | S10 base | — | 0 |
+| **`3.4.1`** | Kerusi Taman | **242** | 261 | **S11** | ✅ 3 rows | 3 |
+| **`3.4.1`** | Papan Tanda | **243** | 262 | **S12** | ✅ 1 row | 2 |
+| **`3.4.1`** | Tong Sampah | **245** | 264 | **S13** | ✅ 3 rows | 4 |
+| `3.4.2` | Drinking Fountain | **247** | 266 | **S14** | ✅ 2 rows | 2 |
+| `3.4.3` | BBQ pit | **249** | 268 | **S15** | ✅ 1 row | 1 |
 
-**All nine mapped screens exist in the source with a specification table. Only three have a figure.**
+`3.4.1` appears **three times** — see `SOURCE_DEFECT_REGISTER.md` D-2, now
+`CONFIRMED_IN_RENDERED_PDF`. Section 3.3 numbers correctly 1–4.
 
-## 3. Directed mapping — verified against source headings
+## 3. Correction to the DOCX-era interpolation
 
-Every directed assignment matches a real heading, in source order. **No mismatch found.**
+Module pages were previously interpolated at 1,021.4 chars/page. **Three of nine were wrong by one page.**
 
-| Directed | Source heading | Verdict |
-|---|---|---|
-| S05 Struktur Persisir Air | `Struktur Persisir Air (…)` | ✅ |
-| S06 Struktur Teduhan | `Struktur Teduhan` | ✅ |
-| S07 Kemudahan Awam | `Kemudahan Awam` | ✅ |
-| S08 Water Feature | `Water Feature (Fountain, Pond, Pool)` | ✅ |
-| S11 Kerusi Taman | `Kerusi Taman` | ✅ |
-| S12 Papan Tanda | `Papan Tanda` | ✅ *(previously the only measured one)* |
-| S13 Tong Sampah | `Tong Sampah` | ✅ |
-| S14 Drinking Fountain | `Drinking Fountain` | ✅ |
-| S15 BBQ pit | `BBQ pit` | ✅ |
+| Screen | Interpolated | **Measured** | |
+|---|---:|---:|---|
+| S05 | ~237 | **238** | ✗ off by 1 |
+| S06 | ~239 | 239 | ✓ |
+| S07 | ~240 | 240 | ✓ |
+| S08 | ~240 | **241** | ✗ off by 1 |
+| S11 | ~242 | 242 | ✓ |
+| **S12** | ~244 | **243** | ✗ off by 1 — **and this vindicates the probe** |
+| S13 | ~245 | 245 | ✓ |
+| S14 | ~247 | 247 | ✓ |
+| S15 | ~249 | 249 | ✓ |
 
-The earlier provisional ordering — inferred from S04 label order and the S17 furniture list — **was
-correct on all eight unverified screens.** That inference is now retired in favour of measurement.
+**S12 matters.** Probe v0.1 records the Papan Tanda locator as `IMG-05, ms 243`. The interpolation said
+~244 and I noted it as "within interpolation error". The rendered PDF measures **243** — the probe was
+exactly right and the estimate was wrong. All `~` markers are now retired; every page above is measured.
 
-## 4. Reconciliation with the existing verified locators
+## 4. Directed mapping — verified
 
-| Locator | Held | Source position | Verdict |
-|---|---|---|---|
-| `IMG-01`, ms **237** (S04) | probe v0.1 | 3.3 opens at p237 ✅ | page confirmed. **But the first figure in 3.3 is `Rajah 23` (Boardwalk), which sits at the *end* of S05, not at the section opener.** What `IMG-01` depicts is not resolvable from text |
-| `IMG-05`, ms **243** (S12) | probe v0.1 | Papan Tanda interpolates to **~244** | ±1 page of the interpolation — consistent. Papan Tanda has **two** figures (`Rajah 25`, `26`) |
+All nine directed assignments match a real numbered heading, in source order. **No mismatch.**
+The earlier provisional ordering was correct on all eight previously-unverified screens.
 
-**Neither locator is overwritten.** `IMG-05`/243 stands; the ~244 estimate is within interpolation
-error and is not evidence against it.
+## 5. Now resolved
 
-## 5. What could not be mapped
-
-| Item | Why |
+| Previously | Now |
 |---|---|
-| Physical PDF pages ~256–269 | DOCX has no fixed pagination |
-| Per-screen module pages, **measured** | sub-headings absent from the TOC; interpolation used |
-| `IMG-01` subject | figure captions do not identify it |
+| Physical PDF pages `NOT DETERMINABLE` | **measured, offset +19** |
+| Per-screen module pages interpolated | **measured** — 3 corrections |
+| Heading numbering invisible | **measured** — D-2 confirmed |
+| `IMG-05` / ms 243 "within interpolation error" | **exactly confirmed** |
+
+Still open: what `IMG-01` (ms 237) depicts — module p237 carries no image, and the first figure in 3.3
+is Rajah 23 on p239.

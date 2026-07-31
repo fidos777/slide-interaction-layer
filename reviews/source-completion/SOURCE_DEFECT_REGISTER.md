@@ -1,7 +1,10 @@
 # SOURCE_DEFECT_REGISTER
 
-Source: `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx`
-Scope: module pages 237–250. All counts measured on the extracted scope unless stated.
+**Authority split:** DOCX = text · PDF = rendered pagination, heading numbering and visuals.
+
+Text source: `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx`
+Rendered source: `K5_PL06_T03_B02_pages_256269.pdf` (`sha256 30a6903d…f828a3f4`, 14 pp)
+Scope: module pages 237–250 = physical 256–269, **offset +19 measured on all 14 pages**.
 
 ---
 
@@ -18,27 +21,49 @@ the row definition *and* a real place name. The heading's parenthetical list is 
 **Treatment:** use `Promenade` in display and VO. Do not reproduce the heading's spelling.
 Classification: **source typo**, isolated, unambiguous.
 
-## D-2 — repeated `3.4.1` numbering — **NOT CONFIRMED AS STATED**
+## D-2 — repeated `3.4.1` numbering — **`CONFIRMED_IN_RENDERED_PDF`**
 
-Searched the TOC and the scope text. Reporting what is there, not what was expected.
+**Corrected.** The DOCX text extraction reported this `NOT_DETERMINABLE` because Word's heading
+numbering does not survive text export — sub-headings appeared as `###` with no numeric prefix. The
+rendered PDF carries the numbering, and the defect is real.
 
-| Finding | Detail |
-|---|---|
-| `3.4.1` in the TOC | **absent** — no such entry exists |
-| Sub-headings within 3.3 / 3.4 | **unnumbered** in this text representation — rendered as `###`, no numeric prefix |
-| Numbering that *does* repeat | **`3.3.` appears three times** across the module: p23 `Kawasan Hijau dan Zon Penampan` · p75 `Akta, Undang-Undang Kecil, Peraturan dan Garis Panduan` · **p237 `Struktur Taman`** |
+### Measured sequence — `MEASURED_FACT`
 
-Two readings, and the evidence does not choose between them:
+| Rendered number | Heading | Module page | Physical page |
+|---|---|---:|---:|
+| **`3.4.1`** | Kerusi Taman | **242** | 261 |
+| **`3.4.1`** | Papan Tanda | **243** | 262 |
+| **`3.4.1`** | Tong Sampah | **245** | 264 |
+| `3.4.2` | Drinking Fountain | 247 | 266 |
+| `3.4.3` | BBQ pit | 249 | 268 |
 
-1. **The observation refers to the `3.3` repetition** — which is real and measured above, and does
-   touch B02 because `3.3 Struktur Taman` is one of the three colliding entries.
-2. **The numbering is Word auto-numbering** applied to sub-headings and **dropped by text extraction**.
-   In that case a repeated `3.4.1` could exist in the rendered document and be invisible here.
+**`3.4.1` is used three times.** The sequence runs **1, 1, 1, 2, 3** where it should run 1–5. Two
+distinct subsections are unreachable by number, and any cross-reference to "3.4.1" is ambiguous
+between three targets.
 
-**Status: `NOT_DETERMINABLE` from the text representation.** Resolving it needs the rendered document —
-the PDF, or a look at the DOCX numbering definitions. It does **not** block the nine screens: their
-headings are unambiguous by title, and §3 of `B02_PAGE_AND_NODE_MAP.md` verifies all nine against the
-directed mapping with no mismatch.
+### Section 3.3 is *not* affected — `MEASURED_FACT`
+
+| Number | Heading | Module page |
+|---|---|---:|
+| `3.3.1` | Struktur Persisir Air (Promenande, Jeti, Dek, Boardwalk, footbridge) | 238 |
+| `3.3.2` | Struktur Teduhan | 239 |
+| `3.3.3` | Kemudahan Awam | 240 |
+| `3.3.4` | Water Feature (Fountain, Pond, Pool) | 241 |
+
+Correctly sequential. **The defect is confined to 3.4.**
+
+### Effect
+
+None on this gate — the nine screens are mapped by heading *title*, which is unique, and all nine
+verified with no mismatch. It is a **module defect** for the owner: cross-references and any generated
+navigation will be wrong. Classification: **numbering defect**, confirmed, three-way collision.
+
+### On the earlier report
+
+The DOCX finding — that `3.3.` repeats three times across the module (p23, p75, p237) — **also stands**
+and is a separate, real observation. It is not what this item refers to. The `3.4.1` collision was
+simply invisible to text extraction; the earlier `NOT_DETERMINABLE` was correct for the evidence then
+held, and is now superseded by the rendered document.
 
 ## D-3 — English-origin term styling — **CONFIRMED, and much larger than the current lexicon**
 
@@ -101,6 +126,17 @@ gate fixes.
 Note this block sits inside `3.3` but reads as advice for *all* structures — it is not specific to
 Water Feature, which is the subsection it visually follows.
 
+## D-6 — `fitnesss` — **NEW, adjacent to scope**
+
+Rendered heading on module p237:
+
+> `3.2.6  Outdoor gym & fitnesss stations`
+
+`fitnesss` carries three `s`. The heading sits at `3.2.6`, immediately **before** `3.3` on the same
+page — inside the extract, outside B02's scope, which begins at `3.3`.
+
+Classification: **source typo**. Reported for the module owner; no B02 screen uses it.
+
 ---
 
 ## Summary
@@ -108,10 +144,11 @@ Water Feature, which is the subsection it visually follows.
 | ID | Item | Status | Blocks the gate? |
 |---|---|---|---|
 | D-1 | `Promenande` typo | **CONFIRMED** — 1 wrong, 2 right | no |
-| D-2 | repeated `3.4.1` | **NOT CONFIRMED AS STATED** — no `3.4.1` exists; `3.3.` repeats 3× | no |
+| D-2 | repeated `3.4.1` | **`CONFIRMED_IN_RENDERED_PDF`** — `3.4.1` used 3×; sequence 1,1,1,2,3 | no |
 | D-3 | English-term styling | **CONFIRMED** — 42 terms vs a 3-term lexicon | **`OPEN_DECISION`** |
 | D-4 | `reka bentuk` variant | **CONFIRMED** — spaced dominates 131:8 | no |
-| D-5 | heading levels on body text | **NEW** | no |
+| D-5 | heading levels on body text | **NEW** (DOCX) | no |
+| D-6 | `fitnesss` typo at 3.2.6 | **NEW** (PDF) — adjacent, outside scope | no |
 
 ## Carried forward — already settled elsewhere
 
