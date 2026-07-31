@@ -1,4 +1,4 @@
-# PREFLIGHT_MAPPING — v0.2
+# PREFLIGHT_MAPPING — v0.3
 
 ```
 OUTPUT_ONLY_DISPOSABLE_PREFLIGHT
@@ -7,22 +7,77 @@ NOT_CAIR_RATIFIED
 NOT_PRODUCTION_AUTHORISED
 ```
 
-## Artifact — **current revision v0.2**
+## Artifact — **current revision v0.3**
 
 ```
-K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_2.pptx
-35,528 bytes
-sha256  ae16fcfd31200a3681785d1d970e236dc05624292ecf178076ddb44ff109a2df
-md5     9935e17397ec563c99a6f0a1fd57a0ae
+K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_3.pptx
+35,593 bytes
+sha256  ebf0eb8a1e5564bee2f656041f210ec48760a87cc811f6879b976e6298bf3e1c
+md5     3415f5ed790a2b57b998e69e803c37cf
 3 slides · 1 master · 7 layouts · 3 notes slides · 41 package entries
 ```
+
+### v0.3 — one bounded correction: reserved navigation strip
+
+`LOCAL_PREFLIGHT_REVIEW_PASS_WITH_ONE_FIX` — the v0.2 treatment is accepted except the S12 `Kembali`
+clearance (0.0333 above / 0.045 below). v0.3 corrects that and nothing else.
+
+**The panel had to shorten — that is a derivation, not a preference.** Below the canonical panel there
+are **0.4583 in** to the stage edge. `Kembali` at 16 pt needs 0.38 in, so even the *lower* target
+requires `0.08 + 0.38 + 0.08 = 0.54 in`. **0.54 > 0.4583.** No arrangement meets even 0.08 in on both
+sides without either shrinking `Kembali` (forbidden — it was enlarged by approval in v0.2) or
+shortening the panel. The panel was shortened.
+
+```
+R-NAVSTRIP   NAV_CLR = 0.10
+             NAV_H   = NAV_CLR + KEMBALI_H + NAV_CLR = 0.58
+             PANEL_H = (7.5 − NAV_H) − PANEL_Y       = 5.1387
+             KEMBALI_Y = (7.5 − NAV_H) + NAV_CLR     = 7.02
+```
+
+| Quantity | v0.2 | **v0.3** |
+|---|---:|---:|
+| Panel height | 5.2604 | **5.1387** (−0.1217) |
+| Panel bottom | 7.0417 | **6.92** |
+| Reserved navigation strip | — | **0.58 in**, 6.92 → 7.5 |
+| Clearance **above** `Kembali` | 0.0333 | **0.10** |
+| `Kembali` | 1.55 × 0.38 @ 16 pt, y 7.075 | 1.55 × 0.38 @ 16 pt, **y 7.02** — size unchanged |
+| Clearance **below** `Kembali` | 0.045 | **0.10** |
+| Panel **width** | 5.8621 | **5.8621 — unchanged** |
+| **S17 ÷ S12 width ratio** | 2.0009× | **2.0009× — preserved** |
+| Body bottom vs panel bottom | 6.4302 / 7.0417 | 6.4302 / **6.92** — slack 0.4898, body untouched |
+
+Both clearances land at **0.10**, the top of the requested 0.08–0.10 range.
+
+**⚠️ A new, bounded departure from canon.** Canonical panel height is 5.2604 — the same as Rumusan's.
+v0.3 makes S12's panel **5.1387**, so the reveal-child now differs from Rumusan in *height* as well as
+width. This was not previously true and is recorded as a deliberate consequence of reserving the strip.
+It is bounded to height; width, and therefore the archetype ratio, is untouched. It arguably increases
+archetype separation, but it is a departure and is not presented as an improvement.
+
+**The strip is reserved geometry, not a drawn band.** No new visible shape was added — that would
+exceed "one bounded correction". If a visible navigation band is wanted, say so; it is a small
+addition to `R-NAVSTRIP`.
+
+**Complete diff v0.2 → v0.3** — three changes, all on S12, verified shape-by-shape:
+
+| Shape | Change |
+|---|---|
+| `Rectangle 9` (panel) | height 5.2604 → 5.1387. `x`, `y`, **width** unchanged |
+| `TextBox 19` (`Kembali`) | `y` 7.075 → 7.02. Width, height, size, centring unchanged |
+| `Rectangle 8` (off-canvas note) | one documentation line added recording the strip |
+
+**Unchanged and verified:** all three notes bodies byte-identical (474 / 443 / 622 ch) · S04 entirely
+untouched (card geometry, labels, instruction) · S17 entirely untouched (Rumusan heading, body,
+spacing) · all display and VO content · locators · italic lexicon.
 
 ### Revision history
 
 | rev | file | bytes | sha256 | change |
 |---|---|---:|---|---|
-| **v0.1** | `…_PREFLIGHT_v0_1.pptx` | 35,390 | `2b756e5b…e91862` | initial 3-screen build. **Preserved unmodified; not overwritten.** |
-| **v0.2** | `…_PREFLIGHT_v0_2.pptx` | 35,528 | `ae16fcfd…09a2df` | **legibility only** — placeholder contrast, card-label size, `Kembali` size, S17 spacing. **No treatment logic changed.** |
+| **v0.1** | `…_v0_1.pptx` | 35,390 | `2b756e5b…e91862` | initial 3-screen build. Preserved unmodified. |
+| **v0.2** | `…_v0_2.pptx` | 35,528 | `ae16fcfd…09a2df` | legibility only — contrast, label size, `Kembali` size, S17 spacing. Preserved unmodified. |
+| **v0.3** | `…_v0_3.pptx` | 35,593 | `ebf0eb8a…8bf3e1c` | **navigation strip only** — S12 panel height and `Kembali` position. No content, VO, card geometry or Rumusan change. |
 
 ### What changed in v0.2
 
@@ -144,11 +199,12 @@ Canonical geometry from probe S12 (= canon slide 6), restored:
 
 | Element | Value |
 |---|---|
-| Visual panel | (0.8046, 1.7813) **5.8621 × 5.2604** — 43.97 % of stage |
+| Visual panel | (0.8046, 1.7813) **5.8621 × 5.1387** — width 43.97 % of stage; height shortened in v0.3 for the nav strip |
 | **Body heading box** | (6.8667, 1.8291) 5.6621 × 0.5068 — **restored** |
 | Body | (6.8667, 2.5594) 5.6621 × 3.8708 |
 | Panel placeholder text | explicit dark fill — `tx1` @ `lumMod 85000` |
-| `Kembali` | (**5.8917, 7.075**) **1.55 × 0.38 @ 16 pt bold** — centre **6.6667** vs stage 6.66665 |
+| Navigation strip | **6.92 → 7.5**, 0.58 in reserved (`R-NAVSTRIP`) |
+| `Kembali` | (**5.8917, 7.02**) **1.55 × 0.38 @ 16 pt bold** — centre **6.6667**; clearance **0.10 / 0.10** |
 | Locator | **`K5PL06T03-B02-IMG-05, ms 243`** |
 
 **Departure from the reviewed deck, recorded:** the review widened this panel to 11.7371 — within

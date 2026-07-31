@@ -1,4 +1,4 @@
-# LOCAL_PREFLIGHT_REVIEW_CHECKLIST — v0.2
+# LOCAL_PREFLIGHT_REVIEW_CHECKLIST — v0.3
 
 Everything below needs **PowerPoint on a local machine**. LibreOffice cannot load these decks in the
 build sandbox, so **nothing here has been seen rendered** — only measured. The package passes 22 of 22
@@ -6,13 +6,13 @@ mechanical checks; that is not the same as looking right.
 
 ## Before you start
 
-Open `K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_2.pptx`
-(`ae16fcfd…`, 35,528 B). File→Info must show **"Preflight v0.2 — 3 skrin — bukan storyboard, bukan 19
+Open `K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_3.pptx`
+(`ebf0eb8a…`, 35,593 B). File→Info must show **"Preflight v0.3 — 3 skrin — bukan storyboard, bukan 19
 slaid"**. If not, you have the wrong file.
 
-**v0.2 is a legibility revision only** — placeholder contrast, card-label size, `Kembali` size, S17
-spacing. **No treatment logic changed.** Keep v0.1 (`2b756e5b…`) beside it if you want to judge the
-legibility change itself; it is preserved unmodified.
+**v0.3 changes one thing: the S12 navigation strip.** The panel is 0.1217 in shorter so `Kembali` gets
+0.10 in clearance above and below. Nothing else moved — S04 and S17 are byte-for-byte the v0.2 screens,
+and all three VO bodies are unchanged. v0.1 and v0.2 are preserved unmodified if you want to compare.
 
 Keep probe v0.1 (`24dcaa04…`) open beside it. Probe slide 2 is the canonical S12; preflight slide 2 is
 the same archetype with the corrected locator and a concise display. Side by side is the fastest read.
@@ -41,10 +41,15 @@ preflight reverts it to canonical split. **If this reads wrong, nine screens cha
 - [ ] **Body does not run past `Kembali`** — measured 10 lines against a ~12.5-line box, but
       `spAutoFit` is recomputed on open
 - [ ] `Kembali` sits **below** the panel, horizontally centred, not overlapping
-- [ ] **v0.2 — `Kembali` is visibly larger** (16 pt bold in a 1.55 × 0.38 in box)
-- [ ] `Kembali` is not clipped at the bottom edge — **v0.2 clearance is only 0.045 in**, and its gap to
-      the panel is **0.0333 in**. This is the tightest spot in the deck — **check it closely**. It
-      could not be made larger without shortening the canonical panel
+- [ ] `Kembali` is 16 pt bold in a 1.55 × 0.38 in box — **unchanged from v0.2, deliberately not enlarged**
+- [ ] **v0.3 — `Kembali` now sits in a reserved navigation strip.** Clearance is **0.10 in above and
+      0.10 in below** (v0.2 was 0.0333 / 0.045). It should read as a deliberate navigation band, not as
+      a control squeezed against the edge
+- [ ] **v0.3 — the panel is 0.1217 in shorter** (5.1387, was 5.2604) to create that strip. Does the
+      panel still read as balanced, or does the bottom now look cropped?
+- [ ] **v0.3 — the panel is now shorter than the Rumusan panel too.** Previously they matched in height
+      and differed only in width. Is the extra separation welcome, or does S12 now look like a
+      different size of frame rather than a different kind of screen?
 - [ ] **v0.2 — panel placeholder text reads clearly** against the tint
 - [ ] Left panel reads as a production-instruction placeholder, not artwork
 - [ ] Off-canvas note cites **`K5PL06T03-B02-IMG-05, ms 243`**. If you see `IMG-01` or `237`, the patch
@@ -107,6 +112,9 @@ Probe slides 1–3 pair a **card base** with a **split-STATE child**. Whether th
 interaction family has been open since 16/06 and has never been answerable, because nothing has ever
 been seen rendered.
 
+- [ ] Is the reserved navigation strip the right height, or should it be tighter / looser?
+- [ ] Should the strip be a **visible band**? v0.3 reserves it as geometry only — no shape was drawn,
+      because that would exceed the bounded correction. Say if you want one
 - [ ] Does S04 → S12 read as one family — a base and its detail?
 - [ ] Or does S12 feel like a different deck?
 - [ ] And separately: does S12 read as clearly *not* a summary screen when set beside S17?

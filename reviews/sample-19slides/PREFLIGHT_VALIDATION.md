@@ -1,11 +1,75 @@
-# PREFLIGHT_VALIDATION — v0.2
+# PREFLIGHT_VALIDATION — v0.3
 
 Measured on the delivered file.
-`sha256 ae16fcfd31200a3681785d1d970e236dc05624292ecf178076ddb44ff109a2df` · `md5 9935e17397ec563c99a6f0a1fd57a0ae` · 35,528 B
+`sha256 ebf0eb8a1e5564bee2f656041f210ec48760a87cc811f6879b976e6298bf3e1c` · `md5 3415f5ed790a2b57b998e69e803c37cf` · 35,593 B
 
-v0.1 (`2b756e5b…e91862`, 35,390 B) is preserved unmodified and re-hashed after the v0.2 build.
+v0.1 (`2b756e5b…e91862`) and v0.2 (`ae16fcfd…09a2df`) are preserved unmodified and re-hashed after the
+v0.3 build.
 
-## 0. v0.2 — legibility revision
+## −1. Why the rule count moved 13 → 12 → 17
+
+**The 13th row in v0.1 was never an executed check.** `PREFLIGHT_VALIDATION v0.1` §2 listed
+`POPUP reveal mode selected anywhere | never | PASS` as a thirteenth row. The v0.1 script ran **twelve**
+assertions; that row was hand-written into the table. When the suite was re-run mechanically for v0.2,
+twelve executed and 12/12 was reported — accurate for what ran, but it dropped a row without saying so.
+
+The underlying claim was true (the builder has no `POPUP` code path, so it cannot emit one), but
+*structurally impossible* is not *verified*, and putting it in a PASS column implied it had been tested.
+**That was a reporting defect, not a change in the artifact.**
+
+**Fixed in v0.3.** It is now a genuine falsifiable assertion — S12 must carry **exactly one** `Kembali`
+positioned **strictly below** the panel with no overlap, which is the structural signature separating
+`FULL_SLIDE` from `POPUP`. Four further executed checks were added for the navigation strip, giving a
+stable, fully-executed **17**.
+
+| revision | executed | reported | note |
+|---|---:|---:|---|
+| v0.1 | 12 | **13** ❌ | one row hand-asserted |
+| v0.2 | 12 | 12 ✅ | accurate, but silently dropped the row |
+| **v0.3** | **17** | **17** ✅ | every row executes; 5 new checks |
+
+## 0. v0.3 — reserved navigation strip (one bounded correction)
+
+**9 / 9 package checks · 17 / 17 rule checks — PASS.**
+
+| check | v0.2 | **v0.3** |
+|---|---:|---:|
+| clearance above `Kembali` | 0.0333 | **0.10** |
+| clearance below `Kembali` | 0.045 | **0.10** |
+| reserved navigation strip | — | **0.58 in** (6.92 → 7.5) |
+| S12 panel height | 5.2604 | **5.1387** |
+| S12 panel width | 5.8621 | **5.8621 — unchanged** |
+| S17 ÷ S12 width ratio | 2.0009× | **2.0009× — preserved** |
+| `Kembali` size | 1.55 × 0.38 @ 16 pt | **unchanged — not enlarged** |
+| body bottom vs panel bottom | 6.4302 / 7.0417 | 6.4302 / **6.92** (slack 0.4898) |
+
+**Shortening the panel was forced, not chosen.** Only 0.4583 in exists below the canonical panel;
+`0.08 + 0.38 + 0.08 = 0.54 > 0.4583`. No layout satisfies even the lower clearance target without
+shrinking `Kembali` (forbidden) or shortening the panel.
+
+**New checks, all executed:**
+
+| check | result |
+|---|---|
+| `FULL_SLIDE` not `POPUP` — exactly one `Kembali`, strictly below the panel, no overlap | **PASS** |
+| clearance above `Kembali` ≥ 0.08 | **PASS** (0.10) |
+| clearance below `Kembali` ≥ 0.08 | **PASS** (0.10) |
+| split-STATE width ratio preserved == 2.0009 | **PASS** |
+| body still inside the shortened panel | **PASS** (slack 0.4898) |
+
+**Complete diff v0.2 → v0.3**, verified shape-by-shape: three changes, all on S12 —
+`Rectangle 9` height only; `TextBox 19` `y` only; `Rectangle 8` off-canvas note gains one documentation
+line. **All three notes bodies byte-identical (474 / 443 / 622 ch). S04 and S17 entirely untouched.**
+
+**⚠️ Recorded departure:** canonical panel height is 5.2604, matching Rumusan. v0.3 makes S12's
+**5.1387**, so the reveal-child now differs from Rumusan in height as well as width. Bounded to height;
+width and the archetype ratio are untouched. Stated as a consequence, not sold as an improvement.
+
+---
+
+## Sections 1–9 below were measured on v0.1/v0.2 and re-verified on v0.3 except where §0 restates a value.
+
+## 0b. v0.2 — legibility revision (superseded by §0)
 
 **9 / 9 package checks and 12 / 12 rule checks re-run and PASS on v0.2.** Treatment logic is unchanged:
 S12 panel 5.8621, S17 panel 11.7292, **ratio 2.0009×** — identical to v0.1.
