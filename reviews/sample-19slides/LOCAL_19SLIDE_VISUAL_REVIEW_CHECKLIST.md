@@ -1,4 +1,4 @@
-# LOCAL_19SLIDE_VISUAL_REVIEW_CHECKLIST — v0.1
+# LOCAL_19SLIDE_VISUAL_REVIEW_CHECKLIST — v0.2
 
 Everything below needs **PowerPoint on a local machine**. LibreOffice cannot load these decks in the
 build sandbox, so **nothing here has been seen rendered** — only measured. 34 mechanical checks pass;
@@ -6,8 +6,12 @@ that is not the same as looking right.
 
 ## Before you start
 
-Open `K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_1.pptx` (`5e35198a…`, 84,253 B).
-File→Info must show **"Visual Treatment Sample v0.1 — 19 skrin — bukan storyboard"**.
+Open `K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_2.pptx` (`8d93e2ce…`, 84,756 B).
+File→Info must show **"Visual Treatment Sample v0.2 — 19 skrin — bukan storyboard"**.
+
+**v0.2 changes three things only:** S17 `BBQ pit` no longer splits across lines; the S10/S16 pending
+banner is now a compact chip; the five-card direction is recorded in the S10/S16 production notes.
+Everything else is byte-identical to v0.1, which is preserved if you want to compare.
 
 - [ ] 19 slides, in order S01 → S19
 - [ ] Fonts resolve — no substitution boxes. Body Ebrima, title Raleway, bullets Arial
@@ -52,6 +56,8 @@ These carry real content. If the treatment is wrong, it is wrong here.
 - [ ] No `Kepentingan:` / `Isi Utama:` / `Manfaat:` anywhere
 - [ ] Fourth bullet begins `Kontraktor`; `anda` appears nowhere
 - [ ] `Water Feature`, `Drinking Fountain`, `BBQ pit` italic — **lowercase `p`**, source form
+- [ ] **v0.2 — `BBQ pit` sits wholly on one line.** It may move to the next line as a unit; it must
+      never split between `BBQ` and `pit`. Resize the window to force a reflow and confirm it holds
 - [ ] Bullets have visible breathing room; heading clear of the first bullet
 
 ---
@@ -75,7 +81,11 @@ S05, S06, S07, S08, S11, S12, S13, S14, S15.
 - [ ] Row 2 reads as deliberately centred, not as a broken grid
 - [ ] Row pitch matches S04 — the two bases should feel like one family
 - [ ] S16 has exactly **five** ticks
-- [ ] The instruction zone shows `SOURCE PENDING` — S04's wording was **not** copied across. Right call?
+- [ ] **v0.2 — the pending marker is now a compact chip**, not a full-width banner (81 % less canvas).
+      Do the cards now read as the dominant element? If the chip is still too loud, say so
+- [ ] **v0.2 — the off-canvas note records** `FIVE_CARD_SAMPLE_DIRECTION = OPTION_5B`, `CARD_W = 3.60`,
+      `GAP_X = 0.475`, `FIRDAUS_SAMPLE_DIRECTION, NOT CANONICAL`. Confirm it is there and correct
+- [ ] The chip still says `SOURCE PENDING` — S04's wording was **not** copied across. Right call?
 
 ---
 

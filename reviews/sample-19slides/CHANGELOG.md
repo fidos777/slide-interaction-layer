@@ -7,6 +7,26 @@ Every revision is preserved; none is overwritten.
 
 ## 19-slide visual treatment sample
 
+### v0.2 — 2026-07-31 — three bounded fixes
+`K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_2.pptx` · 84,756 B · `sha256 8d93e2ce…646a982b`
+
+1. **S17** — `BBQ pit` joined by a non-breaking space. The risk was real: bullet 3 is 92 chars against
+   a 90–98 capacity and the break landed exactly on that token. Wording, italics and the full-width
+   Rumusan geometry are unchanged; the off-canvas note keeps the plain-space source form.
+2. **S10 / S16** — the full-width `SOURCE PENDING` banner becomes a compact chip
+   (11.75 × 0.4039 → 2.95 × 0.30, **−81 % canvas footprint**), so the Card treatment stays dominant.
+   The full explanation moves to the off-canvas production note.
+3. **Recorded** on both S10 and S16 notes: `FIVE_CARD_SAMPLE_DIRECTION = OPTION_5B`, `CARD_W = 3.60`,
+   `GAP_X = 0.475`, status **`FIRDAUS_SAMPLE_DIRECTION, NOT CANONICAL`**.
+
+Diff: **five elements**, all accounted for. Card positions, tick positions, split-STATE geometry,
+navigation strip, S12 content, slide count, source status, all 19 VO bodies and interaction logic
+verified unchanged. **Checks 9/9 package, 33/33 rules.** v0.1 preserved.
+
+*A failing check was corrected, not the artifact* — one assertion was shape-blind and flagged the
+off-canvas note's legitimate plain-space occurrence; re-specified as three shape-scoped codepoint
+assertions.
+
 ### v0.1 — 2026-07-31
 `K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_1.pptx` · 84,253 B · `sha256 5e35198a…3ac7b5bf`
 

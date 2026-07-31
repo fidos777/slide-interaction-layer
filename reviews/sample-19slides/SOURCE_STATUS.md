@@ -1,4 +1,4 @@
-# SOURCE_STATUS — 19-slide visual treatment sample v0.1
+# SOURCE_STATUS — 19-slide visual treatment sample v0.2
 
 ```
 VISUAL_TREATMENT_SAMPLE_ONLY
@@ -35,7 +35,8 @@ NOT_CAIR_RATIFIED · NOT_PRODUCTION_AUTHORISED
 | S18 | KUIZ | **`MISSING`** | none | ✅ | — |
 | S19 | TAMAT | **`MISSING`** | none | ✅ | — |
 
-**4 `VERIFIED` · 11 `PARTIAL` · 4 `MISSING`.**
+**4 `VERIFIED` · 11 `PARTIAL` · 4 `MISSING`.** Unchanged in v0.2 — the three v0.2 fixes are
+presentation and record-keeping only, and moved no screen between statuses.
 
 ## 2. What was deliberately not created
 
@@ -44,7 +45,7 @@ NOT_CAIR_RATIFIED · NOT_PRODUCTION_AUTHORISED
 | S02 | any scenario, dialogue line or named character. The casting slot `(K5, PL06, s02)` is **empty**, and the current B02 cast is not provable — role-neutral `[PELATIH]` / `[PENYELIA]` placeholders only |
 | S03 | any overview text or reflection question. The slot `(K5, PL06, s03)` is **empty** |
 | S05–S08, S11, S13–S15 | any descriptive sentence about the subject. `Papan Tanda` is the only furniture item whose body text exists anywhere |
-| S10, S16 | the instruction line — S04's wording is verified for S04 only, so the instruction zone is marked pending rather than copied |
+| S10, S16 | the instruction line — S04's wording is verified for S04 only, so the instruction zone is marked pending rather than copied. **v0.2:** the marker is now a compact chip; the full explanation sits in the off-canvas note, alongside `FIVE_CARD_SAMPLE_DIRECTION = OPTION_5B` (`FIRDAUS_SAMPLE_DIRECTION, NOT CANONICAL`) |
 | **S18** | **any question, option, answer key, feedback or routing rule.** No quiz source exists. Structural frame only |
 | S19 | any closing statement or next-step instruction |
 | all `PARTIAL`/`MISSING` | VO. Their notes read `[VO SOURCE PENDING …]`, never invented narration |

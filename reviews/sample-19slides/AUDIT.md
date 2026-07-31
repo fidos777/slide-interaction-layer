@@ -1,12 +1,106 @@
-# AUDIT — 19-slide visual treatment sample v0.1
+# AUDIT — 19-slide visual treatment sample v0.2
 
 ```
-K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_1.pptx
-84,253 bytes
-sha256  5e35198a12cfe39ce8da6d18518a380e4234cbc996f5d416532bd7ae3ac7b5bf
-md5     dccf9569fe91ff4b7fc9e6e6c61474fb
+K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_2.pptx
+84,756 bytes
+sha256  8d93e2ce861624f0ff61271538900189c707ac6ec95dd1b1e6db0191646a982b
+md5     16bc57ac60be6c4b4f4540d12ccc0eb5
 19 slides · 1 master · 7 layouts · 19 notes slides
 ```
+
+v0.1 (`5e35198a…3ac7b5bf`, 84,253 B) is **preserved unchanged** and re-hashed after the v0.2 build.
+
+## 0. v0.2 — three bounded fixes
+
+**9 / 9 package checks · 33 / 33 rule checks — all executed.**
+
+### Fix 1 — S17 `BBQ pit` cannot split across lines
+
+The wrap risk was real, not cosmetic. Bullet 3 is **92 characters** against a line-box capacity of
+**90–98** at 18 pt, and the break lands exactly on the final token:
+
+```
+…Drinking Fountain dan BBQ pit
+                       ^^^^^^^ break falls here
+```
+
+Fixed by a **non-breaking space** (U+00A0) between `BBQ` and `pit` in the display run.
+
+| check | result |
+|---|---|
+| display bullet (`TextBox 24`) uses `BBQ`+U+00A0+`pit` | **PASS** |
+| off-canvas note (`Rectangle 8`) keeps the normal space — it documents the *source form* | **PASS** |
+| exactly two occurrences on S17, no stray third | **PASS** |
+| displayed wording unchanged — reads `Drinking Fountain dan BBQ pit` | **PASS** |
+| `BBQ pit` still italic | **PASS** |
+| full-width Rumusan geometry preserved — panel 11.7292 | **PASS** |
+
+**Stated plainly:** the rendered wording is identical; the *codepoint* is not. A byte-exact
+source-fidelity check will see U+00A0 where the source has U+0020. This is a typographic control, not
+a wording change, and the off-canvas note deliberately retains the plain-space form so the source
+reading is still recorded on the slide.
+
+### Fix 2 — S10 / S16 pending marker reduced to a chip
+
+| | v0.1 | **v0.2** |
+|---|---|---|
+| Form | full-width dashed banner | **compact chip**, `roundRect` |
+| Geometry | 0.7917, 1.2936 · **11.75 × 0.4039** | 0.7917, 1.3436 · **2.95 × 0.30** |
+| Text | one 18 pt sentence | `SOURCE PENDING · arahan`, 11 pt bold |
+| Explanation | on canvas | **moved to the off-canvas note, in full** |
+
+Canvas footprint drops from 4.75 in² to 0.89 in² — **81 % less**. The Card grid is now visually
+dominant, and the screen still declares its own incompleteness.
+
+| check | result |
+|---|---|
+| pending marker is a chip ≤ 3.0 in wide on both screens | **PASS** |
+| chip clears the card grid (bottom 1.6436 < card top 1.9438) | **PASS** |
+| no full-width pending banner remains | **PASS** |
+| S10/S16 still carry `SOURCE PENDING` on canvas | **PASS** |
+| full explanation preserved off-canvas | **PASS** |
+
+### Fix 3 — five-card direction recorded
+
+Written into the off-canvas production note of **both** S10 and S16:
+
+```
+FIVE_CARD_SAMPLE_DIRECTION = OPTION_5B
+  CARD_W = 3.60   GAP_X = 0.475
+  Status: FIRDAUS_SAMPLE_DIRECTION, NOT CANONICAL.
+```
+
+| check | result |
+|---|---|
+| `FIVE_CARD_SAMPLE_DIRECTION = OPTION_5B` on S10 and S16 | **PASS** |
+| `CARD_W = 3.60` and `GAP_X = 0.475` recorded | **PASS** |
+| `FIRDAUS_SAMPLE_DIRECTION, NOT CANONICAL` recorded | **PASS** |
+
+This is a **sample direction from Firdaus**, not a CAIR ratification and not canonical geometry.
+`K5-DR-061` remains `OPEN`, and S10's Card/Hotspot classification remains `NOT_DETERMINABLE`.
+
+### Complete diff v0.1 → v0.2 — five elements, nothing else
+
+| Screen | Element | Change |
+|---|---|---|
+| S10 | `Rectangle 8` (off-canvas note) | text — explanation + direction added |
+| S10 | id 25 → chip | geometry 11.75 × 0.4039 → 2.95 × 0.30; text |
+| S16 | `Rectangle 8` (off-canvas note) | text — explanation + direction added |
+| S16 | id 25 → chip | geometry 11.75 × 0.4039 → 2.95 × 0.30; text |
+| S17 | `TextBox 24` | **NBSP only** — no other character differs |
+
+**Verified unchanged:** card positions · tick positions · split-STATE geometry (5.8621 × 5.1387 on all
+9) · navigation strip (0.58, clearance 0.10/0.10 on all 9) · S12 content · slide count (19) · source
+status (4/11/4) · **all 19 VO bodies** · interaction logic. No shape was added or removed on any slide.
+
+### One check was wrong, not the artifact
+
+The first v0.2 run reported 30/31 with `"S17 no breakable 'BBQ pit' remains"` failing. The assertion
+was **shape-blind** — it treated the off-canvas note's legitimate plain-space occurrence as a defect,
+and its comparison constant was corrupted passing U+00A0 through the build shell. Re-specified as three
+shape-scoped codepoint assertions, all passing. **The artifact never changed.**
+
+---
 
 ```
 VISUAL_TREATMENT_SAMPLE_ONLY · SOURCE_INCOMPLETE
