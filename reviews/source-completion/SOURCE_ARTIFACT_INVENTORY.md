@@ -1,115 +1,98 @@
 # SOURCE_ARTIFACT_INVENTORY — K5 PL06 T3 B02 source completion
 
 ```
-GATE STATUS: BLOCKED — PRIMARY SOURCE ABSENT
+GATE STATUS: SOURCE ACQUIRED — TEXT COMPLETE, IMAGES NOT EXTRACTABLE
 ```
-
-- **Status:** intake record — **docs-only**
-- **Blocker:** input 2, the module PDF, is **not present in this session**
-- **Consequence:** 5 of the 7 required deliverables cannot be written without fabricating content
 
 ---
 
-## 1. Inputs required by this gate
+## 1. Source acquired — via Google Drive, not attachment
 
-| # | Input | Status |
-|---|---|---|
-| 1 | `K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_2.pptx` | ✅ **present** |
-| 2 | `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426_compressed.pdf` | ❌ **ABSENT** |
-
-### 1.1 Input 1 — verified
+Three attachment attempts did not reach the session. The file was retrieved from Drive instead.
 
 | Property | Value |
 |---|---|
-| Path | `reviews/sample-19slides/K5PL06T03B02_19SLIDE_VISUAL_TREATMENT_SAMPLE_v0_2.pptx` |
-| Bytes | 84,756 |
-| SHA-256 | `8d93e2ce861624f0ff61271538900189c707ac6ec95dd1b1e6db0191646a982b` |
-| Slides | 19 · 4 `VERIFIED` · 11 `PARTIAL` · 4 `MISSING` |
-| Standing | accepted visual treatment — **not to be modified by this gate** |
+| Drive file ID | `16j15Knt75d1ybg1i1E2SWfeUfMRmcbJ4` |
+| Title | `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx` |
+| MIME type | `application/vnd.openxmlformats-officedocument.wordprocessingml.document` |
+| Size | **16,832,861 bytes (16.8 MB)** |
+| Modified | 2026-06-07T23:30:02Z |
+| Text extracted | **422,472 characters**, 9,566 lines |
+| B02 scope extracted | **14,300 characters** |
 
-### 1.2 Input 2 — absent, searched for exhaustively — `MEASURED_FACT`
+### 1.1 Three discrepancies against the request — `MEASURED_FACT`
 
-The session upload directory contains exactly six files, all from earlier turns:
+| # | Stated | Actual | Consequence |
+|---|---|---|---|
+| 1 | `…300426_compressed.pdf` | **`.docx`** | Same document, Word form. Text is *better* for extraction; pagination is worse — see #2 |
+| 2 | 3 MB | **16.8 MB** | The 3 MB figure was presumably the compressed PDF. Size is why attachment failed |
+| 3 | physical PDF pages ~256–269 | **DOCX has no fixed pagination** | **Physical page mapping is impossible.** Module pages are recoverable from the TOC; physical pages are a PDF property this file does not have |
 
-```
-3f626ac5-BARIAH_REVIEW_8SLIDES.pptx                                   68,710 B
-5ccb3cc2-K5PL06T03B02_TREATMENT_PROBE_4SLIDES_NOT_A_STORYBOARD1.pptx  55,269 B
-a74856eb-TREATMENT_PROBE_MAPPING.md                                    2,638 B
-c5b74c83-TREATMENT_PROBE_README.md                                     2,868 B
-061a0d80-TREATMENT_PROBE_VALIDATION.md                                 3,408 B
-e4f7e988-LOCAL_REVIEW_CHECKLIST.md                                     3,075 B
-```
+**This is the authoritative `[PROOFREAD FINAL]` document**, so it is the correct source — but the
+physical-page half of the requested mapping cannot be produced from it. If physical page numbers are
+needed downstream, the PDF is still required.
 
-Searches run, all negative:
+## 2. Module page scope — confirmed from the table of contents — `MEASURED_FACT`
 
-| Search | Result |
-|---|---|
-| `find / -xdev -iname '*.pdf'` | 2 hits — a theme-factory showcase and a LibreOffice error stub. Neither is the module |
-| `-iname '*SKP*'` · `'*LANDSKAP*'` · `'*300426*'` · `'*PROOFREAD*'` · `'*compressed*'` | no module file; only OS icon assets matched `compressed` |
-| files created since the last build | temp logs and MCP config only |
+| TOC entry | Module page | Requested | Match |
+|---|---:|---:|---|
+| `3.3. Struktur Taman` | **237** | 237–241 | ✅ |
+| `3.4. Perabot Taman` | **242** | 242–250 | ✅ |
+| `3.5. Infrastruktur` | 251 | *(scope ends 250)* | ✅ boundary confirmed |
 
-**The module PDF was named in the request but did not arrive with it.**
+**B02 scope = module pages 237–250**, exactly as specified.
 
-## 2. Other evidence already held
+## 3. Text extraction — complete for scope
 
-Carried from earlier gates; none substitutes for the module.
-
-| Artifact | SHA-256 | Role here |
+| Section | Char offset | Content |
 |---|---|---|
-| Probe v0.1 | `24dcaa04…1d471c` | source-grade text for **4 of 19** screens only (S04, S09, S12, S17) |
-| Bariah review deck | `ee4f5479…8bb9e7` | SME intent; **not** source |
-| `sbat/cair-decision-desk.html` | in-repo | character bank; K5 decision slots (all empty) |
-| Phase B1 / Stage 0A / sample gate docs | in-repo | measurements and provisional register |
+| `## Struktur Taman` | 309,048 | intro + 4 subsections + tips block |
+| `## Perabot Taman` | 313,807 | intro + 5 subsections |
+| `## Infrastruktur` | 323,348 | out of scope — boundary |
 
-**Still absent besides the PDF:** `packet_B02.json`, `asset_manifest.json`,
-`SB_K5PL06T03B02_TIER1_STORYBOARD_SPEC_v1_2_CANDIDATE.pptx` (`d523f467…`).
+All **9 mapped screens** have source text. All 9 have a specification **table**. See
+`B02_PAGE_AND_NODE_MAP.md`.
 
-## 3. Toolchain — ready
+### 3.1 Probe v0.1 verified source-faithful — `MEASURED_FACT`
 
-| Tool | Status |
+The module's opening line for 3.3 is:
+
+> `Struktur taman membina fungsi dan estetika landskap merangkumi pelbagai jenis binaan yang
+> mengintegrasikan reka bentuk seni bina dengan landskap semula jadi…`
+
+This is **verbatim** the S04 VO in probe v0.1 `notesSlide4`. The Papan Tanda paragraph likewise matches
+`notesSlide16` verbatim. **The probe's clone-from-source claim is now independently confirmed against
+the module itself**, not just against its own documentation.
+
+## 4. Images — NOT extractable in this session — `MEASURED_FACT`
+
+The module contains figures in scope (`Rajah 23`–`26`, see `B02_ASSET_MANIFEST.md`), but **no image
+file could be extracted.**
+
+| Route | Outcome |
 |---|---|
-| **PyMuPDF 1.28.0** (MuPDF 1.29.0) | ✅ installed this turn — text, layout, image and table extraction |
-| Pillow | ✅ present |
-| `pdftotext` / `pdfimages` / `pdftoppm` / `qpdf` | absent — not needed, PyMuPDF covers all of it |
+| `read_file_content` | returns text only — figures appear as captions, not image data |
+| `download_file_content` | returns base64 of the **whole 16.8 MB** file ≈ 22 MB encoded — exceeds what a tool result can return |
+| Attachment | failed three times |
 
-Intake is a single run once the file lands.
+**`source-assets/` therefore remains empty**, and per the standing instruction no visual is fabricated
+where none can be obtained. The manifest records which figures *exist*, their captions and their bound
+screens — that is real, source-bound information — but the image binaries are still outstanding.
 
-## 4. Bounded source-assets directory
+**To close:** the PDF (any route), or the four figures exported individually, or a smaller DOCX
+containing only pages 237–250.
 
-```
-reviews/source-completion/source-assets/     created, EMPTY BY DESIGN
-```
+## 5. Other evidence held
 
-**Empty is the correct state.** No image has been extracted because there is no PDF to extract from,
-and per the standing instruction no visual is fabricated where the module provides none.
+| Artifact | SHA-256 | Role |
+|---|---|---|
+| Visual sample v0.2 | `8d93e2ce…646a982b` | accepted treatment — **not modified by this gate** |
+| Probe v0.1 | `24dcaa04…1d471c` | now **corroborated** against the module (§3.1) |
+| Bariah review deck | `ee4f5479…8bb9e7` | SME intent |
 
-## 5. What is blocked, and why each item needs the PDF
+Still absent: `packet_B02.json`, `asset_manifest.json`, the Tier-1 spec deck.
 
-| Deliverable | Blocked on |
-|---|---|
-| `B02_PAGE_AND_NODE_MAP.md` | module pages 237–241 / 242–250 and physical pages ~256–269 must be **read**, not assumed |
-| `S01_S19_SOURCE_COVERAGE_MATRIX.md` | per-screen headings and propositions come from the source |
-| `B02_ASSET_MANIFEST.md` | figures/tables must be **extracted**; asset IDs must reference real page objects |
-| `SOURCE_DEFECT_REGISTER.md` | the four named defects must be **located and quoted**, not repeated from memory |
-| `DISPLAY_VO_DRAFT_MATRIX.md` | display and VO drafts must be source-bound — this is the whole point |
+## 6. Toolchain
 
-`SOURCE_ARTIFACT_INVENTORY.md` (this file) and `SOURCE_COMPLETION_IMPLEMENTATION_PLAN.md` are written
-in full because neither depends on source content.
-
-## 6. Why nothing was drafted anyway
-
-The instruction *"do not fabricate a visual where the module provides no suitable image"* states the
-governing principle. It applies with equal force to page numbers, headings, propositions, asset IDs and
-defect line-references.
-
-Producing seven populated documents from an absent source would have created a **source-completion
-record that was not source-bound** — precisely the failure this engagement has been built to prevent,
-and it would be far harder to detect than a missing file, because it would look finished.
-
-**`K5_B02_SOURCE_COMPLETION_GATE_READY` is not returned.** The gate is not ready.
-
-## 7. To unblock
-
-Attach `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426_compressed.pdf`. Nothing else is
-needed — the toolchain, the target scope, the screen mapping and the four defects to verify are all
-recorded and ready.
+PyMuPDF 1.28.0 installed (unused — no PDF arrived). Extraction was done with the Drive text
+representation plus local Python. Pillow present.

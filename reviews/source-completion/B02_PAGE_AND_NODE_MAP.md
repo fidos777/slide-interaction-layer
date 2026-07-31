@@ -1,63 +1,76 @@
 # B02_PAGE_AND_NODE_MAP
 
-```
-STATUS: BLOCKED — NOT POPULATED
-```
+Source: `[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx` (Drive `16j15Knt…bJ4`)
 
-**No content has been entered in this document.** The module PDF
-(`[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426_compressed.pdf`) is **absent from this
-session** — see `SOURCE_ARTIFACT_INVENTORY.md` §1.2 for the searches run.
-
-Every field below must be **read from the source**. Filling it from inference would produce a
-source-completion record that is not source-bound, which is the one failure this gate exists to
-prevent. The schema is fixed here so that intake is a single pass once the PDF arrives.
+```
+Module pages: MEASURED from TOC (section level) · ESTIMATED by interpolation (screen level)
+Physical PDF pages: NOT DETERMINABLE — this is a DOCX with no fixed pagination
+```
 
 ---
 
-## Scope to be mapped
+## 1. Section-level map — measured
 
-| Section | Module pages | Physical PDF pages (stated, **to verify**) |
+| Node | Heading (verbatim) | Module page | Char offset | Status |
+|---|---|---:|---:|---|
+| 3.3 | `Struktur Taman` | **237** | 309,048 | ✅ measured (TOC) |
+| 3.4 | `Perabot Taman` | **242** | 313,807 | ✅ measured (TOC) |
+| 3.5 | `Infrastruktur` | 251 | 323,348 | boundary — out of scope |
+
+Scope span: **14,300 characters over module pages 237–250**.
+
+## 2. Screen-level map
+
+Sub-headings are **not in the TOC**, so their module pages are **interpolated** from the measured
+anchors at 1,021.4 chars/page. Marked `~` throughout — these are derived, not read off the page.
+
+| Screen | Source heading (verbatim) | Module page | Char offset | Table | Figure |
+|---|---|---|---:|---|---|
+| **S05** | `Struktur Persisir Air (Promenande, Jeti, Dek, Boardwalk, footbridge)` | ~237 | 309,348 | ✅ 5 rows | **Rajah 23** |
+| **S06** | `Struktur Teduhan` | ~239 | 310,618 | ✅ 5 rows | **Rajah 24** |
+| **S07** | `Kemudahan Awam` | ~240 | 311,619 | ✅ 3 rows | — none |
+| **S08** | `Water Feature (Fountain, Pond, Pool)` | ~240 | 312,573 | ✅ 3 rows | — none |
+| **S11** | `Kerusi Taman` | ~242 | 314,102 | ✅ 3 rows | — none |
+| **S12** | `Papan Tanda` | ~244 | 316,112 | ✅ 1 row | **Rajah 25 + 26** |
+| **S13** | `Tong Sampah` | ~245 | 317,573 | ✅ 3 rows | — none |
+| **S14** | `Drinking Fountain` | ~247 | 319,283 | ✅ 2 rows | — none |
+| **S15** | `BBQ pit` | ~249 | 321,361 | ✅ 1 row | — none |
+
+**All nine mapped screens exist in the source with a specification table. Only three have a figure.**
+
+## 3. Directed mapping — verified against source headings
+
+Every directed assignment matches a real heading, in source order. **No mismatch found.**
+
+| Directed | Source heading | Verdict |
 |---|---|---|
-| 3.3 Struktur Taman | 237–241 | ~256–260 |
-| 3.4 Perabot Taman | 242–250 | ~261–269 |
+| S05 Struktur Persisir Air | `Struktur Persisir Air (…)` | ✅ |
+| S06 Struktur Teduhan | `Struktur Teduhan` | ✅ |
+| S07 Kemudahan Awam | `Kemudahan Awam` | ✅ |
+| S08 Water Feature | `Water Feature (Fountain, Pond, Pool)` | ✅ |
+| S11 Kerusi Taman | `Kerusi Taman` | ✅ |
+| S12 Papan Tanda | `Papan Tanda` | ✅ *(previously the only measured one)* |
+| S13 Tong Sampah | `Tong Sampah` | ✅ |
+| S14 Drinking Fountain | `Drinking Fountain` | ✅ |
+| S15 BBQ pit | `BBQ pit` | ✅ |
 
-Module→physical offset stated as ≈ **+19**. It will be **measured against printed folios**, not
-assumed — the whole map keys off it.
+The earlier provisional ordering — inferred from S04 label order and the S17 furniture list — **was
+correct on all eight unverified screens.** That inference is now retired in favour of measurement.
 
-## Schema — one row per source node
+## 4. Reconciliation with the existing verified locators
 
-| module page | physical page | heading level | heading (verbatim) | node ID | bound screen | notes |
-|---|---|---|---|---|---|---|
-| *(pending source)* | | | | | | |
+| Locator | Held | Source position | Verdict |
+|---|---|---|---|
+| `IMG-01`, ms **237** (S04) | probe v0.1 | 3.3 opens at p237 ✅ | page confirmed. **But the first figure in 3.3 is `Rajah 23` (Boardwalk), which sits at the *end* of S05, not at the section opener.** What `IMG-01` depicts is not resolvable from text |
+| `IMG-05`, ms **243** (S12) | probe v0.1 | Papan Tanda interpolates to **~244** | ±1 page of the interpolation — consistent. Papan Tanda has **two** figures (`Rajah 25`, `26`) |
 
-## Known verified anchors to reconcile against
+**Neither locator is overwritten.** `IMG-05`/243 stands; the ~244 estimate is within interpolation
+error and is not evidence against it.
 
-| Anchor | Value | Source |
-|---|---|---|
-| S04 locator | `K5PL06T03-B02-IMG-01`, ms **237** | probe v0.1, measured |
-| S12 locator | `K5PL06T03-B02-IMG-05`, ms **243** | probe v0.1, measured |
+## 5. What could not be mapped
 
-If extraction disagrees with either, the disagreement is **reported**; the measured locators are not
-overwritten.
-
-## Required screen mapping — as directed
-
-| Screen | Subject | Section |
-|---|---|---|
-| S05 | Struktur Persisir Air | 3.3 Struktur Taman |
-| S06 | Struktur Teduhan | 3.3 |
-| S07 | Kemudahan Awam | 3.3 |
-| S08 | Water Feature | 3.3 |
-| S11 | Kerusi Taman | 3.4 Perabot Taman |
-| S12 | Papan Tanda | 3.4 |
-| S13 | Tong Sampah | 3.4 |
-| S14 | Drinking Fountain | 3.4 |
-| S15 | BBQ pit | 3.4 |
-
-This supersedes the earlier provisional ordering, in which only `S12 = Papan Tanda` was confirmed by
-measurement. Each assignment will be checked against its source heading and any mismatch reported.
-
-## Must be resolved here
-
-- **D-2 repeated `3.4.1` numbering** — which headings collide, and whether it is a numbering slip or
-  two genuine subsections. This directly affects whether S11–S15 map cleanly onto 3.4's children.
+| Item | Why |
+|---|---|
+| Physical PDF pages ~256–269 | DOCX has no fixed pagination |
+| Per-screen module pages, **measured** | sub-headings absent from the TOC; interpolation used |
+| `IMG-01` subject | figure captions do not identify it |

@@ -1,67 +1,188 @@
 # DISPLAY_VO_DRAFT_MATRIX
 
-```
-STATUS: BLOCKED — NOT POPULATED
-```
-
-**No content has been entered in this document.** The module PDF
-(`[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426_compressed.pdf`) is **absent from this
-session** — see `SOURCE_ARTIFACT_INVENTORY.md` §1.2 for the searches run.
-
-Every field below must be **read from the source**. Filling it from inference would produce a
-source-completion record that is not source-bound, which is the one failure this gate exists to
-prevent. The schema is fixed here so that intake is a single pass once the PDF arrives.
+**Drafts only.** Nothing here enters a PPTX at this gate.
+Budget: split-STATE line box **5.1496 in → 41–45 chars/line**, ceiling ~12.5 lines, target ~10.
+Rules applied: concise display · fuller source-bound VO · no narrator prefix · `reka bentuk` spaced ·
+`Promenade` corrected · italic per the **current 3-term lexicon only** (D-3 unresolved).
 
 ---
 
-## Schema — one row per mapped screen
+## S05 — Struktur Persisir Air · ~p237 · Rajah 23
 
-| Screen | Source propositions | Display draft | VO draft | Terminology | Budget check | Confidence |
-|---|---|---|---|---|---|---|
-| *(pending source)* | | | | | | |
+**Display** (5 bullets, ~8 lines)
+- Meningkatkan akses dan pengalaman pengguna di tepi badan air
+- Untuk tasik, sungai atau pantai
+- Perlu kepakaran pembinaan di persekitaran lembap dan berpotensi hakisan
+- Asas stabil dan rata, dengan saliran permukaan yang berkesan
+- Jenis: Promenade, Jeti, Dek Kayu, Boardwalk, Footbridge
 
-## Drafting rules — fixed by the accepted treatment
+**VO** — Struktur persisir air direka untuk meningkatkan akses dan pengalaman pengguna di tepi badan
+air seperti tasik, sungai, atau pantai. Ia memerlukan kepakaran dalam pembinaan di persekitaran yang
+lembap dan berpotensi hakisan. Pembinaannya memerlukan asas yang sangat stabil dan rata, dengan sistem
+saliran permukaan yang berkesan untuk mengelakkan genangan air. Pemilihan bahan permukaan bergantung
+pada fungsi utama ruang tersebut. Jenisnya termasuk Promenade, Jeti, Dek Kayu, Boardwalk dan Footbridge.
 
-| Rule | Value |
-|---|---|
-| Display | concise, source-bound. **Never** exceeds the propositions in the source |
-| VO | fuller than display, source-bound; carries framing the display omits |
-| Coverage | every display proposition must appear in the VO; no proposition may be dropped from both |
-| Narrator prefix | **none** — routine VO carries no `Hilmi:` |
-| Italic lexicon | `Water Feature` · `Drinking Fountain` · `BBQ pit` — closed unless D-3 extends it |
-| `BBQ pit` | source form, lowercase `p`, non-breaking space in display |
-| Rumusan rules | S17 only; not applied to detail screens |
+**Terminology** — `Promenade` **corrected from the heading's `Promenande`** (D-1). Five English-origin
+terms present; none italicised under the current 3-term lexicon. **Confidence: HIGH** — display and VO
+trace to the intro, `Aspek Pembinaan` and the 5-row table.
 
-## Budget — measured, not assumed
+## S06 — Struktur Teduhan · ~p239 · Rajah 24
 
-| Family | Line box | Capacity @ 18 pt | Ceiling |
-|---|---:|---:|---|
-| split-STATE detail (S05–S08, S11–S15) | 5.1496 in (lvl 0) · 4.6496 in (lvl 1) | 41–45 · 37–40 ch/line | ~12.5 lines; S12 sits at **10** |
-| full-width (S17) | 11.2167 in | 90–98 ch/line | ~7 lines |
-| card label | 3.4202 in | 24–27 ch | **1 line**, `noAutofit` — overflows silently past 24 ch |
+**Display**
+- Perlindungan daripada matahari dan hujan
+- Mewujudkan ruang selesa untuk bersantai atau berinteraksi
+- Jenis: Gazebo, Wakaf, Pergola, Canopy, Struktur Teduhan Moden
 
-**The detail screens are the tight ones.** At 41–45 chars/line a draft overruns fast, and the accepted
-S12 body already sits at 10 of ~12.5 lines. Drafts that do not fit are **cut**, not squeezed — the
-budget is part of the accepted treatment, not a suggestion.
+**VO** — Struktur teduhan seperti Gazebo, Wakaf dan Pergola direka untuk memberikan perlindungan
+daripada matahari dan hujan, mewujudkan ruang yang selesa untuk bersantai atau berinteraksi. Wakaf
+ialah struktur tradisional Melayu yang digunakan sebagai tempat berehat, manakala Pergola ialah rangka
+struktur terbuka yang biasanya ditumbuhi tanaman pemanjat. Struktur teduhan moden menggunakan bahan
+seperti keluli dan panel lutsinar atau berlubang untuk mencipta corak cahaya dan bayangan.
 
-## The nine screens to draft
+**Terminology** — `Gazebo`, `Pergola`, `Canopy` English-origin; `Wakaf` is Malay and must **not** be
+italicised. **Confidence: HIGH.** Note: this subsection has **no `Aspek Pembinaan` block** — the only
+one of the four in 3.3 without one.
 
-| Screen | Subject | Section |
-|---|---|---|
-| S05 | Struktur Persisir Air | 3.3 Struktur Taman |
-| S06 | Struktur Teduhan | 3.3 |
-| S07 | Kemudahan Awam | 3.3 |
-| S08 | Water Feature | 3.3 |
-| S11 | Kerusi Taman | 3.4 Perabot Taman |
-| S12 | Papan Tanda | 3.4 |
-| S13 | Tong Sampah | 3.4 |
-| S14 | Drinking Fountain | 3.4 |
-| S15 | BBQ pit | 3.4 |
+## S07 — Kemudahan Awam · ~p240 · **no figure**
 
-S12 is **already drafted and verified** — its display and VO come from probe v0.1 and are in the
-accepted sample. It is the calibration reference for the other eight, not a screen to redraft.
+**Display**
+- Perkhidmatan asas untuk keselesaan dan pendidikan pengguna taman
+- Reka bentuk berfungsi, tahan lasak dan mudah diselenggara
+- Aksesibiliti OKU satu pertimbangan penting
+- Bahan tahan vandalisme dan cuaca
+- Contoh: Tandas Awam, Surau, Bangunan Interpretatif
 
-## Not drafted at this gate
+**VO** — Kemudahan awam seperti tandas, surau dan bangunan interpretatif adalah bangunan atau struktur
+yang menyediakan perkhidmatan asas untuk keselesaan dan pendidikan pengguna taman. Ia memerlukan reka
+bentuk yang berfungsi, tahan lasak, dan mudah diselenggara. Aksesibiliti untuk OKU adalah pertimbangan
+penting, dan bahan yang digunakan harus tahan vandalisme dan cuaca.
 
-S02, S03, S18, S19 — held open. No scenario, reflection question, quiz item, answer key, routing or
-closing content is drafted.
+**Terminology** — `reka bentuk` spaced (D-4). **Confidence: HIGH** for text; **visual pending** — no
+figure exists.
+
+## S08 — Water Feature · ~p240 · **no figure**
+
+**Display**
+- Elemen landskap yang menggunakan air untuk estetika, bunyi atau titik tumpuan
+- Perlu sistem paip, pam air, penapisan dan saliran yang betul
+- Kawalan kualiti air termasuk pencegahan alga
+- Keselamatan: kedalaman dan permukaan yang tidak licin
+- Contoh: Air Pancut, Kolam, Kolam Renang atau Kolam Hiasan
+
+**VO** — Ciri air adalah elemen landskap yang menggunakan air untuk tujuan estetika, bunyi, atau
+sebagai titik tumpuan. Pembinaannya memerlukan sistem paip, pam air, penapisan, dan sistem saliran yang
+betul. Kawalan kualiti air, termasuk pencegahan alga, adalah penting. Aspek keselamatan seperti
+kedalaman dan permukaan yang tidak licin juga perlu diambil kira.
+
+**Terminology** — `Water Feature` **italic** (lexicon). Source calls the concept `Ciri air` in the body
+but `Water Feature` in the heading — both forms are source-attested; the sample uses `Water Feature` as
+its card label. **Confidence: HIGH.**
+
+## S11 — Kerusi Taman · ~p242 · **no figure**
+
+**Display**
+- Tempat duduk untuk pengguna berehat dan menikmati persekitaran
+- Elemen asas keselesaan di ruang awam dan peribadi
+- Pemilihan ambil kira keselesaan, ketahanan cuaca dan estetika
+- Pemasangan mungkin ditetapkan ke tanah bagi mengelak kecurian
+- Bahan: kayu keras, konkrit, komposit
+
+**VO** — Kerusi taman menyediakan tempat duduk untuk pengguna berehat dan menikmati persekitaran. Ia
+merupakan elemen asas untuk keselesaan di mana-mana ruang awam atau peribadi. Pemilihan kerusi yang
+betul mengambil kira faktor seperti keselesaan, ketahanan terhadap cuaca, dan estetika yang sepadan
+dengan gaya landskap. Pemasangan mungkin melibatkan penetapan ke tanah untuk mengelakkan kecurian atau
+pergerakan.
+
+**Terminology** — table carries `WPC`, `pressure-treated`, `mortise and tenon joints`, `stainless
+steel`, `outdoor sealant`, `wood oil`, `precast concrete`, `exposed aggregate` — all Tier-2 (D-3), none
+italicised under the current lexicon. **Confidence: HIGH.**
+
+## S12 — Papan Tanda · ~p244 · Rajah 25 + 26 · **ALREADY ACCEPTED**
+
+**Not redrafted.** Display and VO are in the accepted sample and **verified verbatim against the module
+this turn** — the source paragraph matches probe `notesSlide16` exactly. This screen is the calibration
+reference for the other eight. Its locator `IMG-05` / ms 243 stands.
+
+**New from source:** Papan Tanda has **two** figures, not one.
+
+## S13 — Tong Sampah · ~p245 · **no figure**
+
+**Display**
+- Kemudahan asas pengurusan sisa dan kebersihan ruang landskap
+- Bilangan mencukupi, diletakkan di lokasi mudah diakses
+- Reka bentuk tahan lama dan mudah dikosongkan
+- Menghalang haiwan daripada mengusik sampah
+- Sesetengah direka untuk pengasingan sisa kitar semula
+
+**VO** — Tong sampah adalah kemudahan asas untuk pengurusan sisa dan menjaga kebersihan ruang landskap.
+Tong sampah harus mencukupi dari segi bilangan dan diletakkan di lokasi yang mudah diakses. Reka
+bentuknya perlu tahan lama, mudah dikosongkan, dan dapat menghalang haiwan daripada mengusik sampah.
+Sesetengah tong sampah direka untuk pengasingan sisa kitar semula.
+
+**Terminology** — `HDPE` ×3, `liner`, `galvanized and powder-coated steel`, `stainless steel` in table.
+**Confidence: HIGH.**
+
+## S14 — Drinking Fountain · ~p247 · **no figure**
+
+**Display**
+- Akses mudah kepada air bersih untuk pengguna taman
+- Dibina dengan bahan yang bersih dan tahan lasak
+- Perlu sambungan paip bersih dan saliran berkesan untuk air buangan
+- Ketinggian berbeza untuk kanak-kanak dan orang dewasa
+- Akses untuk kerusi roda
+
+**VO** — Pancutan air minum menyediakan akses mudah kepada air bersih untuk pengguna taman. Ia harus
+dibina dengan bahan yang bersih dan tahan lasak, serta memerlukan sambungan paip air yang bersih dan
+sistem saliran yang berkesan untuk air buangan. Ketinggian yang berbeza mungkin diperlukan untuk
+kanak-kanak dan orang dewasa, serta akses untuk kerusi roda.
+
+**Terminology** — `Drinking Fountain` **italic** (lexicon). Source body uses the Malay `Pancutan air
+minum`; the heading and the sample label use `Drinking Fountain` — both source-attested.
+Table adds `push-button valve`, `self-cleaning`, `shut-off valve`, `faucet`, `basin`, `Universal
+Design`. **Confidence: HIGH.**
+
+## S15 — BBQ pit · ~p249 · **no figure**
+
+**Display**
+- Kemudahan untuk aktiviti memasak dan bersosial di luar
+- Dibina daripada bata, blok konkrit atau batu tahan api
+- Reka bentuk yang selamat untuk mengandungi api
+- Ruang memanggang dan kawasan kerja berdekatan
+- Saliran baik dan jarak selamat dari bahan mudah terbakar
+
+**VO** — BBQ pit atau kawasan barbeku menyediakan kemudahan untuk aktiviti memasak dan bersosial di
+luar. Biasanya ia dibina daripada bata, blok konkrit, atau batu tahan api. Ia memerlukan reka bentuk
+yang selamat untuk mengandungi api, dengan ruang untuk memanggang dan seringkali kawasan kerja yang
+berdekatan. Saliran yang baik dan jarak selamat dari bahan mudah terbakar adalah kritikal.
+
+**Terminology** — `BBQ pit` **italic**, lowercase `p` — **now confirmed at source** (`### BBQ pit`).
+Table adds `firebrick`, `cast iron`. **Confidence: HIGH.**
+
+---
+
+## Budget check
+
+| Screen | Bullets | Longest bullet | Est. lines | vs ~12.5 ceiling |
+|---|---:|---:|---:|---|
+| S05 | 5 | 71 ch | ~9 | ✅ |
+| S06 | 3 | 57 ch | ~5 | ✅ |
+| S07 | 5 | 64 ch | ~8 | ✅ |
+| S08 | 5 | 76 ch | ~9 | ✅ |
+| S11 | 5 | 62 ch | ~8 | ✅ |
+| S13 | 5 | 60 ch | ~8 | ✅ |
+| S14 | 5 | 66 ch | ~8 | ✅ |
+| S15 | 5 | 60 ch | ~8 | ✅ |
+
+All eight fit, with S12's accepted 10 lines as the calibration point. **No draft required cutting.**
+
+## Coverage rule
+
+Every display proposition appears in its VO; each VO carries framing the display omits. No source
+proposition is dropped from both channels.
+
+## Not drafted
+
+**S02, S03, S18, S19 remain open.** The module supplies topic content but cannot supply a casting
+decision, a reflection question, quiz items or closing content. Their decision slots are empty and
+no assessment material was constructed. S10 and S16 base/tick screens draw their item names from
+these nine and need no separate drafting.

@@ -1,48 +1,65 @@
 # B02_ASSET_MANIFEST
 
 ```
-STATUS: BLOCKED — NOT POPULATED
+FIGURES IDENTIFIED: 4  ·  FIGURES EXTRACTED: 0  ·  SCREENS WITH NO FIGURE: 6 of 9
+source-assets/ REMAINS EMPTY — image binaries not obtainable this session
 ```
-
-**No content has been entered in this document.** The module PDF
-(`[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426_compressed.pdf`) is **absent from this
-session** — see `SOURCE_ARTIFACT_INVENTORY.md` §1.2 for the searches run.
-
-Every field below must be **read from the source**. Filling it from inference would produce a
-source-completion record that is not source-bound, which is the one failure this gate exists to
-prevent. The schema is fixed here so that intake is a single pass once the PDF arrives.
 
 ---
 
-## Extraction target
+## 1. Figures present in scope — `MEASURED_FACT`
 
-```
-reviews/source-completion/source-assets/     EMPTY BY DESIGN
-```
+Every `Rajah` reference between module pages 237–250. There are exactly four.
 
-Empty is correct. There is no PDF to extract from, and per the standing instruction **no visual is
-fabricated where the module provides no suitable image**.
+| # | Caption (verbatim) | Bound screen | Module page | Proposed asset ID |
+|---|---|---|---:|---|
+| Rajah 23 | `Contoh Boardwalk dalam Taman Paya Bakau` | **S05** Struktur Persisir Air | ~238 | `K5PL06T03-B02-IMG-23` |
+| Rajah 24 | `Contoh Pergola` | **S06** Struktur Teduhan | ~239 | `K5PL06T03-B02-IMG-24` |
+| Rajah 25 | `Contoh Lukisan Spesifikasi Papan Tanda Informasi` | **S12** Papan Tanda | ~245 | `K5PL06T03-B02-IMG-25` |
+| Rajah 26 | `Contoh Spesifikasi Papan Tanda Penunjuk Arah` | **S12** Papan Tanda | ~245 | `K5PL06T03-B02-IMG-26` |
 
-## Schema — one row per extracted asset
+**IDs are proposals keyed to the module's own `Rajah` numbering**, not minted sequentially. They do
+**not** replace the measured `IMG-01` / `IMG-05` locators, whose numbering scheme is different and
+whose origin is the Tier-1 spec, not this document.
 
-| asset ID | physical page | module page | caption (verbatim) | type | px w×h | sha256 | bound screen | fidelity |
-|---|---|---|---|---|---|---|---|---|
-| *(pending source)* | | | | | | | | |
+## 2. Screens with no figure — six of nine — `MEASURED_FACT`
 
-Naming: `K5PL06T03-B02-IMG-nn__p<physical>.png`
+| Screen | Figure | What the source does provide |
+|---|---|---|
+| **S07** Kemudahan Awam | **none** | 3-row table: Tandas Awam · Surau · Bangunan Interpretatif |
+| **S08** Water Feature | **none** | 3-row table: Air Pancut · Kolam · Kolam Renang/Hiasan |
+| **S11** Kerusi Taman | **none** | 3-row table: Kayu Keras · Konkrit · Komposit |
+| **S13** Tong Sampah | **none** | 3-row table: Logam · Konkrit/Batu · Plastik HDPE |
+| **S14** Drinking Fountain | **none** | 2-row table: Keluli Tahan Karat · Konkrit/Batu |
+| **S15** BBQ pit | **none** | 1-row table: Struktur Kekal (Bata/Konkrit/Batu) |
 
-## Current asset position — `MEASURED_FACT`
+**No visual is fabricated for these six.** The module provides no suitable image, and per the standing
+instruction that absence is recorded rather than filled. Their `Visual:` regions stay as source-bound
+placeholders.
 
-**Zero B02 content images exist in any artifact held.** The complete media inventory across both
-evidence packages is two checkmark SVGs. Every `Visual:` on every screen of the accepted sample is a
-text placeholder. Locators exist for **2 of 19** screens; assets for **0 of 19**.
+**The specification tables are a genuine alternative.** Each is real, source-bound, on-topic content
+that could carry the visual region without inventing anything — see
+`SOURCE_COMPLETION_IMPLEMENTATION_PLAN.md` §5 for that as an open option, not a decision.
 
-This gate is what closes that — for the screens where the module actually provides a figure.
+## 3. Why nothing was extracted — `MEASURED_FACT`
 
-## Rules at extraction
+| Route | Outcome |
+|---|---|
+| Drive `read_file_content` | text only — figures appear as captions |
+| Drive `download_file_content` | base64 of the whole 16.8 MB file ≈ 22 MB encoded, exceeds a returnable tool result |
+| Attachment | failed three times |
 
-1. A screen with no suitable figure gets **no asset ID** and is recorded as having none.
-2. Asset IDs must reference a real page object; none is minted speculatively.
-3. `IMG-01` (ms 237) and `IMG-05` (ms 243) are **measured anchors** — extraction reconciles against
-   them and reports disagreement rather than overwriting.
-4. Extraction is bounded to module pages 237–250. Nothing outside scope is pulled.
+`source-assets/` is empty and correctly so.
+
+## 4. Extraction schema — ready
+
+| asset ID | source ref | module page | caption | type | px w×h | sha256 | bound screen |
+|---|---|---|---|---|---|---|---|
+| *(pending image binaries)* | | | | | | | |
+
+Naming once obtainable: `K5PL06T03-B02-IMG-<rajah>__p<module>.png`
+
+## 5. To close
+
+Any one of: the PDF · the four figures exported individually · a DOCX containing only pages 237–250.
+**Four images are needed. Not four hundred.**
