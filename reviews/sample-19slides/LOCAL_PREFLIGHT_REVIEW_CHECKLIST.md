@@ -1,4 +1,4 @@
-# LOCAL_PREFLIGHT_REVIEW_CHECKLIST — v0.1
+# LOCAL_PREFLIGHT_REVIEW_CHECKLIST — v0.2
 
 Everything below needs **PowerPoint on a local machine**. LibreOffice cannot load these decks in the
 build sandbox, so **nothing here has been seen rendered** — only measured. The package passes 22 of 22
@@ -6,9 +6,13 @@ mechanical checks; that is not the same as looking right.
 
 ## Before you start
 
-Open `K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_1.pptx`
-(`2b756e5b…`, 35,390 B). File→Info must show **"Preflight — 3 skrin — bukan storyboard, bukan 19
+Open `K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_2.pptx`
+(`ae16fcfd…`, 35,528 B). File→Info must show **"Preflight v0.2 — 3 skrin — bukan storyboard, bukan 19
 slaid"**. If not, you have the wrong file.
+
+**v0.2 is a legibility revision only** — placeholder contrast, card-label size, `Kembali` size, S17
+spacing. **No treatment logic changed.** Keep v0.1 (`2b756e5b…`) beside it if you want to judge the
+legibility change itself; it is preserved unmodified.
 
 Keep probe v0.1 (`24dcaa04…`) open beside it. Probe slide 2 is the canonical S12; preflight slide 2 is
 the same archetype with the corrected locator and a concise display. Side by side is the fastest read.
@@ -37,7 +41,11 @@ preflight reverts it to canonical split. **If this reads wrong, nine screens cha
 - [ ] **Body does not run past `Kembali`** — measured 10 lines against a ~12.5-line box, but
       `spAutoFit` is recomputed on open
 - [ ] `Kembali` sits **below** the panel, horizontally centred, not overlapping
-- [ ] `Kembali` is not clipped at the bottom edge — measured clearance is **0.0625 in**
+- [ ] **v0.2 — `Kembali` is visibly larger** (16 pt bold in a 1.55 × 0.38 in box)
+- [ ] `Kembali` is not clipped at the bottom edge — **v0.2 clearance is only 0.045 in**, and its gap to
+      the panel is **0.0333 in**. This is the tightest spot in the deck — **check it closely**. It
+      could not be made larger without shortening the canonical panel
+- [ ] **v0.2 — panel placeholder text reads clearly** against the tint
 - [ ] Left panel reads as a production-instruction placeholder, not artwork
 - [ ] Off-canvas note cites **`K5PL06T03-B02-IMG-05, ms 243`**. If you see `IMG-01` or `237`, the patch
       failed
@@ -53,6 +61,10 @@ preflight reverts it to canonical split. **If this reads wrong, nine screens cha
 - [ ] Longest label — **Struktur Persisir Air** — fits on one line without clipping. Check first
 - [ ] Instruction line spans the grid width and does not wrap
 - [ ] Instruction line clear of the top card row; nothing crowds
+- [ ] **v0.2 — placeholder text reads clearly** against the tinted card fill. In v0.1 it inherited a
+      light theme colour and washed out. If it still looks faint, the contrast fix failed
+- [ ] **v0.2 — card labels are visibly larger** (20 pt in a 3.62 × 0.50 in box). They should read as
+      labels, not captions
 - [ ] `Water Feature` is **italic** in both the card placeholder and the label
 - [ ] Nothing numbered anywhere
 - [ ] Off-canvas note cites `K5PL06T03-B02-IMG-01, ms 237`
@@ -70,8 +82,12 @@ preflight reverts it to canonical split. **If this reads wrong, nine screens cha
 - [ ] **`BBQ pit`** — lowercase `p`. This is the source form and it deliberately differs from the
       reviewed deck's `BBQ Pit`
 - [ ] Bullets carry **no** terminal full stops
-- [ ] Body fits the panel; 4 bullets should render in 6–7 lines against a ~7-line box — **this is the
-      tightest box in the deck**
+- [ ] **v0.2 — bullets have visible breathing room** (6 pt before each). If they still look cramped,
+      say so — spacing can go further without touching treatment
+- [ ] **v0.2 — heading sits clear of the first bullet.** The first v0.2 build had them overlapping by
+      0.17 in; the delivered file has a **+0.08 in** gap. If they touch, the fix regressed
+- [ ] Body fits the panel — 4 bullets with spacing should render in ~6–7 lines and end **above** the
+      panel bottom (body bottom 7.00 vs panel bottom 7.0416)
 
 ---
 

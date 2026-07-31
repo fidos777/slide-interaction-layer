@@ -1,7 +1,37 @@
-# PREFLIGHT_VALIDATION — v0.1
+# PREFLIGHT_VALIDATION — v0.2
 
 Measured on the delivered file.
-`sha256 2b756e5b82013ebc4da53de8e88ac4d9ae94e3106800361f4e03247556e91862` · `md5 e1f5d3a3c617861717267e95f08bc10c` · 35,390 B
+`sha256 ae16fcfd31200a3681785d1d970e236dc05624292ecf178076ddb44ff109a2df` · `md5 9935e17397ec563c99a6f0a1fd57a0ae` · 35,528 B
+
+v0.1 (`2b756e5b…e91862`, 35,390 B) is preserved unmodified and re-hashed after the v0.2 build.
+
+## 0. v0.2 — legibility revision
+
+**9 / 9 package checks and 12 / 12 rule checks re-run and PASS on v0.2.** Treatment logic is unchanged:
+S12 panel 5.8621, S17 panel 11.7292, **ratio 2.0009×** — identical to v0.1.
+
+| # | Adjustment | Measured result |
+|---:|---|---|
+| 1 | placeholder contrast | 10 runs given explicit dark fill (8 on S04, 1 on S12, 1 on S17). Root cause was `fontRef → lt1` on the card style — light text on a light tint |
+| 2 | card label | `3.6202 × 0.50 @ 20 pt` (was `3.0323 × 0.4364 @ 18 pt`); capacity ≈ **24–27 ch/line** vs 21-char longest label — headroom improved from 1–3 to **3–6** characters |
+| 3 | `Kembali` | `1.55 × 0.38 @ 16 pt` bold (was `1.3277 × 0.3366 @ 14 pt`); centre **6.6667** vs stage 6.66665 |
+| 4 | S17 spacing | `spcBef` 6 pt × 4 bullets; heading `3.92 / 0.45`, body `4.45 / 2.55`; heading→body gap **+0.08**; body bottom 7.00 inside panel bottom 7.0416 |
+| 5 | treatment logic | **unchanged** — 12/12 rule checks still pass |
+
+**Recomputed, not nudged:** `GAP_Y` 0.3644 → 0.25 · `ROW_PITCH` 2.8094 → 2.7586 · row 2 top → 4.7024 ·
+lowest label bottom 7.211 (stage margin 0.289). Label centring deltas remain **0.0000 × 4**.
+
+**Defect found and fixed in this revision:** the first v0.2 build left the S17 heading at `y = 4.2`
+while the body moved to `4.45` — a **−0.17 in overlap**. Corrected before delivery.
+
+**Residual tightness, recorded:** `Kembali` stage clearance is **0.045 in** and its gap to the panel is
+**0.0333 in**. Only 0.4583 in exists between panel bottom and stage edge, so the control cannot grow
+further without shortening the canonical panel or moving it inside — both treatment changes, so
+neither was made.
+
+---
+
+## Sections 1–9 below were measured on v0.1 and re-verified on v0.2 except where §0 restates a value.
 
 ```
 OUTPUT_ONLY_DISPOSABLE_PREFLIGHT · NOT_A_19_SLIDE_STORYBOARD

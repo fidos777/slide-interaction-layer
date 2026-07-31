@@ -1,4 +1,4 @@
-# PREFLIGHT_MAPPING — v0.1
+# PREFLIGHT_MAPPING — v0.2
 
 ```
 OUTPUT_ONLY_DISPOSABLE_PREFLIGHT
@@ -7,15 +7,49 @@ NOT_CAIR_RATIFIED
 NOT_PRODUCTION_AUTHORISED
 ```
 
-## Artifact
+## Artifact — **current revision v0.2**
 
 ```
-K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_1.pptx
-35,390 bytes
-sha256  2b756e5b82013ebc4da53de8e88ac4d9ae94e3106800361f4e03247556e91862
-md5     e1f5d3a3c617861717267e95f08bc10c
+K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_2.pptx
+35,528 bytes
+sha256  ae16fcfd31200a3681785d1d970e236dc05624292ecf178076ddb44ff109a2df
+md5     9935e17397ec563c99a6f0a1fd57a0ae
 3 slides · 1 master · 7 layouts · 3 notes slides · 41 package entries
 ```
+
+### Revision history
+
+| rev | file | bytes | sha256 | change |
+|---|---|---:|---|---|
+| **v0.1** | `…_PREFLIGHT_v0_1.pptx` | 35,390 | `2b756e5b…e91862` | initial 3-screen build. **Preserved unmodified; not overwritten.** |
+| **v0.2** | `…_PREFLIGHT_v0_2.pptx` | 35,528 | `ae16fcfd…09a2df` | **legibility only** — placeholder contrast, card-label size, `Kembali` size, S17 spacing. **No treatment logic changed.** |
+
+### What changed in v0.2
+
+Five instructions, all presentation. **Treatment logic is untouched** — same archetypes, same rules,
+same content, same locators, same italic lexicon, same no-narrator-prefix, same source forms.
+
+| # | Instruction | Change | Was → Now |
+|---:|---|---|---|
+| 1 | *darken placeholder text / tambah contrast* | Placeholder runs in card and panel shapes given an explicit dark fill (`tx1` @ `lumMod 85000`) | Inherited `<p:style><a:fontRef><a:schemeClr val="lt1"/>` — **light text on a light tint**. That was the cause, and it is now overridden at run level. |
+| 2 | *besarkan label card sedikit* | Card label box and type enlarged | `3.0323 × 0.4364 @ 18 pt` → **`3.6202 × 0.50 @ 20 pt`** (label ratio 0.7706 → 0.92 of card width) |
+| 3 | *besarkan / tebalkan Kembali* | Control enlarged; already bold, kept bold | `1.3277 × 0.3366 @ 14 pt` → **`1.55 × 0.38 @ 16 pt`**, still exact-centred (6.6667) |
+| 4 | *beri S17 sedikit spacing tambahan* | `spcBef` 6 pt on all four Rumusan bullets; heading raised and body given more room | heading `4.2 / 0.42` → **`3.92 / 0.45`**; body `4.7011 / 2.2215` → **`4.45 / 2.55`** |
+| 5 | *jangan ubah treatment logic* | Nothing in §3–§5 below changed | S12/S17 panel ratio still **2.0009×** |
+
+**Knock-on geometry, recomputed rather than nudged.** The taller label forced the row pitch to absorb
+it: `GAP_Y` 0.3644 → **0.25**, `ROW_PITCH` 2.8094 → **2.7586**, row 2 top 4.7532 → **4.7024**. Lowest
+label bottom 7.211, leaving a **0.289 in** stage margin. Label centring is still exact — `R-LABEL-X`
+holds, deltas **0.0000** on all four cards.
+
+**`Kembali` clearance is the tightest constraint in the deck.** Below the panel there are only
+0.4583 in before the stage edge. At 16 pt the box needs 0.38 in, so the gap to the panel narrows
+0.0592 → **0.0333** and the stage clearance lands at **0.045 in**. The control could not grow further
+without either shortening the canonical panel or moving `Kembali` inside it — both of which would be
+treatment changes, so neither was done.
+
+**One defect found and fixed during v0.2.** The first build left the S17 heading at `y = 4.2` while the
+body moved to `4.45`, giving a **−0.17 in overlap**. Corrected to `y = 3.92`, gap now **+0.08 in**.
 
 **Scope: three screens, not nineteen.** S04, S12, S17 — the three `VERIFIED_SOURCE` screens that carry
 one archetype each. S09 is `VERIFIED_SOURCE` too but was excluded: it adds tick geometry without adding
@@ -73,8 +107,9 @@ S04 states the choice in the negative: `Klik hotspot -> reveal full-slide, bukan
 Geometry derived from **rules**, not copied coordinates:
 
 ```
-CARD_W 3.935 · CARD_H 1.9901 · GAP_X 0.7074 · GAP_Y 0.3644
-LABEL_W = CARD_W × 0.770597 = 3.0323 · LABEL_H 0.4364 · LABEL_GAP 0.0185
+CARD_W 3.935 · CARD_H 1.9901 · GAP_X 0.7074 · GAP_Y 0.25          ← v0.2
+LABEL_W = CARD_W × 0.92 = 3.6202 · LABEL_H 0.50 · LABEL_GAP 0.0185  ← v0.2
+ROW_PITCH = CARD_H + LABEL_GAP + LABEL_H + GAP_Y = 2.7586
 R-GRID-X   GRID_X0 = (13.3333 − (2·CARD_W + GAP_X))/2 = 2.3779
 R-LABEL-X  LABEL_X = CARD_X + (CARD_W − LABEL_W)/2
 R-INSTR    INSTR_W = 2·CARD_W + GAP_X = 8.5774 ; INSTR_X = GRID_X0
@@ -82,8 +117,9 @@ R-INSTR    INSTR_W = 2·CARD_W + GAP_X = 8.5774 ; INSTR_X = GRID_X0
 
 | Element | Value |
 |---|---|
-| Cards | (2.3779, 1.9438) (7.0203, 1.9438) (2.3779, 4.7532) (7.0203, 4.7532), each 3.935 × 1.9901 |
-| Labels | (2.8293 / 7.4717) × (3.9524 / 6.7618), each 3.0323 × 0.4364 |
+| Cards | (2.3779, 1.9438) (7.0203, 1.9438) (2.3779, **4.7024**) (7.0203, **4.7024**), each 3.935 × 1.9901 |
+| Labels | (**2.5354** / **7.1778**) × (3.9524 / **6.7110**), each **3.6202 × 0.50 @ 20 pt** |
+| Placeholder text | explicit dark fill — `tx1` @ `lumMod 85000` |
 | Instruction | (2.3779, 1.2936) 8.5774 × 0.4039 |
 | Locator | `K5PL06T03-B02-IMG-01, ms 237` — correct for Struktur Taman |
 
@@ -111,7 +147,8 @@ Canonical geometry from probe S12 (= canon slide 6), restored:
 | Visual panel | (0.8046, 1.7813) **5.8621 × 5.2604** — 43.97 % of stage |
 | **Body heading box** | (6.8667, 1.8291) 5.6621 × 0.5068 — **restored** |
 | Body | (6.8667, 2.5594) 5.6621 × 3.8708 |
-| `Kembali` | (6.0028, 7.1009) 1.3277 × 0.3366 — centre 6.6666 vs stage 6.66665 |
+| Panel placeholder text | explicit dark fill — `tx1` @ `lumMod 85000` |
+| `Kembali` | (**5.8917, 7.075**) **1.55 × 0.38 @ 16 pt bold** — centre **6.6667** vs stage 6.66665 |
 | Locator | **`K5PL06T03-B02-IMG-05, ms 243`** |
 
 **Departure from the reviewed deck, recorded:** the review widened this panel to 11.7371 — within
