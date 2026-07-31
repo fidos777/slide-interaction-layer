@@ -36,7 +36,7 @@ can accept or reject `A-05` on sight — not that it ships.
 | 8 | Every sample artefact carries the banner **`SAMPLE — NOT CAIR-RATIFIED`**. |
 | 9 | `POPUP` is never selected. Both realisations are DEFERRED. |
 | 10 | The 3-term italic lexicon is closed: `Water Feature`, `Drinking Fountain`, `BBQ pit`. Nothing added by inference. |
-| 11 | Cast is limited to the ratified `CANONICAL` pair: `Haziq`, `Encik Roslan`. The nine `OFF-CANON` names do not appear. |
+| 11 | **No named scenario cast.** The current B02 cast is not provable (`A-13`); use role-neutral placeholders. Do not revive `Haziq`/`Encik Roslan` and do not assert `Alya`/`Encik Rahman`. `Hilmi` remains the narrator. |
 | 12 | Screens are cited as `S01`–`S19`. The storyboard aliases `Slide 4`, `Slide 4(1)`, `Slide 5b`, `Slide 6` are DO_NOT_CITE. |
 
 ---
@@ -98,6 +98,7 @@ rebuilt on the Hotspot component.
 S01, S18, S19 — constructed, no decision required.
 **S02 and S03 — constructed on empty decision slots** (`SCREEN_CHANGE_MATRIX` §3.1). Render both as
 visibly provisional; they must not read as instantiating an SME decision that was never made.
+S02 uses **role-neutral placeholders** (`A-13`). S03 may visually introduce Hilmi as narrator (`A-09`).
 
 ### Phase 6 — Self-check *(no ratification)*
 Mechanical checks only, against `SME_RULE_CHECKABILITY.md`:
@@ -146,9 +147,10 @@ S12 body reflows 8 → ~13 lines.
 15 of 19 have no measured source (`M1`, `M2` absent). Their content is built, not transcribed.
 **Mitigation:** D3 marks every screen. No constructed screen may be cited as evidence of source.
 
-### R3 — S02 / S03 have no decision behind them — **MEDIUM**
-Both PL06 desk slots are empty, and `s03`↔`S03` does not even type-match.
-**Mitigation:** render as visibly provisional; cast limited to the two `CANONICAL` names.
+### R3 — S02 / S03 have no decision behind them, and the cast is unprovable — **MEDIUM**
+Both PL06 desk slots are empty; `s03`↔`S03` does not type-match; and the current B02 scenario cast
+cannot be established from any available artifact (`A-13`).
+**Mitigation:** render as visibly provisional; **role-neutral placeholders**, no named cast.
 
 ### R4 — S10 may not be a Card screen — **MEDIUM**
 No region data exists for any B02 screen, so the Hotspot gate is not constructible either way.

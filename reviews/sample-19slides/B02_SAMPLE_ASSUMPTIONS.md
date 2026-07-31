@@ -5,6 +5,10 @@
 - **Standing:** **sample only — NOT CAIR-ratified.** `K5_LIVE_RATIFICATION_LOCKED`
 - **Authority key:** `(K5, PL06, T3)`. B02 is a bahagian below the key and gets no key row.
 
+> **CORRECTED — preflight round.** Two assumptions were wrong and are superseded below:
+> **`A-13` cast** (was: "cast limited to `Haziq` + `Encik Roslan`") and **`A-09` S03 narrator**
+> (was: framed as an unresolved contradiction). Correction log at §5.
+
 ---
 
 ## 0. What this sample is, and is not
@@ -119,21 +123,28 @@ Each assumption carries its evidence, its status, and the risk taken by assuming
   collides with `Kembali`. Under `A-05` the line box narrows 53.7 %, so the sample's split-STATE
   detail screens need a **tighter** display budget than the measured full-width one, not a looser one.
 
-### `A-09` — No routine `Hilmi` prefix
-- **status** ASSUMPTION — ⚠️ **one exemption unresolved**
+### `A-09` — No routine `Hilmi` prefix — **CORRECTED**
+- **status** ASSUMPTION — **resolved, not a contradiction**
 - **evidence** `K5-DR-010`. Probe carries `Hilmi:` on all 3 non-empty notes (S04, S12, S17); Bariah
-  removed it on both screens she revised. Premise is ratified: `BARIAH_DATA.chars` locks
-  `Hilmi — Course narrator (VO-only) — LOCKED (memory)`, so the prefix is redundant.
-- **⚠️ open** The word *routine* implies an exemption. Bariah's rule reads
-  `(Only put Hilmi in Slide 3 Narrator)` and **the referent is unresolved** (`K5-DR-011`): reviewed
-  `slide3` has no `Hilmi:` at all, packet `S03` is `OVERVIEW`, and desk slot `s03` is a
-  `Reflection Prompt`. The lowercase/uppercase correspondence holds at `s02`↔`S02 DIALOG` and **breaks**
-  at `s03`↔`S03 OVERVIEW`.
-- **sample decision** Apply **no prefix on any of the 19 screens, including S03.** Rationale: applying
-  a *guessed* exemption is worse than applying none — it would fabricate provenance on the one screen
-  where the rule is least understood.
-- **mitigation** S03 is flagged in `SCREEN_CHANGE_MATRIX.md` as carrying an unresolved exemption.
-  Blocked on `packet_B02.json`.
+  removed it on both screens she revised. Premise ratified: `BARIAH_DATA.chars` locks
+  `Hilmi — Course narrator (VO-only) — LOCKED (memory)`.
+- **interpretation adopted**
+  1. **S03 may visually introduce Hilmi as the narrator.** Identifying the narrator once, on the
+     screen that introduces him, is a normal courseware move and is what
+     `(Only put Hilmi in Slide 3 Narrator)` most naturally means.
+  2. **Routine narrator VO does not carry the literal `Hilmi:` prefix.**
+  3. **Hilmi is not repeated on ordinary learning screens** unless functionally required — e.g. a
+     screen where the narrator must be distinguished from a scenario speaker.
+- **why this is not a contradiction** Bariah's text says *put Hilmi in Slide 3 Narrator* — it speaks to
+  **where the narrator is identified**, not to a VO **prefix string**. Nothing in either package shows
+  her requiring a literal `Hilmi:` prefix on S03; the only measured `Hilmi:` occurrences are the probe's
+  routine VO openings on S04/S12/S17, which is exactly the usage her rule removes. The earlier framing
+  of this as an unresolved referent collision over-read the evidence.
+- **residual, and it is small** *Which* screen "Slide 3" denotes is still not measured
+  (`packet_B02.json` absent). Under this interpretation it does not block: **S03 OVERVIEW** is the only
+  candidate that makes the instruction meaningful, and the preflight does not build S03.
+- **preflight effect** No `Hilmi:` prefix on S04, S12 or S17 — all three are routine learning screens.
+  **Verified: zero `Hilmi` tokens in any VO.**
 
 ### `A-10` — English-origin terms italic
 - **status** ASSUMPTION — **new practice, no source precedent**
@@ -168,6 +179,31 @@ Each assumption carries its evidence, its status, and the risk taken by assuming
 - **risk** None on the evidence; this is the best-supported item in the register. Cause is determinate.
 - **note** Tracked as a **source QA defect**, not a decision — `SOURCE_QA_PATCH_LIST.md` P-01.
 
+### `A-13` — Scenario cast — **CORRECTED · role-neutral placeholders**
+- **status** ASSUMPTION — **current B02 cast NOT PROVABLE**
+- **scope** S02 DIALOG and any scenario screen. **Not exercised by the preflight** — S04, S12 and S17
+  carry no scenario characters.
+- **prior position (withdrawn)** "Cast limited to the ratified `CANONICAL` pair: `Haziq`,
+  `Encik Roslan`." That treated a character-bank entry as the current course-wide cast. It is withdrawn.
+- **what the evidence actually shows**
+  | Finding | Detail |
+  |---|---|
+  | `Haziq` / `Encik Roslan` marked `CANONICAL` | `BARIAH_DATA.chars` — **undated, no scope statement**. It does not say "K5 course-wide, current". |
+  | The bank was a **menu, not a closed cast** | The K5 PL06 casting prompt reads `Tentukan jalan cerita + watak (Haziq/Roslan/**baru**)` — *baru* = **new**. A new character was always permitted. |
+  | The bank **does** record supersession when it happens | `Encik Fahmi` → `OFF-CANON → being replaced by Aril`. No such marker exists against Haziq/Roslan — which means the bank is **stale** relative to the reported latest position, not that the position is wrong. |
+  | B02's own decks contain **no scenario characters at all** | Only `Hilmi` (narrator) appears in either package. Zero occurrences of Haziq, Roslan, Alya or Rahman. |
+  | `Alya` / `Encik Rahman` | **Zero occurrences** anywhere in the repository or either deck. |
+  | Cast Bible | **Zero occurrences.** No such artefact is present. |
+  | The screen that would settle it | **S02 is unmeasured**, and its decision slot `(K5, PL06, s02)` is **empty**. |
+- **conclusion** The available evidence can neither confirm the reported B02 local cast
+  (`Alya` + `Encik Rahman`) nor revive `Haziq` + `Encik Roslan`. The fixed-pair treatment is reported
+  superseded; the course-wide **Cast Bible remains OPEN**; **`Hilmi` remains the narrator** (ratified,
+  `LOCKED`, and independent of the scenario cast).
+- **sample decision** Use **role-neutral placeholders** — `[PELATIH]`, `[PENYELIA]`, `[KONTRAKTOR]` —
+  on any scenario screen. **Do not revive a superseded cast, and do not assert an unproven one.**
+- **risk** Placeholders make S02 visibly incomplete. That is correct: the casting decision was never
+  made, and the sample must not manufacture one.
+
 ---
 
 ## 2. Assumptions the sample does **not** make
@@ -180,7 +216,9 @@ Recorded because their absence is load-bearing.
 | That `POPUP` is available | Both realisations (`overlay-with-close`, `overlay-maintain-VO`) are **DEFERRED**. The sample never selects `POPUP`. |
 | That `inline` reveal is unavailable | The repo carries it as `sedia`. The two-value enum omits it; the sample does not delete it (`K5-DR-072`). |
 | That `anda` is prohibited outside Rumusan | Explicitly not assumed. `K5-DR-031` is Rumusan-scoped until the packet says otherwise. |
-| That the S03 narrator exemption applies | `A-09` — a guessed exemption is worse than none. |
+| That a literal `Hilmi:` prefix is required on S03 | `A-09` — no evidence supports it; the rule speaks to where the narrator is *identified*. |
+| That `Haziq` + `Encik Roslan` are the current B02 cast | `A-13` — the fixed-pair treatment is reported superseded and the bank is undated. |
+| That `Alya` + `Encik Rahman` are the current B02 cast | `A-13` — reported, but **zero corroborating evidence** is available. |
 | That drag-drop appears anywhere in B02 | No B02 screen binds paired sets. `S18 KUIZ` is a quiz, not a matching activity. |
 | That constructed screens carry source authority | 15 of 19 are constructed. None may be cited as source. |
 | That B02 earns a key row | It is a bahagian; the key is `(K5, PL06, T3)`. |
@@ -194,13 +232,30 @@ Recorded because their absence is load-bearing.
 | **High** | `A-05` | Reverts Bariah's own edit on 9 screens; most likely to be rejected on sight |
 | **High** | `A-02` | 79 % of screens constructed without measured source |
 | Medium | `A-03`, `A-04` | Unratified selections; `A-04` conditional on S10's Card/Hotspot resolution |
-| Medium | `A-09`, `A-10` | One unresolved exemption; a 3-term lexicon seed |
+| Medium | `A-13` | Cast unprovable → placeholders; S02 renders visibly incomplete |
+| Medium | `A-10` | A 3-term lexicon seed from one 8-slide deck |
+| Low | `A-09` | Resolved by interpretation; not exercised beyond "no prefix" |
 | Medium | `A-11` (`K5-DR-032` only) | Not mechanically verifiable |
 | Low | `A-06`, `A-07`, `A-08`, `A-12` | Carried by measured evidence or pre-existing provenance |
 
 **Two high risks, both structural, both known before implementation.** Neither is a reason to stop —
 they are the reasons the sample exists — but neither may be discovered by a reviewer for the first time
 in the rendered output.
+
+---
+
+## 5. Correction log — preflight round
+
+| # | Assumption | Was | Now | Basis |
+|---:|---|---|---|---|
+| C-1 | `A-13` cast | "cast limited to `Haziq` + `Encik Roslan`" (derived from `K5-DR-004`) | **role-neutral placeholders**; current B02 cast **NOT PROVABLE** | The bank is undated and scope-less; the casting prompt explicitly allowed `baru`; zero evidence for any named cast in B02's own material |
+| C-2 | `A-09` S03 narrator | framed as an unresolved referent collision / "guessed exemption is worse than none" | **resolved by interpretation**; S03 may visually introduce the narrator, routine VO carries no prefix | No evidence Bariah required a literal `Hilmi:` prefix on S03; her rule addresses narrator *identification*, not a prefix string |
+
+**Knock-on corrections applied to sibling documents** (same round, for consistency):
+`SCREEN_CHANGE_MATRIX.md` S02/S03 rows and `SAMPLE_IMPLEMENTATION_PLAN.md` constraint 11, Phase 5 and
+risk R3. `K5-DR-011` in `K5_DECISION_REGISTER_v1.1.md` should be **downgraded from `COLLIDED` to
+`OPEN — interpretation adopted`**; that register is provisional and non-canonical, so no reissue is
+required.
 
 ---
 

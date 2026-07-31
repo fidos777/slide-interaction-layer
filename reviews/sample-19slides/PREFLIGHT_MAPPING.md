@@ -1,0 +1,189 @@
+# PREFLIGHT_MAPPING — v0.1
+
+```
+OUTPUT_ONLY_DISPOSABLE_PREFLIGHT
+NOT_A_19_SLIDE_STORYBOARD
+NOT_CAIR_RATIFIED
+NOT_PRODUCTION_AUTHORISED
+```
+
+## Artifact
+
+```
+K5PL06T03B02_3SCREEN_IMPLEMENTATION_PREFLIGHT_v0_1.pptx
+35,390 bytes
+sha256  2b756e5b82013ebc4da53de8e88ac4d9ae94e3106800361f4e03247556e91862
+md5     e1f5d3a3c617861717267e95f08bc10c
+3 slides · 1 master · 7 layouts · 3 notes slides · 41 package entries
+```
+
+**Scope: three screens, not nineteen.** S04, S12, S17 — the three `VERIFIED_SOURCE` screens that carry
+one archetype each. S09 is `VERIFIED_SOURCE` too but was excluded: it adds tick geometry without adding
+an archetype.
+
+---
+
+## 1. Screen-to-source mapping
+
+| Preflight # | Screen | Source part (probe v0.1) | Archetype | Layout | Notes | Status |
+|---|---|---|---|---|---|---|
+| 1 | **S04** | `slide4.xml` + `notesSlide4.xml` | CR_BASE — **4-card** | `Blank` | 474 ch | `VERIFIED_SOURCE` |
+| 2 | **S12** | `slide12.xml` + `notesSlide16.xml` | FULL — **split-STATE** | `Blank` | 443 ch | `VERIFIED_SOURCE` |
+| 3 | **S17** | `slide17.xml` + `notesSlide12.xml` | **RUMUSAN** | `Title and Content` | 622 ch | `VERIFIED_SOURCE` |
+
+**Not built:** S01–S03, S05–S11, S13–S16, S18, S19. Sixteen screens, of which four are
+`MISSING_SOURCE` and eleven `PARTIAL_SOURCE` (`SOURCE_CUSTODY_AND_COVERAGE.md`).
+
+## 2. Package derivation
+
+Built by **direct OOXML assembly** from probe v0.1 as structural donor, so the preflight sits in the
+same visual family by construction rather than by imitation. Carried over unchanged: `slideMaster1`,
+`slideLayout1–7`, `theme1`, `theme2`, `notesMaster1`, `presProps`, `viewProps`, `tableStyles`.
+
+**Deliberately excluded** — per the standing recommendation against reinjecting residue:
+
+| Excluded | Reason |
+|---|---|
+| `ppt/tags/tag1.xml` (23 iSpring tags) | describes PL06 T3 B2 with 14 dangling slide GUIDs, a foreign SCORM course ID and an LRS endpoint |
+| `ppt/changesInfos/changesInfo1.xml` | 206 records, `sldId` 8000–8051, matching neither deck |
+| `ppt/revisionInfo.xml` | one client's save counter |
+| `ppt/media/image3.svg` | tick icon — S09 not built |
+| `p:custDataLst` in `presentation.xml` | the tag-block binding |
+
+Verified absent in the output: **zero** residue parts, **zero** orphan content-type overrides.
+
+## 3. Interaction ontology applied
+
+```
+CLICK_REVEAL
+  trigger component : CARD          (S04)
+  reveal mode       : FULL_SLIDE    (S12)  → detail-screen-kembali
+```
+
+`FULL_SLIDE` is not a new token: it maps to `interaction-patterns-v0.md` §3.2 variant
+**`detail-screen-kembali`**, which has precedent (sample cementitious 16/06). The POP UP anti-drift
+guardrail is satisfied by **pre-existing** provenance, not by an assumption of this build — probe v0.1
+S04 states the choice in the negative: `Klik hotspot -> reveal full-slide, bukan pop up.`
+`POPUP` is never selected; both its realisations are DEFERRED. No `DRAG_DROP` pattern is exercised.
+
+## 4. Per-screen construction
+
+### S04 — four-card base
+
+Geometry derived from **rules**, not copied coordinates:
+
+```
+CARD_W 3.935 · CARD_H 1.9901 · GAP_X 0.7074 · GAP_Y 0.3644
+LABEL_W = CARD_W × 0.770597 = 3.0323 · LABEL_H 0.4364 · LABEL_GAP 0.0185
+R-GRID-X   GRID_X0 = (13.3333 − (2·CARD_W + GAP_X))/2 = 2.3779
+R-LABEL-X  LABEL_X = CARD_X + (CARD_W − LABEL_W)/2
+R-INSTR    INSTR_W = 2·CARD_W + GAP_X = 8.5774 ; INSTR_X = GRID_X0
+```
+
+| Element | Value |
+|---|---|
+| Cards | (2.3779, 1.9438) (7.0203, 1.9438) (2.3779, 4.7532) (7.0203, 4.7532), each 3.935 × 1.9901 |
+| Labels | (2.8293 / 7.4717) × (3.9524 / 6.7618), each 3.0323 × 0.4364 |
+| Instruction | (2.3779, 1.2936) 8.5774 × 0.4039 |
+| Locator | `K5PL06T03-B02-IMG-01, ms 237` — correct for Struktur Taman |
+
+**Defects corrected against the reviewed deck:**
+
+| Ref | Fix |
+|---|---|
+| `R-LABEL-X` | Label-to-card centring delta **0.0000 on all four** (measured deck: ±0.09725 mirror error) |
+| `R-GRID-X` | Grid centred; margins symmetric (measured deck: 0.05725 left of centre) |
+| `P-02` | Card 2 reads `Visual: Struktur Teduhan` (measured deck: `Struktur Persisir Teduhan`) |
+| `P-10` | Instruction width 8.5774 → ≈ 67–72 chars capacity for a 49-char string (inherited 6.3367 gave 0–4 chars headroom) |
+| `P-09` | Each label emitted after its own card |
+
+**Display treatment.** Four card labels + instruction. The probe's intro line
+`Empat jenis struktur taman.` is **not** on the canvas — its proposition is carried in the VO
+(`Terdapat empat jenis struktur taman: …`) and the four types are visible as labels. Concise display,
+full VO, zero proposition loss.
+
+### S12 — split-STATE detail, actual Papan Tanda source
+
+Canonical geometry from probe S12 (= canon slide 6), restored:
+
+| Element | Value |
+|---|---|
+| Visual panel | (0.8046, 1.7813) **5.8621 × 5.2604** — 43.97 % of stage |
+| **Body heading box** | (6.8667, 1.8291) 5.6621 × 0.5068 — **restored** |
+| Body | (6.8667, 2.5594) 5.6621 × 3.8708 |
+| `Kembali` | (6.0028, 7.1009) 1.3277 × 0.3366 — centre 6.6666 vs stage 6.66665 |
+| Locator | **`K5PL06T03-B02-IMG-05, ms 243`** |
+
+**Departure from the reviewed deck, recorded:** the review widened this panel to 11.7371 — within
+0.0079 in of the Rumusan panel — and deleted the heading box (`sp10 del @22:52:53`). The preflight
+reverts both, implementing `K5-DR-060`, an **unratified CAIR recommendation**. Measured outcome:
+S17 panel ÷ S12 panel = **2.0009×**, matching the canonical ratio exactly.
+
+`P-01` applied: locator `IMG-05` / ms 243. **No `IMG-01` or `237` appears on this screen.**
+
+**Display treatment.** Source's 4 sentences (346 ch) → 8 bullets across 2 levels, subject/copula/
+relativiser elided, terminal punctuation removed, the inline list exploded into 4 sub-bullets. All 4
+propositions retained; zero content words dropped; zero tokens added.
+Rendered load **10 lines** against a **12.57-line** box — 2 lines of headroom, deliberately tighter
+than the full-width 8/8 the review left with none.
+
+**VO.** Probe `notesSlide16` body **verbatim**, `Hilmi: Papan Tanda.` replaced by the section label
+`Perabot Taman`. All four source sentences intact.
+
+### S17 — revised Rumusan
+
+| Element | Value |
+|---|---|
+| Panel | (0.7917, 1.7812) 11.7292 × 5.2604 |
+| Heading box | (0.8125, 4.2) 11.7083 × 0.42 — bold, separate |
+| Body | (0.8125, 4.7011) 11.7292 × 2.2215 — 4 bullets |
+
+Rules applied:
+
+| Rule | Applied |
+|---|---|
+| Suppress `Kepentingan` / `Isi Utama` / `Manfaat` | all four label forms absent from display **and** VO |
+| `kontraktor`, not `anda` | display and VO both read `Kontraktor` / `kontraktor`; zero `anda` |
+| Benefit → industry application | `Kontraktor dapat merancang, melaksana dan menyelenggara … di tapak` — **drafted by judgement**, not mechanically verifiable |
+| English terms italic | `Water Feature`, `Drinking Fountain`, `BBQ pit` |
+| `P-03` | **`BBQ pit`** — source form, lowercase `p` |
+| `P-04` | `dan` lowercase in the heading |
+| `P-05` | em dash `—` restored in the heading |
+| `P-06`, `P-07` | revision followed — no terminal punctuation; structural rewording retained |
+
+**VO.** Bariah's fuller revised form, with `BBQ pit` in source case and no narrator prefix — including
+the framing clause `Dengan memahami komponen-komponen ini,` that the display deliberately omits. That
+asymmetry is the concise-display / full-VO principle, visible in one screen.
+
+## 5. Cast and narrator
+
+**No scenario character appears anywhere in the preflight** — verified: zero occurrences of `Haziq`,
+`Roslan`, `Alya`, `Rahman`, `Fahmi`, `Aril`. None of the three screens is a scenario screen, so the
+unprovable-cast question (`A-13`) is not exercised.
+
+**`Hilmi` appears nowhere either** — zero tokens in all three VO bodies. All three are routine learning
+screens; the narrator is not re-identified on them. S03, the screen that may visually introduce him, is
+not built.
+
+## 6. What this preflight does not do
+
+Does not generate 19 slides · does not construct content for any `MISSING_SOURCE` screen · does not
+build S09, S10 or S16 (so the 5-card 3+2 family and tick geometry are untested) · does not bind any
+image (none exists) · does not modify the live CAIR desk · does not unlock K5 · does not patch any
+database or authority schema · does not issue a canonical decision ID · does not merge.
+
+## 7. Why it cannot be promoted
+
+Not regenerable — no packet binding, compiler path or skeleton geometry produces it; it was assembled
+from a donor package against a hand-derived parameter sheet. Not authoritative — 3 of 19 screens, and
+the two most contested assumptions (`A-05` split-STATE revert, `A-04` five-card) are respectively
+**shown once** and **not shown at all**. No manifest, digest pin or baseline was issued. K5 remains
+locked, so no ratification path exists for it.
+
+## 8. The open question
+
+S12 is built here to canonical split-STATE while the reviewed deck made it full-width. **Rendering S12
+beside S17 is the point**: if the reveal-child still reads as a different thing from the summary, the
+revert is right; if it reads as a foreign deck, `A-05` is wrong and 9 screens change. Either answer
+closes a question open since 16/06 that no artifact has ever been able to answer, because nothing has
+ever been seen rendered.

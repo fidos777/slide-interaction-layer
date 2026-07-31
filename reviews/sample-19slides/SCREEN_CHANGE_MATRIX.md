@@ -14,8 +14,8 @@ Legend — **source basis**: `MEASURED` = probe v0.1 and/or verified reviewed-de
 | # | Screen | Role | Source basis | Pattern / trigger / reveal | Layout family | Change vs source | Blockers |
 |---|---|---|---|---|---|---|---|
 | 1 | **S01** | TAJUK | `CONSTRUCTED` | none | title | new build | M1, M2 |
-| 2 | **S02** | DIALOG | `CONSTRUCTED` | none (scene) | dialogue | new build; cast limited to `Haziq` + `Encik Roslan` | **`K5-DR-090` slot EMPTY** · M2 |
-| 3 | **S03** | OVERVIEW | `CONSTRUCTED` | none | overview | new build; **no `Hilmi:` prefix** (`A-09`) | **`K5-DR-091` slot EMPTY** · **`K5-DR-011` exemption unresolved** · M2 |
+| 2 | **S02** | DIALOG | `CONSTRUCTED` | none (scene) | dialogue | new build; **role-neutral placeholders** (`A-13`) — current cast not provable | **`K5-DR-090` slot EMPTY** · M2 |
+| 3 | **S03** | OVERVIEW | `CONSTRUCTED` | none | overview | new build; **may visually introduce Hilmi as narrator**; no `Hilmi:` VO prefix (`A-09`) | **`K5-DR-091` slot EMPTY** · M2 |
 | 4 | **S04** | CR_BASE — Struktur Taman | ✅ `MEASURED` | `CLICK_REVEAL` / **CARD** / `FULL_SLIDE` | **4-card 2 × 2** | **vertical-menu → Card grid** | `K5-DR-041` supersession **not in force** |
 | 5 | **S05** | FULL — Struktur Persisir Air | `CONSTRUCTED` | reveal child | **split-STATE** | new build | M1, M2, M3 |
 | 6 | **S06** | FULL — Struktur Teduhan | `CONSTRUCTED` | reveal child | split-STATE | new build | M1, M2, M3 |
@@ -43,7 +43,7 @@ Legend — **source basis**: `MEASURED` = probe v0.1 and/or verified reviewed-de
 |---|---|---|---|
 | Concise source-bound display | all content screens | `A-07` | — |
 | Fuller source-bound VO | all content screens | `A-08` | — |
-| No `Hilmi:` prefix | **all 19**, including S03 | `A-09` | ⚠️ S03 exemption unresolved |
+| No routine `Hilmi:` VO prefix | **all 19** | `A-09` | S03 may *visually* introduce the narrator |
 | English terms italic | S08, S14, S15, S17 | `A-10` | 3-term list only; nothing added by inference |
 | `FULL_SLIDE` reveal (`detail-screen-kembali`) | S05–S08, S11–S15 | `A-06` | never `POPUP` |
 | `Kembali` at 6.0028, 7.1009 | 9 detail screens | measured, unchanged by Bariah | — |
@@ -65,12 +65,15 @@ The historical K5 corpus holds exactly two decision slots per PL, and for PL06 t
 These map to sample screens **S02 DIALOG** and **S03 OVERVIEW**. The sample must therefore construct
 two screens whose governing decisions **were never made** — not lost, not superseded: never filled.
 
-- **S02** — the casting decision is unmade. The sample may use only the ratified cast:
-  `Haziq` (Apprentice/learner, `CANONICAL`) and `Encik Roslan` (Mentor/expert, `CANONICAL`).
-  The other nine names are `OFF-CANON` and must not appear.
-- **S03** — the reflection decision is unmade, *and* the desk types `s03` as `Reflection Prompt` while
-  the packet types `S03` as `OVERVIEW`. The correspondence that holds at `s02`↔`S02 DIALOG` **breaks
-  here**, which is the same break that makes `K5-DR-011`'s "Slide 3 Narrator" referent unresolvable.
+- **S02** — the casting decision is unmade, **and the current B02 cast is not provable** (`A-13`):
+  the fixed `Haziq`/`Encik Roslan` treatment is reported superseded, the character bank is undated and
+  its casting prompt explicitly allowed `baru` (new), and the reported local cast
+  (`Alya` / `Encik Rahman`) has **zero** corroborating evidence in any available artifact.
+  The sample uses **role-neutral placeholders**.
+- **S03** — the reflection decision is unmade. The desk types `s03` as `Reflection Prompt` while the
+  packet types `S03` as `OVERVIEW`; the correspondence that holds at `s02`↔`S02 DIALOG` does not hold
+  here. Under `A-09` this does **not** block: S03 may visually introduce Hilmi as narrator, and no
+  routine `Hilmi:` VO prefix is used anywhere.
 
 **Both screens are constructed on no decision at all.** They must be rendered as clearly provisional
 and must not be read as instantiating an SME decision.
