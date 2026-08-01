@@ -1,9 +1,9 @@
 # B02_V0_4_INPUT_FREEZE — K5 PL06 T03 B02
 
 ```
-V0_4_INPUTS_PARTIALLY_FROZEN
-BARIAH_FEEDBACK_ARTIFACT_NOT_RECEIVED
-FEEDBACK_DELTA_BLOCKED
+V0_4_INPUTS_FROZEN
+BARIAH_FEEDBACK_ARTIFACTS_RECEIVED_AND_FROZEN
+FEEDBACK_DELTA_EXECUTABLE
 CAIR_INTEGRITY_EXCEPTION_FOR_REVIEW_BUILD_ONLY (carried forward, B02-CAIR-INT-001)
 NOT_FOR_MMD_BUILD · MULTIMEDIA_NOT_PRODUCED
 ```
@@ -12,9 +12,11 @@ NOT_FOR_MMD_BUILD · MULTIMEDIA_NOT_PRODUCED
 |---|---|
 | Repository | `/home/user/slide-interaction-layer` |
 | Branch | `claude/verify-powerpoint-file-vpfzkg` |
-| HEAD at freeze | `ba1f52a4c8ceef978e8b4304a1764cbeca8eadda` |
+| HEAD at first freeze | `ba1f52a4c8ceef978e8b4304a1764cbeca8eadda` |
+| HEAD at amendment | `5ca77dd9b3f630e1ef29b20541dc192411495c29` |
 | Working tree at freeze | clean |
-| Freeze date | 31 July 2026 |
+| First freeze date | 31 July 2026 |
+| Amendment date | **1 August 2026** — Bariah feedback artifacts received and frozen (§2A) |
 
 ---
 
@@ -27,9 +29,11 @@ NOT_FOR_MMD_BUILD · MULTIMEDIA_NOT_PRODUCED
 | C | Updated S&G v0.2 | ✅ | frozen below, §4 |
 | D | Module rendered PDF | ✅ | frozen below, §4 |
 | E | Module approved DOCX | ⚠ | identity pinned, **unhashed** — `B02-CAIR-INT-001` |
-| F | **Bariah's review feedback on v0.3** | ❌ | **NOT RECEIVED — see §5** |
+| F | **Bariah's review feedback on v0.3** | ✅ | **RECEIVED AND FROZEN — see §2A and §5** |
+| G | Updated S&G v0.3 (supersedes v0.2 for B02) | ✅ | frozen below, §2A |
 
-**Five of six inputs are frozen. The sixth does not exist yet.**
+**All six required inputs are now frozen**, plus the consolidated S&G v0.3. Input E remains the single
+open integrity item and is governed by `B02-CAIR-INT-001`, which is not Bariah's to close.
 
 ---
 
@@ -49,6 +53,50 @@ These become the *inputs* to v0.4. Any delta is computed against exactly these b
 | `BARIAH_REVIEW_CHECKLIST_v0_3.md` | 7,353 | `952179b105f8c72dacc03e4f7d63157aad9a0f4d53f4a772510532cea2847448` |
 | `RUN_MANIFEST_v0_3.json` | 5,028 | `d486341f38124c4543a82b4880389f6087c39dc423e647cb4b7bd7dc90269b09` |
 | `B02_PRE_STAGE2_RULING_EVIDENCE.md` | 57,060 | `47c4e980f8b8bdafe1434a0234bd27966ce8ff841b991b9e86af3727e24a450f` |
+
+---
+
+## 2A. Bariah feedback artifacts — received and frozen
+
+```
+BARIAH_FEEDBACK_ARTIFACTS_RECEIVED_AND_FROZEN
+```
+
+Frozen location: `reviews/storyboard-bariah/v0_3_bariah_review/`
+Evidence date: **1 August 2026**, supplied as task attachments to this session (upload timestamps
+`2026-08-01 05:16` for all four).
+
+| # | Filename | Frozen path | Bytes | SHA-256 | Role | Authority class |
+|---|---|---|---:|---|---|---|
+| **A1** | `K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx` | `reviews/storyboard-bariah/v0_3_bariah_review/` | 365,773 | `cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809` | Bariah's annotated v0.3 deck with corrected exemplar slides | **PRIMARY — slide-level evidence** |
+| **A2** | `Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx` | `reviews/storyboard-bariah/v0_3_bariah_review/` | 43,342 | `c15ae05e20358eda17b8e272f5dd9a5ef85831016976a926346371ea5790bcf3` | completed review guide, 8 items answered | **PRIMARY — decision evidence** |
+| **A3** | `K5_PL06_T03_B02_UPDATED_SG_v0.3.docx` | `reviews/storyboard-bariah/v0_3_bariah_review/` | 56,475 | `f3166e42f84d4b1f1c792c28fdc0278cc1c56a061b1598bfcce0efde91ad429d` | consolidated executable Style & Guidelines, v0.3 | **CONSOLIDATED EXECUTABLE S&G** |
+| **A4** | `BARIAH_CORRECTION_EXEMPLARS_v0.4.md` | `reviews/storyboard-bariah/v0_3_bariah_review/` | 16,303 | `dec29895304f8ff08839321c2109fcca3e4db3364c341c9c833869ba06902890` | index locating the 12 corrected exemplar slides | **DERIVED — navigation aid, not authoritative** |
+
+All four were copied byte-for-byte from the supplied originals and verified with `cmp -s`; no
+normalisation, re-save or re-zip was performed. The two SHA-256 values cited *inside* A4 match the
+actual bytes of A1 and A2 exactly, which is itself a consistency check on the derived index.
+
+**A4's authority is strictly navigational.** It was used to locate corrected exemplars efficiently;
+every conclusion drawn from it was re-verified against A1's slide and Notes text or A2's decision
+cells. Where they diverge, the primary artifact wins — recorded in
+`BARIAH_FEEDBACK_IMPLEMENTATION_MAP_v0.4.md` §4, BFB-12.
+
+### 2A.1 How A1 encodes feedback
+
+A1 carries **75 slides, 75 notes parts and zero PowerPoint comment parts.** Bariah annotated on-slide
+rather than through the comment mechanism: 12 slides carry `Changes made. Refer next slide.` (the
+following slide being the corrected exemplar) and 7 slides carry inline written directives. All 19
+markers are classified in the implementation map. The relationship `slide n → RP-{n:03d}` used by the
+delta protocol does **not** hold in A1, because A1 interleaves originals with exemplars; A1 locators
+are therefore recorded as explicit `slide n → n+1` pairs.
+
+### 2A.2 S&G version supersession
+
+S&G **v0.3** (A3) supersedes S&G v0.2 as the executable style authority for B02. §4 below retains the
+v0.2 hash because the v0.3 *deck* was built against it; the v0.4 delta is written against v0.3.
+
+---
 
 ## 3. Generator toolchain frozen
 
@@ -77,40 +125,52 @@ All three re-verified byte-identical to their v0.3 values at freeze time.
 
 ---
 
-## 5. The missing input — stated precisely
+## 5. The former blocker — superseded, and why
 
 ```
-BARIAH_FEEDBACK_ARTIFACT_NOT_RECEIVED
+BARIAH_FEEDBACK_ARTIFACT_NOT_RECEIVED   →   SUPERSEDED 1 August 2026
+BARIAH_FEEDBACK_ARTIFACTS_RECEIVED_AND_FROZEN
 ```
 
-**No Bariah feedback on the v0.3 deck exists.** This is not an access failure; the artifact has not
-been produced yet. Evidence of the search:
+**The earlier blocker was an execution-environment artifact-handoff gap, not an absence of
+stakeholder feedback.** Bariah's review existed; this session had no path to it. Recording the
+distinction precisely matters, because the two conditions call for opposite responses — a missing
+review means wait for the reviewer, a missing handoff means fix the delivery channel.
 
-| Location searched | Result |
-|---|---|
-| Session upload directory | 8 files, newest is the S&G v0.2 from 13:11 today. No feedback artifact. |
-| Local filesystem (`*v0.4*`, `*v0_4*`, `*BARIAH*FEEDBACK*`, `*BARIAH*COMMENT*`) | only `improvement/scorecards/v0.4.0.md` — an unrelated repo scorecard |
-| Drive, all files modified since 2026-07-30 | 4 files, none related to B02 |
-| Drive, `fullText` on *Komponen Landskap* / *PL06 T03 B02*, and `title` on *B02* | the module DOCX, the two S&G documents, and unrelated K1 material |
-| Newest Bariah-owned file (`bariahoahmad@gmail.com`) | *CIDB Cycle 7 Analisis Dokumen*, modified **10:20 today** — a document-analysis spreadsheet for a different workstream |
+### 5.1 What the earlier search actually established
 
-**Timeline makes this expected.** The v0.3 package was committed at `ba1f52a` today at roughly 15:00.
-The brief for it was that Bariah would review *tomorrow morning*. The newest Bariah artifact predates
-the package by about five hours.
+The search recorded at the previous freeze was sound in method and correct in what it observed. Its
+scope was the failure:
 
-### What the feedback artifact usually looks like
+| Location searched | Observed then | Why it could not have found the artifacts |
+|---|---|---|
+| Session upload directory | 8 files, newest the S&G v0.2 from 13:11 on 31 July | the four artifacts were attached to a **later** session turn, timestamped `2026-08-01 05:16` |
+| Local filesystem globs | only an unrelated repo scorecard | the artifacts had never been written to this container |
+| Drive, modified since 2026-07-30 | 4 files, none B02 | the artifacts were delivered as task attachments, not via Drive |
+| Drive full-text and title queries | module DOCX, both S&G documents, unrelated K1 material | same |
+| Newest Bariah-owned Drive file | a Cycle 7 spreadsheet from a different workstream | same |
 
-Two precedents exist in Drive, both from the Kursus 1 cycle in June 2026:
+Every one of those observations remains true of the state at the time. **The inference drawn from
+them — that no feedback had been produced — was the error**, and it was an error of scope: the search
+could only see channels the session had access to, and the actual delivery channel was not among them.
 
-| Artifact | Form |
-|---|---|
-| `SB_K1PL2T1_v1_COMMENTED.pptx` | the deck returned with PowerPoint comments attached to slides |
-| `K1_FeedbackReview_vBariah.zip` | a bundled feedback pack |
+### 5.2 The correct standing conclusion
 
-Either form is directly consumable by the delta protocol in
-`B02_FEEDBACK_DELTA_PROTOCOL_v0_4.md`. A commented `.pptx` is the richer input, because each comment
-carries its slide anchor, which maps straight to a review page ID and from there to a screen, a state
-and — where applicable — a source row.
+> Absence of an artifact in the session's reachable channels is evidence about the channels.
+> It is not evidence about the reviewer.
+
+Per the current task instruction, that Drive and repository search is **not to be repeated** to
+re-test whether the artifacts are absent. They are task-provided attachments, now frozen at §2A with
+byte-for-byte identity to the originals.
+
+### 5.3 What did not change
+
+No comment was ever fabricated during the blocked period. The delta machinery built while blocked —
+the classification schema, the measured propagation scope and the register-update contract in
+`B02_FEEDBACK_DELTA_PROTOCOL_v0_4.md` — was built to be independent of the comments' content, and it
+absorbed the real feedback without amendment. The one behavioural note is that A1 uses on-slide
+annotation rather than PowerPoint comment parts, so the protocol's `slide n → RP-{n:03d}` shortcut
+does not apply to it; see §2A.1.
 
 ---
 
@@ -118,7 +178,7 @@ and — where applicable — a source row.
 
 | | |
 |---|---|
-| **Does** | Lock the exact bytes any v0.4 delta will be computed against. Establish the propagation-scope model and the Stage 2 interaction taxonomy so implementation can begin the moment feedback lands. |
+| **Does** | Lock the exact bytes any v0.4 delta is computed against, **including Bariah's four feedback artifacts**. Establish the propagation-scope model, the Stage 2 interaction taxonomy and the executable feedback delta. |
 | **Does not** | Authorise generator changes, PowerPoint regeneration, component propagation, canonical freeze, production approval, MMD build or multimedia binding. |
 
 No generator was modified and no PowerPoint was regenerated in producing this freeze.

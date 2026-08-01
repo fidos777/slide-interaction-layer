@@ -1,20 +1,28 @@
 # B02_FEEDBACK_DELTA_PROTOCOL — K5 PL06 T03 B02 v0.4
 
 ```
-FEEDBACK_DELTA_BLOCKED — BARIAH_FEEDBACK_ARTIFACT_NOT_RECEIVED
+FEEDBACK_DELTA_BLOCKED — BARIAH_FEEDBACK_ARTIFACT_NOT_RECEIVED   ← SUPERSEDED 1 August 2026
 PROPAGATION_SCOPE_MODEL_COMPLETE
 DECISION_REGISTER_UPDATE_CONTRACT_DEFINED
 NO_COMMENT_FABRICATED
 ```
 
-> **This document contains no Bariah comment, because none exists.** It is the executable machinery
-> that turns comments into changes the moment they arrive: a classification schema, a measured
-> propagation scope per change class, and the contract for updating the decision register. Every blast
-> radius below is computed from the frozen v0.3 model, not estimated.
+> ## ⚠ Blocked status superseded — 1 August 2026
+>
+> Bariah's feedback arrived as four task-supplied artifacts, now frozen at
+> `B02_V0_4_INPUT_FREEZE.md` §2A. The earlier blocker was an **execution-environment artifact-handoff
+> gap, not an absence of stakeholder feedback** — see `B02_V0_4_INPUT_FREEZE.md` §5.
+>
+> The executable delta is `BARIAH_FEEDBACK_IMPLEMENTATION_MAP_v0.4.md` (31 classified records),
+> `DECISION_REGISTER_B02_v0.4.json` (17 decisions) and `V0_3_TO_V0_4_CHANGESET.json`.
+>
+> **The machinery below is unchanged and still governs**, with two amendments made by Bariah's
+> rulings: `B02-A-05` is resolved (§4.2) and the depth-2 invariant in §4.3 becomes depth-3 for
+> Family P1. §1 is retained as the record of the blocked period, not as a current statement.
 
 ---
 
-# 1. Why the delta itself is blocked
+# 1. Why the delta itself was blocked *(historical — superseded 1 August 2026)*
 
 The v0.3 package was committed at `ba1f52a` today at ~15:00, for review *tomorrow morning*. The search
 recorded in `B02_V0_4_INPUT_FREEZE.md` §5 found no feedback artifact anywhere — uploads, filesystem,
@@ -183,8 +191,8 @@ A v0.4 register that changes `SOURCE_ROW_COUNT` without a `CLASS-9` evidence rec
 | Interaction-family taxonomy | ✅ complete — 6 families, 0 new production IDs |
 | Propagation scope model | ✅ complete — 9 classes, blast radius measured |
 | Decision-register update contract | ✅ complete — transitions and invariants defined |
-| **Bariah comment classification** | ❌ **blocked — no comments exist** |
-| **Executable feedback delta** | ❌ **blocked — depends on the above** |
+| **Bariah comment classification** | ✅ complete — 31 records, `BARIAH_FEEDBACK_IMPLEMENTATION_MAP_v0.4.md` |
+| **Executable feedback delta** | ✅ complete — `DECISION_REGISTER_B02_v0.4.json` + `V0_3_TO_V0_4_CHANGESET.json` |
 
 **When the feedback artifact arrives**, the remaining work is mechanical: extract comments, resolve
 each anchor to a review page → screen → state → source row, assign a class, look up the scope in §3,

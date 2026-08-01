@@ -1,0 +1,485 @@
+{
+  "register": "DECISION_REGISTER_B02_v0_4",
+  "supersedes": "DECISION_REGISTER_B02_v0_3",
+  "scope": "K5 PL06 T03 B02 — Komponen Landskap — Bariah v0.4 executable delta",
+  "evidence_date": "2026-08-01",
+  "repository": {
+    "branch": "claude/verify-powerpoint-file-vpfzkg",
+    "head_at_authoring": "5ca77dd9b3f630e1ef29b20541dc192411495c29"
+  },
+  "standing": "Documentation only. No generator modified, no PowerPoint regenerated, no component propagated, no screen/state map produced, no canonical P# minted. B02-CAIR-INT-001 remains open and still blocks canonical freeze, production approval and MMD build.",
+  "build_status": "V0_4_DELTA_DEFINED_NOT_BUILT",
+  "not_asserted": [
+    "SOURCE_INTEGRITY_FULLY_VERIFIED",
+    "PRODUCTION_APPROVED",
+    "CANONICAL_FREEZE",
+    "MMD_BUILD_READY",
+    "FINAL_REVIEW_PAGE_COUNT"
+  ],
+  "status_classes": {
+    "CONFIRMED_BARIAH": "Bariah ruled it directly, in the annotated deck or the completed review guide.",
+    "CONFIRMED_CAIR_ADOPTION": "Adopted from S&G v0.3 or inferred from a Bariah scoping qualifier; not attributable to a Bariah comment in her own words.",
+    "PENDING_SOURCE_VERIFICATION": "Ruling is clear but rests on a factual claim not yet traced to the module source.",
+    "PENDING_FIRDAUS_CONFIRMATION": "Bariah explicitly routed the decision to Firdaus.",
+    "PENDING_CHARACTER_NAME": "Policy confirmed; the concrete names were not supplied and must not be invented."
+  },
+  "evidence_artifacts": [
+    {
+      "ref": "A1",
+      "filename": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+      "bytes": 365773,
+      "sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809",
+      "authority_class": "PRIMARY_SLIDE_LEVEL_EVIDENCE",
+      "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+    },
+    {
+      "ref": "A2",
+      "filename": "Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "bytes": 43342,
+      "sha256": "c15ae05e20358eda17b8e272f5dd9a5ef85831016976a926346371ea5790bcf3",
+      "authority_class": "PRIMARY_DECISION_EVIDENCE",
+      "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+    },
+    {
+      "ref": "A3",
+      "filename": "K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "bytes": 56475,
+      "sha256": "f3166e42f84d4b1f1c792c28fdc0278cc1c56a061b1598bfcce0efde91ad429d",
+      "authority_class": "CONSOLIDATED_EXECUTABLE_SG",
+      "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+    },
+    {
+      "ref": "A4",
+      "filename": "BARIAH_CORRECTION_EXEMPLARS_v0.4.md",
+      "bytes": 16303,
+      "sha256": "dec29895304f8ff08839321c2109fcca3e4db3364c341c9c833869ba06902890",
+      "authority_class": "DERIVED_NAVIGATION_INDEX_NOT_AUTHORITATIVE",
+      "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "B02-D-01",
+      "title": "Struktur Taman learning flow retained",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "The Struktur Taman flow built in v0.3 is approved unchanged: group master with four component cards -> component main explanation -> Contoh [Nama Komponen] example list -> example popup -> all-viewed state -> Kembali to the Struktur Taman group master. Popup density for Struktur Persisir Air is also approved. Amendments inside Family S are presentational only and do not alter the flow.",
+      "evidence": "Guide item 4: 'Struktur Taman - Lulus'. Guide item 3: 'Struktur Persisir Air - Lulus'.",
+      "evidence_source": "A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "feedback_ids": [
+        "BFB-20",
+        "BFB-21"
+      ],
+      "supersedes_or_resolves": [
+        "B02-R-5 (Kembali semantics) — confirmed for Family S"
+      ],
+      "generator_change_required": "none for flow; presentational changes only"
+    },
+    {
+      "decision_id": "B02-D-02",
+      "title": "Perabot Taman gateway becomes a non-interactive overview",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "The Perabot Taman group master ceases to be a clickable interaction level. It becomes an overview plus a list of the five components, with no click and no level of its own. Learners enter each Perabot component through shell navigation, not by clicking a card.",
+      "evidence": "Slide 43 inline directive: 'New structure. Refer doc Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3'. Guide item 1: 'Perabot Taman - penerangan + list contoh (tiada klik/level)'.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "feedback_ids": [
+        "BFB-16"
+      ],
+      "supersedes_or_resolves": [
+        "B02-R-3 — group-master completion no longer applies to Perabot"
+      ],
+      "generator_change_required": "model + generator: Perabot master becomes a non-interactive screen"
+    },
+    {
+      "decision_id": "B02-D-03",
+      "title": "Perabot components split into execution families P1 and P2",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "FAMILY P1 (multi-example perabot) = Kerusi Taman, Tong Sampah, Drinking Fountain: component explanation + example list -> click example (Level 1) -> full-slide example detail -> specification items -> click specification (Level 2) -> popup -> close icon returns to the example detail; Kembali returns to the component explanation/list. FAMILY P2 (specification-direct perabot) = Papan Tanda, BBQ Pit: component explanation + specification-category list -> click specification category (Level 1) -> popup -> close icon returns to the specification list. There is NO generic one-item Contoh screen for Papan Tanda or BBQ Pit.",
+      "evidence": "Guide item 1 verbatim: 'Kerusi Taman - penerangan + list contoh: Kerusi Kayu Keras / Konkrit / Komposit (klik contoh - level 1, full slide, Kembali) / ... list spesifikasi (klik spesifikasi - level 2, pop up, butang tutup guna ikon) / Papan Tanda - penerangan + list spesifikasi: Bahan Panel / Bahan Struktur Tiang / Grafik / Rekaan (klik spesifikasi - level 1, pop up, butang tutup guna ikon) / Tong Sampah, Drinking Fountain - sama struktur dengan Kerusi Taman / BBQ Pit - sama struktur dengan Papan Tanda'.",
+      "evidence_source": "A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "feedback_ids": [
+        "BFB-17",
+        "BFB-18",
+        "BFB-19",
+        "BFB-31"
+      ],
+      "supersedes_or_resolves": [
+        "B02-A-05 (single-row source tables) — RESOLVED: split into interaction categories, source rows unchanged",
+        "B02-R-3 — MAX_LEARNER_NAVIGATION_DEPTH amended from 2 to 3 for Family P1"
+      ],
+      "open_dependency": "U-04 — BBQ Pit specification-category labels are not enumerated in the feedback and must be derived from source-attested substructure",
+      "generator_change_required": "model + generator: two new Perabot families",
+      "family_assignment": {
+        "FAMILY_S": [
+          "Struktur Persisir Air",
+          "Struktur Teduhan",
+          "Kemudahan Awam",
+          "Water Feature"
+        ],
+        "FAMILY_P1": [
+          "Kerusi Taman",
+          "Tong Sampah",
+          "Drinking Fountain"
+        ],
+        "FAMILY_P2": [
+          "Papan Tanda",
+          "BBQ Pit"
+        ]
+      },
+      "source_rows_unchanged": true
+    },
+    {
+      "decision_id": "B02-D-04",
+      "title": "Shell navigation replaces the duplicate learner-canvas Seterusnya",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "No custom Seterusnya button is authored on the learner canvas. The next control belongs to the LMS shell navigation. Completion gating semantics are preserved but are applied to the shell control (player_next_enabled = group_complete[group]) rather than to a control drawn in the deck. Off-canvas production metadata must stop describing a canvas Seterusnya.",
+      "evidence": "Slide 8 inline directive verbatim: 'Tidak perlu letak butang Seterusnya, kerana ia ialah butang di navigasi'.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+      "feedback_ids": [
+        "BFB-06",
+        "BFB-07"
+      ],
+      "generator_change_required": "button emitter + production-panel text",
+      "governance_concern": "G-7 — the gate survives but the gated control is no longer authored in the deck"
+    },
+    {
+      "decision_id": "B02-D-05",
+      "title": "Contextual return controls: Kembali targets and the popup close icon",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "Return controls are contextual to the execution family. Kembali: Family S returns to the Struktur Taman group master from the example screen; Family P1 returns from the full-slide example detail to the component explanation/example list. Popup close: the control is an ICON, never a text 'Tutup' button, and it returns to the screen that owns the popup — the example screen in Family S, the full-slide example detail in Family P1, the specification list in Family P2.",
+      "evidence": "Guide item 1: 'butang tutup guna ikon' (stated twice, once per Perabot family). S&G v0.3 restates the icon rule. Corroborated in A1 by ppt/media/image1.png, a real embedded image part referenced by slide 14 alone — the corrected popup exemplar.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx + A3 — K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "feedback_ids": [
+        "BFB-12",
+        "BFB-13",
+        "BFB-30"
+      ],
+      "supersedes_or_resolves": [
+        "B02-R-5 (Kembali semantics) — amended: the return target is family-specific"
+      ],
+      "generator_change_required": "popup emitter + close-icon asset; per-family return targets in the model"
+    },
+    {
+      "decision_id": "B02-D-06",
+      "title": "Speaker Notes production headers restored on content and VO slides",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "On content and VO slides, Speaker Notes open with the course title where applicable, the PL title and the Topic/Bahagian title, then a blank line, then the screen or group context, then the exact VO or dialogue transcript.",
+      "evidence": "Verified in every corrected exemplar in A1 (slides 2, 4, 6, 8, 10, 12, 14, 43, 71, 73, 75). S&G v0.3: 'Production-context headers + exact VO/transcript on content slides'.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A3 — K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "feedback_ids": [
+        "BFB-29"
+      ],
+      "generator_change_required": "notes emitter"
+    },
+    {
+      "decision_id": "B02-D-07",
+      "title": "Silent completion-state Notes remain genuinely empty",
+      "status": "CONFIRMED_CAIR_ADOPTION",
+      "authority": "CAIR adoption of Bariah's 'where applicable' qualifier",
+      "ruling": "Completion and all-viewed states carry no VO and therefore carry NO Speaker Notes at all — not even the production header block introduced by B02-D-06. The header rule applies to content and VO slides only.",
+      "evidence": "Slide 20 inline directive: 'Apply changes to others, where applicable.' The corrected exemplar at slide 20 has empty Notes while every content exemplar has a header block — the qualifier is what scopes the header rule off silent states.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+      "feedback_ids": [
+        "BFB-14",
+        "BFB-15"
+      ],
+      "generator_change_required": "completion-state builder must not emit headers",
+      "note": "Classified CONFIRMED_CAIR_ADOPTION rather than CONFIRMED_BARIAH because the exclusion is inferred from the scoping qualifier plus the exemplar's own empty Notes, not stated as a rule in Bariah's words."
+    },
+    {
+      "decision_id": "B02-D-08",
+      "title": "English-origin terms italicised on the learner canvas and in Speaker Notes",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "Approved English-origin terms are italicised consistently on the learner canvas AND in Speaker Notes, across every slide. This replaces the v0.3 practice of italicising only a closed three-term lexicon on the canvas.",
+      "evidence": "Guide item 5, 'Cadangan ayat Rumusan' cell, verbatim: 'GLOBAL di speaker notes untuk semua slide. English words in italic'. S&G v0.3: 'Approved English-origin terms MUST be italicised consistently on the learner canvas and in Speaker Notes.'",
+      "evidence_source": "A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx + A3 — K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "feedback_ids": [
+        "BFB-23"
+      ],
+      "generator_change_required": "run emitter + notes emitter",
+      "note": "The rule was written into the Rumusan suggestion cell but is explicitly global ('untuk semua slide'), so it is registered as a course-wide styling decision, not a Rumusan decision."
+    },
+    {
+      "decision_id": "B02-D-09",
+      "title": "Rumusan wording approved",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "The Rumusan wording passes review. The canvas is retained as built. The only amendment is removal of the redundant opening label 'Komponen Landskap - Struktur Taman dan Perabot Taman.' from the narrated VO paragraph, and the addition of a 'Rumusan' context heading in Notes.",
+      "evidence": "Guide item 5: box ticked, 'LULUS wording sesuai'. Verified on corrected exemplar slide 71: the Notes VO begins at 'Mengenal pasti...', not at the label.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "feedback_ids": [
+        "BFB-22"
+      ],
+      "supersedes_or_resolves": [
+        "B02-R-6 (Rumusan structure) — confirmed"
+      ],
+      "generator_change_required": "frame builder"
+    },
+    {
+      "decision_id": "B02-D-10",
+      "title": "Course-wide PL06 character naming policy confirmed; names not supplied",
+      "status": "PENDING_CHARACTER_NAME",
+      "authority": "Bariah (policy) / instructional design (names)",
+      "ruling": "Named characters are to be used across the whole of PL06, reusing the same names wherever appropriate rather than inventing per-bahagian casts. The concrete names were NOT supplied. Until they are, the storyboard carries the placeholder token [Nama] and the role labels [Pelatih] / [Penyelia Tapak]. No name may be invented.",
+      "evidence": "Guide item 6 answer cell verbatim: 'Gunakan nama watak untuk keseluruhan PL06. Gunakan nama watak yang sama bergantung kepada kesesuaian.' No A/B/C option box was ticked; the written answer is the decision. The corrected exemplar at slide 4 uses 'Encik [Nama]' — a placeholder, not a name.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "feedback_ids": [
+        "BFB-04",
+        "BFB-27"
+      ],
+      "open_dependency": "U-02 — actual PL06 character names",
+      "generator_change_required": "none until names are supplied; emit [Nama] meanwhile"
+    },
+    {
+      "decision_id": "B02-D-11",
+      "title": "Quiz entry control and knowledge-check framing",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "The quiz screen carries an explicit statement that it is a knowledge check only, a learner instruction, and a MULA KUIZ control that precedes Soalan 1. A result state reports the score with Lulus / Tidak Lulus. Semak Jawapan and Ulang Kuiz are retained. Source references gain subsection locators.",
+      "evidence": "Verified directly on corrected exemplar slide 73: the MULA KUIZ instruction and the knowledge-check statement are both present on canvas.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+      "feedback_ids": [
+        "BFB-24"
+      ],
+      "supersedes_or_resolves": [
+        "B02-R-4 (closing structure) — quiz remains non-blocking; entry control added"
+      ],
+      "generator_change_required": "quiz builder"
+    },
+    {
+      "decision_id": "B02-D-12",
+      "title": "Multiple Response options carry no A/B/C labels",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "The Multiple Response item (Soalan 5) displays option text only. No A/B/C/D letter labels are shown on any option.",
+      "evidence": "Verified directly on corrected exemplar slide 73: Soalan 5 option lines carry no letter prefixes, where the v0.3 original at slide 72 did.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+      "feedback_ids": [
+        "BFB-24"
+      ],
+      "generator_change_required": "quiz builder"
+    },
+    {
+      "decision_id": "B02-D-13",
+      "title": "Immediate feedback is concise correct/wrong confirmation",
+      "status": "CONFIRMED_CAIR_ADOPTION",
+      "authority": "CAIR adoption of S&G v0.3",
+      "ruling": "Immediate per-item feedback is a concise confirmation that the chosen answer is correct or incorrect. The long 'Maklum balas betul:/salah:' rationale paragraphs of v0.3 are removed from immediate feedback.",
+      "evidence": "Corrected exemplar slide 73 removes the v0.3 rationale lines (Notes 3006 -> 1581 characters). The replacement wording 'Pilihan jawapan tepat' / 'tidak tepat' appears in S&G v0.3 and in NEITHER the annotated deck nor the review guide — so the ruling is adopted from the consolidated S&G, not attributed to a Bariah comment.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A3 — K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "feedback_ids": [
+        "BFB-24"
+      ],
+      "open_dependency": "U-05 — where the detailed rationale lives once immediate feedback is concise (presumed Semak Jawapan, not confirmed)",
+      "generator_change_required": "quiz builder"
+    },
+    {
+      "decision_id": "B02-D-14",
+      "title": "Logical next destination is the next Bahagian in Topik 3",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "On completing this Bahagian, the logical next destination is the next Bahagian within Topik 3 — not the next Topik and not a course menu. The Tamat screen carries the heading 'Tamat Topik 3 Bahagian 2: Komponen Landskap' with the course and PL hierarchy on canvas.",
+      "evidence": "Guide item 7: option A ticked — 'Bahagian seterusnya dalam Topik 3'. Wording cell: 'Refer storyboard'. Verified on corrected exemplar slide 75.",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+      "feedback_ids": [
+        "BFB-25"
+      ],
+      "supersedes_or_resolves": [
+        "B02-R-4 (closing structure) — routing confirmed"
+      ],
+      "generator_change_required": "frame builder"
+    },
+    {
+      "decision_id": "B02-D-15",
+      "title": "Physical LMS exit behaviour",
+      "status": "PENDING_FIRDAUS_CONFIRMATION",
+      "authority": "Firdaus",
+      "ruling": "Bariah's position: the shell navigation Seterusnya is DISABLED on the Tamat screen, and in the LMS the learner closes the lesson by closing the window. Bariah explicitly routed this to Firdaus for confirmation. It is NOT adopted as built until Firdaus answers.",
+      "evidence": "Slide 75 inline directive verbatim: 'Butang Seterusnya di shell navigation DISABLED. Di LMS, learners perlu TUTUP lesson dengan tutup window. Firdaus, please confirm.'",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+      "feedback_ids": [
+        "BFB-26"
+      ],
+      "open_dependency": "U-03 — when completion is reported, where the LMS returns the learner, and whether the next Bahagian launches manually or automatically",
+      "generator_change_required": "shell-control state on TAMAT — held pending confirmation",
+      "note": "B02-D-14 (logical routing) is confirmed and independent of this entry. Only the physical exit mechanism is pending."
+    },
+    {
+      "decision_id": "B02-D-16",
+      "title": "N-06 resolved: WPC parenthesis normalisation",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "The malformed source form 'Kerusi KompositContoh: WPC - Wood-Plastic Composite / Plastik Kitar Semula):' is normalised to: WPC (Wood-Plastic Composite / Plastik Kitar Semula). Punctuation only — no wording is otherwise altered, the row UID is unchanged and the row count is unchanged.",
+      "evidence": "Guide item 8: option B ticked — 'Betulkan tanda kurungan sahaja'. Answer cell verbatim: 'Tukar kepada WPC (Wood-Plastic Composite / Plastik Kitar Semula)'. S&G v0.3 restates the authorised form.",
+      "evidence_source": "A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx + A3 — K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "feedback_ids": [
+        "BFB-28"
+      ],
+      "supersedes_or_resolves": [
+        "B02-N-06 (ambiguous parenthesis in Kerusi Komposit) — RESOLVED; NORMALISATION_DECLINED is lifted"
+      ],
+      "generator_change_required": "content-data normalisation",
+      "affected_source_row": "Kerusi Taman row 3",
+      "source_row_count_change": 0
+    },
+    {
+      "decision_id": "B02-D-17",
+      "title": "MS2680 applicability claim",
+      "status": "PENDING_SOURCE_VERIFICATION",
+      "authority": "source QA / Firdaus",
+      "ruling": "The corrected S02 dialogue asserts that both Struktur Taman and Perabot Taman must comply with MS2680. The claim is not yet traced to the module source. It is held or flagged and must NOT be presented as final fact until verified.",
+      "evidence": "Corrected exemplar slide 4 Notes: 'Dan jangan lupa, kedua-duanya kena ikut MS2680.' S&G v0.3 marks it 'PENDING SOURCE VERIFICATION ... hold or flag the sentence rather than presenting it as final fact.'",
+      "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A3 — K5_PL06_T03_B02_UPDATED_SG_v0.3.docx",
+      "feedback_ids": [
+        "BFB-03"
+      ],
+      "open_dependency": "U-01 — source attestation for the MS2680 applicability statement",
+      "generator_change_required": "frame builder — hold or flag the sentence"
+    }
+  ],
+  "v0_3_entries_carried_forward": [
+    {
+      "decision_id": "B02-CAIR-INT-001",
+      "status": "confirmed-CAIR-provisional",
+      "note": "Module DOCX SHA-256 still not obtained. Not Bariah's to close."
+    },
+    {
+      "decision_id": "B02-R-1",
+      "status": "confirmed-CAIR-provisional",
+      "note": "VO source fidelity — no Bariah comment touches it. Absence of comment is not confirmation."
+    },
+    {
+      "decision_id": "B02-R-2",
+      "status": "confirmed-CAIR-provisional",
+      "note": "Table-derived popup VO — untouched."
+    },
+    {
+      "decision_id": "B02-R-3",
+      "status": "amended-Bariah",
+      "note": "State representation retained; MAX_LEARNER_NAVIGATION_DEPTH amended from 2 to 3 for Family P1 by B02-D-03."
+    },
+    {
+      "decision_id": "B02-R-4",
+      "status": "confirmed-Bariah",
+      "note": "Closing structure confirmed by B02-D-11 and B02-D-14."
+    },
+    {
+      "decision_id": "B02-R-5",
+      "status": "amended-Bariah",
+      "note": "Kembali semantics amended by B02-D-05 — return target is family-specific."
+    },
+    {
+      "decision_id": "B02-R-6",
+      "status": "confirmed-Bariah",
+      "note": "Rumusan structure confirmed by B02-D-09."
+    },
+    {
+      "decision_id": "B02-L-01",
+      "status": "confirmed-CAIR-provisional",
+      "note": "PL pronunciation note — untouched."
+    },
+    {
+      "decision_id": "B02-L-02",
+      "status": "confirmed-CAIR-provisional",
+      "note": "S03 Mind Map — untouched; slide 6 exemplar retains the Mind Map direction."
+    },
+    {
+      "decision_id": "B02-A-05",
+      "status": "resolved-Bariah",
+      "note": "RESOLVED by B02-D-03 — split into interaction categories. SOURCE_ROW_COUNT unchanged at 26."
+    },
+    {
+      "decision_id": "B02-A-06",
+      "status": "confirmed-CAIR-provisional",
+      "note": "Adaptive popup fields — untouched."
+    },
+    {
+      "decision_id": "B02-A-09",
+      "status": "confirmed-CAIR-provisional",
+      "note": "DOCX/PDF precedence — untouched."
+    },
+    {
+      "decision_id": "B02-N-06",
+      "status": "resolved-Bariah",
+      "note": "RESOLVED by B02-D-16."
+    }
+  ],
+  "open_dependencies": [
+    {
+      "id": "U-01",
+      "question": "Is the MS2680 applicability claim attested by the module source?",
+      "owner": "source QA / Firdaus",
+      "blocks": "one VO sentence on S02",
+      "decisions": [
+        "B02-D-17"
+      ]
+    },
+    {
+      "id": "U-02",
+      "question": "What are the PL06 character names?",
+      "owner": "Bariah / instructional design",
+      "blocks": "the [Nama] placeholder on S02",
+      "decisions": [
+        "B02-D-10"
+      ]
+    },
+    {
+      "id": "U-03",
+      "question": "LMS exit: when is completion reported, where does the LMS return, does the next Bahagian launch manually or automatically?",
+      "owner": "Firdaus",
+      "blocks": "shell-control state on TAMAT",
+      "decisions": [
+        "B02-D-15"
+      ]
+    },
+    {
+      "id": "U-04",
+      "question": "BBQ Pit specification-category labels — derivable from source, or interpretive?",
+      "owner": "source QA, then Bariah if interpretive",
+      "blocks": "Family P2 category list for BBQ Pit",
+      "decisions": [
+        "B02-D-03"
+      ]
+    },
+    {
+      "id": "U-05",
+      "question": "Where does the detailed answer rationale live once immediate feedback is concise?",
+      "owner": "Bariah",
+      "blocks": "quiz result-state content",
+      "decisions": [
+        "B02-D-13"
+      ]
+    }
+  ],
+  "source_baseline_preserved": {
+    "COMPONENTS_EXPECTED": 9,
+    "MEANINGFUL_SOURCE_ROWS": 26,
+    "ROWS_MAPPED": 26,
+    "ROWS_EXCLUDED": 0,
+    "ROW_MAPPING_UNRESOLVED": 0,
+    "DUPLICATE_SOURCE_ROW_MAPPINGS": 0,
+    "SOURCE_ASSETS": 14,
+    "ORPHAN_SOURCE_ASSETS": 0,
+    "SOURCE_ROW_COUNT_CHANGED_BY_INTERACTION_SPLIT": false,
+    "statement": "No source-row ID, row order, locator or image-ownership finding was altered. No interaction decomposition was converted into a source row. Papan Tanda still holds exactly one source row while yielding four interaction categories; BBQ Pit still holds exactly one."
+  },
+  "totals": {
+    "DECISIONS": 17,
+    "CONFIRMED_BARIAH": 12,
+    "CONFIRMED_CAIR_ADOPTION": 2,
+    "PENDING_SOURCE_VERIFICATION": 1,
+    "PENDING_FIRDAUS_CONFIRMATION": 1,
+    "PENDING_CHARACTER_NAME": 1,
+    "EXECUTION_FAMILIES": 3,
+    "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
+    "GENERATOR_FILES_CHANGED": 0,
+    "POWERPOINT_FILES_GENERATED": 0,
+    "COMPONENTS_PROPAGATED": 0
+  }
+}

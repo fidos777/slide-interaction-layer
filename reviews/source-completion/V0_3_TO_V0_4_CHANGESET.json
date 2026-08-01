@@ -1,0 +1,669 @@
+{
+  "changeset": "V0_3_TO_V0_4_CHANGESET",
+  "from": "K5 PL06 T03 B02 storyboard v0.3 (frozen)",
+  "to": "K5 PL06 T03 B02 storyboard v0.4 (defined, not built)",
+  "evidence_date": "2026-08-01",
+  "status": "DEFINED_NOT_IMPLEMENTED",
+  "standing": "Documentation only. GENERATOR_FILES_CHANGED = 0, POWERPOINT_FILES_GENERATED = 0, COMPONENTS_PROPAGATED = 0.",
+  "baseline": {
+    "pptx": "reviews/source-completion/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3.pptx",
+    "sha256": "f4e2a3797c8cf24c9d861141a9589ae460659d591c43f691cd248c3719bc4f58",
+    "v0_3_physical_screens": 26,
+    "v0_3_runtime_states": 46,
+    "v0_3_review_pages": 63,
+    "note": "These v0.3 figures are the delta baseline only. No v0.4 screen, state or review-page total is claimed at this stage."
+  },
+  "affected_model_objects": [
+    {
+      "object": "b02_model_v0_3.py :: KIND_* screen kinds",
+      "change": "a new screen kind is required for the Family P1 full-slide example detail; the EXAMPLES kind no longer applies to Family P2",
+      "impact": "structural"
+    },
+    {
+      "object": "b02_model_v0_3.py :: build()",
+      "change": "per-component family dispatch replaces the single global pattern",
+      "impact": "structural"
+    },
+    {
+      "object": "b02_model_v0_3.py :: popup_index()",
+      "change": "the invariant 'exactly one popup per source row' no longer holds; popups become per interaction item, and each carries a parent screen reference",
+      "impact": "structural — the most consequential single change in the delta"
+    },
+    {
+      "object": "b02_content_v0_3.py / .json",
+      "change": "specification categories and specification items become first-class content, distinct from source rows; N-06 label normalised",
+      "impact": "content"
+    },
+    {
+      "object": "b02_generator_v0_3.py :: button emitter",
+      "change": "canvas Seterusnya removed; popup close becomes an icon; Kembali target becomes family-specific",
+      "impact": "presentation"
+    },
+    {
+      "object": "b02_generator_v0_3.py :: notes emitter",
+      "change": "production-header block on content/VO slides; genuinely empty Notes on silent states; italics applied in Notes",
+      "impact": "presentation"
+    },
+    {
+      "object": "b02_generator_v0_3.py :: run emitter",
+      "change": "English-origin term italics extended from a closed lexicon to all approved terms, canvas and Notes",
+      "impact": "presentation"
+    },
+    {
+      "object": "b02_generator_v0_3.py :: quiz builder",
+      "change": "MULA KUIZ entry control, knowledge-check framing, concise feedback, result state, unlabelled Multiple Response options",
+      "impact": "presentation"
+    },
+    {
+      "object": "donor_skeleton/ media parts",
+      "change": "a close-icon image part is required; the v0.3 skeleton has none",
+      "impact": "asset"
+    }
+  ],
+  "components": [
+    {
+      "component": "Struktur Persisir Air",
+      "group": "STRUKTUR_TAMAN",
+      "source_rows": 5,
+      "previous_interaction_family": "v0.3 global pattern (F1 master -> F2 main -> F3 examples -> F4 popup)",
+      "new_interaction_family": "FAMILY_S",
+      "family_change": false,
+      "screen_additions": [],
+      "screen_removals": [],
+      "state_additions": [],
+      "state_removals": [],
+      "changed_parent_return_targets": [
+        "popup close control becomes an icon; return target unchanged (the Contoh example screen)"
+      ],
+      "changes": [
+        "canvas Seterusnya removed (B02-D-04)",
+        "main explanation split into explanation + Aspek Pembinaan block",
+        "example instruction wording -> 'Klik pada setiap contoh...'",
+        "popup labels take title case; visual direction added",
+        "Notes header block added"
+      ],
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-06",
+        "BFB-08",
+        "BFB-10",
+        "BFB-12",
+        "BFB-14",
+        "BFB-20",
+        "BFB-21",
+        "BFB-22"
+      ]
+    },
+    {
+      "component": "Struktur Teduhan",
+      "group": "STRUKTUR_TAMAN",
+      "source_rows": 5,
+      "previous_interaction_family": "v0.3 global pattern",
+      "new_interaction_family": "FAMILY_S",
+      "family_change": false,
+      "screen_additions": [],
+      "screen_removals": [],
+      "state_additions": [],
+      "state_removals": [],
+      "changed_parent_return_targets": [
+        "popup close control becomes an icon"
+      ],
+      "changes": [
+        "propagated Family S presentational changes",
+        "NO Aspek Pembinaan block — the module source has none for this component; do not invent one"
+      ],
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-07",
+        "BFB-09",
+        "BFB-11",
+        "BFB-13",
+        "BFB-15",
+        "BFB-29",
+        "BFB-30"
+      ]
+    },
+    {
+      "component": "Kemudahan Awam",
+      "group": "STRUKTUR_TAMAN",
+      "source_rows": 3,
+      "previous_interaction_family": "v0.3 global pattern",
+      "new_interaction_family": "FAMILY_S",
+      "family_change": false,
+      "screen_additions": [],
+      "screen_removals": [],
+      "state_additions": [],
+      "state_removals": [],
+      "changed_parent_return_targets": [
+        "popup close control becomes an icon"
+      ],
+      "changes": [
+        "propagated Family S presentational changes"
+      ],
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-07",
+        "BFB-09",
+        "BFB-11",
+        "BFB-13",
+        "BFB-15",
+        "BFB-29",
+        "BFB-30"
+      ]
+    },
+    {
+      "component": "Water Feature",
+      "group": "STRUKTUR_TAMAN",
+      "source_rows": 3,
+      "previous_interaction_family": "v0.3 global pattern",
+      "new_interaction_family": "FAMILY_S",
+      "family_change": false,
+      "screen_additions": [],
+      "screen_removals": [],
+      "state_additions": [],
+      "state_removals": [],
+      "changed_parent_return_targets": [
+        "popup close control becomes an icon"
+      ],
+      "changes": [
+        "propagated Family S presentational changes"
+      ],
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-07",
+        "BFB-09",
+        "BFB-11",
+        "BFB-13",
+        "BFB-15",
+        "BFB-29",
+        "BFB-30"
+      ]
+    },
+    {
+      "component": "Kerusi Taman",
+      "group": "PERABOT_TAMAN",
+      "source_rows": 3,
+      "previous_interaction_family": "v0.3 global pattern",
+      "new_interaction_family": "FAMILY_P1",
+      "family_change": true,
+      "screen_additions": [
+        "3 full-slide example-detail screens, one per source row (Kerusi Kayu Keras, Kerusi Konkrit, Kerusi Komposit)"
+      ],
+      "screen_removals": [
+        "the v0.3 'Contoh Kerusi Taman' example-selection screen is replaced by an example list on the component explanation screen"
+      ],
+      "state_additions": [
+        "specification popup states, one per specification item per example — count NOT_DETERMINED_AT_THIS_STAGE (must be derived from source)"
+      ],
+      "state_removals": [
+        "the 3 v0.3 row popups in their old parentage"
+      ],
+      "changed_parent_return_targets": [
+        "popup parent becomes the full-slide example detail, not the example-selection screen",
+        "popup close icon returns to the example detail",
+        "Kembali returns to the component explanation / example list, not to a group master"
+      ],
+      "changes": [
+        "Level 1 becomes a full slide, not a modal",
+        "Level 2 specification popups introduced",
+        "N-06 label normalised on row 3: WPC (Wood-Plastic Composite / Plastik Kitar Semula)"
+      ],
+      "priority": "P0_CRITICAL",
+      "feedback_ids": [
+        "BFB-16",
+        "BFB-19",
+        "BFB-28",
+        "BFB-30",
+        "BFB-31"
+      ]
+    },
+    {
+      "component": "Tong Sampah",
+      "group": "PERABOT_TAMAN",
+      "source_rows": 3,
+      "previous_interaction_family": "v0.3 global pattern",
+      "new_interaction_family": "FAMILY_P1",
+      "family_change": true,
+      "screen_additions": [
+        "3 full-slide example-detail screens, one per source row"
+      ],
+      "screen_removals": [
+        "the v0.3 'Contoh Tong Sampah' example-selection screen"
+      ],
+      "state_additions": [
+        "specification popup states — count NOT_DETERMINED_AT_THIS_STAGE"
+      ],
+      "state_removals": [
+        "the 3 v0.3 row popups in their old parentage"
+      ],
+      "changed_parent_return_targets": [
+        "same as Kerusi Taman — 'sama struktur dengan Kerusi Taman'"
+      ],
+      "changes": [
+        "adopts Family P1 wholesale"
+      ],
+      "priority": "P0_CRITICAL",
+      "feedback_ids": [
+        "BFB-16",
+        "BFB-19",
+        "BFB-31"
+      ]
+    },
+    {
+      "component": "Drinking Fountain",
+      "group": "PERABOT_TAMAN",
+      "source_rows": 2,
+      "previous_interaction_family": "v0.3 global pattern",
+      "new_interaction_family": "FAMILY_P1",
+      "family_change": true,
+      "screen_additions": [
+        "2 full-slide example-detail screens, one per source row"
+      ],
+      "screen_removals": [
+        "the v0.3 'Contoh Drinking Fountain' example-selection screen"
+      ],
+      "state_additions": [
+        "specification popup states — count NOT_DETERMINED_AT_THIS_STAGE"
+      ],
+      "state_removals": [
+        "the 2 v0.3 row popups in their old parentage"
+      ],
+      "changed_parent_return_targets": [
+        "same as Kerusi Taman"
+      ],
+      "changes": [
+        "adopts Family P1 wholesale"
+      ],
+      "priority": "P0_CRITICAL",
+      "feedback_ids": [
+        "BFB-16",
+        "BFB-19",
+        "BFB-31"
+      ]
+    },
+    {
+      "component": "Papan Tanda",
+      "group": "PERABOT_TAMAN",
+      "source_rows": 1,
+      "previous_interaction_family": "v0.3 global pattern, degenerate single-item example screen",
+      "new_interaction_family": "FAMILY_P2",
+      "family_change": true,
+      "screen_additions": [
+        "specification-category list block on the component explanation screen"
+      ],
+      "screen_removals": [
+        "the v0.3 one-item 'Contoh Papan Tanda' screen — REMOVED, not relabelled. No generic one-item Contoh screen exists under the latest ruling."
+      ],
+      "state_additions": [
+        "4 specification popup states: Bahan Panel, Bahan Struktur Tiang, Grafik, Rekaan"
+      ],
+      "state_removals": [
+        "the single v0.3 row popup"
+      ],
+      "changed_parent_return_targets": [
+        "popup parent becomes the specification list",
+        "close icon returns to the specification list",
+        "no Kembali to a Contoh screen, because no Contoh screen exists"
+      ],
+      "changes": [
+        "1 source row -> 4 interaction categories; SOURCE_ROW_COUNT unchanged",
+        "B02-A-05 resolved"
+      ],
+      "priority": "P0_CRITICAL",
+      "feedback_ids": [
+        "BFB-16",
+        "BFB-17",
+        "BFB-31"
+      ]
+    },
+    {
+      "component": "BBQ Pit",
+      "group": "PERABOT_TAMAN",
+      "source_rows": 1,
+      "previous_interaction_family": "v0.3 global pattern, degenerate single-item example screen",
+      "new_interaction_family": "FAMILY_P2",
+      "family_change": true,
+      "screen_additions": [
+        "specification-category list block on the component explanation screen"
+      ],
+      "screen_removals": [
+        "the v0.3 one-item 'Contoh BBQ Pit' screen — REMOVED, not relabelled"
+      ],
+      "state_additions": [
+        "several specification popup states — labels and count NOT_DETERMINED_AT_THIS_STAGE (U-04)"
+      ],
+      "state_removals": [
+        "the single v0.3 row popup"
+      ],
+      "changed_parent_return_targets": [
+        "same as Papan Tanda — 'sama struktur dengan Papan Tanda'"
+      ],
+      "changes": [
+        "1 source row -> several interaction categories; SOURCE_ROW_COUNT unchanged"
+      ],
+      "priority": "P0_CRITICAL",
+      "feedback_ids": [
+        "BFB-16",
+        "BFB-18",
+        "BFB-31"
+      ],
+      "blocked_by": "U-04"
+    }
+  ],
+  "frame_screens": [
+    {
+      "screen": "S01",
+      "change": "course title added to canvas; VO replaced with 'Klik butang MULA untuk memulakan pembelajaran.'; Notes header block added",
+      "priority": "P2_NORMAL",
+      "feedback_ids": [
+        "BFB-01"
+      ]
+    },
+    {
+      "screen": "S02",
+      "change": "heading -> 'Pengenalan'; dialogue rewritten with [Pelatih]/[Penyelia Tapak] labels and a baseline-knowledge framing; [Nama] placeholder retained; MS2680 sentence held pending U-01",
+      "priority": "P2_NORMAL",
+      "feedback_ids": [
+        "BFB-02",
+        "BFB-03",
+        "BFB-04"
+      ],
+      "blocked_by": "U-01, U-02 (partial — the screen builds, two strings are held)"
+    },
+    {
+      "screen": "S03",
+      "change": "heading -> 'Pengenalan'; reflection question reworded; VO links explicitly to the previous page; Hilmi remains confined to S03",
+      "priority": "P2_NORMAL",
+      "feedback_ids": [
+        "BFB-05"
+      ]
+    },
+    {
+      "screen": "STRUKTUR_TAMAN_MASTER",
+      "change": "canvas Seterusnya removed; four cards and instruction retained; gating moves to the shell control",
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-06",
+        "BFB-07"
+      ]
+    },
+    {
+      "screen": "PERABOT_TAMAN_MASTER",
+      "change": "ceases to be a clickable interaction level; becomes overview + list; entry via shell navigation; Notes end 'Mari lihat setiap contoh perabot di halaman seterusnya.'",
+      "priority": "P0_CRITICAL",
+      "feedback_ids": [
+        "BFB-16"
+      ]
+    },
+    {
+      "screen": "RUMUSAN",
+      "change": "wording LULUS; canvas retained; redundant VO opening label removed; 'Rumusan' context heading added to Notes",
+      "priority": "P2_NORMAL",
+      "feedback_ids": [
+        "BFB-22"
+      ]
+    },
+    {
+      "screen": "KUIZ",
+      "change": "knowledge-check statement, learner instruction and MULA KUIZ control added before Q1; concise immediate feedback; result state with score and Lulus/Tidak Lulus; Semak Jawapan and Ulang Kuiz retained; Multiple Response options lose A/B/C labels; subsection locators added to source references",
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-24"
+      ],
+      "blocked_by": "U-05 (partial — rationale placement)"
+    },
+    {
+      "screen": "TAMAT",
+      "change": "heading 'Tamat Topik 3 Bahagian 2: Komponen Landskap' with course and PL hierarchy; concise VO; logical next = next Bahagian in Topik 3; shell Seterusnya state held pending U-03",
+      "priority": "P1_HIGH",
+      "feedback_ids": [
+        "BFB-25",
+        "BFB-26"
+      ],
+      "blocked_by": "U-03 (partial — the screen builds, the shell-control state is held)"
+    }
+  ],
+  "notes_policy_changes": [
+    {
+      "rule": "production-context headers",
+      "from": "Notes carried the exact VO or transcript only",
+      "to": "content and VO slides open with course title where applicable, PL title, Topic/Bahagian title, blank line, screen/group context, then the exact VO",
+      "scope": "all content and VO screens",
+      "decision": "B02-D-06"
+    },
+    {
+      "rule": "silent states",
+      "from": "unspecified",
+      "to": "completion and all-viewed states carry NO Notes at all, not even the header block",
+      "scope": "all completion states",
+      "decision": "B02-D-07"
+    },
+    {
+      "rule": "italics in Notes",
+      "from": "Notes carried no italic styling",
+      "to": "approved English-origin terms italicised in Notes as well as on canvas",
+      "scope": "global",
+      "decision": "B02-D-08"
+    }
+  ],
+  "terminology_and_style_changes": [
+    {
+      "from": "Klik pada setiap item untuk penjelasan lanjut.",
+      "to": "Klik pada setiap contoh untuk penjelasan lanjut.",
+      "scope": "all Family S example screens and their all-viewed states",
+      "decision": "B02-D-01",
+      "feedback_ids": [
+        "BFB-10",
+        "BFB-11",
+        "BFB-14",
+        "BFB-15"
+      ]
+    },
+    {
+      "from": "ALL-CAPS popup field labels",
+      "to": "title-style labels, e.g. 'Fungsi dan Penerangan', 'Contoh'",
+      "scope": "all popups",
+      "decision": "B02-D-05",
+      "feedback_ids": [
+        "BFB-12",
+        "BFB-13"
+      ],
+      "note": "The corrected exemplar renders 'Fungsi Dan  Penerangan' with a double space; that is a typographic artifact of the exemplar and must NOT be reproduced."
+    },
+    {
+      "from": "text button labelled 'Tutup'",
+      "to": "close icon",
+      "scope": "all popups in all three families",
+      "decision": "B02-D-05",
+      "feedback_ids": [
+        "BFB-30"
+      ]
+    },
+    {
+      "from": "italics on a closed three-term canvas lexicon",
+      "to": "italics on all approved English-origin terms, canvas and Notes",
+      "scope": "global",
+      "decision": "B02-D-08",
+      "feedback_ids": [
+        "BFB-23"
+      ]
+    },
+    {
+      "from": "Kerusi KompositContoh: WPC - Wood-Plastic Composite / Plastik Kitar Semula):",
+      "to": "WPC (Wood-Plastic Composite / Plastik Kitar Semula)",
+      "scope": "Kerusi Taman row 3 label",
+      "decision": "B02-D-16",
+      "feedback_ids": [
+        "BFB-28"
+      ]
+    },
+    {
+      "from": "heading 'Gambaran Keseluruhan' (S03), 'Pengenalan / Komponen Landskap' (S02)",
+      "to": "'Pengenalan' on both",
+      "scope": "S02, S03",
+      "decision": "—",
+      "feedback_ids": [
+        "BFB-02",
+        "BFB-05"
+      ]
+    }
+  ],
+  "quiz_changes": [
+    {
+      "change": "MULA KUIZ entry control added before Soalan 1",
+      "decision": "B02-D-11"
+    },
+    {
+      "change": "explicit knowledge-check-only statement and learner instruction added",
+      "decision": "B02-D-11"
+    },
+    {
+      "change": "result state reporting score with Lulus / Tidak Lulus",
+      "decision": "B02-D-11"
+    },
+    {
+      "change": "Semak Jawapan and Ulang Kuiz retained",
+      "decision": "B02-D-11"
+    },
+    {
+      "change": "source references gain subsection locators",
+      "decision": "B02-D-11"
+    },
+    {
+      "change": "Multiple Response (Soalan 5) options display text only, no A/B/C labels",
+      "decision": "B02-D-12"
+    },
+    {
+      "change": "long 'Maklum balas betul:/salah:' rationale removed from immediate feedback; concise correct/incorrect confirmation instead",
+      "decision": "B02-D-13",
+      "blocked_by": "U-05"
+    },
+    {
+      "change": "quiz remains non-blocking; a sub-60% score does not gate progression",
+      "decision": "carried from B02-R-4"
+    }
+  ],
+  "unchanged_source_rows": {
+    "SOURCE_ROW_COUNT": 26,
+    "SOURCE_ASSET_COUNT": 14,
+    "SOURCE_ROW_COUNT_CHANGED_BY_INTERACTION_SPLIT": false,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "rows_renamed": 0,
+    "rows_renumbered": 0,
+    "per_component": {
+      "Struktur Persisir Air": 5,
+      "Struktur Teduhan": 5,
+      "Kemudahan Awam": 3,
+      "Water Feature": 3,
+      "Kerusi Taman": 3,
+      "Tong Sampah": 3,
+      "Drinking Fountain": 2,
+      "Papan Tanda": 1,
+      "BBQ Pit": 1
+    },
+    "statement": "Every architectural change in this changeset operates on interaction items, never on source rows. Papan Tanda's single row yields four interaction categories and remains one row; BBQ Pit's single row yields several and remains one. Under B02_FEEDBACK_DELTA_PROTOCOL_v0_4.md 2.1 this is CLASS-3, not CLASS-9.",
+    "identifier_separation": [
+      "source_row_uid — owned by the module source, invariant",
+      "interaction_item_id — owned by the execution family, rises in v0.4",
+      "runtime_state_id — owned by the runtime model, rises in v0.4",
+      "review_page_id — owned by the storyboard rendering, NOT counted at this stage"
+    ]
+  },
+  "implementation_priority": [
+    {
+      "tier": "P0_CRITICAL",
+      "what": "Perabot restructure — model and generator support for Families P1 and P2, plus the non-interactive Perabot gateway",
+      "why": "it is the only change that alters the screen graph; every other change is presentational and can be applied to a graph that already exists",
+      "components": [
+        "Kerusi Taman",
+        "Tong Sampah",
+        "Drinking Fountain",
+        "Papan Tanda",
+        "BBQ Pit",
+        "PERABOT_TAMAN_MASTER"
+      ]
+    },
+    {
+      "tier": "P1_HIGH",
+      "what": "global navigation and control rules — remove canvas Seterusnya, close icon, family-specific Kembali — plus Family S propagation and the quiz rebuild",
+      "why": "touches every screen but does not change the graph",
+      "components": [
+        "all Family S components",
+        "STRUKTUR_TAMAN_MASTER",
+        "KUIZ",
+        "TAMAT"
+      ]
+    },
+    {
+      "tier": "P2_NORMAL",
+      "what": "frame-screen content, Notes grammar and terminology/italics",
+      "why": "pure content and styling; safe to apply last and easy to verify",
+      "components": [
+        "S01",
+        "S02",
+        "S03",
+        "RUMUSAN"
+      ]
+    },
+    {
+      "tier": "P3_HELD",
+      "what": "strings and states blocked on U-01 through U-05",
+      "why": "proceeding would require inventing a name, a fact, a label or a stakeholder decision",
+      "items": [
+        "MS2680 sentence (U-01)",
+        "character names (U-02)",
+        "TAMAT shell-control state (U-03)",
+        "BBQ Pit category labels (U-04)",
+        "quiz rationale placement (U-05)"
+      ]
+    }
+  ],
+  "expected_propagation_scope": {
+    "components_touched": 9,
+    "frame_screens_touched": 8,
+    "components_changing_execution_family": 5,
+    "components_retaining_execution_family": 4,
+    "global_rules_touching_every_screen": [
+      "shell navigation replaces canvas Seterusnya",
+      "Notes production headers",
+      "English-origin italics",
+      "popup close icon"
+    ],
+    "screens_added": "8 full-slide example-detail screens (Family P1: 3 + 3 + 2) plus specification-list blocks on 2 Family P2 explanation screens",
+    "screens_removed": "2 degenerate one-item Contoh screens (Papan Tanda, BBQ Pit); 3 Family P1 example-selection screens are replaced by lists on the explanation screens",
+    "states_added": "4 Papan Tanda specification popups are determinate; all Family P1 specification popups and all BBQ Pit categories are NOT_DETERMINED_AT_THIS_STAGE",
+    "states_removed": "the 10 Perabot row popups in their v0.3 parentage",
+    "review_pages": "NOT CLAIMED AT THIS STAGE — see B02_INTERACTION_FAMILY_TAXONOMY_v0_4.md 7.3",
+    "max_learner_navigation_depth": {
+      "FAMILY_S": 2,
+      "FAMILY_P1": 3,
+      "FAMILY_P2": 2,
+      "note": "amends the depth-2 invariant declared in B02_FEEDBACK_DELTA_PROTOCOL_v0_4.md 4.3, by Bariah's explicit level-1/level-2 ruling"
+    },
+    "artifacts_to_regenerate_when_implementation_is_authorised": [
+      "generator/b02_content_v0_3.py and .json",
+      "generator/b02_model_v0_3.py",
+      "generator/b02_generator_v0_3.py",
+      "donor_skeleton media part for the close icon",
+      "the v0.4 deck",
+      "STORYBOARD_SCREEN_STATE_MAP",
+      "STORYBOARD_SOURCE_MAP",
+      "STORYBOARD_QA_REPORT",
+      "RUN_MANIFEST"
+    ],
+    "artifacts_NOT_to_regenerate": [
+      "TABLE_ROW_TO_POPUP_MATRIX.md — the source inventory is unchanged; regenerating it would risk drift for no gain"
+    ]
+  },
+  "totals": {
+    "FEEDBACK_ITEMS": 31,
+    "DECISIONS": 17,
+    "EXECUTION_FAMILIES": 3,
+    "GENERATOR_FILES_CHANGED": 0,
+    "POWERPOINT_FILES_GENERATED": 0,
+    "COMPONENTS_PROPAGATED": 0,
+    "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
+    "OPEN_DEPENDENCIES": 5
+  }
+}
