@@ -222,15 +222,18 @@ def run(pptx):
         all(c in rt_ for c in ("Semak Jawapan", "Ulang Kuiz")), True)
 
     tm = by_page["PP-34"]
-    chk("TAMAT_SHELL_NEXT_STATE",
-        "DISABLED" in st_of["PP-34"]["next_enabled_condition"], True)
+    # Superseded by Bariah's reviewed Tamat exemplar, 1 August 2026: the copy is confirmed,
+    # the physical navigation mechanism is not, and no claim is made about the shell control.
+    chk("TAMAT_PHYSICAL_NAVIGATION_STATUS",
+        rec_of["PP-34"]["exit_model"]["physical_navigation_behaviour"],
+        "PENDING_FIRDAUS_OR_LMS_CONFIRMATION")
     chk("TAMAT_NO_CUSTOM_NEXT_BUTTON",
         sum(1 for s in tm[1]["canvas"] if s["name"] == "Btn"), 0)
-    chk("TAMAT_UNVERIFIED_ROUTE_ON_CANVAS",
-        any(k in canvas_text["PP-34"] for k in ("Bahagian seterusnya", "bahagian seterusnya")), False)
-    chk("TAMAT_CLOSE_INSTRUCTION", "Tutup tetingkap" in canvas_text["PP-34"], True)
-    chk("TAMAT_LOGICAL_DESTINATION_IN_PANEL",
-        any("next Bahagian" in s["text"] for s in tm[1]["panel"]), True)
+    chk("TAMAT_COPY_STATUS", rec_of["PP-34"]["exit_model"]["copy_status"], "CONFIRMED_BARIAH")
+    chk("TAMAT_CLOSE_WINDOW_INSTRUCTION_PRESENT",
+        any(k in canvas_text["PP-34"] for k in ("Tutup tetingkap", "Tutup lesson")), False)
+    chk("TAMAT_LOGICAL_DESTINATION",
+        rec_of["PP-34"]["exit_model"]["logical_destination"], "NEXT_BAHAGIAN")
 
     # ---------------- notes ----------------
     need = [p for p in pages if st_of[p["id"]]["notes_policy"] != "SILENT_STATE_NOTES"]
