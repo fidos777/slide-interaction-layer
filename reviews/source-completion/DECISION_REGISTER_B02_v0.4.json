@@ -28,7 +28,8 @@
     "TECHNICAL_DECOMPOSITION_FROM_SOURCE": "Interaction items derived from the module source’s own labelled substructure; no stakeholder ruling required and no source row created.",
     "PENDING_ARTIFACT_DELIVERY": "The ruling is confirmed and modelled; only the byte-level freeze of a supplied artifact is outstanding because the file did not reach the execution environment.",
     "RESOLVED_ARTIFACT_FROZEN": "A previously pending artifact freeze that is now closed: the bytes were received, independently hashed, and match the declared identity.",
-    "CONFIRMED_REGRESSION": "A defect Bariah found in generated output. Corrected in the source-controlled pipeline, never by patching the PowerPoint."
+    "CONFIRMED_REGRESSION": "A defect Bariah found in generated output. Corrected in the source-controlled pipeline, never by patching the PowerPoint.",
+    "CONFIRMED_LOCAL_ARTIFACT": "The value is used consistently in the generated artifacts, but its provenance is task transcript only: no frozen Bariah artifact contains it. Not the same as CONFIRMED_BARIAH."
   },
   "evidence_artifacts": [
     {
@@ -265,13 +266,17 @@
         "B02_NARRATOR": "HILMI",
         "PL06_CAST_REUSE_POLICY_CONFIRMED": true,
         "PUAN_NADIA_CANON_CONFIRMED": true,
-        "PROJECT_MANAGER_NAME_PENDING": true
+        "PROJECT_MANAGER_NAME_PENDING": true,
+        "NAMED_CAST_REUSE_POLICY_CONFIRMED": true,
+        "EXACT_CHARACTER_NAMES_DIRECTLY_CONFIRMED_BY_BARIAH": false,
+        "DIRECT_BARIAH_NAME_PROVENANCE": "PENDING"
       },
       "forbidden": [
         "using Pelatih or Penyelia Tapak as final learner-facing character names",
         "inventing a name for the Pengurus Projek"
       ],
-      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD",
+      "provenance_note": "The POLICY of named characters is artifact-backed (review guide item 6). The specific names Alya and Encik Rahman are not. The two are recorded separately."
     },
     {
       "decision_id": "B02-D-11",
@@ -397,8 +402,8 @@
     {
       "decision_id": "B02-D-18",
       "title": "Alya — canon character",
-      "status": "CONFIRMED_CANON",
-      "authority": "Bariah / PL06 canon",
+      "status": "CONFIRMED_LOCAL_ARTIFACT",
+      "authority": "Stage 2 task transcript, 1 August 2026",
       "ruling": "Alya. Canonical role: Kontraktor Junior. Instructional function: learner proxy / junior contractor / Pelatih. B02 scene function: the learner character who confirms her understanding of the work scope.",
       "evidence": "Supplied as confirmed B02 cast at Stage 2.",
       "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
@@ -407,13 +412,16 @@
         "SCR_S02"
       ],
       "production_metadata_label": "Alya — Kontraktor Junior",
-      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD",
+      "evidence_class": "TASK_TRANSCRIPT_ONLY",
+      "direct_bariah_name_provenance": "PENDING",
+      "provenance_correction": "Stage 4.2A audit: \"Alya\" appears in NO frozen Bariah artifact — not the annotated deck, not the completed review guide, not S&G v0.3. The guide's casting item states \"nama watak khusus untuk B02 belum disahkan\" and ticks no option. The earlier CONFIRMED_CANON status overstated the evidence and is corrected here. The name is NOT removed from the deck; Bariah is asked to confirm it directly."
     },
     {
       "decision_id": "B02-D-19",
       "title": "Encik Rahman — canon character",
-      "status": "CONFIRMED_CANON",
-      "authority": "Bariah / PL06 canon",
+      "status": "CONFIRMED_LOCAL_ARTIFACT",
+      "authority": "Stage 2 task transcript, 1 August 2026",
       "ruling": "Encik Rahman. Canonical role: Mentor / Kontraktor Senior Berpengalaman Landskap. Instructional function: senior guide. B02 scene function: Penyelia Tapak / mentor who validates and extends Alya’s understanding.",
       "evidence": "Supplied as confirmed B02 cast at Stage 2.",
       "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
@@ -422,7 +430,10 @@
         "SCR_S02"
       ],
       "production_metadata_label": "Encik Rahman — Mentor / Kontraktor Senior Berpengalaman Landskap",
-      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD",
+      "evidence_class": "TASK_TRANSCRIPT_ONLY",
+      "direct_bariah_name_provenance": "PENDING",
+      "provenance_correction": "Stage 4.2A audit: \"Encik Rahman\" appears in NO frozen Bariah artifact — not the annotated deck, not the completed review guide, not S&G v0.3. The guide's casting item states \"nama watak khusus untuk B02 belum disahkan\" and ticks no option. The earlier CONFIRMED_CANON status overstated the evidence and is corrected here. The name is NOT removed from the deck; Bariah is asked to confirm it directly."
     },
     {
       "decision_id": "B02-D-20",
@@ -436,7 +447,10 @@
       "used_on": [
         "SCR_S03"
       ],
-      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD",
+      "evidence_class": "FROZEN_ARTIFACT_OOXML",
+      "direct_bariah_name_provenance": "CONFIRMED",
+      "provenance_note": "Hilmi is artifact-backed: annotated deck slide 6 canvas and notes, the completed review guide, and S&G v0.3 all name him."
     },
     {
       "decision_id": "B02-D-21",
@@ -449,7 +463,9 @@
       "feedback_ids": [],
       "used_on": [],
       "b02_status": "NOT_REQUIRED_IN_B02",
-      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD",
+      "evidence_class": "TASK_TRANSCRIPT_ONLY",
+      "direct_bariah_name_provenance": "PENDING"
     },
     {
       "decision_id": "B02-D-22",
@@ -462,7 +478,9 @@
       "feedback_ids": [],
       "open_dependency": "U-02b — Pengurus Projek character name",
       "used_on": [],
-      "implementation_status": "NOT_APPLICABLE_IN_B02"
+      "implementation_status": "NOT_APPLICABLE_IN_B02",
+      "evidence_class": "TASK_TRANSCRIPT_ONLY",
+      "direct_bariah_name_provenance": "PENDING"
     },
     {
       "decision_id": "B02-D-23",
@@ -852,17 +870,18 @@
     "GENERATOR_FILES_CHANGED": 0,
     "POWERPOINT_FILES_GENERATED": 0,
     "COMPONENTS_PROPAGATED": 0,
-    "CONFIRMED_NARRATOR": 1,
-    "CONFIRMED_CAIR_ADOPTION": 2,
-    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": 1,
-    "PENDING_BARIAH_CONFIRMATION": 1,
-    "CONFIRMED_CANON": 3,
-    "PENDING_SOURCE_VERIFICATION": 1,
-    "PENDING_FIRDAUS_CONFIRMATION": 1,
-    "CONFIRMED_BARIAH": 19,
     "RESOLVED_ARTIFACT_FROZEN": 1,
     "CONFIRMED_REGRESSION": 3,
-    "PENDING_CHARACTER_NAME": 1
+    "PENDING_FIRDAUS_CONFIRMATION": 1,
+    "PENDING_BARIAH_CONFIRMATION": 1,
+    "CONFIRMED_CAIR_ADOPTION": 2,
+    "CONFIRMED_NARRATOR": 1,
+    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": 1,
+    "CONFIRMED_BARIAH": 19,
+    "PENDING_SOURCE_VERIFICATION": 1,
+    "PENDING_CHARACTER_NAME": 1,
+    "CONFIRMED_CANON": 1,
+    "CONFIRMED_LOCAL_ARTIFACT": 2
   },
   "amended": {
     "date": "2026-08-01",
@@ -906,5 +925,26 @@
     "review_pages": 100,
     "supersedes": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx (retained, SUPERSEDED_BY_v0_4_1)",
     "statement": "Bariah must not patch the generated PowerPoint: a manual edit is lost on regeneration and leaves the source-controlled pipeline still producing the defect."
+  },
+  "stage_4_2a_governance_audit": {
+    "date": "2026-08-01",
+    "artifacts": [
+      "REGRESSION_ORACLE_REGISTRY_v0.4.2.json",
+      "REGRESSION_REPLAY_REPORT_v0.4.2.md",
+      "QA_PREDICATE_AUDIT_v0.4.2.md",
+      "QA_SCOPE_AND_LIMITS_v0.4.2.md",
+      "VISUAL_REQUIREMENT_REGISTER_v0.4.2.json",
+      "NOTES_BLOCK_SCHEMA_v0.4.2.json",
+      "INTERACTION_INSTRUCTION_SCOPE_v0.4.2.md",
+      "CAST_PROVENANCE_REGISTER_v0.4.2.json"
+    ],
+    "findings": [
+      "Completion-tick identity was unguarded on Family S and the group master; gate added, suite 188 -> 189.",
+      "8 component-main visual requirements are rendered by the generator without direct authority for the individual screen; recorded PENDING_HUMAN, not self-resolved.",
+      "Alya and Encik Rahman have no frozen-artifact provenance; status corrected to CONFIRMED_LOCAL_ARTIFACT.",
+      "CC extended the VO-parity rule to 7 non-Klik instructions with no direct evidence; flagged, not presented as confirmed.",
+      "21 of 189 predicates share a derivation helper with the generator and cannot detect a wrong shared rule."
+    ],
+    "deck_unchanged": true
   }
 }

@@ -1,0 +1,106 @@
+{
+ "register": "CAST_PROVENANCE_REGISTER_v0.4.2",
+ "evidence_date": "2026-08-01",
+ "separation": {
+  "NAMED_CAST_REUSE_POLICY_CONFIRMED": true,
+  "policy_evidence": "Completed review guide item 6: \"Gunakan nama watak untuk keseluruhan PL06. Gunakan nama watak yang sama bergantung kepada kesesuaian.\"",
+  "EXACT_CHARACTER_NAME_DIRECTLY_CONFIRMED_BY_BARIAH": {
+   "Hilmi": true,
+   "Alya": false,
+   "Encik_Rahman": false,
+   "Puan_Nadia": false,
+   "Pengurus_Projek": false
+  },
+  "B02_CAST_PAIR": "ALYA + ENCIK_RAHMAN",
+  "USAGE_STATUS": "CONFIRMED_LOCAL_ARTIFACT",
+  "DIRECT_BARIAH_NAME_PROVENANCE": "PENDING"
+ },
+ "action": "The names are NOT removed from the deck. Their provenance status is corrected from CONFIRMED_CANON to CONFIRMED_LOCAL_ARTIFACT with DIRECT_BARIAH_NAME_PROVENANCE = PENDING, and Bariah is asked to confirm the two names directly.",
+ "characters": [
+  {
+   "character": "Alya",
+   "role": "Kontraktor Junior",
+   "first_used_in_artifact": "v0.4 generated deck (S02)",
+   "latest_direct_authority": "Stage 2 task text, 1 August 2026",
+   "evidence_locator": "task transcript only — no frozen artifact contains this name",
+   "frozen_artifact_occurrences": {
+    "annotated_deck_canvas": false,
+    "annotated_deck_notes": false,
+    "review_guide": false,
+    "sg_v0_3": false
+   },
+   "evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "usage_status": "CONFIRMED_LOCAL_ARTIFACT",
+   "direct_bariah_name_provenance": "PENDING",
+   "note": "The completed review guide item 6 states \"nama watak khusus untuk B02 belum disahkan\" and ticks no option. It confirms the POLICY of using named characters, not these names."
+  },
+  {
+   "character": "Encik Rahman",
+   "role": "Mentor / Kontraktor Senior Berpengalaman Landskap",
+   "first_used_in_artifact": "v0.4 generated deck (S02)",
+   "latest_direct_authority": "Stage 2 task text, 1 August 2026",
+   "evidence_locator": "task transcript only — no frozen artifact contains this name",
+   "frozen_artifact_occurrences": {
+    "annotated_deck_canvas": false,
+    "annotated_deck_notes": false,
+    "review_guide": false,
+    "sg_v0_3": false
+   },
+   "evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "usage_status": "CONFIRMED_LOCAL_ARTIFACT",
+   "direct_bariah_name_provenance": "PENDING",
+   "note": "Same as Alya."
+  },
+  {
+   "character": "Hilmi",
+   "role": "Narator kursus",
+   "first_used_in_artifact": "v0.3 storyboard, retained through v0.4.1",
+   "latest_direct_authority": "Bariah annotated deck slide 6 (frozen) + review guide",
+   "evidence_locator": "annotated deck slide 6 canvas and notes; guide; S&G v0.3",
+   "frozen_artifact_occurrences": {
+    "annotated_deck_canvas": true,
+    "annotated_deck_notes": true,
+    "review_guide": true,
+    "sg_v0_3": true
+   },
+   "evidence_class": "FROZEN_ARTIFACT_OOXML",
+   "usage_status": "CONFIRMED_ARTIFACT_BACKED",
+   "direct_bariah_name_provenance": "CONFIRMED",
+   "note": "Hilmi is the one cast name that IS artifact-backed in Bariah evidence."
+  },
+  {
+   "character": "Puan Nadia",
+   "role": "Pegawai Kewangan / Pengurus Kontrak",
+   "first_used_in_artifact": "not used in B02",
+   "latest_direct_authority": "Stage 2 task text, 1 August 2026",
+   "evidence_locator": "task transcript only",
+   "frozen_artifact_occurrences": {
+    "annotated_deck_canvas": false,
+    "annotated_deck_notes": false,
+    "review_guide": false,
+    "sg_v0_3": false
+   },
+   "evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "usage_status": "NOT_REQUIRED_IN_B02",
+   "direct_bariah_name_provenance": "PENDING",
+   "note": "Not used in B02, so the provenance gap has no effect on the deck."
+  },
+  {
+   "character": "Pengurus Projek",
+   "role": "Pengurus Projek",
+   "first_used_in_artifact": "not used in B02",
+   "latest_direct_authority": "Stage 2 task text, 1 August 2026",
+   "evidence_locator": "task transcript only",
+   "frozen_artifact_occurrences": {
+    "annotated_deck_canvas": false,
+    "annotated_deck_notes": false,
+    "review_guide": false,
+    "sg_v0_3": false
+   },
+   "evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "usage_status": "NAME_OPEN",
+   "direct_bariah_name_provenance": "PENDING",
+   "note": "Name deliberately not invented."
+  }
+ ]
+}

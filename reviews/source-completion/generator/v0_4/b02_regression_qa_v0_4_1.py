@@ -347,6 +347,46 @@ def run(pptx):
             if s["y"] + s["h"] > 7.51 or s["x"] + s["w"] > 13.34 or s["y"] < -0.65 or s["x"] < -0.01:
                 off.append((pid, s["name"], round(s["x"] + s["w"], 2), round(s["y"] + s["h"], 2)))
     chk("CANVAS_SHAPES_OUTSIDE_STAGE", len(off), 0)
+    # ---- universal completion-tick identity ----
+    # Gap found by Stage 4.2A replay fixture R-008: the Stage 4 suite verified tick counts
+    # only for Family P1 and Family P2. A false completion tick on any Family S screen or on
+    # the Struktur Taman group master was completely unguarded and would have shipped.
+    tick_bad = []
+    order = {p["id"]: i for i, p in enumerate(pages)}
+    for p in pages:
+        pid = p["id"]; st = st_of[pid]; rec = rec_of[pid]
+        k = order[pid]
+        seen_states = {q["state_id"] for q in pages[:k]}
+        seen_done = {q["state_id"] for q in pages[:k]
+                     if M.state(q["state_id"])["screen_role"] in
+                     ("STATE_ALL_VIEWED", "STATE_GROUP_COMPLETE")}
+        drawn = sum(1 for s in D[pid]["canvas"] if s["name"] == "Tick")
+        if rec["screen_role"] == "GROUP_MASTER":
+            # cards are components, not interaction items: expect one tick per component
+            # whose own all-viewed state was reached earlier in the path.
+            done = {M.state(q["state_id"]).get("component_id") for q in pages[:k]
+                    if M.state(q["state_id"])["screen_role"] == "STATE_ALL_VIEWED"
+                    and M.state(q["state_id"])["completion_scope"] == "COMPONENT"
+                    and M.state(q["state_id"]).get("group_id") == "STRUKTUR_TAMAN"}
+            exp = 4 if st["screen_role"] == "STATE_GROUP_COMPLETE" else len(done - {None})
+        else:
+            items = M.items_of(p["screen_id"])
+            if not items:
+                exp = 0
+            elif st["screen_role"] in ("STATE_ALL_VIEWED", "STATE_GROUP_COMPLETE"):
+                exp = len(items)
+            else:
+                exp = 0
+                for it in items:
+                    rs = it["runtime_state_id"]
+                    if rs in seen_states or rs == st["runtime_state_id"]:
+                        exp += 1; continue
+                    m2 = re.match(r"^ST_(.+)_EX(\d+)_BASE$", rs)
+                    if m2 and f"ST_{m2.group(1)}_EX{m2.group(2)}_ALL_SPEC_VIEWED" in seen_done:
+                        exp += 1
+        if drawn != exp:
+            tick_bad.append((pid, rec["screen_role"], drawn, exp))
+    chk("COMPLETION_TICKS_NOT_MATCHING_PATH", len(tick_bad), 0)
     chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 105)
     return res
 

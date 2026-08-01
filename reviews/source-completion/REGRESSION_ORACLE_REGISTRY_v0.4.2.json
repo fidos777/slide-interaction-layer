@@ -1,0 +1,263 @@
+{
+ "registry": "REGRESSION_ORACLE_REGISTRY_v0.4.2",
+ "evidence_date": "2026-08-01",
+ "repository": {
+  "branch": "claude/verify-powerpoint-file-vpfzkg",
+  "head": "6eae4a8260805ea8666bb77e9a6743a00609378c"
+ },
+ "principle": "Expected values are never produced by the generator. Oracle extraction lives in generator/audit/b02_oracle_extract_v0_4_2.py, which imports nothing from the generator. Where no frozen artifact exists the record says TASK_TRANSCRIPT_ONLY and no artifact oracle is claimed.",
+ "artifact_hashes": {
+  "v0_4_superseded_deck": {
+   "bytes": 439329,
+   "sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108"
+  },
+  "v0_4_1_corrected_deck": {
+   "bytes": 453859,
+   "sha256": "247eadb10bde4e7f227c6df947b1821c55faad140b212465ae774bd2c932f59a"
+  },
+  "stage3_proof_deck": {
+   "bytes": 170598,
+   "sha256": "3fb57da429d499b3b3d4d8a94c6feaaee4c971b4f4c43e899a580864d3ded39a"
+  },
+  "frozen_annotated_bariah_pptx": {
+   "bytes": 365773,
+   "sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809"
+  },
+  "frozen_completed_review_guide": {
+   "bytes": 43342,
+   "sha256": "c15ae05e20358eda17b8e272f5dd9a5ef85831016976a926346371ea5790bcf3"
+  },
+  "frozen_updated_sg_v0_3": {
+   "bytes": 56475,
+   "sha256": "f3166e42f84d4b1f1c792c28fdc0278cc1c56a061b1598bfcce0efde91ad429d"
+  },
+  "generator": {
+   "bytes": 49707,
+   "sha256": "2bb97f5e212790c448fe1be98a4dbcb4bb4b4e4b0b57d274ff03db20be6126fa"
+  },
+  "regression_qa": {
+   "bytes": 22192,
+   "sha256": "9d817f9312f0f17aed1453cc8a1d198ac635fe12104513e685f41b52b0ae4a7a"
+  },
+  "full_qa": {
+   "bytes": 19774,
+   "sha256": "eba2431224a8ac9921b559da824786ff4682376cb5503a5232eba62e734142dd"
+  },
+  "oracle_extractor": {
+   "bytes": 4764,
+   "sha256": "38bc573eebb29438f08cbfc4d3de6b938e986676778cc2d357ddd1f91709ae6c"
+  },
+  "replay_harness": {
+   "bytes": 8980,
+   "sha256": "9bc5b2cc2efee6d2462601f0a42df4392fd8747ce17055b4376b14956033f34b"
+  }
+ },
+ "whatsapp_screenshot_evidence": {
+  "present": false,
+  "evidence_class": "TASK_TRANSCRIPT_ONLY",
+  "note": "No screenshot or exported chat is frozen in the repository. Every 1 August 2026 ruling is TASK_TRANSCRIPT_ONLY and is NOT represented as a hash-locked artifact oracle."
+ },
+ "evidence_class_summary": {
+  "FROZEN_ARTIFACT_OOXML": 2,
+  "TASK_TRANSCRIPT_ONLY": 6,
+  "MODEL_DERIVED": 2,
+  "GEOMETRY_INVARIANT": 1,
+  "independent_artifact_oracle": 5
+ },
+ "record_kinds": {
+  "HISTORICAL_REGRESSION": 3,
+  "PREVIOUSLY_UNTESTED_SHAPE": 3,
+  "NEW_BARIAH_CLARIFICATION": 5
+ },
+ "records": [
+  {
+   "regression_id": "R-001",
+   "title": "Promenade visual direction must not revert to a generic fallback",
+   "semantic_target": "example popup visual direction",
+   "expected_predicate": "subject == 'Promenade Tasik Titiwangsa, KL' and not matching the generic fallback shape",
+   "oracle_evidence_class": "FROZEN_ARTIFACT_OOXML",
+   "oracle_filename": "reviews/storyboard-bariah/v0_3_bariah_review/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+   "oracle_sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809",
+   "oracle_locator": "slide 14, shape paragraph \"[Visual:  Promenade Tasik Titiwangsa, KL]\"",
+   "authority": "Bariah corrected exemplar",
+   "decision_status": "CONFIRMED_REGRESSION",
+   "record_kind": "HISTORICAL_REGRESSION",
+   "generated_field_inspected": "VisualPanelBody text on the Promenade popup page",
+   "actual_inspection_method": "parse slide XML of the generated deck; compare against the oracle subject",
+   "independent_artifact_oracle": true,
+   "unresolved_limitation": "The frozen exemplar writes \"[Visual:  ...]\" with a double space; the generated deck uses a single space. Conformance is asserted on the SUBJECT, not byte-exact, and the whitespace difference is disclosed rather than silently normalised."
+  },
+  {
+   "regression_id": "R-002",
+   "title": "Implementation metadata must not appear on the learner canvas",
+   "semantic_target": "learner canvas text",
+   "expected_predicate": "no denylisted token in any canvas shape on any of the 100 pages",
+   "oracle_evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "oracle_filename": null,
+   "oracle_sha256": null,
+   "oracle_locator": "Bariah WhatsApp, 1 August 2026 (no frozen artifact)",
+   "authority": "Bariah direct review",
+   "decision_status": "CONFIRMED_REGRESSION",
+   "record_kind": "HISTORICAL_REGRESSION",
+   "generated_field_inspected": "all canvas shape text",
+   "actual_inspection_method": "parse slide XML; denylist of 15 tokens",
+   "independent_artifact_oracle": false,
+   "unresolved_limitation": "No frozen artifact states the denylist. The rule is transcript-only; the token list is CC-authored from the model vocabulary and should be ratified."
+  },
+  {
+   "regression_id": "R-003",
+   "title": "Approved English terms in Speaker Notes must carry OOXML italic formatting",
+   "semantic_target": "notesSlide run properties",
+   "expected_predicate": "every glossary occurrence lies in runs all carrying i=\"1\"",
+   "oracle_evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "oracle_filename": "reviews/storyboard-bariah/v0_3_bariah_review/Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
+   "oracle_sha256": "c15ae05e20358eda17b8e272f5dd9a5ef85831016976a926346371ea5790bcf3",
+   "oracle_locator": "review guide item 5 suggestion cell: \"GLOBAL di speaker notes untuk semua slide. English words in italic\"",
+   "authority": "Bariah review guide + WhatsApp",
+   "decision_status": "CONFIRMED_REGRESSION",
+   "record_kind": "HISTORICAL_REGRESSION",
+   "generated_field_inspected": "ppt/notesSlides/*.xml run i attribute",
+   "actual_inspection_method": "parse notes XML; map each phrase character range onto the runs carrying it",
+   "independent_artifact_oracle": true,
+   "unresolved_limitation": "The guide confirms the RULE. It does not enumerate the glossary; the 9-term list is CC-authored from component and row labels and needs ratification."
+  },
+  {
+   "regression_id": "R-004",
+   "title": "Six-item grids must render all six interaction cards",
+   "semantic_target": "card count per screen",
+   "expected_predicate": "drawn ItemCard count == model interaction item count",
+   "oracle_evidence_class": "MODEL_DERIVED",
+   "oracle_filename": null,
+   "oracle_sha256": null,
+   "oracle_locator": "model: SCR_DRINKING_FOUNTAIN_EX01_DETAIL has 6 items",
+   "authority": "source decomposition",
+   "decision_status": "PREVIOUSLY_UNTESTED_SHAPE",
+   "record_kind": "PREVIOUSLY_UNTESTED_SHAPE",
+   "generated_field_inspected": "ItemCard shapes per slide",
+   "actual_inspection_method": "parse slide XML; compare to model item count",
+   "independent_artifact_oracle": false,
+   "unresolved_limitation": "Expected value comes from the model, which is also the generator input. Independent only in that the count is derived from the source table rather than from layout code."
+  },
+  {
+   "regression_id": "R-005",
+   "title": "All five quiz review pages must display the correct answer key",
+   "semantic_target": "answer key block",
+   "expected_predicate": "each question page has AnswerKeyBox + head + body matching the answer data",
+   "oracle_evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "oracle_filename": "reviews/storyboard-bariah/v0_3_bariah_review/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+   "oracle_sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809",
+   "oracle_locator": "slide 73 notes carry \"Jawapan: B/C/A/B\" and the ✓-marked Multiple Response options",
+   "authority": "Bariah WhatsApp, 1 August 2026",
+   "decision_status": "CONFIRMED_BARIAH",
+   "record_kind": "NEW_BARIAH_CLARIFICATION",
+   "generated_field_inspected": "AnswerKeyBody text",
+   "actual_inspection_method": "parse slide XML; compare letter and full option text to the answer data",
+   "independent_artifact_oracle": true,
+   "unresolved_limitation": "The ANSWER VALUES are artifact-backed from slide 73. The REQUIREMENT to display them on the review page is transcript-only. The two are recorded separately."
+  },
+  {
+   "regression_id": "R-006",
+   "title": "Tamat copy and hierarchy must match the latest Bariah ruling",
+   "semantic_target": "Tamat canvas and spoken transcript",
+   "expected_predicate": "title, hierarchy and instruction match the supplied exemplar; no close-window wording",
+   "oracle_evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "oracle_filename": "reviews/storyboard-bariah/v0_3_bariah_review/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+   "oracle_sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809",
+   "oracle_locator": "slide 75 canvas + notes (the PRE-correction state); the new wording is transcript-only",
+   "authority": "Bariah WhatsApp, 1 August 2026",
+   "decision_status": "CONFIRMED_BARIAH",
+   "record_kind": "NEW_BARIAH_CLARIFICATION",
+   "generated_field_inspected": "Tamat canvas shapes and notes spoken block",
+   "actual_inspection_method": "parse slide + notes XML",
+   "independent_artifact_oracle": false,
+   "unresolved_limitation": "The frozen slide 75 shows the SUPERSEDED state, so it is a negative oracle only. The new copy exists solely as task transcript.",
+   "superseded_rule": "Provisional close-the-window instruction and the shell-Next-disabled claim"
+  },
+  {
+   "regression_id": "R-007",
+   "title": "Confirmed screen-level Klik instructions must also appear in spoken VO",
+   "semantic_target": "canvas instruction vs spoken transcript",
+   "expected_predicate": "instruction string appears on canvas AND inside the SPOKEN TRANSCRIPT block",
+   "oracle_evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "oracle_filename": "reviews/storyboard-bariah/v0_3_bariah_review/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+   "oracle_sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809",
+   "oracle_locator": "slide 8: 'Klik pada setiap struktur untuk penjelasan lanjut.' (canvas wording only; the VO-parity rule is transcript-only)",
+   "authority": "Bariah WhatsApp, 1 August 2026",
+   "decision_status": "CONFIRMED_BARIAH",
+   "record_kind": "NEW_BARIAH_CLARIFICATION",
+   "generated_field_inspected": "canvas Instr shape + notes spoken block",
+   "actual_inspection_method": "parse slide and notes XML",
+   "independent_artifact_oracle": false,
+   "unresolved_limitation": "The frozen deck evidences the INSTRUCTION WORDING, not the parity rule. Scope beyond screen-level Klik instructions is deliberately NOT extended — see INTERACTION_INSTRUCTION_SCOPE."
+  },
+  {
+   "regression_id": "R-008",
+   "title": "Rendered completion ticks must equal the path actually completed",
+   "semantic_target": "Tick shapes per review page",
+   "expected_predicate": "drawn Tick count == ticks the ordered path has earned",
+   "oracle_evidence_class": "MODEL_DERIVED",
+   "oracle_filename": null,
+   "oracle_sha256": null,
+   "oracle_locator": "model page order + completion scopes",
+   "authority": "model completion topology",
+   "decision_status": "PREVIOUSLY_UNTESTED_SHAPE",
+   "record_kind": "PREVIOUSLY_UNTESTED_SHAPE",
+   "generated_field_inspected": "Tick shapes per slide",
+   "actual_inspection_method": "parse slide XML; compare to path-derived expectation",
+   "independent_artifact_oracle": false,
+   "unresolved_limitation": "GAP FOUND IN THIS STAGE: before 4.2A no gate covered Family S pages or the group master. A false tick there passed 188/188. COMPLETION_TICKS_NOT_MATCHING_PATH was added."
+  },
+  {
+   "regression_id": "R-009",
+   "title": "Specification popups must not be forced to contain a visual panel",
+   "semantic_target": "popup visual panel by subtype",
+   "expected_predicate": "no VisualPanel shape on any SPECIFICATION_POPUP page",
+   "oracle_evidence_class": "TASK_TRANSCRIPT_ONLY",
+   "oracle_filename": null,
+   "oracle_sha256": null,
+   "oracle_locator": "Bariah WhatsApp: \"Semua pop up ada visual, KECUALI pop up Spesifikasi (bahan, dimensi etc)\"",
+   "authority": "Bariah WhatsApp, 1 August 2026",
+   "decision_status": "CONFIRMED_BARIAH",
+   "record_kind": "NEW_BARIAH_CLARIFICATION",
+   "generated_field_inspected": "VisualPanel shapes on specification popup pages",
+   "actual_inspection_method": "parse slide XML",
+   "independent_artifact_oracle": false,
+   "unresolved_limitation": "Transcript-only. It superseded an earlier CC gate that required a panel on every popup — evidence that an over-broad gate can enforce the wrong thing confidently.",
+   "superseded_rule": "EVERY_POPUP_HAS_VISUAL"
+  },
+  {
+   "regression_id": "R-010",
+   "title": "S01 must not duplicate a standalone component title and must use the full hierarchy",
+   "semantic_target": "S01 canvas titles",
+   "expected_predicate": "display title == \"Topik 3 Bahagian 2: Komponen Landskap\"; zero standalone \"Komponen Landskap\"",
+   "oracle_evidence_class": "FROZEN_ARTIFACT_OOXML",
+   "oracle_filename": "reviews/storyboard-bariah/v0_3_bariah_review/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+   "oracle_sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809",
+   "oracle_locator": "slide 2: carries the full Topik/Bahagian title and NO standalone \"Komponen Landskap\" shape",
+   "authority": "Bariah corrected exemplar",
+   "decision_status": "CONFIRMED_BARIAH",
+   "record_kind": "NEW_BARIAH_CLARIFICATION",
+   "generated_field_inspected": "S01 canvas shape text",
+   "actual_inspection_method": "parse slide XML; count standalone-title shapes",
+   "independent_artifact_oracle": true,
+   "unresolved_limitation": "Artifact-backed: the corrected slide 2 contains zero standalone component-title shapes."
+  },
+  {
+   "regression_id": "R-011",
+   "title": "No canvas object may fall outside the stage on any edge",
+   "semantic_target": "shape geometry",
+   "expected_predicate": "0 <= x, y+h <= 7.5, x+w <= 13.333 for every canvas shape",
+   "oracle_evidence_class": "GEOMETRY_INVARIANT",
+   "oracle_filename": null,
+   "oracle_sha256": null,
+   "oracle_locator": "stage 13.3333 x 7.5 in",
+   "authority": "deck geometry contract",
+   "decision_status": "PREVIOUSLY_UNTESTED_SHAPE",
+   "record_kind": "PREVIOUSLY_UNTESTED_SHAPE",
+   "generated_field_inspected": "a:off / a:ext of every canvas shape",
+   "actual_inspection_method": "parse slide XML; test all four edges",
+   "independent_artifact_oracle": true,
+   "unresolved_limitation": "GAP FOUND IN STAGE 4.1: the Stage 4 suite tested the left edge only."
+  }
+ ]
+}
