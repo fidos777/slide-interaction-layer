@@ -1,0 +1,472 @@
+{
+ "contract": "B02_V0_4_MODEL_CONTRACT",
+ "version": "0.4",
+ "evidence_date": "2026-08-01",
+ "scope": "K5 PL06 T03 B02 — Komponen Landskap",
+ "status": "MODEL_FROZEN_FOR_IMPLEMENTATION",
+ "repository": {
+  "branch": "claude/verify-powerpoint-file-vpfzkg",
+  "head_at_authoring": "0a5fa1dd3c9f9b043d538d7271b200e8e23cd239"
+ },
+ "standing": "Documentation only. This contract will later drive the generator, the screen/state map, the source map, interaction-state QA and the clean v0.4 regeneration. It authorises none of them yet.",
+ "not_asserted": [
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "MMD_BUILD_READY",
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "FINAL_REVIEW_PAGE_NUMBERS"
+ ],
+ "authoritative_input_order": [
+  "1. K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx — primary direct Bariah evidence",
+  "2. Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx — primary direct Bariah evidence",
+  "3. K5_PL06_T03_B02_UPDATED_SG_v0.3.docx — consolidated executable contract",
+  "4. BARIAH_CORRECTION_EXEMPLARS_v0.4.md — implementation index only; must not override primary evidence",
+  "5. BARIAH_FEEDBACK_IMPLEMENTATION_MAP_v0.4.md",
+  "6. DECISION_REGISTER_B02_v0.4.json",
+  "7. V0_3_TO_V0_4_CHANGESET.json",
+  "8. TABLE_ROW_TO_POPUP_MATRIX.md, STORYBOARD_SOURCE_MAP, B02_PAGE_AND_NODE_MAP.md, B02_ASSET_MANIFEST.md, hashed module PDF"
+ ],
+ "source_baseline": {
+  "SOURCE_ROW_COUNT": 26,
+  "SOURCE_ASSET_COUNT": 14,
+  "SOURCE_ROWS_CHANGED": 0,
+  "rule": "Interaction decomposition never alters source-row identity. One source row may yield several interaction items, popup states and review pages; it never becomes several source rows.",
+  "worked_cases": {
+   "PAPAN_TANDA": "1 source row → 4 interaction categories → 4 popup states",
+   "BBQ_PIT": "1 source row → 4 interaction categories → 4 popup states",
+   "KERUSI_TAMAN": "1 source row per material → 1 example detail screen → 2–4 specification interaction items → 2–4 popup states"
+  }
+ },
+ "identifier_spaces": {
+  "source_row_uid": "owned by the module source table; invariant at 26",
+  "interaction_item_id": "owned by the execution family; one source row may yield several",
+  "learner_screen_id": "a physical learner screen",
+  "runtime_state_id": "a runtime state of a learner screen; a popup is a state, never a screen",
+  "review_page_role": "a stable semantic role for the eventual PowerPoint review page",
+  "source_asset_id": "owned by the extracted PDF asset register; invariant at 14"
+ },
+ "depth_semantics": {
+  "INTERACTION_SELECTION_DEPTH_MAX": {
+   "value": 2,
+   "meaning": "the maximum number of learner selection levels inside a component interaction",
+   "by_family": {
+    "FAMILY_S": 1,
+    "FAMILY_P1": 2,
+    "FAMILY_P2": 1
+   },
+   "note": "The component overview is an entry screen, not an interaction-selection level."
+  },
+  "SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER": {
+   "meaning": "the number of screen layers traversed from the group master before reaching the deepest content state",
+   "by_family": {
+    "FAMILY_S": 3,
+    "FAMILY_P1": 3,
+    "FAMILY_P2": 2
+   },
+   "FAMILY_P1_path": [
+    "group master / group overview (layer 0)",
+    "component overview + example list (layer 1)",
+    "example full slide (layer 2)",
+    "specification popup state (layer 3)"
+   ]
+  },
+  "invariants": [
+   "A popup is a runtime state, never a learner navigation destination.",
+   "A popup must never open another popup.",
+   "The two metrics are recorded separately; no single ambiguous navigation_depth field exists."
+  ]
+ },
+ "execution_families": {
+  "FAMILY_S": {
+   "name": "STRUKTUR TAMAN",
+   "components": [
+    "Struktur Persisir Air",
+    "Struktur Teduhan",
+    "Kemudahan Awam",
+    "Water Feature"
+   ],
+   "path": [
+    "Struktur Taman group master",
+    "main explanation",
+    "Contoh [Nama Komponen]",
+    "clickable example items",
+    "popup state",
+    "all-viewed state",
+    "Kembali to Struktur Taman group master"
+   ],
+   "rules": [
+    "examples may be selected in any order",
+    "each viewed example receives a tick",
+    "popup closes using a close icon",
+    "popup is a state, not another navigation level",
+    "Kembali enables only after all examples are viewed",
+    "completed items remain reviewable",
+    "completed states persist on revisit and LMS resume",
+    "group completion controls the LMS shell Next",
+    "no duplicate learner-canvas Seterusnya button"
+   ],
+   "popup_template": [
+    "item title",
+    "Fungsi dan Penerangan",
+    "Contoh (when present)",
+    "source-attested visual direction",
+    "close icon",
+    "VO"
+   ],
+   "forbidden": [
+    "text button labelled Tutup"
+   ],
+   "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
+   "forbidden_instruction": "Klik pada setiap item — must not be used where the item is specifically an example"
+  },
+  "FAMILY_P1": {
+   "name": "MULTI-EXAMPLE PERABOT",
+   "components": [
+    "Kerusi Taman",
+    "Tong Sampah",
+    "Drinking Fountain"
+   ],
+   "path": [
+    "Perabot Taman overview",
+    "component overview/explanation with example list",
+    "learner selects an example",
+    "full-slide example detail",
+    "learner selects a specification item",
+    "specification popup state",
+    "close icon returns to the example detail",
+    "Kembali returns to the component overview/list"
+   ],
+   "rules": [
+    "full-slide examples are Bariah Level 1",
+    "specification items are Bariah Level 2",
+    "the specification popup is a runtime state",
+    "one source row may produce several specification interaction items",
+    "interaction items remain traceable to the same source_row_uid",
+    "an example detail may carry one or more specification items",
+    "closing the popup returns to the same example detail",
+    "Kembali on the example detail returns to the component overview/list",
+    "completing all required examples completes the component",
+    "completion state persists on revisit and resume"
+   ],
+   "forbidden": [
+    "forcing the Family S pattern Contoh [Komponen] → row popup → Kembali to group master onto this family"
+   ]
+  },
+  "FAMILY_P2": {
+   "name": "SPECIFICATION-DIRECT PERABOT",
+   "components": [
+    "Papan Tanda",
+    "BBQ Pit"
+   ],
+   "path": [
+    "component overview/explanation",
+    "specification-category list",
+    "learner selects a category",
+    "popup state",
+    "close icon returns to the specification list"
+   ],
+   "categories": {
+    "Papan Tanda": [
+     "Bahan Panel",
+     "Bahan Struktur/Tiang",
+     "Grafik",
+     "Rekaan"
+    ],
+    "BBQ Pit": [
+     "Bahan Pembinaan",
+     "Dimensi",
+     "Gril",
+     "Keselamatan"
+    ]
+   },
+   "rules": [
+    "one source row may map to several interaction categories",
+    "each category retains its source locator",
+    "no new source rows are created",
+    "the close icon returns to the category list",
+    "no generic one-item completion path",
+    "category completion and component completion are explicitly modelled",
+    "completed categories remain reviewable"
+   ],
+   "forbidden": [
+    "any generic one-item Contoh screen for Papan Tanda or BBQ Pit"
+   ]
+  }
+ },
+ "control_semantics": {
+  "allowed_control_types": [
+   "LMS_SHELL_NEXT",
+   "MULA_BUTTON",
+   "MULA_KUIZ_BUTTON",
+   "KEMBALI_BUTTON",
+   "CLOSE_ICON",
+   "NO_CONTROL"
+  ],
+  "required_fields_per_record": [
+   "next_control_type",
+   "next_enabled_condition",
+   "back_control_type",
+   "back_enabled_condition",
+   "close_control_type",
+   "return_target",
+   "completion_scope",
+   "persistence_rule"
+  ],
+  "contextual_return_targets": {
+   "FAMILY_S · Kembali": "example screen → Struktur Taman group master",
+   "FAMILY_P1 · close icon": "specification popup → current example detail",
+   "FAMILY_P1 · Kembali": "example detail → component overview/list",
+   "FAMILY_P2 · close icon": "specification popup → component specification list",
+   "group master · progression": "controlled by the LMS shell Next"
+  },
+  "control_planes": {
+   "learner_canvas_control": "MULA_BUTTON, MULA_KUIZ_BUTTON, KEMBALI_BUTTON — authored in the deck",
+   "lms_shell_control": "LMS_SHELL_NEXT — owned by the player, gated by completion state, never redrawn on canvas",
+   "runtime_state_close_control": "CLOSE_ICON — closes a popup state and returns to its owning screen"
+  },
+  "forbidden": [
+   "a duplicate custom Seterusnya button on the learner canvas where LMS shell navigation is used",
+   "one hard-coded Kembali target shared across all families"
+  ]
+ },
+ "notes_policy": {
+  "fields": [
+   "notes_context_headers",
+   "spoken_transcript",
+   "notes_policy"
+  ],
+  "principle": "The spoken content is stored separately from the production-context headers. MMD and TTS must never have to infer which part of Notes is spoken.",
+  "CONTENT_VO_NOTES": {
+   "headers": [
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap",
+    "[group / component / screen context]"
+   ],
+   "body": "[exact VO]",
+   "headers_spoken": false,
+   "spoken_transcript_required": true
+  },
+  "DIALOGUE_NOTES": {
+   "headers": [
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap",
+    "[scene context]"
+   ],
+   "body": "Alya: … / Encik Rahman: …",
+   "headers_spoken": false,
+   "spoken_transcript_required": true,
+   "note": "The exact dialogue is also available separately from the context headers."
+  },
+  "SILENT_STATE_NOTES": {
+   "headers": [],
+   "body": "",
+   "headers_spoken": false,
+   "spoken_transcript_required": false,
+   "applies_to": [
+    "all-viewed states",
+    "completion-only states",
+    "silent tick-state review pages"
+   ],
+   "rule": "Genuinely empty. No PL/Topic headers."
+  },
+  "QUIZ_NOTES": {
+   "headers": [
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap",
+    "Kuiz"
+   ],
+   "body": [
+    "quiz production instructions",
+    "exact question content",
+    "exact immediate feedback",
+    "correct/wrong SFX direction",
+    "source references"
+   ],
+   "headers_spoken": false,
+   "spoken_transcript_required": true
+  },
+  "forbidden_in_final_notes": [
+   "technical runtime IDs",
+   "internal QA tokens",
+   "draft diagnostics",
+   "production prefixes such as \"VO PENUH:\"",
+   "screen tokens such as \"S05 — PERINCIAN\""
+  ]
+ },
+ "language_and_rich_text": {
+  "rich_text_runs_required_on": [
+   "learner canvas",
+   "Speaker Notes",
+   "popup headings and content",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "controlled_italic_terms": [
+   "Water Feature",
+   "Drinking Fountain",
+   "BBQ Pit",
+   "Wood-Plastic Composite"
+  ],
+  "normalisations": {
+   "N-06": "WPC (Wood-Plastic Composite / Plastik Kitar Semula)"
+  },
+  "preserved": [
+   "reka bentuk",
+   "BBQ Pit with capital P",
+   "corrected Promenade spelling",
+   "approved Malay VO equivalents where source-attested"
+  ],
+  "forbidden": [
+   "italicising technical IDs or production metadata merely because they are English"
+  ]
+ },
+ "cast": {
+  "B02_CHARACTER_NAMES_CONFIRMED": true,
+  "B02_CAST_PAIR": "ALYA + ENCIK_RAHMAN",
+  "B02_NARRATOR": "HILMI",
+  "PL06_CAST_REUSE_POLICY_CONFIRMED": true,
+  "PUAN_NADIA_CANON_CONFIRMED": true,
+  "PROJECT_MANAGER_NAME_PENDING": true,
+  "characters": [
+   {
+    "character_id": "ALYA",
+    "character_name": "Alya",
+    "canonical_role": "Kontraktor Junior",
+    "instructional_function": "learner proxy / junior contractor / Pelatih",
+    "b02_scene_function": "learner character who confirms her understanding of the work scope",
+    "status": "CONFIRMED_CANON",
+    "screens": [
+     "SCR_S02"
+    ]
+   },
+   {
+    "character_id": "ENCIK_RAHMAN",
+    "character_name": "Encik Rahman",
+    "canonical_role": "Mentor / Kontraktor Senior Berpengalaman Landskap",
+    "instructional_function": "senior guide",
+    "b02_scene_function": "Penyelia Tapak / mentor who validates and extends Alya’s understanding",
+    "status": "CONFIRMED_CANON",
+    "screens": [
+     "SCR_S02"
+    ]
+   },
+   {
+    "character_id": "HILMI",
+    "character_name": "Hilmi",
+    "canonical_role": "Narator kursus",
+    "instructional_function": "course narrator",
+    "b02_scene_function": "narrator; NOT part of the Alya–Encik Rahman scenario cast",
+    "status": "CONFIRMED_NARRATOR",
+    "screens": [
+     "SCR_S03"
+    ],
+    "production_note": "\"Hilmi:\" prefix appears on S03 only"
+   },
+   {
+    "character_id": "PUAN_NADIA",
+    "character_name": "Puan Nadia",
+    "canonical_role": "Pegawai Kewangan / Pengurus Kontrak",
+    "instructional_function": "financial / contractual authority",
+    "b02_scene_function": "NOT REQUIRED IN B02 — no screen carries a genuine financial or contractual instructional function",
+    "status": "CONFIRMED_CANON · NOT_REQUIRED_IN_B02",
+    "screens": []
+   },
+   {
+    "character_id": "PENGURUS_PROJEK",
+    "character_name": null,
+    "canonical_role": "Pengurus Projek",
+    "instructional_function": "project management authority",
+    "b02_scene_function": "not used in B02",
+    "status": "PENDING_CHARACTER_NAME",
+    "screens": [],
+    "production_note": "The canonical role exists; the character name remains open. No name may be invented."
+   }
+  ],
+  "forbidden": [
+   "using the generic role labels Pelatih or Penyelia Tapak as final learner-facing character names",
+   "inventing a name for the Pengurus Projek"
+  ],
+  "production_metadata_role_labels": [
+   "Alya — Kontraktor Junior",
+   "Encik Rahman — Mentor / Kontraktor Senior Berpengalaman Landskap"
+  ]
+ },
+ "open_item_execution_policies": {
+  "U-01": {
+   "topic": "MS2680 applicability",
+   "status": "PENDING_SOURCE_VERIFICATION",
+   "execution_policy": "The MS2680 claim is excluded from learner-facing dialogue on S02. It is retained in production metadata only. No substitute standards claim is invented. The remaining dialogue keeps logical continuity without adding new facts.",
+   "blocks_review_build": false,
+   "evidence": "Exemplar slide 4 Notes: \"Dan jangan lupa, kedua-duanya kena ikut MS2680.\" S&G v0.3 marks it PENDING SOURCE VERIFICATION."
+  },
+  "U-02": {
+   "topic": "Character casting",
+   "status": "RESOLVED_FOR_B02",
+   "execution_policy": "Alya, Encik Rahman and Hilmi are the confirmed B02 cast. Generic role labels Pelatih / Penyelia Tapak are production metadata only and are never final learner-facing names. Only the Pengurus Projek name remains open at the wider PL06 canon level.",
+   "blocks_review_build": false,
+   "evidence": "Confirmed cast supplied with this stage; supersedes the earlier PENDING_CHARACTER_NAME classification for B02."
+  },
+  "U-03": {
+   "topic": "Tamat / LMS exit",
+   "status": "PENDING_FIRDAUS_CONFIRMATION",
+   "execution_policy": "logical_destination = next Bahagian in Topik 3 (production metadata only, never displayed on the learner canvas); physical_exit_behaviour = learner closes the lesson/window; shell_next_state = disabled on Tamat.",
+   "blocks_review_build": false,
+   "evidence": "Slide 75 inline directive, explicitly addressed to Firdaus."
+  },
+  "U-04": {
+   "topic": "BBQ Pit specification categories",
+   "status": "TECHNICAL_DECOMPOSITION_FROM_SOURCE",
+   "execution_policy": "Four source-attested categories: Bahan Pembinaan, Dimensi, Gril, Keselamatan. Derived from the labelled specification lines of the single BBQ Pit source row. The BBQ Pit source-row count remains one; no new source_row_uid is created.",
+   "blocks_review_build": false,
+   "evidence": "Module row K5-PL06-T03-B02-BBQ-PIT-ROW-01, ms 249: the fungsi cell carries exactly the labelled lines \"Bahan pembinaan\", \"Dimensi\", \"Gril\", \"Keselamatan\"."
+  },
+  "U-05": {
+   "topic": "Quiz rationale placement",
+   "status": "PENDING_BARIAH_RATIONALE_PLACEMENT_CONFIRMATION",
+   "execution_policy": "Immediate feedback is exactly two variants — \"Pilihan jawapan tepat.\" and \"Pilihan jawapan tidak tepat.\" — each with SFX, VO and on-screen text. Detailed per-question rationale is retained in production metadata, the source mapping and QA evidence, and is NOT exposed to the learner until Bariah confirms its final placement.",
+   "blocks_review_build": false,
+   "evidence": "S&G v0.3 authorises concise immediate feedback; the corrected exemplar removes the long rationale from Notes."
+  },
+  "U-06": {
+   "topic": "Module DOCX integrity",
+   "status": "B02-CAIR-INT-001 — OPEN",
+   "execution_policy": "The unresolved module DOCX SHA-256 is covered only by B02-CAIR-INT-001. It does not block this review-build model stage. It remains a blocker for canonical freeze, production approval and MMD build authority. SOURCE_INTEGRITY_FULLY_VERIFIED is NOT claimed.",
+   "blocks_review_build": false,
+   "evidence": "Carried forward from DECISION_REGISTER_B02_v0_3.json."
+  }
+ },
+ "totals": {
+  "LEARNER_SCREENS": 29,
+  "RUNTIME_STATES": 100,
+  "INTERACTION_ITEMS": 54,
+  "INTERACTION_ITEMS_FAMILY_S": 16,
+  "INTERACTION_ITEMS_FAMILY_P1": 30,
+  "INTERACTION_ITEMS_FAMILY_P2": 8,
+  "INTERACTION_ITEMS_BY_KIND": {
+   "EXAMPLE_POPUP": 16,
+   "SPECIFICATION_POPUP": 22,
+   "EXAMPLE_SELECTION": 8,
+   "SPECIFICATION_CATEGORY_POPUP": 8
+  },
+  "SOURCE_ROW_COUNT": 26,
+  "SOURCE_ASSET_COUNT": 14,
+  "SOURCE_ROWS_BOUND": 26,
+  "SOURCE_ASSETS_BOUND": 14,
+  "SOURCE_ROWS_CHANGED": 0,
+  "EXECUTION_FAMILIES": 3,
+  "FAMILY_S_COMPONENTS": 4,
+  "FAMILY_P1_COMPONENTS": 3,
+  "FAMILY_P2_COMPONENTS": 2,
+  "UNKNOWN_COMPONENT_FAMILY": 0,
+  "INTERACTION_SELECTION_DEPTH_MAX": 2,
+  "FAMILY_P1_SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER": 3,
+  "PAPAN_TANDA_SPEC_CATEGORIES": 4,
+  "BBQ_PIT_SPEC_CATEGORIES": 4,
+  "QUIZ_IMMEDIATE_FEEDBACK_VARIANTS": 2,
+  "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
+  "GENERATOR_FILES_CHANGED": 0,
+  "POWERPOINT_FILES_GENERATED": 0,
+  "COMPONENTS_PROPAGATED": 0
+ }
+}

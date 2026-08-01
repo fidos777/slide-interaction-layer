@@ -21,7 +21,11 @@
     "CONFIRMED_CAIR_ADOPTION": "Adopted from S&G v0.3 or inferred from a Bariah scoping qualifier; not attributable to a Bariah comment in her own words.",
     "PENDING_SOURCE_VERIFICATION": "Ruling is clear but rests on a factual claim not yet traced to the module source.",
     "PENDING_FIRDAUS_CONFIRMATION": "Bariah explicitly routed the decision to Firdaus.",
-    "PENDING_CHARACTER_NAME": "Policy confirmed; the concrete names were not supplied and must not be invented."
+    "PENDING_CHARACTER_NAME": "Policy confirmed; the concrete names were not supplied and must not be invented.",
+    "CONFIRMED_CANON": "A canon character confirmed for the PL06 / K5 cast.",
+    "CONFIRMED_NARRATOR": "The confirmed course narrator, distinct from the scenario cast.",
+    "PENDING_BARIAH_CONFIRMATION": "Execution policy is set for the review build; Bariah must confirm the final form.",
+    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": "Interaction items derived from the module source’s own labelled substructure; no stakeholder ruling required and no source row created."
   },
   "evidence_artifacts": [
     {
@@ -107,9 +111,8 @@
       ],
       "supersedes_or_resolves": [
         "B02-A-05 (single-row source tables) — RESOLVED: split into interaction categories, source rows unchanged",
-        "B02-R-3 — MAX_LEARNER_NAVIGATION_DEPTH amended from 2 to 3 for Family P1"
+        "B02-R-3 — depth semantics restated: INTERACTION_SELECTION_DEPTH_MAX stays 2; SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER is 3 for Family P1. See B02_V0_4_MODEL_CONTRACT.json."
       ],
-      "open_dependency": "U-04 — BBQ Pit specification-category labels are not enumerated in the feedback and must be derived from source-attested substructure",
       "generator_change_required": "model + generator: two new Perabot families",
       "family_assignment": {
         "FAMILY_S": [
@@ -128,7 +131,14 @@
           "BBQ Pit"
         ]
       },
-      "source_rows_unchanged": true
+      "source_rows_unchanged": true,
+      "bbq_pit_categories": [
+        "Bahan Pembinaan",
+        "Dimensi",
+        "Gril",
+        "Keselamatan"
+      ],
+      "bbq_pit_category_status": "TECHNICAL_DECOMPOSITION_FROM_SOURCE — see B02-D-24"
     },
     {
       "decision_id": "B02-D-04",
@@ -223,18 +233,32 @@
     },
     {
       "decision_id": "B02-D-10",
-      "title": "Course-wide PL06 character naming policy confirmed; names not supplied",
-      "status": "PENDING_CHARACTER_NAME",
-      "authority": "Bariah (policy) / instructional design (names)",
-      "ruling": "Named characters are to be used across the whole of PL06, reusing the same names wherever appropriate rather than inventing per-bahagian casts. The concrete names were NOT supplied. Until they are, the storyboard carries the placeholder token [Nama] and the role labels [Pelatih] / [Penyelia Tapak]. No name may be invented.",
+      "title": "B02 cast confirmed; PL06 cast-reuse policy confirmed",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "Named characters are used across the whole of PL06, reusing the same names wherever appropriate. The B02 cast is CONFIRMED: Alya (Kontraktor Junior) as the learner proxy, Encik Rahman (Mentor / Kontraktor Senior Berpengalaman Landskap) as the senior guide, and Hilmi as course narrator. Hilmi is not part of the Alya–Encik Rahman scenario cast. The generic role labels Pelatih and Penyelia Tapak are production metadata only and are NEVER final learner-facing character names. Only the Pengurus Projek name remains open, at the wider canon level.",
       "evidence": "Guide item 6 answer cell verbatim: 'Gunakan nama watak untuk keseluruhan PL06. Gunakan nama watak yang sama bergantung kepada kesesuaian.' No A/B/C option box was ticked; the written answer is the decision. The corrected exemplar at slide 4 uses 'Encik [Nama]' — a placeholder, not a name.",
       "evidence_source": "A1 — K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx + A2 — Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx",
       "feedback_ids": [
         "BFB-04",
         "BFB-27"
       ],
-      "open_dependency": "U-02 — actual PL06 character names",
-      "generator_change_required": "none until names are supplied; emit [Nama] meanwhile"
+      "generator_change_required": "frame builder emits the confirmed names on S02; the [Nama] placeholder is retired",
+      "supersedes_or_resolves": [
+        "SUPERSEDES the v0.4 Stage-1 classification \"B02 character names pending / role-neutral placeholders required for final B02 build\" — that classification was incorrect."
+      ],
+      "flags": {
+        "B02_CHARACTER_NAMES_CONFIRMED": true,
+        "B02_CAST_PAIR": "ALYA + ENCIK_RAHMAN",
+        "B02_NARRATOR": "HILMI",
+        "PL06_CAST_REUSE_POLICY_CONFIRMED": true,
+        "PUAN_NADIA_CANON_CONFIRMED": true,
+        "PROJECT_MANAGER_NAME_PENDING": true
+      },
+      "forbidden": [
+        "using Pelatih or Penyelia Tapak as final learner-facing character names",
+        "inventing a name for the Pengurus Projek"
+      ]
     },
     {
       "decision_id": "B02-D-11",
@@ -277,7 +301,8 @@
         "BFB-24"
       ],
       "open_dependency": "U-05 — where the detailed rationale lives once immediate feedback is concise (presumed Semak Jawapan, not confirmed)",
-      "generator_change_required": "quiz builder"
+      "generator_change_required": "quiz builder",
+      "execution_policy": "Immediate feedback has exactly two variants, each with SFX, VO and on-screen text: correct = \"Pilihan jawapan tepat.\", incorrect = \"Pilihan jawapan tidak tepat.\" Multiple Response options carry no A/B/C labels. Detailed rationale placement is governed by B02-D-23."
     },
     {
       "decision_id": "B02-D-14",
@@ -308,7 +333,13 @@
       ],
       "open_dependency": "U-03 — when completion is reported, where the LMS returns the learner, and whether the next Bahagian launches manually or automatically",
       "generator_change_required": "shell-control state on TAMAT — held pending confirmation",
-      "note": "B02-D-14 (logical routing) is confirmed and independent of this entry. Only the physical exit mechanism is pending."
+      "note": "B02-D-14 (logical routing) is confirmed and independent of this entry. Only the physical exit mechanism is pending.",
+      "execution_policy": {
+        "logical_destination": "next Bahagian in Topik 3 — production metadata only, NOT displayed on the learner canvas",
+        "physical_exit_behaviour": "learner closes the lesson / window",
+        "shell_next_state": "disabled on Tamat",
+        "status": "PENDING_FIRDAUS_CONFIRMATION"
+      }
     },
     {
       "decision_id": "B02-D-16",
@@ -340,7 +371,99 @@
         "BFB-03"
       ],
       "open_dependency": "U-01 — source attestation for the MS2680 applicability statement",
-      "generator_change_required": "frame builder — hold or flag the sentence"
+      "generator_change_required": "frame builder — hold or flag the sentence",
+      "execution_policy": "v0.4 review build: the MS2680 claim is EXCLUDED from learner-facing dialogue on S02 and retained in production metadata as PENDING_SOURCE_VERIFICATION. No substitute standards claim is invented. The remaining dialogue preserves logical continuity without adding new facts. This does not block the review build."
+    },
+    {
+      "decision_id": "B02-D-18",
+      "title": "Alya — canon character",
+      "status": "CONFIRMED_CANON",
+      "authority": "Bariah / PL06 canon",
+      "ruling": "Alya. Canonical role: Kontraktor Junior. Instructional function: learner proxy / junior contractor / Pelatih. B02 scene function: the learner character who confirms her understanding of the work scope.",
+      "evidence": "Supplied as confirmed B02 cast at Stage 2.",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "used_on": [
+        "SCR_S02"
+      ],
+      "production_metadata_label": "Alya — Kontraktor Junior"
+    },
+    {
+      "decision_id": "B02-D-19",
+      "title": "Encik Rahman — canon character",
+      "status": "CONFIRMED_CANON",
+      "authority": "Bariah / PL06 canon",
+      "ruling": "Encik Rahman. Canonical role: Mentor / Kontraktor Senior Berpengalaman Landskap. Instructional function: senior guide. B02 scene function: Penyelia Tapak / mentor who validates and extends Alya’s understanding.",
+      "evidence": "Supplied as confirmed B02 cast at Stage 2.",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "used_on": [
+        "SCR_S02"
+      ],
+      "production_metadata_label": "Encik Rahman — Mentor / Kontraktor Senior Berpengalaman Landskap"
+    },
+    {
+      "decision_id": "B02-D-20",
+      "title": "Hilmi — course narrator",
+      "status": "CONFIRMED_NARRATOR",
+      "authority": "Bariah / PL06 canon",
+      "ruling": "Hilmi is the course narrator and is NOT part of the Alya–Encik Rahman scenario cast. The \"Hilmi:\" speaker prefix appears on S03 only.",
+      "evidence": "Confirmed at Stage 2; corroborated by exemplar slide 6, which carries the Hilmi narrator card.",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "used_on": [
+        "SCR_S03"
+      ]
+    },
+    {
+      "decision_id": "B02-D-21",
+      "title": "Puan Nadia — canon character, not required in B02",
+      "status": "CONFIRMED_CANON",
+      "authority": "Bariah / PL06 canon",
+      "ruling": "Puan Nadia. Canonical role: Pegawai Kewangan / Pengurus Kontrak. Approved K5 / PL06 canon character. NOT_REQUIRED_IN_B02: she is used only where a screen has a genuine financial or contractual instructional function. No B02 screen has one, so she appears nowhere in this Bahagian.",
+      "evidence": "Confirmed at Stage 2.",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "used_on": [],
+      "b02_status": "NOT_REQUIRED_IN_B02"
+    },
+    {
+      "decision_id": "B02-D-22",
+      "title": "Pengurus Projek — name open",
+      "status": "PENDING_CHARACTER_NAME",
+      "authority": "Bariah / instructional design",
+      "ruling": "The canonical role Pengurus Projek exists, but the character name remains open at the wider canon level. No name may be invented. The role is not used in B02.",
+      "evidence": "Confirmed at Stage 2 as the single remaining open cast item.",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "open_dependency": "U-02b — Pengurus Projek character name",
+      "used_on": []
+    },
+    {
+      "decision_id": "B02-D-23",
+      "title": "Quiz rationale placement",
+      "status": "PENDING_BARIAH_CONFIRMATION",
+      "authority": "Bariah",
+      "ruling": "For the v0.4 review build, immediate feedback is exactly two variants — \"Pilihan jawapan tepat.\" and \"Pilihan jawapan tidak tepat.\" — each carrying SFX, VO and on-screen text. Detailed per-question rationale is retained in production metadata, the source mapping and QA evidence, and is NOT exposed to the learner until Bariah confirms its final placement.",
+      "evidence": "S&G v0.3 authorises concise immediate feedback; the corrected exemplar at slide 73 removes the long rationale.",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "open_dependency": "U-05 — final placement of the detailed rationale",
+      "flags": {
+        "PENDING_BARIAH_RATIONALE_PLACEMENT_CONFIRMATION": true
+      }
+    },
+    {
+      "decision_id": "B02-D-24",
+      "title": "BBQ Pit specification-category decomposition",
+      "status": "TECHNICAL_DECOMPOSITION_FROM_SOURCE",
+      "authority": "source evidence",
+      "ruling": "BBQ Pit uses four source-attested interaction categories: Bahan Pembinaan, Dimensi, Gril, Keselamatan. They are the labelled specification lines of the module’s own fungsi cell for the single BBQ Pit row. The BBQ Pit source-row count remains ONE; no new source_row_uid is created.",
+      "evidence": "Module row K5-PL06-T03-B02-BBQ-PIT-ROW-01, modul ms 249 — the fungsi cell carries exactly the labelled lines \"Bahan pembinaan\", \"Dimensi\", \"Gril\", \"Keselamatan\".",
+      "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
+      "feedback_ids": [],
+      "resolves": "U-04",
+      "source_rows_created": 0
     }
   ],
   "v0_3_entries_carried_forward": [
@@ -415,45 +538,65 @@
       "id": "U-01",
       "question": "Is the MS2680 applicability claim attested by the module source?",
       "owner": "source QA / Firdaus",
-      "blocks": "one VO sentence on S02",
+      "status": "PENDING_SOURCE_VERIFICATION",
+      "blocks": "one VO sentence on S02, currently omitted from learner content",
+      "execution_policy": "omitted from learner-facing dialogue; retained in production metadata",
       "decisions": [
         "B02-D-17"
       ]
     },
     {
-      "id": "U-02",
-      "question": "What are the PL06 character names?",
+      "id": "U-02b",
+      "question": "What is the Pengurus Projek character name?",
       "owner": "Bariah / instructional design",
-      "blocks": "the [Nama] placeholder on S02",
+      "status": "PENDING_CHARACTER_NAME",
+      "blocks": "nothing in B02 — the role is not used here",
       "decisions": [
-        "B02-D-10"
-      ]
+        "B02-D-22"
+      ],
+      "note": "U-02 as originally raised (all B02 character names) is RESOLVED by B02-D-10, B02-D-18, B02-D-19 and B02-D-20."
     },
     {
       "id": "U-03",
       "question": "LMS exit: when is completion reported, where does the LMS return, does the next Bahagian launch manually or automatically?",
       "owner": "Firdaus",
-      "blocks": "shell-control state on TAMAT",
+      "status": "PENDING_FIRDAUS_CONFIRMATION",
+      "blocks": "the shell-control state on TAMAT",
+      "execution_policy": "shell Next disabled on Tamat; learner closes the window; logical destination stays in metadata",
       "decisions": [
         "B02-D-15"
       ]
     },
     {
       "id": "U-04",
-      "question": "BBQ Pit specification-category labels — derivable from source, or interpretive?",
-      "owner": "source QA, then Bariah if interpretive",
-      "blocks": "Family P2 category list for BBQ Pit",
+      "question": "BBQ Pit specification-category labels",
+      "owner": "—",
+      "status": "RESOLVED",
+      "blocks": "nothing",
+      "resolution": "TECHNICAL_DECOMPOSITION_FROM_SOURCE — four labelled specification lines of the module row",
       "decisions": [
-        "B02-D-03"
+        "B02-D-24"
       ]
     },
     {
       "id": "U-05",
       "question": "Where does the detailed answer rationale live once immediate feedback is concise?",
       "owner": "Bariah",
-      "blocks": "quiz result-state content",
+      "status": "PENDING_BARIAH_CONFIRMATION",
+      "blocks": "quiz review-state content",
+      "execution_policy": "rationale stays in production metadata, source mapping and QA evidence; not learner-facing",
       "decisions": [
-        "B02-D-13"
+        "B02-D-23"
+      ]
+    },
+    {
+      "id": "U-06",
+      "question": "Module DOCX SHA-256",
+      "owner": "Firdaus / CAIR",
+      "status": "B02-CAIR-INT-001 — OPEN",
+      "blocks": "canonical freeze, production approval, MMD build authority — NOT this review-build model stage",
+      "decisions": [
+        "B02-CAIR-INT-001"
       ]
     }
   ],
@@ -470,8 +613,8 @@
     "statement": "No source-row ID, row order, locator or image-ownership finding was altered. No interaction decomposition was converted into a source row. Papan Tanda still holds exactly one source row while yielding four interaction categories; BBQ Pit still holds exactly one."
   },
   "totals": {
-    "DECISIONS": 17,
-    "CONFIRMED_BARIAH": 12,
+    "DECISIONS": 24,
+    "CONFIRMED_BARIAH": 13,
     "CONFIRMED_CAIR_ADOPTION": 2,
     "PENDING_SOURCE_VERIFICATION": 1,
     "PENDING_FIRDAUS_CONFIRMATION": 1,
@@ -480,6 +623,25 @@
     "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
     "GENERATOR_FILES_CHANGED": 0,
     "POWERPOINT_FILES_GENERATED": 0,
-    "COMPONENTS_PROPAGATED": 0
+    "COMPONENTS_PROPAGATED": 0,
+    "CONFIRMED_CANON": 3,
+    "CONFIRMED_NARRATOR": 1,
+    "PENDING_BARIAH_CONFIRMATION": 1,
+    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": 1
+  },
+  "amended": {
+    "date": "2026-08-01",
+    "head_at_amendment": "0a5fa1dd3c9f9b043d538d7271b200e8e23cd239",
+    "reason": "Stage 2 — B02 cast confirmed and the five open-item execution policies recorded. The earlier classification that all B02 character names remained open is superseded."
+  },
+  "cast": {
+    "B02_CHARACTER_NAMES_CONFIRMED": true,
+    "B02_CAST_PAIR": "ALYA + ENCIK_RAHMAN",
+    "B02_NARRATOR": "HILMI",
+    "PL06_CAST_REUSE_POLICY_CONFIRMED": true,
+    "PUAN_NADIA_CANON_CONFIRMED": true,
+    "PROJECT_MANAGER_NAME_PENDING": true,
+    "GENERIC_ROLE_LABELS_USED_AS_FINAL_NAMES": 0,
+    "PROJECT_MANAGER_NAME_INVENTED": false
   }
 }

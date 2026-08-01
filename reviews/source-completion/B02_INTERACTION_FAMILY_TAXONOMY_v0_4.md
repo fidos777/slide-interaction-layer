@@ -353,16 +353,27 @@ technical family is allowed to contradict one.
 all three families — what changes is which screen owns it and where the close icon returns. That is
 why the Perabot restructure adds a navigation level without adding a navigation *depth* problem:
 
-| Family | Popup parent | Close icon returns to | Max learner navigation depth |
-|---|---|---|:-:|
-| S | `Contoh [Nama Komponen]` example screen | that example screen | 2 |
-| P1 | full-slide example detail | that example detail | **3** |
-| P2 | specification list on the component explanation | that specification list | 2 |
+| Family | Popup parent | Close icon returns to | `INTERACTION_SELECTION_DEPTH_MAX` | `SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER` |
+|---|---|---|:-:|:-:|
+| S | `Contoh [Nama Komponen]` example screen | that example screen | 1 | 3 |
+| P1 | full-slide example detail | that example detail | **2** | **3** |
+| P2 | specification list on the component explanation | that specification list | 1 | 2 |
 
-`MAX_LEARNER_NAVIGATION_DEPTH` rises from **2 to 3** for Family P1 only. That invariant was declared
-in `B02_FEEDBACK_DELTA_PROTOCOL_v0_4.md` §4.3 and is **amended by Bariah's ruling**, not violated by
-it — the guide names the two levels explicitly (*"klik contoh - level 1"*, *"klik spesifikasi - level
-2"*), on top of the component entry itself.
+> **Amended at Stage 2 — the single field `MAX_LEARNER_NAVIGATION_DEPTH` is retired.** It conflated
+> two different things. The model records two separate metrics instead:
+>
+> - **`INTERACTION_SELECTION_DEPTH_MAX`** — how many learner *selection* levels sit inside a component
+>   interaction. For Family P1 this is **2**, and only 2: Bariah names exactly two (*"klik contoh -
+>   level 1"*, *"klik spesifikasi - level 2"*). **The component overview is an entry screen, not a
+>   selection level.**
+> - **`SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER`** — how many screen layers are traversed from the
+>   group master to the deepest content state. For Family P1 this is **3**: group master → component
+>   overview/list → example full slide → specification popup state.
+>
+> So the correct statement is **not** "navigation depth changed from 2 to 3". It is: *selection depth
+> remains two; the screen path from the group master contains three content layers for Family P1.*
+> The `B02_FEEDBACK_DELTA_PROTOCOL_v0_4.md` §4.3 invariant is restated in these terms, not merely
+> incremented. Full definitions: `B02_V0_4_MODEL_CONTRACT.json` → `depth_semantics`.
 
 ## 6.4 Where the two views could have contradicted each other, and how it was resolved
 
@@ -453,7 +464,7 @@ nothing here can be read as Bariah having approved a pattern namespace change.
 | **G-5** | Two-tier `component_complete → group_complete` is a new completion **topology** | §3 | **extended** — Family P1 adds a third tier (`specification_viewed → example_complete → component_complete`) | CAIR |
 | **G-6** | `P6` quiz is non-blocking, against the governed default | §2 F5 | unchanged; corroborated by S&G v0.3 | CAIR |
 | **G-7** | Completion gating moves from a learner-canvas control to the LMS shell control | BFB-06/07 | **new** — the gate semantics survive, but the gated control is no longer authored in the deck | CAIR + LMS integration |
-| **G-8** | `MAX_LEARNER_NAVIGATION_DEPTH` rises from 2 to 3 for Family P1 | §6.3 | **new** — amends the invariant declared in the delta protocol §4.3 | CAIR |
+| **G-8** | **Depth is two metrics, not one.** `INTERACTION_SELECTION_DEPTH_MAX` remains **2**; the screen path from the group master contains **3** content layers for Family P1 | §6.3 | **amended at Stage 2** — the ambiguous single `MAX_LEARNER_NAVIGATION_DEPTH` field is retired, not incremented. A popup stays a runtime state and may never open another popup | CAIR |
 
 **None of G-1 … G-8 blocks the v0.4 documentation delta.** G-1, G-2 and G-8 block the MMD handoff.
 G-7 additionally depends on U-03, which is Firdaus's to answer.
