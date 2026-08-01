@@ -522,8 +522,8 @@
       "title": "Montage artifact byte freeze",
       "status": "PENDING_ARTIFACT_DELIVERY",
       "authority": "Firdaus / execution environment",
-      "ruling": "SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx are named, classified and modelled as UPSTREAM_NARRATIVE_CONTEXT, but their bytes did not reach this execution environment, so no SHA-256, byte size or frozen copy exists. No hash is recorded: an assumed or fabricated digest would be worse than none. This blocks only the byte freeze — every ruling that depends on the montages’ CONTENT is already recorded under B02-D-25, because that content was supplied in the task text itself.",
-      "evidence": "Session upload directory holds no file matching SB_K5*montaj*; the newest attachment batch predates this stage.",
+      "ruling": "SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx are named, classified and modelled as UPSTREAM_NARRATIVE_CONTEXT, but their bytes did not reach this execution environment, so no SHA-256, byte size or frozen copy exists. No hash is recorded: an assumed or fabricated digest would be worse than none. This blocks only the byte freeze — every ruling that depends on the montages’ CONTENT is already recorded under B02-D-25, because that content was supplied in the task text itself. Stage 2.1A supplied the expected byte sizes and SHA-256 values in the task text, but not the files. Those values are recorded as expected_* cross-check targets only and are NOT verified digests. A size-adjacent PPTX in the same directory (BARIAH_REVIEW_8SLIDES.pptx, 68,710 B) was found and deliberately not adopted — it matches neither declared size and belongs to an earlier workstream.",
+      "evidence": "Two delivery attempts. Session upload directory holds no file matching SB_K5*montaj* or *montaj*; newest batch predates Stage 2.1. Bounded 55–80 KB .pptx sweep returned one non-matching candidate.",
       "evidence_source": "Stage 2.1 upstream-context supply + Bariah WhatsApp clarification",
       "feedback_ids": [],
       "open_dependency": "U-07",
@@ -535,7 +535,20 @@
         "the S01/S02/S03 model amendment",
         "the notes-policy split",
         "Hilmi continuity"
-      ]
+      ],
+      "delivery_attempts": 2,
+      "expected_identities": {
+        "SB_K5_montaj_v1.pptx": {
+          "bytes": 61292,
+          "sha256": "79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076",
+          "verified": false
+        },
+        "SB_K5PL6_montaj_v1.pptx": {
+          "bytes": 70656,
+          "sha256": "97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390",
+          "verified": false
+        }
+      }
     }
   ],
   "v0_3_entries_carried_forward": [
@@ -681,7 +694,9 @@
       "decisions": [
         "B02-D-25",
         "B02-D-27"
-      ]
+      ],
+      "delivery_attempts": 2,
+      "note": "Expected identities are now declared (M1 61,292 B / M2 70,656 B with SHA-256), so the next attempt VERIFIES rather than merely records. The model ruling B02-D-25 was already closed from task-supplied content and is unaffected; provenance closure changes no model semantics."
     }
   ],
   "source_baseline_preserved": {

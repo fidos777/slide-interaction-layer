@@ -116,15 +116,41 @@ never screens inside the B02 storyboard**, and are never counted in `LEARNER_SCR
 
 Intended frozen path for both: `reviews/storyboard-bariah/v0_3_bariah_review/`.
 
+### 2B.0 Declared identities — supplied, **not verified**
+
+A second delivery attempt (Stage 2.1A) supplied the expected identities in the task text. They are
+recorded here as a **cross-check target for whoever completes the freeze**, and they are explicitly
+*not* verified digests — no bytes have been hashed, because no bytes arrived.
+
+| Ref | Declared bytes | Declared SHA-256 | Verified? |
+|---|---:|---|:-:|
+| **M1** `SB_K5_montaj_v1.pptx` | 61,292 | `79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076` | ❌ **not computed** |
+| **M2** `SB_K5PL6_montaj_v1.pptx` | 70,656 | `97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390` | ❌ **not computed** |
+
+> **These values carry no provenance weight.** They are a stated expectation, not evidence. The freeze
+> is complete only when the received bytes are hashed independently and the computed digest is
+> compared against the row above. The model fields `byte_size` and `sha256` in
+> `B02_V0_4_MODEL_CONTRACT.json` remain `null`; the declared values live in separate
+> `expected_byte_size` / `expected_sha256` fields so that no validator can mistake one for the other.
+
 ### 2B.1 Why no hash is recorded
 
-The two files **did not reach this execution environment.** The session upload directory holds no file
-matching `SB_K5*montaj*`, and its newest batch predates this stage. This is the same
-artifact-handoff class of failure documented at §5 — a delivery-channel gap, not an absent artifact.
+The two files **have not reached this execution environment across two delivery attempts.** The
+session upload directory holds no file matching `SB_K5*montaj*` or `*montaj*`, and its newest batch
+still predates Stage 2.1. This is the same artifact-handoff class of failure documented at §5 — a
+delivery-channel gap, not an absent artifact.
 
-**No SHA-256, byte size or frozen copy is recorded, and none is estimated.** A fabricated or assumed
-digest would be worse than none: it would look like provenance while carrying none. The rows above are
-left explicitly empty so that re-running the freeze fills a hole rather than overwriting a fiction.
+**No SHA-256 or byte size is computed, and no frozen copy exists.** A fabricated or assumed digest
+would be worse than none: it would look like provenance while carrying none. The verified columns are
+left explicitly empty so that completing the freeze fills a hole rather than overwriting a fiction.
+
+### 2B.1a A near-miss that was deliberately rejected
+
+A bounded search for `.pptx` files in the 55–80 KB band returned exactly one candidate:
+`BARIAH_REVIEW_8SLIDES.pptx` at **68,710 bytes**. It is neither 61,292 nor 70,656, it is a different
+artifact from an earlier workstream, and it was **not** adopted. Recording this matters: a
+size-adjacent file in the same directory is precisely the substitution that would silently corrupt
+the evidence chain.
 
 ### 2B.2 What is *not* blocked by this
 

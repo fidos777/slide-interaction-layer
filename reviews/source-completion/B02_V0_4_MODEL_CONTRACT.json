@@ -576,7 +576,10 @@
     "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5_montaj_v1.pptx",
     "byte_size": null,
     "sha256": null,
-    "freeze_status": "PENDING_ARTIFACT_DELIVERY — the file did not reach this execution environment; no hash is recorded because a fabricated or assumed hash would be worse than none"
+    "freeze_status": "PENDING_ARTIFACT_DELIVERY — not delivered across two attempts (Stage 2.1, Stage 2.1A). Expected identity declared but unverified; no bytes received, so nothing was hashed.",
+    "expected_byte_size": 61292,
+    "expected_sha256": "79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076",
+    "expected_values_source": "Declared in the Stage 2.1A task text as a cross-check aid. NOT an independently computed digest and NOT provenance. byte_size and sha256 remain null until the received bytes are hashed here."
    },
    {
     "ref": "M2",
@@ -595,7 +598,10 @@
     "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5PL6_montaj_v1.pptx",
     "byte_size": null,
     "sha256": null,
-    "freeze_status": "PENDING_ARTIFACT_DELIVERY — same as M1"
+    "freeze_status": "PENDING_ARTIFACT_DELIVERY — not delivered across two attempts (Stage 2.1, Stage 2.1A). Expected identity declared but unverified; no bytes received, so nothing was hashed.",
+    "expected_byte_size": 70656,
+    "expected_sha256": "97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390",
+    "expected_values_source": "Declared in the Stage 2.1A task text as a cross-check aid. NOT an independently computed digest and NOT provenance. byte_size and sha256 remain null until the received bytes are hashed here."
    }
   ],
   "flags": {
@@ -614,7 +620,18 @@
    "Hilmi’s self-introduction",
    "the explanation of the overall course structure"
   ],
-  "consequence": "Because the two montages already carry the course and PL06 introductions, B02 opens at section level. S01 is a topic/section entry, not a course opening; S03 continues a narrator the learner has already met."
+  "consequence": "Because the two montages already carry the course and PL06 introductions, B02 opens at section level. S01 is a topic/section entry, not a course opening; S03 continues a narrator the learner has already met.",
+  "delivery_attempts": [
+   {
+    "stage": "2.1",
+    "result": "NOT_DELIVERED"
+   },
+   {
+    "stage": "2.1A",
+    "result": "NOT_DELIVERED",
+    "note": "Expected sizes and SHA-256 supplied in the task text; recorded as expected_* fields only. A size-adjacent PPTX (BARIAH_REVIEW_8SLIDES.pptx, 68,710 B) was found and deliberately NOT adopted."
+   }
+  ]
  },
  "s01_entry_title_vo_ruling": {
   "ruling_id": "S01_ENTRY_TITLE_VO",
