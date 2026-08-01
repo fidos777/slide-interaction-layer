@@ -19,6 +19,10 @@ sys.path.insert(0, GEN); sys.path.insert(0, HERE)
 import b02_generator_v0_3 as V3          # primitives only
 import b02_model_adapter_v0_4 as ADAPT
 import b02_proof_content_v0_4 as C
+import b02_glossary_v0_4 as GL
+import b02_visual_directions_v0_4 as VD
+import b02_instructions_v0_4 as INS
+import b02_visual_policy_v0_4 as VP
 
 from b02_generator_v0_3 import (
     E, X, STAGE_W, STAGE_H, BAND_X, BAND_W, NAV_CLR, KW, KH, NAV_H,
@@ -32,21 +36,8 @@ OUTNAME = "K5PL06T03B02_v0_4_THREE_FAMILY_PROOF.pptx"
 
 # ============================ rich text ============================
 def ital_parts(s):
-    """Split a string into (text, italic) runs for the approved English-origin terms.
-    Production IDs are never italicised even when they look English."""
-    if not s:
-        return [("", False)]
-    terms = sorted(C.ITALIC_TERMS, key=len, reverse=True)
-    pat = re.compile("(" + "|".join(re.escape(t) for t in terms) + ")")
-    out = []
-    for tok in pat.split(s):
-        if not tok:
-            continue
-        is_term = tok in C.ITALIC_TERMS
-        if is_term and any(tok.startswith(p) for p in C.NEVER_ITALIC_PREFIXES):
-            is_term = False
-        out.append((tok, is_term))
-    return out or [(s, False)]
+    """Delegates to the ONE controlled glossary shared with the Speaker Notes writer."""
+    return GL.parts(s)
 
 
 def rt(lines):
@@ -189,57 +180,81 @@ def _visual(add, i, y, lines, w=BAND_W, x=BAND_X, sz=1100):
     add(txt(i, "VisualDir", x, y, w, 0.28 * len(lines) + 0.12, lines, sz=sz, clr=GREY))
 
 
-def _modal(add, M, st, title, blocks, note_lines=None):
-    """Popup overlay. Close control is an icon; children are measured to fit inside.
+def _modal(add, M, st, title, blocks, visual=None):
+    """Popup overlay in Bariah's reviewed grammar (annotated deck, slide 14).
 
-    A long title is split into a small kicker (the owning row) plus the item name, and
-    the head band is measured rather than assumed — a two-line title must not spill.
+    Left  — item title, Fungsi dan Penerangan, Contoh when source-attested.
+    Right — a dedicated visual-direction panel with its own heading, the SPECIFIC
+            direction, and blank production area beneath it.
+    Close — icon, top-right, clear of both.
     """
     PX, PW = 1.35, 10.6333
     PY_MIN, PY_BOT = 1.42, 6.88
     AVAIL = PY_BOT - PY_MIN
-    TW = PW - 1.30                       # title width, leaving room for the close icon
+    spec_only = bool(visual) and visual.get("visual_requirement") != VP.REQUIRED
+    LW = 10.07 if spec_only else 6.05      # left content column
+    VX, VW = PX + 6.62, 3.72               # right visual panel
+    TW = LW - 1.30 if spec_only else LW   # always clear of the close icon
     kicker, main = (title.split(" — ", 1) if " — " in title else ("", title))
     tsz, tlead = 2000, 0.34
-    tl = V3._wrap_lines(main, 62)
+    tl = V3._wrap_lines(main, 54 if spec_only else 40)
     if len(tl) > 1:
         tsz, tlead = 1600, 0.28
-        tl = V3._wrap_lines(main, 78)
+        tl = V3._wrap_lines(main, 68 if spec_only else 52)
     head_h = (0.24 if kicker else 0.0) + len(tl) * tlead + 0.14
-    for bsz, cpl, lead in ((1250, 96, 0.235), (1150, 105, 0.216), (1050, 115, 0.198)):
+
+    WRAPS = ((1250, 92, 0.235), (1150, 100, 0.216), (1050, 110, 0.198)) if spec_only else \
+            ((1250, 55, 0.235), (1150, 60, 0.216), (1050, 66, 0.198))
+    for bsz, cpl, lead in WRAPS:
         h = 0.0; meas = []
-        for head, lines in blocks:
+        for hd, lines in blocks:
             wr = []
             for l in lines:
                 wr += V3._wrap_lines(l, cpl) or [""]
             bh = 0.26 + 0.02 + len(wr) * lead + 0.16
-            meas.append((head, wr, bh, lead)); h += bh
-        ph = max(2.1, 0.16 + head_h + 0.16 + h + 0.24)
+            meas.append((hd, wr, bh, lead)); h += bh
+        ph = max(3.05, 0.16 + head_h + 0.16 + h + 0.24)
         if ph <= AVAIL:
             break
     ph = min(ph, AVAIL)
-    PY = PY_MIN if ph > AVAIL - 0.5 else 1.90
+    PY = PY_MIN if ph > AVAIL - 0.5 else 1.62
     add(box(200, "PopupPanel", PX, PY, PW, ph, "", fill="FFFFFF", ln=BLUE, dash=False, lnw=28575))
     ty = PY + 0.16
     if kicker:
         add(txt(202, "PopupKicker", PX + 0.28, ty, TW, 0.22, rt([kicker]), sz=1100, b=True, clr=GOLD))
         ty += 0.24
-    add(txt(201, "PopupTitle", PX + 0.28, ty, TW, len(tl) * tlead + 0.06,
-            rt(tl), sz=tsz, b=True))
+    add(txt(201, "PopupTitle", PX + 0.28, ty, TW, len(tl) * tlead + 0.06, rt(tl), sz=tsz, b=True))
     add(close_icon(260, PX + PW - 0.70, PY + 0.18, 0.42))
+
     y = PY + 0.16 + head_h + 0.16
     i = 210
-    for head, wr, bh, lead in meas:
-        # A field head that merely repeats the popup title is noise, not structure.
-        if head.strip().lower() != main.strip().lower():
-            add(txt(i, "FHead", PX + 0.28, y, PW - 0.56, 0.24, [head], sz=950, b=True, clr=GOLD))
+    for hd, wr, bh, lead in meas:
+        if hd.strip().lower() != main.strip().lower():
+            add(txt(i, "FHead", PX + 0.28, y, LW, 0.24, [hd], sz=950, b=True, clr=GOLD))
             top = y + 0.26
         else:
             top = y
         i += 1
-        add(txt(i, "FBody", PX + 0.28, top, PW - 0.56, max(0.24, len(wr) * lead),
-                rt(wr), sz=bsz)); i += 1
+        add(txt(i, "FBody", PX + 0.28, top, LW, max(0.24, len(wr) * lead), rt(wr), sz=bsz)); i += 1
         y += bh
+
+    # ---- dedicated visual-direction panel ----
+    need = bool(visual) and visual.get("visual_requirement") == VP.REQUIRED
+    if need and visual.get("visual_status") == "RESOLVED":
+        vy = PY + 0.74
+        vh = ph - (vy - PY) - 0.26
+        add(box(230, "VisualPanel", VX, vy, VW, vh, "", fill="F7F7F7", ln="BFBFBF",
+                dash=False, lnw=12700))
+        add(txt(231, "VisualPanelHead", VX + 0.18, vy + 0.14, VW - 0.36, 0.24,
+                [VD.HEADING], sz=900, b=True, clr=GOLD))
+        vw_ = V3._wrap_lines(visual["visual_direction"], 46)
+        add(txt(232, "VisualPanelBody", VX + 0.18, vy + 0.42, VW - 0.36,
+                min(vh - 0.62, 0.22 * len(vw_) + 0.08), rt(vw_), sz=1050))
+        add(txt(233, "VisualPanelArea", VX + 0.18, vy + vh - 0.30, VW - 0.36, 0.22,
+                ["Ruang visual produksi — aset tidak dibenamkan."], sz=800, clr=GREY))
+    elif need:
+        add(txt(231, "VisualPanelPending", VX + 0.18, PY + 0.90, VW - 0.36, 0.60,
+                ["ARAHAN VISUAL", VD.PENDING], sz=950, b=True, clr=GREY))
 
 
 def grid_n(n, y0, h, gx=0.42, gy=0.30):
@@ -297,7 +312,8 @@ def render_family_s(M, page, rec, st, add, viewed):
         add(txt(20, "Head", BAND_X, 1.30, BAND_W, 0.46, rt([c["name"]]), sz=2000, b=True))
         add(bullets(22, "Body", BAND_X, 1.92, BAND_W, 3.4,
                     [(0, ital_parts(l)) for l in c["display"]], sz=1500, spc=600))
-        _visual(add, 30, 5.55, V3._wrap_lines(c["visual"], 108))
+        vp = VP.classify(M, rec, st)
+        _visual(add, 30, 5.55, V3._wrap_lines(vp["visual_direction"], 108))
         spoken = [c["vo"] + f" Mari lihat contoh bagi {c['name']} di halaman seterusnya."]
         return spoken, ["INTERAKSI:", "  Tiada interaksi kandungan. Kemajuan melalui shell LMS."]
 
@@ -307,8 +323,11 @@ def render_family_s(M, page, rec, st, add, viewed):
     ids = [i["interaction_item_id"] for i in items]
     add(title_ph_rt(f"Contoh {c['name']}"), titlebar(6, f"Contoh {c['name']}"))
     add(txt(25, "Instr", BAND_X, 1.32, BAND_W, 0.42,
-            [rec["interaction_instruction"]], sz=1600, algn="ctr"))
+            [INS.for_screen(rec)], sz=1600, algn="ctr"))
     _cards(add, ids, labels, viewed, y0=2.15)
+    vp = VP.classify(M, rec, st)
+    if vp["visual_direction"]:
+        _visual(add, 30, 5.86, V3._wrap_lines(vp["visual_direction"], 108))
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
@@ -321,10 +340,7 @@ def render_family_s(M, page, rec, st, add, viewed):
             blocks.append(("Fungsi dan Penerangan", r["fungsi"].split("\n")))
         if r.get("contoh"):
             blocks.append(("Contoh", [r["contoh"]]))
-        vis = r.get("visual") or (f"[Visual: Arahan visual untuk {r['label']} — "
-                                  f"spesifikasi teks sahaja, modul ms {r['ms']}. Tidak dibenamkan.]")
-        blocks.append(("ARAHAN VISUAL — TIDAK DIBENAMKAN", V3._wrap_lines(vis, 100)))
-        _modal(add, M, st, r["label"], blocks)
+        _modal(add, M, st, r["label"], blocks, visual=VP.classify(M, rec, st))
         spoken = [r["vo"]]
     extra = ["INTERAKSI:",
              "  Contoh boleh diklik dalam sebarang susunan.",
@@ -345,9 +361,10 @@ def render_family_p1(M, page, rec, st, add, viewed):
         add(title_ph_rt(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
         add(txt(20, "Head", BAND_X, 1.22, BAND_W, 0.44, rt([c["name"]]), sz=2000, b=True))
         add(txt(25, "Instr", BAND_X, 1.74, BAND_W, 0.40,
-                [rec["interaction_instruction"]], sz=1500, algn="ctr"))
+                [INS.for_screen(rec)], sz=1500, algn="ctr"))
         _cards(add, ids, labels, viewed, y0=2.36)
-        _visual(add, 30, 5.90, V3._wrap_lines(c["visual"], 108))
+        vp = VP.classify(M, rec, st)
+        _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"], 108))
         _nav(add, st)
         spoken = [c["vo"]] if c.get("vo") else []
         return spoken, ["INTERAKSI:",
@@ -364,7 +381,7 @@ def render_family_p1(M, page, rec, st, add, viewed):
     add(title_ph_rt(r["label"]), titlebar(6, c["name"]))
     add(txt(20, "ExHead", BAND_X, 1.22, BAND_W, 0.44, rt([r["label"]]), sz=2200, b=True))
     add(txt(25, "Instr", BAND_X, 1.76, BAND_W, 0.40,
-            [rec["interaction_instruction"]], sz=1500, algn="ctr"))
+            [INS.for_screen(rec)], sz=1500, algn="ctr"))
     _, _, cards_bottom = _cards(add, ids, labels, viewed, y0=2.30, sub=True)
     y = cards_bottom + 0.34
     if r.get("contoh"):
@@ -380,7 +397,8 @@ def render_family_p1(M, page, rec, st, add, viewed):
         it = M.item(iid)
         body = _spec_body(r, it["label"])
         _modal(add, M, st, f"{r['label']} — {it['label']}",
-               [(it["label"], V3._wrap_lines(body, 96))])
+               [(it["label"], V3._wrap_lines(body, 96))],
+               visual=VP.classify(M, rec, st))
         spoken = [f"{it['label']}. {body}"]
     extra = ["INTERAKSI:",
              "  Skrin penuh ini ialah hasil Level 1 (klik contoh).",
@@ -406,16 +424,18 @@ def render_family_p2(M, page, rec, st, add, viewed):
     add(txt(20, "Head", BAND_X, 1.22, BAND_W, 0.44, rt([c["name"]]), sz=2000, b=True))
     add(txt(21, "Sub", BAND_X, 1.72, BAND_W, 0.36, rt([r["label"]]), sz=1400, b=True, clr=GOLD))
     add(txt(25, "Instr", BAND_X, 2.10, BAND_W, 0.40,
-            [rec["interaction_instruction"]], sz=1500, algn="ctr"))
+            [INS.for_screen(rec)], sz=1500, algn="ctr"))
     _cards(add, ids, labels, viewed, y0=2.68)
-    _visual(add, 30, 5.90, V3._wrap_lines(r.get("visual") or "", 108))
+    vp = VP.classify(M, rec, st)
+    _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"] or (r.get("visual") or ""), 108))
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
         it = M.item(st["interaction_item_ids"][0])
         body = _spec_body(r, it.get("source_attested_label") or it["label"])
         _modal(add, M, st, f"{r['label']} — {it['label']}",
-               [(it["label"], V3._wrap_lines(body, 96))])
+               [(it["label"], V3._wrap_lines(body, 96))],
+               visual=VP.classify(M, rec, st))
         spoken = [f"{it['label']}. {body}"]
     extra = ["INTERAKSI:",
              "  Klik kategori spesifikasi = Level 1. Membuka popup (STATE).",
@@ -462,11 +482,12 @@ def render_frame(M, page, rec, st, add, viewed):
 
     # ---------------- S01 — topic/section entry ----------------
     if sid == "SCR_S01":
-        add(title_ph_rt(C.S01["canvas_title"]), titlebar(6, C.S01["canvas_title"]))
-        add(txt(20, "Course", BAND_X, 1.34, BAND_W, 0.40, [C.S01["canvas"][0]], sz=1500, b=True, clr=GOLD))
-        add(txt(21, "PL", BAND_X, 1.86, BAND_W, 0.46, [C.S01["canvas"][1]], sz=1900, b=True))
-        add(txt(22, "Topic", BAND_X, 2.38, BAND_W, 0.46, [C.S01["canvas"][2]], sz=1900, b=True))
-        _visual(add, 30, 3.30, C.S01["visual"])
+        vp = VP.classify(M, rec, st)
+        add(title_ph_rt(C.S01["display_title"]), titlebar(6, C.S01["display_title"], w=12.4))
+        add(txt(20, "Course", BAND_X, 1.44, BAND_W, 0.44, rt([C.S01["canvas"][0]]),
+                sz=1600, b=True, clr=GOLD))
+        add(txt(21, "PL", BAND_X, 2.00, BAND_W, 0.46, rt([C.S01["canvas"][1]]), sz=1900, b=True))
+        _visual(add, 30, 3.10, V3._wrap_lines(vp["visual_direction"], 96))
         _nav(add, st)
         el = sorted(st["spoken_transcript_elements"], key=lambda e: e["order"])
         extra = ["KONTEKS HULU:", "  " + ", ".join(rec["upstream_context"]),
@@ -537,7 +558,7 @@ def render_frame(M, page, rec, st, add, viewed):
         pos, cw, x0, _ = grid4()
         add(title_ph_rt(g["name"]), titlebar(6, g["name"]))
         add(txt(25, "Instr", BAND_X, 1.15, BAND_W, 0.40,
-                ["Klik pada setiap struktur untuk penjelasan lanjut."], sz=1600, algn="ctr"))
+                [INS.for_screen(rec)], sz=1600, algn="ctr"))
         done = st["screen_role"] == "STATE_GROUP_COMPLETE"
         proof_done = page.get("completed_components", set())
         n = 40
@@ -564,20 +585,33 @@ def render_frame(M, page, rec, st, add, viewed):
         g = M.groups["PERABOT_TAMAN"]
         members = [c for c in M.source["components"] if c["group"] == "PERABOT_TAMAN"]
         add(title_ph_rt(g["name"]), titlebar(6, g["name"]))
-        add(bullets(22, "Body", BAND_X, 1.34, BAND_W, 2.0,
-                    [(0, ital_parts(l)) for l in V3._wrap_lines(g["vo"], 110)], sz=1300, spc=300))
-        y = 3.70
-        for k, c in enumerate(members):
-            fam = M.family(c["id"])
-            add(txt(80 + k * 2, "PerLbl", BAND_X, y, 6.4, 0.36, rt([c["name"]]), sz=1600, b=True))
-            add(txt(81 + k * 2, "PerFam", BAND_X + 6.6, y + 0.03, 5.0, 0.32, [fam], sz=1100, clr=GREY))
-            y += 0.52
+        add(txt(22, "Body", BAND_X, 1.22, BAND_W, 0.86,
+                rt(V3._wrap_lines(g["vo"], 118)[:3]), sz=1200))
+        # Visual component gateway. Each card carries the learner-facing component name and
+        # its own visual placeholder. Execution family is model metadata and stays off-canvas.
+        pos, cw, bottom = grid_n(len(members), 2.18, 2.02)
+        n = 80
+        for (x, y), c in zip(pos, members):
+            row0 = [r for r in M.source["rows"] if r["comp"] == c["id"]][0]
+            vis = VD.for_row(row0)
+            add(box(n, "ComponentCard", x, y, cw, 2.02, "", fill="F2F2F2",
+                    ln="404040", dash=False, lnw=12700)); n += 1
+            add(box(n, "ComponentVisual", x + 0.14, y + 0.14, cw - 0.28, 1.06, "",
+                    fill="FFFFFF", ln="BFBFBF", dash=True, lnw=9525)); n += 1
+            add(txt(n, "ComponentVisualDir", x + 0.22, y + 0.24, cw - 0.44, 0.88,
+                    rt(["ARAHAN VISUAL"] + V3._wrap_lines(
+                        vis["text"] if vis["status"] == "RESOLVED" else VD.PENDING, 30)[:3]),
+                    sz=750, clr=GREY)); n += 1
+            add(txt(n, "ComponentName", x + 0.14, y + 1.28, cw - 0.28, 0.40,
+                    rt([c["name"]]), sz=1400, b=True, algn="ctr")); n += 1
+            add(txt(n, "ComponentCue", x + 0.14, y + 1.68, cw - 0.28, 0.28,
+                    ["Halaman seterusnya"], sz=900, clr=GREY, algn="ctr")); n += 1
         _nav(add, st)
         spoken = [g["vo"], "Mari lihat setiap contoh perabot di halaman seterusnya."]
         extra = ["INTERAKSI:",
-                 "  TIADA klik dan TIADA aras interaksi. Ini gerbang penerangan sahaja.",
+                 "  TIADA klik dan TIADA aras interaksi. Ini gerbang penerangan visual.",
                  "  Pelajar memasuki setiap komponen melalui navigasi shell.",
-                 "AGIHAN KELUARGA:"]
+                 "AGIHAN KELUARGA (metadata dalaman — tidak dipaparkan pada kanvas):"]
         extra += [f"  {c['name']} -> {M.family(c['id'])}" for c in members]
         return spoken, extra
 
@@ -604,20 +638,26 @@ def render_frame(M, page, rec, st, add, viewed):
     # ---------------- Tamat ----------------
     if sid == "SCR_TAMAT":
         add(title_ph_rt("Tamat"), titlebar(6, "Tamat"))
-        add(txt(20, "Course", BAND_X, 1.36, BAND_W, 0.38, [C.TAMAT["canvas"][0]], sz=1400, b=True, clr=GOLD))
-        add(txt(21, "PL", BAND_X, 1.84, BAND_W, 0.42, [C.TAMAT["canvas"][1]], sz=1600, b=True))
-        add(txt(22, "Head", BAND_X, 2.52, BAND_W, 0.60, rt(V3._wrap_lines(C.TAMAT["canvas_title"], 60)),
-                sz=2400, b=True))
-        add(txt(23, "Status", BAND_X, 3.50, BAND_W, 0.42, [C.TAMAT["status"]], sz=1600))
-        add(txt(24, "Instr", BAND_X, 4.10, BAND_W, 0.42, [C.TAMAT["instruction"]], sz=1600, b=True))
+        y = 1.36
+        for k, blk in enumerate(C.TAMAT["hierarchy"]):
+            for j, line in enumerate(blk):
+                add(txt(20 + k * 4 + j, "TamatLine", BAND_X, y, BAND_W, 0.46,
+                        rt([line]), sz=(2000 if k == 2 else 1500),
+                        b=True, clr=(None if k == 2 else GOLD)))
+                y += 0.44
+            y += 0.30
+        add(txt(60, "TamatInstr", BAND_X, y + 0.30, BAND_W, 0.46,
+                rt([C.TAMAT["instruction"]]), sz=1700, b=True))
         _nav(add, st)
         ex = rec["exit_model"]
-        extra = ["KELUAR LMS:",
+        extra = ["KELUAR / NAVIGASI:",
+                 f"  salinan Tamat: {C.TAMAT['copy_status']}",
                  f"  destinasi logik: {ex['logical_destination']}",
-                 f"  kelakuan keluar fizikal: {ex['physical_exit_behaviour']}",
-                 f"  keadaan Seterusnya shell: {ex['shell_next_state']}",
-                 f"  status: {ex['status']}",
-                 "  " + ex["canvas_disclosure"]]
+                 f"  kelakuan navigasi fizikal: {C.TAMAT['physical_status']}",
+                 "  Tiada dakwaan dibuat tentang keadaan Seterusnya shell LMS.",
+                 "  Tiada butang navigasi kanvas tersuai dicipta.",
+                 "  Segitiga merah dalam contoh Bariah dianggap ISYARAT VISUAL,",
+                 "  bukan butang interaktif, sehingga ada bukti sebaliknya."]
         return [C.TAMAT["vo"]], extra
 
     raise KeyError(f"no frame strategy for {sid}")
@@ -635,8 +675,9 @@ def _render_quiz(M, page, rec, st, add):
             add(txt(30 + k, "Purpose", BAND_X, y, BAND_W, 0.32 * len(w) + 0.08, w, sz=1500))
             y += 0.32 * len(w) + 0.24
         y += 0.20
-        for k, l in enumerate(C.KUIZ_INTRO["instruction"]):
-            add(txt(40 + k, "Instr", BAND_X, y, BAND_W, 0.40, [l], sz=1600, b=(k == 1)))
+        for k, l in enumerate(C.KUIZ_INTRO["instruction"] + [INS.for_page(rec, st)]):
+            add(txt(40 + k, "Instr", BAND_X, y, BAND_W, 0.40, rt([l]), sz=1600,
+                    b=(k == len(C.KUIZ_INTRO["instruction"]))))
             y += 0.44
         for k, lbl in enumerate(C.KUIZ_INTRO["result_controls"]):
             add(txt(50 + k, "Ctl", BAND_X + k * 3.2, 5.60, 3.0, 0.36, [lbl], sz=1300, clr=GREY))
@@ -653,22 +694,49 @@ def _render_quiz(M, page, rec, st, add):
         d = C.QUESTIONS[n]
         add(title_ph_rt(f"Kuiz — Soalan {n}"), titlebar(6, f"Soalan {n}"))
         add(txt(20, "Kind", BAND_X, 1.26, BAND_W, 0.32,
-                [f"{d['kind'].replace('_',' ')}   ·   sumber: {d['src']}"], sz=1150, clr=GREY))
+                rt([f"{'MCQ' if d['kind']=='MCQ' else 'Multiple Response'}"
+                    f"   ·   sumber: {d['src']}"]), sz=1150, clr=GREY))
         w = V3._wrap_lines(d["stem"], 92)
-        add(txt(22, "Stem", BAND_X, 1.66, BAND_W, 0.34 * len(w) + 0.10, rt(w), sz=1600, b=True))
-        y = 1.66 + 0.34 * len(w) + 0.36
+        add(txt(22, "Stem", BAND_X, 1.62, BAND_W, 0.34 * len(w) + 0.10, rt(w), sz=1600, b=True))
+        y = 1.62 + 0.34 * len(w) + 0.16
+        add(txt(23, "Instr", BAND_X, y, BAND_W, 0.34, [INS.for_page(rec, st)], sz=1400, b=True))
+        y += 0.44
+        # Fit the options, the reviewer answer key and the feedback row inside the stage.
+        BOTTOM = 7.02
+        key = ([f"Jawapan: {d['answer']}", dict(d["options"])[d["answer"]]]
+               if d["kind"] == "MCQ" else
+               ["Jawapan betul:"] + [f"•  {o}" for o in d["answers"]])
+        for opitch, osz, kpitch, ksz in ((0.42, 1450, 0.28, 1250), (0.36, 1350, 0.25, 1150),
+                                         (0.32, 1250, 0.22, 1050), (0.29, 1150, 0.20, 950)):
+            need = len(d["options"]) * opitch + 0.16 + (0.34 + kpitch * len(key)) + 0.16 + 0.32
+            if y + need <= BOTTOM:
+                break
+        oy = y
         if d["kind"] == "MCQ":
             for k, (lab, opt) in enumerate(d["options"]):
-                add(txt(40 + k, "Opt", BAND_X + 0.30, y, BAND_W - 0.6, 0.40,
-                        rt([f"{lab}.  {opt}"]), sz=1500))
-                y += 0.46
+                add(txt(40 + k, "Opt", BAND_X + 0.30, oy, BAND_W - 0.6, opitch - 0.04,
+                        rt([f"{lab}.  {opt}"]), sz=osz))
+                oy += opitch
         else:
-            for k, opt in enumerate(d["options"]):     # no A/B/C labels
-                add(txt(40 + k, "Opt", BAND_X + 0.30, y, BAND_W - 0.6, 0.36, rt([opt]), sz=1450))
-                y += 0.40
+            for k, opt in enumerate(d["options"]):     # no A/B/C labels, learner-facing
+                add(txt(40 + k, "Opt", BAND_X + 0.30, oy, BAND_W - 0.6, opitch - 0.04,
+                        rt([opt]), sz=osz))
+                oy += opitch
+        # ---- reviewer answer key, generated from the same structured answer data ----
+        oy += 0.16
+        kh = 0.34 + kpitch * len(key)
+        add(box(70, "AnswerKeyBox", BAND_X, oy, BAND_W, kh, "", fill="FFF7E6",
+                ln=GOLD, dash=False, lnw=12700))
+        add(txt(71, "AnswerKeyHead", BAND_X + 0.20, oy + 0.06, BAND_W - 0.4, 0.24,
+                ["SEMAKAN CIDB — MAKLUMAT PENYEMAK, BUKAN PAPARAN PELAJAR"],
+                sz=850, b=True, clr=GOLD))
+        add(txt(72, "AnswerKeyBody", BAND_X + 0.20, oy + 0.32, BAND_W - 0.4, kpitch * len(key),
+                rt(key), sz=ksz, b=True))
+        oy += kh + 0.16
         fb = C.FEEDBACK
-        add(txt(70, "FbC", BAND_X, 6.30, 5.6, 0.32, [fb["correct"]["text"]], sz=1300, clr=GREEN))
-        add(txt(71, "FbW", BAND_X + 6.0, 6.30, 5.6, 0.32, [fb["incorrect"]["text"]], sz=1300, clr="C0392B"))
+        add(txt(75, "FbC", BAND_X, oy, 5.6, 0.30, [fb["correct"]["text"]], sz=1250, clr=GREEN))
+        add(txt(76, "FbW", BAND_X + 6.0, oy, 5.6, 0.30, [fb["incorrect"]["text"]],
+                sz=1250, clr="C0392B"))
         _nav(add, st)
         spoken = [d["stem"]]
         if d["kind"] == "MCQ":
@@ -680,13 +748,14 @@ def _render_quiz(M, page, rec, st, add):
         extra = ["MAKLUM BALAS SERTA-MERTA:",
                  f"  betul: teks \"{fb['correct']['text']}\" · SFX {fb['correct']['sfx']} · VO sama",
                  f"  salah: teks \"{fb['incorrect']['text']}\" · SFX {fb['incorrect']['sfx']} · VO sama",
-                 "JAWAPAN (metadata sahaja, tidak dilihat pelajar):",
+                 "KUNCI JAWAPAN (blok semakan CIDB pada halaman semakan):",
                  "  " + (d["answer"] if d["kind"] == "MCQ" else ", ".join(d["answers"])),
+                 "  Dijana daripada data jawapan berstruktur yang sama dengan logik kuiz.",
+                 "  BUKAN kandungan masa jalan pra-hantar; tidak dibaca dalam VO.",
                  "RASIONAL TERPERINCI (metadata sahaja):"]
         extra += ["  " + l for l in V3._wrap_lines(d["rationale"], 66)]
-        extra += [f"  status: {st['unresolved_status']}"] if st.get("unresolved_status") != "NONE" else []
         if d["kind"] == "MULTIPLE_RESPONSE":
-            extra += ["LABEL PILIHAN:", "  TIADA label A/B/C. Teks pilihan dipaparkan terus."]
+            extra += ["LABEL PILIHAN:", "  TIADA label A/B/C pada pilihan pelajar."]
         return spoken, extra
 
     if role == "STATE_QUIZ_REVIEW":
@@ -718,8 +787,9 @@ def _render_quiz(M, page, rec, st, add):
     add(txt(20, "Score", BAND_X, 1.60, BAND_W, 0.80, [f"Markah: {d['sample_score']}"], sz=2800, b=True))
     add(txt(21, "Verdict", BAND_X, 2.50, BAND_W, 0.50, [d["verdicts"][0]], sz=2200, b=True, clr=GREEN))
     add(txt(22, "Pass", BAND_X, 3.10, BAND_W, 0.36, [d["pass_mark"]], sz=1300, clr=GREY))
+    add(txt(30, "Instr", BAND_X, 3.58, BAND_W, 0.36, rt([INS.for_page(rec, st)]), sz=1400, b=True))
     for k, lbl in enumerate(d["controls"]):
-        add(button(60 + k, BAND_X + k * 2.6, 4.10, 2.30, 0.46, lbl, True))
+        add(button(60 + k, BAND_X + k * 2.6, 4.16, 2.30, 0.46, lbl, True))
     _nav(add, st)
     extra = ["KEPUTUSAN:",
              f"  Markah dipaparkan. Keputusan: {' / '.join(d['verdicts'])}. {d['pass_mark']}.",
@@ -741,6 +811,7 @@ def build_page(M, page, pages):
         raise ValueError(f"control type outside the model vocabulary on {page['id']}")
     sh = []
     add = lambda *x: sh.extend(x)
+    instruction = INS.for_page(rec, st)
     viewed = ADAPT.viewed_items(M, page, pages)
     page["completed_components"] = ADAPT.completed_components(M, page, pages)
     fam = st["execution_family"]
@@ -750,7 +821,22 @@ def build_page(M, page, pages):
         spoken, extra = FAMILY_STRATEGY[fam](M, page, rec, st, add, viewed)
     else:
         spoken, extra = render_frame(M, page, rec, st, add, viewed)
-    notes = build_notes(M, rec, st, spoken or [])
+    # Canvas instruction and spoken instruction come from the SAME field. If the screen
+    # carries one, it is appended to the spoken transcript verbatim.
+    spoken = list(spoken or [])
+    if instruction and st["notes_policy"] != "SILENT_STATE_NOTES" and instruction not in spoken:
+        spoken.append(instruction)
+    notes = build_notes(M, rec, st, spoken)
+    if instruction:
+        extra = (extra or []) + ["ARAHAN INTERAKSI (kanvas = VO):", "  " + instruction]
+    vpol = VP.classify(M, rec, st)
+    extra = (extra or []) + [
+        "VISUAL:",
+        f"  subjenis skrin: {vpol['semantic_screen_subtype']}",
+        f"  subjenis popup: {vpol['popup_subtype'] or '—'}",
+        f"  keperluan visual: {vpol['visual_requirement']}",
+        f"  status: {vpol['visual_status']}",
+        f"  kuasa: {vpol['visual_authority'] or '—'}"]
     lines = model_lines(M, rec, st, extra)
     lines.insert(0, f"BUKTI: {page['proof_note']}")
     sh.append(prodpanel_v4(9, page, rec, st, lines))
@@ -797,9 +883,20 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
            'relationships/slideLayout" Target="../slideLayouts/slideLayout7.xml"/>'
            f'<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/'
            f'relationships/notesSlide" Target="../notesSlides/notesSlide{i}.xml"/></Relationships>')
-        body = "".join('<a:p><a:r><a:rPr lang="en-MY" dirty="0"/><a:t>%s</a:t></a:r></a:p>' % X(t)
-                       if t else '<a:p><a:endParaRPr lang="en-MY" dirty="0"/></a:p>'
-                       for t in (notes.split("\n") if notes else []))
+        # Speaker Notes carry REAL OOXML run formatting, not markdown or slanted glyphs.
+        # Every glossary term becomes its own <a:r> with i="1"; the rest stays plain.
+        def _note_para(t):
+            if not t:
+                return '<a:p><a:endParaRPr lang="en-MY" dirty="0"/></a:p>'
+            runs_xml = ""
+            for frag, ital in GL.parts(t):
+                if not frag:
+                    continue
+                it = ' i="1"' if ital else ""
+                runs_xml += (f'<a:r><a:rPr lang="en-MY"{it} dirty="0"/>'
+                             f'<a:t>{X(frag)}</a:t></a:r>')
+            return f"<a:p>{runs_xml}</a:p>"
+        body = "".join(_note_para(t) for t in (notes.split("\n") if notes else []))
         if not body:
             body = '<a:p><a:endParaRPr lang="en-MY" dirty="0"/></a:p>'
         wr(f"ppt/notesSlides/notesSlide{i}.xml", NOTE_DONOR[:m.start(2)] + body + NOTE_DONOR[m.end(2):])
@@ -850,7 +947,7 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
     return out, manifest
 
 
-FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx"
+FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx"
 
 
 def generate_full(outdir, outname=FULL_OUTNAME):

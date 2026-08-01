@@ -937,7 +937,28 @@ decision is recorded in `DECISION_REGISTER_B02_v0.4.json` under `implementation_
 
 ---
 
-# 10. Standing
+# 10. Round 2 — direct Bariah feedback of 1 August 2026 on the generated deck
+
+Seven further records. Two are confirmed regressions in generated output; five are new rulings.
+All are implemented in `v0.4.1` and validated against the generated package.
+
+| ID | Title | Status | Implemented |
+|---|---|---|---|
+| `B02-BARIAH-20260801-VISUAL-01` | Popup visual direction reverted to generic fallback | `CONFIRMED_REGRESSION` | ✅ |
+| `B02-BARIAH-20260801-NOTES-ITALIC-01` | English terms in Speaker Notes not italicised | `CONFIRMED_REGRESSION` | ✅ |
+| `B02-BARIAH-20260801-VISUAL-02` | Visual requirement by subtype; specification popups excepted | `CONFIRMED_BARIAH` | ✅ |
+| `B02-BARIAH-20260801-QUIZ-KEY-01` | Quiz review pages show the correct answer for CIDB | `CONFIRMED_BARIAH` | ✅ |
+| `B02-BARIAH-20260801-TAMAT-01` | Tamat follows the reviewed exemplar | `CONFIRMED_BARIAH` | ✅ |
+| `B02-BARIAH-20260801-PERABOT-01` | Visual gateway; no internal metadata on canvas | `CONFIRMED_REGRESSION` | ✅ |
+| `B02-BARIAH-20260801-VO-PARITY-01` | Interaction instructions also spoken | `CONFIRMED_BARIAH` | ✅ |
+
+**Bariah must not patch the PowerPoint by hand.** A manual edit is destroyed by the next
+regeneration and leaves the pipeline still producing the defect. Root causes, before/after
+evidence and full validation: `BARIAH_REGRESSION_CORRECTION_REPORT_v0.4.1.md`.
+
+---
+
+# 11. Standing
 
 Documentation only. No generator file modified, no PowerPoint regenerated, no component propagated,
 no screen/state map produced, no canonical `P#` minted, no comment fabricated, and no ruling selected

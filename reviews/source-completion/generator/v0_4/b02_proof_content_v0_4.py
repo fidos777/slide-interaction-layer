@@ -14,7 +14,10 @@ COURSE = "KURSUS KERJA BANGUNAN – PEMBINAAN LANDSKAP LUAR"
 # ---------------------------------------------------------------- S01
 # Spoken transcript is model-owned (spoken_transcript_elements). This is canvas copy only.
 S01 = dict(
-    canvas_title="Komponen Landskap",
+    # Bariah: the display title is the full Topik/Bahagian line. The standalone
+    # "Komponen Landskap" title is removed so it is not shown twice.
+    display_title="Topik 3 Bahagian 2: Komponen Landskap",
+    canvas_title="Topik 3 Bahagian 2: Komponen Landskap",
     canvas=[COURSE, PL, TOPIC],
     visual=["ARAHAN VISUAL — SPESIFIKASI SAHAJA",
             "[Visual: Imej pembuka bahagian — foto tapak landskap siap yang",
@@ -100,8 +103,9 @@ KUIZ_INTRO = dict(
     purpose=["Tujuan kuiz ini adalah untuk menguji kefahaman semata-mata dan bukan "
              "sebahagian daripada peperiksaan akhir kursus.",
              "Markah tidak akan dinilai sebagai gred peperiksaan akhir kursus."],
-    instruction=["Jawab semua soalan dengan pilihan jawapan yang betul.",
-                 "Klik butang “MULA KUIZ” untuk mula."],
+    # The click instruction is NOT typed here — it comes from the controlled instruction
+    # table so the canvas string and the VO string can never diverge.
+    instruction=["Jawab semua soalan dengan pilihan jawapan yang betul."],
     button="MULA KUIZ",
     result_controls=["Semak Jawapan", "Ulang Kuiz"],
 )
@@ -176,13 +180,19 @@ REVIEW = dict(canvas_title="Semak Jawapan",
               vo="")
 
 # ---------------------------------------------------------------- Tamat
+# Bariah's reviewed Tamat exemplar. Supersedes the earlier provisional close-the-window
+# instruction. The copy is confirmed; the physical LMS navigation mechanism is NOT.
 TAMAT = dict(
     canvas_title="Tamat Topik 3 Bahagian 2: Komponen Landskap",
-    canvas=[COURSE, PL],
-    status="Bahagian ini telah selesai.",
-    instruction="Tutup tetingkap pelajaran untuk keluar.",
-    vo=("Tamat Topik 3 Bahagian 2: Komponen Landskap. Bahagian ini telah selesai. "
-        "Tutup tetingkap pelajaran untuk keluar."),
+    hierarchy=[["KURSUS KERJA BANGUNAN –", "PEMBINAAN LANDSKAP LUAR"],
+               ["PL06:", "PENGURUSAN OPERASI PEMBINAAN LANDSKAP"],
+               ["Tamat Topik 3 Bahagian 2:", "Komponen Landskap"]],
+    instruction="Teruskan pembelajaran ke bahagian seterusnya.",
+    vo=("Tamat Topik 3 Bahagian 2: Komponen Landskap.\n"
+        "Teruskan pembelajaran ke bahagian seterusnya."),
+    copy_status="CONFIRMED_BARIAH",
+    logical_destination="NEXT_BAHAGIAN",
+    physical_status="PENDING_FIRDAUS_OR_LMS_CONFIRMATION",
 )
 
 # ---------------------------------------------------------------- rich text

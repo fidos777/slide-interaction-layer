@@ -249,14 +249,22 @@ def run(pptx):
         sum(1 for p in qz if st_of[p]["screen_role"] == "STATE_QUIZ_REVIEW"), 1)
 
     tm = [p for p in pages if p["screen_id"] == "SCR_TAMAT"][0]["id"]
-    chk("TAMAT_SHELL_NEXT_DISABLED", "DISABLED" in st_of[tm]["next_enabled_condition"], True)
+    # Bariah's reviewed Tamat exemplar (1 August 2026) supersedes the earlier provisional
+    # close-the-window ruling. These five checks are the 1:1 replacements for the five that
+    # encoded the superseded ruling; the count is unchanged and none was dropped.
+    ex = rec_of[tm]["exit_model"]
+    chk("TAMAT_COPY_STATUS", ex["copy_status"], "CONFIRMED_BARIAH")
+    chk("TAMAT_LOGICAL_DESTINATION", ex["logical_destination"], "NEXT_BAHAGIAN")
+    chk("TAMAT_PHYSICAL_NAVIGATION_STATUS", ex["physical_navigation_behaviour"],
+        "PENDING_FIRDAUS_OR_LMS_CONFIRMATION")
+    chk("TAMAT_CLOSE_WINDOW_INSTRUCTION_PRESENT",
+        any(k in ctext[tm] for k in ("Tutup tetingkap", "Tutup lesson", "Tutup window",
+                                     "Sila tutup halaman")), False)
+    chk("TAMAT_UNVERIFIED_PHYSICAL_NAVIGATION_CLAIM",
+        sum(1 for k in ("shell Next disabled", "Seterusnya shell DISABLED", "DISABLED")
+            if k in ptext[tm]), 0)
     chk("TAMAT_NO_CANVAS_NEXT_BUTTON",
         sum(1 for s in D[tm]["canvas"] if s["name"] == "Btn"), 0)
-    chk("TAMAT_UNVERIFIED_ROUTE_ON_CANVAS",
-        any(k in ctext[tm] for k in ("Bahagian seterusnya", "bahagian seterusnya")), False)
-    chk("TAMAT_CLOSE_INSTRUCTION", "Tutup tetingkap" in ctext[tm], True)
-    chk("TAMAT_LOGICAL_DESTINATION_IN_PANEL", "next Bahagian" in ptext[tm], True)
-    chk("TAMAT_EXIT_PENDING_RECORDED", "PENDING_FIRDAUS_CONFIRMATION" in ptext[tm], True)
 
     # ============================ NOTES QA ============================
     need = [p["id"] for p in pages if st_of[p["id"]]["notes_policy"] != "SILENT_STATE_NOTES"]

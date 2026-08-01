@@ -1644,7 +1644,7 @@
    ],
    "spoken_transcript_required": true,
    "next_control_type": "LMS_SHELL_NEXT",
-   "next_enabled_condition": "DISABLED on this screen",
+   "next_enabled_condition": "PENDING_FIRDAUS_OR_LMS_CONFIRMATION — no claim made about the shell control",
    "back_control_type": "NO_CONTROL",
    "back_enabled_condition": "none",
    "close_control_type": "NO_CONTROL",
@@ -1653,24 +1653,23 @@
    "persistence_rule": "NOT_APPLICABLE",
    "interaction_selection_level": 0,
    "screen_path_layer": 0,
-   "unresolved_status": "U-03 — physical LMS exit behaviour is PENDING_FIRDAUS_CONFIRMATION",
+   "unresolved_status": "U-03 — Tamat COPY is CONFIRMED_BARIAH; the physical LMS navigation mechanism is PENDING_FIRDAUS_OR_LMS_CONFIRMATION",
    "decision_ids": [
     "B02-D-14",
     "B02-D-15"
    ],
    "canvas_required": [
     "KURSUS KERJA BANGUNAN – PEMBINAAN LANDSKAP LUAR",
-    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "PL06: PENGURUSAN OPERASI PEMBINAAN LANDSKAP",
     "Tamat Topik 3 Bahagian 2: Komponen Landskap",
-    "section completion status",
-    "learner instruction to close the lesson / window"
+    "Teruskan pembelajaran ke bahagian seterusnya."
    ],
    "exit_model": {
-    "logical_destination": "next Bahagian in Topik 3",
-    "physical_exit_behaviour": "learner closes the lesson / window",
-    "shell_next_state": "disabled on Tamat",
-    "status": "PENDING_FIRDAUS_CONFIRMATION",
-    "canvas_disclosure": "logical destination is NOT displayed on the learner canvas; it is retained in production metadata only"
+    "copy_status": "CONFIRMED_BARIAH",
+    "logical_destination": "NEXT_BAHAGIAN",
+    "physical_navigation_behaviour": "PENDING_FIRDAUS_OR_LMS_CONFIRMATION",
+    "shell_next_state": "NOT_ASSERTED — actual LMS behaviour not independently confirmed",
+    "canvas_disclosure": "The learner instruction \"Teruskan pembelajaran ke bahagian seterusnya.\" is Bariah-approved copy. No custom learner-canvas navigation button is created, and no claim is made about the shell control."
    },
    "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
    "notes_context_spoken": false,
@@ -6546,7 +6545,7 @@
    ],
    "spoken_transcript_required": true,
    "next_control_type": "LMS_SHELL_NEXT",
-   "next_enabled_condition": "DISABLED on this screen",
+   "next_enabled_condition": "PENDING_FIRDAUS_OR_LMS_CONFIRMATION — no claim made about the shell control",
    "back_control_type": "NO_CONTROL",
    "back_enabled_condition": "none",
    "close_control_type": "NO_CONTROL",
@@ -6555,7 +6554,7 @@
    "persistence_rule": "NOT_APPLICABLE",
    "interaction_selection_level": 0,
    "screen_path_layer": 0,
-   "unresolved_status": "U-03",
+   "unresolved_status": "U-03 — Tamat COPY is CONFIRMED_BARIAH; the physical LMS navigation mechanism is PENDING_FIRDAUS_OR_LMS_CONFIRMATION",
    "decision_ids": [
     "B02-D-14",
     "B02-D-15"

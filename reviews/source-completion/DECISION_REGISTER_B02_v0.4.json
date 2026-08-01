@@ -27,7 +27,8 @@
     "PENDING_BARIAH_CONFIRMATION": "Execution policy is set for the review build; Bariah must confirm the final form.",
     "TECHNICAL_DECOMPOSITION_FROM_SOURCE": "Interaction items derived from the module source’s own labelled substructure; no stakeholder ruling required and no source row created.",
     "PENDING_ARTIFACT_DELIVERY": "The ruling is confirmed and modelled; only the byte-level freeze of a supplied artifact is outstanding because the file did not reach the execution environment.",
-    "RESOLVED_ARTIFACT_FROZEN": "A previously pending artifact freeze that is now closed: the bytes were received, independently hashed, and match the declared identity."
+    "RESOLVED_ARTIFACT_FROZEN": "A previously pending artifact freeze that is now closed: the bytes were received, independently hashed, and match the declared identity.",
+    "CONFIRMED_REGRESSION": "A defect Bariah found in generated output. Corrected in the source-controlled pipeline, never by patching the PowerPoint."
   },
   "evidence_artifacts": [
     {
@@ -602,6 +603,86 @@
         "MONTAGE_FILES_FROZEN_ON_DISK"
       ],
       "implementation_status": "CLOSED — montage evidence frozen"
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-VISUAL-01",
+      "title": "Specific popup visual direction must not revert to generic fallback",
+      "status": "CONFIRMED_REGRESSION",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "Every applicable popup must carry the specific Bariah-reviewed or source-attested visual direction. The generic generated sentence \"[Visual: Arahan visual untuk X — spesifikasi teks sahaja, modul ms N. Tidak dibenamkan.]\" must never appear. Promenade uses \"[Visual: Promenade Tasik Titiwangsa, KL]\" per the corrected exemplar, slide 14.",
+      "evidence": "Bariah, 1 August 2026, on the generated v0.4 deck.",
+      "root_cause": "Generator fell back to an auto-generated sentence for the 14 source rows with no dedicated figure, instead of reading the row’s own source-attested contoh field.",
+      "correction": "b02_visual_directions_v0_4.py — one authority-ordered resolver; is_generic() gate.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-NOTES-ITALIC-01",
+      "title": "English terms in Speaker Notes must be italicised",
+      "status": "CONFIRMED_REGRESSION",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "Run-level italic formatting in Speaker Notes, not canvas only. Real OOXML runs; never markdown, underscores or slanted Unicode.",
+      "evidence": "Bariah, 1 August 2026.",
+      "root_cause": "The Notes emitter wrote one plain run per line; italics were never written.",
+      "correction": "b02_glossary_v0_4.py is now the single glossary for canvas and Notes; the Notes emitter builds one run per fragment with i=\"1\" on glossary terms.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-VISUAL-02",
+      "title": "Visual requirement by screen subtype; specification popups excepted",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "\"Semua contoh ada visual. Semua pop up ada visual, KECUALI pop up Spesifikasi (bahan, dimensi etc).\" Visual requirement is REQUIRED / NOT_REQUIRED / CONDITIONAL by semantic subtype, never by execution family. Specification popups must NOT be given a visual panel.",
+      "evidence": "Bariah verbatim, 1 August 2026.",
+      "correction": "b02_visual_policy_v0_4.py; over-broad popup-visual gate replaced by subtype-aware gates.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-QUIZ-KEY-01",
+      "title": "Quiz review pages must show the correct answer for CIDB review",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "All five question review pages carry a labelled correct-answer block, generated from the same structured answer data as the quiz logic. MCQ: letter + full option text. Multiple Response: full option text, bulleted. Review-only: not spoken, not pre-submission learner content. Learner-facing Multiple Response options keep no A/B/C labels.",
+      "evidence": "Bariah, 1 August 2026.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-TAMAT-01",
+      "title": "Tamat follows the reviewed exemplar; close-window wording withdrawn",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "Title \"Tamat Topik 3 Bahagian 2: Komponen Landskap\" with the course/PL/topic hierarchy; learner instruction \"Teruskan pembelajaran ke bahagian seterusnya.\"; spoken transcript matches. TAMAT_COPY_STATUS = CONFIRMED_BARIAH. TAMAT_LOGICAL_DESTINATION = NEXT_BAHAGIAN. TAMAT_PHYSICAL_NAVIGATION_BEHAVIOUR = PENDING_FIRDAUS_OR_LMS_CONFIRMATION. No claim is made that shell Next is disabled; no custom canvas navigation button is created; the red triangle is treated as a visual cue, not a button.",
+      "evidence": "Bariah, 1 August 2026.",
+      "supersedes_or_resolves": [
+        "B02-D-15 learner-facing wording"
+      ],
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-PERABOT-01",
+      "title": "Perabot overview must be visual; internal metadata must never reach the canvas",
+      "status": "CONFIRMED_REGRESSION",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "The Perabot Taman overview is a visual component gateway: five cards, each with the component name, its own visual placeholder and a learner cue. FAMILY_P1 / FAMILY_P2 and all other model metadata are removed from learner slides and retained in model data, QA evidence and off-canvas production metadata. The family mapping itself is unchanged.",
+      "evidence": "Bariah, 1 August 2026, on the generated v0.4 deck.",
+      "correction": "Visual gateway + a canvas metadata denylist checked on all 100 pages.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
+    },
+    {
+      "decision_id": "B02-BARIAH-20260801-VO-PARITY-01",
+      "title": "Every learner-facing interaction instruction must also be spoken",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah — direct WhatsApp review, 1 August 2026",
+      "ruling": "Canvas instruction and spoken instruction derive from ONE field, learner_interaction_instruction. Object-specific wording per screen; no single generic phrase. Not applied to silent completion states, popup tick states, review-only answer keys or off-canvas metadata.",
+      "evidence": "Bariah verbatim example: \"Klik pada setiap struktur untuk penjelasan lanjut.\"",
+      "correction": "b02_instructions_v0_4.py; two quiz screens with hand-typed copies now render from it.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_1",
+      "feedback_ids": []
     }
   ],
   "v0_3_entries_carried_forward": [
@@ -765,22 +846,23 @@
     "statement": "No source-row ID, row order, locator or image-ownership finding was altered. No interaction decomposition was converted into a source row. Papan Tanda still holds exactly one source row while yielding four interaction categories; BBQ Pit still holds exactly one."
   },
   "totals": {
-    "DECISIONS": 27,
+    "DECISIONS": 34,
     "EXECUTION_FAMILIES": 3,
     "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
     "GENERATOR_FILES_CHANGED": 0,
     "POWERPOINT_FILES_GENERATED": 0,
     "COMPONENTS_PROPAGATED": 0,
+    "CONFIRMED_NARRATOR": 1,
     "CONFIRMED_CAIR_ADOPTION": 2,
-    "CONFIRMED_CANON": 3,
-    "PENDING_FIRDAUS_CONFIRMATION": 1,
-    "CONFIRMED_BARIAH": 15,
-    "RESOLVED_ARTIFACT_FROZEN": 1,
-    "PENDING_SOURCE_VERIFICATION": 1,
     "TECHNICAL_DECOMPOSITION_FROM_SOURCE": 1,
     "PENDING_BARIAH_CONFIRMATION": 1,
-    "PENDING_CHARACTER_NAME": 1,
-    "CONFIRMED_NARRATOR": 1
+    "CONFIRMED_CANON": 3,
+    "PENDING_SOURCE_VERIFICATION": 1,
+    "PENDING_FIRDAUS_CONFIRMATION": 1,
+    "CONFIRMED_BARIAH": 19,
+    "RESOLVED_ARTIFACT_FROZEN": 1,
+    "CONFIRMED_REGRESSION": 3,
+    "PENDING_CHARACTER_NAME": 1
   },
   "amended": {
     "date": "2026-08-01",
@@ -820,9 +902,9 @@
   "build": {
     "built": true,
     "build_date": "2026-08-01",
-    "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx",
-    "deck_sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108",
+    "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx",
     "review_pages": 100,
-    "statement": "The model is no longer only defined — it has been executed across all nine components and rendered. Review pages are one per runtime state; the count follows the model."
+    "supersedes": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx (retained, SUPERSEDED_BY_v0_4_1)",
+    "statement": "Bariah must not patch the generated PowerPoint: a manual edit is lost on regeneration and leaves the source-controlled pipeline still producing the defect."
   }
 }
