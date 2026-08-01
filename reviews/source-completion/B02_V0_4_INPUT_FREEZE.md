@@ -98,59 +98,68 @@ v0.2 hash because the v0.3 *deck* was built against it; the v0.4 delta is writte
 
 ---
 
-## 2B. Upstream narrative-context artifacts — named, classified, **not yet frozen**
+## 2B. Upstream narrative-context artifacts — frozen
 
 ```
 UPSTREAM_NARRATIVE_CONTEXT
-COURSE_MONTAGE_HASH_RECORDED = false   ← PENDING_ARTIFACT_DELIVERY
-PL06_MONTAGE_HASH_RECORDED   = false   ← PENDING_ARTIFACT_DELIVERY
+COURSE_MONTAGE_HASH_RECORDED = true
+PL06_MONTAGE_HASH_RECORDED   = true
+MONTAGE_FILES_FROZEN_ON_DISK = 2 of 2
+FROZEN 1 August 2026 — third delivery attempt
 ```
 
 Two Bariah-supplied montages sit upstream of B02. They are **prerequisites to the B02 learner flow,
 never screens inside the B02 storyboard**, and are never counted in `LEARNER_SCREENS` or regenerated.
 
-| Ref | Filename | Role | Relationship to B02 | Frozen? |
-|---|---|---|---|:-:|
-| **M1** | `SB_K5_montaj_v1.pptx` | Course Montage — K5 course-level opening | two steps upstream of B02 S01 | ❌ |
-| **M2** | `SB_K5PL6_montaj_v1.pptx` | PL06 Montage — Pakej Latihan 06 opening | immediate predecessor of B02 S01; ends by naming Topik 3 as Komponen Landskap | ❌ |
+| Ref | Filename | Repository path | Bytes | SHA-256 | Role | Relationship to B02 | Frozen? |
+|---|---|---|---:|---|---|---|:-:|
+| **M1** | `SB_K5_montaj_v1.pptx` | `reviews/storyboard-bariah/v0_3_bariah_review/SB_K5_montaj_v1.pptx` | 61,292 | `79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076` | Course Montage — K5 course-level opening | two steps upstream of B02 S01 | ✅ |
+| **M2** | `SB_K5PL6_montaj_v1.pptx` | `reviews/storyboard-bariah/v0_3_bariah_review/SB_K5PL6_montaj_v1.pptx` | 70,656 | `97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390` | PL06 Montage — Pakej Latihan 06 opening | immediate predecessor of B02 S01; ends by naming Topik 3 as Komponen Landskap | ✅ |
 
-Intended frozen path for both: `reviews/storyboard-bariah/v0_3_bariah_review/`.
+| Ref | Authority / evidence source | Freeze status |
+|---|---|---|
+| **M1** | Bariah-supplied upstream-context artifact, delivered as a task attachment on 1 August 2026 | `FROZEN — byte-identical, independently hashed` |
+| **M2** | Bariah-supplied upstream-context artifact, delivered as a task attachment on 1 August 2026 | `FROZEN — byte-identical, independently hashed` |
 
-### 2B.0 Declared identities — supplied, **not verified**
+Both are structurally valid OOXML PresentationML packages: M1 carries 41 parts and 2 slides, M2 carries
+45 parts and 3 slides, and `zipfile.testzip()` reports no corrupt member in either.
 
-A second delivery attempt (Stage 2.1A) supplied the expected identities in the task text. They are
-recorded here as a **cross-check target for whoever completes the freeze**, and they are explicitly
-*not* verified digests — no bytes have been hashed, because no bytes arrived.
+### 2B.0 Declared identities — now verified
 
-| Ref | Declared bytes | Declared SHA-256 | Verified? |
-|---|---:|---|:-:|
-| **M1** `SB_K5_montaj_v1.pptx` | 61,292 | `79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076` | ❌ **not computed** |
-| **M2** `SB_K5PL6_montaj_v1.pptx` | 70,656 | `97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390` | ❌ **not computed** |
+The Stage 2.1A run recorded the expected identities as unverified cross-check targets. This run
+received the bytes and hashed them independently. **Every value matches.**
 
-> **These values carry no provenance weight.** They are a stated expectation, not evidence. The freeze
-> is complete only when the received bytes are hashed independently and the computed digest is
-> compared against the row above. The model fields `byte_size` and `sha256` in
-> `B02_V0_4_MODEL_CONTRACT.json` remain `null`; the declared values live in separate
-> `expected_byte_size` / `expected_sha256` fields so that no validator can mistake one for the other.
+| Ref | Declared bytes | Computed bytes | Declared SHA-256 | Computed SHA-256 | Verdict |
+|---|---:|---:|---|---|:-:|
+| **M1** | 61,292 | **61,292** | `79a07b46…b393076` | `79a07b46…b393076` | ✅ **MATCH** |
+| **M2** | 70,656 | **70,656** | `97ccab1c…5260390` | `97ccab1c…5260390` | ✅ **MATCH** |
 
-### 2B.1 Why no hash is recorded
+The digests were computed from the received bytes, not read from any accompanying declaration, and the
+comparison target came from the task text — an independent channel from the files themselves. The
+`expected_byte_size` / `expected_sha256` fields in `B02_V0_4_MODEL_CONTRACT.json` are retained
+alongside the now-populated `byte_size` / `sha256` fields, so the prediction and its confirmation stay
+separately auditable.
 
-The two files **have not reached this execution environment across two delivery attempts.** The
-session upload directory holds no file matching `SB_K5*montaj*` or `*montaj*`, and its newest batch
-still predates Stage 2.1. This is the same artifact-handoff class of failure documented at §5 — a
-delivery-channel gap, not an absent artifact.
+### 2B.1 Delivery history
 
-**No SHA-256 or byte size is computed, and no frozen copy exists.** A fabricated or assumed digest
-would be worse than none: it would look like provenance while carrying none. The verified columns are
-left explicitly empty so that completing the freeze fills a hole rather than overwriting a fiction.
+Three attempts were needed. The record is kept because it shows what was and was not asserted while
+the evidence was missing.
 
-### 2B.1a A near-miss that was deliberately rejected
+| Attempt | Stage | Outcome |
+|---|---|---|
+| 1 | 2.1 | not delivered — nothing recorded, no hash estimated |
+| 2 | 2.1A | not delivered — expected identities recorded as explicitly unverified targets |
+| 3 | this run | **delivered and frozen** — bytes received, hashed independently, both match |
 
-A bounded search for `.pptx` files in the 55–80 KB band returned exactly one candidate:
-`BARIAH_REVIEW_8SLIDES.pptx` at **68,710 bytes**. It is neither 61,292 nor 70,656, it is a different
-artifact from an earlier workstream, and it was **not** adopted. Recording this matters: a
-size-adjacent file in the same directory is precisely the substitution that would silently corrupt
-the evidence chain.
+Throughout attempts 1 and 2 the `sha256` fields stayed `null`. No digest was ever fabricated, and a
+size-adjacent candidate found during attempt 2 — `BARIAH_REVIEW_8SLIDES.pptx` at 68,710 bytes, from an
+earlier workstream — was deliberately **not** adopted. That rejection is what made this run a
+verification rather than a first assertion.
+
+The files arrived as two direct attachments rather than inside the announced `B02_MONTAGE_HANDOFF.zip`,
+so there was no `MANIFEST.txt` to cross-check against. The comparison was made against the expected
+identities in the task text instead, which is the stronger check of the two: a manifest travelling
+inside the same archive as the files it describes cannot detect a substitution of both together.
 
 ### 2B.2 What is *not* blocked by this
 

@@ -7401,12 +7401,14 @@
     ],
     "modelled_as_b02_screen": false,
     "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5_montaj_v1.pptx",
-    "byte_size": null,
-    "sha256": null,
-    "freeze_status": "PENDING_ARTIFACT_DELIVERY — not delivered across two attempts (Stage 2.1, Stage 2.1A). Expected identity declared but unverified; no bytes received, so nothing was hashed.",
+    "byte_size": 61292,
+    "sha256": "79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076",
+    "freeze_status": "FROZEN — byte-identical copy, independently hashed; matches the declared identity",
     "expected_byte_size": 61292,
     "expected_sha256": "79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076",
-    "expected_values_source": "Declared in the Stage 2.1A task text as a cross-check aid. NOT an independently computed digest and NOT provenance. byte_size and sha256 remain null until the received bytes are hashed here."
+    "expected_values_source": "Declared in the Stage 2.1A task text as a cross-check aid. NOT an independently computed digest and NOT provenance. byte_size and sha256 remain null until the received bytes are hashed here.",
+    "identity_verified": true,
+    "package_validity": "valid OOXML PresentationML package (zipfile.testzip clean)"
    },
    {
     "ref": "M2",
@@ -7423,12 +7425,14 @@
     ],
     "modelled_as_b02_screen": false,
     "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5PL6_montaj_v1.pptx",
-    "byte_size": null,
-    "sha256": null,
-    "freeze_status": "PENDING_ARTIFACT_DELIVERY — not delivered across two attempts (Stage 2.1, Stage 2.1A). Expected identity declared but unverified; no bytes received, so nothing was hashed.",
+    "byte_size": 70656,
+    "sha256": "97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390",
+    "freeze_status": "FROZEN — byte-identical copy, independently hashed; matches the declared identity",
     "expected_byte_size": 70656,
     "expected_sha256": "97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390",
-    "expected_values_source": "Declared in the Stage 2.1A task text as a cross-check aid. NOT an independently computed digest and NOT provenance. byte_size and sha256 remain null until the received bytes are hashed here."
+    "expected_values_source": "Declared in the Stage 2.1A task text as a cross-check aid. NOT an independently computed digest and NOT provenance. byte_size and sha256 remain null until the received bytes are hashed here.",
+    "identity_verified": true,
+    "package_validity": "valid OOXML PresentationML package (zipfile.testzip clean)"
    }
   ],
   "flags": {
@@ -7457,8 +7461,20 @@
     "stage": "2.1A",
     "result": "NOT_DELIVERED",
     "note": "Expected sizes and SHA-256 supplied in the task text; recorded as expected_* fields only. A size-adjacent PPTX (BARIAH_REVIEW_8SLIDES.pptx, 68,710 B) was found and deliberately NOT adopted."
+   },
+   {
+    "stage": "2.1B",
+    "result": "DELIVERED_AND_FROZEN",
+    "note": "Two direct attachments rather than the announced B02_MONTAGE_HANDOFF.zip, so no MANIFEST.txt was available; verified against the task-text identities instead, which is an independent channel from the files themselves."
    }
-  ]
+  ],
+  "freeze": {
+   "COURSE_MONTAGE_HASH_RECORDED": true,
+   "PL06_MONTAGE_HASH_RECORDED": true,
+   "MONTAGE_FILES_FROZEN_ON_DISK": 2,
+   "frozen_date": "2026-08-01",
+   "note": "Provenance closure only. No model semantics changed: the rulings that depend on montage content were adopted at Stage 2.1 from task-supplied content and are untouched."
+  }
  },
  "amended_stage_2_1": {
   "date": "2026-08-01",

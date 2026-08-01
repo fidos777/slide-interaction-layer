@@ -1580,20 +1580,17 @@ SOURCE_ASSET_COUNT= 14   bound = 14
 
 ## 9.1 Model validation
 
-**Stage 2 structural model — 93 of 93 checks pass** (source binding, family assignment, depth
-semantics, graph integrity, control contracts, notes policy, cast, quiz, Tamat).
+**Stage 2 structural model — 95 of 95 checks pass.**
+**Stage 2.1 context amendment — 76 of 76 checks pass.**
 
-**Stage 2.1 context amendment — 69 of 72 checks pass.** The three failures share one root cause and
-one only:
+The montage evidence freeze is closed. The three checks that failed while the artifacts were
+undelivered now pass against real bytes:
 
 ```
-COURSE_MONTAGE_HASH_RECORDED  = false   ← files not delivered to this execution environment
-PL06_MONTAGE_HASH_RECORDED    = false   ← same
-MONTAGE_FILES_FROZEN_ON_DISK  = 0 of 2  ← same
+COURSE_MONTAGE_HASH_RECORDED  = true
+PL06_MONTAGE_HASH_RECORDED    = true
+MONTAGE_FILES_FROZEN_ON_DISK  = 2 of 2
 ```
-
-Everything the montages *rule on* is recorded; only their bytes are missing. See
-`B02_V0_4_INPUT_FREEZE.md` §2B and decision `B02-D-27`.
 
 ```
 COURSE_MONTAGE_MODELLED_AS_B02_SCREEN = false   PL06_MONTAGE_MODELLED_AS_B02_SCREEN = false
@@ -1623,6 +1620,25 @@ GENERATOR_FILES_CHANGED = 0                     POWERPOINT_FILES_GENERATED = 0
 COMPONENTS_PROPAGATED = 0                       NEW_CANONICAL_PATTERN_IDS_MINTED = 0
 ```
 
+### Two validator corrections made at the freeze
+
+Closing the freeze exposed two defects in the harness itself. Both were corrected in the direction of
+**more** strictness, not less.
+
+| Was | Problem | Now |
+|---|---|---|
+| `POWERPOINT_FILES_GENERATED` counted every touched `.pptx` | It could not tell **generated output** from **received evidence**, so freezing the two montages read as generating two decks | Counts only `.pptx` outside the frozen-evidence directory, **plus** two new checks: every excluded file must be a known frozen artifact (`UNEXPECTED_EVIDENCE_PPTX`) whose on-disk bytes still hash to the verified digest (`EVIDENCE_PPTX_HASHES_STILL_VALID`) |
+| `D27_MONTAGE_FREEZE` asserted `PENDING_ARTIFACT_DELIVERY` | Correct while blocked; stale once closed | Asserts the terminal state `RESOLVED_ARTIFACT_FROZEN`, **plus** `D27_RESOLUTION_HASHES_MATCH_DISK` re-hashing every artifact the register claims to have frozen, and `U07_RESOLVED` |
+
+The first correction is the one that matters. A check that cannot distinguish a file you *made* from a
+file you *received* will either block every evidence freeze or, if relaxed carelessly, stop noticing
+generated decks. The replacement does neither: it still asserts zero generated PowerPoint, and it now
+also asserts that the evidence files are exactly the two expected ones and that their bytes have not
+drifted since they were hashed.
+
+Check counts grew accordingly: Stage 2 93 → 95, Stage 2.1 72 → 76. Every one of the original checks
+still runs, and none was weakened.
+
 ### How the spoken / non-spoken split is verified
 
 **Not by whole-document grep.** The harness walks structured fields:
@@ -1635,10 +1651,6 @@ COMPONENTS_PROPAGATED = 0                       NEW_CANONICAL_PATTERN_IDS_MINTED
 | `NON_SPOKEN_FAMILY_WITH_SPOKEN_CONTEXT = 0` | cross-checks `notes_policy_family` against `notes_context_spoken` so a policy cannot silently disagree with its family |
 | `MONTAGE_MODELLED_AS_SCREEN_IDENTITY = 0` | scans screen and state **identity** fields only — S03 legitimately *references* the Course Montage in its continuity rule, and a textual scan would have flagged that reference as if it were a screen |
 | `SCREEN_COUNT_EXCLUDES_MONTAGES` | asserts the screen count is still 29 |
-
-The montage check is worth naming: the first version of it searched the whole screen array for
-"Montage" and failed on S03's continuity text. A reference to upstream context is not a screen. The
-check now looks at identity fields, source bindings and interaction-item bindings instead.
 
 
 ---
