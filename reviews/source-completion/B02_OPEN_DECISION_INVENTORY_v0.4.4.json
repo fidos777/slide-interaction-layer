@@ -1,0 +1,148 @@
+{
+ "inventory": "B02_OPEN_DECISION_INVENTORY_v0.4.4",
+ "supersedes": "B02_OPEN_DECISION_INVENTORY_v0.4.3",
+ "stage": "Stage 4.2E-A",
+ "evidence_date": "2026-08-01",
+ "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
+ "deck_sha256": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+ "totals": {
+  "OPEN_DECISIONS": 3,
+  "BARIAH_OPEN_DECISIONS": 0,
+  "FIRDAUS_LMS_OPEN_DECISIONS": 0,
+  "SOURCE_AUTHORITY_OPEN_DECISIONS": 3,
+  "CLOSED_THIS_STAGE": 8,
+  "CLOSED_BY_BARIAH": 7,
+  "CLOSED_BY_LMS_OWNER": 1,
+  "BLOCKING_CURRENT_BARIAH_REVIEW": 0,
+  "BLOCKING_POWERPOINT_SMOKE": 0,
+  "BLOCKING_MMD_BUILD": 1,
+  "BLOCKING_CANONICAL_FREEZE": 3,
+  "BLOCKING_PRODUCTION": 3,
+  "RESOLVED_BY_CC_IN_THIS_STAGE": 0
+ },
+ "closed_this_stage": [
+  {
+   "id": "OD-01",
+   "title": "Eight remaining component-main visual decisions",
+   "authority": "Bariah",
+   "closed_by": "D2 (6:52 PM) + D3 (7:03 PM)",
+   "resolution": "COMPONENT_MAIN_VISUAL_REQUIREMENT = REQUIRED, several smaller visuals as an overview. All 9 records move PENDING_HUMAN -> RESOLVED_BY_BARIAH.",
+   "decision_id": "B02-BARIAH-20260801-COMPONENT-MAIN-VISUAL-02",
+   "implementation": "IMPLEMENTATION_REQUIRED_V0_4_4"
+  },
+  {
+   "id": "OD-01b",
+   "title": "13-page component-main visual persistence gap",
+   "authority": "Bariah",
+   "closed_by": "D3 (7:03 PM)",
+   "resolution": "TECHNICAL_GAP = CONFIRMED, SEMANTIC_OBLIGATION = NOW_CONFIRMED. Every runtime state of a component-main screen retains the same overview visual.",
+   "decision_id": "B02-BARIAH-20260801-VISUAL-STATE-PERSISTENCE-01",
+   "implementation": "IMPLEMENTATION_REQUIRED_V0_4_4 — 13 pages, pinned target list"
+  },
+  {
+   "id": "OD-02",
+   "title": "Exact B02 cast-name provenance — Alya / Encik Rahman",
+   "authority": "Bariah",
+   "closed_by": "D3 (7:03 PM)",
+   "resolution": "CONFIRMED_BARIAH_DIRECT. Reuse APPROVED_WHERE_CONTEXTUALLY_APPROPRIATE across other Bahagian/Topik/PL. Hilmi unchanged.",
+   "decision_id": "B02-BARIAH-20260801-CAST-PROVENANCE-02",
+   "implementation": "REGISTER_UPDATE_ONLY"
+  },
+  {
+   "id": "OD-03",
+   "title": "Quiz rationale placement",
+   "authority": "Bariah",
+   "closed_by": "D3 (7:03 PM)",
+   "resolution": "Learner feedback after submission only: 'Pilihan jawapan tepat.' / 'Pilihan jawapan tidak tepat.' Production metadata YES, Speaker Notes NO.",
+   "decision_id": "B02-BARIAH-20260801-QUIZ-RATIONALE-01",
+   "implementation": "IMPLEMENTATION_REQUIRED_V0_4_4"
+  },
+  {
+   "id": "OD-04",
+   "title": "Micro-control VO scope",
+   "authority": "Bariah",
+   "closed_by": "D3 (7:03 PM)",
+   "resolution": "SCREEN_LEVEL_CLICK_VO = REQUIRED, MICRO_CONTROL_VO = NOT_REQUIRED. The conservative Stage 4.2B reading is ratified.",
+   "decision_id": "B02-BARIAH-20260801-MICRO-CONTROL-VO-01",
+   "implementation": "CONFORMANCE_TARGET_V0_4_4 — denylist gate, no copy change"
+  },
+  {
+   "id": "OD-05",
+   "title": "Two S01 Speaker-Notes punctuation confirmations",
+   "authority": "Bariah",
+   "closed_by": "D3 (7:03 PM)",
+   "resolution": "'Buang noktah' — trailing full stops removed from lines 1 and 2. Line 3 keeps its full stop. Three-block structure preserved.",
+   "decision_id": "B02-BARIAH-20260801-S01-PUNCTUATION-01",
+   "implementation": "IMPLEMENTATION_REQUIRED_V0_4_4"
+  },
+  {
+   "id": "OD-06",
+   "title": "\"Skrin: Tambahan Text\" interpretation",
+   "authority": "Bariah",
+   "closed_by": "D1 (6:48 PM)",
+   "resolution": "Same screen, additional text, follows the VO. NEW_LEARNER_SCREEN = false; LEARNER_SCREENS = 29 and REVIEW_PAGES = 100 unchanged.",
+   "decision_id": "B02-D-TAMBAHAN-TEXT-01",
+   "implementation": "IMPLEMENTATION_REQUIRED_V0_4_4"
+  },
+  {
+   "id": "OD-07",
+   "title": "Tamat physical navigation mechanism",
+   "authority": "Firdaus / LMS owner",
+   "closed_by": "LMS-owner ruling, Stage 4.2E-A",
+   "resolution": "Learner closes the lesson/content window and returns to the course menu, then selects the next section. Automatic next route and LMS shell Next both recorded as NOT PROVEN. Learner-facing copy unchanged.",
+   "decision_id": "B02-U-03",
+   "implementation": "METADATA_ONLY_V0_4_4"
+  }
+ ],
+ "open": [
+  {
+   "id": "OD-08",
+   "title": "MS2680 verification",
+   "authority": "Source authority — CAIR / module owner",
+   "current_safe_treatment": "The MS2680 sentence is OMITTED from the S02 dialogue (U-01) and is not replaced by any other standards claim. Nothing in the deck asserts a standard.",
+   "evidence_required": "Whether MS2680 is the correct standard reference, and the clause it supports.",
+   "impact_if_unresolved": "A standards citation stays out of the courseware. Safe, but a required reference may be missing.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": false,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_SOURCE_AUTHORITY"
+  },
+  {
+   "id": "OD-09",
+   "title": "B02-CAIR-INT-001 — canonical module DOCX integrity",
+   "authority": "Firdaus / CAIR — explicitly not Bariah's to close",
+   "current_safe_treatment": "The 26-row source baseline is derived from the hashed PDF pages 256-269 and is frozen. SOURCE_ROW_COUNT may change only on a proven CLASS-9 correction. SOURCE_INTEGRITY_FULLY_VERIFIED is not asserted.",
+   "evidence_required": "A verified canonical module DOCX, or confirmation that the hashed PDF is canonical for B02.",
+   "impact_if_unresolved": "Canonical freeze cannot be declared. Open since Stage 1.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": false,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_FIRDAUS_CAIR"
+  },
+  {
+   "id": "OD-10",
+   "title": "L-01 / PL06 pronunciation precedence ratification",
+   "authority": "Source governance — Universal S&G v1.0 vs B02 S&G v0.2 precedence",
+   "current_safe_treatment": "Display token PL06 unchanged. Proposed spoken form 'PL enam' is RESERVED_NOT_ACTIVE and is implemented nowhere. The generic course rule string stays in the S01 production panel; S01 Notes and pronunciation metadata are untouched.",
+   "evidence_required": "Ratification that the Universal S&G v1.0 pronunciation rule takes precedence over B02 S&G v0.2, which is silent on pronunciation.",
+   "impact_if_unresolved": "TTS would voice PL06 with no pronunciation instruction attached.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_SOURCE_GOVERNANCE_RATIFICATION",
+   "note": "Promoted to a first-class open decision at Stage 4.2E-A. It was previously carried inside the pronunciation register as IMPLEMENTATION_REQUIRED_NEXT_STAGE; that understated it, because the precedence question is not CC's to settle."
+  }
+ ]
+}

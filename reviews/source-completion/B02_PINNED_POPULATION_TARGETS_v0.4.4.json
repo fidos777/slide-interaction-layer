@@ -1,0 +1,351 @@
+{
+ "register": "B02_PINNED_POPULATION_TARGETS_v0.4.4",
+ "authority": "BARIAH_DIRECT_SCREENSHOT — D2 (6:52 PM) and D3 (7:03 PM)",
+ "ruling": "Component-main visual REQUIRED. All-viewed and return states retain the same component-main overview visual.",
+ "population_selector": "learner_screen_id whose screen_role is COMPONENT_MAIN_EXPLANATION, COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST or COMPONENT_EXPLANATION_WITH_SPEC_LIST, then EVERY runtime state bound to that learner_screen_id",
+ "selector_is_not": "review-page classification. semantic_screen_subtype, review_page_role and visual_requirement all vary across the states of one screen and would re-create the blindness this list exists to close.",
+ "totals": {
+  "COMPONENT_MAIN_SCREENS": 9,
+  "STATE_PAGES_IN_POPULATION": 22,
+  "STATE_PAGES_NEEDING_CHANGE": 13,
+  "TECHNICAL_GAP": "CONFIRMED",
+  "SEMANTIC_OBLIGATION": "NOW_CONFIRMED",
+  "IMPLEMENTATION_REQUIRED_V0_4_4": true,
+  "REPAIRED_IN_THIS_STAGE": false
+ },
+ "targets": [
+  {
+   "learner_screen_id": "SCR_BBQ_PIT_MAIN",
+   "component_id": "BBQ_PIT",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_SPEC_LIST",
+   "execution_family": "FAMILY_P2",
+   "base_review_page": "RP-085",
+   "state_pages_total": 6,
+   "state_pages_needing_change": 5,
+   "base_visual_direction": [
+    "[Visual: Foto jadual spesifikasi BBQ Pit, modul ms 249. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-085",
+     "runtime_state_id": "ST_BBQ_PIT_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_SPEC_LIST_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    },
+    {
+     "review_page_id": "RP-086",
+     "runtime_state_id": "ST_BBQ_PIT_CAT01",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-087",
+     "runtime_state_id": "ST_BBQ_PIT_CAT02",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-088",
+     "runtime_state_id": "ST_BBQ_PIT_CAT03",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-089",
+     "runtime_state_id": "ST_BBQ_PIT_CAT04",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-090",
+     "runtime_state_id": "ST_BBQ_PIT_ALL_CATEGORIES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "component_id": "DRINKING_FOUNTAIN",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
+   "execution_family": "FAMILY_P1",
+   "base_review_page": "RP-071",
+   "state_pages_total": 2,
+   "state_pages_needing_change": 1,
+   "base_visual_direction": [
+    "[Visual: Foto jadual spesifikasi drinking fountain, modul ms 248–249. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-071",
+     "runtime_state_id": "ST_DRINKING_FOUNTAIN_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    },
+    {
+     "review_page_id": "RP-084",
+     "runtime_state_id": "ST_DRINKING_FOUNTAIN_ALL_EXAMPLES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
+   "component_id": "KEMUDAHAN_AWAM",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "execution_family": "FAMILY_S",
+   "base_review_page": "RP-021",
+   "state_pages_total": 1,
+   "state_pages_needing_change": 0,
+   "base_visual_direction": [
+    "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: tiga sel berlabel Tandas Awam| Surau | Bangunan Interpretatif. Tidak dilukis, tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-021",
+     "runtime_state_id": "ST_KEMUDAHAN_AWAM_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
+   "component_id": "KERUSI_TAMAN",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
+   "execution_family": "FAMILY_P1",
+   "base_review_page": "RP-035",
+   "state_pages_total": 2,
+   "state_pages_needing_change": 1,
+   "base_visual_direction": [
+    "[Visual: Foto jadual spesifikasi kerusi taman, modul ms 242–243. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-035",
+     "runtime_state_id": "ST_KERUSI_TAMAN_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    },
+    {
+     "review_page_id": "RP-050",
+     "runtime_state_id": "ST_KERUSI_TAMAN_ALL_EXAMPLES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
+   "component_id": "PAPAN_TANDA",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_SPEC_LIST",
+   "execution_family": "FAMILY_P2",
+   "base_review_page": "RP-051",
+   "state_pages_total": 6,
+   "state_pages_needing_change": 5,
+   "base_visual_direction": [
+    "[Visual: Rajah 25 dan Rajah 26, modul ms 245. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-051",
+     "runtime_state_id": "ST_PAPAN_TANDA_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_SPEC_LIST_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    },
+    {
+     "review_page_id": "RP-052",
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT01",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-053",
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT02",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-054",
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT03",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-055",
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT04",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    },
+    {
+     "review_page_id": "RP-056",
+     "runtime_state_id": "ST_PAPAN_TANDA_ALL_CATEGORIES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "component_id": "STRUKTUR_PERSISIR_AIR",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "execution_family": "FAMILY_S",
+   "base_review_page": "RP-005",
+   "state_pages_total": 1,
+   "state_pages_needing_change": 0,
+   "base_visual_direction": [
+    "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "RESOLVED_BY_DIRECT_AUTHORITY",
+   "state_pages": [
+    {
+     "review_page_id": "RP-005",
+     "runtime_state_id": "ST_STRUKTUR_PERSISIR_AIR_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
+   "component_id": "STRUKTUR_TEDUHAN",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "execution_family": "FAMILY_S",
+   "base_review_page": "RP-013",
+   "state_pages_total": 1,
+   "state_pages_needing_change": 0,
+   "base_visual_direction": [
+    "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-013",
+     "runtime_state_id": "ST_STRUKTUR_TEDUHAN_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
+   "component_id": "TONG_SAMPAH",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
+   "execution_family": "FAMILY_P1",
+   "base_review_page": "RP-057",
+   "state_pages_total": 2,
+   "state_pages_needing_change": 1,
+   "base_visual_direction": [
+    "[Visual: Foto jadual spesifikasi tong sampah, modul ms 246–247. Tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-057",
+     "runtime_state_id": "ST_TONG_SAMPAH_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    },
+    {
+     "review_page_id": "RP-070",
+     "runtime_state_id": "ST_TONG_SAMPAH_ALL_EXAMPLES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+     "is_base": false,
+     "base_visual_present": false,
+     "needs_change": true
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
+   "component_id": "WATER_FEATURE",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "execution_family": "FAMILY_S",
+   "base_review_page": "RP-027",
+   "state_pages_total": 1,
+   "state_pages_needing_change": 0,
+   "base_visual_direction": [
+    "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: keratan rentas dengan pam,penapis, paip dan saliran berlabel. Tidak dilukis, tidak dibenamkan.]"
+   ],
+   "visual_status_before": "PENDING_HUMAN",
+   "state_pages": [
+    {
+     "review_page_id": "RP-027",
+     "runtime_state_id": "ST_WATER_FEATURE_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "is_base": true,
+     "base_visual_present": true,
+     "needs_change": false
+    }
+   ]
+  }
+ ]
+}

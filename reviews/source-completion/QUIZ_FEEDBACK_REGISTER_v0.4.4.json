@@ -1,0 +1,48 @@
+{
+ "register": "QUIZ_FEEDBACK_REGISTER_v0.4.4",
+ "evidence_date": "2026-08-01",
+ "authority": "Bariah — WhatsApp 7:03 PM",
+ "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+ "evidence_sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+ "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+ "question_ms": "Rationale jawapan perlu diletakkan dalam production metadata, Speaker Notes, atau learner feedback selepas penghantaran?",
+ "answer_verbatim": "Rationale jawapan, hanya maklum balas: Pilihan jawapan tepat. / Pilihan jawapan tidak tepat. - production metadata, learner feedback selepas penghantaran. Speaker Notes tidak perlu.",
+ "controlled_fields": {
+  "correct_feedback": "Pilihan jawapan tepat.",
+  "incorrect_feedback": "Pilihan jawapan tidak tepat.",
+  "trailing_full_stop": true,
+  "source": "verbatim from D3; one controlled field per outcome, not typed per question"
+ },
+ "placement": {
+  "PRODUCTION_METADATA": "YES",
+  "LEARNER_FEEDBACK_AFTER_SUBMISSION": "REQUIRED",
+  "SPEAKER_NOTES": "NO",
+  "QUIZ_RATIONALE_SPEAKER_NOTES": "NOT_REQUIRED",
+  "QUIZ_FEEDBACK_VO": "NOT_REQUIRED unless separately authorised",
+  "QUIZ_FEEDBACK_AFTER_SUBMISSION": "REQUIRED"
+ },
+ "detailed_rationale": {
+  "retained": true,
+  "location": "production metadata only",
+  "in_speaker_notes": false,
+  "shown_to_learner": false,
+  "note": "The five per-question rationales already in the production panel are kept. Bariah's ruling removes them from the learner surface and from the Notes, not from the record."
+ },
+ "micro_control_vo_scope": {
+  "SCREEN_LEVEL_CLICK_VO": "REQUIRED",
+  "MICRO_CONTROL_VO": "NOT_REQUIRED",
+  "answer_verbatim": "Tidak. VO cuma arahan screen level \"Klik pada setiap ...",
+  "denylist": [
+   "Tutup",
+   "Kembali",
+   "Semak Jawapan",
+   "Ulang Kuiz",
+   "close icon instructions",
+   "other micro-controls"
+  ],
+  "production_metadata_describing_controls": "RETAINED — only spoken VO is excluded",
+  "conformance_target_v0_4_4": "a denylist gate so these controls cannot be silently added to spoken VO later"
+ },
+ "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+ "deck_changed_in_this_stage": false
+}

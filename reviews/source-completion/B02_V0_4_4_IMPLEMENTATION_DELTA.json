@@ -1,0 +1,433 @@
+{
+ "delta": "B02_V0_4_4_IMPLEMENTATION_DELTA",
+ "stage_authored": "Stage 4.2E-A",
+ "evidence_date": "2026-08-01",
+ "target_version": "v0.4.4",
+ "generated_in_this_stage": false,
+ "base_deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
+ "base_deck_sha256": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+ "authority_sources": {
+  "D1": "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png — 6:48 PM",
+  "D2": "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png — 6:52 PM",
+  "D3": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png — 7:03 PM",
+  "LMS": "Firdaus / LMS owner ruling, Stage 4.2E-A"
+ },
+ "structural_invariants": {
+  "REVIEW_PAGES": 100,
+  "LEARNER_SCREENS": 29,
+  "RUNTIME_STATES": 100,
+  "INTERACTION_ITEMS": 54,
+  "SOURCE_ROWS": 26,
+  "SOURCE_ASSETS": 14,
+  "COMPONENTS": 9,
+  "SLIDES_MANUALLY_PATCHED": 0,
+  "NEW_CANONICAL_PATTERN_IDS_MINTED": 0
+ },
+ "totals": {
+  "ITEMS": 12,
+  "ITEMS_REQUIRING_DECK_CHANGE": 10,
+  "ITEMS_EXPLICITLY_NO_CHANGE": 2,
+  "NEW_QA_GATES": 44,
+  "NEW_MUTATION_FIXTURES": 23,
+  "PAGES_NEEDING_VISUAL_PERSISTENCE_REPAIR": 13,
+  "HUMAN_DECISIONS_SELF_RESOLVED": 0
+ },
+ "items": [
+  {
+   "item": 1,
+   "title": "Slide 5 — Asas Pembinaan on-screen and VO parity",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D1",
+   "changes_by_group": {
+    "controlled_content": [
+     "Add a controlled field on STRUKTUR_PERSISIR_AIR carrying heading 'Asas Pembinaan' and the two bullets VERBATIM from D1, with NO trailing full stop on either bullet.",
+     "Replace the compressed 4th display bullet 'Asas stabil dan rata, dengan saliran permukaan yang berkesan' with the full D1 wording.",
+     "ONE field derives both surfaces — on-canvas text and spoken VO — as with learner_interaction_instruction. Do not maintain two typed copies."
+    ],
+    "generator": [
+     "Render 'Asas Pembinaan' as a sub-heading with two sub-bullets on the component-main body, matching Bariah's corrected slide 5 layout.",
+     "Measure the body block from wrapped text; the screen gains two lines."
+    ],
+    "notes_writer": [
+     "The VO already states both facts. Assert parity rather than adding copy: the canvas text must be derivable from the same field the VO uses."
+    ],
+    "model": [
+     "No change. NEW_LEARNER_SCREEN = false, no new runtime-state family."
+    ]
+   },
+   "qa_gates": [
+    "SLIDE5_ASAS_PEMBINAAN_HEADING_PRESENT",
+    "SLIDE5_ASAS_PEMBINAAN_BULLETS_EXACT",
+    "SLIDE5_BULLETS_CARRY_NO_TRAILING_PERIOD",
+    "SLIDE5_CANVAS_VO_PARITY",
+    "LEARNER_SCREENS_UNCHANGED",
+    "REVIEW_PAGES_UNCHANGED"
+   ],
+   "mutation_fixtures": [
+    "remove the Asas Pembinaan heading",
+    "truncate bullet 1 to the old compressed wording",
+    "add a trailing full stop to a bullet"
+   ],
+   "rendered_inspection_targets": [
+    "RP-005 full-page render"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slide 5"
+   ],
+   "note": "Bariah's 4:40 PM corrected slide already showed this structure; the v0.4.3 deck collapsed it to one compressed bullet. D1 makes the omission explicit."
+  },
+  {
+   "item": 2,
+   "title": "Component-main overview visuals — REQUIRED for all nine",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "changes_by_group": {
+    "visual_policy": [
+     "COMPONENT_MAIN_SCREEN visual_requirement CONDITIONAL -> REQUIRED.",
+     "Retire the PROVISIONAL_VISUAL_PROPOSAL marker; proposal_class becomes None.",
+     "Treatment field = SEVERAL_SMALLER_VISUALS_AS_OVERVIEW.",
+     "Subjects come from the module's own source-attested component visual, now ratified. D2 confirms requirement and treatment, NOT new subjects — invent nothing."
+    ],
+    "generator": [
+     "Render the component-main direction as an overview set rather than a single grey line, sized smaller than a popup panel."
+    ],
+    "model": [
+     "No change."
+    ]
+   },
+   "qa_gates": [
+    "COMPONENT_MAIN_VISUAL_REQUIREMENT_IS_REQUIRED",
+    "COMPONENT_MAINS_PENDING_HUMAN = 0",
+    "COMPONENT_MAINS_RESOLVED_BY_BARIAH = 9",
+    "COMPONENT_MAIN_SELF_RESOLVED_BY_CC = 0",
+    "COMPONENT_MAIN_OVERVIEW_TREATMENT_APPLIED",
+    "NEW_VISUAL_SUBJECTS_INVENTED = 0"
+   ],
+   "mutation_fixtures": [
+    "downgrade one component main to CONDITIONAL",
+    "replace a component-main subject with a generated 'Pelbagai {name}' string"
+   ],
+   "rendered_inspection_targets": [
+    "all 9 component-main base pages"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slides 5, 13, 21, 27, 34, 51, 62, 72, 85"
+   ]
+  },
+  {
+   "item": 3,
+   "title": "Example / information popup — larger, focused visual",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "changes_by_group": {
+    "visual_policy": [
+     "EXAMPLE_POPUP and INFORMATION_POPUP treatment = LARGE_FOCUSED.",
+     "Requirement itself unchanged (REQUIRED since the 4:37 PM ruling)."
+    ],
+    "generator": [
+     "Widen the popup visual panel and increase the direction's prominence relative to the component-main overview, so the size relationship Bariah describes is visible: smaller and many on the main, larger and single in the popup."
+    ]
+   },
+   "qa_gates": [
+    "EXAMPLE_POPUP_VISUAL_TREATMENT_IS_LARGE_FOCUSED",
+    "POPUP_VISUAL_PANEL_LARGER_THAN_COMPONENT_MAIN_OVERVIEW",
+    "EXAMPLE_POPUPS_WITHOUT_VISUAL = 0"
+   ],
+   "mutation_fixtures": [
+    "shrink a popup visual panel below the component-main overview size",
+    "remove a popup visual panel"
+   ],
+   "rendered_inspection_targets": [
+    "a popup page from each of Family S and Family P1"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slides 7, 36"
+   ]
+  },
+  {
+   "item": 4,
+   "title": "Specification popup — still no visual",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2 (confirms the 4:37 PM ruling)",
+   "changes_by_group": {
+    "visual_policy": [
+     "SPECIFICATION_POPUP remains NOT_REQUIRED. D2 does not reopen it.",
+     "No change to code; this item exists so the gate is not weakened by the surrounding work on the other popup subtypes."
+    ]
+   },
+   "qa_gates": [
+    "SPECIFICATION_POPUPS_WITH_UNNECESSARY_VISUAL_PANEL = 0",
+    "NOT_REQUIRED_VISUAL_POPUPS_FORCED_TO_HAVE_VISUAL = 0"
+   ],
+   "mutation_fixtures": [
+    "force a visual panel onto a specification popup (existing fixture R-009)"
+   ],
+   "rendered_inspection_targets": [
+    "a specification popup page"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slide 52"
+   ]
+  },
+  {
+   "item": 5,
+   "title": "Visual persistence through all-viewed and return states",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D3",
+   "changes_by_group": {
+    "runtime_state_persistence": [
+     "Derive the component-main visual from the LEARNER SCREEN, not from the page's runtime state classification — the same correction made for selection screens at Stage 4.2C.",
+     "13 pages across 5 screens currently lose it: see B02_PINNED_POPULATION_TARGETS_v0.4.4.json."
+    ],
+    "generator": [
+     "render_family_p1 and render_family_p2 must draw the component-main visual on every state of the screen, including specification-popup and all-viewed states."
+    ],
+    "visual_policy": [
+     "Expose a screen-level accessor so generator and validator share ONE population helper."
+    ]
+   },
+   "qa_gates": [
+    "COMPONENT_MAIN_STATES_MISSING_OVERVIEW_VISUAL = 0",
+    "COMPONENT_MAIN_STATE_PAGES_EVALUATED = 22",
+    "COMPONENT_MAIN_SCREENS_IDENTIFIED = 9"
+   ],
+   "mutation_fixtures": [
+    "remove the overview visual from a specification-popup state",
+    "remove it from an all-viewed state",
+    "remove it from a return state whose review_page_role differs from the base"
+   ],
+   "rendered_inspection_targets": [
+    "all 13 pages in the pinned target list"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slides 50, 52-56, 70, 84, 86-90"
+   ]
+  },
+  {
+   "item": 6,
+   "title": "Alya and Encik Rahman — provenance upgrade",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D3",
+   "changes_by_group": {
+    "interaction_metadata": [
+     "CAST_PROVENANCE_REGISTER: CONFIRMED_LOCAL_ARTIFACT -> CONFIRMED_BARIAH_DIRECT.",
+     "DIRECT_BARIAH_NAME_PROVENANCE: PENDING -> CONFIRMED.",
+     "Add REUSE_POLICY = APPROVED_WHERE_CONTEXTUALLY_APPROPRIATE with scope Bahagian/Topik/PL."
+    ],
+    "generator": [
+     "No change. Names already render; only their provenance class moves."
+    ]
+   },
+   "qa_gates": [
+    "CAST_PROVENANCE_CONFIRMED_BARIAH_DIRECT",
+    "HILMI_PROVENANCE_UNCHANGED",
+    "CAST_AUTO_INSERTED_INTO_UNRELATED_SCREENS = 0"
+   ],
+   "mutation_fixtures": [
+    "insert Alya into a screen with no cast binding"
+   ],
+   "rendered_inspection_targets": [
+    "RP-002 (S02 scenario)"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slide 2"
+   ],
+   "note": "Reuse is conditional. 'jika bersesuaian' is a judgement retained by the reviewer; no automatic propagation to other Bahagian/Topik/PL."
+  },
+  {
+   "item": 7,
+   "title": "Exact quiz feedback strings",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D3",
+   "changes_by_group": {
+    "controlled_content": [
+     "correct_feedback = 'Pilihan jawapan tepat.'",
+     "incorrect_feedback = 'Pilihan jawapan tidak tepat.'",
+     "Both carry a trailing full stop, verbatim from D3."
+    ],
+    "quiz_feedback": [
+     "Learner feedback after submission renders exactly these two strings.",
+     "Replace the current per-question 'Pilihan jawapan tepat. / tidak tepat.' variants only if they differ from these strings verbatim."
+    ],
+    "generator": [
+     "Feedback derives from the controlled field, not from typed copy on the quiz pages."
+    ]
+   },
+   "qa_gates": [
+    "QUIZ_CORRECT_FEEDBACK_EXACT",
+    "QUIZ_INCORRECT_FEEDBACK_EXACT",
+    "QUIZ_FEEDBACK_STRINGS_FROM_CONTROLLED_FIELD",
+    "QUIZ_FEEDBACK_AFTER_SUBMISSION_PRESENT = 5"
+   ],
+   "mutation_fixtures": [
+    "reword one feedback string",
+    "drop the trailing full stop from a feedback string"
+   ],
+   "rendered_inspection_targets": [
+    "all 5 quiz question pages"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slides 93-97"
+   ]
+  },
+  {
+   "item": 8,
+   "title": "No quiz rationale in Speaker Notes",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D3",
+   "changes_by_group": {
+    "notes_writer": [
+     "Assert that no per-question rationale text reaches the Notes.",
+     "Detailed rationale is retained in PRODUCTION metadata only and is not deleted."
+    ],
+    "quiz_feedback": [
+     "QUIZ_RATIONALE_SPEAKER_NOTES = NOT_REQUIRED. QUIZ_FEEDBACK_VO = NOT_REQUIRED unless separately authorised."
+    ]
+   },
+   "qa_gates": [
+    "QUIZ_RATIONALE_IN_SPEAKER_NOTES = 0",
+    "QUIZ_FEEDBACK_IN_SPOKEN_VO = 0",
+    "QUIZ_RATIONALE_RETAINED_IN_PRODUCTION_PANEL = 5"
+   ],
+   "mutation_fixtures": [
+    "move a rationale string into a quiz page's Notes",
+    "add a feedback string to the spoken export"
+   ],
+   "rendered_inspection_targets": [
+    "all 5 quiz question pages, Notes and panel"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slides 93-97"
+   ]
+  },
+  {
+   "item": 9,
+   "title": "No micro-control VO",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D3",
+   "changes_by_group": {
+    "notes_writer": [
+     "Keep the bounded parity scope: only screen-level 'Klik pada setiap' instructions are spoken."
+    ],
+    "interaction_metadata": [
+     "Add an explicit conformance denylist for Tutup, Kembali, Semak Jawapan, Ulang Kuiz and close-icon instructions so they cannot be silently added to spoken VO later.",
+     "Production metadata describing control behaviour is NOT removed."
+    ]
+   },
+   "qa_gates": [
+    "MICRO_CONTROL_VO_STRINGS_IN_SPOKEN_EXPORT = 0",
+    "SCREEN_LEVEL_CLICK_VO_PRESENT",
+    "MICRO_CONTROL_DENYLIST_EVALUATED",
+    "MICRO_CONTROL_SCOPE_SELF_RESOLVED = 0"
+   ],
+   "mutation_fixtures": [
+    "add 'Klik Tutup untuk kembali' to a popup page's spoken VO",
+    "add 'Klik Semak Jawapan' to the quiz result VO"
+   ],
+   "rendered_inspection_targets": [
+    "a popup page, the quiz result page"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slides 7, 98"
+   ]
+  },
+  {
+   "item": 10,
+   "title": "S01 punctuation removal",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D3",
+   "changes_by_group": {
+    "model": [
+     "spoken_transcript_elements: drop the trailing full stop from PL06_TITLE and TOPIC_BAHAGIAN_TITLE. MULA_INSTRUCTION is unchanged and keeps its full stop.",
+     "Block count stays 3."
+    ],
+    "notes_writer": [
+     "No structural change; the three typed blocks are preserved."
+    ],
+    "oracle_registry": [
+     "Update the Stage 4.2C screenshot oracle's spoken_after list so the S01 gates assert the new strings."
+    ]
+   },
+   "qa_gates": [
+    "S01_LINE_1_NO_TRAILING_PERIOD",
+    "S01_LINE_2_NO_TRAILING_PERIOD",
+    "S01_LINE_3_TRAILING_PERIOD_RETAINED",
+    "SHOT_S01_PACKAGE_NOTES_EXACT",
+    "S01_SPOKEN_ELEMENTS = 3"
+   ],
+   "mutation_fixtures": [
+    "restore a trailing full stop to line 1",
+    "remove the full stop from line 3"
+   ],
+   "rendered_inspection_targets": [
+    "RP-001 Notes"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slide 1"
+   ],
+   "note": "Two Stage 4.2C oracle records (S1-c, S1-d) move MEDIUM punctuation confidence -> RESOLVED. Their transcription is superseded by a direct ruling, not corrected."
+  },
+  {
+   "item": 11,
+   "title": "Tamat close-window -> course-menu metadata",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "LMS_OWNER_RULING (not Bariah)",
+   "changes_by_group": {
+    "interaction_metadata": [
+     "Record in the production panel: 'Learner menutup lesson/content window untuk kembali ke course menu dan memilih bahagian pembelajaran seterusnya.'",
+     "Record AUTOMATIC_NEXT_ROUTE = not proven and LMS_SHELL_NEXT = not proven."
+    ],
+    "generator": [
+     "Learner-facing copy is NOT changed. 'Teruskan pembelajaran ke bahagian seterusnya.' stays exactly as is."
+    ]
+   },
+   "qa_gates": [
+    "TAMAT_LEARNER_COPY_UNCHANGED",
+    "TAMAT_NAVIGATION_METADATA_PRESENT",
+    "TAMAT_UNVERIFIED_PHYSICAL_NAVIGATION_CLAIM = 0"
+   ],
+   "mutation_fixtures": [
+    "put the close-window mechanism into the learner canvas",
+    "assert an automatic next route in the panel"
+   ],
+   "rendered_inspection_targets": [
+    "RP-100 canvas and panel"
+   ],
+   "powerpoint_resmoke_targets": [
+    "slide 100"
+   ],
+   "note": "Authority is Firdaus / LMS owner. Recorded under that authority, not as a Bariah ruling."
+  },
+  {
+   "item": 12,
+   "title": "PL06 pronunciation stays inactive",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "NONE — no ruling exists",
+   "changes_by_group": {
+    "model": [
+     "NO CHANGE."
+    ],
+    "notes_writer": [
+     "NO CHANGE."
+    ],
+    "interaction_metadata": [
+     "NO CHANGE. The generic course rule string stays in the S01 production panel exactly as it is."
+    ]
+   },
+   "qa_gates": [
+    "PL06_PRONUNCIATION_IMPLEMENTED = false",
+    "S01_NOTES_ALTERED_FOR_PRONUNCIATION = false"
+   ],
+   "mutation_fixtures": [
+    "none — a fixture would assert an unratified obligation"
+   ],
+   "rendered_inspection_targets": [
+    "none"
+   ],
+   "powerpoint_resmoke_targets": [
+    "none"
+   ],
+   "note": "PRECEDENCE_OVER_V0_2 = PENDING_SOURCE_GOVERNANCE_RATIFICATION, IMPLEMENTATION_STATUS = RESERVED_NOT_ACTIVE. Carried as open decision OD-10. Listed here so the generating stage does not implement it by momentum."
+  }
+ ]
+}

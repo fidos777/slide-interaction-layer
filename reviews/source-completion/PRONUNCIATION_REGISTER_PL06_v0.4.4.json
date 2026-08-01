@@ -1,0 +1,126 @@
+{
+ "register": "PRONUNCIATION_REGISTER_PL06_v0.4.4",
+ "scope": "K5 PL06 Topik 3 Bahagian 2 — Komponen Landskap",
+ "evidence_date": "2026-08-01",
+ "principle": "Display text and spoken form are separate fields. The frozen Bariah display text is never rewritten to encode pronunciation; the spoken form is carried as its own annotation.",
+ "tokens": [
+  {
+   "token": "PL06",
+   "display_form": "PL06",
+   "display_context": "S01 canvas body line and S01 Speaker Notes block 1",
+   "display_text_verbatim": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+   "spoken_form": "PL enam",
+   "spoken_text_required": "PL enam: Pengurusan Operasi Pembinaan Landskap.",
+   "forbidden_spoken_forms": [
+    "PL kosong enam",
+    "Pakej Latihan kosong enam",
+    "P-L-zero-six",
+    "P-L-sifar-enam",
+    "PL zero six"
+   ],
+   "permitted_alternate_spoken_form": "Pakej Latihan enam",
+   "permitted_alternate_note": "The governing rule offers 'Pakej Latihan enam' or 'PL enam'. Bariah's 1 August screenshot shortened the DISPLAY form from 'Pakej Latihan 06' to 'PL06'; it says nothing about the spoken form, so both remain permitted and 'PL enam' is recorded as the form that matches the display.",
+   "authority": "K5 course-wide VO pronunciation rule, carried in decision B02-L-01",
+   "authority_status": "confirmed-CAIR-provisional",
+   "evidence_locator": [
+    "B02_PRE_STAGE2_RULING_EVIDENCE.md §L-01, citing I-12 §5.1 box 'FORMAT VO TAJUK TOPIK': \"VO mesti membaca PL secara penuh: 'Pakej Latihan satu' atau 'PL satu', BUKAN 'PL kosong satu'. Ini terpakai untuk semua PL dan topik.\"",
+    "I-12 §4.1 box 'ARAHAN VO MONTAJ KURSUS': \"VO mesti menyebut 'PL satu' (bukan 'PL kosong satu')\"",
+    "I-12 §6.5 mandatory MMD note string: \"VO PL satu bukan PL kosong satu, dan seterusnya.\""
+   ],
+   "evidence_class": "SOURCE_ATTESTED_COURSE_RULE",
+   "applicable_screens": [
+    "SCR_S01"
+   ],
+   "applicable_notes_blocks": [
+    {
+     "runtime_state_id": "ST_S01_BASE",
+     "element": "PL06_TITLE",
+     "order": 1,
+     "block_type": "SPOKEN_CONTENT_VO",
+     "spoken": true,
+     "display_text": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+     "spoken_annotation_present_in_deck": false
+    }
+   ],
+   "screens_where_pl06_appears_but_is_not_spoken": [
+    {
+     "screen": "SCR_S01",
+     "surface": "canvas body line",
+     "spoken": false,
+     "note": "visual only; the spoken transcript is the Notes block above"
+    },
+    {
+     "screen": "SCR_TAMAT",
+     "surface": "canvas hierarchy line 'PL06:'",
+     "spoken": false,
+     "note": "TAMAT_SPOKEN_TRANSCRIPT_MATCHES governs the spoken text separately"
+    }
+   ],
+   "tts_mmd_instruction": "TTS/MMD must voice PL06 as 'PL enam'. Do not spell the leading zero and do not read the numeral as 'zero six'. The same rule applies to every PL number in K5: PL01 is 'PL satu', not 'PL kosong satu'.",
+   "status": "RESERVED_NOT_ACTIVE",
+   "display_token": "PL06",
+   "proposed_spoken_as": "PL enam",
+   "source": "Universal S&G v1.0 pronunciation rule",
+   "drift_reference": "L-01",
+   "precedence_over_v0_2": "PENDING_SOURCE_GOVERNANCE_RATIFICATION",
+   "implementation_status": "RESERVED_NOT_ACTIVE"
+  }
+ ],
+ "current_state_audit": {
+  "method": "Read the generated v0.4.3 package: S01 Speaker Notes text, the model's spoken_transcript_elements, and every off-canvas production panel.",
+  "S01_notes_blocks_in_package": [
+   "PL06: Pengurusan Operasi Pembinaan Landskap.",
+   "Topik 3 Bahagian 2: Komponen Landskap.",
+   "Klik butang “Mula” untuk memulakan pembelajaran."
+  ],
+  "generic_rule_string_in_deck": "VO PL satu, bukan PL kosong satu, dan seterusnya",
+  "generic_rule_location": "S01 off-canvas production panel (RP-001), under 'NOTA PRODUKSI:'. Present on 1 page; absent from the Speaker Notes.",
+  "pl_enam_string_anywhere_in_deck": false,
+  "finding": "The GENERIC rule is carried. The PL06-SPECIFIC spoken form is not written anywhere in the deck, the model or the registers. A TTS engine reading the S01 Notes verbatim would receive the string 'PL06' with no instruction attached to it, because the production note lives in the off-canvas panel rather than in the Notes the VO is cut from.",
+  "why_the_note_is_not_in_the_notes": "Correct and deliberate. Bariah's 4:39 PM screenshot fixes the S01 Speaker Notes at exactly three spoken blocks. Adding a production line to the Notes would break SHOT_S01_PACKAGE_NOTES_EXACT and put a non-spoken instruction into the VO transcript. The pronunciation annotation must therefore be a SEPARATE structured field, not extra Notes copy."
+ },
+ "assertions": {
+  "S01_PL06_DISPLAY_FORM": "PL06",
+  "S01_PL06_DISPLAY_FORM_VERIFIED_IN_PACKAGE": true,
+  "S01_PL06_SPOKEN_FORM": "PL_ENAM",
+  "S01_PL06_SPOKEN_FORM_RECORDED_IN_DECK": false,
+  "PL_ZERO_SIX_PRONUNCIATION_ALLOWED": false,
+  "PL_ZERO_SIX_STRING_PRESENT_IN_DECK": false,
+  "PRONUNCIATION_RULE_PRESENT_IN_PRODUCTION_METADATA": true,
+  "PRONUNCIATION_RULE_PRESENT_IN_SPEAKER_NOTES": false,
+  "BARIAH_DISPLAY_TEXT_ALTERED_BY_THIS_STAGE": false,
+  "PL06_PRONUNCIATION_IMPLEMENTED": false,
+  "PL06_PRONUNCIATION_PROMOTED": false,
+  "S01_NOTES_ALTERED_FOR_PRONUNCIATION_IN_THIS_STAGE": false,
+  "PRODUCTION_METADATA_ALTERED_FOR_PRONUNCIATION_IN_THIS_STAGE": false
+ },
+ "implementation_required_next_stage": {
+  "status": "IMPLEMENTATION_REQUIRED_NEXT_STAGE",
+  "reason": "PRONUNCIATION_RULE_PRESENT_IN_PRODUCTION_METADATA is satisfied by the generic course rule, but S01_PL06_SPOKEN_FORM = PL_ENAM is asserted by this register and implemented nowhere. Until it is, the contract exists only in this file.",
+  "planned_change": [
+   "Add spoken_pronunciation to the S01 PL06_TITLE spoken_transcript_element in STORYBOARD_SCREEN_STATE_MAP_v0.4.json, alongside the unchanged display text.",
+   "Emit it as a PRODUCTION_INSTRUCTION_NOT_SPOKEN typed block in the production panel, never in the Speaker Notes.",
+   "Add gates S01_PL06_SPOKEN_FORM_RECORDED = True and PL_ZERO_SIX_IN_ANY_SPOKEN_FIELD = 0, with a mutation fixture that rewrites the annotation to 'PL kosong enam'."
+  ],
+  "must_not_change": [
+   "the three frozen S01 Speaker Notes blocks",
+   "the display string 'PL06: Pengurusan Operasi Pembinaan Landskap.'"
+  ],
+  "deck_regenerated_in_this_stage": false
+ },
+ "supersedes": "PRONUNCIATION_REGISTER_PL06_v0.4.3",
+ "stage_4_2e_a": {
+  "date": "2026-08-01",
+  "change": "Status only. The rule is NOT implemented and NOT promoted.",
+  "PRECEDENCE_OVER_V0_2": "PENDING_SOURCE_GOVERNANCE_RATIFICATION",
+  "IMPLEMENTATION_STATUS": "RESERVED_NOT_ACTIVE",
+  "why": "Stage 4.2D recorded this as IMPLEMENTATION_REQUIRED_NEXT_STAGE, which understated it. The open question is not when to implement but whether the Universal S&G v1.0 rule takes precedence over B02 S&G v0.2, which is silent on pronunciation. That is source governance, not a Bariah ruling and not CC's to settle. It is now carried as open decision OD-10.",
+  "not_touched_in_this_stage": [
+   "S01 Speaker Notes",
+   "S01 production panel pronunciation string",
+   "spoken_transcript_elements",
+   "any model field"
+  ],
+  "delta_entry": "B02_V0_4_4_IMPLEMENTATION_DELTA item 12 — explicitly NO CHANGE"
+ }
+}

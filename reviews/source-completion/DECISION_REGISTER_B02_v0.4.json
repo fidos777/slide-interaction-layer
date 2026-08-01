@@ -93,6 +93,36 @@
    "sha256": "feb29e86228b7f240379b9830bbd59f3e30db2fae03389a68e1ba1bd32ef867b",
    "authority_class": "BARIAH_DIRECT_SCREENSHOT",
    "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+  },
+  {
+   "ref": "D1",
+   "filename": "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png",
+   "original_filename": "Screenshot 2026-08-01 at 6.48.45 PM.png",
+   "captured": "2026-08-01 18:48",
+   "bytes": 213065,
+   "sha256": "e425f5ae00dd556e0295913e8837e5784bf8ff1fb53a208ae88dbc0756a92016",
+   "authority_class": "BARIAH_DIRECT_SCREENSHOT",
+   "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+  },
+  {
+   "ref": "D2",
+   "filename": "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png",
+   "original_filename": "Screenshot 2026-08-01 at 6.53.55 PM.png",
+   "captured": "2026-08-01 18:52",
+   "bytes": 205072,
+   "sha256": "8b4defe1eecb67c2438acb01b1204a025a64ebe848356715b94116d12f7bc3f2",
+   "authority_class": "BARIAH_DIRECT_SCREENSHOT",
+   "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+  },
+  {
+   "ref": "D3",
+   "filename": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "original_filename": "Screenshot 2026-08-01 at 7.06.09 PM.png",
+   "captured": "2026-08-01 19:03",
+   "bytes": 567168,
+   "sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "authority_class": "BARIAH_DIRECT_SCREENSHOT",
+   "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
   }
  ],
  "decisions": [
@@ -785,50 +815,176 @@
   },
   {
    "decision_id": "B02-D-TAMBAHAN-TEXT-01",
-   "title": "Interpretation of the annotation \"Skrin: Tambahan Text\"",
-   "status": "PENDING_BARIAH_CONFIRMATION",
-   "exact_annotation": "Skrin: Tambahan Text",
-   "source_evidence_id": "S2 / S2-b — B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg",
-   "source_evidence_sha256": "936b78c270274874bfa4921a35205e4ca1d679959ebf6f1880e7c76e6f890ab7",
-   "evidence_locator": "red annotation box, top right, crop (610,65)-(970,98). Transcription confidence HIGH — the words are certain, the meaning is not.",
-   "current_interpretation": "A review/production treatment label meaning 'this screen gains additional text', i.e. an instruction about the CONTENT of the existing Struktur Persisir Air component-main screen.",
-   "alternative_interpretation": "An instruction to CREATE a new learner screen carrying the additional text.",
-   "structural_impact": {
-    "if_current_interpretation": {
-     "LEARNER_SCREENS": 29,
-     "REVIEW_PAGES": 100,
-     "RUNTIME_STATES": 100,
-     "INTERACTION_ITEMS": 54,
-     "SOURCE_ROWS": 26,
-     "change": "none — the annotation is metadata about an existing screen"
-    },
-    "if_alternative_interpretation": {
-     "LEARNER_SCREENS": "30 (+1)",
-     "REVIEW_PAGES": "at least 101 (+1 base state, more if the new screen carries interaction or completion states)",
-     "RUNTIME_STATES": "at least 101 (+1)",
-     "INTERACTION_ITEMS": "54 — unchanged unless the new screen is interactive",
-     "SOURCE_ROWS": "26 — unchanged; this is not a CLASS-9 source correction",
-     "knock_on": "the Struktur Taman group navigation, Kembali targets and completion topology would need re-deriving, and every count assertion in the suite would move"
-    }
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 6:48 PM",
+   "evidence": "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png",
+   "evidence_sha256": "e425f5ae00dd556e0295913e8837e5784bf8ff1fb53a208ae88dbc0756a92016",
+   "ruling_verbatim": "Slide 5 (tambahan text pada skrin sama, to follow VO) - yg ni:",
+   "ruling": "Add the content to the EXISTING Slide 5 learner screen (SCR_STRUKTUR_PERSISIR_AIR_MAIN / RP-005). Do not create a new learner screen and do not create a new runtime-state family. The on-screen content must follow the VO. Structural counts unchanged.",
+   "controlled_content": {
+    "heading": "Asas Pembinaan",
+    "bullets": [
+     "Asas stabil dan rata, dengan sistem saliran permukaan berkesan untuk mengelakkan genangan air",
+     "Pemilihan bahan permukaan bergantung pada fungsi utama"
+    ],
+    "bullets_carry_trailing_full_stop": false,
+    "derives": [
+     "on_canvas_text",
+     "spoken_vo_text"
+    ],
+    "note": "One controlled field feeds both surfaces, as with learner_interaction_instruction. The existing component VO already contains both facts; the canvas is what diverges."
    },
-   "current_safe_treatment": [
-    "retain as review/production metadata",
-    "do not create a new learner screen",
-    "do not change counts until clarified"
-   ],
-   "why_this_is_the_safe_direction": "Adding a screen on an inferred reading would change six structural totals and the group's completion topology on the strength of two words. Not adding one leaves the annotation visible and reversible. The conservative reading is also the reversible one.",
-   "evidence_directly_confirming_current_interpretation": "NONE. This is an inference from the annotation's position on an existing screen's corrected rendering, not a ruling.",
-   "authorised_resolver": "Bariah",
-   "resolvable_by_cc": false,
-   "question_ms": "Label “Skrin: Tambahan Text” bermaksud tambahan kandungan pada skrin yang sama, atau perlu diwujudkan satu skrin learner baharu?",
-   "blocks": {
-    "current_bariah_review": false,
-    "powerpoint_smoke": false,
-    "mmd_build": true,
-    "canonical_freeze": true,
-    "production": true
+   "structural_invariants": {
+    "NEW_LEARNER_SCREEN": false,
+    "LEARNER_SCREENS": 29,
+    "REVIEW_PAGES": 100,
+    "RUNTIME_STATES": 100,
+    "INTERACTION_ITEMS": 54
    },
-   "implementation_status": "NOT_IMPLEMENTED — pending",
+   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260801-COMPONENT-MAIN-VISUAL-02",
+   "title": "Component-main visual is REQUIRED, with an overview treatment",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 6:52 PM",
+   "evidence": "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png",
+   "evidence_sha256": "8b4defe1eecb67c2438acb01b1204a025a64ebe848356715b94116d12f7bc3f2",
+   "ruling_verbatim": "Soalan 1: Component-main - Visual diperlukan | Soalan 2: Pop up - visual diperlukan. Kemungkinan visual di component main, saiznya lebih kecil dan ada banyak visual lain. Jadi di pop up, visual nya lebih besar dan fokus. Kan?",
+   "ruling": "COMPONENT_MAIN_VISUAL_REQUIREMENT = REQUIRED, treatment = several smaller visuals as an overview. EXAMPLE_OR_INFORMATION_POPUP_VISUAL = REQUIRED, treatment = LARGE_FOCUSED on the selected item. SPECIFICATION_POPUP_VISUAL = NOT_REQUIRED, unchanged from the 4:37 PM ruling.",
+   "supersedes": "B02-BARIAH-20260801-COMPONENT-MAIN-PROPAGATION-01 — the qualified 'apply to yang lain where applicable/necessary' caption is now answered",
+   "closes": "the eight PENDING_HUMAN component-main records; PENDING_HUMAN_AFTER = 0",
+   "scope_limit": "D2 confirms the REQUIREMENT and the TREATMENT. It does not name new visual subjects, so the module's own source-attested visual text is ratified as the overview subject and no subject is invented.",
+   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260801-VISUAL-STATE-PERSISTENCE-01",
+   "title": "Component-main overview visual persists through all-viewed and return states",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 7:03 PM",
+   "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "evidence_sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "ruling_verbatim": "Untuk all-viewed dan return state, kita kekalkan semula visual overview component-main yang sama - ya, betul",
+   "ruling": "COMPONENT_MAIN_ALL_VIEWED_PERSISTENCE = REQUIRED and COMPONENT_MAIN_RETURN_STATE_PERSISTENCE = REQUIRED. Every runtime state of a component-main learner screen retains the same overview visual.",
+   "closes": "the Stage 4.2D finding recorded as 'population gap REAL, obligation UNCONFIRMED'. TECHNICAL_GAP = CONFIRMED, SEMANTIC_OBLIGATION = NOW_CONFIRMED.",
+   "pages_needing_change": 13,
+   "population_selector": "learner_screen_id + every bound runtime state — NOT review-page classification",
+   "target_list": "B02_PINNED_POPULATION_TARGETS_v0.4.4.json",
+   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "repaired_in_this_stage": false,
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260801-CAST-PROVENANCE-02",
+   "title": "Alya and Encik Rahman approved, reusable where contextually appropriate",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 7:03 PM",
+   "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "evidence_sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "ruling_verbatim": "Yes lulus. Boleh diguna pakai di Bahagian/Topik/PL lain jika bersesuaian",
+   "ruling": "B02_CAST_PAIR_ALYA_ENCIK_RAHMAN status = CONFIRMED_BARIAH_DIRECT. REUSE_POLICY status = APPROVED_WHERE_CONTEXTUALLY_APPROPRIATE across other Bahagian, Topik and PL.",
+   "supersedes": "the Stage 4.2A correction CONFIRMED_CANON -> CONFIRMED_LOCAL_ARTIFACT; DIRECT_BARIAH_NAME_PROVENANCE moves PENDING -> CONFIRMED",
+   "hilmi": "unchanged — artifact-backed in all four frozen sources",
+   "guard": "Reuse is conditional on contextual suitability. Alya and Encik Rahman must NOT be inserted automatically into unrelated screens; 'jika bersesuaian' is a judgement retained by the reviewer.",
+   "implementation_status": "REGISTER_UPDATE_ONLY — no deck change required",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260801-QUIZ-RATIONALE-01",
+   "title": "Quiz rationale placement — learner feedback after submission only",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 7:03 PM",
+   "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "evidence_sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "ruling_verbatim": "Rationale jawapan, hanya maklum balas: Pilihan jawapan tepat. / Pilihan jawapan tidak tepat. - production metadata, learner feedback selepas penghantaran. Speaker Notes tidak perlu.",
+   "controlled_fields": {
+    "correct_feedback": "Pilihan jawapan tepat.",
+    "incorrect_feedback": "Pilihan jawapan tidak tepat."
+   },
+   "ruling": {
+    "PRODUCTION_METADATA": "YES",
+    "LEARNER_FEEDBACK_AFTER_SUBMISSION": "REQUIRED",
+    "SPEAKER_NOTES": "NO",
+    "QUIZ_RATIONALE_SPEAKER_NOTES": "NOT_REQUIRED",
+    "QUIZ_FEEDBACK_VO": "NOT_REQUIRED unless separately authorised"
+   },
+   "detailed_rationale": "The existing per-question rationales are retained in production metadata only. They are not inserted into Speaker Notes and not shown to the learner.",
+   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260801-MICRO-CONTROL-VO-01",
+   "title": "VO covers screen-level instructions only",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 7:03 PM",
+   "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "evidence_sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "ruling_verbatim": "Tidak. VO cuma arahan screen level \"Klik pada setiap ...",
+   "ruling": {
+    "SCREEN_LEVEL_CLICK_VO": "REQUIRED",
+    "MICRO_CONTROL_VO": "NOT_REQUIRED",
+    "micro_controls": [
+     "Tutup",
+     "Kembali",
+     "Semak Jawapan",
+     "Ulang Kuiz",
+     "close icon instructions",
+     "other micro-controls"
+    ]
+   },
+   "confirms": "the bounded parity scope adopted at Stage 4.2B, which was CC's conservative reading and is now ratified. MICRO_CONTROL_SCOPE_SELF_RESOLVED stays 0.",
+   "guard": "Production metadata describing control behaviour is NOT removed; only spoken VO is excluded.",
+   "implementation_status": "CONFORMANCE_TARGET_V0_4_4 — denylist gate, no copy change",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260801-S01-PUNCTUATION-01",
+   "title": "Remove the trailing full stops from S01 Notes lines 1 and 2",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-01",
+   "authority": "Bariah — WhatsApp 7:03 PM",
+   "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "evidence_sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "ruling_verbatim": "Buang noktah - yang ni kan -",
+   "ruling": {
+    "S01_LINE_1_TRAILING_PERIOD": false,
+    "S01_LINE_2_TRAILING_PERIOD": false,
+    "S01_LINE_3_UNCHANGED": "Klik butang “Mula” untuk memulakan pembelajaran.",
+    "S01_LINE_3_TRAILING_PERIOD": true,
+    "NOTES_BLOCK_COUNT": 3
+   },
+   "supersedes": "BARIAH_RASTER_TRANSCRIPTION_REGISTER_v0.4.3.json records S1-c and S1-d, PUNCTUATION_CONFIRMATION PENDING_BARIAH -> RESOLVED_BY_BARIAH",
+   "note": "Line 3 was not mentioned. Its full stop was HIGH confidence in the earlier transcription and is retained.",
+   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-U-03",
+   "title": "Tamat physical navigation mechanism",
+   "status": "RESOLVED_BY_LMS_OWNER",
+   "resolved_on": "2026-08-01",
+   "authority": "Firdaus / LMS owner — NOT a Bariah ruling",
+   "evidence": "task-supplied LMS-owner ruling, Stage 4.2E-A",
+   "evidence_class": "LMS_OWNER_RULING",
+   "ruling": {
+    "LEARNER_ACTION": "close lesson/content window",
+    "NAVIGATION_OUTCOME": "return to course menu",
+    "NEXT_STEP": "learner selects the next section",
+    "AUTOMATIC_NEXT_ROUTE": "not proven",
+    "LMS_SHELL_NEXT": "not proven"
+   },
+   "learner_facing_copy_unchanged": "Teruskan pembelajaran ke bahagian seterusnya.",
+   "production_interaction_metadata": "Learner menutup lesson/content window untuk kembali ke course menu dan memilih bahagian pembelajaran seterusnya.",
+   "guard": "The learner-facing copy is NOT changed. The mechanism is recorded as production metadata only, and the two unproven routes are recorded as unproven rather than asserted. TAMAT_UNVERIFIED_PHYSICAL_NAVIGATION_CLAIM stays live.",
+   "implementation_status": "METADATA_ONLY_V0_4_4",
    "feedback_ids": []
   }
  ],
@@ -1146,5 +1302,26 @@
    "PL06 pronunciation contract recorded: display PL06, spoken 'PL enam'. Not yet implemented in the deck — IMPLEMENTATION_REQUIRED_NEXT_STAGE.",
    "Two S01 trailing full stops recorded at MEDIUM punctuation confidence, PUNCTUATION_CONFIRMATION = PENDING_BARIAH."
   ]
+ },
+ "stage_4_2e_a_final_bariah_decisions": {
+  "date": "2026-08-01",
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
+  "deck_regenerated": false,
+  "deck_sha256_unchanged": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+  "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+  "evidence_files": [
+   "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png",
+   "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png",
+   "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png"
+  ],
+  "transport_archive": "B02_BARIAH_DECISIONS_20260801_1906.zip",
+  "summary_used_as_oracle": false,
+  "bariah_decisions_closed": 7,
+  "lms_owner_decisions_closed": 1,
+  "bariah_open_decisions_after": 0,
+  "firdaus_lms_open_decisions_after": 0,
+  "source_authority_open_decisions_after": 3,
+  "pending_human_closed_by_cc": 0,
+  "implementation_delta": "B02_V0_4_4_IMPLEMENTATION_DELTA.md / .json"
  }
 }

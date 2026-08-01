@@ -1,0 +1,286 @@
+{
+ "registry": "REGRESSION_ORACLE_REGISTRY_v0.4.4",
+ "supersedes": "REGRESSION_ORACLE_REGISTRY_v0.4.3",
+ "evidence_date": "2026-08-01",
+ "oracle_modules": {
+  "audit/b02_oracle_extract_v0_4_2.py": {
+   "evidence_class": "FROZEN_ARTIFACT_OOXML",
+   "source": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx",
+   "status": "ACTIVE",
+   "bytes": 4939,
+   "sha256": "8ae7f9fbb4445988ea4650c6676e8bb10a63695464e490b6d3436db7a9ad0890"
+  },
+  "audit/b02_screenshot_oracle_v0_4_3.py": {
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "source": [
+    "B02_BARIAH_S01_EVIDENCE.jpg",
+    "B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg",
+    "B02_BARIAH_VISUAL_POLICY_EVIDENCE.png"
+   ],
+   "status": "ACTIVE",
+   "bytes": 7893,
+   "sha256": "9284cc505abd5127074642afce6fd8684b4aaf8df2ac962c990cbefd96831957"
+  },
+  "audit/b02_decision_oracle_v0_4_4.py": {
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "source": [
+    "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png",
+    "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png",
+    "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png"
+   ],
+   "status": "ACTIVE_NEW_AT_STAGE_4_2E_A",
+   "wired_into_qa_suite": false,
+   "wired_note": "Gates are specified in B02_V0_4_4_IMPLEMENTATION_DELTA and will be added in the generating stage. Wiring them now would assert obligations the v0.4.3 deck does not yet meet, and this stage may not regenerate it.",
+   "bytes": 10313,
+   "sha256": "d8329e84cc10389a2f917fb8b35c86aca617f9a0a8857e334f9d11e68051eb7c"
+  }
+ },
+ "frozen_decision_screenshots": [
+  {
+   "evidence_id": "D1",
+   "file": "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png",
+   "original_filename": "Screenshot 2026-08-01 at 6.48.45 PM.png",
+   "message_time": "2026-08-01 18:48",
+   "bytes": 213065,
+   "sha256": "e425f5ae00dd556e0295913e8837e5784bf8ff1fb53a208ae88dbc0756a92016",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "repository_path": "reviews/storyboard-bariah/v0_3_bariah_review/B02_BARIAH_DECISION_TAMBAHAN_TEXT.png"
+  },
+  {
+   "evidence_id": "D2",
+   "file": "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png",
+   "original_filename": "Screenshot 2026-08-01 at 6.53.55 PM.png",
+   "message_time": "2026-08-01 18:52",
+   "bytes": 205072,
+   "sha256": "8b4defe1eecb67c2438acb01b1204a025a64ebe848356715b94116d12f7bc3f2",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "repository_path": "reviews/storyboard-bariah/v0_3_bariah_review/B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png"
+  },
+  {
+   "evidence_id": "D3",
+   "file": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "original_filename": "Screenshot 2026-08-01 at 7.06.09 PM.png",
+   "message_time": "2026-08-01 19:03",
+   "bytes": 567168,
+   "sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "repository_path": "reviews/storyboard-bariah/v0_3_bariah_review/B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png"
+  }
+ ],
+ "transport_archive": {
+  "name": "B02_BARIAH_DECISIONS_20260801_1906.zip",
+  "bytes": 960602,
+  "sha256": "0eaf79fa3bf57a1685f9a0982a43f9c147d28f8fd1fb12bcf244c1317ddd0b92"
+ },
+ "summary_is_oracle": false,
+ "summary_divergences": [
+  {
+   "field": "Slide 5 Asas Pembinaan bullets",
+   "screenshot": "no trailing full stop on either bullet",
+   "summary": "both bullets end in a full stop",
+   "resolution": "the screenshot governs; bullets carry no trailing full stop",
+   "locator": "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png crop (30,560)-(800,670)"
+  }
+ ],
+ "expected_values": {
+  "tambahan_text": {
+   "evidence_id": "D1",
+   "captured": "2026-08-01 18:48",
+   "crop_question": "(30,20)-(820,190)",
+   "crop_answer": "(30,490)-(800,670)",
+   "question_ms": "Label “Skrin: Tambahan Text” bermaksud tambahan kandungan pada skrin yang sama, atau perlu diwujudkan satu skrin learner baharu?",
+   "answer_verbatim": "Slide 5 (tambahan text pada skrin sama, to follow VO) - yg ni:",
+   "target_screen_label": "Slide 5",
+   "new_learner_screen": false,
+   "content_follows_vo": true,
+   "heading": "Asas Pembinaan",
+   "bullets": [
+    "Asas stabil dan rata, dengan sistem saliran permukaan berkesan untuk mengelakkan genangan air",
+    "Pemilihan bahan permukaan bergantung pada fungsi utama"
+   ],
+   "bullets_carry_trailing_full_stop": false,
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH"
+  },
+  "visual": {
+   "evidence_id": "D2 (+ D3 for persistence)",
+   "captured": "2026-08-01 18:52 / 19:03",
+   "crop_answer": "(30,470)-(830,590) of B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png",
+   "crop_persistence": "(40,1120)-(860,1400) of B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
+   "answer_1_verbatim": "Soalan 1: Component-main - Visual diperlukan",
+   "answer_2_verbatim": "Soalan 2: Pop up - visual diperlukan. Kemungkinan visual di component main, saiznya lebih kecil dan ada banyak visual lain. Jadi di pop up, visual nya lebih besar dan fokus. Kan?",
+   "persistence_verbatim": "Untuk all-viewed dan return state, kita kekalkan semula visual overview component-main yang sama - ya, betul",
+   "persistence_message_direction": "incoming — left-aligned white bubble in the 'Bariah eLearning' thread, replying to a quoted 'You' message",
+   "component_main_visual": "REQUIRED",
+   "component_main_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "example_or_information_popup_visual": "REQUIRED",
+   "popup_visual_treatment": "LARGE_FOCUSED",
+   "specification_popup_visual": "NOT_REQUIRED",
+   "specification_popup_authority": "unchanged from the 4:37 PM ruling 'KECUALI pop up Spesifikasi'; D2 does not reopen it",
+   "all_viewed_persistence": "REQUIRED",
+   "return_state_persistence": "REQUIRED",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH"
+  },
+  "cast": {
+   "evidence_id": "D3",
+   "captured": "2026-08-01 19:03",
+   "crop": "(60,750)-(900,830)",
+   "question_ms": "Adakah pasangan watak B02 yang diluluskan ialah Alya dan Encik Rahman?",
+   "answer_verbatim": "Yes lulus. Boleh diguna pakai di Bahagian/Topik/PL lain jika bersesuaian",
+   "approved": true,
+   "pair": [
+    "Alya",
+    "Encik Rahman"
+   ],
+   "reuse_policy": "APPROVED_WHERE_CONTEXTUALLY_APPROPRIATE",
+   "reuse_scope": [
+    "Bahagian",
+    "Topik",
+    "PL"
+   ],
+   "reuse_is_conditional": true,
+   "transcription_confidence": "HIGH"
+  },
+  "quiz": {
+   "evidence_id": "D3",
+   "captured": "2026-08-01 19:03",
+   "crop": "(60,830)-(900,960)",
+   "question_ms": "Rationale jawapan perlu diletakkan dalam production metadata, Speaker Notes, atau learner feedback selepas penghantaran?",
+   "answer_verbatim": "Rationale jawapan, hanya maklum balas: Pilihan jawapan tepat. / Pilihan jawapan tidak tepat. - production metadata, learner feedback selepas penghantaran. Speaker Notes tidak perlu.",
+   "correct_feedback": "Pilihan jawapan tepat.",
+   "incorrect_feedback": "Pilihan jawapan tidak tepat.",
+   "feedback_strings_carry_trailing_full_stop": true,
+   "production_metadata": true,
+   "learner_feedback_after_submission": true,
+   "speaker_notes": false,
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH"
+  },
+  "micro_control_vo": {
+   "evidence_id": "D3",
+   "captured": "2026-08-01 19:03",
+   "crop": "(60,960)-(900,1000)",
+   "question_ms": "Selain arahan screen-level “Klik pada setiap…”, adakah arahan untuk Tutup, Kembali, Semak Jawapan dan Ulang Kuiz juga perlu disebut dalam VO?",
+   "answer_verbatim": "Tidak. VO cuma arahan screen level \"Klik pada setiap ...",
+   "screen_level_click_vo": "REQUIRED",
+   "micro_control_vo": "NOT_REQUIRED",
+   "micro_controls": [
+    "Tutup",
+    "Kembali",
+    "Semak Jawapan",
+    "Ulang Kuiz",
+    "close icon instructions",
+    "other micro-controls"
+   ],
+   "transcription_confidence": "HIGH"
+  },
+  "s01_punctuation": {
+   "evidence_id": "D3",
+   "captured": "2026-08-01 19:03",
+   "crop": "(60,1000)-(900,1090)",
+   "question_ms": "Mohon sahkan penggunaan tanda noktah pada dua baris Speaker Notes S01.",
+   "answer_verbatim": "Buang noktah - yang ni kan -",
+   "lines_quoted_without_full_stop": [
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap"
+   ],
+   "line_1_trailing_period": false,
+   "line_2_trailing_period": false,
+   "line_3_unchanged": "Klik butang “Mula” untuk memulakan pembelajaran.",
+   "line_3_trailing_period": true,
+   "line_3_note": "not mentioned in the ruling; the earlier HIGH-confidence reading of S1-e stands and its full stop is retained",
+   "notes_block_count": 3,
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH"
+  }
+ },
+ "inherited_from_v0_4_3": {
+  "visual_policy": {
+   "crop": "(40,10)-(720,120) of B02_BARIAH_VISUAL_POLICY_EVIDENCE.png",
+   "text": "Semua contoh ada visual. Semua pop up ada visual, KECUALI pop up Spesifikasi (bahan, dimensi etc)",
+   "examples_require_visual": true,
+   "popups_require_visual": true,
+   "specification_popup_excepted": true,
+   "qualifier": null
+  },
+  "s01": {
+   "crop_titles": "(60,135)-(580,245)",
+   "crop_visual": "(60,275)-(580,345)",
+   "crop_notes_after": "(580,510)-(977,580)",
+   "crop_annotations": "(580,285)-(977,360)",
+   "display_title": "Topik 3 Bahagian 2: Komponen Landskap",
+   "standalone_component_title_removed": true,
+   "annotations": [
+    "(1) Komponen Landskap – Tukar kepada Topik 3 Bahagian 2: Komponen Landskap",
+    "(2) Komponen Landskap - Remove"
+   ],
+   "canvas_lines": [
+    "KURSUS KERJA BANGUNAN – PEMBINAAN LANDSKAP LUAR",
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap"
+   ],
+   "visual_heading": "ARAHAN VISUAL — SPESIFIKASI SAHAJA",
+   "visual_direction": "[Visual: Imej pembuka bahagian — foto tapak landskap siap yang memaparkan struktur taman dan perabot taman dalam satu bingkai. Tidak dibenamkan.]",
+   "button": "MULA",
+   "spoken_before": [
+    "Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap.",
+    "Topik 3 Bahagian 2: Komponen Landskap.",
+    "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
+    "Klik Mula untuk meneruskan."
+   ],
+   "spoken_after": [
+    "PL06: Pengurusan Operasi Pembinaan Landskap.",
+    "Topik 3 Bahagian 2: Komponen Landskap.",
+    "Klik butang “Mula” untuk memulakan pembelajaran."
+   ],
+   "removed_sentence": "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
+   "transcription_limits": [
+    "trailing '.' on spoken_after lines 1-2 is at raster limit"
+   ]
+  },
+  "struktur_persisir": {
+   "crop_visual": "(60,425)-(600,480) of B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg",
+   "crop_caption": "(40,1200)-(850,1245) of B02_BARIAH_VISUAL_POLICY_EVIDENCE.png",
+   "screen_title": "Struktur Taman",
+   "component_heading": "Struktur Persisir Air",
+   "annotation": "Skrin: Tambahan Text",
+   "active_visual_direction": "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]",
+   "superseded_component_main_direction": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Tidak dibenamkan.]",
+   "propagation_caption": "Slide 5 - apply to yang lain where applicable/necessary",
+   "propagation_is_qualified": true,
+   "authorises_content_for_other_component_mains": false
+  }
+ },
+ "derivation_rule": "Expected values are transcribed from the frozen screenshot bytes and each names the pixel crop it was read from. No expected value is produced by a generator helper, and DECISION_SUMMARY.md is not used as a source. Every accessor re-hashes its evidence first and raises if the bytes differ.",
+ "supersessions": [
+  {
+   "ruling": "S01 Speaker Notes lines 1 and 2 trailing full stop",
+   "was": "rendered WITH a full stop, MEDIUM punctuation confidence, PENDING_BARIAH",
+   "now": "removed by direct ruling — 'Buang noktah'",
+   "evidence": "D3",
+   "superseded_record": "BARIAH_RASTER_TRANSCRIPTION_REGISTER_v0.4.3.json S1-c and S1-d"
+  },
+  {
+   "ruling": "Component-main visual requirement",
+   "was": "CONDITIONAL / PENDING_HUMAN for 8 screens, PROVISIONAL_VISUAL_PROPOSAL",
+   "now": "REQUIRED for all 9, with an overview treatment",
+   "evidence": "D2",
+   "superseded_record": "B02-BARIAH-20260801-COMPONENT-MAIN-PROPAGATION-01"
+  },
+  {
+   "ruling": "Visual persistence across all-viewed and return states",
+   "was": "population gap REAL, obligation UNCONFIRMED",
+   "now": "obligation CONFIRMED — the same overview visual is retained",
+   "evidence": "D3",
+   "superseded_record": "QA_PINNED_POPULATION_PLAN_v0.4.3.json COMPONENT_MAINS_* family"
+  },
+  {
+   "ruling": "\"Skrin: Tambahan Text\"",
+   "was": "PENDING_BARIAH_CONFIRMATION, two readings disclosed",
+   "now": "same screen, additional text, follows the VO",
+   "evidence": "D1",
+   "superseded_record": "B02-D-TAMBAHAN-TEXT-01"
+  }
+ ]
+}

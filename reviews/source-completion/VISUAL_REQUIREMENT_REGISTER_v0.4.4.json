@@ -1,0 +1,214 @@
+{
+ "register": "VISUAL_REQUIREMENT_REGISTER_v0.4.4",
+ "supersedes": "VISUAL_REQUIREMENT_REGISTER_v0.4.3",
+ "evidence_date": "2026-08-01",
+ "authority": "BARIAH_DIRECT_SCREENSHOT — D2 (6:52 PM), D3 (7:03 PM)",
+ "ruling_verbatim": {
+  "component_main": "Soalan 1: Component-main - Visual diperlukan",
+  "popup": "Soalan 2: Pop up - visual diperlukan. Kemungkinan visual di component main, saiznya lebih kecil dan ada banyak visual lain. Jadi di pop up, visual nya lebih besar dan fokus. Kan?",
+  "persistence": "Untuk all-viewed dan return state, kita kekalkan semula visual overview component-main yang sama - ya, betul"
+ },
+ "requirement_table": {
+  "COMPONENT_MAIN_SCREEN": {
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "was": "CONDITIONAL",
+   "authority": "D2"
+  },
+  "EXAMPLE_SELECTION_SCREEN": {
+   "visual_requirement": "REQUIRED",
+   "treatment": "PER_EXAMPLE_CARD",
+   "was": "REQUIRED",
+   "authority": "4:37 PM ruling, unchanged"
+  },
+  "EXAMPLE_SCREEN": {
+   "visual_requirement": "REQUIRED",
+   "treatment": "PER_SCREEN",
+   "was": "REQUIRED",
+   "authority": "4:37 PM ruling, unchanged"
+  },
+  "EXAMPLE_DETAIL_SCREEN": {
+   "visual_requirement": "REQUIRED",
+   "treatment": "PER_SCREEN",
+   "was": "REQUIRED",
+   "authority": "4:37 PM ruling, unchanged"
+  },
+  "EXAMPLE_POPUP": {
+   "visual_requirement": "REQUIRED",
+   "treatment": "LARGE_FOCUSED",
+   "was": "REQUIRED, treatment unspecified",
+   "authority": "D2"
+  },
+  "INFORMATION_POPUP": {
+   "visual_requirement": "REQUIRED",
+   "treatment": "LARGE_FOCUSED",
+   "was": "not separately named",
+   "authority": "D2"
+  },
+  "SPECIFICATION_POPUP": {
+   "visual_requirement": "NOT_REQUIRED",
+   "treatment": null,
+   "was": "NOT_REQUIRED",
+   "authority": "4:37 PM ruling; D2 does not reopen it"
+  }
+ },
+ "state_persistence": {
+  "COMPONENT_MAIN_ALL_VIEWED_PERSISTENCE": "REQUIRED",
+  "COMPONENT_MAIN_RETURN_STATE_PERSISTENCE": "REQUIRED",
+  "rule": "every runtime state of a component-main learner screen retains the same component-main overview visual",
+  "authority": "D3",
+  "technical_gap": "CONFIRMED",
+  "semantic_obligation": "NOW_CONFIRMED",
+  "pages_needing_change": 13,
+  "target_list": "B02_PINNED_POPULATION_TARGETS_v0.4.4.json",
+  "implementation_required_v0_4_4": true,
+  "repaired_in_this_stage": false
+ },
+ "totals": {
+  "COMPONENT_MAIN_SCREENS": 9,
+  "COMPONENT_MAIN_VISUAL_REQUIREMENT": "REQUIRED",
+  "PENDING_HUMAN_BEFORE": 8,
+  "PENDING_HUMAN_AFTER": 0,
+  "RESOLVED_BY_BARIAH": 9,
+  "CONDITIONAL_AFTER": 0,
+  "SELF_RESOLVED_BY_CC": 0,
+  "NEW_VISUAL_SUBJECTS_INVENTED": 0
+ },
+ "component_main_records": [
+  {
+   "learner_screen_id": "SCR_BBQ_PIT_MAIN",
+   "component_id": "BBQ_PIT",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "component_id": "DRINKING_FOUNTAIN",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
+   "component_id": "KEMUDAHAN_AWAM",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
+   "component_id": "KERUSI_TAMAN",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
+   "component_id": "PAPAN_TANDA",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "component_id": "STRUKTUR_PERSISIR_AIR",
+   "status_before": "RESOLVED_BY_DIRECT_AUTHORITY",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": null,
+   "proposal_class_after": null,
+   "content_source": "existing BARIAH_DIRECT string",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
+   "component_id": "STRUKTUR_TEDUHAN",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
+   "component_id": "TONG_SAMPAH",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  },
+  {
+   "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
+   "component_id": "WATER_FEATURE",
+   "status_before": "PENDING_HUMAN",
+   "status_after": "RESOLVED_BY_BARIAH",
+   "visual_requirement": "REQUIRED",
+   "treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "authority": "BARIAH_DIRECT_SCREENSHOT",
+   "evidence_id": "D2",
+   "proposal_class_before": "PROVISIONAL_VISUAL_PROPOSAL",
+   "proposal_class_after": null,
+   "content_source": "SOURCE_ATTESTED_COMPONENT_VISUAL — the module's own visual text, now RATIFIED as the overview subject. D2 confirms the REQUIREMENT and the TREATMENT; it does not name new subjects, so no subject is invented.",
+   "persistence_required": true,
+   "evidence_id_persistence": "D3"
+  }
+ ]
+}

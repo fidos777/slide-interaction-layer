@@ -259,6 +259,68 @@ whose every line ends in one.
 
 ---
 
+## 2D. Final Bariah decision evidence — frozen
+
+```
+FINAL_BARIAH_DECISION_EVIDENCE_FROZEN
+SCREENSHOT_FILES_FROZEN_ON_DISK = 3 of 3
+EVIDENCE_CLASS                  = BARIAH_DIRECT_SCREENSHOT
+DELIVERED_AS                    = B02_BARIAH_DECISIONS_20260801_1906.zip
+BARIAH_OPEN_DECISIONS_AFTER     = 0
+FROZEN 1 August 2026 — first delivery attempt
+```
+
+Three screenshots from the same WhatsApp thread, later the same evening. They close **every
+Bariah-routed open decision** carried since Stage 4.2A: the "Skrin: Tambahan Text"
+interpretation, the eight component-main visual decisions, the 13-page visual-persistence
+question, the Alya / Encik Rahman cast provenance, quiz rationale placement, micro-control VO
+scope, and the two S01 trailing full stops.
+
+Transport archive, independently hashed on receipt:
+
+| Archive | Bytes | SHA-256 | ZIP validity |
+|---|---:|---|---|
+| `B02_BARIAH_DECISIONS_20260801_1906.zip` | 960,602 | `0eaf79fa3bf57a1685f9a0982a43f9c147d28f8fd1fb12bcf244c1317ddd0b92` | valid; `testzip()` reports no corrupt member; 5 members plus the folder entry |
+
+| Ref | Repository filename | Original filename | Msg time | Bytes | SHA-256 | Closes |
+|---|---|---|---|---:|---|---|
+| **D1** | `B02_BARIAH_DECISION_TAMBAHAN_TEXT.png` | `Screenshot 2026-08-01 at 6.48.45 PM.png` | 6:48 PM | 213,065 | `e425f5ae00dd556e0295913e8837e5784bf8ff1fb53a208ae88dbc0756a92016` | `B02-D-TAMBAHAN-TEXT-01` |
+| **D2** | `B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png` | `Screenshot 2026-08-01 at 6.53.55 PM.png` | 6:52 PM | 205,072 | `8b4defe1eecb67c2438acb01b1204a025a64ebe848356715b94116d12f7bc3f2` | component-main visual requirement + popup treatment |
+| **D3** | `B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png` | `Screenshot 2026-08-01 at 7.06.09 PM.png` | 7:03 PM | 567,168 | `d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b` | cast, quiz rationale, micro-control VO, S01 punctuation, state persistence |
+
+All three live in `reviews/storyboard-bariah/v0_3_bariah_review/`. Independently hashed after
+extraction, compared against the task-supplied identities and the archive `MANIFEST.txt` —
+**all three agree for all three files** — then re-hashed and `cmp`-verified byte-identical
+after copying into the repository.
+
+### 2D.1 The summary is not the oracle
+
+The archive also carries `DECISION_SUMMARY.md`. It is **supplementary navigation only** and
+is deliberately not used as an expected-value source. `generator/audit/b02_decision_oracle_v0_4_4.py`
+transcribes from the screenshots and records `SUMMARY_IS_ORACLE = False`.
+
+One divergence was found and is resolved in favour of the screenshot:
+
+| Field | Screenshot (governs) | Summary |
+|---|---|---|
+| Slide 5 `Asas Pembinaan` bullets | **no trailing full stop** on either bullet | both bullets end in a full stop |
+
+### 2D.2 Message times vs file names
+
+The archive filenames carry the times the screenshots were *taken* (6.48.45, 6.53.55,
+7.06.09 PM); the timestamps *inside* the images are the times the messages were *sent*
+(6:48, 6:52, 7:03 PM). Both are recorded. Identity is bytes and hash, not filename.
+
+### 2D.3 Still raster, still transcribed
+
+As with the 4.2C evidence, these are images with no text layer. Every value the oracle
+returns is transcribed from a named pixel crop and the module re-hashes its evidence before
+returning anything. All ten transcriptions in this package are `HIGH` confidence for both
+wording and punctuation — the two `MEDIUM` punctuation items from Stage 4.2D are among the
+things D3 settles outright.
+
+---
+
 ## 3. Generator toolchain frozen
 
 | Module | Bytes | SHA-256 |
