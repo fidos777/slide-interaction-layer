@@ -1,0 +1,499 @@
+{
+ "manifest": "STORYBOARD_PROOF_RUN_MANIFEST_v0.4",
+ "stage": "Stage 3 — three-family proof",
+ "evidence_date": "2026-08-01",
+ "repository": {
+  "branch": "claude/verify-powerpoint-file-vpfzkg",
+  "head_at_authoring": "24252438137a176068f10c320de174a1d91dc466"
+ },
+ "standing": "Proof build only. Not the complete B02 storyboard, not propagated to the remaining six components, no slide manually patched, no multimedia bound, no canonical P# minted. MMD readiness and production approval are NOT claimed.",
+ "authoritative_inputs": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx": {
+   "bytes": 365773,
+   "sha256": "cdfc78e6395614ca79badda54ff5bbf2241c075e16ed26606fe6e69749e72809"
+  },
+  "Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx": {
+   "bytes": 43342,
+   "sha256": "c15ae05e20358eda17b8e272f5dd9a5ef85831016976a926346371ea5790bcf3"
+  },
+  "K5_PL06_T03_B02_UPDATED_SG_v0.3.docx": {
+   "bytes": 56475,
+   "sha256": "f3166e42f84d4b1f1c792c28fdc0278cc1c56a061b1598bfcce0efde91ad429d"
+  },
+  "BARIAH_CORRECTION_EXEMPLARS_v0.4.md": {
+   "bytes": 16303,
+   "sha256": "dec29895304f8ff08839321c2109fcca3e4db3364c341c9c833869ba06902890"
+  },
+  "SB_K5_montaj_v1.pptx": {
+   "bytes": 61292,
+   "sha256": "79a07b460ddb940de9dec0c1f92147beeb9ccf7af2b0ba35aab720369b393076"
+  },
+  "SB_K5PL6_montaj_v1.pptx": {
+   "bytes": 70656,
+   "sha256": "97ccab1c2aef889145ff416d2058a1ed848a5e0315a42308d9792ae845260390"
+  }
+ },
+ "model_artifacts": {
+  "B02_V0_4_MODEL_CONTRACT.json": {
+   "bytes": 26689,
+   "sha256": "a137a66ff1d3fd4c7cf78bfefbfe8760f4b0177b27f9715b3c6a5a8e5286113c"
+  },
+  "STORYBOARD_SCREEN_STATE_MAP_v0.4.json": {
+   "bytes": 264769,
+   "sha256": "6bdefeaa3370cbe61b11076c1670fd86c80ecfa6ae98e81308ac6173ccc83ca8"
+  },
+  "DECISION_REGISTER_B02_v0.4.json": {
+   "bytes": 46217,
+   "sha256": "40789d8e5028e60f1c3b395d65a092cac15b9f2474c2ed27a761bf633f717dde"
+  },
+  "STORYBOARD_SCREEN_STATE_MAP_v0.4.md": {
+   "bytes": 85283,
+   "sha256": "4e2a063804b174149e2faba186b49182eba17facc514016625eca34a66fcfe03"
+  },
+  "STORYBOARD_SOURCE_MAP_v0.4.md": {
+   "bytes": 19329,
+   "sha256": "aa4030c442110fbf16b13d939f5bfa88e741b09cc3bbaec8fd0e2ecfda75e732"
+  },
+  "TABLE_ROW_TO_POPUP_MATRIX.md": {
+   "bytes": 83319,
+   "sha256": "29ee3df5e2917f568aa4884679374aa8eb5a8cc4624854b94225b8d3006482e7"
+  },
+  "B02_ASSET_MANIFEST.md": {
+   "bytes": 8069,
+   "sha256": "7107ea4943a31329d8dd0088aba26ca9bff45778ba03af6c7831b6602c949f55"
+  }
+ },
+ "source_data": {
+  "generator/b02_content_v0_3.json": {
+   "bytes": 40319,
+   "sha256": "4401f9b54336f2c830a06e5a363479ba9ac99aefa9c80ffaa34e2161c579ac5a"
+  },
+  "source-assets/_manifest.json": {
+   "bytes": 7294,
+   "sha256": "2195a5ac6b2c27810e4b6be4ebf951d232b1060dd97d5fdd4f5085ccc2a08ada"
+  }
+ },
+ "v0_3_baseline_unchanged": {
+  "b02_content_v0_3.py": {
+   "bytes": 39037,
+   "sha256": "04e56936cf2aaff5c08915d5a37cf4204055cf874151ff89b14732d5c2746bb2"
+  },
+  "b02_model_v0_3.py": {
+   "bytes": 7620,
+   "sha256": "f05908eea56c111cea2ef918b872cd4a9ebb59ef48de3b5a21bab745870c527b"
+  },
+  "b02_generator_v0_3.py": {
+   "bytes": 39999,
+   "sha256": "1cc9ca74b6ad50ea70c33594fa883e755ee224205048bc71ef0b10b0c76b1d35"
+  },
+  "b02_qa_v0_3.py": {
+   "bytes": 9491,
+   "sha256": "9d98dc164562c2f55e28f0ac5a7ff847c420bc50085596aaad3c0554243a70d4"
+  },
+  "b02_docs_v0_3.py": {
+   "bytes": 8056,
+   "sha256": "56c7777730d7e80ccbf21319aefc7859f4441c6008efe0734d411f86c279be9d"
+  },
+  "b02_render_check.py": {
+   "bytes": 11475,
+   "sha256": "e65b6f38e58ea88a21e60d498af99f497af62f8e3ad71c0cc42e1d0f406346e2"
+  }
+ },
+ "v0_4_generator": {
+  "generator/v0_4/b02_model_adapter_v0_4.py": {
+   "bytes": 10661,
+   "sha256": "d8e277d2bba2f047a9cb834d8602ed83ab02135060f3e13becafe48f2487ee67"
+  },
+  "generator/v0_4/b02_proof_content_v0_4.py": {
+   "bytes": 9319,
+   "sha256": "c9ea87ee8f13d0b053786b123a245692b93fa3145d301063e89158fc4da41d7d"
+  },
+  "generator/v0_4/b02_generator_v0_4.py": {
+   "bytes": 40975,
+   "sha256": "fba3841279026875f2cca3115884926fd8fea8ad893da8ef568f7a9ed370816b"
+  },
+  "generator/v0_4/b02_proof_qa_v0_4.py": {
+   "bytes": 18662,
+   "sha256": "c32796c081c57ad887e2f97aaea049878200ea60cd7b351d2445a885df778fc4"
+  }
+ },
+ "proof_output": {
+  "filename": "K5PL06T03B02_v0_4_THREE_FAMILY_PROOF.pptx",
+  "bytes": 164564,
+  "sha256": "f73c795b44a1dee71040c1fd8a641e65dabf726c03e417e41e1d17a6df13047a"
+ },
+ "proof_pages": [
+  {
+   "slide": 1,
+   "page": "PP-01",
+   "screen": "SCR_S01",
+   "state": "ST_S01_BASE",
+   "role": "TOPIC_SECTION_ENTRY_BASE",
+   "family": "FRAME",
+   "notes_chars": 192
+  },
+  {
+   "slide": 2,
+   "page": "PP-02",
+   "screen": "SCR_S02",
+   "state": "ST_S02_BASE",
+   "role": "FRAME_SCENARIO_BASE",
+   "family": "FRAME",
+   "notes_chars": 720
+  },
+  {
+   "slide": 3,
+   "page": "PP-03",
+   "screen": "SCR_S03",
+   "state": "ST_S03_BASE",
+   "role": "FRAME_NARRATOR_BASE",
+   "family": "FRAME",
+   "notes_chars": 692
+  },
+  {
+   "slide": 4,
+   "page": "PP-04",
+   "screen": "SCR_GM_STRUKTUR",
+   "state": "ST_GM_STRUKTUR_BASE",
+   "role": "GROUP_MASTER_BASE",
+   "family": "FAMILY_S",
+   "notes_chars": 532
+  },
+  {
+   "slide": 5,
+   "page": "PP-05",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_MAIN_BASE",
+   "role": "COMPONENT_MAIN_BASE",
+   "family": "FAMILY_S",
+   "notes_chars": 659
+  },
+  {
+   "slide": 6,
+   "page": "PP-06",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_EXAMPLES_BASE",
+   "role": "COMPONENT_EXAMPLES_BASE",
+   "family": "FAMILY_S",
+   "notes_chars": 185
+  },
+  {
+   "slide": 7,
+   "page": "PP-07",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_01",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "notes_chars": 324
+  },
+  {
+   "slide": 8,
+   "page": "PP-08",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_02",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "notes_chars": 298
+  },
+  {
+   "slide": 9,
+   "page": "PP-09",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_03",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "notes_chars": 314
+  },
+  {
+   "slide": 10,
+   "page": "PP-10",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_04",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "notes_chars": 331
+  },
+  {
+   "slide": 11,
+   "page": "PP-11",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_05",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "notes_chars": 322
+  },
+  {
+   "slide": 12,
+   "page": "PP-12",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_ALL_VIEWED",
+   "role": "COMPONENT_EXAMPLES_ALL_VIEWED",
+   "family": "FAMILY_S",
+   "notes_chars": 0
+  },
+  {
+   "slide": 13,
+   "page": "PP-13",
+   "screen": "SCR_GM_STRUKTUR",
+   "state": "ST_GM_STRUKTUR_BASE",
+   "role": "GROUP_MASTER_BASE",
+   "family": "FAMILY_S",
+   "notes_chars": 532
+  },
+  {
+   "slide": 14,
+   "page": "PP-14",
+   "screen": "SCR_PERABOT_OVERVIEW",
+   "state": "ST_PERABOT_OVERVIEW_BASE",
+   "role": "GROUP_OVERVIEW_BASE",
+   "family": "FAMILY_P1+FAMILY_P2",
+   "notes_chars": 574
+  },
+  {
+   "slide": 15,
+   "page": "PP-15",
+   "screen": "SCR_KERUSI_TAMAN_MAIN",
+   "state": "ST_KERUSI_TAMAN_MAIN_BASE",
+   "role": "COMPONENT_EXPLANATION_LIST_BASE",
+   "family": "FAMILY_P1",
+   "notes_chars": 557
+  },
+  {
+   "slide": 16,
+   "page": "PP-16",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX01_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "notes_chars": 175
+  },
+  {
+   "slide": 17,
+   "page": "PP-17",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "notes_chars": 341
+  },
+  {
+   "slide": 18,
+   "page": "PP-18",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "notes_chars": 250
+  },
+  {
+   "slide": 19,
+   "page": "PP-19",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC03",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "notes_chars": 304
+  },
+  {
+   "slide": 20,
+   "page": "PP-20",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC04",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "notes_chars": 272
+  },
+  {
+   "slide": 21,
+   "page": "PP-21",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX01_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "notes_chars": 0
+  },
+  {
+   "slide": 22,
+   "page": "PP-22",
+   "screen": "SCR_KERUSI_TAMAN_MAIN",
+   "state": "ST_KERUSI_TAMAN_MAIN_BASE",
+   "role": "COMPONENT_EXPLANATION_LIST_BASE",
+   "family": "FAMILY_P1",
+   "notes_chars": 557
+  },
+  {
+   "slide": 23,
+   "page": "PP-23",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_MAIN_BASE",
+   "role": "COMPONENT_SPEC_LIST_BASE",
+   "family": "FAMILY_P2",
+   "notes_chars": 148
+  },
+  {
+   "slide": 24,
+   "page": "PP-24",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT01",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "notes_chars": 313
+  },
+  {
+   "slide": 25,
+   "page": "PP-25",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT02",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "notes_chars": 303
+  },
+  {
+   "slide": 26,
+   "page": "PP-26",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT03",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "notes_chars": 274
+  },
+  {
+   "slide": 27,
+   "page": "PP-27",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT04",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "notes_chars": 243
+  },
+  {
+   "slide": 28,
+   "page": "PP-28",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_ALL_CATEGORIES_VIEWED",
+   "role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+   "family": "FAMILY_P2",
+   "notes_chars": 0
+  },
+  {
+   "slide": 29,
+   "page": "PP-29",
+   "screen": "SCR_RUMUSAN",
+   "state": "ST_RUMUSAN_BASE",
+   "role": "FRAME_SUMMARY_BASE",
+   "family": "FRAME",
+   "notes_chars": 612
+  },
+  {
+   "slide": 30,
+   "page": "PP-30",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_INTRO",
+   "role": "QUIZ_INTRO",
+   "family": "FRAME",
+   "notes_chars": 216
+  },
+  {
+   "slide": 31,
+   "page": "PP-31",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q1",
+   "role": "QUIZ_QUESTION_1",
+   "family": "FRAME",
+   "notes_chars": 545
+  },
+  {
+   "slide": 32,
+   "page": "PP-32",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q5",
+   "role": "QUIZ_QUESTION_5",
+   "family": "FRAME",
+   "notes_chars": 363
+  },
+  {
+   "slide": 33,
+   "page": "PP-33",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_RESULT",
+   "role": "QUIZ_RESULT",
+   "family": "FRAME",
+   "notes_chars": 239
+  },
+  {
+   "slide": 34,
+   "page": "PP-34",
+   "screen": "SCR_TAMAT",
+   "state": "ST_TAMAT_BASE",
+   "role": "FRAME_END_BASE",
+   "family": "FRAME",
+   "notes_chars": 240
+  }
+ ],
+ "rendered_page_hashes": {
+  "page001.png": "f25a8727dd182083",
+  "page002.png": "e341525233fa2175",
+  "page003.png": "451c76176b4a0788",
+  "page004.png": "b8218625c6272bae",
+  "page005.png": "2d06ce137e7c1ba1",
+  "page006.png": "5998ff77a3a9c1e8",
+  "page007.png": "2f07667cd79de502",
+  "page008.png": "6035a7c53c238c0e",
+  "page009.png": "a4257bdf71d57e24",
+  "page010.png": "45d7807e1c3e6d04",
+  "page011.png": "c8ea2a4a33f99bf9",
+  "page012.png": "1dbc2a8cb852b659",
+  "page013.png": "6931a3b3563d2e8e",
+  "page014.png": "c3a5acfefac80ffc",
+  "page015.png": "bfdba71b4124a1e3",
+  "page016.png": "a0cb7be5426f39a6",
+  "page017.png": "4e3ae25da3a53f36",
+  "page018.png": "2e4a75fc2cc477a8",
+  "page019.png": "46e25218c8605cac",
+  "page020.png": "5014fae12a21b661",
+  "page021.png": "f7132a166bf5e461",
+  "page022.png": "af9892c398249c26",
+  "page023.png": "47edf57c4d5be472",
+  "page024.png": "badadb82976c9b25",
+  "page025.png": "94e37ea90602c82e",
+  "page026.png": "d387d2813771392c",
+  "page027.png": "6682400e062456b5",
+  "page028.png": "1ff310f4f63c5876",
+  "page029.png": "29800f6d6a58eab0",
+  "page030.png": "f014ce6789435b4b",
+  "page031.png": "29cc724ef9199f70",
+  "page032.png": "a0eb2af24e3afc60",
+  "page033.png": "cf5f5b75a056f2ac",
+  "page034.png": "6286f7b2cb7c69f7"
+ },
+ "render": {
+  "engine": "package parser + Liberation Sans metric renderer (b02_render_check.py)",
+  "dpi": 110,
+  "pages": 34,
+  "real_issues": 0,
+  "intended_modal_overlays": 57
+ },
+ "environment_limitations": [
+  "LibreOffice cannot open any .pptx in this container: only libreoffice-core, libreoffice-common, libreoffice-style-colibre and libreoffice-uiconfig-common are installed, with no Impress import filter. `soffice --headless --convert-to pdf` returns \"Error: source file could not be loaded\" and produces no output.",
+  "Rendering therefore reads the GENERATED PACKAGE back out of the .pptx and draws it with Liberation Sans, which is metric-compatible with Arial. This is a faithful render of the artifact, NOT Microsoft PowerPoint equivalence. Font wrapping in Microsoft PowerPoint remains a PENDING_HUMAN item.",
+  "The renderer approximates a prstGeom ellipse as its bounding box, so the close icon reads as a square in the proof images. The package itself carries a true ellipse."
+ ],
+ "totals": {
+  "PROOF_PAGES": 34,
+  "PROOF_LEARNER_SCREENS": 13,
+  "PROOF_RUNTIME_STATES": 32,
+  "PROOF_INTERACTION_ITEMS": 16,
+  "MODEL_LEARNER_SCREENS": 29,
+  "MODEL_RUNTIME_STATES": 100,
+  "MODEL_INTERACTION_ITEMS": 54,
+  "SOURCE_ROWS": 26,
+  "SOURCE_ASSETS": 14,
+  "CHECKABLE_GATES": 87,
+  "CHECKABLE_PASS": 87,
+  "CHECKABLE_FAIL": 0,
+  "GENERATOR_FILES_CHANGED_V0_3": 0,
+  "COMPONENTS_PROPAGATED": 0,
+  "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
+  "SLIDES_MANUALLY_PATCHED": 0
+ }
+}
