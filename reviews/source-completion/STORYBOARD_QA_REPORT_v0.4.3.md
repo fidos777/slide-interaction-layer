@@ -2,9 +2,12 @@
 
 Deck: `K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx` — 100 review pages.
 
-Suite: `generator/v0_4/b02_governance_qa_v0_4_3.py` (Stage 4.2C layer, chaining the Stage 4.2B, 4.1 and Stage 4 suites unchanged).
+Suite: `generator/v0_4/b02_governance_qa_v0_4_3.py` — the Stage 4.2C layer plus the four pinned-population gates added at Stage 4.2D, chaining the Stage 4.2B, 4.1 and Stage 4 suites unchanged.
 
-> **303 of 303 mechanical checks passing does not mean the deck is approved.** It means every check that exists passed. Stage 4.2A found a defect class that passed 188/188, and Stage 4.2C found another by looking at a rendered page — see `QA_SCOPE_AND_LIMITS_v0.4.3.md` §3.
+> **307 of 307 mechanical checks passing does not mean the deck is approved.**
+> 16 of these are `SUPERSEDED` markers rather than tests, 207 assert the model rather than
+> the artifact, and 13 have populations narrower than the obligation they test. See
+> `QA_SCOPE_AND_LIMITS_v0.4.3A.md` and `QA_POPULATION_AUDIT_v0.4.3.md`.
 
 ```
 PASS  SOURCE_ROWS_EXPECTED                                                                    26
@@ -309,7 +312,11 @@ PASS  COMPONENT_MAINS_RESOLVED_BY_DIRECT_AUTHORITY                              
 PASS  COMPONENT_MAINS_PENDING_HUMAN                                                           8
 PASS  COMPONENT_MAIN_RESOLVED_WITHOUT_BARIAH_AUTHORITY                                        0
 PASS  PENDING_HUMAN_ITEMS_CLOSED_BY_CC                                                        0
+PASS  QUIZ_REVIEW_STATE_PAGES_EVALUATED                                                       1
+PASS  QUIZ_REVIEW_STATE_QUESTIONS_EXPECTED                                                    5
+PASS  QUIZ_REVIEW_STATE_QUESTIONS_MISSING                                                     0
+PASS  QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG                                              0
 PASS  STAGE_4_2B_SUITE_CHECKS                                                                 265
 
-303/303 PASS
+307/307 PASS
 ```

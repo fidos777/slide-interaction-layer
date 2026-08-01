@@ -1,6 +1,11 @@
 # REGRESSION_REPLAY_REPORT — v0.4.3
 
-Harness: `generator/audit/b02_replay_v0_4_3.py`. Every fixture is built in a temp directory from the committed deck and discarded; **no committed artifact is mutated**.
+Two harnesses. Every fixture is built in a temp directory from the committed deck and discarded; **no committed artifact is mutated**.
+
+| Harness | Purpose |
+|---|---|
+| `generator/audit/b02_replay_v0_4_3.py` | 18 defect-shape fixtures + historical replay |
+| `generator/audit/b02_classification_scope_fixtures_v0_4_3.py` | 11 fixtures that mutate records **outside** a gate's classified population but **inside** its semantic one |
 
 A fixture proves GATE SENSITIVITY only. It does not prove the corrected value is right — that is the oracle's job.
 
@@ -8,13 +13,13 @@ A fixture proves GATE SENSITIVITY only. It does not prove the corrected value is
 
 | Metric | Value |
 |---|---:|
-| gates evaluated | 303 |
-| passing | 303 |
+| gates evaluated | 307 |
+| passing | 307 |
 | false failures | 0 |
 
-# 2. Mutation sensitivity
+# 2. Defect-shape fixtures
 
-**18 / 18 detected, 0 missed.** R-001…R-011 are the Stage 4.2B fixtures, rebuilt from the v0.4.3 deck. R-012…R-017 are new at Stage 4.2C and each attacks one thing the latest screenshots settled.
+**18 / 18 detected, 0 missed.**
 
 | ID | Injected defect | Designated gate(s) fired | Other gates newly failing |
 |---|---|---|---:|
@@ -37,35 +42,35 @@ A fixture proves GATE SENSITIVITY only. It does not prove the corrected value is
 | `R-016` | an example card is given another example's visual direction | `EXAMPLE_CARD_VISUALS_NOT_SOURCE_ATTESTED` | 2 |
 | `R-017` | superseded Rajah 23 component-main direction restored as active | `SHOT_PERSISIR_ACTIVE_DIRECTION_RENDERED`<br>`SHOT_PERSISIR_SUPERSEDED_DIRECTION_NOT_ON_CANVAS`<br>`SUPERSEDED_DIRECTION_RENDERED_AS_ACTIVE` | 3 |
 
-# 3. Historical replay
+# 3. Classification-scope fixtures *(new at Stage 4.2D)*
 
-Earlier committed decks, run against the v0.4.3 suite. These are real artifacts, not fixtures: the counts show what the current gates would have caught.
+**11 / 11 detected, 0 missed, 0 false failures.**
 
-| Deck | Gates failing |
-|---|---:|
-| `…v0_4.pptx` | 61 |
-| `…v0_4_1.pptx` | 16 |
-| `…v0_4_2.pptx` | 18 |
+| ID | Group | Mutation | Detected by |
+|---|---|---|---|
+| `F-101` | EXAMPLE_SELECTION_STATE_PERSISTENCE | card visual removed from a POPUP state of a selection screen | `EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS` |
+| `F-102` | EXAMPLE_SELECTION_STATE_PERSISTENCE | card visual removed from the ALL_VIEWED state of a selection screen | `EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS` |
+| `F-103` | EXAMPLE_SELECTION_STATE_PERSISTENCE | card visual removed from the return/completion state of a second selection screen | `EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS` |
+| `F-201` | FAMILY_S_COMPLETION_TICKS | false tick injected into an example POPUP state | `COMPLETION_TICKS_NOT_MATCHING_PATH` |
+| `F-202` | FAMILY_S_COMPLETION_TICKS | extra tick injected into an ALL_VIEWED state where every item is already ticked | `COMPLETION_TICKS_NOT_MATCHING_PATH` |
+| `F-203` | FAMILY_S_COMPLETION_TICKS | extra tick injected into the Struktur Taman group-master return state | `COMPLETION_TICKS_NOT_MATCHING_PATH` |
+| `F-301` | NOTES_POLICY_POPULATION | spoken-looking Notes inserted into a SILENT_STATE_NOTES completion state | `SILENT_STATES_RECEIVING_NEW_VO`<br>`SILENT_STATES_WITH_NONEMPTY_NOTES` |
+| `F-401` | INTERNAL_METADATA_DENYLIST | FAMILY_P1 injected into a DERIVED state page, not the base Perabot overview | `FAMILY_LABELS_ON_LEARNER_CANVAS`<br>`TECHNICAL_METADATA_ON_LEARNER_CANVAS` |
+| `F-501` | VISUAL_SUBTYPE_PERSISTENCE | example-card visual removed from a popup-state rendering of a selection screen | `EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS`<br>`MODAL_OCCLUDED_SHAPES_EVALUATED` |
+| `F-502` | VISUAL_SUBTYPE_PERSISTENCE | example-card visual removed from a state whose review_page_role differs from base | `EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS` |
+| `F-601` | QUIZ_REVIEW_OVERLAY | one answer removed from the Semak Jawapan review state | `QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG` |
 
-The 18 gates the immediately preceding deck fails are exactly the Stage 4.2C rulings:
+`F-601` was **missed on first run** — the Semak Jawapan review state was in no gate's population. Four `QUIZ_REVIEW_STATE_*` gates with a pinned population were added, the deck was not touched, and it is now caught by `QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG`.
 
-```
-EXAMPLE_CARD_VISUALS_NOT_SOURCE_ATTESTED
-EXAMPLE_SELECTION_SCREENS_WITHOUT_VISUAL
-EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS
-MODAL_OCCLUDED_SHAPES_EVALUATED
-MODAL_OCCLUDED_SHAPE_NAMES
-REQUIRED_VISUAL_SCREENS_WITHOUT_VISUAL
-S01_MULA_INSTRUCTION_OLD_WORDING_WITHDRAWN
-S01_MULA_INSTRUCTION_SPOKEN
-S01_ORIENTATION_SENTENCE_REMOVED
-S01_PL06_TITLE_LONG_FORM_WITHDRAWN
-S01_PL06_TITLE_SPOKEN
-S01_TOPIC_LINE_ON_CANVAS
-S01_VISUAL_HEADING_ON_CANVAS
-SHOT_PERSISIR_SUPERSESSION_DISCLOSED_IN_PANEL
-SHOT_S01_PACKAGE_NOTES_EXACT
-SHOT_S01_VISUAL_HEADING_MATCHES
-SPOKEN_BLOCKS_MISSING_FROM_NOTES
-SUPERSEDED_RULINGS_MISSING_FROM_PRODUCTION_PANEL
-```
+# 4. Historical replay
+
+Earlier committed decks against the v0.4.3 suite. **These counts are not a quality ranking** — see `HISTORICAL_REPLAY_CLASSIFICATION_v0.4.3.md`, which sorts every failure into `TRUE_HISTORICAL_REGRESSION`, `LATER_ORACLE_SUPERSESSION`, `PREVIOUSLY_UNTESTED_SHAPE`, `ARTIFACT_CONFORMANCE_FAILURE` or `LATEST_EVIDENCE_NONCONFORMANCE`.
+
+| Deck | Gates failing | True regression against its own oracle |
+|---|---:|---:|
+| `…v0_4.pptx` | 61 | 22 |
+| `…v0_4_1.pptx` | 16 | 0 |
+| `…v0_4_2.pptx` | 18 | 0 |
+| `…v0_4_3.pptx` | 0 | 0 |
+
+v0.4.2 fails more gates than v0.4.1 **and is the better deck**: 9 of its 18 failures are things it got right under the evidence it had — leaving a CONDITIONAL item unresolved and disclosing a conflict rather than guessing.

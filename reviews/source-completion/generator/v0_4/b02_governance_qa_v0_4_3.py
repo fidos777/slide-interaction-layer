@@ -159,6 +159,32 @@ def run(pptx):
             and pol[pid]["visual_authority"] != VP.BARIAH_DIRECT_AUTH), 0)
     chk("PENDING_HUMAN_ITEMS_CLOSED_BY_CC", 0, 0)
 
+    # ==================== PINNED POPULATION: QUIZ REVIEW STATE ====================
+    # Added at Stage 4.2D. The answer-key gates select AnswerKeyBody shapes, which exist only
+    # on the five STATE_QUIZ_QUESTION pages, so the Semak Jawapan review state — which carries
+    # the same question-review obligation under a different runtime classification — was in no
+    # gate's population at all. Fixture F-601 removed an answer from it and nothing fired.
+    #
+    # The population here is pinned to the MODEL's five questions crossed with the review
+    # state, not to a shape name or a page classification. Expected values come from the
+    # controlled quiz content, the same authority ANSWER_KEY_SOURCE_MISMATCH uses; that is a
+    # SHARED_DERIVATION link and is disclosed as such in the population audit.
+    import b02_proof_content_v0_4 as QC
+    rv = [pid for pid in D if st_of[pid]["screen_role"] == "STATE_QUIZ_REVIEW"]
+    chk("QUIZ_REVIEW_STATE_PAGES_EVALUATED", len(rv), 1)
+    chk("QUIZ_REVIEW_STATE_QUESTIONS_EXPECTED", len(QC.QUESTIONS), 5)
+    miss_q = miss_a = 0
+    for pid in rv:
+        txt = _squash(" ".join(s["text"] for s in D[pid]["canvas"]))
+        for n, q in sorted(QC.QUESTIONS.items()):
+            if _squash(f"Soalan {n}: {q['stem']}") not in txt:
+                miss_q += 1
+            ans = q["answer"] if q["kind"] == "MCQ" else ", ".join(q["answers"])
+            if _squash(f"Jawapan: {ans}") not in txt:
+                miss_a += 1
+    chk("QUIZ_REVIEW_STATE_QUESTIONS_MISSING", miss_q, 0)
+    chk("QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG", miss_a, 0)
+
     chk("STAGE_4_2B_SUITE_CHECKS", n_prior, 265)
     return res
 

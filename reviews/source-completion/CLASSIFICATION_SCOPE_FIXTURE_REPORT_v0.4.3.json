@@ -1,0 +1,134 @@
+{
+ "harness": "b02_classification_scope_fixtures_v0_4_3",
+ "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
+ "CLASSIFICATION_SCOPE_FIXTURES": 11,
+ "FIXTURES_DETECTED": 11,
+ "FIXTURES_MISSED": 0,
+ "CORRECTED_DECK_FALSE_FAILURES": 0,
+ "fixtures": [
+  {
+   "fixture_id": "F-101",
+   "group": "EXAMPLE_SELECTION_STATE_PERSISTENCE",
+   "title": "card visual removed from a POPUP state of a selection screen",
+   "gate_whose_population_excludes_it": "EXAMPLE_SELECTION_SCREENS_WITHOUT_VISUAL (selects 4 base pages only)",
+   "true_semantic_population": "all 24 state pages of the 4 COMPONENT_EXAMPLE_SELECTION screens",
+   "detected": true,
+   "detecting_gates": [
+    "EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS"
+   ]
+  },
+  {
+   "fixture_id": "F-102",
+   "group": "EXAMPLE_SELECTION_STATE_PERSISTENCE",
+   "title": "card visual removed from the ALL_VIEWED state of a selection screen",
+   "gate_whose_population_excludes_it": "EXAMPLE_SELECTION_SCREENS_WITHOUT_VISUAL",
+   "true_semantic_population": "all 24 state pages of the 4 COMPONENT_EXAMPLE_SELECTION screens",
+   "detected": true,
+   "detecting_gates": [
+    "EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS"
+   ]
+  },
+  {
+   "fixture_id": "F-103",
+   "group": "EXAMPLE_SELECTION_STATE_PERSISTENCE",
+   "title": "card visual removed from the return/completion state of a second selection screen",
+   "gate_whose_population_excludes_it": "EXAMPLE_SELECTION_SCREENS_WITH_PER_EXAMPLE_VISUAL",
+   "true_semantic_population": "all 24 state pages of the 4 COMPONENT_EXAMPLE_SELECTION screens",
+   "detected": true,
+   "detecting_gates": [
+    "EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS"
+   ]
+  },
+  {
+   "fixture_id": "F-201",
+   "group": "FAMILY_S_COMPLETION_TICKS",
+   "title": "false tick injected into an example POPUP state",
+   "gate_whose_population_excludes_it": "TICK_IDENTITY_MISMATCHES / COMPLETION_TICKS_NOT_MATCHING_PATH",
+   "true_semantic_population": "every state page of a screen that owns interaction items",
+   "detected": true,
+   "detecting_gates": [
+    "COMPLETION_TICKS_NOT_MATCHING_PATH"
+   ]
+  },
+  {
+   "fixture_id": "F-202",
+   "group": "FAMILY_S_COMPLETION_TICKS",
+   "title": "extra tick injected into an ALL_VIEWED state where every item is already ticked",
+   "gate_whose_population_excludes_it": "TICK_IDENTITY_MISMATCHES (identity-based, may not see a duplicate)",
+   "true_semantic_population": "every state page of a screen that owns interaction items",
+   "detected": true,
+   "detecting_gates": [
+    "COMPLETION_TICKS_NOT_MATCHING_PATH"
+   ]
+  },
+  {
+   "fixture_id": "F-203",
+   "group": "FAMILY_S_COMPLETION_TICKS",
+   "title": "extra tick injected into the Struktur Taman group-master return state",
+   "gate_whose_population_excludes_it": "TICK_IDENTITY_MISMATCHES",
+   "true_semantic_population": "every state page of the group master",
+   "detected": true,
+   "detecting_gates": [
+    "COMPLETION_TICKS_NOT_MATCHING_PATH"
+   ]
+  },
+  {
+   "fixture_id": "F-301",
+   "group": "NOTES_POLICY_POPULATION",
+   "title": "spoken-looking Notes inserted into a SILENT_STATE_NOTES completion state",
+   "gate_whose_population_excludes_it": "SILENT_STATES_WITH_NOTES_BLOCKS (model-derived; cannot see a package edit)",
+   "true_semantic_population": "every runtime state whose notes_policy is SILENT_STATE_NOTES",
+   "detected": true,
+   "detecting_gates": [
+    "SILENT_STATES_RECEIVING_NEW_VO",
+    "SILENT_STATES_WITH_NONEMPTY_NOTES"
+   ]
+  },
+  {
+   "fixture_id": "F-401",
+   "group": "INTERNAL_METADATA_DENYLIST",
+   "title": "FAMILY_P1 injected into a DERIVED state page, not the base Perabot overview",
+   "gate_whose_population_excludes_it": "TECHNICAL_METADATA_ON_LEARNER_CANVAS",
+   "true_semantic_population": "every learner-canvas page, not only base pages",
+   "detected": true,
+   "detecting_gates": [
+    "FAMILY_LABELS_ON_LEARNER_CANVAS",
+    "TECHNICAL_METADATA_ON_LEARNER_CANVAS"
+   ]
+  },
+  {
+   "fixture_id": "F-501",
+   "group": "VISUAL_SUBTYPE_PERSISTENCE",
+   "title": "example-card visual removed from a popup-state rendering of a selection screen",
+   "gate_whose_population_excludes_it": "EXAMPLE_SELECTION_SCREEN_LEVEL_INVENTED_DIRECTION / REQUIRED_VISUAL_SCREENS_WITHOUT_VISUAL",
+   "true_semantic_population": "all 24 state pages of the 4 selection screens",
+   "detected": true,
+   "detecting_gates": [
+    "EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS",
+    "MODAL_OCCLUDED_SHAPES_EVALUATED"
+   ]
+  },
+  {
+   "fixture_id": "F-502",
+   "group": "VISUAL_SUBTYPE_PERSISTENCE",
+   "title": "example-card visual removed from a state whose review_page_role differs from base",
+   "gate_whose_population_excludes_it": "REQUIRED_VISUAL_SCREENS_WITHOUT_VISUAL (selects REQUIRED-classified pages only)",
+   "true_semantic_population": "all state pages of a screen whose base page is REQUIRED",
+   "detected": true,
+   "detecting_gates": [
+    "EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS"
+   ]
+  },
+  {
+   "fixture_id": "F-601",
+   "group": "QUIZ_REVIEW_OVERLAY",
+   "title": "one answer removed from the Semak Jawapan review state",
+   "gate_whose_population_excludes_it": "QUIZ_REVIEW_PAGES_WITH_VISIBLE_ANSWER_KEY / ANSWER_KEYS_EVALUATED (select AnswerKeyBody on the 5 question pages only)",
+   "true_semantic_population": "every page carrying a question-review obligation, including STATE_QUIZ_REVIEW",
+   "detected": true,
+   "detecting_gates": [
+    "QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG"
+   ]
+  }
+ ]
+}

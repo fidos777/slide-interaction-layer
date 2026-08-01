@@ -88,8 +88,8 @@
    "sha256": "6c25318a2919a0ebc897d897179dd25d307086e0a52996b4d79b4c781ac4b590"
   },
   "v0_4/b02_governance_qa_v0_4_3.py": {
-   "bytes": 9179,
-   "sha256": "89a3cca36d7346e0edd56c3fe0a167b94366398d01d9b80c428398579360e11f"
+   "bytes": 10787,
+   "sha256": "89b2e0d0239b927af5b6102f5bf3652d5ae3738ac8532b5b55a5c8307829605b"
   },
   "v0_4/b02_instructions_v0_4.py": {
    "bytes": 4514,
@@ -119,9 +119,17 @@
    "bytes": 11685,
    "sha256": "12b91fa0602e1306ebc297304e6e86452fbedab617579fa85f34fb581c8a8a2c"
   },
+  "audit/b02_classification_scope_fixtures_v0_4_3.py": {
+   "bytes": 8847,
+   "sha256": "ec3b393cbbaa98565bede934e8b7ee02e81037af386b0b0b033aaa2ca5ded4f2"
+  },
   "audit/b02_oracle_extract_v0_4_2.py": {
    "bytes": 4939,
    "sha256": "8ae7f9fbb4445988ea4650c6676e8bb10a63695464e490b6d3436db7a9ad0890"
+  },
+  "audit/b02_population_audit_v0_4_3.py": {
+   "bytes": 15257,
+   "sha256": "1b0d0b02453ee6825bbd91dcecd88a7290bc6e42270eaf958c1d8fc7a11b4681"
   },
   "audit/b02_replay_v0_4_2.py": {
    "bytes": 9174,
@@ -167,39 +175,29 @@
   }
  },
  "qa_layers": {
-  "TOTAL": 303,
-  "PASS": 303,
+  "TOTAL": 307,
+  "PASS": 307,
   "FAIL": 0,
-  "SCREENSHOT_ORACLE_CONFORMANCE_CHECKS": 30
+  "SUPERSEDED_MARKERS_NOT_TESTS": 16,
+  "ACTIVE": 291,
+  "MODEL": 207,
+  "PACKAGE_XML": 43,
+  "ORACLE_CONFORMANCE": 38,
+  "RENDERED_GEOMETRY": 3,
+  "PINNED_POPULATION_GATES": 8
  },
  "replay": {
-  "bad_fixtures": 18,
-  "detected": 18,
-  "not_detected": 0,
+  "defect_shape_fixtures": 18,
+  "defect_shape_detected": 18,
+  "classification_scope_fixtures": 11,
+  "classification_scope_detected": 11,
+  "classification_scope_missed": 0,
   "corrected_false_failures": 0,
   "v0_4_gates_failing": 61,
   "v0_4_1_gates_failing": 16,
   "v0_4_2_gates_failing": 18,
-  "v0_4_2_failing_gates": [
-   "EXAMPLE_CARD_VISUALS_NOT_SOURCE_ATTESTED",
-   "EXAMPLE_SELECTION_SCREENS_WITHOUT_VISUAL",
-   "EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS",
-   "MODAL_OCCLUDED_SHAPES_EVALUATED",
-   "MODAL_OCCLUDED_SHAPE_NAMES",
-   "REQUIRED_VISUAL_SCREENS_WITHOUT_VISUAL",
-   "S01_MULA_INSTRUCTION_OLD_WORDING_WITHDRAWN",
-   "S01_MULA_INSTRUCTION_SPOKEN",
-   "S01_ORIENTATION_SENTENCE_REMOVED",
-   "S01_PL06_TITLE_LONG_FORM_WITHDRAWN",
-   "S01_PL06_TITLE_SPOKEN",
-   "S01_TOPIC_LINE_ON_CANVAS",
-   "S01_VISUAL_HEADING_ON_CANVAS",
-   "SHOT_PERSISIR_SUPERSESSION_DISCLOSED_IN_PANEL",
-   "SHOT_S01_PACKAGE_NOTES_EXACT",
-   "SHOT_S01_VISUAL_HEADING_MATCHES",
-   "SPOKEN_BLOCKS_MISSING_FROM_NOTES",
-   "SUPERSEDED_RULINGS_MISSING_FROM_PRODUCTION_PANEL"
-  ]
+  "failure_counts_are_not_a_quality_ranking": true,
+  "classification": "HISTORICAL_REPLAY_CLASSIFICATION_v0.4.3.md"
  },
  "visual_governance": {
   "REQUIRED": 29,
@@ -223,7 +221,8 @@
  },
  "environment_limitations": [
   "LibreOffice retested at Stage 4.2C: no Impress import filter, \"Error: source file could not be loaded\". Rendering uses the package parser with Liberation Sans. Microsoft PowerPoint equivalence is NOT claimed.",
-  "The three screenshots are raster images with no text layer. Their expected values are TRANSCRIBED, not machine-extracted; each record names the crop it was read from and the transcription limits it hit."
+  "The three screenshots are raster images with no text layer. Their expected values are TRANSCRIBED, not machine-extracted; each record names the crop it was read from and the transcription limits it hit.",
+  "Stage 4.2D added no rendering step. The deck was not regenerated and its SHA-256 is unchanged from Stage 4.2C."
  ],
  "totals": {
   "REVIEW_PAGES": 100,
@@ -234,5 +233,20 @@
   "SOURCE_ASSETS": 14,
   "COMPONENTS": 9,
   "SLIDES_MANUALLY_PATCHED": 0
+ },
+ "stage_4_2d_population_audit": {
+  "deck_regenerated": false,
+  "deck_sha256_before": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+  "deck_sha256_after": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+  "active_gates_audited": 291,
+  "classification_scoped_gates": 84,
+  "gates_with_semantic_population_gaps": 13,
+  "records_wrongly_excluded": 260,
+  "validators_added": 4,
+  "pending_human_items_closed_by_cc": 0,
+  "pl06_spoken_form": "PL enam — IMPLEMENTATION_REQUIRED_NEXT_STAGE",
+  "raster_punctuation_confirmations_pending": 2,
+  "tambahan_text_status": "PENDING_BARIAH_CONFIRMATION",
+  "open_decisions": 9
  }
 }

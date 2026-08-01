@@ -782,6 +782,54 @@
    "correction": "None. CC does not decide 'applicable'. COMPONENT_MAIN_SELF_RESOLVED_BY_CC = 0.",
    "implementation_status": "AWAITING_BARIAH",
    "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-D-TAMBAHAN-TEXT-01",
+   "title": "Interpretation of the annotation \"Skrin: Tambahan Text\"",
+   "status": "PENDING_BARIAH_CONFIRMATION",
+   "exact_annotation": "Skrin: Tambahan Text",
+   "source_evidence_id": "S2 / S2-b — B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg",
+   "source_evidence_sha256": "936b78c270274874bfa4921a35205e4ca1d679959ebf6f1880e7c76e6f890ab7",
+   "evidence_locator": "red annotation box, top right, crop (610,65)-(970,98). Transcription confidence HIGH — the words are certain, the meaning is not.",
+   "current_interpretation": "A review/production treatment label meaning 'this screen gains additional text', i.e. an instruction about the CONTENT of the existing Struktur Persisir Air component-main screen.",
+   "alternative_interpretation": "An instruction to CREATE a new learner screen carrying the additional text.",
+   "structural_impact": {
+    "if_current_interpretation": {
+     "LEARNER_SCREENS": 29,
+     "REVIEW_PAGES": 100,
+     "RUNTIME_STATES": 100,
+     "INTERACTION_ITEMS": 54,
+     "SOURCE_ROWS": 26,
+     "change": "none — the annotation is metadata about an existing screen"
+    },
+    "if_alternative_interpretation": {
+     "LEARNER_SCREENS": "30 (+1)",
+     "REVIEW_PAGES": "at least 101 (+1 base state, more if the new screen carries interaction or completion states)",
+     "RUNTIME_STATES": "at least 101 (+1)",
+     "INTERACTION_ITEMS": "54 — unchanged unless the new screen is interactive",
+     "SOURCE_ROWS": "26 — unchanged; this is not a CLASS-9 source correction",
+     "knock_on": "the Struktur Taman group navigation, Kembali targets and completion topology would need re-deriving, and every count assertion in the suite would move"
+    }
+   },
+   "current_safe_treatment": [
+    "retain as review/production metadata",
+    "do not create a new learner screen",
+    "do not change counts until clarified"
+   ],
+   "why_this_is_the_safe_direction": "Adding a screen on an inferred reading would change six structural totals and the group's completion topology on the strength of two words. Not adding one leaves the annotation visible and reversible. The conservative reading is also the reversible one.",
+   "evidence_directly_confirming_current_interpretation": "NONE. This is an inference from the annotation's position on an existing screen's corrected rendering, not a ruling.",
+   "authorised_resolver": "Bariah",
+   "resolvable_by_cc": false,
+   "question_ms": "Label “Skrin: Tambahan Text” bermaksud tambahan kandungan pada skrin yang sama, atau perlu diwujudkan satu skrin learner baharu?",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "implementation_status": "NOT_IMPLEMENTED — pending",
+   "feedback_ids": []
   }
  ],
  "v0_3_entries_carried_forward": [
@@ -1068,5 +1116,35 @@
   "component_main_self_resolved_by_cc": 0,
   "pending_human_items_closed_by_cc": 0,
   "regression_checks_silently_removed": 0
+ },
+ "stage_4_2d_population_audit": {
+  "date": "2026-08-01",
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
+  "deck_regenerated": false,
+  "deck_sha256_unchanged": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+  "new_weakness_class": "CLASSIFICATION_SCOPED_POPULATION",
+  "active_gates_audited": 291,
+  "classification_scoped_gates": 84,
+  "gates_with_semantic_population_gaps": 13,
+  "records_wrongly_excluded": 260,
+  "classification_scope_fixtures": 11,
+  "fixtures_detected": 11,
+  "fixtures_missed": 0,
+  "validators_added": 4,
+  "pending_human_items_closed_by_cc": 0,
+  "new_open_decisions": [
+   "B02-D-TAMBAHAN-TEXT-01",
+   "Q-PUNCT-S01"
+  ],
+  "changes": [
+   "CLASSIFICATION_SCOPED_POPULATION added to the QA weakness taxonomy as class I.",
+   "All 307 emitted gates bound to source and audited; 0 duplicates, 0 unbound.",
+   "13 gates found with populations narrower than the obligation they test; each has a pinned replacement plan anchored on learner_screen_id.",
+   "Measured, independently of the audit, that 13 pages lose their screen's base visual direction. The obligation is PENDING_HUMAN, so the fix is scheduled, not performed.",
+   "Fixture F-601 passed silently; four QUIZ_REVIEW_STATE_* gates added with a pinned population. All 11 classification-scope fixtures now detected.",
+   "Historical replay failure counts reclassified into five categories and explicitly de-ranked: TRUE_HISTORICAL_REGRESSION reaches 0 after v0.4.",
+   "PL06 pronunciation contract recorded: display PL06, spoken 'PL enam'. Not yet implemented in the deck — IMPLEMENTATION_REQUIRED_NEXT_STAGE.",
+   "Two S01 trailing full stops recorded at MEDIUM punctuation confidence, PUNCTUATION_CONFIRMATION = PENDING_BARIAH."
+  ]
  }
 }

@@ -1,0 +1,179 @@
+{
+ "register": "BARIAH_RASTER_TRANSCRIPTION_REGISTER_v0.4.3",
+ "evidence_date": "2026-08-01",
+ "why_this_register_exists": "The three frozen screenshots are raster images with no text layer. Their expected values were read by eye from named pixel crops, not parsed. A matching SHA-256 proves the BYTES are the ones Bariah sent; it proves nothing about whether the transcription of those bytes is character-perfect. Those are two different claims and this register keeps them apart.",
+ "confidence_scale": {
+  "HIGH": "characters are unambiguous at native resolution; no plausible alternative reading",
+  "MEDIUM": "wording unambiguous, but at least one character or mark is at the raster limit",
+  "LOW": "an alternative reading would change meaning; must be confirmed before use"
+ },
+ "transcriptions": [
+  {
+   "evidence_id": "S3",
+   "source_image": "B02_BARIAH_VISUAL_POLICY_EVIDENCE.png",
+   "source_sha256": "feb29e86228b7f240379b9830bbd59f3e30db2fae03389a68e1ba1bd32ef867b",
+   "region": "(40,10)-(720,120), WhatsApp text bubble timestamped 4:37 PM",
+   "transcribed_text": "Semua contoh ada visual. Semua pop up ada visual, KECUALI pop up Spesifikasi (bahan, dimensi etc)",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "Task transcript of the same message, Stage 4.1 and 4.2B",
+   "current_implementation": "b02_visual_policy_v0_4.SUBTYPE_REQUIREMENT; 30 gates named against it in the Stage 4.2C layer",
+   "confirmation_required": false
+  },
+  {
+   "evidence_id": "S3-b",
+   "source_image": "B02_BARIAH_VISUAL_POLICY_EVIDENCE.png",
+   "source_sha256": "feb29e86228b7f240379b9830bbd59f3e30db2fae03389a68e1ba1bd32ef867b",
+   "region": "(40,1200)-(850,1245), caption under the second image, 4:40 PM",
+   "transcribed_text": "Slide 5 - apply to yang lain where applicable/necessary",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "MEDIUM",
+   "uncertain_characters": [
+    "the dash after 'Slide 5' renders as a hyphen at this size; an en dash would read identically. No semantic effect."
+   ],
+   "supporting_earlier_evidence": "none — this caption appears only here",
+   "current_implementation": "Recorded as a QUALIFIED propagation. Eight component mains left CONDITIONAL / PENDING_HUMAN, marked PROVISIONAL_VISUAL_PROPOSAL",
+   "confirmation_required": false
+  },
+  {
+   "evidence_id": "S2",
+   "source_image": "B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg",
+   "source_sha256": "936b78c270274874bfa4921a35205e4ca1d679959ebf6f1880e7c76e6f890ab7",
+   "region": "(60,425)-(600,480), visual-direction line on the corrected component main",
+   "transcribed_text": "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "Task transcript gave the identical string at Stage 4.1",
+   "current_implementation": "VP.BARIAH_DIRECT['SCR_STRUKTUR_PERSISIR_AIR_MAIN']; rendered on RP-005 and asserted by SHOT_PERSISIR_ACTIVE_DIRECTION_RENDERED",
+   "confirmation_required": false
+  },
+  {
+   "evidence_id": "S2-b",
+   "source_image": "B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg",
+   "source_sha256": "936b78c270274874bfa4921a35205e4ca1d679959ebf6f1880e7c76e6f890ab7",
+   "region": "(610,65)-(970,98), red annotation box, top right",
+   "transcribed_text": "Skrin: Tambahan Text",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "none",
+   "current_implementation": "Treated as a review/production treatment label. NOT implemented as a new learner screen — see decision B02-D-TAMBAHAN-TEXT-01",
+   "confirmation_required": true,
+   "confirmation_reason": "The transcription is certain; the INTERPRETATION is not. Routed as an open decision, not as a transcription doubt."
+  },
+  {
+   "evidence_id": "S1-a",
+   "source_image": "B02_BARIAH_S01_EVIDENCE.jpg",
+   "source_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+   "region": "(580,285)-(977,360), red annotation box",
+   "transcribed_text": "(1) Komponen Landskap – Tukar kepada Topik 3 Bahagian 2: Komponen Landskap  /  (2) Komponen Landskap - Remove",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "Implemented at Stage 4.1 from the annotated v0.3 deck",
+   "current_implementation": "C.S01 display_title; S01_DUPLICATE_STANDALONE_COMPONENT_TITLE = 0",
+   "confirmation_required": false
+  },
+  {
+   "evidence_id": "S1-b",
+   "source_image": "B02_BARIAH_S01_EVIDENCE.jpg",
+   "source_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+   "region": "(60,275)-(580,345), visual-direction block on the corrected canvas",
+   "transcribed_text": "ARAHAN VISUAL — SPESIFIKASI SAHAJA / [Visual: Imej pembuka bahagian — foto tapak landskap siap yang memaparkan struktur taman dan perabot taman dalam satu bingkai. Tidak dibenamkan.]",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "Identical string in the Stage 4.1 controlled content",
+   "current_implementation": "VP.S01_VISUAL; SHOT_S01_VISUAL_DIRECTION_MATCHES",
+   "confirmation_required": false
+  },
+  {
+   "evidence_id": "S1-c",
+   "source_image": "B02_BARIAH_S01_EVIDENCE.jpg",
+   "source_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+   "region": "(580,510)-(977,580), boxed Speaker Notes block labelled 'Speaker Notes: Edit to this', LINE 1",
+   "transcribed_text": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "MEDIUM",
+   "uncertain_characters": [
+    "trailing '.' after 'Landskap' — a dark mark sits on the baseline but is not separable from the red spell-check underline beneath it at native resolution"
+   ],
+   "supporting_earlier_evidence": "The grey 'before' block immediately above, which is unambiguous and ends every line in a full stop; and the v0.4.2 build, whose line 1 ended in a full stop",
+   "current_implementation": "Rendered WITH the trailing full stop, carried from the 'before' block. SHOT_S01_PACKAGE_NOTES_EXACT asserts the string as written.",
+   "confirmation_required": true,
+   "punctuation_confirmation": "PENDING_BARIAH"
+  },
+  {
+   "evidence_id": "S1-d",
+   "source_image": "B02_BARIAH_S01_EVIDENCE.jpg",
+   "source_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+   "region": "(580,510)-(977,580), boxed Speaker Notes block, LINE 2",
+   "transcribed_text": "Topik 3 Bahagian 2: Komponen Landskap.",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "MEDIUM",
+   "uncertain_characters": [
+    "trailing '.' after 'Landskap' — same raster limit as S1-c"
+   ],
+   "supporting_earlier_evidence": "as S1-c",
+   "current_implementation": "Rendered WITH the trailing full stop.",
+   "confirmation_required": true,
+   "punctuation_confirmation": "PENDING_BARIAH"
+  },
+  {
+   "evidence_id": "S1-e",
+   "source_image": "B02_BARIAH_S01_EVIDENCE.jpg",
+   "source_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+   "region": "(580,510)-(977,580), boxed Speaker Notes block, LINE 3",
+   "transcribed_text": "Klik butang “Mula” untuk memulakan pembelajaran.",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "none needed — the final full stop is clear of any underline and the curly quotes are legible at native resolution",
+   "current_implementation": "Rendered verbatim; S01_MULA_INSTRUCTION_SPOKEN",
+   "confirmation_required": false
+  },
+  {
+   "evidence_id": "S1-f",
+   "source_image": "B02_BARIAH_S01_EVIDENCE.jpg",
+   "source_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+   "region": "(580,445)-(977,505), grey 'before' block",
+   "transcribed_text": "Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap. / Topik 3 Bahagian 2: Komponen Landskap. / Dalam bahagian ini, anda akan mempelajari tentang komponen landskap. / Klik Mula untuk meneruskan.",
+   "transcription_confidence": "HIGH",
+   "punctuation_confidence": "HIGH",
+   "uncertain_characters": [],
+   "supporting_earlier_evidence": "matches the v0.4.2 build byte for byte",
+   "current_implementation": "Recorded as spoken_before; all four lines withdrawn or reworded. S01_ORIENTATION_SENTENCE_REMOVED, S01_MULA_INSTRUCTION_OLD_WORDING_WITHDRAWN",
+   "confirmation_required": false
+  }
+ ],
+ "totals": {
+  "TRANSCRIBED_RULINGS": 10,
+  "HIGH_CONFIDENCE": 10,
+  "MEDIUM_CONFIDENCE": 0,
+  "LOW_CONFIDENCE": 0,
+  "PUNCTUATION_HIGH": 8,
+  "PUNCTUATION_MEDIUM": 3,
+  "PUNCTUATION_LOW": 0,
+  "CONFIRMATION_REQUIRED": 3,
+  "PUNCTUATION_CONFIRMATION_PENDING_BARIAH": 2,
+  "HIGH_CONFIDENCE_WORDING_CHANGED_BY_THIS_STAGE": 0
+ },
+ "checklist_question_for_bariah": {
+  "id": "Q-PUNCT-S01",
+  "language": "ms-MY",
+  "question": "Mohon sahkan penggunaan tanda noktah pada dua baris Speaker Notes S01.",
+  "detail_ms": "Baris 1 “PL06: Pengurusan Operasi Pembinaan Landskap” dan baris 2 “Topik 3 Bahagian 2: Komponen Landskap” — kami paparkan dengan noktah di hujung, mengikut blok asal. Betul?",
+  "scope_limit": "Punctuation only. Bariah is NOT asked to re-review the S01 text; the wording of all three lines is HIGH confidence and settled.",
+  "blocks": {
+   "bariah_review": false,
+   "powerpoint_smoke": false,
+   "mmd_build": true,
+   "canonical_freeze": true,
+   "production": true
+  },
+  "status": "PENDING_BARIAH"
+ },
+ "standing": "A matching screenshot SHA-256 establishes evidence integrity only. It is not evidence that the transcription is perfect, and no gate in the suite should be read as proving the latter."
+}

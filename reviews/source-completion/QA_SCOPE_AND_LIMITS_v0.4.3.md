@@ -1,5 +1,8 @@
 # QA_SCOPE_AND_LIMITS — v0.4.3
 
+> **Superseded by `QA_SCOPE_AND_LIMITS_v0.4.3A.md` (Stage 4.2D).** The totals below describe the 303-gate suite before the population audit; the suite is now 307 gates and the disaggregation has changed. Retained as the record of the Stage 4.2C position.
+
+
 > **303 of 303 mechanical checks passing does not mean the deck is approved.**
 > It means every check that exists passed. Stage 4.2A found a defect class that passed 188/188.
 > **Stage 4.2C found another that passed 216/216** — see §3.1. The number measures the suite,

@@ -1,0 +1,170 @@
+{
+ "inventory": "B02_OPEN_DECISION_INVENTORY_v0.4.3",
+ "stage": "Stage 4.2D",
+ "evidence_date": "2026-08-01",
+ "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
+ "deck_sha256": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+ "totals": {
+  "OPEN_DECISIONS": 9,
+  "AWAITING_BARIAH": 6,
+  "AWAITING_FIRDAUS_OR_LMS_OWNER": 1,
+  "AWAITING_SOURCE_AUTHORITY": 2,
+  "BLOCKING_CURRENT_BARIAH_REVIEW": 4,
+  "BLOCKING_POWERPOINT_SMOKE": 0,
+  "BLOCKING_MMD_BUILD": 7,
+  "BLOCKING_CANONICAL_FREEZE": 9,
+  "BLOCKING_PRODUCTION": 9,
+  "RESOLVED_BY_CC_IN_THIS_STAGE": 0
+ },
+ "resolver_note": "No item in this inventory is resolvable by CC. Each names the one authority who can close it.",
+ "items": [
+  {
+   "id": "OD-01",
+   "title": "Eight remaining component-main visual decisions",
+   "authority": "Bariah",
+   "current_safe_treatment": "Each of the 8 screens shows the module's OWN source-attested visual text, classified CONDITIONAL / PENDING_HUMAN and marked PROVISIONAL_VISUAL_PROPOSAL. Struktur Persisir Air is the only component main with direct authority. The Stage 4.1 'Pelbagai {name}' propagation stays retired.",
+   "evidence_required": "A ruling per screen, or one ruling stating that the module's own visual text is accepted for all eight. Her 4:40 PM caption 'apply to yang lain where applicable/necessary' authorises the principle, not the content.",
+   "impact_if_unresolved": "8 screens ship to MMD with unconfirmed visual directions. Also blocks the pinned-population fix for the component-main gate family (QA_PINNED_POPULATION_PLAN § COMPONENT_MAINS_*), because 13 pages measurably lose their base visual direction and whether that is a defect depends on this decision.",
+   "blocks": {
+    "current_bariah_review": true,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_BARIAH",
+   "notes": "Screens: Struktur Teduhan, Kemudahan Awam, Water Feature, Kerusi Taman, Papan Tanda, Tong Sampah, Drinking Fountain, BBQ Pit."
+  },
+  {
+   "id": "OD-02",
+   "title": "Exact B02 cast-name provenance — Alya / Encik Rahman",
+   "authority": "Bariah",
+   "current_safe_treatment": "Both names remain in the deck with status CONFIRMED_LOCAL_ARTIFACT, not CONFIRMED_CANON. DIRECT_BARIAH_NAME_PROVENANCE = PENDING. Hilmi is artifact-backed in all four frozen sources and is not in question.",
+   "evidence_required": "Any frozen Bariah artifact naming Alya or Encik Rahman for B02. Neither appears in the annotated deck, the review guide, the S&G v0.3 or the exemplars, and the guide says 'nama watak khusus untuk B02 belum disahkan'.",
+   "impact_if_unresolved": "Character names would be voiced and animated in MMD without provenance.",
+   "blocks": {
+    "current_bariah_review": true,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_BARIAH",
+   "notes": "Recorded in CAST_PROVENANCE_REGISTER_v0.4.2.json. Self-corrected at Stage 4.2A."
+  },
+  {
+   "id": "OD-03",
+   "title": "Quiz rationale placement",
+   "authority": "Bariah",
+   "current_safe_treatment": "Per-question rationales are carried in the off-canvas production panel and the Semak Jawapan production note, never on the learner canvas and never in the spoken VO. REVIEW_ONLY_ANSWER_KEYS_IN_SPOKEN_VO = 0.",
+   "evidence_required": "Whether learners see rationales, and if so on which screen and in what form.",
+   "impact_if_unresolved": "The quiz ships without learner-facing rationale; if Bariah expects one, the Kuiz screen architecture changes.",
+   "blocks": {
+    "current_bariah_review": true,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_BARIAH"
+  },
+  {
+   "id": "OD-04",
+   "title": "Micro-control VO scope",
+   "authority": "Bariah",
+   "current_safe_treatment": "VO/canvas parity is bounded to screen-level instructions beginning 'Klik pada setiap'. Micro-controls (Semak, Tutup, Kembali) are NOT spoken; MICRO_CONTROL_SCOPE_SELF_RESOLVED = 0. The CC-invented quiz-result instruction was withdrawn at Stage 4.2B.",
+   "evidence_required": "Whether 'every learner-facing interaction instruction must also be spoken' extends to popup-close and navigation micro-controls.",
+   "impact_if_unresolved": "Up to 7 further instructions would need spoken counterparts; the VO line count and the TTS export both change.",
+   "blocks": {
+    "current_bariah_review": true,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_BARIAH"
+  },
+  {
+   "id": "OD-05",
+   "title": "Two S01 Speaker-Notes punctuation confirmations",
+   "authority": "Bariah",
+   "current_safe_treatment": "Both lines rendered WITH the trailing full stop, carried from the unambiguous grey 'before' block. Recorded at MEDIUM punctuation confidence in BARIAH_RASTER_TRANSCRIPTION_REGISTER_v0.4.3.json as S1-c and S1-d.",
+   "evidence_required": "Confirmation only: 'Mohon sahkan penggunaan tanda noktah pada dua baris Speaker Notes S01.' The WORDING of all three lines is HIGH confidence and settled — she is not being asked to re-review the S01 text.",
+   "impact_if_unresolved": "Two characters in the VO transcript. No structural effect, but the TTS cut would carry an unconfirmed sentence terminator.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_BARIAH",
+   "notes": "Question ID Q-PUNCT-S01. Deliberately scoped to punctuation."
+  },
+  {
+   "id": "OD-06",
+   "title": "\"Skrin: Tambahan Text\" interpretation",
+   "authority": "Bariah",
+   "current_safe_treatment": "Retained as review/production metadata. No new learner screen created. LEARNER_SCREENS = 29 and REVIEW_PAGES = 100 unchanged.",
+   "evidence_required": "Whether the label means additional content on the SAME screen or a NEW learner screen. No direct evidence currently confirms the current reading.",
+   "impact_if_unresolved": "If the alternative reading is right, LEARNER_SCREENS becomes 30, REVIEW_PAGES at least 101, and the Struktur Taman group navigation and completion topology must be re-derived. Six structural totals move.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_BARIAH_CONFIRMATION",
+   "notes": "Decision B02-D-TAMBAHAN-TEXT-01. Question: 'Label “Skrin: Tambahan Text” bermaksud tambahan kandungan pada skrin yang sama, atau perlu diwujudkan satu skrin learner baharu?'"
+  },
+  {
+   "id": "OD-07",
+   "title": "Tamat physical navigation mechanism",
+   "authority": "Firdaus / LMS owner",
+   "current_safe_treatment": "The Tamat screen carries Bariah's exemplar wording 'Teruskan pembelajaran ke bahagian seterusnya.' The superseded 'Tutup tetingkap pelajaran untuk keluar.' is gated out, and TAMAT_UNVERIFIED_PHYSICAL_NAVIGATION_CLAIM asserts that no unverified mechanism is described.",
+   "evidence_required": "How the LMS shell actually advances the learner out of B02 — shell Next, window close, or automatic return to a menu.",
+   "impact_if_unresolved": "The final screen may describe a navigation action the shell does not perform. Not Bariah's to answer.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": true,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_FIRDAUS_LMS_OWNER"
+  },
+  {
+   "id": "OD-08",
+   "title": "MS2680 verification",
+   "authority": "Source authority — CAIR / module owner",
+   "current_safe_treatment": "The MS2680 sentence is OMITTED from the S02 dialogue (U-01) and is NOT replaced by any other standards claim. Nothing in the deck asserts a standard.",
+   "evidence_required": "Whether MS2680 is the correct standard reference for this content, and the clause it supports.",
+   "impact_if_unresolved": "A standards citation stays out of the courseware. Safe, but a required reference may be missing.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": false,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_SOURCE_AUTHORITY"
+  },
+  {
+   "id": "OD-09",
+   "title": "B02-CAIR-INT-001 — canonical module DOCX integrity",
+   "authority": "Firdaus / CAIR — explicitly not Bariah's to close",
+   "current_safe_treatment": "The 26-row source baseline is derived from the hashed PDF pages 256–269 and is frozen. SOURCE_ROW_COUNT may change only on a proven CLASS-9 correction re-derived from that PDF. SOURCE_INTEGRITY_FULLY_VERIFIED is not asserted.",
+   "evidence_required": "A verified canonical module DOCX, or confirmation that the hashed PDF is canonical for B02.",
+   "impact_if_unresolved": "Canonical freeze cannot be declared. Open since Stage 1.",
+   "blocks": {
+    "current_bariah_review": false,
+    "powerpoint_smoke": false,
+    "mmd_build": false,
+    "canonical_freeze": true,
+    "production": true
+   },
+   "status": "PENDING_FIRDAUS_CAIR"
+  }
+ ]
+}
