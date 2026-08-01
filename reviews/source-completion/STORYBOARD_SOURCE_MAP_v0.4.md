@@ -14,6 +14,24 @@ renames or renumbers a source row.
 
 ---
 
+# 0. Upstream narrative context — not source
+
+Two Bariah-supplied montages precede B02: `SB_K5_montaj_v1.pptx` (Course Montage) and
+`SB_K5PL6_montaj_v1.pptx` (PL06 Montage). They are classified `UPSTREAM_NARRATIVE_CONTEXT`.
+
+**They contribute no source rows and no source assets.** They are prerequisites to the learner flow,
+not module content: the 26 rows and 14 assets below are unchanged by them, and neither montage appears
+as a screen, a state, an interaction item or a source binding anywhere in this map.
+
+What they do change is what B02 may *say*: the course introduction, the eight Pakej Latihan, the PL06
+objectives, the seven PL06 topics and Hilmi's self-introduction are all already delivered upstream and
+must not be repeated here. Recorded as `B02-D-25`.
+
+Their byte freeze is outstanding — see `B02_V0_4_INPUT_FREEZE.md` §2B and `B02-D-27`.
+
+
+---
+
 # 1. Source-row binding — all 26
 
 | # | source_row_uid | component | family | label | locator | interaction items | states |

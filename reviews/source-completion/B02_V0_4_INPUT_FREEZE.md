@@ -98,6 +98,68 @@ v0.2 hash because the v0.3 *deck* was built against it; the v0.4 delta is writte
 
 ---
 
+## 2B. Upstream narrative-context artifacts — named, classified, **not yet frozen**
+
+```
+UPSTREAM_NARRATIVE_CONTEXT
+COURSE_MONTAGE_HASH_RECORDED = false   ← PENDING_ARTIFACT_DELIVERY
+PL06_MONTAGE_HASH_RECORDED   = false   ← PENDING_ARTIFACT_DELIVERY
+```
+
+Two Bariah-supplied montages sit upstream of B02. They are **prerequisites to the B02 learner flow,
+never screens inside the B02 storyboard**, and are never counted in `LEARNER_SCREENS` or regenerated.
+
+| Ref | Filename | Role | Relationship to B02 | Frozen? |
+|---|---|---|---|:-:|
+| **M1** | `SB_K5_montaj_v1.pptx` | Course Montage — K5 course-level opening | two steps upstream of B02 S01 | ❌ |
+| **M2** | `SB_K5PL6_montaj_v1.pptx` | PL06 Montage — Pakej Latihan 06 opening | immediate predecessor of B02 S01; ends by naming Topik 3 as Komponen Landskap | ❌ |
+
+Intended frozen path for both: `reviews/storyboard-bariah/v0_3_bariah_review/`.
+
+### 2B.1 Why no hash is recorded
+
+The two files **did not reach this execution environment.** The session upload directory holds no file
+matching `SB_K5*montaj*`, and its newest batch predates this stage. This is the same
+artifact-handoff class of failure documented at §5 — a delivery-channel gap, not an absent artifact.
+
+**No SHA-256, byte size or frozen copy is recorded, and none is estimated.** A fabricated or assumed
+digest would be worse than none: it would look like provenance while carrying none. The rows above are
+left explicitly empty so that re-running the freeze fills a hole rather than overwriting a fiction.
+
+### 2B.2 What is *not* blocked by this
+
+Every ruling that depends on the montages' **content** is already recorded, because that content was
+supplied in the task text itself:
+
+| Covered by the Course Montage | Covered by the PL06 Montage |
+|---|---|
+| full course title | introduction to Pakej Latihan 06 |
+| introduction to the eight Pakej Latihan | PL06 title |
+| introduction of Hilmi | PL06 objectives |
+| statement that Hilmi accompanies the learner | the seven PL06 topics |
+| each PL contains topics and quizzes | Topik 3 identified as Komponen Landskap |
+
+```
+COURSE_MONTAGE_COMPLETED          = true
+PL06_MONTAGE_COMPLETED            = true
+HILMI_ALREADY_INTRODUCED          = true
+UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED = true
+```
+
+Narrative chain:
+
+```
+Montaj Kursus → Montaj PL06 → B02 S01 (Topik/Bahagian) → B02 S02 (Alya + Encik Rahman)
+              → B02 S03 (Hilmi overview) → learning groups
+```
+
+B02 therefore opens at **section level**. It does not repeat the course introduction, the eight PLs,
+the PL06 objectives, the seven PL06 topics, Hilmi's self-introduction, or the overall course
+structure. Recorded as `B02-D-25`; the outstanding byte freeze is `B02-D-27` / dependency `U-07`.
+
+
+---
+
 ## 3. Generator toolchain frozen
 
 | Module | Bytes | SHA-256 |

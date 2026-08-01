@@ -25,7 +25,8 @@
     "CONFIRMED_CANON": "A canon character confirmed for the PL06 / K5 cast.",
     "CONFIRMED_NARRATOR": "The confirmed course narrator, distinct from the scenario cast.",
     "PENDING_BARIAH_CONFIRMATION": "Execution policy is set for the review build; Bariah must confirm the final form.",
-    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": "Interaction items derived from the module source’s own labelled substructure; no stakeholder ruling required and no source row created."
+    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": "Interaction items derived from the module source’s own labelled substructure; no stakeholder ruling required and no source row created.",
+    "PENDING_ARTIFACT_DELIVERY": "The ruling is confirmed and modelled; only the byte-level freeze of a supplied artifact is outstanding because the file did not reach the execution environment."
   },
   "evidence_artifacts": [
     {
@@ -464,6 +465,77 @@
       "feedback_ids": [],
       "resolves": "U-04",
       "source_rows_created": 0
+    },
+    {
+      "decision_id": "B02-D-25",
+      "title": "Upstream montage context — B02 opens at section level",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah",
+      "ruling": "Two upstream montages precede B02 and are classified UPSTREAM_NARRATIVE_CONTEXT, never B02 learner screens. The Course Montage (SB_K5_montaj_v1.pptx) already delivers the full course title, the eight Pakej Latihan, the introduction of Hilmi, the statement that Hilmi accompanies the learner, and the general explanation that each PL contains topics and quizzes. The PL06 Montage (SB_K5PL6_montaj_v1.pptx) already delivers the introduction to Pakej Latihan 06, the PL06 title, the PL06 objectives, the seven PL06 topics, and the identification of Topik 3 as Komponen Landskap. B02 therefore MUST NOT repeat any of these as new learner introductions. Narrative chain: Montaj Kursus → Montaj PL06 → B02 S01 → B02 S02 (Alya + Encik Rahman) → B02 S03 (Hilmi overview) → learning groups.",
+      "evidence": "Both montages supplied as Bariah upstream-context artifacts with this stage.",
+      "evidence_source": "Stage 2.1 upstream-context supply + Bariah WhatsApp clarification",
+      "feedback_ids": [],
+      "flags": {
+        "COURSE_MONTAGE_COMPLETED": true,
+        "PL06_MONTAGE_COMPLETED": true,
+        "HILMI_ALREADY_INTRODUCED": true,
+        "UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED": true,
+        "COURSE_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+        "PL06_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+        "HILMI_REINTRODUCED_AS_NEW": false,
+        "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true
+      },
+      "affects": [
+        "SCR_S01",
+        "SCR_S02",
+        "SCR_S03"
+      ],
+      "open_dependency": "U-07 — byte-level freeze of the two montage files (see B02-D-27)",
+      "generator_change_required": "frame builder: S01 opens at section level; S03 continues Hilmi rather than introducing him"
+    },
+    {
+      "decision_id": "B02-D-26",
+      "title": "S01 entry titles are spoken; S02 onwards they are non-spoken context",
+      "status": "CONFIRMED_BARIAH",
+      "authority": "Bariah — latest direct WhatsApp clarification",
+      "ruling": "On S01 the PL06 title and the Topik 3 Bahagian 2 title are SPOKEN, and this spoken treatment occurs on Slide 1 only. The S01 spoken transcript carries, in order: (1) Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap, (2) Topik 3 Bahagian 2: Komponen Landskap, (3) a minimal section-orientation sentence, (4) a concise instruction to click Mula. From S02 onwards the PL and Topic/Bahagian titles remain in Speaker Notes as NON-SPOKEN production context and are never repeated in spoken VO. The context headers are stored separately from spoken_transcript and must not be read by MMD/TTS.",
+      "evidence": "Bariah verbatim: \"Dibaca di slide 1\" and \"Yes bersyarat, dibaca di slide 1\".",
+      "evidence_source": "Stage 2.1 upstream-context supply + Bariah WhatsApp clarification",
+      "feedback_ids": [],
+      "flags": {
+        "S01_ENTRY_TITLES_SPOKEN": true,
+        "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false
+      },
+      "notes_policies_introduced": [
+        "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+        "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT"
+      ],
+      "affects": [
+        "SCR_S01",
+        "all content and dialogue screens from S02 onwards"
+      ],
+      "generator_change_required": "notes emitter: two labelled blocks, NON-SPOKEN CONTEXT and SPOKEN TRANSCRIPT",
+      "note": "The draft orientation sentence \"Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.\" is navigational wording, not a new factual claim. The course title is not added to the S01 spoken transcript because no direct Bariah evidence requires it."
+    },
+    {
+      "decision_id": "B02-D-27",
+      "title": "Montage artifact byte freeze",
+      "status": "PENDING_ARTIFACT_DELIVERY",
+      "authority": "Firdaus / execution environment",
+      "ruling": "SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx are named, classified and modelled as UPSTREAM_NARRATIVE_CONTEXT, but their bytes did not reach this execution environment, so no SHA-256, byte size or frozen copy exists. No hash is recorded: an assumed or fabricated digest would be worse than none. This blocks only the byte freeze — every ruling that depends on the montages’ CONTENT is already recorded under B02-D-25, because that content was supplied in the task text itself.",
+      "evidence": "Session upload directory holds no file matching SB_K5*montaj*; the newest attachment batch predates this stage.",
+      "evidence_source": "Stage 2.1 upstream-context supply + Bariah WhatsApp clarification",
+      "feedback_ids": [],
+      "open_dependency": "U-07",
+      "blocks": [
+        "COURSE_MONTAGE_HASH_RECORDED",
+        "PL06_MONTAGE_HASH_RECORDED"
+      ],
+      "does_not_block": [
+        "the S01/S02/S03 model amendment",
+        "the notes-policy split",
+        "Hilmi continuity"
+      ]
     }
   ],
   "v0_3_entries_carried_forward": [
@@ -598,6 +670,18 @@
       "decisions": [
         "B02-CAIR-INT-001"
       ]
+    },
+    {
+      "id": "U-07",
+      "question": "Deliver SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx to the execution environment so their bytes can be frozen and hashed.",
+      "owner": "Firdaus / execution environment",
+      "status": "PENDING_ARTIFACT_DELIVERY",
+      "blocks": "COURSE_MONTAGE_HASH_RECORDED and PL06_MONTAGE_HASH_RECORDED only",
+      "does_not_block": "the Stage 2.1 model amendment, which is complete",
+      "decisions": [
+        "B02-D-25",
+        "B02-D-27"
+      ]
     }
   ],
   "source_baseline_preserved": {
@@ -613,8 +697,8 @@
     "statement": "No source-row ID, row order, locator or image-ownership finding was altered. No interaction decomposition was converted into a source row. Papan Tanda still holds exactly one source row while yielding four interaction categories; BBQ Pit still holds exactly one."
   },
   "totals": {
-    "DECISIONS": 24,
-    "CONFIRMED_BARIAH": 13,
+    "DECISIONS": 27,
+    "CONFIRMED_BARIAH": 15,
     "CONFIRMED_CAIR_ADOPTION": 2,
     "PENDING_SOURCE_VERIFICATION": 1,
     "PENDING_FIRDAUS_CONFIRMATION": 1,
@@ -627,7 +711,8 @@
     "CONFIRMED_CANON": 3,
     "CONFIRMED_NARRATOR": 1,
     "PENDING_BARIAH_CONFIRMATION": 1,
-    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": 1
+    "TECHNICAL_DECOMPOSITION_FROM_SOURCE": 1,
+    "PENDING_ARTIFACT_DELIVERY": 1
   },
   "amended": {
     "date": "2026-08-01",
@@ -643,5 +728,22 @@
     "PROJECT_MANAGER_NAME_PENDING": true,
     "GENERIC_ROLE_LABELS_USED_AS_FINAL_NAMES": 0,
     "PROJECT_MANAGER_NAME_INVENTED": false
+  },
+  "amended_stage_2_1": {
+    "date": "2026-08-01",
+    "head_at_amendment": "331edf27c1878c8f3fd4271fe7f20d0449a3024e",
+    "reason": "Upstream montage context recorded and Bariah’s final S01 VO clarification adopted. Context-only amendment."
+  },
+  "upstream_narrative_context": {
+    "COURSE_MONTAGE_COMPLETED": true,
+    "PL06_MONTAGE_COMPLETED": true,
+    "HILMI_ALREADY_INTRODUCED": true,
+    "UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED": true,
+    "COURSE_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+    "PL06_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+    "S01_ENTRY_TITLES_SPOKEN": true,
+    "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false,
+    "HILMI_REINTRODUCED_AS_NEW": false,
+    "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true
   }
 }

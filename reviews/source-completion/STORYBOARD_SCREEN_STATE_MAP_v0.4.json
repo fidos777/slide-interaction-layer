@@ -22,10 +22,11 @@
   "NO_CONTROL"
  ],
  "notes_policies": [
+  "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
   "CONTENT_VO_NOTES",
   "DIALOGUE_NOTES",
-  "SILENT_STATE_NOTES",
-  "QUIZ_NOTES"
+  "QUIZ_NOTES",
+  "SILENT_STATE_NOTES"
  ],
  "totals": {
   "LEARNER_SCREENS": 29,
@@ -58,13 +59,23 @@
   "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
   "GENERATOR_FILES_CHANGED": 0,
   "POWERPOINT_FILES_GENERATED": 0,
-  "COMPONENTS_PROPAGATED": 0
+  "COMPONENTS_PROPAGATED": 0,
+  "COURSE_MONTAGE_COMPLETED": true,
+  "PL06_MONTAGE_COMPLETED": true,
+  "HILMI_ALREADY_INTRODUCED": true,
+  "UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED": true,
+  "COURSE_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+  "PL06_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+  "S01_ENTRY_TITLES_SPOKEN": true,
+  "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false,
+  "HILMI_REINTRODUCED_AS_NEW": false,
+  "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true
  },
  "screens": [
   {
    "learner_screen_id": "SCR_S01",
-   "semantic_screen_name": "Tajuk / Mula Bahagian",
-   "screen_role": "FRAME_TITLE",
+   "semantic_screen_name": "Topik 3 Bahagian 2 — mula bahagian",
+   "screen_role": "TOPIC_SECTION_ENTRY",
    "execution_family": "FRAME",
    "group_id": null,
    "component_id": null,
@@ -73,13 +84,13 @@
    "interaction_item_ids": [],
    "runtime_state_id": "ST_S01_BASE",
    "parent_screen_id": null,
-   "review_page_role": "FRAME_TITLE_BASE",
+   "review_page_role": "TOPIC_SECTION_ENTRY_BASE",
    "content_source_locator": "storyboard frame — not a module source row",
-   "notes_policy": "CONTENT_VO_NOTES",
+   "notes_policy": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
    "notes_context_headers": [
     "PL06: Pengurusan Operasi Pembinaan Landskap",
     "Topik 3 Bahagian 2: Komponen Landskap",
-    "Komponen Landskap"
+    "Komponen Landskap — mula bahagian"
    ],
    "spoken_transcript_required": true,
    "next_control_type": "MULA_BUTTON",
@@ -94,7 +105,9 @@
    "screen_path_layer": 0,
    "unresolved_status": "NONE",
    "decision_ids": [
-    "B02-D-06"
+    "B02-D-06",
+    "B02-D-25",
+    "B02-D-26"
    ],
    "canvas_required": [
     "KURSUS KERJA BANGUNAN – PEMBINAAN LANDSKAP LUAR",
@@ -102,7 +115,54 @@
     "Topik 3 Bahagian 2: Komponen Landskap",
     "MULA"
    ],
-   "production_note": "VO PL satu, bukan PL kosong satu, dan seterusnya"
+   "production_note": "VO PL satu, bukan PL kosong satu, dan seterusnya",
+   "notes_policy_family": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_context_spoken": true,
+   "entry_titles_spoken": true,
+   "spoken_transcript_elements": [
+    {
+     "order": 1,
+     "element": "PL06_TITLE",
+     "text": "Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap.",
+     "spoken": true
+    },
+    {
+     "order": 2,
+     "element": "TOPIC_BAHAGIAN_TITLE",
+     "text": "Topik 3 Bahagian 2: Komponen Landskap.",
+     "spoken": true
+    },
+    {
+     "order": 3,
+     "element": "MINIMAL_ORIENTATION",
+     "text": "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
+     "spoken": true,
+     "note": "Draft orientation wording. It is a navigational sentence, NOT a new factual claim, and asserts nothing about the module content beyond the Bahagian title itself."
+    },
+    {
+     "order": 4,
+     "element": "MULA_INSTRUCTION",
+     "text": "Klik Mula untuk meneruskan.",
+     "spoken": true
+    }
+   ],
+   "upstream_context": [
+    "COURSE_MONTAGE_COMPLETED",
+    "PL06_MONTAGE_COMPLETED"
+   ],
+   "learner_facing_focus": [
+    "Topik 3 Bahagian 2",
+    "Komponen Landskap"
+   ],
+   "must_not_repeat": [
+    "the full introduction to the course",
+    "the list of eight Pakej Latihan",
+    "the PL06 objectives",
+    "the list of seven PL06 topics",
+    "Hilmi’s self-introduction",
+    "the explanation of the overall course structure"
+   ],
+   "canvas_note": "The course title remains on canvas as part of the approved template. It is NOT part of the S01 spoken transcript — no direct Bariah evidence requires it to be spoken, and the Course Montage has already delivered it."
   },
   {
    "learner_screen_id": "SCR_S02",
@@ -140,7 +200,9 @@
     "B02-D-06",
     "B02-D-17",
     "B02-D-18",
-    "B02-D-19"
+    "B02-D-19",
+    "B02-D-25",
+    "B02-D-26"
    ],
    "characters": [
     {
@@ -174,6 +236,37 @@
      "status": "PENDING_SOURCE_VERIFICATION",
      "replacement": "none — no substitute standards claim invented"
     }
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false,
+   "upstream_context": [
+    "COURSE_MONTAGE_COMPLETED",
+    "PL06_MONTAGE_COMPLETED",
+    "S01_ENTRY_COMPLETED"
+   ],
+   "continuity": "Start of the B02 scenario, immediately after S01. The course and PL06 are NOT reintroduced — both montages and S01 have already established them.",
+   "must_not_repeat": [
+    "the full introduction to the course",
+    "the list of eight Pakej Latihan",
+    "the PL06 objectives",
+    "the list of seven PL06 topics",
+    "Hilmi’s self-introduction",
+    "the explanation of the overall course structure"
+   ],
+   "notes_layout": [
+    "NON-SPOKEN CONTEXT",
+    "",
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap",
+    "",
+    "SPOKEN TRANSCRIPT",
+    "",
+    "[actual dialogue or VO]"
+   ],
+   "spoken_transcript_speakers": [
+    "Alya",
+    "Encik Rahman"
    ]
   },
   {
@@ -210,7 +303,8 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-06",
-    "B02-D-20"
+    "B02-D-20",
+    "B02-D-25"
    ],
    "characters": [
     {
@@ -228,7 +322,35 @@
     "Mind Map — textual specification only",
     "Jika anda ditugaskan memasang kerusi taman di tepi tasik, apakah jenis bahan yang anda akan pilih, dan mengapa?"
    ],
-   "production_note": "\"Hilmi:\" speaker prefix appears on S03 only; it must not appear on any other screen"
+   "production_note": "\"Hilmi:\" speaker prefix appears on S03 only; it must not appear on any other screen",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false,
+   "upstream_context": [
+    "COURSE_MONTAGE_COMPLETED",
+    "PL06_MONTAGE_COMPLETED",
+    "S01_ENTRY_COMPLETED",
+    "S02_SCENARIO_COMPLETED"
+   ],
+   "narrator_continuity": {
+    "HILMI_REINTRODUCED_AS_NEW": false,
+    "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true,
+    "rule": "Hilmi continues the narration established by the Course Montage. He is not introduced as a new character. The \"Hilmi:\" label remains on S03 as storyboard speaker identification only.",
+    "forbidden_openings": [
+     "Hai, saya Hilmi",
+     "Saya Hilmi, narator kursus ini",
+     "any first-time self-introduction"
+    ],
+    "spoken_content_requirement": "The VO transitions out of the Alya–Encik Rahman scenario and into the learning overview — it does not restart the course."
+   },
+   "must_not_repeat": [
+    "the full introduction to the course",
+    "the list of eight Pakej Latihan",
+    "the PL06 objectives",
+    "the list of seven PL06 topics",
+    "Hilmi’s self-introduction",
+    "the explanation of the overall course structure"
+   ]
   },
   {
    "learner_screen_id": "SCR_GM_STRUKTUR",
@@ -271,7 +393,10 @@
     "any-order access",
     "component completion ticks"
    ],
-   "production_note": "No custom learner-canvas Seterusnya. Progression is the LMS shell control."
+   "production_note": "No custom learner-canvas Seterusnya. Progression is the LMS shell control.",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PERABOT_OVERVIEW",
@@ -325,7 +450,10 @@
      "BBQ Pit"
     ]
    },
-   "production_note": "No click and no interaction level. Learners enter each component through shell navigation."
+   "production_note": "No click and no interaction level. Learners enter each component through shell navigation.",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
@@ -362,7 +490,10 @@
    "decision_ids": [
     "B02-D-01",
     "B02-D-04"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -416,7 +547,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
@@ -453,7 +587,10 @@
    "decision_ids": [
     "B02-D-01",
     "B02-D-04"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -507,7 +644,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
@@ -544,7 +684,10 @@
    "decision_ids": [
     "B02-D-01",
     "B02-D-04"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
@@ -592,7 +735,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
@@ -629,7 +775,10 @@
    "decision_ids": [
     "B02-D-01",
     "B02-D-04"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_EXAMPLES",
@@ -677,7 +826,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
@@ -724,7 +876,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -773,7 +928,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX02_DETAIL",
@@ -820,7 +978,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX03_DETAIL",
@@ -867,7 +1028,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -917,7 +1081,10 @@
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
    "selection_order": "any_order",
-   "production_note": "No generic one-item Contoh screen exists for this component."
+   "production_note": "No generic one-item Contoh screen exists for this component.",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
@@ -964,7 +1131,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX01_DETAIL",
@@ -1011,7 +1181,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX02_DETAIL",
@@ -1058,7 +1231,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX03_DETAIL",
@@ -1106,7 +1282,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
@@ -1151,7 +1330,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap contoh untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -1202,7 +1384,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
@@ -1249,7 +1434,10 @@
     "B02-D-05"
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
-   "selection_order": "any_order"
+   "selection_order": "any_order",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -1298,7 +1486,10 @@
    ],
    "interaction_instruction": "Klik pada setiap spesifikasi untuk penjelasan lanjut.",
    "selection_order": "any_order",
-   "production_note": "No generic one-item Contoh screen exists for this component."
+   "production_note": "No generic one-item Contoh screen exists for this component.",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_RUMUSAN",
@@ -1348,7 +1539,10 @@
     "Apa Yang Dipelajari",
     "Manfaat"
    ],
-   "production_note": "VO omits the redundant opening label \"Komponen Landskap — Struktur Taman dan Perabot Taman.\""
+   "production_note": "VO omits the redundant opening label \"Komponen Landskap — Struktur Taman dan Perabot Taman.\"",
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -1415,7 +1609,10 @@
     "multiple_response_option_labels": "NONE — option text shown directly, no A/B/C letters",
     "correct_options_location": "production metadata only",
     "detailed_rationale_location": "production metadata, source mapping and QA evidence only — not learner-facing"
-   }
+   },
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TAMAT",
@@ -1466,13 +1663,16 @@
     "shell_next_state": "disabled on Tamat",
     "status": "PENDING_FIRDAUS_CONFIRMATION",
     "canvas_disclosure": "logical destination is NOT displayed on the learner canvas; it is retained in production metadata only"
-   }
+   },
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   }
  ],
  "states": [
   {
    "learner_screen_id": "SCR_S01",
-   "semantic_screen_name": "Tajuk / Mula Bahagian",
+   "semantic_screen_name": "Topik 3 Bahagian 2 — mula bahagian",
    "screen_role": "STATE_BASE",
    "execution_family": "FRAME",
    "group_id": null,
@@ -1482,13 +1682,13 @@
    "interaction_item_ids": [],
    "runtime_state_id": "ST_S01_BASE",
    "parent_screen_id": "SCR_S01",
-   "review_page_role": "FRAME_TITLE_BASE",
+   "review_page_role": "TOPIC_SECTION_ENTRY_BASE",
    "content_source_locator": "storyboard frame",
-   "notes_policy": "CONTENT_VO_NOTES",
+   "notes_policy": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
    "notes_context_headers": [
     "PL06: Pengurusan Operasi Pembinaan Landskap",
     "Topik 3 Bahagian 2: Komponen Landskap",
-    "Komponen Landskap"
+    "Komponen Landskap — mula bahagian"
    ],
    "spoken_transcript_required": true,
    "next_control_type": "MULA_BUTTON",
@@ -1503,7 +1703,55 @@
    "screen_path_layer": 0,
    "unresolved_status": "NONE",
    "decision_ids": [
-    "B02-D-06"
+    "B02-D-06",
+    "B02-D-25",
+    "B02-D-26"
+   ],
+   "notes_policy_family": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_context_spoken": true,
+   "entry_titles_spoken": true,
+   "spoken_transcript_elements": [
+    {
+     "order": 1,
+     "element": "PL06_TITLE",
+     "text": "Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap.",
+     "spoken": true
+    },
+    {
+     "order": 2,
+     "element": "TOPIC_BAHAGIAN_TITLE",
+     "text": "Topik 3 Bahagian 2: Komponen Landskap.",
+     "spoken": true
+    },
+    {
+     "order": 3,
+     "element": "MINIMAL_ORIENTATION",
+     "text": "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
+     "spoken": true,
+     "note": "Draft orientation wording. It is a navigational sentence, NOT a new factual claim, and asserts nothing about the module content beyond the Bahagian title itself."
+    },
+    {
+     "order": 4,
+     "element": "MULA_INSTRUCTION",
+     "text": "Klik Mula untuk meneruskan.",
+     "spoken": true
+    }
+   ],
+   "upstream_context": [
+    "COURSE_MONTAGE_COMPLETED",
+    "PL06_MONTAGE_COMPLETED"
+   ],
+   "learner_facing_focus": [
+    "Topik 3 Bahagian 2",
+    "Komponen Landskap"
+   ],
+   "must_not_repeat": [
+    "the full introduction to the course",
+    "the list of eight Pakej Latihan",
+    "the PL06 objectives",
+    "the list of seven PL06 topics",
+    "Hilmi’s self-introduction",
+    "the explanation of the overall course structure"
    ]
   },
   {
@@ -1541,7 +1789,9 @@
    "decision_ids": [
     "B02-D-17",
     "B02-D-18",
-    "B02-D-19"
+    "B02-D-19",
+    "B02-D-25",
+    "B02-D-26"
    ],
    "characters": [
     {
@@ -1556,6 +1806,23 @@
      "canonical_role": "Mentor / Kontraktor Senior Berpengalaman Landskap",
      "scene_role": "Penyelia Tapak / mentor who validates and extends Alya’s understanding"
     }
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false,
+   "upstream_context": [
+    "COURSE_MONTAGE_COMPLETED",
+    "PL06_MONTAGE_COMPLETED",
+    "S01_ENTRY_COMPLETED"
+   ],
+   "continuity": "Start of the B02 scenario, immediately after S01. The course and PL06 are NOT reintroduced — both montages and S01 have already established them.",
+   "must_not_repeat": [
+    "the full introduction to the course",
+    "the list of eight Pakej Latihan",
+    "the PL06 objectives",
+    "the list of seven PL06 topics",
+    "Hilmi’s self-introduction",
+    "the explanation of the overall course structure"
    ]
   },
   {
@@ -1591,7 +1858,8 @@
    "screen_path_layer": 0,
    "unresolved_status": "NONE",
    "decision_ids": [
-    "B02-D-20"
+    "B02-D-20",
+    "B02-D-25"
    ],
    "characters": [
     {
@@ -1600,6 +1868,34 @@
      "canonical_role": "Narator kursus",
      "scene_role": "course narrator; not part of the Alya–Encik Rahman scenario cast"
     }
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false,
+   "upstream_context": [
+    "COURSE_MONTAGE_COMPLETED",
+    "PL06_MONTAGE_COMPLETED",
+    "S01_ENTRY_COMPLETED",
+    "S02_SCENARIO_COMPLETED"
+   ],
+   "narrator_continuity": {
+    "HILMI_REINTRODUCED_AS_NEW": false,
+    "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true,
+    "rule": "Hilmi continues the narration established by the Course Montage. He is not introduced as a new character. The \"Hilmi:\" label remains on S03 as storyboard speaker identification only.",
+    "forbidden_openings": [
+     "Hai, saya Hilmi",
+     "Saya Hilmi, narator kursus ini",
+     "any first-time self-introduction"
+    ],
+    "spoken_content_requirement": "The VO transitions out of the Alya–Encik Rahman scenario and into the learning overview — it does not restart the course."
+   },
+   "must_not_repeat": [
+    "the full introduction to the course",
+    "the list of eight Pakej Latihan",
+    "the PL06 objectives",
+    "the list of seven PL06 topics",
+    "Hilmi’s self-introduction",
+    "the explanation of the overall course structure"
    ]
   },
   {
@@ -1637,7 +1933,10 @@
    "decision_ids": [
     "B02-D-01",
     "B02-D-04"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_GM_STRUKTUR",
@@ -1671,7 +1970,10 @@
     "B02-D-01",
     "B02-D-04",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PERABOT_OVERVIEW",
@@ -1707,7 +2009,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-02"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
@@ -1743,7 +2048,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -1792,7 +2100,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -1844,7 +2155,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -1896,7 +2210,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -1948,7 +2265,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -2002,7 +2322,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -2054,7 +2377,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
@@ -2100,7 +2426,10 @@
     "B02-D-01",
     "B02-D-07"
    ],
-   "production_note": "Completed items remain reviewable. Notes are genuinely empty."
+   "production_note": "Completed items remain reviewable. Notes are genuinely empty.",
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
@@ -2136,7 +2465,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2185,7 +2517,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2237,7 +2572,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2289,7 +2627,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2343,7 +2684,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2395,7 +2739,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2447,7 +2794,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
@@ -2493,7 +2843,10 @@
     "B02-D-01",
     "B02-D-07"
    ],
-   "production_note": "Completed items remain reviewable. Notes are genuinely empty."
+   "production_note": "Completed items remain reviewable. Notes are genuinely empty.",
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
@@ -2529,7 +2882,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
@@ -2574,7 +2930,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
@@ -2626,7 +2985,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
@@ -2678,7 +3040,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
@@ -2730,7 +3095,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
@@ -2772,7 +3140,10 @@
     "B02-D-01",
     "B02-D-07"
    ],
-   "production_note": "Completed items remain reviewable. Notes are genuinely empty."
+   "production_note": "Completed items remain reviewable. Notes are genuinely empty.",
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
@@ -2808,7 +3179,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_EXAMPLES",
@@ -2853,7 +3227,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-01"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_EXAMPLES",
@@ -2905,7 +3282,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_EXAMPLES",
@@ -2957,7 +3337,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_EXAMPLES",
@@ -3009,7 +3392,10 @@
    ],
    "forbidden": [
     "text button labelled Tutup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_EXAMPLES",
@@ -3051,7 +3437,10 @@
     "B02-D-01",
     "B02-D-07"
    ],
-   "production_note": "Completed items remain reviewable. Notes are genuinely empty."
+   "production_note": "Completed items remain reviewable. Notes are genuinely empty.",
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
@@ -3095,7 +3484,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
@@ -3136,7 +3528,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -3182,7 +3577,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -3229,7 +3627,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -3276,7 +3677,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -3323,7 +3727,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -3370,7 +3777,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX01_DETAIL",
@@ -3410,7 +3820,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX02_DETAIL",
@@ -3454,7 +3867,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX02_DETAIL",
@@ -3501,7 +3917,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX02_DETAIL",
@@ -3548,7 +3967,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX02_DETAIL",
@@ -3586,7 +4008,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX03_DETAIL",
@@ -3630,7 +4055,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX03_DETAIL",
@@ -3677,7 +4105,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX03_DETAIL",
@@ -3724,7 +4155,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_EX03_DETAIL",
@@ -3762,7 +4196,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -3808,7 +4245,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -3854,7 +4294,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -3900,7 +4343,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -3946,7 +4392,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -3992,7 +4441,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -4032,7 +4484,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
@@ -4076,7 +4531,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
@@ -4117,7 +4575,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX01_DETAIL",
@@ -4161,7 +4622,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX01_DETAIL",
@@ -4208,7 +4672,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX01_DETAIL",
@@ -4255,7 +4722,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX01_DETAIL",
@@ -4293,7 +4763,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX02_DETAIL",
@@ -4337,7 +4810,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX02_DETAIL",
@@ -4384,7 +4860,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX02_DETAIL",
@@ -4431,7 +4910,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX02_DETAIL",
@@ -4469,7 +4951,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX03_DETAIL",
@@ -4514,7 +4999,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX03_DETAIL",
@@ -4561,7 +5049,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX03_DETAIL",
@@ -4608,7 +5099,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_EX03_DETAIL",
@@ -4646,7 +5140,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
@@ -4688,7 +5185,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
@@ -4727,7 +5227,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -4775,7 +5278,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -4822,7 +5328,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -4869,7 +5378,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -4916,7 +5428,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -4963,7 +5478,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -5010,7 +5528,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -5057,7 +5578,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
@@ -5099,7 +5623,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
@@ -5143,7 +5670,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
@@ -5190,7 +5720,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
@@ -5237,7 +5770,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
@@ -5275,7 +5811,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -5320,7 +5859,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-03"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -5366,7 +5908,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -5412,7 +5957,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -5458,7 +6006,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -5504,7 +6055,10 @@
    "forbidden": [
     "text button labelled Tutup",
     "opening another popup from this popup"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
@@ -5544,7 +6098,10 @@
    "decision_ids": [
     "B02-D-03",
     "B02-D-07"
-   ]
+   ],
+   "notes_policy_family": "SILENT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_RUMUSAN",
@@ -5580,7 +6137,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-09"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5616,7 +6176,10 @@
    "unresolved_status": "NONE",
    "decision_ids": [
     "B02-D-11"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5661,7 +6224,10 @@
    "immediate_feedback_variants": [
     "Pilihan jawapan tepat.",
     "Pilihan jawapan tidak tepat."
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5706,7 +6272,10 @@
    "immediate_feedback_variants": [
     "Pilihan jawapan tepat.",
     "Pilihan jawapan tidak tepat."
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5751,7 +6320,10 @@
    "immediate_feedback_variants": [
     "Pilihan jawapan tepat.",
     "Pilihan jawapan tidak tepat."
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5796,7 +6368,10 @@
    "immediate_feedback_variants": [
     "Pilihan jawapan tepat.",
     "Pilihan jawapan tidak tepat."
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5841,7 +6416,10 @@
    "immediate_feedback_variants": [
     "Pilihan jawapan tepat.",
     "Pilihan jawapan tidak tepat."
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5892,7 +6470,10 @@
     ],
     "retry": "voluntary",
     "blocking": false
-   }
+   },
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_KUIZ",
@@ -5930,7 +6511,10 @@
    "decision_ids": [
     "B02-D-11",
     "B02-D-23"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   },
   {
    "learner_screen_id": "SCR_TAMAT",
@@ -5967,7 +6551,10 @@
    "decision_ids": [
     "B02-D-14",
     "B02-D-15"
-   ]
+   ],
+   "notes_policy_family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "entry_titles_spoken": false
   }
  ],
  "interaction_items": [
@@ -6786,5 +7373,80 @@
    "decomposition": "TECHNICAL_DECOMPOSITION_FROM_SOURCE",
    "source_attested_label": "Keselamatan"
   }
- ]
+ ],
+ "upstream_narrative_context": {
+  "classification": "UPSTREAM_NARRATIVE_CONTEXT",
+  "statement": "These are prerequisites to the B02 learner flow, NOT screens inside the B02 storyboard. They are never modelled as B02 learner screens, never counted in LEARNER_SCREENS, and never regenerated.",
+  "narrative_chain": [
+   "Montaj Kursus",
+   "Montaj PL06",
+   "B02 S01 — Topik/Bahagian entry",
+   "B02 S02 — Alya + Encik Rahman",
+   "B02 S03 — Hilmi overview",
+   "learning groups"
+  ],
+  "artifacts": [
+   {
+    "ref": "M1",
+    "filename": "SB_K5_montaj_v1.pptx",
+    "document_role": "Course Montage — K5 course-level opening montage",
+    "evidence_source": "Bariah-supplied upstream-context artifact (task attachment)",
+    "relationship_to_b02": "Immediate narrative predecessor of the PL06 Montage; two steps upstream of B02 S01.",
+    "covers": [
+     "full course title",
+     "introduction to the eight Pakej Latihan",
+     "introduction of Hilmi",
+     "statement that Hilmi accompanies the learner",
+     "general explanation that each PL contains topics and quizzes"
+    ],
+    "modelled_as_b02_screen": false,
+    "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5_montaj_v1.pptx",
+    "byte_size": null,
+    "sha256": null,
+    "freeze_status": "PENDING_ARTIFACT_DELIVERY — the file did not reach this execution environment; no hash is recorded because a fabricated or assumed hash would be worse than none"
+   },
+   {
+    "ref": "M2",
+    "filename": "SB_K5PL6_montaj_v1.pptx",
+    "document_role": "PL06 Montage — Pakej Latihan 06 opening montage",
+    "evidence_source": "Bariah-supplied upstream-context artifact (task attachment)",
+    "relationship_to_b02": "Immediate narrative predecessor of B02 S01. It ends by identifying Topik 3 as Komponen Landskap, which is exactly where S01 picks up.",
+    "covers": [
+     "introduction to Pakej Latihan 06",
+     "PL06 title",
+     "PL06 objectives",
+     "the seven PL06 topics",
+     "identification of Topik 3 as Komponen Landskap"
+    ],
+    "modelled_as_b02_screen": false,
+    "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5PL6_montaj_v1.pptx",
+    "byte_size": null,
+    "sha256": null,
+    "freeze_status": "PENDING_ARTIFACT_DELIVERY — same as M1"
+   }
+  ],
+  "flags": {
+   "COURSE_MONTAGE_COMPLETED": true,
+   "PL06_MONTAGE_COMPLETED": true,
+   "HILMI_ALREADY_INTRODUCED": true,
+   "UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED": true,
+   "COURSE_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+   "PL06_MONTAGE_MODELLED_AS_B02_SCREEN": false
+  },
+  "must_not_repeat_in_b02": [
+   "the full introduction to the course",
+   "the list of eight Pakej Latihan",
+   "the PL06 objectives",
+   "the list of seven PL06 topics",
+   "Hilmi’s self-introduction",
+   "the explanation of the overall course structure"
+  ],
+  "consequence": "Because the two montages already carry the course and PL06 introductions, B02 opens at section level. S01 is a topic/section entry, not a course opening; S03 continues a narrator the learner has already met."
+ },
+ "amended_stage_2_1": {
+  "date": "2026-08-01",
+  "head_at_amendment": "331edf27c1878c8f3fd4271fe7f20d0449a3024e",
+  "scope": "Upstream montage context + Bariah’s final S01 VO clarification. Context-only: no structural count changed.",
+  "blocked_item": "Part 1 byte freeze of SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx — files not delivered to this execution environment."
+ }
 }

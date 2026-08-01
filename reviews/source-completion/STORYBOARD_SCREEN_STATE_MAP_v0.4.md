@@ -8,6 +8,9 @@ EXECUTION_FAMILIES = 3 · UNKNOWN_COMPONENT_FAMILY = 0
 INTERACTION_SELECTION_DEPTH_MAX = 2
 FAMILY_P1_SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER = 3
 REVIEW_PAGE_NUMBERS_NOT_ASSIGNED
+UPSTREAM_NARRATIVE_CONTEXT_RECORDED · MONTAGES_NOT_MODELLED_AS_B02_SCREENS
+S01_ENTRY_TITLES_SPOKEN = true · S02_ONWARDS_ENTRY_TITLES_SPOKEN = false
+HILMI_CONTINUITY_FROM_COURSE_MONTAGE = true
 DOCS_ONLY · GENERATOR_UNTOUCHED · NO_POWERPOINT_GENERATED · NO_MULTIMEDIA · NO_ASSET_BOUND
 ```
 
@@ -17,6 +20,68 @@ does not restate them, it indexes them.
 
 **No PowerPoint review-page numbers are assigned.** Each record carries a stable semantic
 `review_page_role` instead. Page numbers are a rendering concern and belong to the regeneration stage.
+
+---
+
+# 0. Upstream narrative context
+
+B02 does **not** open the course. Two Bariah-supplied montages run ahead of it, and the model records
+them as `UPSTREAM_NARRATIVE_CONTEXT` — prerequisites to the learner flow, **never screens inside this
+storyboard**.
+
+```
+Montaj Kursus  →  Montaj PL06  →  B02 S01 (Topik/Bahagian)  →  B02 S02 (Alya + Encik Rahman)
+                                →  B02 S03 (Hilmi overview)  →  learning groups
+```
+
+| Ref | Artifact | Already delivers | Modelled as a B02 screen? |
+|---|---|---|:-:|
+| M1 | `SB_K5_montaj_v1.pptx` | full course title · the eight Pakej Latihan · introduction of Hilmi · that Hilmi accompanies the learner · that each PL contains topics and quizzes | **no** |
+| M2 | `SB_K5PL6_montaj_v1.pptx` | introduction to Pakej Latihan 06 · PL06 title · PL06 objectives · the seven PL06 topics · Topik 3 identified as Komponen Landskap | **no** |
+
+```
+COURSE_MONTAGE_COMPLETED              = true    COURSE_MONTAGE_MODELLED_AS_B02_SCREEN = false
+PL06_MONTAGE_COMPLETED                = true    PL06_MONTAGE_MODELLED_AS_B02_SCREEN   = false
+HILMI_ALREADY_INTRODUCED              = true
+UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED = true
+```
+
+**Consequence for the model: B02 opens at section level.** No screen in this Bahagian may repeat the
+course introduction, the eight PLs, the PL06 objectives, the seven PL06 topics, Hilmi's
+self-introduction, or the overall course structure. `S01` is a topic/section entry, not a course
+opening; `S03` continues a narrator the learner has already met.
+
+> **Byte freeze outstanding.** The two montage files did not reach this execution environment, so no
+> SHA-256 is recorded — see `B02_V0_4_INPUT_FREEZE.md` §2B and decision `B02-D-27`. Every ruling that
+> depends on their *content* is already recorded, because that content was supplied directly.
+
+---
+
+# 0.1 S01 entry-title VO ruling
+
+Bariah, latest direct clarification: *"Dibaca di slide 1"* · *"Yes bersyarat, dibaca di slide 1"*.
+
+```
+S01_ENTRY_TITLES_SPOKEN          = true
+S02_ONWARDS_ENTRY_TITLES_SPOKEN  = false
+```
+
+On **S01** the PL06 title and the Topik 3 Bahagian 2 title are **spoken**, and only there. The model
+holds them as explicit spoken-transcript records, not merely as Notes context headers:
+
+| # | element | spoken | text |
+|---:|---|:-:|---|
+| 1 | `PL06_TITLE` | ✅ | Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap. |
+| 2 | `TOPIC_BAHAGIAN_TITLE` | ✅ | Topik 3 Bahagian 2: Komponen Landskap. |
+| 3 | `MINIMAL_ORIENTATION` | ✅ | Dalam bahagian ini, anda akan mempelajari tentang komponen landskap. |
+| 4 | `MULA_INSTRUCTION` | ✅ | Klik Mula untuk meneruskan. |
+
+Element 3 is **navigational wording, not a new factual claim** — it asserts nothing about the module
+beyond the Bahagian title itself. The course title stays on canvas as part of the approved template
+but is **not** added to the spoken transcript: no direct Bariah evidence requires it, and the Course
+Montage has already delivered it.
+
+From **S02 onwards** the same titles survive only as non-spoken production context.
 
 ---
 
@@ -78,7 +143,7 @@ another popup**.
 
 | screen_id | semantic name | role | family | component | parent | layer | sel. level |
 |---|---|---|---|---|---|:-:|:-:|
-| `SCR_S01` | Tajuk / Mula Bahagian | `FRAME_TITLE` | `FRAME` | — | `—` | 0 | 0 |
+| `SCR_S01` | Topik 3 Bahagian 2 — mula bahagian | `TOPIC_SECTION_ENTRY` | `FRAME` | — | `—` | 0 | 0 |
 | `SCR_S02` | Pengenalan — senario tapak | `FRAME_SCENARIO` | `FRAME` | — | `—` | 0 | 0 |
 | `SCR_S03` | Pengenalan — gambaran keseluruhan (Hilmi) | `FRAME_NARRATOR` | `FRAME` | — | `—` | 0 | 0 |
 | `SCR_GM_STRUKTUR` | Struktur Taman — papan kumpulan | `GROUP_MASTER` | `FAMILY_S` | — | `—` | 0 | 0 |
@@ -112,18 +177,18 @@ another popup**.
 
 # 4. Per-screen detail
 
-## `SCR_S01` — Tajuk / Mula Bahagian
+## `SCR_S01` — Topik 3 Bahagian 2 — mula bahagian
 
 | Field | Value |
 |---|---|
-| `screen_role` | FRAME_TITLE |
+| `screen_role` | TOPIC_SECTION_ENTRY |
 | `execution_family` | FRAME |
 | `group_id` | — |
 | `component_id` | — |
 | `parent_screen_id` | — |
-| `review_page_role` | FRAME_TITLE_BASE |
+| `review_page_role` | TOPIC_SECTION_ENTRY_BASE |
 | `content_source_locator` | storyboard frame — not a module source row |
-| `notes_policy` | CONTENT_VO_NOTES |
+| `notes_policy` | SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION |
 | `spoken_transcript_required` | True |
 | `next_control_type` | MULA_BUTTON |
 | `next_enabled_condition` | always_enabled — no auto-advance |
@@ -135,12 +200,30 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION |
+| `notes_context_spoken` | True |
+| `entry_titles_spoken` | True |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
 | `interaction_item_ids` | 0 |
-| `notes_context_headers` | PL06: Pengurusan Operasi Pembinaan Landskap / Topik 3 Bahagian 2: Komponen Landskap / Komponen Landskap |
-| `decision_ids` | `B02-D-06` |
+| `notes_context_headers` | PL06: Pengurusan Operasi Pembinaan Landskap / Topik 3 Bahagian 2: Komponen Landskap / Komponen Landskap — mula bahagian |
+| `decision_ids` | `B02-D-06`, `B02-D-25`, `B02-D-26` |
+
+**Spoken transcript — ordered**
+
+| # | element | spoken | text |
+|---:|---|:-:|---|
+| 1 | `PL06_TITLE` | yes | Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap. |
+| 2 | `TOPIC_BAHAGIAN_TITLE` | yes | Topik 3 Bahagian 2: Komponen Landskap. |
+| 3 | `MINIMAL_ORIENTATION` | yes | Dalam bahagian ini, anda akan mempelajari tentang komponen landskap. |
+| 4 | `MULA_INSTRUCTION` | yes | Klik Mula untuk meneruskan. |
+
+> Upstream context: `COURSE_MONTAGE_COMPLETED`, `PL06_MONTAGE_COMPLETED`
+
+> Must not repeat: the full introduction to the course; the list of eight Pakej Latihan; the PL06 objectives; the list of seven PL06 topics; Hilmi’s self-introduction; the explanation of the overall course structure.
+
+> The course title remains on canvas as part of the approved template. It is NOT part of the S01 spoken transcript — no direct Bariah evidence requires it to be spoken, and the Course Montage has already delivered it.
 
 > VO PL satu, bukan PL kosong satu, dan seterusnya
 
@@ -148,7 +231,7 @@ another popup**.
 
 | runtime_state_id | role | review_page_role | notes_policy | close | return_target | completion |
 |---|---|---|---|---|---|---|
-| `ST_S01_BASE` | `STATE_BASE` | `FRAME_TITLE_BASE` | `CONTENT_VO_NOTES` | `NO_CONTROL` | `—` | `NONE` |
+| `ST_S01_BASE` | `STATE_BASE` | `TOPIC_SECTION_ENTRY_BASE` | `SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION` | `NO_CONTROL` | `—` | `NONE` |
 
 ## `SCR_S02` — Pengenalan — senario tapak
 
@@ -173,12 +256,15 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | U-01 — MS2680 sentence omitted from learner-facing dialogue; retained in production metadata as PENDING_SOURCE_VERIFICATION |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
 | `interaction_item_ids` | 0 |
 | `notes_context_headers` | PL06: Pengurusan Operasi Pembinaan Landskap / Topik 3 Bahagian 2: Komponen Landskap / Pengenalan — senario tapak |
-| `decision_ids` | `B02-D-06`, `B02-D-17`, `B02-D-18`, `B02-D-19` |
+| `decision_ids` | `B02-D-06`, `B02-D-17`, `B02-D-18`, `B02-D-19`, `B02-D-25`, `B02-D-26` |
 
 **Characters**
 
@@ -186,6 +272,12 @@ another popup**.
 |---|---|---|---|
 | `ALYA` | **Alya** | Kontraktor Junior | learner proxy — junior contractor who confirms her understanding of the work scope |
 | `ENCIK_RAHMAN` | **Encik Rahman** | Mentor / Kontraktor Senior Berpengalaman Landskap | Penyelia Tapak / mentor who validates and extends Alya’s understanding |
+
+> Upstream context: `COURSE_MONTAGE_COMPLETED`, `PL06_MONTAGE_COMPLETED`, `S01_ENTRY_COMPLETED`
+
+> Continuity: Start of the B02 scenario, immediately after S01. The course and PL06 are NOT reintroduced — both montages and S01 have already established them.
+
+> Must not repeat: the full introduction to the course; the list of eight Pakej Latihan; the PL06 objectives; the list of seven PL06 topics; Hilmi’s self-introduction; the explanation of the overall course structure.
 
 **Runtime states — 1**
 
@@ -216,18 +308,27 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
 | `interaction_item_ids` | 0 |
 | `notes_context_headers` | PL06: Pengurusan Operasi Pembinaan Landskap / Topik 3 Bahagian 2: Komponen Landskap / Pengenalan — gambaran keseluruhan |
-| `decision_ids` | `B02-D-06`, `B02-D-20` |
+| `decision_ids` | `B02-D-06`, `B02-D-20`, `B02-D-25` |
 
 **Characters**
 
 | character_id | character_name | canonical_role | scene_role |
 |---|---|---|---|
 | `HILMI` | **Hilmi** | Narator kursus | course narrator; not part of the Alya–Encik Rahman scenario cast |
+
+> Upstream context: `COURSE_MONTAGE_COMPLETED`, `PL06_MONTAGE_COMPLETED`, `S01_ENTRY_COMPLETED`, `S02_SCENARIO_COMPLETED`
+
+> **Narrator continuity.** `HILMI_REINTRODUCED_AS_NEW = false` · `HILMI_CONTINUITY_FROM_COURSE_MONTAGE = true`. Hilmi continues the narration established by the Course Montage. He is not introduced as a new character. The "Hilmi:" label remains on S03 as storyboard speaker identification only. Forbidden openings: *Hai, saya Hilmi*, *Saya Hilmi, narator kursus ini*, *any first-time self-introduction*. The VO transitions out of the Alya–Encik Rahman scenario and into the learning overview — it does not restart the course.
+
+> Must not repeat: the full introduction to the course; the list of eight Pakej Latihan; the PL06 objectives; the list of seven PL06 topics; Hilmi’s self-introduction; the explanation of the overall course structure.
 
 > "Hilmi:" speaker prefix appears on S03 only; it must not appear on any other screen
 
@@ -260,6 +361,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -299,6 +403,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -337,6 +444,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -373,6 +483,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 5 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p239-x20` |
@@ -417,6 +530,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -453,6 +569,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 5 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p240-x23` |
@@ -497,6 +616,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -533,6 +655,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 3 |
 | `source_asset_ids` | — |
@@ -575,6 +700,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -611,6 +739,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 3 |
 | `source_asset_ids` | — |
@@ -653,6 +784,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 3 |
 | `source_asset_ids` | — |
@@ -692,6 +826,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p242-x28` |
@@ -735,6 +872,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p243-x31` |
@@ -776,6 +916,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p243-x32` |
@@ -817,6 +960,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p245-x37`, `K5PL06T03-B02-IMG-p245-x38` |
@@ -862,6 +1008,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 3 |
 | `source_asset_ids` | — |
@@ -901,6 +1050,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p246-x41` |
@@ -942,6 +1094,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p247-x44` |
@@ -983,6 +1138,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p247-x45`, `K5PL06T03-B02-IMG-p247-x46` |
@@ -1024,6 +1182,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 2 |
 | `source_asset_ids` | — |
@@ -1063,6 +1224,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p248-x49` |
@@ -1108,6 +1272,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 1 |
 | `screen_path_layer` | 2 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p249-x56` |
@@ -1149,6 +1316,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 1 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 1 |
 | `source_asset_ids` | `K5PL06T03-B02-IMG-p249-x57` |
@@ -1194,6 +1364,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | NONE |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -1234,6 +1407,9 @@ another popup**.
 | `persistence_rule` | PERSIST_ON_REVISIT_AND_LMS_RESUME |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | U-05 — detailed rationale retained in production metadata only, pending Bariah confirmation of its final placement |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -1277,6 +1453,9 @@ another popup**.
 | `persistence_rule` | NOT_APPLICABLE |
 | `interaction_selection_level` | 0 |
 | `screen_path_layer` | 0 |
+| `notes_policy_family` | NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT |
+| `notes_context_spoken` | False |
+| `entry_titles_spoken` | False |
 | `unresolved_status` | U-03 — physical LMS exit behaviour is PENDING_FIRDAUS_CONFIRMATION |
 | `source_row_uids` | 0 |
 | `source_asset_ids` | — |
@@ -1316,13 +1495,39 @@ Contextual return targets — **no single Kembali target is hard-coded across fa
 
 | notes_policy | Screens | States | Headers | Spoken transcript |
 |---|---:|---:|---|:-:|
-| `CONTENT_VO_NOTES` | 27 | 73 | PL + Topic + context | yes |
+| `CONTENT_VO_NOTES` | 26 | 72 | PL + Topic + context | yes |
 | `DIALOGUE_NOTES` | 1 | 1 | PL + Topic + context | yes |
 | `QUIZ_NOTES` | 1 | 8 | PL + Topic + context | yes |
 | `SILENT_STATE_NOTES` | 0 | 18 | **none — genuinely empty** | no |
 
-`notes_context_headers` and `spoken_transcript` are separate model fields. The PL and Topic headers
-are **non-spoken production context** — MMD and TTS never have to infer which part of Notes is spoken.
+## 6.1 Two policy families
+
+| Family | Used on | Context headers spoken? |
+|---|---|:-:|
+| `SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION` | **S01 only** | **yes** — the entry titles *are* the transcript |
+| `NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT` | every content and dialogue screen from S02 onwards — `CONTENT_VO_NOTES`, `DIALOGUE_NOTES`, `QUIZ_NOTES` | **no** |
+| `SILENT` | completion-only states — `SILENT_STATE_NOTES` | n/a — genuinely empty |
+
+From S02 onwards the Notes carry two labelled blocks, so no downstream tool has to infer which is
+which:
+
+```
+NON-SPOKEN CONTEXT
+
+PL06: Pengurusan Operasi Pembinaan Landskap
+Topik 3 Bahagian 2: Komponen Landskap
+
+SPOKEN TRANSCRIPT
+
+[actual dialogue or VO]
+```
+
+`notes_context_headers` and `spoken_transcript` are separate model fields, and every record carries an
+explicit `notes_context_spoken` boolean. The PL and Topic headers are **non-spoken production
+context** — MMD and TTS never have to infer which part of Notes is spoken, and they must not read the
+context block.
+
+Silent completion-only states carry no context headers at all.
 
 ---
 
@@ -1373,56 +1578,67 @@ SOURCE_ROW_COUNT  = 26   bound = 26   changed = 0
 SOURCE_ASSET_COUNT= 14   bound = 14
 ```
 
-## 9.1 Model validation — 93 of 93 structural checks pass
+## 9.1 Model validation
 
-Validated **structurally against the model records**, not by whole-document search.
+**Stage 2 structural model — 93 of 93 checks pass** (source binding, family assignment, depth
+semantics, graph integrity, control contracts, notes policy, cast, quiz, Tamat).
+
+**Stage 2.1 context amendment — 69 of 72 checks pass.** The three failures share one root cause and
+one only:
 
 ```
-SOURCE_ROW_COUNT = 26                          SOURCE_ASSET_COUNT = 14
-SOURCE_ROWS_CHANGED = 0                        DUPLICATE_SOURCE_ROW_UID = 0
-SOURCE_ROWS_WITHOUT_MODEL_BINDING = 0
-
-EXECUTION_FAMILIES = 3                         UNKNOWN_COMPONENT_FAMILY = 0
-FAMILY_S_COMPONENTS = 4  FAMILY_P1_COMPONENTS = 3  FAMILY_P2_COMPONENTS = 2
-
-INTERACTION_SELECTION_DEPTH_MAX = 2
-FAMILY_P1_SCREEN_PATH_LAYER_COUNT_FROM_GROUP_MASTER = 3
-
-INTERACTION_ITEMS_WITHOUT_SOURCE_BINDING = 0   INTERACTION_ITEMS_WITHOUT_PARENT = 0
-RUNTIME_STATES_WITHOUT_PARENT = 0              RETURN_TARGET_MISSING = 0
-UNKNOWN_CONTROL_TYPE = 0                       POPUP_PARENT_IS_POPUP = 0
-
-CONTENT_VO_SCREENS_WITHOUT_NOTES_POLICY = 0    DIALOGUE_SCREENS_WITHOUT_SPEAKER_MAPPING = 0
-SILENT_STATES_WITH_NONEMPTY_NOTES_POLICY = 0
-
-B02_CHARACTER_NAMES_CONFIRMED = true           B02_CAST_PAIR = ALYA + ENCIK_RAHMAN
-B02_NARRATOR = HILMI                           GENERIC_ROLE_LABELS_USED_AS_FINAL_NAMES = 0
-PUAN_NADIA_IN_B02_WITHOUT_INSTRUCTIONAL_REASON = 0   PROJECT_MANAGER_NAME_INVENTED = false
-
-PAPAN_TANDA_SPEC_CATEGORIES = 4                BBQ_PIT_SPEC_CATEGORIES = 4
-PAPAN_TANDA_SOURCE_ROWS_CREATED = 0            BBQ_PIT_SOURCE_ROWS_CREATED = 0
-
-MS2680_LEARNER_CLAIMS = 0                      MS2680_PENDING_METADATA_RECORDS = 2
-MULTIPLE_RESPONSE_OPTIONS_WITH_LETTER_LABELS = 0
-QUIZ_IMMEDIATE_FEEDBACK_VARIANTS = 2
-
-GENERATOR_FILES_CHANGED = 0                    POWERPOINT_FILES_GENERATED = 0
-COMPONENTS_PROPAGATED = 0                      NEW_CANONICAL_PATTERN_IDS_MINTED = 0
+COURSE_MONTAGE_HASH_RECORDED  = false   ← files not delivered to this execution environment
+PL06_MONTAGE_HASH_RECORDED    = false   ← same
+MONTAGE_FILES_FROZEN_ON_DISK  = 0 of 2  ← same
 ```
 
-Beyond the required totals, the harness also asserts the model's own graph invariants:
+Everything the montages *rule on* is recorded; only their bytes are missing. See
+`B02_V0_4_INPUT_FREEZE.md` §2B and decision `B02-D-27`.
 
-| Check | Why it exists |
+```
+COURSE_MONTAGE_MODELLED_AS_B02_SCREEN = false   PL06_MONTAGE_MODELLED_AS_B02_SCREEN = false
+COURSE_MONTAGE_COMPLETED = true                 PL06_MONTAGE_COMPLETED = true
+HILMI_ALREADY_INTRODUCED = true                 UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED = true
+
+S01_NOTES_POLICY = SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION
+S01_PL06_TITLE_IN_SPOKEN_TRANSCRIPT = true      S01_MINIMAL_ORIENTATION_PRESENT = true
+S01_TOPIC_BAHAGIAN_TITLE_IN_SPOKEN_TRANSCRIPT = true   S01_MULA_INSTRUCTION_PRESENT = true
+S01_COURSE_TITLE_IN_SPOKEN_TRANSCRIPT = 0       S01_COURSE_TITLE_STILL_ON_CANVAS = true
+
+S02_ONWARDS_PL_TITLE_IN_SPOKEN_TRANSCRIPT = 0
+S02_ONWARDS_TOPIC_TITLE_IN_SPOKEN_TRANSCRIPT = 0
+S02_ONWARDS_NOTES_CONTEXT_SPOKEN = 0
+
+COURSE_INTRO_REPEATED_IN_B02 = 0                PL06_OBJECTIVES_REPEATED_IN_B02 = 0
+FULL_PL06_TOPIC_LIST_REPEATED_IN_B02 = 0        HILMI_REINTRODUCED_AS_NEW = 0
+
+S02_CAST = ALYA + ENCIK_RAHMAN                  S03_NARRATOR = HILMI
+SILENT_STATES_WITH_NONEMPTY_NOTES = 0
+
+SOURCE_ROW_COUNT = 26                           SOURCE_ASSET_COUNT = 14
+MODEL_SCREEN_COUNT_CHANGED = false              MODEL_RUNTIME_STATE_COUNT_CHANGED = false
+MODEL_INTERACTION_ITEM_COUNT_CHANGED = false
+
+GENERATOR_FILES_CHANGED = 0                     POWERPOINT_FILES_GENERATED = 0
+COMPONENTS_PROPAGATED = 0                       NEW_CANONICAL_PATTERN_IDS_MINTED = 0
+```
+
+### How the spoken / non-spoken split is verified
+
+**Not by whole-document grep.** The harness walks structured fields:
+
+| Check | Method |
 |---|---|
-| `POPUP_PARENT_IS_POPUP = 0` | walks every popup's `parent_screen_id` **and** `return_target` against the set of popup state IDs — a popup that opened another popup would be caught from either direction |
-| `RETURN_TARGET_UNRESOLVED = 0` | every `return_target` must resolve to a real screen or state ID, not a plausible-looking string |
-| `POPUP_WITHOUT_CLOSE_ICON` / `NON_POPUP_WITH_CLOSE_ICON` | the close icon belongs to popup states and nowhere else |
-| `DUPLICATE_CANVAS_NEXT = 0` | no record may declare a canvas-authored next control where the shell owns progression |
-| family return-target contracts | Family S `Kembali` → group master; P1 close → example detail; P1 `Kembali` → component list; P2 close → specification list — each asserted by ID suffix across every matching record |
-| `ALL_VIEWED_STATES_NOT_SILENT = 0` | every completion and all-viewed state must carry `SILENT_STATE_NOTES` |
-| `FORBIDDEN_TOKENS_IN_NOTES_HEADERS = 0` | no `VO PENUH:`, `PERINCIAN`, `ST_` or `RP-` token may leak into a modelled Notes header |
-| `PLACEHOLDER_NAMA_TOKEN_REMAINS = 0` | the retired `[Nama]` placeholder appears nowhere in the model |
-| `REVIEW_PAGE_NUMBERS_ASSIGNED = 0` | no record carries an `RP-nnn` page number — roles only |
+| `S01_*_IN_SPOKEN_TRANSCRIPT` | indexes `spoken_transcript_elements` by `element` and asserts each carries `spoken: true` and the expected text — the four elements are also asserted in order |
+| `S02_ONWARDS_*_IN_SPOKEN_TRANSCRIPT = 0` | collects every `spoken: true` element on every non-S01 record and asserts none contains a PL or Topic title |
+| `S02_ONWARDS_NOTES_CONTEXT_SPOKEN = 0` | reads the per-record `notes_context_spoken` boolean, not the header text |
+| `NON_SPOKEN_FAMILY_WITH_SPOKEN_CONTEXT = 0` | cross-checks `notes_policy_family` against `notes_context_spoken` so a policy cannot silently disagree with its family |
+| `MONTAGE_MODELLED_AS_SCREEN_IDENTITY = 0` | scans screen and state **identity** fields only — S03 legitimately *references* the Course Montage in its continuity rule, and a textual scan would have flagged that reference as if it were a screen |
+| `SCREEN_COUNT_EXCLUDES_MONTAGES` | asserts the screen count is still 29 |
+
+The montage check is worth naming: the first version of it searched the whole screen array for
+"Montage" and failed on S03's continuity text. A reference to upstream context is not a screen. The
+check now looks at identity fields, source bindings and interaction-item bindings instead.
 
 
 ---

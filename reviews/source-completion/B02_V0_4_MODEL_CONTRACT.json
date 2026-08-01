@@ -244,7 +244,13 @@
    ],
    "body": "[exact VO]",
    "headers_spoken": false,
-   "spoken_transcript_required": true
+   "spoken_transcript_required": true,
+   "family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "section_labels": [
+    "NON-SPOKEN CONTEXT",
+    "SPOKEN TRANSCRIPT"
+   ]
   },
   "DIALOGUE_NOTES": {
    "headers": [
@@ -252,10 +258,16 @@
     "Topik 3 Bahagian 2: Komponen Landskap",
     "[scene context]"
    ],
-   "body": "Alya: … / Encik Rahman: …",
+   "body": "Alya: … / Encik Rahman: … — speaker-labelled spoken transcript",
    "headers_spoken": false,
    "spoken_transcript_required": true,
-   "note": "The exact dialogue is also available separately from the context headers."
+   "note": "The exact dialogue is also available separately from the context headers.",
+   "family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "section_labels": [
+    "NON-SPOKEN CONTEXT",
+    "SPOKEN TRANSCRIPT"
+   ]
   },
   "SILENT_STATE_NOTES": {
    "headers": [],
@@ -267,7 +279,9 @@
     "completion-only states",
     "silent tick-state review pages"
    ],
-   "rule": "Genuinely empty. No PL/Topic headers."
+   "rule": "Genuinely empty. No PL/Topic headers.",
+   "family": "SILENT",
+   "notes_context_spoken": false
   },
   "QUIZ_NOTES": {
    "headers": [
@@ -283,15 +297,66 @@
     "source references"
    ],
    "headers_spoken": false,
-   "spoken_transcript_required": true
+   "spoken_transcript_required": true,
+   "family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "section_labels": [
+    "NON-SPOKEN CONTEXT",
+    "SPOKEN TRANSCRIPT"
+   ]
   },
   "forbidden_in_final_notes": [
    "technical runtime IDs",
    "internal QA tokens",
    "draft diagnostics",
    "production prefixes such as \"VO PENUH:\"",
-   "screen tokens such as \"S05 — PERINCIAN\""
-  ]
+   "screen tokens such as \"S05 — PERINCIAN\"",
+   "context headers on silent completion-only states"
+  ],
+  "families": {
+   "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION": "S01 only — the entry titles are part of the spoken transcript.",
+   "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT": "S02 onwards, all content and dialogue screens — context headers are visual production context only and are stored separately from the spoken transcript.",
+   "SILENT": "Completion-only states — genuinely empty."
+  },
+  "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION": {
+   "used_on": [
+    "SCR_S01"
+   ],
+   "family": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_context_spoken": true,
+   "spoken_transcript_required": true,
+   "spoken_transcript_elements": [
+    "PL06 title",
+    "Topik 3 Bahagian 2 title",
+    "minimal B02 orientation",
+    "Mula instruction"
+   ],
+   "rule": "The entry titles are explicit spoken-transcript records, not merely Notes context headers."
+  },
+  "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT": {
+   "used_on": [
+    "every content and dialogue screen from S02 onwards"
+   ],
+   "family": "NON_SPOKEN_CONTEXT_HEADERS_PLUS_TRANSCRIPT",
+   "notes_context_spoken": false,
+   "spoken_transcript_required": true,
+   "notes_layout": [
+    "NON-SPOKEN CONTEXT",
+    "",
+    "PL06: Pengurusan Operasi Pembinaan Landskap",
+    "Topik 3 Bahagian 2: Komponen Landskap",
+    "",
+    "SPOKEN TRANSCRIPT",
+    "",
+    "[actual dialogue or VO]"
+   ],
+   "members": [
+    "CONTENT_VO_NOTES",
+    "DIALOGUE_NOTES",
+    "QUIZ_NOTES"
+   ],
+   "rule": "The context headers are stored separately from spoken_transcript and MUST NOT be read by MMD/TTS. The two blocks are labelled so no downstream tool has to infer which is which."
+  }
  },
  "language_and_rich_text": {
   "rich_text_runs_required_on": [
@@ -467,6 +532,108 @@
   "NEW_CANONICAL_PATTERN_IDS_MINTED": 0,
   "GENERATOR_FILES_CHANGED": 0,
   "POWERPOINT_FILES_GENERATED": 0,
-  "COMPONENTS_PROPAGATED": 0
+  "COMPONENTS_PROPAGATED": 0,
+  "MODEL_SCREEN_COUNT_CHANGED": false,
+  "MODEL_RUNTIME_STATE_COUNT_CHANGED": false,
+  "MODEL_INTERACTION_ITEM_COUNT_CHANGED": false,
+  "COURSE_MONTAGE_COMPLETED": true,
+  "PL06_MONTAGE_COMPLETED": true,
+  "HILMI_ALREADY_INTRODUCED": true,
+  "UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED": true,
+  "COURSE_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+  "PL06_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+  "S01_ENTRY_TITLES_SPOKEN": true,
+  "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false,
+  "HILMI_REINTRODUCED_AS_NEW": false,
+  "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true
+ },
+ "upstream_narrative_context": {
+  "classification": "UPSTREAM_NARRATIVE_CONTEXT",
+  "statement": "These are prerequisites to the B02 learner flow, NOT screens inside the B02 storyboard. They are never modelled as B02 learner screens, never counted in LEARNER_SCREENS, and never regenerated.",
+  "narrative_chain": [
+   "Montaj Kursus",
+   "Montaj PL06",
+   "B02 S01 — Topik/Bahagian entry",
+   "B02 S02 — Alya + Encik Rahman",
+   "B02 S03 — Hilmi overview",
+   "learning groups"
+  ],
+  "artifacts": [
+   {
+    "ref": "M1",
+    "filename": "SB_K5_montaj_v1.pptx",
+    "document_role": "Course Montage — K5 course-level opening montage",
+    "evidence_source": "Bariah-supplied upstream-context artifact (task attachment)",
+    "relationship_to_b02": "Immediate narrative predecessor of the PL06 Montage; two steps upstream of B02 S01.",
+    "covers": [
+     "full course title",
+     "introduction to the eight Pakej Latihan",
+     "introduction of Hilmi",
+     "statement that Hilmi accompanies the learner",
+     "general explanation that each PL contains topics and quizzes"
+    ],
+    "modelled_as_b02_screen": false,
+    "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5_montaj_v1.pptx",
+    "byte_size": null,
+    "sha256": null,
+    "freeze_status": "PENDING_ARTIFACT_DELIVERY — the file did not reach this execution environment; no hash is recorded because a fabricated or assumed hash would be worse than none"
+   },
+   {
+    "ref": "M2",
+    "filename": "SB_K5PL6_montaj_v1.pptx",
+    "document_role": "PL06 Montage — Pakej Latihan 06 opening montage",
+    "evidence_source": "Bariah-supplied upstream-context artifact (task attachment)",
+    "relationship_to_b02": "Immediate narrative predecessor of B02 S01. It ends by identifying Topik 3 as Komponen Landskap, which is exactly where S01 picks up.",
+    "covers": [
+     "introduction to Pakej Latihan 06",
+     "PL06 title",
+     "PL06 objectives",
+     "the seven PL06 topics",
+     "identification of Topik 3 as Komponen Landskap"
+    ],
+    "modelled_as_b02_screen": false,
+    "frozen_path": "reviews/storyboard-bariah/v0_3_bariah_review/SB_K5PL6_montaj_v1.pptx",
+    "byte_size": null,
+    "sha256": null,
+    "freeze_status": "PENDING_ARTIFACT_DELIVERY — same as M1"
+   }
+  ],
+  "flags": {
+   "COURSE_MONTAGE_COMPLETED": true,
+   "PL06_MONTAGE_COMPLETED": true,
+   "HILMI_ALREADY_INTRODUCED": true,
+   "UPSTREAM_TOPIC_LIST_ALREADY_PRESENTED": true,
+   "COURSE_MONTAGE_MODELLED_AS_B02_SCREEN": false,
+   "PL06_MONTAGE_MODELLED_AS_B02_SCREEN": false
+  },
+  "must_not_repeat_in_b02": [
+   "the full introduction to the course",
+   "the list of eight Pakej Latihan",
+   "the PL06 objectives",
+   "the list of seven PL06 topics",
+   "Hilmi’s self-introduction",
+   "the explanation of the overall course structure"
+  ],
+  "consequence": "Because the two montages already carry the course and PL06 introductions, B02 opens at section level. S01 is a topic/section entry, not a course opening; S03 continues a narrator the learner has already met."
+ },
+ "s01_entry_title_vo_ruling": {
+  "ruling_id": "S01_ENTRY_TITLE_VO",
+  "authority": "Bariah — latest direct WhatsApp clarification",
+  "status": "CONFIRMED_BARIAH",
+  "verbatim": [
+   "Dibaca di slide 1",
+   "Yes bersyarat, dibaca di slide 1"
+  ],
+  "rule": "On S01 the PL06 title and the Topik 3 Bahagian 2 title are SPOKEN. This spoken treatment occurs on Slide 1 only. From S02 onwards the PL and Topic/Bahagian titles remain in Speaker Notes as non-spoken production context and are never repeated in spoken VO.",
+  "flags": {
+   "S01_ENTRY_TITLES_SPOKEN": true,
+   "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false
+  }
+ },
+ "amended_stage_2_1": {
+  "date": "2026-08-01",
+  "head_at_amendment": "331edf27c1878c8f3fd4271fe7f20d0449a3024e",
+  "scope": "Upstream montage context + Bariah’s final S01 VO clarification. Context-only: no structural count changed.",
+  "blocked_item": "Part 1 byte freeze of SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx — files not delivered to this execution environment."
  }
 }
