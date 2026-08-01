@@ -67,3 +67,20 @@ AREAS_NOT_CHECKED                    = 11
 PENDING_HUMAN_ITEMS                  = 15 + 9 conditional visuals
 DECK_APPROVED                        = NO — review build only
 ```
+
+
+---
+
+# 6. Stage 4.2B update
+
+The suite is now **236** checks across 39 MODEL,
+173 PACKAGE_XML, 15 RENDERED_GEOMETRY and
+9 ORACLE_CONFORMANCE, plus 12 mutation
+fixtures and 2 historical replay artifacts.
+
+Closed since 4.2A: single-axis geometry, count-without-identity on ticks, visibility blindness for
+answer keys and covered text, fail-open vacuous populations, and the two self-resolving gates.
+
+Still open and disclosed: 12 CONDITIONAL visual decisions,
+1 evidence conflict, the cast-name provenance gap, glossary and denylist ratification, and every
+item in §3 above. `236/236` remains a measure of the suite, not of approval.

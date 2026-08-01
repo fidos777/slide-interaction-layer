@@ -5,14 +5,17 @@ The point of this module is independence. Nothing here imports the generator or 
 its helpers, so an expected value can never be produced by the same code that produced
 the artifact under test.
 """
-import re, sys, zipfile
+import os, re, sys, zipfile
 from xml.etree import ElementTree as ET
 
 A = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
 P = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
 
-VBARIAH = "reviews/storyboard-bariah/v0_3_bariah_review/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx"
-GUIDE = "reviews/storyboard-bariah/v0_3_bariah_review/Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx"
+_REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                     "..", "..", "..", ".."))
+_EV = os.path.join(_REPO, "reviews", "storyboard-bariah", "v0_3_bariah_review")
+VBARIAH = os.path.join(_EV, "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3_vBariah.pptx")
+GUIDE = os.path.join(_EV, "Panduan_Semakan_Bariah_K5_PL06_T03_B02_v0.3_vBariah.docx")
 
 
 def slide_shapes(pptx, n):

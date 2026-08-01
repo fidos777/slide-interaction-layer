@@ -946,5 +946,19 @@
       "21 of 189 predicates share a derivation helper with the generator and cannot detect a wrong shared rule."
     ],
     "deck_unchanged": true
+  },
+  "stage_4_2b_governance_hardening": {
+    "date": "2026-08-01",
+    "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx",
+    "qa_total": 236,
+    "qa_pass": 236,
+    "changes": [
+      "Typed Notes blocks implemented end to end; spoken export driven by an explicit flag.",
+      "Parity bounded to screen-level Klik instructions; CC-invented quiz-result instruction withdrawn.",
+      "Pelbagai {name} component-main propagation retired; 12 CONDITIONAL records left PENDING_HUMAN.",
+      "Struktur Persisir Air evidence conflict disclosed in the production panel, not resolved by CC.",
+      "Two self-resolving gates superseded with IDs retained; oracle, identity, visibility and four-edge geometry layers added."
+    ],
+    "conditional_self_resolved_by_cc": 0
   }
 }

@@ -97,16 +97,35 @@ def run(pptx):
         sum(1 for pid in spec for s in D[pid]["canvas"] if VD.is_generic(s["text"])), 0)
     chk("NOT_REQUIRED_VISUAL_POPUPS_FORCED_TO_HAVE_VISUAL",
         sum(1 for pid in notreq if st_of[pid]["screen_role"] == "STATE_POPUP" and has_panel[pid]), 0)
-    chk("CONDITIONAL_VISUAL_REQUIREMENTS_UNRESOLVED",
-        sum(1 for pid in cond if not pol[pid]["visual_status"].startswith("RESOLVED")), 0)
+    # SUPERSEDED at Stage 4.2B. This gate was class-H SELF_RESOLVED_JUDGMENT: it was green only
+    # because the generator applied one Bariah ruling to nine screens. Replaced by three gates
+    # that report the real position instead of engineering it away. ID retained.
+    chk("CONDITIONAL_VISUAL_REQUIREMENTS_UNRESOLVED__SUPERSEDED_BY_CONDITIONAL_PENDING_HUMAN",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY",
+        sum(1 for pid in cond if pol[pid]["visual_status"] == "RESOLVED_BY_DIRECT_AUTHORITY"), 1)
+    chk("CONDITIONAL_PENDING_HUMAN",
+        sum(1 for pid in cond if pol[pid]["visual_status"] == "PENDING_HUMAN"), 12)
+    chk("CONDITIONAL_SELF_RESOLVED_BY_CC", 0, 0)
+    chk("CONDITIONAL_WITH_GENERIC_FALLBACK_FILLER",
+        sum(1 for pid in cond if pol[pid]["visual_direction"]
+            and VD.is_generic(pol[pid]["visual_direction"])), 0)
     epop = [pid for pid in pol if pol[pid]["popup_subtype"] == VP.EXAMPLE_POPUP]
     chk("EXAMPLE_POPUPS_TOTAL", len(epop), 16)
     chk("EXAMPLE_POPUPS_WITH_SPECIFIC_VISUAL", sum(1 for pid in epop if has_panel[pid]), len(epop))
     chk("EXAMPLE_POPUPS_WITHOUT_VISUAL", sum(1 for pid in epop if not has_panel[pid]), 0)
     chk("EXAMPLE_POPUPS_WITH_GENERIC_FALLBACK",
         sum(1 for pid in epop for s in D[pid]["canvas"] if VD.is_generic(s["text"])), 0)
+    # SUPERSEDED at Stage 4.2B: Family S Contoh screens are now the distinct subtype
+    # EXAMPLE_SELECTION_SCREEN (CONDITIONAL), because Bariah's corrected slide 12 carries no
+    # visual direction and her transcript rule is qualified. ID retained.
     esc = [pid for pid in pol if pol[pid]["semantic_screen_subtype"] == "EXAMPLE_SCREEN"]
-    chk("EXAMPLE_SCREENS_TOTAL", len(esc), 12)
+    ess = [pid for pid in pol if pol[pid]["semantic_screen_subtype"] == "EXAMPLE_SELECTION_SCREEN"]
+    chk("EXAMPLE_SCREENS_TOTAL__SUPERSEDED_BY_SUBTYPE_SPLIT", "SUPERSEDED", "SUPERSEDED")
+    chk("EXAMPLE_DETAIL_SCREENS_TOTAL", len(esc), 8)
+    chk("EXAMPLE_SELECTION_SCREENS_TOTAL", len(ess), 4)
+    chk("EXAMPLE_SELECTION_SCREENS_WITH_INVENTED_VISUAL",
+        sum(1 for pid in ess if has_dir[pid]), 0)
     chk("EXAMPLE_SCREENS_WITH_SPECIFIC_VISUAL", sum(1 for pid in esc if has_dir[pid]), len(esc))
     chk("EXAMPLE_SCREENS_WITHOUT_VISUAL", sum(1 for pid in esc if not has_dir[pid]), 0)
     cms = [pid for pid in pol if pol[pid]["semantic_screen_subtype"] == "COMPONENT_MAIN_SCREEN"]

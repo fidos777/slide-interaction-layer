@@ -145,20 +145,63 @@ def model_lines(M, rec, st, extra=None):
 
 
 # ============================ Speaker Notes ============================
-def build_notes(M, rec, st, spoken):
-    """Structured Notes. Context headers and spoken transcript stay unambiguous."""
+NB_CONTEXT = "NON_SPOKEN_CONTEXT"
+NB_VO = "SPOKEN_CONTENT_VO"
+NB_INSTR = "SPOKEN_INTERACTION_INSTRUCTION"
+NB_PROD = "PRODUCTION_INSTRUCTION_NOT_SPOKEN"
+
+MARK_CONTEXT = "NON-SPOKEN CONTEXT"
+MARK_SPOKEN = "SPOKEN TRANSCRIPT"
+
+
+def build_notes_blocks(M, rec, st, spoken, instruction=None):
+    """Speaker Notes as an ordered list of EXPLICITLY TYPED blocks.
+
+    Every paragraph that reaches the package originates here with a block_type and a
+    spoken flag. Downstream TTS/VO export reads spoken=True and never infers speech from
+    paragraph order or styling.
+    """
     spec = M.notes_spec(st)
     if spec["policy"] == "SILENT_STATE_NOTES":
-        return ""                       # genuinely empty. No placeholder, no headers.
+        return []                                   # genuinely empty; no blocks at all
+    blocks = []
+    n = [0]
+
+    def blk(bt, spoken_flag, text, marker=False):
+        n[0] += 1
+        blocks.append(dict(block_type=bt, spoken=spoken_flag, text=text,
+                           sequence_order=n[0], is_marker=marker,
+                           source_decision_id=(st["decision_ids"][0] if st["decision_ids"] else None),
+                           runs=[dict(text=t, italic=i) for t, i in GL.parts(text) if t]))
+
     if spec["context_spoken"]:
         # S01 only: the entry titles ARE the spoken transcript.
-        el = spec["spoken_elements"] or []
-        return "\n".join(e["text"] for e in sorted(el, key=lambda e: e["order"]))
-    out = ["NON-SPOKEN CONTEXT", ""]
-    out += spec["context_headers"]
-    out += ["", "SPOKEN TRANSCRIPT", ""]
-    out += spoken if isinstance(spoken, list) else [spoken]
-    return "\n".join(out).rstrip()
+        for e in sorted(spec["spoken_elements"] or [], key=lambda e: e["order"]):
+            bt = NB_INSTR if e["element"] == "MULA_INSTRUCTION" else NB_VO
+            blk(bt, True, e["text"])
+        return blocks
+
+    blk(NB_CONTEXT, False, MARK_CONTEXT, marker=True)
+    blk(NB_CONTEXT, False, "", marker=True)
+    for hdr in spec["context_headers"]:
+        blk(NB_CONTEXT, False, hdr)
+    blk(NB_CONTEXT, False, "", marker=True)
+    blk(NB_CONTEXT, False, MARK_SPOKEN, marker=True)
+    blk(NB_CONTEXT, False, "", marker=True)
+    for line in (spoken if isinstance(spoken, list) else [spoken]):
+        for part in str(line).split("\n"):
+            bt = NB_INSTR if (instruction and part.strip() == instruction.strip()) else NB_VO
+            blk(bt, True, part)
+    return blocks
+
+
+def blocks_to_text(blocks):
+    return "\n".join(b["text"] for b in blocks).rstrip()
+
+
+def spoken_export(blocks):
+    """What TTS would read. Driven by the spoken flag, never by position."""
+    return [b["text"] for b in blocks if b["spoken"] and b["text"].strip()]
 
 
 # ============================ shared page furniture ============================
@@ -313,7 +356,8 @@ def render_family_s(M, page, rec, st, add, viewed):
         add(bullets(22, "Body", BAND_X, 1.92, BAND_W, 3.4,
                     [(0, ital_parts(l)) for l in c["display"]], sz=1500, spc=600))
         vp = VP.classify(M, rec, st)
-        _visual(add, 30, 5.55, V3._wrap_lines(vp["visual_direction"], 108))
+        if vp["visual_direction"]:
+            _visual(add, 30, 5.55, V3._wrap_lines(vp["visual_direction"], 108))
         spoken = [c["vo"] + f" Mari lihat contoh bagi {c['name']} di halaman seterusnya."]
         return spoken, ["INTERAKSI:", "  Tiada interaksi kandungan. Kemajuan melalui shell LMS."]
 
@@ -326,7 +370,9 @@ def render_family_s(M, page, rec, st, add, viewed):
             [INS.for_screen(rec)], sz=1600, algn="ctr"))
     _cards(add, ids, labels, viewed, y0=2.15)
     vp = VP.classify(M, rec, st)
-    if vp["visual_direction"]:
+    # Only draw a direction the policy has actually resolved. A CONDITIONAL screen awaiting
+    # Bariah gets nothing rather than plausible filler.
+    if vp["visual_direction"] and vp["visual_status"].startswith("RESOLVED"):
         _visual(add, 30, 5.86, V3._wrap_lines(vp["visual_direction"], 108))
     _nav(add, st)
     spoken = []
@@ -364,7 +410,8 @@ def render_family_p1(M, page, rec, st, add, viewed):
                 [INS.for_screen(rec)], sz=1500, algn="ctr"))
         _cards(add, ids, labels, viewed, y0=2.36)
         vp = VP.classify(M, rec, st)
-        _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"], 108))
+        if vp["visual_direction"]:
+            _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"], 108))
         _nav(add, st)
         spoken = [c["vo"]] if c.get("vo") else []
         return spoken, ["INTERAKSI:",
@@ -427,7 +474,8 @@ def render_family_p2(M, page, rec, st, add, viewed):
             [INS.for_screen(rec)], sz=1500, algn="ctr"))
     _cards(add, ids, labels, viewed, y0=2.68)
     vp = VP.classify(M, rec, st)
-    _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"] or (r.get("visual") or ""), 108))
+    if vp["visual_direction"]:
+        _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"], 108))
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
@@ -787,9 +835,8 @@ def _render_quiz(M, page, rec, st, add):
     add(txt(20, "Score", BAND_X, 1.60, BAND_W, 0.80, [f"Markah: {d['sample_score']}"], sz=2800, b=True))
     add(txt(21, "Verdict", BAND_X, 2.50, BAND_W, 0.50, [d["verdicts"][0]], sz=2200, b=True, clr=GREEN))
     add(txt(22, "Pass", BAND_X, 3.10, BAND_W, 0.36, [d["pass_mark"]], sz=1300, clr=GREY))
-    add(txt(30, "Instr", BAND_X, 3.58, BAND_W, 0.36, rt([INS.for_page(rec, st)]), sz=1400, b=True))
     for k, lbl in enumerate(d["controls"]):
-        add(button(60 + k, BAND_X + k * 2.6, 4.16, 2.30, 0.46, lbl, True))
+        add(button(60 + k, BAND_X + k * 2.6, 4.10, 2.30, 0.46, lbl, True))
     _nav(add, st)
     extra = ["KEPUTUSAN:",
              f"  Markah dipaparkan. Keputusan: {' / '.join(d['verdicts'])}. {d['pass_mark']}.",
@@ -826,7 +873,8 @@ def build_page(M, page, pages):
     spoken = list(spoken or [])
     if instruction and st["notes_policy"] != "SILENT_STATE_NOTES" and instruction not in spoken:
         spoken.append(instruction)
-    notes = build_notes(M, rec, st, spoken)
+    nblocks = build_notes_blocks(M, rec, st, spoken, instruction)
+    notes = blocks_to_text(nblocks)
     if instruction:
         extra = (extra or []) + ["ARAHAN INTERAKSI (kanvas = VO):", "  " + instruction]
     vpol = VP.classify(M, rec, st)
@@ -837,10 +885,16 @@ def build_page(M, page, pages):
         f"  keperluan visual: {vpol['visual_requirement']}",
         f"  status: {vpol['visual_status']}",
         f"  kuasa: {vpol['visual_authority'] or '—'}"]
+    if vpol.get("evidence_conflict"):
+        ec = vpol["evidence_conflict"]
+        extra += ["  KONFLIK BUKTI — PENDING_BARIAH_CONFIRMATION:",
+                  "    dirender: " + ec["rendered"],
+                  "    alternatif beku: " + ec["frozen_alternative"],
+                  "    lokasi: " + ec["frozen_locator"]]
     lines = model_lines(M, rec, st, extra)
     lines.insert(0, f"BUKTI: {page['proof_note']}")
     sh.append(prodpanel_v4(9, page, rec, st, lines))
-    return sh, notes
+    return sh, notes, nblocks
 
 
 # ============================ package ============================
@@ -874,7 +928,7 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
              'relationships/slide" Target="../slides/slide{n}.xml"/></Relationships>')
     manifest = []
     for i, page in enumerate(pages, 1):
-        shapes, notes = build_page(M, page, pages)
+        shapes, notes, nblocks = build_page(M, page, pages)
         wr(f"ppt/slides/slide{i}.xml", HDR + "".join(shapes) + FTR)
         wr(f"ppt/slides/_rels/slide{i}.xml.rels",
            '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships '
@@ -885,25 +939,25 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
            f'relationships/notesSlide" Target="../notesSlides/notesSlide{i}.xml"/></Relationships>')
         # Speaker Notes carry REAL OOXML run formatting, not markdown or slanted glyphs.
         # Every glossary term becomes its own <a:r> with i="1"; the rest stays plain.
-        def _note_para(t):
-            if not t:
+        def _note_para(b):
+            if not b["text"]:
                 return '<a:p><a:endParaRPr lang="en-MY" dirty="0"/></a:p>'
             runs_xml = ""
-            for frag, ital in GL.parts(t):
-                if not frag:
-                    continue
-                it = ' i="1"' if ital else ""
+            for r in b["runs"]:
+                it = ' i="1"' if r["italic"] else ""
                 runs_xml += (f'<a:r><a:rPr lang="en-MY"{it} dirty="0"/>'
-                             f'<a:t>{X(frag)}</a:t></a:r>')
+                             f'<a:t>{X(r["text"])}</a:t></a:r>')
             return f"<a:p>{runs_xml}</a:p>"
-        body = "".join(_note_para(t) for t in (notes.split("\n") if notes else []))
+        body = "".join(_note_para(b) for b in nblocks)
         if not body:
             body = '<a:p><a:endParaRPr lang="en-MY" dirty="0"/></a:p>'
         wr(f"ppt/notesSlides/notesSlide{i}.xml", NOTE_DONOR[:m.start(2)] + body + NOTE_DONOR[m.end(2):])
         wr(f"ppt/notesSlides/_rels/notesSlide{i}.xml.rels", NRELS.replace("{n}", str(i)))
         manifest.append(dict(slide=i, page=page["id"], screen=page["screen_id"],
                              state=page["state_id"], role=page["review_page_role"],
-                             family=page["execution_family"], notes_chars=len(notes)))
+                             family=page["execution_family"], notes_chars=len(notes),
+                             notes_blocks=nblocks,
+                             spoken_export=spoken_export(nblocks)))
     N = len(pages)
     s = rd("ppt/presentation.xml")
     s = re.sub(r"<p:sldIdLst>.*?</p:sldIdLst>",
@@ -947,7 +1001,7 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
     return out, manifest
 
 
-FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx"
+FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx"
 
 
 def generate_full(outdir, outname=FULL_OUTNAME):

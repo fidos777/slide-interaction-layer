@@ -1,0 +1,149 @@
+{
+ "manifest": "RUN_MANIFEST_v0.4.2",
+ "stage": "Stage 4.2B — governance hardening",
+ "evidence_date": "2026-08-01",
+ "status_tokens": [
+  "REVIEW_READY",
+  "BARIAH_LATEST_FEEDBACK_IMPLEMENTED",
+  "GOVERNANCE_HARDENED",
+  "PENDING_TARGETED_CONFIRMATION",
+  "NOT_FOR_MMD_BUILD",
+  "MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "not_asserted": [
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY",
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "MICROSOFT_POWERPOINT_EQUIVALENCE"
+ ],
+ "repository": {
+  "branch": "claude/verify-powerpoint-file-vpfzkg",
+  "head_at_authoring": "7b4a2ce3efaf7eed7e16d5efb9d3adadfa515d06"
+ },
+ "superseded_but_retained": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx": {
+   "bytes": 439329,
+   "sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx": {
+   "bytes": 453859,
+   "sha256": "247eadb10bde4e7f227c6df947b1821c55faad140b212465ae774bd2c932f59a"
+  }
+ },
+ "outputs": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx": {
+   "bytes": 452752,
+   "sha256": "09bb08f2e391326a9e87cdee797b6ea3197c54373201b010e54096a1ec57ea1e"
+  }
+ },
+ "toolchain": {
+  "v0_4/b02_full_qa_v0_4.py": {
+   "bytes": 19774,
+   "sha256": "eba2431224a8ac9921b559da824786ff4682376cb5503a5232eba62e734142dd"
+  },
+  "v0_4/b02_generator_v0_4.py": {
+   "bytes": 51935,
+   "sha256": "2b4810ae131fd00f2c528eee429bacf098a23592edbf207a1215f212b067b9ac"
+  },
+  "v0_4/b02_glossary_v0_4.py": {
+   "bytes": 2406,
+   "sha256": "eecf0bba9ab61f1b5f1d29a063476c7e38a3e5457245e15e27ac4fa73e2a117b"
+  },
+  "v0_4/b02_governance_qa_v0_4_2.py": {
+   "bytes": 11868,
+   "sha256": "0129d9d0b64bcf934141a1fa6fd4b49d5565c57432202157ac41f52c2ed18ca4"
+  },
+  "v0_4/b02_instructions_v0_4.py": {
+   "bytes": 4514,
+   "sha256": "f0df5073f996c0bdb91aed0f4e41d8a22a7ebf6c2d4f3be201d219d662b4c358"
+  },
+  "v0_4/b02_model_adapter_v0_4.py": {
+   "bytes": 14706,
+   "sha256": "54b84c3b3703f188fbdd49f262b015de8040b89f1212f211f3bbd813231333de"
+  },
+  "v0_4/b02_proof_content_v0_4.py": {
+   "bytes": 12149,
+   "sha256": "ca6af07df9a1a31238315586e04d14d51858191c67584e1ef56216b081ee78bc"
+  },
+  "v0_4/b02_proof_qa_v0_4.py": {
+   "bytes": 18910,
+   "sha256": "5dd2194c0784b54cff053a561d145175229ac44ee9b0ec1859ad3c2d9f58fe02"
+  },
+  "v0_4/b02_regression_qa_v0_4_1.py": {
+   "bytes": 23561,
+   "sha256": "c97bfce3767b96b3b9695202986304424cfcbee43dfa69a8f40f18cedbc59687"
+  },
+  "v0_4/b02_visual_directions_v0_4.py": {
+   "bytes": 3559,
+   "sha256": "21d25743b6a0971cb745122d630ae674dbf2442a5ca98da9d88978027418e1d8"
+  },
+  "v0_4/b02_visual_policy_v0_4.py": {
+   "bytes": 8339,
+   "sha256": "b5f77def1df7042f6484d0139919988166a8b7865d4e5a261d13738114819955"
+  }
+ },
+ "audit_harness": {
+  "audit/b02_oracle_extract_v0_4_2.py": {
+   "bytes": 4939,
+   "sha256": "8ae7f9fbb4445988ea4650c6676e8bb10a63695464e490b6d3436db7a9ad0890"
+  },
+  "audit/b02_replay_v0_4_2.py": {
+   "bytes": 9174,
+   "sha256": "290f7c06b3056cf181489389571bb0c30f7d552bea55f16e92c01fbb3e8a1f3e"
+  }
+ },
+ "qa_layers": {
+  "MODEL_CHECKS": 39,
+  "PACKAGE_XML_CHECKS": 173,
+  "RENDERED_GEOMETRY_CHECKS": 15,
+  "ORACLE_CONFORMANCE_CHECKS": 9,
+  "HISTORICAL_REPLAY_ARTIFACTS": 2,
+  "MUTATION_SENSITIVITY_TESTS": 12,
+  "TOTAL": 236,
+  "PASS": 236,
+  "FAIL": 0
+ },
+ "replay": {
+  "bad_fixtures": 12,
+  "detected": 12,
+  "not_detected": 0,
+  "corrected_false_failures": 0,
+  "v0_4_gates_failing": 44,
+  "v0_4_1_gates_failing": 2,
+  "v0_4_1_failing_gates": [
+   "EVIDENCE_CONFLICTS_IN_PRODUCTION_PANEL",
+   "EXAMPLE_SELECTION_SCREENS_WITH_INVENTED_VISUAL"
+  ]
+ },
+ "visual_governance": {
+  "REQUIRED": 25,
+  "NOT_REQUIRED": 61,
+  "CONDITIONAL": 14,
+  "CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY": 1,
+  "CONDITIONAL_PENDING_HUMAN": 12,
+  "CONDITIONAL_SELF_RESOLVED_BY_CC": 0,
+  "EVIDENCE_CONFLICTS": 1
+ },
+ "notes_blocks": {
+  "TOTAL": 869,
+  "SPOKEN_CONTENT_VO": 109,
+  "SPOKEN_INTERACTION_INSTRUCTION": 25,
+  "NON_SPOKEN_CONTEXT": 735,
+  "SPOKEN_EXPORT_LINES": 134,
+  "SILENT_STATE_PAGES": 18
+ },
+ "environment_limitations": [
+  "LibreOffice retested at Stage 4.2B: no Impress import filter, \"Error: source file could not be loaded\". Rendering uses the package parser with Liberation Sans. Microsoft PowerPoint equivalence is NOT claimed."
+ ],
+ "totals": {
+  "REVIEW_PAGES": 100,
+  "LEARNER_SCREENS": 29,
+  "RUNTIME_STATES": 100,
+  "INTERACTION_ITEMS": 54,
+  "SOURCE_ROWS": 26,
+  "SOURCE_ASSETS": 14,
+  "COMPONENTS": 9,
+  "SLIDES_MANUALLY_PATCHED": 0
+ }
+}

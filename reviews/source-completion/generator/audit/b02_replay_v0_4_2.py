@@ -10,10 +10,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 V4 = os.path.join(os.path.dirname(HERE), "v0_4")
 sys.path.insert(0, V4); sys.path.insert(0, os.path.dirname(HERE))
 import b02_model_adapter_v0_4 as ADAPT
-import b02_regression_qa_v0_4_1 as QA
+import b02_governance_qa_v0_4_2 as QA
 
 R = "reviews/source-completion"
-GOOD = f"{R}/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx"
+GOOD = f"{R}/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx"
+PRIOR_V4_1 = f"{R}/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx"
 SUPERSEDED = f"{R}/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx"
 
 
@@ -171,9 +172,11 @@ def main():
                                 total_newly_failing=len(newly),
                                 newly_failing_sample=sorted(newly)[:6]))
         superseded = run_suite(SUPERSEDED)
+        prior = run_suite(PRIOR_V4_1)
         return dict(good_pass=sum(1 for v in good.values() if v), good_total=len(good),
                     corrected_false_failures=sum(1 for v in good.values() if not v),
                     superseded_deck_failures=sorted(k for k, v in superseded.items() if not v),
+                    v0_4_1_failures=sorted(k for k, v in prior.items() if not v),
                     fixtures=results)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)

@@ -21,15 +21,48 @@ BY_SCREEN_ROLE = {
     ("FAMILY_P2", "COMPONENT_EXPLANATION_WITH_SPEC_LIST"): "Klik pada setiap kategori untuk penjelasan lanjut.",
 }
 
+# Scope of the 1 Aug 2026 parity ruling: SCREEN-LEVEL learner instructions.
+# The quiz-entry Klik instruction is corroborated on Bariah's corrected slide 73.
 BY_STATE_ROLE = {
     "STATE_QUIZ_INTRO": "Klik Mula Kuiz untuk memulakan kuiz.",
-    "STATE_QUIZ_RESULT": "Klik Semak Jawapan untuk menyemak, atau Ulang Kuiz untuk mencuba semula.",
 }
 
+# Deliberately NOT implemented. These refer to micro-controls (review / retry buttons) and
+# have no direct authority; the earlier CC-invented sentence has been withdrawn from both the
+# canvas and the VO rather than left in place as if confirmed.
+PENDING_BARIAH_CONFIRMATION_SCOPES = {
+    "STATE_QUIZ_RESULT": "Semak Jawapan / Ulang Kuiz button instruction",
+    "CLOSE_ICON": "popup close icon",
+    "KEMBALI_BUTTON": "Kembali control",
+    "STATE_ALL_VIEWED": "completion-only controls",
+}
+
+# Task-supplied wording (1 Aug 2026 transcript). Screen-level, not micro-control, so it is
+# implemented — but its authority class is recorded as TASK_SUPPLIED, not CONFIRMED_BARIAH.
 BY_QUESTION_KIND = {
     "MCQ": "Pilih satu jawapan.",
     "MULTIPLE_RESPONSE": "Pilih semua jawapan yang tepat.",
 }
+
+AUTHORITY = {
+    "Klik pada setiap struktur untuk penjelasan lanjut.": "BARIAH_DIRECT_FROZEN_SLIDE",
+    "Klik pada setiap contoh untuk penjelasan lanjut.": "BARIAH_DIRECT_FROZEN_SLIDE",
+    "Klik pada setiap contoh untuk melihat perincian.": "TASK_SUPPLIED",
+    "Klik pada setiap spesifikasi untuk penjelasan lanjut.": "TASK_SUPPLIED",
+    "Klik pada setiap kategori untuk penjelasan lanjut.": "TASK_SUPPLIED",
+    "Klik Mula Kuiz untuk memulakan kuiz.": "BARIAH_CORROBORATED_SLIDE_73",
+    "Pilih satu jawapan.": "TASK_SUPPLIED",
+    "Pilih semua jawapan yang tepat.": "TASK_SUPPLIED",
+}
+
+
+def authority(instruction):
+    return AUTHORITY.get(instruction, "UNCLASSIFIED")
+
+
+def is_screen_level_click(instruction):
+    """The confirmed parity scope: a screen-level learner instruction starting with Klik."""
+    return bool(instruction) and instruction.startswith("Klik pada setiap")
 
 # Frames whose action is a single button. S01's instruction is already element 4 of its
 # spoken transcript, so it is not duplicated here.

@@ -958,7 +958,18 @@ evidence and full validation: `BARIAH_REGRESSION_CORRECTION_REPORT_v0.4.1.md`.
 
 ---
 
-# 11. Standing
+# 11. Stage 4.2B — governance hardening
+
+Deck `v0_4_2`. QA 236/236 across four layers plus
+12 mutation fixtures and 2 historical replay artifacts.
+No learner-facing ruling was reinterpreted; two CC-authored extensions were **withdrawn**
+(the `Pelbagai {name}` component-main propagation and the quiz-result instruction), and
+12 CONDITIONAL visual decisions plus 1 evidence conflict are routed to
+Bariah rather than resolved. Detail: `STORYBOARD_QA_REPORT_v0.4.2.md`.
+
+---
+
+# 12. Standing
 
 Documentation only. No generator file modified, no PowerPoint regenerated, no component propagated,
 no screen/state map produced, no canonical `P#` minted, no comment fabricated, and no ruling selected

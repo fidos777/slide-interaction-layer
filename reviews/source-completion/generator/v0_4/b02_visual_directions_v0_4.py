@@ -28,6 +28,19 @@ PENDING_SPECIFIC_VISUAL_DIRECTION and is never given fallback prose.
 
 HEADING = "ARAHAN VISUAL — TIDAK DIBENAMKAN"
 
+# Authorised display normalisations, same class as the N-06 WPC punctuation fix: casing only,
+# no wording change. The module writes "BBQ pit" in some visual cells; S&G v0.3 requires the
+# capital P wherever the term is displayed.
+DISPLAY_NORMALISATIONS = [("BBQ pit", "BBQ Pit")]
+
+
+def normalise_display(text):
+    if not text:
+        return text
+    for a, b in DISPLAY_NORMALISATIONS:
+        text = text.replace(a, b)
+    return text
+
 ASSET = "SOURCE_ASSET_FIGURE"
 CONTOH = "BARIAH_EXEMPLAR_CONTOH"
 PENDING = "PENDING_SPECIFIC_VISUAL_DIRECTION"
@@ -38,13 +51,13 @@ FALLBACK_MARKERS = ("Arahan visual untuk", "spesifikasi teks sahaja")
 
 def for_row(row):
     """Visual direction for a source row. Returns dict(text, authority, status)."""
-    vis = (row.get("visual") or "").strip()
+    vis = normalise_display((row.get("visual") or "").strip())
     if vis:
         return dict(text=vis, authority=ASSET, status="RESOLVED",
                     source_row_uid=row["uid"], locator=f"modul ms {row['ms']}")
     contoh = (row.get("contoh") or "").strip()
     if contoh:
-        return dict(text=f"[Visual: {contoh}]", authority=CONTOH, status="RESOLVED",
+        return dict(text=normalise_display(f"[Visual: {contoh}]"), authority=CONTOH, status="RESOLVED",
                     source_row_uid=row["uid"], locator=f"modul ms {row['ms']}")
     return dict(text=None, authority=None, status=PENDING,
                 source_row_uid=row["uid"], locator=f"modul ms {row['ms']}")

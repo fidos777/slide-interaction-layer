@@ -2,19 +2,19 @@
  "register": "VISUAL_REQUIREMENT_REGISTER_v0.4.2",
  "evidence_date": "2026-08-01",
  "deterministic_rules": {
-  "EXAMPLE_SCREEN": "REQUIRED",
+  "EXAMPLE_SCREEN (P1 detail)": "REQUIRED",
   "EXAMPLE_POPUP": "REQUIRED",
   "SPECIFICATION_POPUP": "NOT_REQUIRED"
  },
- "governance_note": "Component-main \"where applicable\" decisions are NOT resolved by CC. Bariah supplied the pattern for Struktur Persisir Air only; the other component-main screens and the Perabot gateway are CONDITIONAL / PENDING_HUMAN here even though the generator already renders a direction on them. That divergence is reported, not hidden: see CONDITIONAL_RENDERED_BY_GENERATOR_WITHOUT_DIRECT_AUTHORITY.",
+ "governance": "CONDITIONAL records are NOT self-resolved. Component-main screens keep the module's own source-attested direction and remain PENDING_HUMAN. Family S Contoh screens carry NO direction: Bariah's corrected slide 12 has none and her transcript rule is qualified \"where an example visual is presented\". The Stage 4.1 \"Pelbagai {name}\" propagation is retired.",
  "totals": {
-  "REQUIRED_COUNT": 29,
-  "NOT_REQUIRED_COUNT": 61,
-  "CONDITIONAL_COUNT": 10,
-  "CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY": 2,
-  "CONDITIONAL_PENDING_HUMAN": 9,
+  "REQUIRED": 25,
+  "NOT_REQUIRED": 61,
+  "CONDITIONAL": 14,
+  "CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY": 1,
+  "CONDITIONAL_PENDING_HUMAN": 12,
   "CONDITIONAL_SELF_RESOLVED_BY_CC": 0,
-  "CONDITIONAL_RENDERED_BY_GENERATOR_WITHOUT_DIRECT_AUTHORITY": 8
+  "EVIDENCE_CONFLICTS": 1
  },
  "records": [
   {
@@ -25,11 +25,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Imej pembuka bahagian — foto tapak landskap siap yang memaparkan struktur taman dan perabot taman dalam satu bingkai. Tidak dibenamkan.]",
-   "authority": "Bariah reviewed exemplar, annotated deck slide 2 + WhatsApp 1 Aug 2026",
-   "evidence_locator": "annotated deck slide 2/14",
-   "resolution_status": "RESOLVED_BY_DIRECT_AUTHORITY",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_DIRECT",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-002",
@@ -39,11 +37,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-003",
@@ -53,11 +49,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-004",
@@ -67,11 +61,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-005",
@@ -81,25 +73,27 @@
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
    "visual_direction": "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]",
-   "authority": "Bariah WhatsApp 1 Aug 2026, verbatim: \"[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]\"",
-   "evidence_locator": "annotated deck slide 2/14",
+   "authority": "BARIAH_DIRECT",
    "resolution_status": "RESOLVED_BY_DIRECT_AUTHORITY",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "evidence_conflict": {
+    "rendered": "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]",
+    "rendered_authority": "BARIAH_DIRECT transcript, 1 August 2026 (explicit instruction)",
+    "frozen_alternative": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Tidak dibenamkan.]",
+    "frozen_locator": "annotated deck slide 10, Bariah's own corrected component-main exemplar",
+    "note": "The transcript says 'follow the reviewed treatment' and then gives a string that the reviewed slide does not contain. Both are disclosed; the transcript instruction is rendered because it is the later explicit direction. PENDING_BARIAH_CONFIRMATION."
+   }
   },
   {
    "page": "RP-006",
    "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
    "state": "ST_STRUKTUR_PERSISIR_AIR_EXAMPLES_BASE",
-   "semantic_subtype": "EXAMPLE_SCREEN",
+   "semantic_subtype": "EXAMPLE_SELECTION_SCREEN",
    "popup_subtype": null,
-   "visual_requirement": "REQUIRED",
-   "visual_direction": "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "visual_requirement": "CONDITIONAL",
+   "visual_direction": null,
+   "authority": "frozen exemplar slide 12 shows none; transcript rule is qualified 'where an example visual is presented'",
+   "resolution_status": "PENDING_HUMAN",
+   "evidence_conflict": null
   },
   {
    "page": "RP-007",
@@ -109,11 +103,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Promenade Tasik Titiwangsa, KL]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-008",
@@ -123,11 +115,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Jeti Lumut, Perak]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-009",
@@ -137,11 +127,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Wetland Park Putrajaya]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-010",
@@ -151,11 +139,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Aset K5PL06T03-B02-IMG-p239-x20. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-011",
@@ -165,11 +151,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Footbridge Taman Botani Perdana]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-012",
@@ -179,11 +163,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-013",
@@ -192,26 +174,22 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Struktur Teduhan. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-014",
    "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
    "state": "ST_STRUKTUR_TEDUHAN_EXAMPLES_BASE",
-   "semantic_subtype": "EXAMPLE_SCREEN",
+   "semantic_subtype": "EXAMPLE_SELECTION_SCREEN",
    "popup_subtype": null,
-   "visual_requirement": "REQUIRED",
-   "visual_direction": "[Visual: Pelbagai Struktur Teduhan. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "visual_requirement": "CONDITIONAL",
+   "visual_direction": null,
+   "authority": "frozen exemplar slide 12 shows none; transcript rule is qualified 'where an example visual is presented'",
+   "resolution_status": "PENDING_HUMAN",
+   "evidence_conflict": null
   },
   {
    "page": "RP-015",
@@ -221,11 +199,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Taman Tasik Shah Alam]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-016",
@@ -235,11 +211,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Wakaf di Taman Desa, KL]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-017",
@@ -249,11 +223,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Aset K5PL06T03-B02-IMG-p240-x23. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-018",
@@ -263,11 +235,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Canopy rekreasi di Taman Jaya]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-019",
@@ -277,11 +247,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Banyak kawasan awam di Putrajaya]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-020",
@@ -291,11 +259,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-021",
@@ -304,26 +270,22 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Kemudahan Awam. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: tiga sel berlabel Tandas Awam | Surau | Bangunan Interpretatif. Tidak dilukis, tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-022",
    "screen": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
    "state": "ST_KEMUDAHAN_AWAM_EXAMPLES_BASE",
-   "semantic_subtype": "EXAMPLE_SCREEN",
+   "semantic_subtype": "EXAMPLE_SELECTION_SCREEN",
    "popup_subtype": null,
-   "visual_requirement": "REQUIRED",
-   "visual_direction": "[Visual: Pelbagai Kemudahan Awam. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "visual_requirement": "CONDITIONAL",
+   "visual_direction": null,
+   "authority": "frozen exemplar slide 12 shows none; transcript rule is qualified 'where an example visual is presented'",
+   "resolution_status": "PENDING_HUMAN",
+   "evidence_conflict": null
   },
   {
    "page": "RP-023",
@@ -333,11 +295,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Tandas Awam]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-024",
@@ -347,11 +307,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Surau]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-025",
@@ -361,11 +319,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Bangunan Interpretatif]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-026",
@@ -375,11 +331,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-027",
@@ -388,26 +342,22 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Water Feature. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: keratan rentas dengan pam, penapis, paip dan saliran berlabel. Tidak dilukis, tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-028",
    "screen": "SCR_WATER_FEATURE_EXAMPLES",
    "state": "ST_WATER_FEATURE_EXAMPLES_BASE",
-   "semantic_subtype": "EXAMPLE_SCREEN",
+   "semantic_subtype": "EXAMPLE_SELECTION_SCREEN",
    "popup_subtype": null,
-   "visual_requirement": "REQUIRED",
-   "visual_direction": "[Visual: Pelbagai Water Feature. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "visual_requirement": "CONDITIONAL",
+   "visual_direction": null,
+   "authority": "frozen exemplar slide 12 shows none; transcript rule is qualified 'where an example visual is presented'",
+   "resolution_status": "PENDING_HUMAN",
+   "evidence_conflict": null
   },
   {
    "page": "RP-029",
@@ -417,11 +367,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Air Pancut (Fountain)]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-030",
@@ -431,11 +379,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Kolam (Pond)]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-031",
@@ -445,11 +391,9 @@
    "popup_subtype": "EXAMPLE_POPUP",
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Kolam Renang/Kolam Hiasan Besar(Pool)]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "BARIAH_EXEMPLAR_CONTOH",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-032",
@@ -459,11 +403,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-033",
@@ -473,11 +415,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-034",
@@ -487,11 +427,9 @@
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
    "visual_direction": null,
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": false
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED_PER_COMPONENT_CARD",
+   "evidence_conflict": null
   },
   {
    "page": "RP-035",
@@ -500,12 +438,10 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Kerusi Taman. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: Foto jadual spesifikasi kerusi taman, modul ms 242–243. Tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-036",
@@ -515,11 +451,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Kerusi Kayu Keras, modul ms 242. Aset K5PL06T03-B02-IMG-p242-x28. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-037",
@@ -529,11 +463,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-038",
@@ -543,11 +475,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-039",
@@ -557,11 +487,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-040",
@@ -571,11 +499,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-041",
@@ -585,11 +511,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-042",
@@ -599,11 +523,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Kerusi Konkrit, modul ms 243. Aset K5PL06T03-B02-IMG-p243-x31. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-043",
@@ -613,11 +535,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-044",
@@ -627,11 +547,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-045",
@@ -641,11 +559,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-046",
@@ -655,11 +571,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Kerusi Komposit, modul ms 243. Aset K5PL06T03-B02-IMG-p243-x32. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-047",
@@ -669,11 +583,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-048",
@@ -683,11 +595,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-049",
@@ -697,11 +607,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-050",
@@ -711,11 +619,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-051",
@@ -724,12 +630,10 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Papan Tanda. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: Rajah 25 dan Rajah 26, modul ms 245. Tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-052",
@@ -739,11 +643,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-053",
@@ -753,11 +655,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-054",
@@ -767,11 +667,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-055",
@@ -781,11 +679,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-056",
@@ -795,11 +691,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-057",
@@ -808,12 +702,10 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Tong Sampah. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: Foto jadual spesifikasi tong sampah, modul ms 246–247. Tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-058",
@@ -823,11 +715,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Tong Sampah Logam, modul ms 246. Aset K5PL06T03-B02-IMG-p246-x41. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-059",
@@ -837,11 +727,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-060",
@@ -851,11 +739,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-061",
@@ -865,11 +751,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-062",
@@ -879,11 +763,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Tong Sampah Konkrit/Batu, modul ms 247. Aset K5PL06T03-B02-IMG-p247-x44. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-063",
@@ -893,11 +775,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-064",
@@ -907,11 +787,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-065",
@@ -921,11 +799,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-066",
@@ -935,11 +811,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Dua foto jadual spesifikasi Tong Sampah Plastik HDPE, modul ms 247. Aset K5PL06T03-B02-IMG-p247-x45 dan K5PL06T03-B02-IMG-p247-x46. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-067",
@@ -949,11 +823,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-068",
@@ -963,11 +835,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-069",
@@ -977,11 +847,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-070",
@@ -991,11 +859,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-071",
@@ -1004,12 +870,10 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai Drinking Fountain. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: Foto jadual spesifikasi drinking fountain, modul ms 248–249. Tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-072",
@@ -1019,11 +883,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Pancutan Air Minum Keluli Tahan Karat, modul ms 248. Aset K5PL06T03-B02-IMG-p248-x49. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-073",
@@ -1033,11 +895,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-074",
@@ -1047,11 +907,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-075",
@@ -1061,11 +919,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-076",
@@ -1075,11 +931,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-077",
@@ -1089,11 +943,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-078",
@@ -1103,11 +955,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-079",
@@ -1117,11 +967,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-080",
@@ -1131,11 +979,9 @@
    "popup_subtype": null,
    "visual_requirement": "REQUIRED",
    "visual_direction": "[Visual: Foto jadual spesifikasi Pancutan Air Minum Konkrit/Batu, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x56. Tidak dibenamkan.]",
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": true
+   "authority": "SOURCE_ASSET_FIGURE",
+   "resolution_status": "RESOLVED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-081",
@@ -1145,11 +991,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-082",
@@ -1159,11 +1003,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-083",
@@ -1173,11 +1015,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-084",
@@ -1187,11 +1027,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-085",
@@ -1200,12 +1038,10 @@
    "semantic_subtype": "COMPONENT_MAIN_SCREEN",
    "popup_subtype": null,
    "visual_requirement": "CONDITIONAL",
-   "visual_direction": "[Visual: Pelbagai BBQ Pit. Tidak dibenamkan.]",
-   "authority": "No direct evidence for this individual screen",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
+   "visual_direction": "[Visual: Foto jadual spesifikasi BBQ Pit, modul ms 249. Tidak dibenamkan.]",
+   "authority": "SOURCE_ATTESTED_COMPONENT_VISUAL",
    "resolution_status": "PENDING_HUMAN",
-   "resolving_authority": "BARIAH_REQUIRED",
-   "generator_currently_renders": true
+   "evidence_conflict": null
   },
   {
    "page": "RP-086",
@@ -1215,11 +1051,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-087",
@@ -1229,11 +1063,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-088",
@@ -1243,11 +1075,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-089",
@@ -1257,11 +1087,9 @@
    "popup_subtype": "SPECIFICATION_POPUP",
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED_BY_BARIAH_RULING",
+   "evidence_conflict": null
   },
   {
    "page": "RP-090",
@@ -1271,11 +1099,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-091",
@@ -1285,11 +1111,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-092",
@@ -1299,11 +1123,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-093",
@@ -1313,11 +1135,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-094",
@@ -1327,11 +1147,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-095",
@@ -1341,11 +1159,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-096",
@@ -1355,11 +1171,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-097",
@@ -1369,11 +1183,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-098",
@@ -1383,11 +1195,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-099",
@@ -1397,11 +1207,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   },
   {
    "page": "RP-100",
@@ -1411,11 +1219,9 @@
    "popup_subtype": null,
    "visual_requirement": "NOT_REQUIRED",
    "visual_direction": null,
-   "authority": "Bariah 1 Aug 2026 subtype ruling",
-   "evidence_locator": "Bariah WhatsApp 1 Aug 2026 (transcript-only)",
-   "resolution_status": "RESOLVED_DETERMINISTIC_RULE",
-   "resolving_authority": "BARIAH",
-   "generator_currently_renders": false
+   "authority": null,
+   "resolution_status": "NOT_REQUIRED",
+   "evidence_conflict": null
   }
  ]
 }
