@@ -195,6 +195,70 @@ structure. Recorded as `B02-D-25`; the outstanding byte freeze is `B02-D-27` / d
 
 ---
 
+## 2C. Latest Bariah screenshot evidence — frozen
+
+```
+LATEST_BARIAH_SCREENSHOT_EVIDENCE_FROZEN
+SCREENSHOT_FILES_FROZEN_ON_DISK = 3 of 3
+EVIDENCE_CLASS                  = BARIAH_DIRECT_SCREENSHOT
+DELIVERED_AS                    = B02_BARIAH_EVIDENCE_20260801.zip
+FROZEN 1 August 2026 — second delivery attempt
+```
+
+Three screenshots from Bariah's WhatsApp thread of 1 August 2026. They are the **oracle for the
+Stage 4.2C rulings**: the S01 correction, the subtype visual policy, and the Struktur Persisir Air
+component-main direction. Before this delivery those rulings existed only as task transcript text,
+which Stage 4.2C was explicitly forbidden to treat as a screenshot oracle.
+
+Transport archive, independently hashed on receipt:
+
+| Archive | Bytes | SHA-256 | ZIP validity |
+|---|---:|---|---|
+| `B02_BARIAH_EVIDENCE_20260801.zip` | 772,667 | `25be512ea4cb9d7150c68bad82dd7f8613abc57caf9a40ff3be0baa99c2ac2ba` | valid; `testzip()` reports no corrupt member; 4 members, exactly as expected |
+
+| Ref | Repository filename | Original filename | Bytes | SHA-256 | Subject | Frozen? |
+|---|---|---|---:|---|---|:-:|
+| **S1** | `B02_BARIAH_S01_EVIDENCE.jpg` | `PHOTO-2026-08-01-16-39-06.jpg` | 96,289 | `7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0` | S01 title, duplicate removal, visual direction, Speaker Notes | ✅ |
+| **S2** | `B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg` | `PHOTO-2026-08-01-16-40-33.jpg` | 53,895 | `936b78c270274874bfa4921a35205e4ca1d679959ebf6f1880e7c76e6f890ab7` | Struktur Persisir Air component-main visual direction | ✅ |
+| **S3** | `B02_BARIAH_VISUAL_POLICY_EVIDENCE.png` | `Screenshot 2026-08-01 at 5.21.12 PM.png` | 655,935 | `feb29e86228b7f240379b9830bbd59f3e30db2fae03389a68e1ba1bd32ef867b` | all examples and example popups require visuals; specification popups excepted | ✅ |
+
+All three live in `reviews/storyboard-bariah/v0_3_bariah_review/`. The repository filenames are ASCII
+aliases; **identity is bytes, hash and the recorded mapping above**, not the filename.
+
+### 2C.1 Three-way identity concordance
+
+Each file was hashed independently after extraction, then compared against two other statements of
+the same value. All three agree for all three files, with no exceptions:
+
+| Source of the expected value | Agreement |
+|---|---|
+| Independently computed from the extracted bytes | baseline |
+| Task-supplied expected identities | ✅ all 3 match |
+| `MANIFEST.txt` inside the archive (supplementary only) | ✅ all 3 match |
+
+Repository copies were re-hashed after copying and compared byte-for-byte with `cmp`: **identical**.
+
+### 2C.2 Delivery history
+
+| Attempt | Date | Outcome |
+|---|---|---|
+| 1 | 1 Aug 2026 | Three filenames named in the task; no image reached any location in the container. Stage stopped with `LATEST_BARIAH_SCREENSHOT_EVIDENCE_NOT_AVAILABLE`. No hash was estimated and no transcript text was recorded as screenshot evidence. |
+| 2 | 1 Aug 2026 | Delivered as a single ZIP. Verified, extracted, hashed, frozen. |
+
+### 2C.3 What this evidence is, and is not
+
+These are **raster images with no text layer**. The expected values used by the QA suite are
+therefore **transcribed**, not machine-extracted. `generator/audit/b02_screenshot_oracle_v0_4_3.py`
+records, for every value, the pixel crop it was read from, and re-hashes the file before returning
+anything — so a gate built on it fails closed if the evidence is edited, replaced or removed.
+
+One transcription limit is recorded rather than hidden: in the boxed Speaker-Notes block a trailing
+full stop on lines 1 and 2 is consistent with the pixels but not separable from the spell-check
+underline beneath it. The sentence-final period is carried over from the unambiguous "before" block,
+whose every line ends in one.
+
+---
+
 ## 3. Generator toolchain frozen
 
 | Module | Bytes | SHA-256 |

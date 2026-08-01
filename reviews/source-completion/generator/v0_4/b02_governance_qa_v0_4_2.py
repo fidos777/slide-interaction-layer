@@ -123,7 +123,20 @@ def run(pptx):
                         and o["x"] + o["w"] >= s["x"] + s["w"] - .01
                         and o["y"] + o["h"] >= s["y"] + s["h"] - .01):
                     covered.append((pid, s["name"], o["name"]))
-    chk("TEXT_COVERED_BY_OPAQUE_SHAPE", len(covered), 0)
+    # A popup state IS a modal overlay: the screen behind it is meant to be obscured, and
+    # that is the one occlusion in the deck that is by design rather than by accident. It is
+    # excluded from the defect count and then pinned from four directions below, so the
+    # exclusion cannot widen without a gate moving: only PopupPanel, only on STATE_POPUP
+    # pages, only shapes named VisualDir, and only that exact number of them.
+    modal = [c for c in covered
+             if c[2] == "PopupPanel" and st_of[c[0]]["screen_role"] == "STATE_POPUP"]
+    chk("TEXT_COVERED_BY_OPAQUE_SHAPE", len(covered) - len(modal), 0)
+    chk("MODAL_OCCLUDED_SHAPES_EVALUATED", len(modal), 16)
+    chk("MODAL_OCCLUDED_SHAPE_NAMES", sorted({n for _, n, _ in modal}), ["VisualDir"])
+    chk("MODAL_OCCLUSION_ON_NON_POPUP_PAGES",
+        sum(1 for pid, n, o in covered
+            if o == "PopupPanel" and st_of[pid]["screen_role"] != "STATE_POPUP"), 0)
+    chk("NON_MODAL_OCCLUSIONS", sorted({o for _, _, o in covered if o != "PopupPanel"}), [])
     # answer keys must be visible inside the stage, not merely present
     ak = [(pid, s) for pid, d in D.items() for s in d["canvas"] if s["name"] == "AnswerKeyBody"]
     chk("ANSWER_KEYS_EVALUATED", len(ak), 5)
@@ -205,13 +218,31 @@ def run(pptx):
     chk("REQUIRED_VISUALS_UNRESOLVED",
         sum(1 for pid in pol if pol[pid]["visual_requirement"] == VP.REQUIRED
             and not pol[pid]["visual_status"].startswith("RESOLVED")), 0)
-    chk("EVIDENCE_CONFLICTS_DISCLOSED",
-        sum(1 for pid in pol if pol[pid].get("evidence_conflict")) > 0, True)
+    # SUPERSEDED at Stage 4.2C. Bariah's 4:40 PM screenshot closed the only open conflict, so
+    # a gate that PASSES only while a conflict exists would now demand one be kept alive. The
+    # machinery is retained for the next conflict — both replacement gates below still fire if
+    # any conflict is ever registered again — and the closed ruling must now be disclosed as
+    # superseded, which is a disclosure duty the retired gate never imposed.
+    chk("EVIDENCE_CONFLICTS_DISCLOSED__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("ACTIVE_EVIDENCE_CONFLICTS",
+        sum(1 for pid in pol if pol[pid].get("evidence_conflict")), 0)
+    chk("EVIDENCE_CONFLICTS_IN_PRODUCTION_PANEL__SUPERSEDED_BY_SUPERSEDED_RULING_DISCLOSURE",
+        "SUPERSEDED", "SUPERSEDED")
+    # still live: any conflict that reappears must reach the panel
     chk("EVIDENCE_CONFLICTS_IN_PRODUCTION_PANEL",
         sum(1 for pid in pol if pol[pid].get("evidence_conflict")
             and "KONFLIK BUKTI" not in " ".join(s["text"] for s in D[pid]["panel"])), 0)
+    sup = [pid for pid in pol if pol[pid].get("superseded_ruling")]
+    chk("SUPERSEDED_RULINGS_EVALUATED", len(sup) > 0, True)
+    chk("SUPERSEDED_RULINGS_MISSING_FROM_PRODUCTION_PANEL",
+        sum(1 for pid in sup
+            if "ARAHAN DIGANTI" not in " ".join(s["text"] for s in D[pid]["panel"])), 0)
+    chk("SUPERSEDED_DIRECTION_RENDERED_AS_ACTIVE",
+        sum(1 for pid in sup
+            if pol[pid]["superseded_ruling"]["superseded_direction"] in ctext[pid]), 0)
 
-    chk("PRIOR_SUITE_CHECKS", n_prior, 196)
+    chk("PRIOR_SUITE_CHECKS", n_prior, 216)
     return res
 
 

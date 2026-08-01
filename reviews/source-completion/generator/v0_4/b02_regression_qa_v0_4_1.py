@@ -104,8 +104,17 @@ def run(pptx):
         "SUPERSEDED", "SUPERSEDED")
     chk("CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY",
         sum(1 for pid in cond if pol[pid]["visual_status"] == "RESOLVED_BY_DIRECT_AUTHORITY"), 1)
+    # 12 -> 8 at Stage 4.2C: the four EXAMPLE_SELECTION_SCREENs left CONDITIONAL when the
+    # 4:37 PM ruling made them REQUIRED. The eight remaining are the component mains other
+    # than Struktur Persisir Air, and they stay a human decision.
     chk("CONDITIONAL_PENDING_HUMAN",
-        sum(1 for pid in cond if pol[pid]["visual_status"] == "PENDING_HUMAN"), 12)
+        sum(1 for pid in cond if pol[pid]["visual_status"] == "PENDING_HUMAN"), 8)
+    chk("CONDITIONAL_PENDING_HUMAN_ARE_COMPONENT_MAINS",
+        sorted({pol[pid]["semantic_screen_subtype"] for pid in cond
+                if pol[pid]["visual_status"] == "PENDING_HUMAN"}), ["COMPONENT_MAIN_SCREEN"])
+    chk("COMPONENT_MAIN_SELF_RESOLVED_BY_CC", 0, 0)
+    chk("COMPONENT_MAINS_MARKED_PROVISIONAL",
+        sum(1 for pid in cond if pol[pid].get("proposal_class") == VP.PROVISIONAL), 8)
     chk("CONDITIONAL_SELF_RESOLVED_BY_CC", 0, 0)
     chk("CONDITIONAL_WITH_GENERIC_FALLBACK_FILLER",
         sum(1 for pid in cond if pol[pid]["visual_direction"]
@@ -124,8 +133,52 @@ def run(pptx):
     chk("EXAMPLE_SCREENS_TOTAL__SUPERSEDED_BY_SUBTYPE_SPLIT", "SUPERSEDED", "SUPERSEDED")
     chk("EXAMPLE_DETAIL_SCREENS_TOTAL", len(esc), 8)
     chk("EXAMPLE_SELECTION_SCREENS_TOTAL", len(ess), 4)
-    chk("EXAMPLE_SELECTION_SCREENS_WITH_INVENTED_VISUAL",
-        sum(1 for pid in ess if has_dir[pid]), 0)
+    # SUPERSEDED at Stage 4.2C. "Semua contoh ada visual" is unqualified, so a selection
+    # screen carrying visuals is now REQUIRED, not evidence of invention. The replacement
+    # gates below are strictly stronger: they demand a visual on every one of these screens
+    # AND that every card's text be byte-equal to its own source row's direction, which the
+    # retired absence test could never have caught.
+    chk("EXAMPLE_SELECTION_SCREENS_WITH_INVENTED_VISUAL__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("EXAMPLE_SELECTION_SCREENS_WITHOUT_VISUAL",
+        sum(1 for pid in ess if not has_dir[pid]), 0)
+    chk("EXAMPLE_SELECTION_SCREENS_WITH_PER_EXAMPLE_VISUAL",
+        sum(1 for pid in ess if pol[pid]["visual_status"] == VP.PER_EXAMPLE_CARD), len(ess))
+    # identity, not count: each caption must equal the direction of the row it belongs to
+    bad_card, cards_seen = 0, 0
+    for pid in ess:
+        caps = {s["text"] for s in D[pid]["canvas"] if s["name"] == "VisualDir"}
+        for c in pol[pid]["example_card_visuals"]:
+            cards_seen += 1
+            # compare on whitespace-free content: a caption is wrapped into several
+            # paragraphs, and the package concatenates runs without a separator
+            want = "".join(VD.for_row(M.rows[c["source_row_uid"]])["text"].split())
+            if not any("".join(t.split()) == want for t in caps):
+                bad_card += 1
+    chk("EXAMPLE_CARD_VISUALS_EVALUATED", cards_seen, 16)
+    chk("EXAMPLE_CARD_VISUALS_NOT_SOURCE_ATTESTED", bad_card, 0)
+    # Screen-level parity. A selection screen has three kinds of runtime state — base, popup,
+    # all-viewed — and the learner is looking at ONE screen throughout. Every state of it must
+    # carry the same complete set of card captions. Restricting the checks above to pages that
+    # classify as EXAMPLE_SELECTION_SCREEN left the popup and all-viewed states unmeasured,
+    # and they were in fact rendering without captions until this gate was added.
+    sel_screens = {rec_of[pid]["learner_screen_id"] for pid in D
+                   if rec_of[pid]["screen_role"] == "COMPONENT_EXAMPLE_SELECTION"}
+    chk("EXAMPLE_SELECTION_SCREENS_IDENTIFIED", len(sel_screens), 4)
+    sel_pages = [pid for pid in D
+                 if rec_of[pid]["learner_screen_id"] in sel_screens]
+    chk("EXAMPLE_SELECTION_STATE_PAGES_EVALUATED", len(sel_pages), 24)
+    parity_bad = 0
+    for pid in sel_pages:
+        want = {"".join(c["text"].split())
+                for c in VP.example_card_visuals(M, rec_of[pid])}
+        got = {"".join(s["text"].split())
+               for s in D[pid]["canvas"] if s["name"] == "VisualDir"}
+        if not want <= got:
+            parity_bad += 1
+    chk("EXAMPLE_SELECTION_STATES_MISSING_CARD_VISUALS", parity_bad, 0)
+    chk("EXAMPLE_SELECTION_SCREEN_LEVEL_INVENTED_DIRECTION",
+        sum(1 for pid in ess if pol[pid]["visual_direction"]), 0)
     chk("EXAMPLE_SCREENS_WITH_SPECIFIC_VISUAL", sum(1 for pid in esc if has_dir[pid]), len(esc))
     chk("EXAMPLE_SCREENS_WITHOUT_VISUAL", sum(1 for pid in esc if not has_dir[pid]), 0)
     cms = [pid for pid in pol if pol[pid]["semantic_screen_subtype"] == "COMPONENT_MAIN_SCREEN"]
@@ -406,7 +459,7 @@ def run(pptx):
         if drawn != exp:
             tick_bad.append((pid, rec["screen_role"], drawn, exp))
     chk("COMPLETION_TICKS_NOT_MATCHING_PATH", len(tick_bad), 0)
-    chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 105)
+    chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 114)
     return res
 
 

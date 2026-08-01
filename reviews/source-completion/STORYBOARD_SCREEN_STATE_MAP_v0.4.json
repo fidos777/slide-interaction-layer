@@ -29,7 +29,7 @@
   "NO_CONTROL"
  ],
  "notes_policies": [
-  "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+  "SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION",
   "CONTENT_VO_NOTES",
   "DIALOGUE_NOTES",
   "QUIZ_NOTES",
@@ -94,7 +94,7 @@
    "parent_screen_id": null,
    "review_page_role": "TOPIC_SECTION_ENTRY_BASE",
    "content_source_locator": "storyboard frame — not a module source row",
-   "notes_policy": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_policy": "SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION",
    "notes_context_headers": [
     "PL06: Pengurusan Operasi Pembinaan Landskap",
     "Topik 3 Bahagian 2: Komponen Landskap",
@@ -124,34 +124,30 @@
     "MULA"
    ],
    "production_note": "VO PL satu, bukan PL kosong satu, dan seterusnya",
-   "notes_policy_family": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_policy_family": "SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION",
    "notes_context_spoken": true,
    "entry_titles_spoken": true,
    "spoken_transcript_elements": [
     {
      "order": 1,
      "element": "PL06_TITLE",
-     "text": "Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap.",
-     "spoken": true
+     "text": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+     "spoken": true,
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 1"
     },
     {
      "order": 2,
      "element": "TOPIC_BAHAGIAN_TITLE",
      "text": "Topik 3 Bahagian 2: Komponen Landskap.",
-     "spoken": true
+     "spoken": true,
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 2"
     },
     {
      "order": 3,
-     "element": "MINIMAL_ORIENTATION",
-     "text": "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
-     "spoken": true,
-     "note": "Draft orientation wording. It is a navigational sentence, NOT a new factual claim, and asserts nothing about the module content beyond the Bahagian title itself."
-    },
-    {
-     "order": 4,
      "element": "MULA_INSTRUCTION",
-     "text": "Klik Mula untuk meneruskan.",
-     "spoken": true
+     "text": "Klik butang “Mula” untuk memulakan pembelajaran.",
+     "spoken": true,
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 3"
     }
    ],
    "upstream_context": [
@@ -1691,7 +1687,7 @@
    "parent_screen_id": "SCR_S01",
    "review_page_role": "TOPIC_SECTION_ENTRY_BASE",
    "content_source_locator": "storyboard frame",
-   "notes_policy": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_policy": "SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION",
    "notes_context_headers": [
     "PL06: Pengurusan Operasi Pembinaan Landskap",
     "Topik 3 Bahagian 2: Komponen Landskap",
@@ -1714,34 +1710,30 @@
     "B02-D-25",
     "B02-D-26"
    ],
-   "notes_policy_family": "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION",
+   "notes_policy_family": "SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION",
    "notes_context_spoken": true,
    "entry_titles_spoken": true,
    "spoken_transcript_elements": [
     {
      "order": 1,
      "element": "PL06_TITLE",
-     "text": "Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap.",
-     "spoken": true
+     "text": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+     "spoken": true,
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 1"
     },
     {
      "order": 2,
      "element": "TOPIC_BAHAGIAN_TITLE",
      "text": "Topik 3 Bahagian 2: Komponen Landskap.",
-     "spoken": true
+     "spoken": true,
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 2"
     },
     {
      "order": 3,
-     "element": "MINIMAL_ORIENTATION",
-     "text": "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
-     "spoken": true,
-     "note": "Draft orientation wording. It is a navigational sentence, NOT a new factual claim, and asserts nothing about the module content beyond the Bahagian title itself."
-    },
-    {
-     "order": 4,
      "element": "MULA_INSTRUCTION",
-     "text": "Klik Mula untuk meneruskan.",
-     "spoken": true
+     "text": "Klik butang “Mula” untuk memulakan pembelajaran.",
+     "spoken": true,
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 3"
     }
    ],
    "upstream_context": [
@@ -8290,5 +8282,26 @@
    "family": "FRAME",
    "component": null
   }
- ]
+ ],
+ "amended_stage_4_2c": {
+  "evidence": "B02_BARIAH_S01_EVIDENCE.jpg",
+  "evidence_sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0",
+  "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+  "captured": "WhatsApp 1 August 2026, 4:39 PM",
+  "changes": [
+   "S01 spoken_transcript_elements 4 -> 3",
+   "PL06_TITLE reworded 'Pakej Latihan 06:' -> 'PL06:'",
+   "MINIMAL_ORIENTATION removed (struck from Bariah's corrected Speaker Notes)",
+   "MULA_INSTRUCTION reworded to 'Klik butang “Mula” untuk memulakan pembelajaran.'",
+   "notes_policy SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION -> SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION"
+  ],
+  "counts_unchanged": [
+   "screens",
+   "states",
+   "interaction_items",
+   "source_rows",
+   "source_assets",
+   "components"
+  ]
+ }
 }

@@ -327,21 +327,32 @@ def grid_n(n, y0, h, gx=0.42, gy=0.30):
     return pos, cw, y - gy
 
 
-def _cards(add, items, labels, viewed, start=40, y0=2.15, sub=False):
+CAP_H = 0.56                                   # caption strip carved out of the card's own height
+
+
+def _cards(add, items, labels, viewed, start=40, y0=2.15, sub=False, captions=None):
     """sub=True renders subordinate interactions: shorter cards, smaller type, so an
-    example detail reads as primary content and its specifications as secondary."""
+    example detail reads as primary content and its specifications as secondary.
+
+    captions: one visual direction per item. The strip is carved OUT of the card, so the
+    grid pitch, the row bottom and every downstream y stay exactly as they were.
+    """
     h = 1.06 if sub else 1.62
     sz = 1350 if sub else 1500
     pos, cw, bottom = grid_n(len(labels), y0, h)
-    chh = h
+    chh = h - CAP_H if captions else h
     idx = start
-    for (x, y), lab, iid in zip(pos, labels, items):
+    for k, ((x, y), lab, iid) in enumerate(zip(pos, labels, items)):
         v = iid in viewed
         parts = ital_parts(lab)
         it = any(p[1] for p in parts)
         add(card(idx, x, y, cw, chh, lab, ital=it, sz=sz, viewed=v)); idx += 1
         if v:
             add(tick(idx, x + cw - 0.44, y + 0.09, 0.32)); idx += 1
+        if captions:
+            add(txt(idx, "VisualDir", x + 0.04, y + chh + 0.04, cw - 0.08, CAP_H - 0.06,
+                    V3._wrap_lines(captions[k], int((cw - 0.16) / 0.055)),
+                    sz=800, clr=GREY)); idx += 1
     return pos, cw, bottom
 
 
@@ -368,12 +379,23 @@ def render_family_s(M, page, rec, st, add, viewed):
     add(title_ph_rt(f"Contoh {c['name']}"), titlebar(6, f"Contoh {c['name']}"))
     add(txt(25, "Instr", BAND_X, 1.32, BAND_W, 0.42,
             [INS.for_screen(rec)], sz=1600, algn="ctr"))
-    _cards(add, ids, labels, viewed, y0=2.15)
     vp = VP.classify(M, rec, st)
-    # Only draw a direction the policy has actually resolved. A CONDITIONAL screen awaiting
-    # Bariah gets nothing rather than plausible filler.
-    if vp["visual_direction"] and vp["visual_status"].startswith("RESOLVED"):
-        _visual(add, 30, 5.86, V3._wrap_lines(vp["visual_direction"], 108))
+    # "Semua contoh ada visual" — each card carries its OWN example's source-attested
+    # direction. Nothing is composed at screen level, so the screen invents no subject.
+    #
+    # Captions are derived from the SCREEN, not from this page's state. A base state, a popup
+    # state and an all-viewed state are three runtime states of ONE learner screen; deriving
+    # from the state made the same screen render three different ways, because a popup state
+    # classifies as EXAMPLE_POPUP and an all-viewed state as COMPLETION_STATE.
+    cards = VP.example_card_visuals(M, rec)
+    caps = None
+    if cards and all(c["status"] == "RESOLVED" for c in cards):
+        by_item = {c["interaction_item_id"]: c["text"] for c in cards}
+        caps = [by_item[i] for i in ids]
+    _cards(add, ids, labels, viewed, y0=2.15, captions=caps)
+    # No screen-level direction on this screen: a popup state's own direction belongs inside
+    # its modal panel, and drawing it again at screen level made the underlying screen appear
+    # to carry a direction that changes as the learner clicks.
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
@@ -535,7 +557,13 @@ def render_frame(M, page, rec, st, add, viewed):
         add(txt(20, "Course", BAND_X, 1.44, BAND_W, 0.44, rt([C.S01["canvas"][0]]),
                 sz=1600, b=True, clr=GOLD))
         add(txt(21, "PL", BAND_X, 2.00, BAND_W, 0.46, rt([C.S01["canvas"][1]]), sz=1900, b=True))
-        _visual(add, 30, 3.10, V3._wrap_lines(vp["visual_direction"], 96))
+        # The Topik/Bahagian line is body copy on Bariah's corrected S01, below the PL06 line
+        # and distinct from the page title band. Frozen evidence: B02_BARIAH_S01_EVIDENCE.jpg.
+        add(txt(22, "Topic", BAND_X, 2.56, BAND_W, 0.46, rt([C.S01["canvas"][2]]), sz=1900, b=True))
+        # Her corrected page keeps the ARAHAN VISUAL heading above the direction. The heading is
+        # controlled copy; the direction itself still comes from the visual policy, single-source.
+        _visual(add, 30, 3.30,
+                [C.S01["visual"][0]] + V3._wrap_lines(vp["visual_direction"], 96))
         _nav(add, st)
         el = sorted(st["spoken_transcript_elements"], key=lambda e: e["order"])
         extra = ["KONTEKS HULU:", "  " + ", ".join(rec["upstream_context"]),
@@ -885,12 +913,25 @@ def build_page(M, page, pages):
         f"  keperluan visual: {vpol['visual_requirement']}",
         f"  status: {vpol['visual_status']}",
         f"  kuasa: {vpol['visual_authority'] or '—'}"]
+    if vpol.get("proposal_class"):
+        extra += [f"  kelas cadangan: {vpol['proposal_class']}"]
     if vpol.get("evidence_conflict"):
         ec = vpol["evidence_conflict"]
         extra += ["  KONFLIK BUKTI — PENDING_BARIAH_CONFIRMATION:",
                   "    dirender: " + ec["rendered"],
                   "    alternatif beku: " + ec["frozen_alternative"],
                   "    lokasi: " + ec["frozen_locator"]]
+    if vpol.get("superseded_ruling"):
+        sr = vpol["superseded_ruling"]
+        extra += ["  ARAHAN DIGANTI — SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT:",
+                  "    aktif: " + sr["active_direction"],
+                  "    diganti: " + sr["superseded_direction"],
+                  "    lokasi lama: " + sr["superseded_locator"],
+                  "    bukti pengganti: " + sr["superseding_evidence"],
+                  "    nota: " + sr["note"]]
+    if vpol.get("example_card_visuals"):
+        extra += ["  visual setiap contoh (satu per kad):"] + [
+            f"    {c['label']} — {c['text']}" for c in vpol["example_card_visuals"]]
     lines = model_lines(M, rec, st, extra)
     lines.insert(0, f"BUKTI: {page['proof_note']}")
     sh.append(prodpanel_v4(9, page, rec, st, lines))
@@ -1001,7 +1042,7 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
     return out, manifest
 
 
-FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx"
+FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx"
 
 
 def generate_full(outdir, outname=FULL_OUTNAME):

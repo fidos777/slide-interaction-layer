@@ -181,13 +181,32 @@ def run(pptx):
 
     # ============================ FRAME QA ============================
     s01 = [p for p in pages if p["screen_id"] == "SCR_S01"][0]["id"]
-    chk("S01_NOTES_POLICY", st_of[s01]["notes_policy"], "SPOKEN_ENTRY_TITLES_PLUS_ORIENTATION")
-    chk("S01_SPOKEN_ELEMENTS", len(st_of[s01]["spoken_transcript_elements"]), 4)
+    # Stage 4.2C: the S01 Speaker Notes are re-cut against B02_BARIAH_S01_EVIDENCE.jpg. The
+    # four superseded gate IDs are retained as SUPERSEDED markers so a reader can see the
+    # ruling changed rather than finding the checks quietly absent. Each is replaced by a
+    # gate of equal or greater strength, listed immediately after it.
+    chk("S01_NOTES_POLICY__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT", "SUPERSEDED", "SUPERSEDED")
+    chk("S01_NOTES_POLICY", st_of[s01]["notes_policy"],
+        "SPOKEN_ENTRY_TITLES_PLUS_START_INSTRUCTION")
+    chk("S01_SPOKEN_ELEMENTS__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT", "SUPERSEDED", "SUPERSEDED")
+    chk("S01_SPOKEN_ELEMENTS", len(st_of[s01]["spoken_transcript_elements"]), 3)
     n1 = notes[s01]
-    chk("S01_PL06_TITLE_SPOKEN", "Pakej Latihan 06" in n1, True)
+    chk("S01_PL06_TITLE_SPOKEN__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT", "SUPERSEDED", "SUPERSEDED")
+    chk("S01_PL06_TITLE_SPOKEN", "PL06: Pengurusan Operasi Pembinaan Landskap." in n1, True)
+    chk("S01_PL06_TITLE_LONG_FORM_WITHDRAWN", "Pakej Latihan 06" in n1, False)
     chk("S01_TOPIC_TITLE_SPOKEN", "Topik 3 Bahagian 2" in n1, True)
-    chk("S01_ORIENTATION_SPOKEN", "Dalam bahagian ini" in n1, True)
-    chk("S01_MULA_INSTRUCTION_SPOKEN", "Klik Mula" in n1, True)
+    chk("S01_ORIENTATION_SPOKEN__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT", "SUPERSEDED", "SUPERSEDED")
+    chk("S01_ORIENTATION_SENTENCE_REMOVED", "Dalam bahagian ini" in n1, False)
+    chk("S01_MULA_INSTRUCTION_SPOKEN__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("S01_MULA_INSTRUCTION_SPOKEN",
+        "Klik butang “Mula” untuk memulakan pembelajaran." in n1, True)
+    chk("S01_MULA_INSTRUCTION_OLD_WORDING_WITHDRAWN", "Klik Mula untuk meneruskan" in n1, False)
+    chk("S01_TOPIC_LINE_ON_CANVAS",
+        any(s["text"].strip() == "Topik 3 Bahagian 2: Komponen Landskap"
+            for s in D[s01]["canvas"] if s["name"] == "Topic"), True)
+    chk("S01_VISUAL_HEADING_ON_CANVAS",
+        "ARAHAN VISUAL — SPESIFIKASI SAHAJA" in ctext[s01], True)
     chk("S01_COURSE_INTRO_REPEATED", any(k in n1 for k in ("lapan Pakej", "eight Pakej")), False)
     chk("S01_PL06_OBJECTIVES_REPEATED", "objektif" in n1.lower(), False)
     chk("S01_TOPIC_LIST_REPEATED", "tujuh topik" in n1.lower(), False)
