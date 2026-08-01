@@ -1,0 +1,361 @@
+{
+ "register": "COMPONENT_VISUAL_PERSISTENCE_TARGETS_v0.4.4",
+ "stage": "Stage 4.2E-B",
+ "evidence_date": "2026-08-01",
+ "authority": "BARIAH_DIRECT_SCREENSHOT — D2 (6:52 PM) treatment, D3 (7:03 PM) persistence",
+ "recomputed_from": "the frozen v0.4 screen/state model, not from any earlier target list",
+ "old_target_list_status": "B02_PINNED_POPULATION_TARGETS_v0.4.4.json from Stage 4.2E-A was NOT reused. That list was derived by diffing the v0.4.3 DECK and so enumerated only the 13 pages that happened to differ. This recomputation enumerates the full obligation population from the MODEL: every runtime state bound to every component-main learner screen, whether or not the current deck already satisfies it.",
+ "population_selector": {
+  "primary": "learner_screen_id where screen_role is a component-main role",
+  "then": "every runtime state whose learner_screen_id matches",
+  "review_page_classification_used_as_selector": false,
+  "review_page_classification_used_as": "a reported attribute only"
+ },
+ "treatment_rules": {
+  "COMPONENT_MAIN_BASE": "several smaller source-bound overview visuals",
+  "EXAMPLE_OR_INFORMATION_POPUP": "one larger focused visual for the selected item",
+  "SPECIFICATION_POPUP": "no visual panel required",
+  "ALL_VIEWED": "same component-main overview visuals as the base state",
+  "RETURN_STATE": "same component-main overview visuals as the base state"
+ },
+ "totals": {
+  "COMPONENT_MAIN_SCREENS_REQUIRED": 9,
+  "COMPONENT_MAIN_RUNTIME_STATES_BOUND": 22,
+  "OVERVIEW_PERSISTENCE_TARGET_PAGES": 5,
+  "FOCUSED_POPUP_TARGET_PAGES": 0,
+  "SPECIFICATION_POPUP_TARGET_PAGES": 8,
+  "OLD_13_PAGE_TARGET_LIST_REUSED": 0,
+  "POPULATION_PINNED_BY_LEARNER_SCREEN_ID": true,
+  "CLASSIFICATION_PRIMARY_SELECTOR": false
+ },
+ "components": [
+  {
+   "learner_screen_id": "SCR_BBQ_PIT_MAIN",
+   "component_id": "BBQ_PIT",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_SPEC_LIST",
+   "runtime_states_bound": 6,
+   "base_states": 1,
+   "overview_persistence_targets": 1,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 4,
+   "states": [
+    {
+     "runtime_state_id": "ST_BBQ_PIT_ALL_CATEGORIES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+     "review_page_id": "RP-090",
+     "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
+     "is_persistence_target": true,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    },
+    {
+     "runtime_state_id": "ST_BBQ_PIT_CAT01",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-086",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_BBQ_PIT_CAT02",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-087",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_BBQ_PIT_CAT03",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-088",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_BBQ_PIT_CAT04",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-089",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_BBQ_PIT_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_SPEC_LIST_BASE",
+     "review_page_id": "RP-085",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "component_id": "DRINKING_FOUNTAIN",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
+   "runtime_states_bound": 2,
+   "base_states": 1,
+   "overview_persistence_targets": 1,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_DRINKING_FOUNTAIN_ALL_EXAMPLES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+     "review_page_id": "RP-084",
+     "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
+     "is_persistence_target": true,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    },
+    {
+     "runtime_state_id": "ST_DRINKING_FOUNTAIN_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_BASE",
+     "review_page_id": "RP-071",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
+   "component_id": "KEMUDAHAN_AWAM",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "runtime_states_bound": 1,
+   "base_states": 1,
+   "overview_persistence_targets": 0,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_KEMUDAHAN_AWAM_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "review_page_id": "RP-021",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
+   "component_id": "KERUSI_TAMAN",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
+   "runtime_states_bound": 2,
+   "base_states": 1,
+   "overview_persistence_targets": 1,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_KERUSI_TAMAN_ALL_EXAMPLES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+     "review_page_id": "RP-050",
+     "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
+     "is_persistence_target": true,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    },
+    {
+     "runtime_state_id": "ST_KERUSI_TAMAN_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_BASE",
+     "review_page_id": "RP-035",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
+   "component_id": "PAPAN_TANDA",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_SPEC_LIST",
+   "runtime_states_bound": 6,
+   "base_states": 1,
+   "overview_persistence_targets": 1,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 4,
+   "states": [
+    {
+     "runtime_state_id": "ST_PAPAN_TANDA_ALL_CATEGORIES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+     "review_page_id": "RP-056",
+     "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
+     "is_persistence_target": true,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    },
+    {
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT01",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-052",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT02",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-053",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT03",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-054",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_PAPAN_TANDA_CAT04",
+     "runtime_state_role": "STATE_POPUP",
+     "review_page_role": "SPECIFICATION_CATEGORY_POPUP",
+     "review_page_id": "RP-055",
+     "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": true
+    },
+    {
+     "runtime_state_id": "ST_PAPAN_TANDA_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_SPEC_LIST_BASE",
+     "review_page_id": "RP-051",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "component_id": "STRUKTUR_PERSISIR_AIR",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "runtime_states_bound": 1,
+   "base_states": 1,
+   "overview_persistence_targets": 0,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_STRUKTUR_PERSISIR_AIR_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "review_page_id": "RP-005",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
+   "component_id": "STRUKTUR_TEDUHAN",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "runtime_states_bound": 1,
+   "base_states": 1,
+   "overview_persistence_targets": 0,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_STRUKTUR_TEDUHAN_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "review_page_id": "RP-013",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
+   "component_id": "TONG_SAMPAH",
+   "screen_role": "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
+   "runtime_states_bound": 2,
+   "base_states": 1,
+   "overview_persistence_targets": 1,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_TONG_SAMPAH_ALL_EXAMPLES_VIEWED",
+     "runtime_state_role": "STATE_ALL_VIEWED",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+     "review_page_id": "RP-070",
+     "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
+     "is_persistence_target": true,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    },
+    {
+     "runtime_state_id": "ST_TONG_SAMPAH_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_EXPLANATION_LIST_BASE",
+     "review_page_id": "RP-057",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  },
+  {
+   "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
+   "component_id": "WATER_FEATURE",
+   "screen_role": "COMPONENT_MAIN_EXPLANATION",
+   "runtime_states_bound": 1,
+   "base_states": 1,
+   "overview_persistence_targets": 0,
+   "focused_popup_targets": 0,
+   "specification_popup_targets": 0,
+   "states": [
+    {
+     "runtime_state_id": "ST_WATER_FEATURE_MAIN_BASE",
+     "runtime_state_role": "STATE_BASE",
+     "review_page_role": "COMPONENT_MAIN_BASE",
+     "review_page_id": "RP-027",
+     "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
+     "is_persistence_target": false,
+     "is_focused_popup_target": false,
+     "is_specification_popup": false
+    }
+   ]
+  }
+ ]
+}

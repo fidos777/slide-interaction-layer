@@ -1,0 +1,804 @@
+{
+ "mapping": "COMPONENT_OVERVIEW_MAPPING_v0.4.4",
+ "stage": "Stage 4.2E-B",
+ "evidence_date": "2026-08-01",
+ "authority": {
+  "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT — D2, 6:52 PM",
+  "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT — D2, 6:52 PM",
+  "requirement_verbatim": "Soalan 1: Component-main - Visual diperlukan",
+  "treatment_verbatim": "Soalan 2: Pop up - visual diperlukan. Kemungkinan visual di component main, saiznya lebih kecil dan ada banyak visual lain. Jadi di pop up, visual nya lebih besar dan fokus. Kan?",
+  "subjects_named_by_bariah": false,
+  "subjects_note": "D2 confirms the REQUIREMENT and the TREATMENT. It names no subject for any of the nine, so every subject below is MODULE_SOURCE_ATTESTED."
+ },
+ "selection_rules_applied": [
+  "one overview subject per distinct source row bound to the component",
+  "exact-deduplicate on resolved visual-direction text",
+  "no subject generated from the component name",
+  "no subject borrowed from another component",
+  "no generic subject",
+  "DECISION_SUMMARY.md not used as a visual oracle"
+ ],
+ "totals": {
+  "COMPONENTS_MAPPED": 9,
+  "INVENTED_VISUAL_SUBJECTS": 0,
+  "CROSS_COMPONENT_SUBJECT_REUSE_WITHOUT_AUTHORITY": 0,
+  "UNEXPLAINED_OVERVIEW_COUNTS": 0,
+  "AMBIGUOUS_OVERVIEW_MAPPINGS": 2,
+  "COMPONENTS_RESOLVED": 7,
+  "GENERATION_PERMITTED": false
+ },
+ "blocking": {
+  "status": "COMPONENT_OVERVIEW_MAPPING_REQUIRES_HUMAN_LAYOUT_RULING",
+  "components": [
+   "BBQ_PIT",
+   "PAPAN_TANDA"
+  ],
+  "detail": {
+   "PAPAN_TANDA": {
+    "component_id": "PAPAN_TANDA",
+    "component_name": "Papan Tanda",
+    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
+    "source_row_count": 1,
+    "row_label": "Papan Tanda Arah / Papan Tanda Interpretatif",
+    "row_visual_direction": "[Visual: Rajah 25 — Lukisan Spesifikasi Papan Tanda Informasi, dan Rajah 26 — Spesifikasi Papan Tanda Penunjuk Arah, kedua-duanya modul ms 245. Aset K5PL06T03-B02-IMG-p245-x37 dan K5PL06T03-B02-IMG-p245-x38. Tidak dibenamkan.]",
+    "row_contoh": null,
+    "distinct_source_assets": [
+     "K5PL06T03-B02-IMG-p245-x37",
+     "K5PL06T03-B02-IMG-p245-x38"
+    ],
+    "subjects_under_reading_A": [
+     "Papan Tanda Arah / Papan Tanda Interpretatif"
+    ],
+    "reading_A": "one overview subject = the single source row",
+    "subjects_under_reading_B": [
+     "[Visual: Rajah 25 — Lukisan Spesifikasi Papan Tanda Informasi",
+     "Rajah 26 — Spesifikasi Papan Tanda Penunjuk Arah, kedua-duanya modul ms 245. Aset K5PL06T03-B02-IMG-p245-x37"
+    ],
+    "reading_B": "two overview subjects = the two separately named and separately asset-bound figures inside the single row's visual direction",
+    "why_cc_will_not_choose": "Choosing between these readings is a selection rule, and Part 1 forbids inventing one. Reading B for PAPAN_TANDA is defensible because both figures are separately named with separate asset IDs in the frozen source; but the row label names 'Papan Tanda Arah / Papan Tanda Interpretatif' while the figures name 'Papan Tanda Informasi' and 'Papan Tanda Penunjuk Arah', so even pairing label to figure is interpretive.",
+    "spec_categories_considered_and_rejected": [
+     "Bahan Panel",
+     "Bahan Struktur/Tiang",
+     "Grafik",
+     "Rekaan"
+    ],
+    "question_for_human": "Papan Tanda: overview shows ONE subject (the single source row) or TWO (Rajah 25 Papan Tanda Informasi and Rajah 26 Papan Tanda Penunjuk Arah)?"
+   },
+   "BBQ_PIT": {
+    "component_id": "BBQ_PIT",
+    "component_name": "BBQ Pit",
+    "learner_screen_id": "SCR_BBQ_PIT_MAIN",
+    "source_row_count": 1,
+    "row_label": "BBQ Pit Struktur Kekal",
+    "row_visual_direction": "[Visual: Foto jadual spesifikasi BBQ Pit Struktur Kekal, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x57. Tidak dibenamkan.]",
+    "row_contoh": "Lubang barbeku yang dibina tetap di taman perumahan, tapak perkhemahan awam, atau kawasan rekreasi keluarga seperti di Taman Rekreasi Bukit Jalil, Kuala Lumpur.",
+    "distinct_source_assets": [
+     "K5PL06T03-B02-IMG-p249-x57"
+    ],
+    "subjects_under_reading_A": [
+     "BBQ Pit Struktur Kekal"
+    ],
+    "reading_A": "one overview subject = the single source row",
+    "subjects_under_reading_B": null,
+    "reading_B": "two overview subjects = the spec-table figure plus the row's contoh location. This elevates a FALLBACK direction source to a co-equal overview subject, which the resolver's authority order does not do.",
+    "why_cc_will_not_choose": "BBQ Pit has exactly one source row, one source asset and one figure. There is no second distinct source-bound subject. A second could only come from the row's contoh text (a location, semantically unlike a spec-table photo) or from the four specification categories — and specification popups are ruled NOT_REQUIRED for visuals, so using them as overview subjects would contradict a frozen ruling.",
+    "spec_categories_considered_and_rejected": [
+     "Bahan Pembinaan",
+     "Dimensi",
+     "Gril",
+     "Keselamatan"
+    ],
+    "question_for_human": "BBQ Pit has only ONE source-bound visual subject. Does 'several smaller visuals as an overview' permit a single-visual overview here, or is another subject authorised?"
+   }
+  }
+ },
+ "components": [
+  {
+   "component_id": "STRUKTUR_PERSISIR_AIR",
+   "component_name": "Struktur Persisir Air",
+   "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "execution_family": "FAMILY_S",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-01",
+    "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-02",
+    "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-03",
+    "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-04",
+    "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-05"
+   ],
+   "source_row_count": 5,
+   "source_page_references": [
+    "239"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p239-x20"
+   ],
+   "component_level_visual_direction": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Promenade",
+    "Jeti",
+    "Dek Kayu",
+    "Boardwalk",
+    "Footbridge"
+   ],
+   "selected_overview_subjects": [
+    "Promenade",
+    "Jeti",
+    "Dek Kayu",
+    "Boardwalk",
+    "Footbridge"
+   ],
+   "overview_visual_count": 5,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Promenade",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-01",
+     "visual_direction_text": "[Visual: Promenade Tasik Titiwangsa, KL]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Promenade Tasik Titiwangsa, KL",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Jeti",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-02",
+     "visual_direction_text": "[Visual: Jeti Lumut, Perak]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Jeti Lumut, Perak",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Dek Kayu",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-03",
+     "visual_direction_text": "[Visual: Wetland Park Putrajaya]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Wetland Park Putrajaya",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Boardwalk",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-04",
+     "visual_direction_text": "[Visual: Rajah 23 — Contoh Boardwalk dalam Taman Paya Bakau, modul ms 239. Aset K5PL06T03-B02-IMG-p239-x20. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p239-x20"
+     ],
+     "source_pages": [
+      "239"
+     ],
+     "contoh": "Boardwalk Paya Indah Wetlands",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Footbridge",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-05",
+     "visual_direction_text": "[Visual: Footbridge Taman Botani Perdana]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Footbridge Taman Botani Perdana",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "BARIAH_DIRECT",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": "[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]",
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "STRUKTUR_TEDUHAN",
+   "component_name": "Struktur Teduhan",
+   "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
+   "execution_family": "FAMILY_S",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-01",
+    "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-02",
+    "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-03",
+    "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-04",
+    "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-05"
+   ],
+   "source_row_count": 5,
+   "source_page_references": [
+    "240"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p240-x23"
+   ],
+   "component_level_visual_direction": "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Gazebo",
+    "Wakaf",
+    "Pergola",
+    "Canopy",
+    "Struktur Teduhan Moden"
+   ],
+   "selected_overview_subjects": [
+    "Gazebo",
+    "Wakaf",
+    "Pergola",
+    "Canopy",
+    "Struktur Teduhan Moden"
+   ],
+   "overview_visual_count": 5,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Gazebo",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-01",
+     "visual_direction_text": "[Visual: Taman Tasik Shah Alam]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Taman Tasik Shah Alam",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Wakaf",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-02",
+     "visual_direction_text": "[Visual: Wakaf di Taman Desa, KL]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Wakaf di Taman Desa, KL",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Pergola",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-03",
+     "visual_direction_text": "[Visual: Rajah 24 — Contoh Pergola, modul ms 240. Aset K5PL06T03-B02-IMG-p240-x23. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p240-x23"
+     ],
+     "source_pages": [
+      "240"
+     ],
+     "contoh": "Pergola di Laman Herba Putrajaya",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Canopy",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-04",
+     "visual_direction_text": "[Visual: Canopy rekreasi di Taman Jaya]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Canopy rekreasi di Taman Jaya",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Struktur Teduhan Moden",
+     "source_row_uid": "K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-05",
+     "visual_direction_text": "[Visual: Banyak kawasan awam di Putrajaya]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Banyak kawasan awam di Putrajaya",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "KEMUDAHAN_AWAM",
+   "component_name": "Kemudahan Awam",
+   "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
+   "execution_family": "FAMILY_S",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-01",
+    "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-02",
+    "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-03"
+   ],
+   "source_row_count": 3,
+   "source_page_references": [],
+   "source_asset_ids": [],
+   "component_level_visual_direction": "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: tiga sel berlabel Tandas Awam | Surau | Bangunan Interpretatif. Tidak dilukis, tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Tandas Awam",
+    "Surau",
+    "Bangunan Interpretatif"
+   ],
+   "selected_overview_subjects": [
+    "Tandas Awam",
+    "Surau",
+    "Bangunan Interpretatif"
+   ],
+   "overview_visual_count": 3,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Tandas Awam",
+     "source_row_uid": "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-01",
+     "visual_direction_text": "[Visual: Tandas Awam]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Tandas Awam",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Surau",
+     "source_row_uid": "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-02",
+     "visual_direction_text": "[Visual: Surau]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Surau",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Bangunan Interpretatif",
+     "source_row_uid": "K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-03",
+     "visual_direction_text": "[Visual: Bangunan Interpretatif]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Bangunan Interpretatif",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "WATER_FEATURE",
+   "component_name": "Water Feature",
+   "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
+   "execution_family": "FAMILY_S",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-WATER-FEATURE-ROW-01",
+    "K5-PL06-T03-B02-WATER-FEATURE-ROW-02",
+    "K5-PL06-T03-B02-WATER-FEATURE-ROW-03"
+   ],
+   "source_row_count": 3,
+   "source_page_references": [],
+   "source_asset_ids": [],
+   "component_level_visual_direction": "[Visual: TIADA IMEJ SUMBER — NO_DEDICATED_SOURCE_IMAGE. Cadangan rajah native: keratan rentas dengan pam, penapis, paip dan saliran berlabel. Tidak dilukis, tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Air Pancut (Fountain)",
+    "Kolam (Pond)",
+    "Kolam Renang / Kolam Hiasan Besar (Pool)"
+   ],
+   "selected_overview_subjects": [
+    "Air Pancut (Fountain)",
+    "Kolam (Pond)",
+    "Kolam Renang / Kolam Hiasan Besar (Pool)"
+   ],
+   "overview_visual_count": 3,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Air Pancut (Fountain)",
+     "source_row_uid": "K5-PL06-T03-B02-WATER-FEATURE-ROW-01",
+     "visual_direction_text": "[Visual: Air Pancut (Fountain)]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Air Pancut (Fountain)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Kolam (Pond)",
+     "source_row_uid": "K5-PL06-T03-B02-WATER-FEATURE-ROW-02",
+     "visual_direction_text": "[Visual: Kolam (Pond)]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Kolam (Pond)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Kolam Renang / Kolam Hiasan Besar (Pool)",
+     "source_row_uid": "K5-PL06-T03-B02-WATER-FEATURE-ROW-03",
+     "visual_direction_text": "[Visual: Kolam Renang/Kolam Hiasan Besar(Pool)]",
+     "direction_authority": "BARIAH_EXEMPLAR_CONTOH",
+     "source_assets": [],
+     "source_pages": [],
+     "contoh": "Kolam Renang/Kolam Hiasan Besar(Pool)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "KERUSI_TAMAN",
+   "component_name": "Kerusi Taman",
+   "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
+   "execution_family": "FAMILY_P1",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-01",
+    "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-02",
+    "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-03"
+   ],
+   "source_row_count": 3,
+   "source_page_references": [
+    "242",
+    "242–243",
+    "243"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p242-x28",
+    "K5PL06T03-B02-IMG-p243-x31",
+    "K5PL06T03-B02-IMG-p243-x32"
+   ],
+   "component_level_visual_direction": "[Visual: Foto jadual spesifikasi kerusi taman, modul ms 242–243. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Kerusi Kayu Keras",
+    "Kerusi Konkrit",
+    "Kerusi Komposit"
+   ],
+   "selected_overview_subjects": [
+    "Kerusi Kayu Keras",
+    "Kerusi Konkrit",
+    "Kerusi Komposit"
+   ],
+   "overview_visual_count": 3,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Kerusi Kayu Keras",
+     "source_row_uid": "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-01",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Kerusi Kayu Keras, modul ms 242. Aset K5PL06T03-B02-IMG-p242-x28. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p242-x28"
+     ],
+     "source_pages": [
+      "242"
+     ],
+     "contoh": "Jati, Cengal, Balau",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Kerusi Konkrit",
+     "source_row_uid": "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-02",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Kerusi Konkrit, modul ms 243. Aset K5PL06T03-B02-IMG-p243-x31. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p243-x31"
+     ],
+     "source_pages": [
+      "243"
+     ],
+     "contoh": null,
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Kerusi Komposit",
+     "source_row_uid": "K5-PL06-T03-B02-KERUSI-TAMAN-ROW-03",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Kerusi Komposit, modul ms 243. Aset K5PL06T03-B02-IMG-p243-x32. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p243-x32"
+     ],
+     "source_pages": [
+      "243"
+     ],
+     "contoh": "WPC - Wood-Plastic Composite / Plastik Kitar Semula",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "PAPAN_TANDA",
+   "component_name": "Papan Tanda",
+   "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
+   "execution_family": "FAMILY_P2",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-PAPAN-TANDA-ROW-01"
+   ],
+   "source_row_count": 1,
+   "source_page_references": [
+    "245"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p245-x37",
+    "K5PL06T03-B02-IMG-p245-x38"
+   ],
+   "component_level_visual_direction": "[Visual: Rajah 25 dan Rajah 26, modul ms 245. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Papan Tanda Arah / Papan Tanda Interpretatif"
+   ],
+   "selected_overview_subjects": [
+    "Papan Tanda Arah / Papan Tanda Interpretatif"
+   ],
+   "overview_visual_count": 1,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Papan Tanda Arah / Papan Tanda Interpretatif",
+     "source_row_uid": "K5-PL06-T03-B02-PAPAN-TANDA-ROW-01",
+     "visual_direction_text": "[Visual: Rajah 25 — Lukisan Spesifikasi Papan Tanda Informasi, dan Rajah 26 — Spesifikasi Papan Tanda Penunjuk Arah, kedua-duanya modul ms 245. Aset K5PL06T03-B02-IMG-p245-x37 dan K5PL06T03-B02-IMG-p245-x38. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p245-x37",
+      "K5PL06T03-B02-IMG-p245-x38"
+     ],
+     "source_pages": [
+      "245"
+     ],
+     "contoh": null,
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "AMBIGUOUS",
+   "ambiguity": "FEWER_THAN_TWO_SOURCE_BOUND_OVERVIEW_SUBJECTS"
+  },
+  {
+   "component_id": "TONG_SAMPAH",
+   "component_name": "Tong Sampah",
+   "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
+   "execution_family": "FAMILY_P1",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-TONG-SAMPAH-ROW-01",
+    "K5-PL06-T03-B02-TONG-SAMPAH-ROW-02",
+    "K5-PL06-T03-B02-TONG-SAMPAH-ROW-03"
+   ],
+   "source_row_count": 3,
+   "source_page_references": [
+    "246",
+    "246–247",
+    "247"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p246-x41",
+    "K5PL06T03-B02-IMG-p247-x44",
+    "K5PL06T03-B02-IMG-p247-x45",
+    "K5PL06T03-B02-IMG-p247-x46"
+   ],
+   "component_level_visual_direction": "[Visual: Foto jadual spesifikasi tong sampah, modul ms 246–247. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Tong Sampah Logam",
+    "Tong Sampah Konkrit/Batu",
+    "Tong Sampah Plastik Kitar Semula (HDPE)"
+   ],
+   "selected_overview_subjects": [
+    "Tong Sampah Logam",
+    "Tong Sampah Konkrit/Batu",
+    "Tong Sampah Plastik Kitar Semula (HDPE)"
+   ],
+   "overview_visual_count": 3,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Tong Sampah Logam",
+     "source_row_uid": "K5-PL06-T03-B02-TONG-SAMPAH-ROW-01",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Tong Sampah Logam, modul ms 246. Aset K5PL06T03-B02-IMG-p246-x41. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p246-x41"
+     ],
+     "source_pages": [
+      "246"
+     ],
+     "contoh": "Tong sampah silinder atau segi empat tepat dengan penutup berayun atau bukaan di atas, sering dilihat di taman bandar.",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Tong Sampah Konkrit/Batu",
+     "source_row_uid": "K5-PL06-T03-B02-TONG-SAMPAH-ROW-02",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Tong Sampah Konkrit/Batu, modul ms 247. Aset K5PL06T03-B02-IMG-p247-x44. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p247-x44"
+     ],
+     "source_pages": [
+      "247"
+     ],
+     "contoh": "Tong sampah berat dan kukuh yang disepadukan dengan reka bentuk landskap.",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Tong Sampah Plastik Kitar Semula (HDPE)",
+     "source_row_uid": "K5-PL06-T03-B02-TONG-SAMPAH-ROW-03",
+     "visual_direction_text": "[Visual: Dua foto jadual spesifikasi Tong Sampah Plastik HDPE, modul ms 247. Aset K5PL06T03-B02-IMG-p247-x45 dan K5PL06T03-B02-IMG-p247-x46. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p247-x45",
+      "K5PL06T03-B02-IMG-p247-x46"
+     ],
+     "source_pages": [
+      "247"
+     ],
+     "contoh": "Tong sampah berwarna-warni yang sering digunakan untuk pengasingan sisa kitar semula.",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "DRINKING_FOUNTAIN",
+   "component_name": "Drinking Fountain",
+   "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "execution_family": "FAMILY_P1",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-01",
+    "K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-02"
+   ],
+   "source_row_count": 2,
+   "source_page_references": [
+    "248",
+    "248–249",
+    "249"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p248-x49",
+    "K5PL06T03-B02-IMG-p249-x56"
+   ],
+   "component_level_visual_direction": "[Visual: Foto jadual spesifikasi drinking fountain, modul ms 248–249. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "Pancutan Air Minum Keluli Tahan Karat",
+    "Pancutan Air Minum Konkrit/Batu"
+   ],
+   "selected_overview_subjects": [
+    "Pancutan Air Minum Keluli Tahan Karat",
+    "Pancutan Air Minum Konkrit/Batu"
+   ],
+   "overview_visual_count": 2,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "Pancutan Air Minum Keluli Tahan Karat",
+     "source_row_uid": "K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-01",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Pancutan Air Minum Keluli Tahan Karat, modul ms 248. Aset K5PL06T03-B02-IMG-p248-x49. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p248-x49"
+     ],
+     "source_pages": [
+      "248"
+     ],
+     "contoh": "Unit pancutan air moden dan bersih, biasa ditemui di taman bandar utama seperti KLCC Park atau Taman Botani Perdana, Kuala Lumpur.",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "subject_label": "Pancutan Air Minum Konkrit/Batu",
+     "source_row_uid": "K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-02",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi Pancutan Air Minum Konkrit/Batu, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x56. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p249-x56"
+     ],
+     "source_pages": [
+      "249"
+     ],
+     "contoh": "Unit yang lebih berat dan kukuh, disepadukan dengan reka bentuk taman yang lebih semula jadi atau tradisional.",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "RESOLVED",
+   "ambiguity": null
+  },
+  {
+   "component_id": "BBQ_PIT",
+   "component_name": "BBQ Pit",
+   "learner_screen_id": "SCR_BBQ_PIT_MAIN",
+   "execution_family": "FAMILY_P2",
+   "source_row_ids": [
+    "K5-PL06-T03-B02-BBQ-PIT-ROW-01"
+   ],
+   "source_row_count": 1,
+   "source_page_references": [
+    "249"
+   ],
+   "source_asset_ids": [
+    "K5PL06T03-B02-IMG-p249-x57"
+   ],
+   "component_level_visual_direction": "[Visual: Foto jadual spesifikasi BBQ pit, modul ms 249. Tidak dibenamkan.]",
+   "source_attested_example_subjects": [
+    "BBQ Pit Struktur Kekal"
+   ],
+   "selected_overview_subjects": [
+    "BBQ Pit Struktur Kekal"
+   ],
+   "overview_visual_count": 1,
+   "overview_count_explanation": "one per distinct source row bound to this component, exact-deduplicated on the resolved visual-direction text",
+   "subjects": [
+    {
+     "subject_label": "BBQ Pit Struktur Kekal",
+     "source_row_uid": "K5-PL06-T03-B02-BBQ-PIT-ROW-01",
+     "visual_direction_text": "[Visual: Foto jadual spesifikasi BBQ Pit Struktur Kekal, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x57. Tidak dibenamkan.]",
+     "direction_authority": "SOURCE_ASSET_FIGURE",
+     "source_assets": [
+      "K5PL06T03-B02-IMG-p249-x57"
+     ],
+     "source_pages": [
+      "249"
+     ],
+     "contoh": "Lubang barbeku yang dibina tetap di taman perumahan, tapak perkhemahan awam, atau kawasan rekreasi keluarga seperti di Taman Rekreasi Bukit Jalil, Kuala Lumpur.",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "VISUAL_REQUIREMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_TREATMENT_AUTHORITY": "BARIAH_DIRECT_SCREENSHOT",
+   "VISUAL_SUBJECT_SOURCE": "MODULE_SOURCE_ATTESTED",
+   "VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH": false,
+   "bariah_direct_component_string": null,
+   "layout_treatment": "SEVERAL_SMALLER_VISUALS_AS_OVERVIEW",
+   "ambiguity_status": "AMBIGUOUS",
+   "ambiguity": "FEWER_THAN_TWO_SOURCE_BOUND_OVERVIEW_SUBJECTS"
+  }
+ ]
+}
