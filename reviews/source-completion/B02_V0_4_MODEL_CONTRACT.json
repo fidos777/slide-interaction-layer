@@ -3,7 +3,7 @@
  "version": "0.4",
  "evidence_date": "2026-08-01",
  "scope": "K5 PL06 T03 B02 — Komponen Landskap",
- "status": "MODEL_FROZEN_FOR_IMPLEMENTATION",
+ "status": "MODEL_EXECUTED_AND_RENDERED",
  "repository": {
   "branch": "claude/verify-powerpoint-file-vpfzkg",
   "head_at_authoring": "0a5fa1dd3c9f9b043d538d7271b200e8e23cd239"
@@ -545,7 +545,11 @@
   "S01_ENTRY_TITLES_SPOKEN": true,
   "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false,
   "HILMI_REINTRODUCED_AS_NEW": false,
-  "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true
+  "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true,
+  "REVIEW_PAGES": 100,
+  "COMPONENTS_GENERATED": 9,
+  "CHECKABLE_GATES": 105,
+  "CHECKABLE_PASS": 105
  },
  "upstream_narrative_context": {
   "classification": "UPSTREAM_NARRATIVE_CONTEXT",
@@ -668,5 +672,13 @@
   "head_at_amendment": "331edf27c1878c8f3fd4271fe7f20d0449a3024e",
   "scope": "Upstream montage context + Bariah’s final S01 VO clarification. Context-only: no structural count changed.",
   "blocked_item": "Part 1 byte freeze of SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx — files not delivered to this execution environment."
+ },
+ "build": {
+  "built": true,
+  "build_date": "2026-08-01",
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx",
+  "deck_sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108",
+  "review_pages": 100,
+  "statement": "The model is no longer only defined — it has been executed across all nine components and rendered. Review pages are one per runtime state; the count follows the model."
  }
 }

@@ -913,7 +913,31 @@ NEW_CANONICAL_PATTERN_IDS_MINTED               = 0
 
 ---
 
-# 8. Standing
+# 9. Build status — implemented in the v0.4 review deck
+
+```
+BARIAH_FEEDBACK_IMPLEMENTED
+DECK = K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx
+REVIEW_PAGES = 100 · LEARNER_SCREENS = 29 · RUNTIME_STATES = 100
+CHECKABLE_GATES = 105 · PASS = 105 · FAIL = 0
+```
+
+Every `CONFIRMED_IMPLEMENT` and `CONFIRMED_PROPAGATE` record in §4 is built and mechanically verified
+in the deck. The four records that were never confirmable are built **as held**, not quietly dropped:
+
+| Record | Held how |
+|---|---|
+| `BFB-03` MS2680 | omitted from S02 learner dialogue; retained in the S02 production panel with its `PENDING_SOURCE_VERIFICATION` status |
+| `BFB-26` LMS exit | shell Next disabled on Tamat; the logical next Bahagian stays in production metadata and is not shown on the learner canvas |
+| `BFB-24` quiz rationale | concise immediate feedback on canvas; detailed rationale in the production panel only |
+| `BFB-04` / `BFB-27` cast | superseded — Alya, Encik Rahman and Hilmi are confirmed and built. Only the Pengurus Projek name stays open, and that role is not used in B02 |
+
+Per-record verification lives in `STORYBOARD_QA_REPORT_v0.4.md` §2. Implementation status per
+decision is recorded in `DECISION_REGISTER_B02_v0.4.json` under `implementation_status`.
+
+---
+
+# 10. Standing
 
 Documentation only. No generator file modified, no PowerPoint regenerated, no component propagated,
 no screen/state map produced, no canonical `P#` minted, no comment fabricated, and no ruling selected

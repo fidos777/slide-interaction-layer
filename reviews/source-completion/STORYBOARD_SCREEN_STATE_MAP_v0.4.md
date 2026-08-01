@@ -1655,6 +1655,59 @@ still runs, and none was weakened.
 
 ---
 
+# 9.2 Resolved review pages — the model executed
+
+At Stage 2 no review-page count was claimed, because it depended on decomposition that was still
+open. It is now resolved by generation, not chosen:
+
+```
+REVIEW_PAGES = 100   one per runtime state
+```
+
+The generator raises if the two ever disagree, so the deck cannot silently gain or lose a state.
+
+| learner screen | family | review pages | range |
+|---|---|---:|---|
+| `SCR_S01` | `FRAME` | 1 | RP-001–RP-001 |
+| `SCR_S02` | `FRAME` | 1 | RP-002–RP-002 |
+| `SCR_S03` | `FRAME` | 1 | RP-003–RP-003 |
+| `SCR_GM_STRUKTUR` | `FAMILY_S` | 2 | RP-004–RP-033 |
+| `SCR_STRUKTUR_PERSISIR_AIR_MAIN` | `FAMILY_S` | 1 | RP-005–RP-005 |
+| `SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES` | `FAMILY_S` | 7 | RP-006–RP-012 |
+| `SCR_STRUKTUR_TEDUHAN_MAIN` | `FAMILY_S` | 1 | RP-013–RP-013 |
+| `SCR_STRUKTUR_TEDUHAN_EXAMPLES` | `FAMILY_S` | 7 | RP-014–RP-020 |
+| `SCR_KEMUDAHAN_AWAM_MAIN` | `FAMILY_S` | 1 | RP-021–RP-021 |
+| `SCR_KEMUDAHAN_AWAM_EXAMPLES` | `FAMILY_S` | 5 | RP-022–RP-026 |
+| `SCR_WATER_FEATURE_MAIN` | `FAMILY_S` | 1 | RP-027–RP-027 |
+| `SCR_WATER_FEATURE_EXAMPLES` | `FAMILY_S` | 5 | RP-028–RP-032 |
+| `SCR_PERABOT_OVERVIEW` | `FAMILY_P1+FAMILY_P2` | 1 | RP-034–RP-034 |
+| `SCR_KERUSI_TAMAN_MAIN` | `FAMILY_P1` | 2 | RP-035–RP-050 |
+| `SCR_KERUSI_TAMAN_EX01_DETAIL` | `FAMILY_P1` | 6 | RP-036–RP-041 |
+| `SCR_KERUSI_TAMAN_EX02_DETAIL` | `FAMILY_P1` | 4 | RP-042–RP-045 |
+| `SCR_KERUSI_TAMAN_EX03_DETAIL` | `FAMILY_P1` | 4 | RP-046–RP-049 |
+| `SCR_PAPAN_TANDA_MAIN` | `FAMILY_P2` | 6 | RP-051–RP-056 |
+| `SCR_TONG_SAMPAH_MAIN` | `FAMILY_P1` | 2 | RP-057–RP-070 |
+| `SCR_TONG_SAMPAH_EX01_DETAIL` | `FAMILY_P1` | 4 | RP-058–RP-061 |
+| `SCR_TONG_SAMPAH_EX02_DETAIL` | `FAMILY_P1` | 4 | RP-062–RP-065 |
+| `SCR_TONG_SAMPAH_EX03_DETAIL` | `FAMILY_P1` | 4 | RP-066–RP-069 |
+| `SCR_DRINKING_FOUNTAIN_MAIN` | `FAMILY_P1` | 2 | RP-071–RP-084 |
+| `SCR_DRINKING_FOUNTAIN_EX01_DETAIL` | `FAMILY_P1` | 8 | RP-072–RP-079 |
+| `SCR_DRINKING_FOUNTAIN_EX02_DETAIL` | `FAMILY_P1` | 4 | RP-080–RP-083 |
+| `SCR_BBQ_PIT_MAIN` | `FAMILY_P2` | 6 | RP-085–RP-090 |
+| `SCR_RUMUSAN` | `FRAME` | 1 | RP-091–RP-091 |
+| `SCR_KUIZ` | `FRAME` | 8 | RP-092–RP-099 |
+| `SCR_TAMAT` | `FRAME` | 1 | RP-100–RP-100 |
+
+Deck: `K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx`. Full page-by-page binding:
+`RUN_MANIFEST_v0.4.json` → `review_pages`, and `STORYBOARD_SCREEN_STATE_MAP_v0.4.json` →
+`resolved_review_pages`.
+
+**§7.3 is now discharged.** The three counts remain distinct: 29 learner screens,
+100 runtime states, 100 review pages. A review page is an artefact of the
+review build and is neither of the other two.
+
+---
+
 # 10. Standing
 
 Documentation only. No generator modified, no PowerPoint generated or edited, no component

@@ -8,7 +8,7 @@
     "head_at_authoring": "5ca77dd9b3f630e1ef29b20541dc192411495c29"
   },
   "standing": "Documentation only. No generator modified, no PowerPoint regenerated, no component propagated, no screen/state map produced, no canonical P# minted. B02-CAIR-INT-001 remains open and still blocks canonical freeze, production approval and MMD build.",
-  "build_status": "V0_4_DELTA_DEFINED_NOT_BUILT",
+  "build_status": "V0_4_REVIEW_BUILD_GENERATED",
   "not_asserted": [
     "SOURCE_INTEGRITY_FULLY_VERIFIED",
     "PRODUCTION_APPROVED",
@@ -79,7 +79,8 @@
       "supersedes_or_resolves": [
         "B02-R-5 (Kembali semantics) — confirmed for Family S"
       ],
-      "generator_change_required": "none for flow; presentational changes only"
+      "generator_change_required": "none for flow; presentational changes only",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-02",
@@ -95,7 +96,8 @@
       "supersedes_or_resolves": [
         "B02-R-3 — group-master completion no longer applies to Perabot"
       ],
-      "generator_change_required": "model + generator: Perabot master becomes a non-interactive screen"
+      "generator_change_required": "model + generator: Perabot master becomes a non-interactive screen",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-03",
@@ -140,7 +142,8 @@
         "Gril",
         "Keselamatan"
       ],
-      "bbq_pit_category_status": "TECHNICAL_DECOMPOSITION_FROM_SOURCE — see B02-D-24"
+      "bbq_pit_category_status": "TECHNICAL_DECOMPOSITION_FROM_SOURCE — see B02-D-24",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-04",
@@ -155,7 +158,8 @@
         "BFB-07"
       ],
       "generator_change_required": "button emitter + production-panel text",
-      "governance_concern": "G-7 — the gate survives but the gated control is no longer authored in the deck"
+      "governance_concern": "G-7 — the gate survives but the gated control is no longer authored in the deck",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-05",
@@ -173,7 +177,8 @@
       "supersedes_or_resolves": [
         "B02-R-5 (Kembali semantics) — amended: the return target is family-specific"
       ],
-      "generator_change_required": "popup emitter + close-icon asset; per-family return targets in the model"
+      "generator_change_required": "popup emitter + close-icon asset; per-family return targets in the model",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-06",
@@ -186,7 +191,8 @@
       "feedback_ids": [
         "BFB-29"
       ],
-      "generator_change_required": "notes emitter"
+      "generator_change_required": "notes emitter",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-07",
@@ -201,7 +207,8 @@
         "BFB-15"
       ],
       "generator_change_required": "completion-state builder must not emit headers",
-      "note": "Classified CONFIRMED_CAIR_ADOPTION rather than CONFIRMED_BARIAH because the exclusion is inferred from the scoping qualifier plus the exemplar's own empty Notes, not stated as a rule in Bariah's words."
+      "note": "Classified CONFIRMED_CAIR_ADOPTION rather than CONFIRMED_BARIAH because the exclusion is inferred from the scoping qualifier plus the exemplar's own empty Notes, not stated as a rule in Bariah's words.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-08",
@@ -215,7 +222,8 @@
         "BFB-23"
       ],
       "generator_change_required": "run emitter + notes emitter",
-      "note": "The rule was written into the Rumusan suggestion cell but is explicitly global ('untuk semua slide'), so it is registered as a course-wide styling decision, not a Rumusan decision."
+      "note": "The rule was written into the Rumusan suggestion cell but is explicitly global ('untuk semua slide'), so it is registered as a course-wide styling decision, not a Rumusan decision.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-09",
@@ -231,7 +239,8 @@
       "supersedes_or_resolves": [
         "B02-R-6 (Rumusan structure) — confirmed"
       ],
-      "generator_change_required": "frame builder"
+      "generator_change_required": "frame builder",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-10",
@@ -260,7 +269,8 @@
       "forbidden": [
         "using Pelatih or Penyelia Tapak as final learner-facing character names",
         "inventing a name for the Pengurus Projek"
-      ]
+      ],
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-11",
@@ -276,7 +286,8 @@
       "supersedes_or_resolves": [
         "B02-R-4 (closing structure) — quiz remains non-blocking; entry control added"
       ],
-      "generator_change_required": "quiz builder"
+      "generator_change_required": "quiz builder",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-12",
@@ -289,7 +300,8 @@
       "feedback_ids": [
         "BFB-24"
       ],
-      "generator_change_required": "quiz builder"
+      "generator_change_required": "quiz builder",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-13",
@@ -304,7 +316,8 @@
       ],
       "open_dependency": "U-05 — where the detailed rationale lives once immediate feedback is concise (presumed Semak Jawapan, not confirmed)",
       "generator_change_required": "quiz builder",
-      "execution_policy": "Immediate feedback has exactly two variants, each with SFX, VO and on-screen text: correct = \"Pilihan jawapan tepat.\", incorrect = \"Pilihan jawapan tidak tepat.\" Multiple Response options carry no A/B/C labels. Detailed rationale placement is governed by B02-D-23."
+      "execution_policy": "Immediate feedback has exactly two variants, each with SFX, VO and on-screen text: correct = \"Pilihan jawapan tepat.\", incorrect = \"Pilihan jawapan tidak tepat.\" Multiple Response options carry no A/B/C labels. Detailed rationale placement is governed by B02-D-23.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-14",
@@ -320,7 +333,8 @@
       "supersedes_or_resolves": [
         "B02-R-4 (closing structure) — routing confirmed"
       ],
-      "generator_change_required": "frame builder"
+      "generator_change_required": "frame builder",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-15",
@@ -341,7 +355,8 @@
         "physical_exit_behaviour": "learner closes the lesson / window",
         "shell_next_state": "disabled on Tamat",
         "status": "PENDING_FIRDAUS_CONFIRMATION"
-      }
+      },
+      "implementation_status": "IMPLEMENTED_AS_HELD — shell Next disabled on Tamat, logical destination in production metadata only, pending Firdaus"
     },
     {
       "decision_id": "B02-D-16",
@@ -359,7 +374,8 @@
       ],
       "generator_change_required": "content-data normalisation",
       "affected_source_row": "Kerusi Taman row 3",
-      "source_row_count_change": 0
+      "source_row_count_change": 0,
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-17",
@@ -374,7 +390,8 @@
       ],
       "open_dependency": "U-01 — source attestation for the MS2680 applicability statement",
       "generator_change_required": "frame builder — hold or flag the sentence",
-      "execution_policy": "v0.4 review build: the MS2680 claim is EXCLUDED from learner-facing dialogue on S02 and retained in production metadata as PENDING_SOURCE_VERIFICATION. No substitute standards claim is invented. The remaining dialogue preserves logical continuity without adding new facts. This does not block the review build."
+      "execution_policy": "v0.4 review build: the MS2680 claim is EXCLUDED from learner-facing dialogue on S02 and retained in production metadata as PENDING_SOURCE_VERIFICATION. No substitute standards claim is invented. The remaining dialogue preserves logical continuity without adding new facts. This does not block the review build.",
+      "implementation_status": "IMPLEMENTED_AS_HELD — MS2680 omitted from learner dialogue, retained in the S02 production panel"
     },
     {
       "decision_id": "B02-D-18",
@@ -388,7 +405,8 @@
       "used_on": [
         "SCR_S02"
       ],
-      "production_metadata_label": "Alya — Kontraktor Junior"
+      "production_metadata_label": "Alya — Kontraktor Junior",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-19",
@@ -402,7 +420,8 @@
       "used_on": [
         "SCR_S02"
       ],
-      "production_metadata_label": "Encik Rahman — Mentor / Kontraktor Senior Berpengalaman Landskap"
+      "production_metadata_label": "Encik Rahman — Mentor / Kontraktor Senior Berpengalaman Landskap",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-20",
@@ -415,7 +434,8 @@
       "feedback_ids": [],
       "used_on": [
         "SCR_S03"
-      ]
+      ],
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-21",
@@ -427,7 +447,8 @@
       "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
       "feedback_ids": [],
       "used_on": [],
-      "b02_status": "NOT_REQUIRED_IN_B02"
+      "b02_status": "NOT_REQUIRED_IN_B02",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-22",
@@ -439,7 +460,8 @@
       "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
       "feedback_ids": [],
       "open_dependency": "U-02b — Pengurus Projek character name",
-      "used_on": []
+      "used_on": [],
+      "implementation_status": "NOT_APPLICABLE_IN_B02"
     },
     {
       "decision_id": "B02-D-23",
@@ -453,7 +475,8 @@
       "open_dependency": "U-05 — final placement of the detailed rationale",
       "flags": {
         "PENDING_BARIAH_RATIONALE_PLACEMENT_CONFIRMATION": true
-      }
+      },
+      "implementation_status": "IMPLEMENTED_AS_HELD — detailed rationale is production metadata only, pending Bariah"
     },
     {
       "decision_id": "B02-D-24",
@@ -465,7 +488,8 @@
       "evidence_source": "Stage 2 cast confirmation + frozen v0.4 evidence artifacts",
       "feedback_ids": [],
       "resolves": "U-04",
-      "source_rows_created": 0
+      "source_rows_created": 0,
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-25",
@@ -492,7 +516,8 @@
         "SCR_S03"
       ],
       "generator_change_required": "frame builder: S01 opens at section level; S03 continues Hilmi rather than introducing him",
-      "provenance": "Upstream montage artifacts frozen and hashed — see B02-D-27."
+      "provenance": "Upstream montage artifacts frozen and hashed — see B02-D-27.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-26",
@@ -516,7 +541,8 @@
         "all content and dialogue screens from S02 onwards"
       ],
       "generator_change_required": "notes emitter: two labelled blocks, NON-SPOKEN CONTEXT and SPOKEN TRANSCRIPT",
-      "note": "The draft orientation sentence \"Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.\" is navigational wording, not a new factual claim. The course title is not added to the S01 spoken transcript because no direct Bariah evidence requires it."
+      "note": "The draft orientation sentence \"Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.\" is navigational wording, not a new factual claim. The course title is not added to the S01 spoken transcript because no direct Bariah evidence requires it.",
+      "implementation_status": "IMPLEMENTED_IN_V0_4_REVIEW_BUILD"
     },
     {
       "decision_id": "B02-D-27",
@@ -574,7 +600,8 @@
         "COURSE_MONTAGE_HASH_RECORDED",
         "PL06_MONTAGE_HASH_RECORDED",
         "MONTAGE_FILES_FROZEN_ON_DISK"
-      ]
+      ],
+      "implementation_status": "CLOSED — montage evidence frozen"
     }
   ],
   "v0_3_entries_carried_forward": [
@@ -789,5 +816,13 @@
     "COURSE_MONTAGE_HASH_RECORDED": true,
     "PL06_MONTAGE_HASH_RECORDED": true,
     "MONTAGE_FILES_FROZEN_ON_DISK": 2
+  },
+  "build": {
+    "built": true,
+    "build_date": "2026-08-01",
+    "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx",
+    "deck_sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108",
+    "review_pages": 100,
+    "statement": "The model is no longer only defined — it has been executed across all nine components and rendered. Review pages are one per runtime state; the count follows the model."
   }
 }

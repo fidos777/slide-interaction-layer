@@ -55,6 +55,18 @@ def rt(lines):
 
 
 # ============================ new controls ============================
+def title_ph_rt(t):
+    """PowerPoint title placeholder, off the top of the stage, with the approved italic
+    treatment applied to its runs. The outline pane shows this text, so the lexicon rule
+    applies to it as much as to the canvas."""
+    return ('<p:sp><p:nvSpPr><p:cNvPr id="2" name="Title 1"/><p:cNvSpPr><a:spLocks noGrp="1"/>'
+            '</p:cNvSpPr><p:nvPr><p:ph type="title"/></p:nvPr></p:nvSpPr>'
+            f'<p:spPr><a:xfrm><a:off x="0" y="{E(-0.6311)}"/>'
+            f'<a:ext cx="{E(13.3333)}" cy="{E(0.5722)}"/></a:xfrm></p:spPr>'
+            '<p:txBody><a:bodyPr><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p>'
+            + runs(ital_parts(t), sz=2400, b=True) + '</a:p></p:txBody></p:sp>')
+
+
 def close_icon(i, x, y, size=0.42):
     """CLOSE_ICON. A drawn icon, never a text button labelled Tutup."""
     r = size / 2.0
@@ -83,12 +95,12 @@ def close_icon(i, x, y, size=0.42):
 
 
 # ============================ off-canvas production panel ============================
-TOKENS_V4 = ["PROOF_BUILD", "V0_4_MODEL_DRIVEN", "NOT_FOR_MMD_BUILD",
-             "MULTIMEDIA_NOT_PRODUCED", "PRODUCTION_APPROVAL_NOT_CLAIMED"]
+TOKENS_V4 = ["REVIEW_READY", "BARIAH_FEEDBACK_IMPLEMENTED", "PENDING_TARGETED_CONFIRMATION",
+             "NOT_FOR_MMD_BUILD", "MULTIMEDIA_NOT_PRODUCED"]
 
 
 def prodpanel_v4(i, page, rec, st, lines):
-    head = ["K5 PL06 T03 B02 — PAPAN CERITA v0.4 (BUKTI TIGA KELUARGA)",
+    head = ["K5 PL06 T03 B02 — PAPAN CERITA v0.4",
             " · ".join(TOKENS_V4[:2]), " · ".join(TOKENS_V4[2:]),
             "Tiada imej, audio, video atau animasi dibenamkan.", "",
             f"FUNGSI SKRIN: {rec['semantic_screen_name']}",
@@ -230,19 +242,49 @@ def _modal(add, M, st, title, blocks, note_lines=None):
         y += bh
 
 
-def _cards(add, items, labels, viewed, start=40, y0=None, n=None):
-    pos, cw, chh = item_grid(len(labels))
-    if y0 is not None:
-        pos = [(x, y0 + (yy - pos[0][1])) for x, yy in pos]
+def grid_n(n, y0, h, gx=0.42, gy=0.30):
+    """Card grid for ANY item count.
+
+    The v0.3 item_grid tops out at five positions and silently drops the rest, which is
+    invisible until a component carries six. Drinking Fountain carries six.
+    """
+    if n <= 4:
+        rows = [n]
+    elif n == 5:
+        rows = [3, 2]
+    elif n == 6:
+        rows = [3, 3]
+    elif n == 7:
+        rows = [4, 3]
+    else:
+        rows = [4] * (n // 4) + ([n % 4] if n % 4 else [])
+    mx = max(rows)
+    cw = (BAND_W - (mx - 1) * gx) / mx
+    pos, y = [], y0
+    for r in rows:
+        w = r * cw + (r - 1) * gx
+        x0 = (STAGE_W - w) / 2
+        pos += [(x0 + c * (cw + gx), y) for c in range(r)]
+        y += h + gy
+    return pos, cw, y - gy
+
+
+def _cards(add, items, labels, viewed, start=40, y0=2.15, sub=False):
+    """sub=True renders subordinate interactions: shorter cards, smaller type, so an
+    example detail reads as primary content and its specifications as secondary."""
+    h = 1.06 if sub else 1.62
+    sz = 1350 if sub else 1500
+    pos, cw, bottom = grid_n(len(labels), y0, h)
+    chh = h
     idx = start
     for (x, y), lab, iid in zip(pos, labels, items):
         v = iid in viewed
         parts = ital_parts(lab)
         it = any(p[1] for p in parts)
-        add(card(idx, x, y, cw, chh, lab, ital=it, sz=1500, viewed=v)); idx += 1
+        add(card(idx, x, y, cw, chh, lab, ital=it, sz=sz, viewed=v)); idx += 1
         if v:
-            add(tick(idx, x + cw - 0.46, y + 0.10, 0.34)); idx += 1
-    return pos, cw, chh
+            add(tick(idx, x + cw - 0.44, y + 0.09, 0.32)); idx += 1
+    return pos, cw, bottom
 
 
 # ============================ FAMILY STRATEGIES ============================
@@ -251,7 +293,7 @@ def render_family_s(M, page, rec, st, add, viewed):
     role = rec["screen_role"]
     c = M.comps[rec["component_id"]]
     if role == "COMPONENT_MAIN_EXPLANATION":
-        add(title_ph(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
+        add(title_ph_rt(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
         add(txt(20, "Head", BAND_X, 1.30, BAND_W, 0.46, rt([c["name"]]), sz=2000, b=True))
         add(bullets(22, "Body", BAND_X, 1.92, BAND_W, 3.4,
                     [(0, ital_parts(l)) for l in c["display"]], sz=1500, spc=600))
@@ -263,10 +305,10 @@ def render_family_s(M, page, rec, st, add, viewed):
     items = M.items_of(rec["learner_screen_id"])
     labels = [M.rows[i["source_row_uid"]]["label"] for i in items]
     ids = [i["interaction_item_id"] for i in items]
-    add(title_ph(f"Contoh {c['name']}"), titlebar(6, f"Contoh {c['name']}"))
+    add(title_ph_rt(f"Contoh {c['name']}"), titlebar(6, f"Contoh {c['name']}"))
     add(txt(25, "Instr", BAND_X, 1.32, BAND_W, 0.42,
             [rec["interaction_instruction"]], sz=1600, algn="ctr"))
-    _cards(add, ids, labels, viewed)
+    _cards(add, ids, labels, viewed, y0=2.15)
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
@@ -300,7 +342,7 @@ def render_family_p1(M, page, rec, st, add, viewed):
         items = M.items_of(rec["learner_screen_id"])
         labels = [M.rows[i["source_row_uid"]]["label"] for i in items]
         ids = [i["interaction_item_id"] for i in items]
-        add(title_ph(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
+        add(title_ph_rt(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
         add(txt(20, "Head", BAND_X, 1.22, BAND_W, 0.44, rt([c["name"]]), sz=2000, b=True))
         add(txt(25, "Instr", BAND_X, 1.74, BAND_W, 0.40,
                 [rec["interaction_instruction"]], sz=1500, algn="ctr"))
@@ -319,15 +361,18 @@ def render_family_p1(M, page, rec, st, add, viewed):
     specs = M.items_of(rec["learner_screen_id"])
     ids = [i["interaction_item_id"] for i in specs]
     labels = [i["label"] for i in specs]
-    add(title_ph(r["label"]), titlebar(6, c["name"]))
+    add(title_ph_rt(r["label"]), titlebar(6, c["name"]))
     add(txt(20, "ExHead", BAND_X, 1.22, BAND_W, 0.44, rt([r["label"]]), sz=2200, b=True))
     add(txt(25, "Instr", BAND_X, 1.76, BAND_W, 0.40,
             [rec["interaction_instruction"]], sz=1500, algn="ctr"))
-    _cards(add, ids, labels, viewed, y0=2.34)
+    _, _, cards_bottom = _cards(add, ids, labels, viewed, y0=2.30, sub=True)
+    y = cards_bottom + 0.34
     if r.get("contoh"):
-        add(txt(70, "ExContoh", BAND_X, 5.24, BAND_W, 0.40,
-                rt([f"Contoh: {r['contoh']}"]), sz=1400, b=True))
-    _visual(add, 30, 5.76, V3._wrap_lines(r.get("visual") or "", 108))
+        cw_ = V3._wrap_lines(f"Contoh: {r['contoh']}", 104)
+        add(txt(70, "ExContoh", BAND_X, y, BAND_W, 0.30 * len(cw_) + 0.10,
+                rt(cw_), sz=1400, b=True))
+        y += 0.30 * len(cw_) + 0.22
+    _visual(add, 30, y, V3._wrap_lines(r.get("visual") or "", 108))
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
@@ -357,7 +402,7 @@ def render_family_p2(M, page, rec, st, add, viewed):
     cats = M.items_of(rec["learner_screen_id"])
     ids = [i["interaction_item_id"] for i in cats]
     labels = [i["label"] for i in cats]
-    add(title_ph(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
+    add(title_ph_rt(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
     add(txt(20, "Head", BAND_X, 1.22, BAND_W, 0.44, rt([c["name"]]), sz=2000, b=True))
     add(txt(21, "Sub", BAND_X, 1.72, BAND_W, 0.36, rt([r["label"]]), sz=1400, b=True, clr=GOLD))
     add(txt(25, "Instr", BAND_X, 2.10, BAND_W, 0.40,
@@ -417,7 +462,7 @@ def render_frame(M, page, rec, st, add, viewed):
 
     # ---------------- S01 — topic/section entry ----------------
     if sid == "SCR_S01":
-        add(title_ph(C.S01["canvas_title"]), titlebar(6, C.S01["canvas_title"]))
+        add(title_ph_rt(C.S01["canvas_title"]), titlebar(6, C.S01["canvas_title"]))
         add(txt(20, "Course", BAND_X, 1.34, BAND_W, 0.40, [C.S01["canvas"][0]], sz=1500, b=True, clr=GOLD))
         add(txt(21, "PL", BAND_X, 1.86, BAND_W, 0.46, [C.S01["canvas"][1]], sz=1900, b=True))
         add(txt(22, "Topic", BAND_X, 2.38, BAND_W, 0.46, [C.S01["canvas"][2]], sz=1900, b=True))
@@ -436,7 +481,7 @@ def render_frame(M, page, rec, st, add, viewed):
 
     # ---------------- S02 — scenario ----------------
     if sid == "SCR_S02":
-        add(title_ph(C.S02["canvas_title"]), titlebar(6, C.S02["canvas_title"]))
+        add(title_ph_rt(C.S02["canvas_title"]), titlebar(6, C.S02["canvas_title"]))
         _visual(add, 30, 1.32, C.S02["visual"])
         y = 2.50
         for k, (nm, role_lbl) in enumerate(C.S02["cast"]):
@@ -461,7 +506,7 @@ def render_frame(M, page, rec, st, add, viewed):
 
     # ---------------- S03 — Hilmi overview ----------------
     if sid == "SCR_S03":
-        add(title_ph(C.S03["canvas_title"]), titlebar(6, C.S03["canvas_title"]))
+        add(title_ph_rt(C.S03["canvas_title"]), titlebar(6, C.S03["canvas_title"]))
         _visual(add, 30, 1.30, C.S03["visual"], w=5.3, x=BAND_X)
         add(txt(40, "Narr", BAND_X, 2.28, 5.3, 0.40, [C.S03["narrator"]], sz=1800, b=True))
         add(txt(41, "NarrRole", BAND_X, 2.70, 5.3, 0.32, [C.S03["narrator_role"]], sz=1200, clr=GREY))
@@ -490,7 +535,7 @@ def render_frame(M, page, rec, st, add, viewed):
         g = M.groups["STRUKTUR_TAMAN"]
         members = [c for c in M.source["components"] if c["group"] == "STRUKTUR_TAMAN"]
         pos, cw, x0, _ = grid4()
-        add(title_ph(g["name"]), titlebar(6, g["name"]))
+        add(title_ph_rt(g["name"]), titlebar(6, g["name"]))
         add(txt(25, "Instr", BAND_X, 1.15, BAND_W, 0.40,
                 ["Klik pada setiap struktur untuk penjelasan lanjut."], sz=1600, algn="ctr"))
         done = st["screen_role"] == "STATE_GROUP_COMPLETE"
@@ -518,7 +563,7 @@ def render_frame(M, page, rec, st, add, viewed):
     if sid == "SCR_PERABOT_OVERVIEW":
         g = M.groups["PERABOT_TAMAN"]
         members = [c for c in M.source["components"] if c["group"] == "PERABOT_TAMAN"]
-        add(title_ph(g["name"]), titlebar(6, g["name"]))
+        add(title_ph_rt(g["name"]), titlebar(6, g["name"]))
         add(bullets(22, "Body", BAND_X, 1.34, BAND_W, 2.0,
                     [(0, ital_parts(l)) for l in V3._wrap_lines(g["vo"], 110)], sz=1300, spc=300))
         y = 3.70
@@ -538,7 +583,7 @@ def render_frame(M, page, rec, st, add, viewed):
 
     # ---------------- Rumusan ----------------
     if sid == "SCR_RUMUSAN":
-        add(title_ph(C.RUMUSAN["canvas_title"]), titlebar(6, C.RUMUSAN["canvas_title"]))
+        add(title_ph_rt(C.RUMUSAN["canvas_title"]), titlebar(6, C.RUMUSAN["canvas_title"]))
         _visual(add, 30, 1.30, C.RUMUSAN["visual"])
         y = 2.20
         for k, l in enumerate(C.RUMUSAN["lines"]):
@@ -558,7 +603,7 @@ def render_frame(M, page, rec, st, add, viewed):
 
     # ---------------- Tamat ----------------
     if sid == "SCR_TAMAT":
-        add(title_ph("Tamat"), titlebar(6, "Tamat"))
+        add(title_ph_rt("Tamat"), titlebar(6, "Tamat"))
         add(txt(20, "Course", BAND_X, 1.36, BAND_W, 0.38, [C.TAMAT["canvas"][0]], sz=1400, b=True, clr=GOLD))
         add(txt(21, "PL", BAND_X, 1.84, BAND_W, 0.42, [C.TAMAT["canvas"][1]], sz=1600, b=True))
         add(txt(22, "Head", BAND_X, 2.52, BAND_W, 0.60, rt(V3._wrap_lines(C.TAMAT["canvas_title"], 60)),
@@ -582,7 +627,7 @@ def _render_quiz(M, page, rec, st, add):
     role = st["screen_role"]
     q = rec["quiz_spec"]
     if role == "STATE_QUIZ_INTRO":
-        add(title_ph("Kuiz"), titlebar(6, C.KUIZ_INTRO["canvas_title"]))
+        add(title_ph_rt("Kuiz"), titlebar(6, C.KUIZ_INTRO["canvas_title"]))
         add(txt(20, "Strap", BAND_X, 1.26, BAND_W, 0.36, [C.KUIZ_INTRO["strap"]], sz=1300, clr=GOLD))
         y = 1.86
         for k, l in enumerate(C.KUIZ_INTRO["purpose"]):
@@ -605,8 +650,8 @@ def _render_quiz(M, page, rec, st, add):
 
     if role == "STATE_QUIZ_QUESTION":
         n = int(st["runtime_state_id"][-1])
-        d = C.Q1 if n == 1 else C.Q5
-        add(title_ph(f"Kuiz — Soalan {n}"), titlebar(6, f"Soalan {n}"))
+        d = C.QUESTIONS[n]
+        add(title_ph_rt(f"Kuiz — Soalan {n}"), titlebar(6, f"Soalan {n}"))
         add(txt(20, "Kind", BAND_X, 1.26, BAND_W, 0.32,
                 [f"{d['kind'].replace('_',' ')}   ·   sumber: {d['src']}"], sz=1150, clr=GREY))
         w = V3._wrap_lines(d["stem"], 92)
@@ -644,9 +689,32 @@ def _render_quiz(M, page, rec, st, add):
             extra += ["LABEL PILIHAN:", "  TIADA label A/B/C. Teks pilihan dipaparkan terus."]
         return spoken, extra
 
+    if role == "STATE_QUIZ_REVIEW":
+        d = C.REVIEW
+        add(title_ph_rt(d["canvas_title"]), titlebar(6, d["canvas_title"]))
+        add(txt(20, "Intro", BAND_X, 1.30, BAND_W, 0.40, [d["intro"]], sz=1600, b=True))
+        y = 1.92
+        for q in sorted(C.QUESTIONS):
+            qq = C.QUESTIONS[q]
+            ans = qq["answer"] if qq["kind"] == "MCQ" else ", ".join(qq["answers"])
+            w = V3._wrap_lines(f"Soalan {q}: {qq['stem']}", 104)
+            add(txt(40 + q * 2, "RvQ", BAND_X, y, BAND_W, 0.28 * len(w) + 0.06, rt(w), sz=1250))
+            y += 0.28 * len(w) + 0.04
+            add(txt(41 + q * 2, "RvA", BAND_X + 0.30, y, BAND_W - 0.6, 0.30,
+                    rt([f"Jawapan: {ans}"]), sz=1250, b=True, clr=GREEN))
+            y += 0.42
+        add(button(60, BAND_X, 6.44, 2.30, 0.46, "Ulang Kuiz", True))
+        _nav(add, st)
+        extra = ["SEMAK JAWAPAN:",
+                 "  Jawapan betul dipaparkan bagi kelima-lima soalan.",
+                 "  Cuba semula bersifat sukarela.",
+                 "RASIONAL TERPERINCI:", "  " + d["note"],
+                 f"  status: {st.get('unresolved_status')}"]
+        return [], extra
+
     # result
     d = C.RESULT
-    add(title_ph("Kuiz — Keputusan"), titlebar(6, d["canvas_title"]))
+    add(title_ph_rt("Kuiz — Keputusan"), titlebar(6, d["canvas_title"]))
     add(txt(20, "Score", BAND_X, 1.60, BAND_W, 0.80, [f"Markah: {d['sample_score']}"], sz=2800, b=True))
     add(txt(21, "Verdict", BAND_X, 2.50, BAND_W, 0.50, [d["verdicts"][0]], sz=2200, b=True, clr=GREEN))
     add(txt(22, "Pass", BAND_X, 3.10, BAND_W, 0.36, [d["pass_mark"]], sz=1300, clr=GREY))
@@ -693,10 +761,10 @@ def build_page(M, page, pages):
 DONOR = os.path.join(GEN, "donor_skeleton")
 
 
-def generate(outdir, outname=OUTNAME):
+def generate(outdir, outname=OUTNAME, page_fn=None):
     M = ADAPT.Model()
-    pages = ADAPT.proof_pages(M)
-    work = os.path.join(outdir, "_build_v0_4")
+    pages = (page_fn or ADAPT.proof_pages)(M)
+    work = os.path.join(outdir, "_build_" + outname.replace(".pptx", ""))
     if os.path.exists(work):
         shutil.rmtree(work)
     shutil.copytree(DONOR, work)
@@ -782,7 +850,16 @@ def generate(outdir, outname=OUTNAME):
     return out, manifest
 
 
+FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx"
+
+
+def generate_full(outdir, outname=FULL_OUTNAME):
+    """The complete clean v0.4 review deck: one page per runtime state."""
+    return generate(outdir, outname=outname, page_fn=ADAPT.all_pages)
+
+
 if __name__ == "__main__":
     outdir = sys.argv[1] if len(sys.argv) > 1 else "."
-    out, man = generate(outdir)
+    mode = sys.argv[2] if len(sys.argv) > 2 else "proof"
+    out, man = (generate_full(outdir) if mode == "full" else generate(outdir))
     print("wrote", out, "pages", len(man))

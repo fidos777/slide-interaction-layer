@@ -207,10 +207,71 @@ specification, not an extracted asset.
 
 ---
 
-# 5. What this map does not claim
+# 7. Resolved review-page binding
 
-- **No PowerPoint review-page numbers.** `review_page_role` is semantic; numbering belongs to the
-  regeneration stage.
+The deck is generated. Every source row now resolves to concrete review pages, and every extracted
+asset appears on at least one.
+
+| # | source_row_uid | component | review pages | range |
+|---:|---|---|---:|---|
+| 1 | `K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-01` | Struktur Persisir Air | 3 | RP-006–RP-012 |
+| 2 | `K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-02` | Struktur Persisir Air | 3 | RP-006–RP-012 |
+| 3 | `K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-03` | Struktur Persisir Air | 3 | RP-006–RP-012 |
+| 4 | `K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-04` | Struktur Persisir Air | 3 | RP-006–RP-012 |
+| 5 | `K5-PL06-T03-B02-STRUKTUR-PERSISIR-AIR-ROW-05` | Struktur Persisir Air | 3 | RP-006–RP-012 |
+| 6 | `K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-01` | Struktur Teduhan | 3 | RP-014–RP-020 |
+| 7 | `K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-02` | Struktur Teduhan | 3 | RP-014–RP-020 |
+| 8 | `K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-03` | Struktur Teduhan | 3 | RP-014–RP-020 |
+| 9 | `K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-04` | Struktur Teduhan | 3 | RP-014–RP-020 |
+| 10 | `K5-PL06-T03-B02-STRUKTUR-TEDUHAN-ROW-05` | Struktur Teduhan | 3 | RP-014–RP-020 |
+| 11 | `K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-01` | Kemudahan Awam | 3 | RP-022–RP-026 |
+| 12 | `K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-02` | Kemudahan Awam | 3 | RP-022–RP-026 |
+| 13 | `K5-PL06-T03-B02-KEMUDAHAN-AWAM-ROW-03` | Kemudahan Awam | 3 | RP-022–RP-026 |
+| 14 | `K5-PL06-T03-B02-WATER-FEATURE-ROW-01` | Water Feature | 3 | RP-028–RP-032 |
+| 15 | `K5-PL06-T03-B02-WATER-FEATURE-ROW-02` | Water Feature | 3 | RP-028–RP-032 |
+| 16 | `K5-PL06-T03-B02-WATER-FEATURE-ROW-03` | Water Feature | 3 | RP-028–RP-032 |
+| 17 | `K5-PL06-T03-B02-KERUSI-TAMAN-ROW-01` | Kerusi Taman | 8 | RP-035–RP-050 |
+| 18 | `K5-PL06-T03-B02-KERUSI-TAMAN-ROW-02` | Kerusi Taman | 6 | RP-035–RP-050 |
+| 19 | `K5-PL06-T03-B02-KERUSI-TAMAN-ROW-03` | Kerusi Taman | 6 | RP-035–RP-050 |
+| 20 | `K5-PL06-T03-B02-PAPAN-TANDA-ROW-01` | Papan Tanda | 6 | RP-051–RP-056 |
+| 21 | `K5-PL06-T03-B02-TONG-SAMPAH-ROW-01` | Tong Sampah | 6 | RP-057–RP-070 |
+| 22 | `K5-PL06-T03-B02-TONG-SAMPAH-ROW-02` | Tong Sampah | 6 | RP-057–RP-070 |
+| 23 | `K5-PL06-T03-B02-TONG-SAMPAH-ROW-03` | Tong Sampah | 6 | RP-057–RP-070 |
+| 24 | `K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-01` | Drinking Fountain | 10 | RP-071–RP-084 |
+| 25 | `K5-PL06-T03-B02-DRINKING-FOUNTAIN-ROW-02` | Drinking Fountain | 6 | RP-071–RP-084 |
+| 26 | `K5-PL06-T03-B02-BBQ-PIT-ROW-01` | BBQ Pit | 6 | RP-085–RP-090 |
+
+**26 rows · 0 created · 0 duplicated.** Interaction decomposition raised the item, state and page
+counts; it did not touch the row inventory.
+
+## 7.1 Source assets
+
+| asset_id | module p | review pages | first |
+|---|---:|---:|---|
+| `K5PL06T03-B02-IMG-p239-x20` | 239 | 1 | RP-010 |
+| `K5PL06T03-B02-IMG-p240-x23` | 240 | 1 | RP-017 |
+| `K5PL06T03-B02-IMG-p242-x28` | 242 | 1 | RP-036 |
+| `K5PL06T03-B02-IMG-p243-x31` | 243 | 1 | RP-042 |
+| `K5PL06T03-B02-IMG-p243-x32` | 243 | 1 | RP-046 |
+| `K5PL06T03-B02-IMG-p245-x37` | 245 | 1 | RP-051 |
+| `K5PL06T03-B02-IMG-p245-x38` | 245 | 1 | RP-051 |
+| `K5PL06T03-B02-IMG-p246-x41` | 246 | 1 | RP-058 |
+| `K5PL06T03-B02-IMG-p247-x44` | 247 | 1 | RP-062 |
+| `K5PL06T03-B02-IMG-p247-x45` | 247 | 1 | RP-066 |
+| `K5PL06T03-B02-IMG-p247-x46` | 247 | 1 | RP-066 |
+| `K5PL06T03-B02-IMG-p248-x49` | 248 | 1 | RP-072 |
+| `K5PL06T03-B02-IMG-p249-x56` | 249 | 1 | RP-080 |
+| `K5PL06T03-B02-IMG-p249-x57` | 249 | 1 | RP-085 |
+
+`ORPHAN_SOURCE_ASSETS = 0`. Assets remain **specified, not embedded** — every visual in the deck is a
+written direction carrying its module page reference and asset ID. No image is bound.
+
+---
+
+# 8. What this map does not claim
+
+- **Review pages are now resolved** (§7) — but they remain a review-build artefact, not learner
+  screens and not runtime states.
 - **No asset binding.** `usage_status` for all 14 assets remains `EXTRACTED — not yet bound`.
 - **No source-integrity closure.** The module DOCX SHA-256 is still unobtained under
   `B02-CAIR-INT-001`; `SOURCE_INTEGRITY_FULLY_VERIFIED` is not asserted.

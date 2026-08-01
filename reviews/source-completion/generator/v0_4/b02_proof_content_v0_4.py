@@ -138,6 +138,43 @@ RESULT = dict(canvas_title="Kuiz — Keputusan",
               vo=("Anda telah melengkapkan kuiz semakan pengetahuan. Anda boleh menyemak "
                   "jawapan atau mengulang kuiz ini."))
 
+Q2 = dict(n=2, kind="MCQ", src="modul ms 239 (3.3.2)",
+          stem=("Manakah antara berikut merupakan struktur teduhan tradisional Melayu yang "
+                "digunakan sebagai tempat berehat?"),
+          options=[("A", "Pergola"), ("B", "Canopy"), ("C", "Wakaf"), ("D", "Gazebo")],
+          answer="C",
+          rationale=("Modul ms 239 menyenaraikan Wakaf sebagai struktur teduhan tradisional "
+                     "Melayu. Pergola, Canopy dan Gazebo turut disenaraikan sebagai struktur "
+                     "teduhan, tetapi bukan sebagai bentuk tradisional Melayu."))
+
+Q3 = dict(n=3, kind="MCQ", src="modul ms 240 (3.3.3)",
+          stem=("Apakah pertimbangan utama dalam pemilihan bahan bagi kemudahan awam seperti "
+                "tandas dan surau di taman?"),
+          options=[("A", "Bahan yang tahan vandalisme dan cuaca"),
+                   ("B", "Bahan yang paling murah di pasaran"),
+                   ("C", "Bahan yang perlu dicat semula setiap bulan"),
+                   ("D", "Bahan yang seragam dengan perabot taman")],
+          answer="A",
+          rationale=("Modul ms 240 menetapkan ketahanan terhadap vandalisme dan cuaca sebagai "
+                     "pertimbangan utama bagi kemudahan awam."))
+
+Q4 = dict(n=4, kind="MCQ", src="modul ms 241 (3.3.4)",
+          stem=("Dalam pembinaan water feature, apakah aspek kawalan kualiti air yang "
+                "dinyatakan dalam modul?"),
+          options=[("A", "Penambahan garam"), ("B", "Pencegahan alga"),
+                   ("C", "Pemanasan air"), ("D", "Pewarnaan air")],
+          answer="B",
+          rationale=("Modul ms 241 menyatakan pencegahan alga sebagai aspek kawalan kualiti air "
+                     "bagi water feature."))
+
+QUESTIONS = {1: Q1, 2: Q2, 3: Q3, 4: Q4, 5: Q5}
+
+REVIEW = dict(canvas_title="Semak Jawapan",
+              intro="Semakan jawapan bagi kelima-lima soalan.",
+              note=("Rasional terperinci bagi setiap soalan kekal sebagai metadata produksi "
+                    "sehingga penempatan akhirnya disahkan."),
+              vo="")
+
 # ---------------------------------------------------------------- Tamat
 TAMAT = dict(
     canvas_title="Tamat Topik 3 Bahagian 2: Komponen Landskap",

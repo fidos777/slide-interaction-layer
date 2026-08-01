@@ -1,10 +1,17 @@
 {
  "artifact": "STORYBOARD_SCREEN_STATE_MAP_v0.4",
- "build": "K5 PL06 T03 B02 — Komponen Landskap — v0.4 model",
+ "build": {
+  "built": true,
+  "build_date": "2026-08-01",
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx",
+  "deck_sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108",
+  "review_pages": 100,
+  "statement": "The model is no longer only defined — it has been executed across all nine components and rendered. Review pages are one per runtime state; the count follows the model."
+ },
  "status": "MODEL_DEFINED_NOT_BUILT",
  "evidence_date": "2026-08-01",
  "standing": "Documentation only. No generator modified, no PowerPoint generated, no component propagated, no multimedia produced, no visual asset bound, no canonical P# minted. MMD readiness, production approval and canonical approval are NOT claimed.",
- "review_page_numbering": "NOT ASSIGNED — review_page_role carries a stable semantic role instead of a page number.",
+ "review_page_numbering": "RESOLVED at Stage 4 — one review page per runtime state, 100 pages. review_page_role remains the stable semantic role; the page ID is a rendering artefact.",
  "identifier_spaces": {
   "source_row_uid": "owned by the module source table; invariant at 26",
   "interaction_item_id": "owned by the execution family; one source row may yield several",
@@ -69,7 +76,8 @@
   "S01_ENTRY_TITLES_SPOKEN": true,
   "S02_ONWARDS_ENTRY_TITLES_SPOKEN": false,
   "HILMI_REINTRODUCED_AS_NEW": false,
-  "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true
+  "HILMI_CONTINUITY_FROM_COURSE_MONTAGE": true,
+  "REVIEW_PAGES": 100
  },
  "screens": [
   {
@@ -7481,5 +7489,807 @@
   "head_at_amendment": "331edf27c1878c8f3fd4271fe7f20d0449a3024e",
   "scope": "Upstream montage context + Bariah’s final S01 VO clarification. Context-only: no structural count changed.",
   "blocked_item": "Part 1 byte freeze of SB_K5_montaj_v1.pptx and SB_K5PL6_montaj_v1.pptx — files not delivered to this execution environment."
- }
+ },
+ "resolved_review_pages": [
+  {
+   "page": "RP-001",
+   "screen": "SCR_S01",
+   "state": "ST_S01_BASE",
+   "role": "TOPIC_SECTION_ENTRY_BASE",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-002",
+   "screen": "SCR_S02",
+   "state": "ST_S02_BASE",
+   "role": "FRAME_SCENARIO_BASE",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-003",
+   "screen": "SCR_S03",
+   "state": "ST_S03_BASE",
+   "role": "FRAME_NARRATOR_BASE",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-004",
+   "screen": "SCR_GM_STRUKTUR",
+   "state": "ST_GM_STRUKTUR_BASE",
+   "role": "GROUP_MASTER_BASE",
+   "family": "FAMILY_S",
+   "component": null
+  },
+  {
+   "page": "RP-005",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_MAIN_BASE",
+   "role": "COMPONENT_MAIN_BASE",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-006",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_EXAMPLES_BASE",
+   "role": "COMPONENT_EXAMPLES_BASE",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-007",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_01",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-008",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_02",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-009",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_03",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-010",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_04",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-011",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_POPUP_05",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-012",
+   "screen": "SCR_STRUKTUR_PERSISIR_AIR_EXAMPLES",
+   "state": "ST_STRUKTUR_PERSISIR_AIR_ALL_VIEWED",
+   "role": "COMPONENT_EXAMPLES_ALL_VIEWED",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_PERSISIR_AIR"
+  },
+  {
+   "page": "RP-013",
+   "screen": "SCR_STRUKTUR_TEDUHAN_MAIN",
+   "state": "ST_STRUKTUR_TEDUHAN_MAIN_BASE",
+   "role": "COMPONENT_MAIN_BASE",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-014",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_EXAMPLES_BASE",
+   "role": "COMPONENT_EXAMPLES_BASE",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-015",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_POPUP_01",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-016",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_POPUP_02",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-017",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_POPUP_03",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-018",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_POPUP_04",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-019",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_POPUP_05",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-020",
+   "screen": "SCR_STRUKTUR_TEDUHAN_EXAMPLES",
+   "state": "ST_STRUKTUR_TEDUHAN_ALL_VIEWED",
+   "role": "COMPONENT_EXAMPLES_ALL_VIEWED",
+   "family": "FAMILY_S",
+   "component": "STRUKTUR_TEDUHAN"
+  },
+  {
+   "page": "RP-021",
+   "screen": "SCR_KEMUDAHAN_AWAM_MAIN",
+   "state": "ST_KEMUDAHAN_AWAM_MAIN_BASE",
+   "role": "COMPONENT_MAIN_BASE",
+   "family": "FAMILY_S",
+   "component": "KEMUDAHAN_AWAM"
+  },
+  {
+   "page": "RP-022",
+   "screen": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
+   "state": "ST_KEMUDAHAN_AWAM_EXAMPLES_BASE",
+   "role": "COMPONENT_EXAMPLES_BASE",
+   "family": "FAMILY_S",
+   "component": "KEMUDAHAN_AWAM"
+  },
+  {
+   "page": "RP-023",
+   "screen": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
+   "state": "ST_KEMUDAHAN_AWAM_POPUP_01",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "KEMUDAHAN_AWAM"
+  },
+  {
+   "page": "RP-024",
+   "screen": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
+   "state": "ST_KEMUDAHAN_AWAM_POPUP_02",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "KEMUDAHAN_AWAM"
+  },
+  {
+   "page": "RP-025",
+   "screen": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
+   "state": "ST_KEMUDAHAN_AWAM_POPUP_03",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "KEMUDAHAN_AWAM"
+  },
+  {
+   "page": "RP-026",
+   "screen": "SCR_KEMUDAHAN_AWAM_EXAMPLES",
+   "state": "ST_KEMUDAHAN_AWAM_ALL_VIEWED",
+   "role": "COMPONENT_EXAMPLES_ALL_VIEWED",
+   "family": "FAMILY_S",
+   "component": "KEMUDAHAN_AWAM"
+  },
+  {
+   "page": "RP-027",
+   "screen": "SCR_WATER_FEATURE_MAIN",
+   "state": "ST_WATER_FEATURE_MAIN_BASE",
+   "role": "COMPONENT_MAIN_BASE",
+   "family": "FAMILY_S",
+   "component": "WATER_FEATURE"
+  },
+  {
+   "page": "RP-028",
+   "screen": "SCR_WATER_FEATURE_EXAMPLES",
+   "state": "ST_WATER_FEATURE_EXAMPLES_BASE",
+   "role": "COMPONENT_EXAMPLES_BASE",
+   "family": "FAMILY_S",
+   "component": "WATER_FEATURE"
+  },
+  {
+   "page": "RP-029",
+   "screen": "SCR_WATER_FEATURE_EXAMPLES",
+   "state": "ST_WATER_FEATURE_POPUP_01",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "WATER_FEATURE"
+  },
+  {
+   "page": "RP-030",
+   "screen": "SCR_WATER_FEATURE_EXAMPLES",
+   "state": "ST_WATER_FEATURE_POPUP_02",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "WATER_FEATURE"
+  },
+  {
+   "page": "RP-031",
+   "screen": "SCR_WATER_FEATURE_EXAMPLES",
+   "state": "ST_WATER_FEATURE_POPUP_03",
+   "role": "COMPONENT_EXAMPLE_POPUP",
+   "family": "FAMILY_S",
+   "component": "WATER_FEATURE"
+  },
+  {
+   "page": "RP-032",
+   "screen": "SCR_WATER_FEATURE_EXAMPLES",
+   "state": "ST_WATER_FEATURE_ALL_VIEWED",
+   "role": "COMPONENT_EXAMPLES_ALL_VIEWED",
+   "family": "FAMILY_S",
+   "component": "WATER_FEATURE"
+  },
+  {
+   "page": "RP-033",
+   "screen": "SCR_GM_STRUKTUR",
+   "state": "ST_GM_STRUKTUR_GROUP_COMPLETE",
+   "role": "GROUP_MASTER_GROUP_COMPLETE",
+   "family": "FAMILY_S",
+   "component": null
+  },
+  {
+   "page": "RP-034",
+   "screen": "SCR_PERABOT_OVERVIEW",
+   "state": "ST_PERABOT_OVERVIEW_BASE",
+   "role": "GROUP_OVERVIEW_BASE",
+   "family": "FAMILY_P1+FAMILY_P2",
+   "component": null
+  },
+  {
+   "page": "RP-035",
+   "screen": "SCR_KERUSI_TAMAN_MAIN",
+   "state": "ST_KERUSI_TAMAN_MAIN_BASE",
+   "role": "COMPONENT_EXPLANATION_LIST_BASE",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-036",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX01_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-037",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-038",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-039",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC03",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-040",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R01_SPEC04",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-041",
+   "screen": "SCR_KERUSI_TAMAN_EX01_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX01_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-042",
+   "screen": "SCR_KERUSI_TAMAN_EX02_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX02_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-043",
+   "screen": "SCR_KERUSI_TAMAN_EX02_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R02_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-044",
+   "screen": "SCR_KERUSI_TAMAN_EX02_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R02_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-045",
+   "screen": "SCR_KERUSI_TAMAN_EX02_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX02_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-046",
+   "screen": "SCR_KERUSI_TAMAN_EX03_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX03_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-047",
+   "screen": "SCR_KERUSI_TAMAN_EX03_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R03_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-048",
+   "screen": "SCR_KERUSI_TAMAN_EX03_DETAIL",
+   "state": "ST_KERUSI_TAMAN_R03_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-049",
+   "screen": "SCR_KERUSI_TAMAN_EX03_DETAIL",
+   "state": "ST_KERUSI_TAMAN_EX03_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-050",
+   "screen": "SCR_KERUSI_TAMAN_MAIN",
+   "state": "ST_KERUSI_TAMAN_ALL_EXAMPLES_VIEWED",
+   "role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "KERUSI_TAMAN"
+  },
+  {
+   "page": "RP-051",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_MAIN_BASE",
+   "role": "COMPONENT_SPEC_LIST_BASE",
+   "family": "FAMILY_P2",
+   "component": "PAPAN_TANDA"
+  },
+  {
+   "page": "RP-052",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT01",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "PAPAN_TANDA"
+  },
+  {
+   "page": "RP-053",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT02",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "PAPAN_TANDA"
+  },
+  {
+   "page": "RP-054",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT03",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "PAPAN_TANDA"
+  },
+  {
+   "page": "RP-055",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_CAT04",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "PAPAN_TANDA"
+  },
+  {
+   "page": "RP-056",
+   "screen": "SCR_PAPAN_TANDA_MAIN",
+   "state": "ST_PAPAN_TANDA_ALL_CATEGORIES_VIEWED",
+   "role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+   "family": "FAMILY_P2",
+   "component": "PAPAN_TANDA"
+  },
+  {
+   "page": "RP-057",
+   "screen": "SCR_TONG_SAMPAH_MAIN",
+   "state": "ST_TONG_SAMPAH_MAIN_BASE",
+   "role": "COMPONENT_EXPLANATION_LIST_BASE",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-058",
+   "screen": "SCR_TONG_SAMPAH_EX01_DETAIL",
+   "state": "ST_TONG_SAMPAH_EX01_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-059",
+   "screen": "SCR_TONG_SAMPAH_EX01_DETAIL",
+   "state": "ST_TONG_SAMPAH_R01_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-060",
+   "screen": "SCR_TONG_SAMPAH_EX01_DETAIL",
+   "state": "ST_TONG_SAMPAH_R01_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-061",
+   "screen": "SCR_TONG_SAMPAH_EX01_DETAIL",
+   "state": "ST_TONG_SAMPAH_EX01_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-062",
+   "screen": "SCR_TONG_SAMPAH_EX02_DETAIL",
+   "state": "ST_TONG_SAMPAH_EX02_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-063",
+   "screen": "SCR_TONG_SAMPAH_EX02_DETAIL",
+   "state": "ST_TONG_SAMPAH_R02_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-064",
+   "screen": "SCR_TONG_SAMPAH_EX02_DETAIL",
+   "state": "ST_TONG_SAMPAH_R02_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-065",
+   "screen": "SCR_TONG_SAMPAH_EX02_DETAIL",
+   "state": "ST_TONG_SAMPAH_EX02_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-066",
+   "screen": "SCR_TONG_SAMPAH_EX03_DETAIL",
+   "state": "ST_TONG_SAMPAH_EX03_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-067",
+   "screen": "SCR_TONG_SAMPAH_EX03_DETAIL",
+   "state": "ST_TONG_SAMPAH_R03_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-068",
+   "screen": "SCR_TONG_SAMPAH_EX03_DETAIL",
+   "state": "ST_TONG_SAMPAH_R03_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-069",
+   "screen": "SCR_TONG_SAMPAH_EX03_DETAIL",
+   "state": "ST_TONG_SAMPAH_EX03_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-070",
+   "screen": "SCR_TONG_SAMPAH_MAIN",
+   "state": "ST_TONG_SAMPAH_ALL_EXAMPLES_VIEWED",
+   "role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "TONG_SAMPAH"
+  },
+  {
+   "page": "RP-071",
+   "screen": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "state": "ST_DRINKING_FOUNTAIN_MAIN_BASE",
+   "role": "COMPONENT_EXPLANATION_LIST_BASE",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-072",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_EX01_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-073",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R01_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-074",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R01_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-075",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R01_SPEC03",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-076",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R01_SPEC04",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-077",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R01_SPEC05",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-078",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R01_SPEC06",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-079",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX01_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_EX01_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-080",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_EX02_BASE",
+   "role": "EXAMPLE_DETAIL_BASE",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-081",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R02_SPEC01",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-082",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_R02_SPEC02",
+   "role": "SPECIFICATION_POPUP",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-083",
+   "screen": "SCR_DRINKING_FOUNTAIN_EX02_DETAIL",
+   "state": "ST_DRINKING_FOUNTAIN_EX02_ALL_SPEC_VIEWED",
+   "role": "EXAMPLE_DETAIL_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-084",
+   "screen": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "state": "ST_DRINKING_FOUNTAIN_ALL_EXAMPLES_VIEWED",
+   "role": "COMPONENT_EXPLANATION_LIST_ALL_VIEWED",
+   "family": "FAMILY_P1",
+   "component": "DRINKING_FOUNTAIN"
+  },
+  {
+   "page": "RP-085",
+   "screen": "SCR_BBQ_PIT_MAIN",
+   "state": "ST_BBQ_PIT_MAIN_BASE",
+   "role": "COMPONENT_SPEC_LIST_BASE",
+   "family": "FAMILY_P2",
+   "component": "BBQ_PIT"
+  },
+  {
+   "page": "RP-086",
+   "screen": "SCR_BBQ_PIT_MAIN",
+   "state": "ST_BBQ_PIT_CAT01",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "BBQ_PIT"
+  },
+  {
+   "page": "RP-087",
+   "screen": "SCR_BBQ_PIT_MAIN",
+   "state": "ST_BBQ_PIT_CAT02",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "BBQ_PIT"
+  },
+  {
+   "page": "RP-088",
+   "screen": "SCR_BBQ_PIT_MAIN",
+   "state": "ST_BBQ_PIT_CAT03",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "BBQ_PIT"
+  },
+  {
+   "page": "RP-089",
+   "screen": "SCR_BBQ_PIT_MAIN",
+   "state": "ST_BBQ_PIT_CAT04",
+   "role": "SPECIFICATION_CATEGORY_POPUP",
+   "family": "FAMILY_P2",
+   "component": "BBQ_PIT"
+  },
+  {
+   "page": "RP-090",
+   "screen": "SCR_BBQ_PIT_MAIN",
+   "state": "ST_BBQ_PIT_ALL_CATEGORIES_VIEWED",
+   "role": "COMPONENT_SPEC_LIST_ALL_VIEWED",
+   "family": "FAMILY_P2",
+   "component": "BBQ_PIT"
+  },
+  {
+   "page": "RP-091",
+   "screen": "SCR_RUMUSAN",
+   "state": "ST_RUMUSAN_BASE",
+   "role": "FRAME_SUMMARY_BASE",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-092",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_INTRO",
+   "role": "QUIZ_INTRO",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-093",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q1",
+   "role": "QUIZ_QUESTION_1",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-094",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q2",
+   "role": "QUIZ_QUESTION_2",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-095",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q3",
+   "role": "QUIZ_QUESTION_3",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-096",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q4",
+   "role": "QUIZ_QUESTION_4",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-097",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_Q5",
+   "role": "QUIZ_QUESTION_5",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-098",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_RESULT",
+   "role": "QUIZ_RESULT",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-099",
+   "screen": "SCR_KUIZ",
+   "state": "ST_KUIZ_REVIEW",
+   "role": "QUIZ_REVIEW",
+   "family": "FRAME",
+   "component": null
+  },
+  {
+   "page": "RP-100",
+   "screen": "SCR_TAMAT",
+   "state": "ST_TAMAT_BASE",
+   "role": "FRAME_END_BASE",
+   "family": "FRAME",
+   "component": null
+  }
+ ]
 }

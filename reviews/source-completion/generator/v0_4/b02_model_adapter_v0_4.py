@@ -230,3 +230,83 @@ def completed_components(M, page, pages):
            and st["completion_scope"] == "COMPONENT":
             done.add(st["component_id"])
     return done
+
+
+# ============================ complete v0.4 deck ============================
+def all_pages(M):
+    """Every runtime state in the frozen model, in learner order, as a review page.
+
+    One review page per runtime state. The count is NOT chosen — it follows the model.
+    A review page is an artefact of the review build; it is neither a learner screen
+    nor a runtime state, and each page record names all three.
+    """
+    P = []
+    seq = [0]
+
+    def add(sid, stid, note=""):
+        sc, st = M.screen(sid), M.state(stid)
+        seq[0] += 1
+        P.append(dict(id=f"RP-{seq[0]:03d}", screen_id=sid, state_id=stid,
+                      review_page_role=st["review_page_role"],
+                      execution_family=st["execution_family"],
+                      component_id=st.get("component_id"),
+                      group_id=st.get("group_id"), proof_note=note))
+
+    def states(sid, role):
+        return [s["runtime_state_id"] for s in M.states_of(sid, role)]
+
+    order = [c["id"] for c in M.source["components"]]
+
+    # ---- opening frames ----
+    for sid, stid in (("SCR_S01", "ST_S01_BASE"), ("SCR_S02", "ST_S02_BASE"),
+                      ("SCR_S03", "ST_S03_BASE")):
+        add(sid, stid, "frame screen")
+
+    # ---- Struktur Taman group ----
+    add("SCR_GM_STRUKTUR", "ST_GM_STRUKTUR_BASE", "group master, no component visited")
+    for cid in [c for c in order if M.comps[c]["group"] == "STRUKTUR_TAMAN"]:
+        add(f"SCR_{cid}_MAIN", f"ST_{cid}_MAIN_BASE", "component main explanation")
+        ex = f"SCR_{cid}_EXAMPLES"
+        add(ex, f"ST_{cid}_EXAMPLES_BASE", "example selection, none viewed")
+        for stid in sorted(states(ex, "STATE_POPUP")):
+            add(ex, stid, "example popup state")
+        add(ex, f"ST_{cid}_ALL_VIEWED", "all examples viewed, Kembali enabled")
+    add("SCR_GM_STRUKTUR", "ST_GM_STRUKTUR_GROUP_COMPLETE", "group complete, shell Next enabled")
+
+    # ---- Perabot Taman group ----
+    add("SCR_PERABOT_OVERVIEW", "ST_PERABOT_OVERVIEW_BASE", "gateway, no click level")
+    for cid in [c for c in order if M.comps[c]["group"] == "PERABOT_TAMAN"]:
+        fam = M.family(cid)
+        main = f"SCR_{cid}_MAIN"
+        if fam == "FAMILY_P1":
+            add(main, f"ST_{cid}_MAIN_BASE", "component overview + example list")
+            for r in sorted([r for r in M.source["rows"] if r["comp"] == cid],
+                            key=lambda r: r["order"]):
+                det = f"SCR_{cid}_EX{r['order']:02d}_DETAIL"
+                add(det, f"ST_{cid}_EX{r['order']:02d}_BASE", "example detail, Level 1")
+                for stid in sorted(states(det, "STATE_POPUP")):
+                    add(det, stid, "specification popup, Level 2")
+                add(det, f"ST_{cid}_EX{r['order']:02d}_ALL_SPEC_VIEWED", "example complete")
+            add(main, f"ST_{cid}_ALL_EXAMPLES_VIEWED", "component complete")
+        else:                                   # FAMILY_P2
+            add(main, f"ST_{cid}_MAIN_BASE", "explanation + specification-category list")
+            for stid in sorted(states(main, "STATE_POPUP")):
+                add(main, stid, "specification category popup")
+            add(main, f"ST_{cid}_ALL_CATEGORIES_VIEWED", "component complete")
+
+    # ---- closing frames ----
+    add("SCR_RUMUSAN", "ST_RUMUSAN_BASE", "frame screen")
+    add("SCR_KUIZ", "ST_KUIZ_INTRO", "quiz entry")
+    for q in range(1, 6):
+        add("SCR_KUIZ", f"ST_KUIZ_Q{q}", "quiz question with both immediate-feedback variants")
+    add("SCR_KUIZ", "ST_KUIZ_RESULT", "quiz result")
+    add("SCR_KUIZ", "ST_KUIZ_REVIEW", "Semak Jawapan / Ulang Kuiz")
+    add("SCR_TAMAT", "ST_TAMAT_BASE", "frame screen")
+
+    covered = {p["state_id"] for p in P}
+    missing = {s["runtime_state_id"] for s in M.map["states"]} - covered
+    if missing:
+        raise AssertionError(f"runtime states not represented in the deck: {sorted(missing)}")
+    if len(P) != len(M.map["states"]):
+        raise AssertionError(f"review pages {len(P)} != runtime states {len(M.map['states'])}")
+    return P
