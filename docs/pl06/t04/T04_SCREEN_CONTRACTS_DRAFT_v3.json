@@ -1,0 +1,604 @@
+{
+ "pack": "T04_SCREEN_CONTRACTS_DRAFT",
+ "version": "v3",
+ "stage": "4.2F-B0.7",
+ "unit_id": "K5-PL06-T04-B01",
+ "content_status": "CAIR_ASSISTED_DRAFT",
+ "approval_status": "PENDING_BARIAH_REVIEW",
+ "instructional_authority": "BARIAH",
+ "final_screen_count": "NOT_CLAIMED",
+ "approval_totals": {
+  "CONFIRMED_POLICY_DECISIONS": 6,
+  "CONDITIONALLY_CONFIRMED_DECISIONS": 1,
+  "APPROVED_FINAL_INSTRUCTIONAL_CONTENT_ITEMS": 0,
+  "PENDING_BARIAH_CONTENT_REVIEWS": 4,
+  "confirmed_policy_decision_ids": [
+   "D-01",
+   "D-02A",
+   "D-02B",
+   "D-02C",
+   "D-04",
+   "D-05"
+  ],
+  "conditionally_confirmed_decision_ids": [
+   "D-03"
+  ],
+  "superseded_field": "APPROVED_ITEMS",
+  "supersession_note": "Stage 4.2F-B0.6 reported APPROVED_ITEMS = 0. That single number conflated policy with content: it was true of learner-facing text and false of structure, since Bariah had already confirmed the visual ruling and the quiz composition. Four typed totals replace it. APPROVED_ITEMS is not emitted by this stage."
+ },
+ "d04_split": {
+  "decision_id": "D-04",
+  "status": "CONFIRMED_BARIAH_DIRECT",
+  "evidence": [
+   "BR-C1"
+  ],
+  "scope": "K5-PL06-T04-B01",
+  "applied_to_contracts": true,
+  "base_screen_must_show": [
+   {
+    "item": "Akta Racun Makhluk Perosak 1974",
+    "rows": [
+     "T04-ROW-066"
+    ],
+    "legibility": "INFERRED — see EVIDENCE_LEGIBILITY"
+   },
+   {
+    "item": "licensed operator requirement",
+    "rows": [
+     "T04-ROW-067"
+    ],
+    "legibility": "LEGIBLE — 'rator berlesen … dipaparkan terus pada skrin'"
+   },
+   {
+    "item": "PPE",
+    "rows": [
+     "T04-ROW-069",
+     "T04-ROW-070"
+    ],
+    "legibility": "LEGIBLE — 'dan PPE dipaparkan terus pada skrin'"
+   }
+  ],
+  "reveal_may_contain": [
+   {
+    "item": "SDS",
+    "rows": [
+     "T04-ROW-073",
+     "T04-ROW-074"
+    ]
+   },
+   {
+    "item": "safe or locked storage",
+    "rows": [
+     "T04-ROW-071",
+     "T04-ROW-072"
+    ]
+   },
+   {
+    "item": "spraying conditions",
+    "rows": [
+     "T04-ROW-076"
+    ]
+   },
+   {
+    "item": "notification",
+    "rows": [
+     "T04-ROW-077"
+    ]
+   },
+   {
+    "item": "reporting",
+    "rows": [
+     "T04-ROW-078"
+    ]
+   }
+  ],
+  "headings_always_visible": [
+   "T04-ROW-065",
+   "T04-ROW-068",
+   "T04-ROW-075"
+  ],
+  "base_visible_rows": [
+   "T04-ROW-065",
+   "T04-ROW-066",
+   "T04-ROW-067",
+   "T04-ROW-068",
+   "T04-ROW-069",
+   "T04-ROW-070",
+   "T04-ROW-075"
+  ],
+  "reveal_eligible_rows": [
+   "T04-ROW-071",
+   "T04-ROW-072",
+   "T04-ROW-073",
+   "T04-ROW-074",
+   "T04-ROW-076",
+   "T04-ROW-077",
+   "T04-ROW-078"
+  ],
+  "out_of_scope_rows_unchanged": [
+   "T04-ROW-037",
+   "T04-ROW-039",
+   "T04-ROW-041",
+   "T04-ROW-043",
+   "T04-ROW-045"
+  ],
+  "reveal_is_permissive": "'boleh guna click to reveal' permits reveal; it does not require it. A build that shows all seven on the base screen still complies.",
+  "delta_from_cair_proposal": {
+   "cair_proposed_reveal": [
+    "T04-ROW-070",
+    "T04-ROW-072",
+    "T04-ROW-074"
+   ],
+   "bariah_confirmed_reveal": [
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "moved_to_base": [
+    "T04-ROW-070"
+   ],
+   "newly_reveal_eligible": [
+    "T04-ROW-071",
+    "T04-ROW-073",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "note": "Two changes, in opposite directions. PPE detail moves ONTO the base screen — Bariah put PPE there explicitly. Spraying conditions, notification and reporting become reveal-eligible, which Stage 4.2F-B0.6 had argued against on the grounds that a learner who never interacts should still see them. She is the Instructional Designer and she has ruled; the ruling is implemented as written and the disagreement is recorded here rather than quietly re-litigated in a contract."
+  },
+  "residual_risk": "A learner who never interacts will not see the spray-drift limit, the notification duty or the reporting duty. Worth one sentence to Bariah at some future point; NOT worth re-asking now, since she answered the exact question that was put to her."
+ },
+ "slide_2_dialogue": {
+  "contract_id": "T04-CT-07",
+  "screen_candidate_id": "T04-SC-07",
+  "slide_position": "SLIDE_2",
+  "candidate_type": "DIALOGUE_SCENARIO",
+  "content_status": "CAIR_ASSISTED_DRAFT",
+  "approval_status": "PENDING_BARIAH_REVIEW",
+  "instructional_authority": "BARIAH",
+  "source_rows": [
+   "T04-ROW-001",
+   "T04-ROW-002",
+   "T04-ROW-003",
+   "T04-ROW-004",
+   "T04-ROW-005",
+   "T04-ROW-079",
+   "T04-ROW-080"
+  ],
+  "cast": [
+   [
+    "Alya",
+    "Kontraktor Junior"
+   ],
+   [
+    "Encik Rahman",
+    "Mentor / Kontraktor Senior"
+   ]
+  ],
+  "cast_status": "PROPOSED_SUBJECT_TO_D03_CONDITION",
+  "learner_facing_purpose": "Introduce the maintenance phase from the site, and let the six supervisory activities arrive as work rather than as a list.",
+  "base_state": "Site visual with both characters present; dialogue plays as character video, full text in Notes — the B02 S02 pattern.",
+  "interaction_states": [
+   "BASE — dialogue plays"
+  ],
+  "completion_condition": "dialogue complete",
+  "visual_treatment": "Site setting showing a completed planting area with built landscape elements visible. Subject is module-derived; the visual itself is NEW_MMD_ASSET_REQUIRED and is NOT one of the 46 obligations — Bariah's visual ruling covers content headings, not this scenario screen.",
+  "vo_proposal": "Dialogue is the audio. No separate narrator VO on this screen.",
+  "speaker_notes_proposal": "NON_SPOKEN_CONTEXT: unit and page provenance. SPOKEN_CONTENT_VO: the dialogue turns. PRODUCTION_INSTRUCTION_NOT_SPOKEN: character video direction and the compliance-exclusion rule.",
+  "accessibility_consideration": "The full dialogue must exist as text, not only as audio, and speaker attribution must be readable.",
+  "fallback_behaviour": "If character video is unavailable, the dialogue renders as attributed text. Nothing is lost — no fact lives only in the audio.",
+  "source_authority": "MODULE_SOURCE_ATTESTED",
+  "compliance_content_excluded": true,
+  "compliance_exclusion_rule": "No character line may state a legal, licensing, PPE, storage, SDS, spraying, notification or reporting obligation. Those belong to T04-CT-04, quoted from the source.",
+  "beats": [
+   {
+    "beat": 1,
+    "speaker": "Alya",
+    "intent": "Ask what follows once the construction and planting work is finished.",
+    "source_row_ids": [
+     "T04-ROW-002"
+    ],
+    "draft_line": "Encik Rahman, kerja pembinaan dan tanaman di tapak ini dah siap. Selepas ini apa yang perlu diuruskan?"
+   },
+   {
+    "beat": 2,
+    "speaker": "Encik Rahman",
+    "intent": "Name the maintenance phase and point at its process flow.",
+    "source_row_ids": [
+     "T04-ROW-001",
+     "T04-ROW-002",
+     "T04-ROW-003"
+    ],
+    "draft_line": "Sekarang masuk fasa penjagaan dan penyelenggaraan. Ada enam aktiviti penyeliaan yang perlu berjalan, daripada koordinasi kerja sampailah kepada perancangan sumber manusia."
+   },
+   {
+    "beat": 3,
+    "speaker": "Alya",
+    "intent": "Ask whether maintenance is the same for everything on site.",
+    "source_row_ids": [
+     "T04-ROW-005",
+     "T04-ROW-080"
+    ],
+    "draft_line": "Semua elemen di tapak diselenggara sama caranya?"
+   },
+   {
+    "beat": 4,
+    "speaker": "Encik Rahman",
+    "intent": "Draw the soft/hard distinction that organises the unit.",
+    "source_row_ids": [
+     "T04-ROW-004",
+     "T04-ROW-005",
+     "T04-ROW-079",
+     "T04-ROW-080"
+    ],
+    "draft_line": "Tidak. Landskap lembut itu elemen hidup — pokok, rumput, tanaman. Landskap kejur pula elemen binaan yang kekal. Keperluan penyelenggaraannya berbeza."
+   },
+   {
+    "beat": 5,
+    "speaker": "Alya",
+    "intent": "Close on the learner's own next step.",
+    "source_row_ids": [
+     "T04-ROW-002"
+    ],
+    "draft_line": "Jadi saya kena faham keperluan kedua-duanya sebelum susun jadual penyelenggaraan."
+   }
+  ],
+  "drafting_basis": "Bariah authorised drafting for the Rumusan and quiz (BR-W1). She did not separately authorise dialogue drafting, but she did rule that Slide 2 takes a dialogue scenario, and the stage instruction asks for a proposed contract. The lines below are therefore CAIR_ASSISTED_DRAFT on the same footing as the Rumusan — proposed, not approved, and hers to rewrite.",
+  "bariah_approval": {
+   "status": "PENDING_BARIAH_REVIEW",
+   "decision": null,
+   "comment": null
+  }
+ },
+ "contracts": [
+  {
+   "contract_id": "T04-CT-01",
+   "candidate_type": "PROCESS_FLOW",
+   "source_rows": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003"
+   ],
+   "learner_facing_purpose": "Show the six supervisory activities the module names as the maintenance process.",
+   "base_state": "Screen title, the source's introductory sentence, and the six-node process flow rendered in source order, all visible.",
+   "interaction_states": [
+    "BASE only — no interaction proposed"
+   ],
+   "completion_condition": "screen viewed",
+   "visual_treatment": "REVISED under BR-L1. The source-bound reference to T04-DGM-01 is retained for the overview, and SIX additional step visuals are now required — one per node, none of which exists. All six are NEW_MMD_ASSET_REQUIRED. Node identity and order stay exactly as measured; no seventh step.",
+   "text_treatment": "Introductory sentence verbatim; six node labels verbatim.",
+   "vo_proposal": "One screen-level VO introducing the flow and naming the six activities in order. CAIR_ASSISTED_DRAFT — wording is Bariah's to set.",
+   "speaker_notes_proposal": "NON_SPOKEN_CONTEXT: unit and page provenance. SPOKEN_CONTENT_VO: the introduction. PRODUCTION_INSTRUCTION_NOT_SPOKEN: SmartArt redraw instruction, six nodes, linear.",
+   "accessibility_consideration": "The six labels must exist as selectable text, not only inside an image, so a screen reader can reach them. A flattened bitmap of the diagram would fail this.",
+   "fallback_behaviour": "If the redraw is not ready, the screen still carries the six labels as an ordered text list — the meaning survives without the graphic.",
+   "source_authority": "MODULE_SOURCE_ATTESTED — T04-DGM-01, six nodes measured from word/diagrams/data1.xml",
+   "open_decision": "D-01 subject approval for six step assets",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   },
+   "revision": "v3",
+   "superseded_visual_treatment": "Source-bound reference to T04-DGM-01. Either a controlled redraw preserving the six nodes and their order, or a readable placeholder carrying the same six labels. No node invented, reordered or reworded.",
+   "visual_obligation_ids": [
+    "T04-VO-001",
+    "T04-VO-002",
+    "T04-VO-003",
+    "T04-VO-004",
+    "T04-VO-005",
+    "T04-VO-006"
+   ],
+   "required_visual_states": 6,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "6 × NEW_MMD_ASSET_REQUIRED",
+   "d05_status": "CONFIRMED_BARIAH_DIRECT"
+  },
+  {
+   "contract_id": "T04-CT-02",
+   "candidate_type": "CLICK_TO_REVEAL",
+   "source_rows": [
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-006",
+    "T04-ROW-026",
+    "T04-ROW-046"
+   ],
+   "learner_facing_purpose": "Introduce the three soft-landscape maintenance operations.",
+   "base_state": "Section title, section definition, and three cards labelled Siram, Baja and Racun — all three LABELS visible before any interaction.",
+   "interaction_states": [
+    "BASE",
+    "SIRAM_REVEALED",
+    "BAJA_REVEALED",
+    "RACUN_REVEALED",
+    "ALL_VIEWED"
+   ],
+   "completion_condition": "all three revealed",
+   "visual_treatment": "REVISED under BR-L2 and BR-L3. The v1 treatment was 'NONE — text-led'. That is superseded: the section main explanation and each of Siram, Baja and Racun now require a visual. Four NEW_MMD_ASSET_REQUIRED. Subjects are module-derived.",
+   "text_treatment": "One definition per operation, verbatim from its source row.",
+   "vo_proposal": "Screen-level instruction only, in the B02 pattern. CAIR_ASSISTED_DRAFT.",
+   "speaker_notes_proposal": "SPOKEN_INTERACTION_INSTRUCTION for the screen-level instruction; SPOKEN_CONTENT_VO per revealed definition.",
+   "accessibility_consideration": "Reveals must be keyboard reachable and their state announced. The all-viewed state must not be the only route to the next screen.",
+   "fallback_behaviour": "If reveal is not available, the three definitions render stacked. Nothing is lost.",
+   "source_authority": "MODULE_SOURCE_ATTESTED",
+   "open_decision": "D-01 subject approval for four assets",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   },
+   "hidden_content_classification": "SUPPLEMENTARY",
+   "hidden_content_justification": "What is hidden is the DEFINITION of each operation — descriptive expansion of a label already on screen. No legal, safety or compliance obligation is behind any reveal on this screen: all eleven of those rows sit on T04-CT-04, where they are visible in the base state. This separation is deliberate and is gated by LEGAL_ROWS_NOT_GATED_BEHIND_OPTIONAL_REVEAL.",
+   "revision": "v3",
+   "superseded_visual_treatment": "NONE — no source visual exists for any of the three. Text-led.",
+   "visual_obligation_ids": [
+    "T04-VO-007",
+    "T04-VO-008",
+    "T04-VO-017",
+    "T04-VO-028"
+   ],
+   "required_visual_states": 4,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "4 × NEW_MMD_ASSET_REQUIRED"
+  },
+  {
+   "contract_id": "T04-CT-03",
+   "candidate_type": "CLICK_TO_REVEAL",
+   "source_rows": [
+    "T04-ROW-079",
+    "T04-ROW-080",
+    "T04-ROW-081",
+    "T04-ROW-086",
+    "T04-ROW-091",
+    "T04-ROW-096"
+   ],
+   "learner_facing_purpose": "Present the four functions hard landscape performs.",
+   "base_state": "Section title, section definition, and four group labels — all visible.",
+   "interaction_states": [
+    "BASE",
+    "GROUP_1_REVEALED",
+    "GROUP_2_REVEALED",
+    "GROUP_3_REVEALED",
+    "GROUP_4_REVEALED",
+    "ALL_VIEWED"
+   ],
+   "completion_condition": "all four revealed",
+   "visual_treatment": "REVISED under BR-L5 and BR-L6. The v1 treatment was 'NONE — text-led'. The section main explanation and the four named groups now require a visual. Five NEW_MMD_ASSET_REQUIRED. Bariah did not extend the ruling to the eight sub-items beneath the four groups; none was created.",
+   "text_treatment": "Two source sub-items per group, verbatim.",
+   "vo_proposal": "Screen-level instruction only. CAIR_ASSISTED_DRAFT.",
+   "speaker_notes_proposal": "SPOKEN_INTERACTION_INSTRUCTION plus per-group SPOKEN_CONTENT_VO.",
+   "accessibility_consideration": "As T04-CT-02.",
+   "fallback_behaviour": "Stacked rendering; nothing lost.",
+   "source_authority": "MODULE_SOURCE_ATTESTED",
+   "open_decision": "D-01 subject approval for five assets; Kejur sub-item scope",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   },
+   "hidden_content_classification": "SUPPLEMENTARY",
+   "hidden_content_justification": "Purely descriptive expansion — examples of walls, pathways, retaining walls, drainage, patios, decks, gazebos. No obligation of any kind is on this screen.",
+   "revision": "v3",
+   "superseded_visual_treatment": "NONE — text-led.",
+   "visual_obligation_ids": [
+    "T04-VO-042",
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "required_visual_states": 5,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "5 × NEW_MMD_ASSET_REQUIRED"
+  },
+  {
+   "contract_id": "T04-CT-04",
+   "candidate_type": "SEQUENTIAL_STEPS",
+   "source_rows": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067",
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-071",
+    "T04-ROW-073",
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "learner_facing_purpose": "Carry the contractor's legal, HSE and risk obligations for pesticide work.",
+   "base_state": "D-04 CONFIRMED SPLIT APPLIED. Base state carries, and may not hide: the heading Perundangan dan Pelesenan; Akta Racun Makhluk Perosak 1974 (T04-ROW-066); the licensed-operator requirement (T04-ROW-067); the heading Keselamatan dan Kesihatan (HSE); PPE Lengkap and its item list (T04-ROW-069, T04-ROW-070); and the heading Pengurusan Risiko. Reveal-eligible: storage (T04-ROW-071, T04-ROW-072), SDS (T04-ROW-073, T04-ROW-074), spraying conditions (T04-ROW-076), notification (T04-ROW-077), reporting (T04-ROW-078).",
+   "interaction_states": [
+    "BASE (statute, licensed operator, PPE visible)",
+    "REVEAL_STORAGE",
+    "REVEAL_SDS",
+    "REVEAL_SPRAY_CONDITIONS",
+    "REVEAL_NOTIFICATION",
+    "REVEAL_REPORTING",
+    "ALL_VIEWED"
+   ],
+   "completion_condition": "all steps stepped through; the base state already discharges the disclosure",
+   "visual_treatment": "REVISED under BR-L4. The v1 treatment was 'NONE'. The three Aspek Pengurusan headings under Racun are source subtopics, so each requires a safety-or-compliance visual. Three NEW_MMD_ASSET_REQUIRED. Adding visuals must not become a reason to move any obligation off the base state.",
+   "text_treatment": "Eleven source rows verbatim. No paraphrase of a legal obligation.",
+   "vo_proposal": "Screen-level instruction; each obligation spoken. CAIR_ASSISTED_DRAFT.",
+   "speaker_notes_proposal": "PRODUCTION_INSTRUCTION_NOT_SPOKEN recording that this screen carries legal content and must not be abbreviated in MMD.",
+   "accessibility_consideration": "Legal content must be reachable without interaction and must not depend on colour or hover alone.",
+   "fallback_behaviour": "If stepping is unavailable, every obligation still renders. That is the point of putting them in the base state.",
+   "source_authority": "MODULE_SOURCE_ATTESTED — verbatim; the 1974 Act citation is EXTERNAL_VERIFICATION_REQUIRED and is quoted, not asserted",
+   "open_decision": "D-01 subject approval for three assets",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   },
+   "hidden_content_classification": "BARIAH_CONFIRMED_REVEAL_ELIGIBLE",
+   "hidden_content_justification": "What may be hidden is hidden on Bariah's direct confirmation (BR-C1), not on CAIR's judgement. Stage 4.2F-B0.6 argued that spraying conditions, notification and reporting should stay base-visible; she ruled otherwise and her ruling is implemented. The residual risk — a non-interacting learner does not see those three — is recorded in D04_SPLIT.residual_risk rather than silently designed around.",
+   "revision": "v3",
+   "superseded_visual_treatment": "NONE.",
+   "visual_obligation_ids": [
+    "T04-VO-039",
+    "T04-VO-040",
+    "T04-VO-041"
+   ],
+   "required_visual_states": 3,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "3 × NEW_MMD_ASSET_REQUIRED (safety and compliance)",
+   "superseded_base_state": "ALL obligation headings visible in the base state: Perundangan dan Pelesenan, Keselamatan dan Kesihatan (HSE), Pengurusan Risiko. The Akta Racun Makhluk Perosak 1974 citation and the licensed-operator requirement are on the base state, not behind an interaction.",
+   "base_visible_rows": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067",
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-075"
+   ],
+   "reveal_eligible_rows": [
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ]
+  },
+  {
+   "contract_id": "T04-CT-05",
+   "candidate_type": "COMPARISON",
+   "source_rows": [
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-079",
+    "T04-ROW-080",
+    "T04-ROW-100"
+   ],
+   "learner_facing_purpose": "Make explicit the contrast the source itself draws between soft and hard landscape.",
+   "base_state": "Two columns, one per section, each carrying its source definition, with the source's own closing contrast statement beneath.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "completion_condition": "screen viewed",
+   "visual_treatment": "UNCHANGED in substance. This screen reuses the two section main-explanation visuals required by BR-L2 and BR-L5; it creates no obligation of its own.",
+   "text_treatment": "Two section definitions and T04-ROW-100 verbatim.",
+   "vo_proposal": "One short screen-level VO. CAIR_ASSISTED_DRAFT.",
+   "speaker_notes_proposal": "NON_SPOKEN_CONTEXT plus one SPOKEN_CONTENT_VO block.",
+   "accessibility_consideration": "A two-column layout must linearise in reading order, not column-by-column visually.",
+   "fallback_behaviour": "Single-column stack, soft then hard.",
+   "source_authority": "MODULE_SOURCE_ATTESTED",
+   "open_decision": "whether this screen is wanted at all",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   },
+   "revision": "v3",
+   "superseded_visual_treatment": "NONE.",
+   "visual_obligation_ids": [],
+   "required_visual_states": 0,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "none beyond the two section visuals already counted"
+  },
+  {
+   "contract_id": "T04-CT-06",
+   "candidate_type": "PENDING_HUMAN",
+   "source_rows": [],
+   "learner_facing_purpose": "Recap and assess the unit.",
+   "base_state": "NOT PROPOSED — no treatment is chosen here.",
+   "interaction_states": [
+    "PENDING"
+   ],
+   "completion_condition": "PENDING",
+   "visual_treatment": "UNCHANGED — Bariah's visual ruling does not reach the Rumusan or the quiz.",
+   "text_treatment": "NONE IN SOURCE.",
+   "vo_proposal": "PENDING.",
+   "speaker_notes_proposal": "PENDING.",
+   "accessibility_consideration": "PENDING.",
+   "fallback_behaviour": "PENDING.",
+   "source_authority": "NO_SOURCE — the module contains no Rumusan and no assessment items anywhere",
+   "open_decision": "D-02B pass threshold; Rumusan approval; quiz authoring",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   },
+   "options": [
+    {
+     "option": "A",
+     "label": "Rumusan screen + quiz block, B02 shape",
+     "grounding": "The A3 Style and Guidelines defines both treatments and B02 implements them. Structure is proven; only content is missing.",
+     "tradeoff": "Fastest and most consistent with B02. But it imports the 4 MCQ + 1 MR shape and the 60% threshold, both of which are A3-scoped to B02 and unconfirmed for PL06. Choosing this settles D-02 by default rather than deliberately."
+    },
+    {
+     "option": "B",
+     "label": "Rumusan screen + assessment sized to T04's coverage",
+     "grounding": "T04 has a countable set of assessable learning points — three soft-landscape operations, four hard-landscape functions, and one compliance cluster. The blueprint counts them from source rows.",
+     "tradeoff": "Assessment matches what the unit actually teaches, and the compliance material gets weight proportional to its risk. But it breaks uniformity across PL06 units unless Bariah sets a rule, and it needs a threshold decision that A3 does not supply."
+    },
+    {
+     "option": "C",
+     "label": "Rumusan screen only, assessment deferred to Topik level",
+     "grounding": "Topik 4 has exactly one Bahagian, so a unit quiz and a topic quiz would assess the same content twice.",
+     "tradeoff": "Avoids duplicate assessment and is defensible for a single-lesson Topik. But it makes T04 structurally different from B02, and no artifact establishes that a Topik-level assessment exists or is planned."
+    }
+   ],
+   "revision": "v3",
+   "superseded_visual_treatment": "NONE.",
+   "visual_obligation_ids": [],
+   "required_visual_states": 0,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "none"
+  },
+  {
+   "contract_id": "T04-CT-07",
+   "candidate_type": "DIALOGUE_SCENARIO",
+   "revision": "v3",
+   "source_rows": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003",
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "learner_facing_purpose": "Introduce the maintenance phase from the site, and let the six supervisory activities arrive as work rather than as a list.",
+   "base_state": "Site visual with both characters present; dialogue plays as character video, full text in Notes — the B02 S02 pattern.",
+   "interaction_states": [
+    "BASE — dialogue plays"
+   ],
+   "completion_condition": "dialogue complete",
+   "visual_treatment": "Site setting showing a completed planting area with built landscape elements visible. Subject is module-derived; the visual itself is NEW_MMD_ASSET_REQUIRED and is NOT one of the 46 obligations — Bariah's visual ruling covers content headings, not this scenario screen.",
+   "superseded_visual_treatment": "NONE — new contract",
+   "text_treatment": "Five dialogue turns, CAIR_ASSISTED_DRAFT, bound to seven source rows.",
+   "vo_proposal": "Dialogue is the audio. No separate narrator VO on this screen.",
+   "speaker_notes_proposal": "NON_SPOKEN_CONTEXT: unit and page provenance. SPOKEN_CONTENT_VO: the dialogue turns. PRODUCTION_INSTRUCTION_NOT_SPOKEN: character video direction and the compliance-exclusion rule.",
+   "accessibility_consideration": "The full dialogue must exist as text, not only as audio, and speaker attribution must be readable.",
+   "fallback_behaviour": "If character video is unavailable, the dialogue renders as attributed text. Nothing is lost — no fact lives only in the audio.",
+   "source_authority": "MODULE_SOURCE_ATTESTED",
+   "visual_obligation_ids": [],
+   "required_visual_states": 0,
+   "visual_ruling_authority": "BARIAH_DIRECT_SCREENSHOT",
+   "visual_subject_authority": "MODULE_SOURCE_ATTESTED",
+   "missing_production_asset": "1 scenario visual plus character video",
+   "open_decision": "CR-1 character instance mapping; CR-2 dialogue review",
+   "hidden_content_classification": "NOT_APPLICABLE_NOTHING_IS_HIDDEN",
+   "hidden_content_justification": "The dialogue plays in the base state and carries no compliance obligation.",
+   "bariah_approval": {
+    "status": "PENDING_BARIAH_REVIEW",
+    "decision": null,
+    "comment": null
+   }
+  }
+ ]
+}

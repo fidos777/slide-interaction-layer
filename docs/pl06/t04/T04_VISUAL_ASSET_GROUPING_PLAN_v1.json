@@ -1,0 +1,583 @@
+{
+ "pack": "T04_VISUAL_ASSET_GROUPING_PLAN",
+ "version": "v1",
+ "stage": "4.2F-B0.7",
+ "unit_id": "K5-PL06-T04-B01",
+ "visual_obligations": 46,
+ "unique_asset_count": "NOT_YET_DETERMINED",
+ "visual_coverage_status": "NEW_MMD_VISUAL_COVERAGE_REQUIRED",
+ "obligations_are_not_assets": "46 obligations is a count of PLACES a visual is required. It is not a count of images to produce. One composite panel may discharge several obligations — the three fertiliser application methods are a single comparison in the source — and one obligation may need more than one state. Asserting UNIQUE_MMD_ASSETS = 46 would turn a requirement count into a production estimate that nobody has made.",
+ "totals": {
+  "VISUAL_OBLIGATIONS": 46,
+  "UNIQUE_ASSET_COUNT": "NOT_YET_DETERMINED",
+  "VISUAL_COVERAGE_STATUS": "NEW_MMD_VISUAL_COVERAGE_REQUIRED",
+  "asset_groups": 7,
+  "composite_candidates": 7,
+  "undetermined": 36,
+  "do_not_reuse": 3,
+  "production_started": 0,
+  "slide_2_visual_note": "The Slide 2 dialogue scenario needs a visual too, and it is NOT one of the 46. Bariah's visual ruling covers content headings; the scenario screen arrives from a separate ruling (BR-C3)."
+ },
+ "fields": [
+  "obligation_id",
+  "proposed_asset_group_id",
+  "unique_asset_candidate_id",
+  "composite_or_individual",
+  "reuse_allowed",
+  "screens_or_states_served",
+  "production_status",
+  "bariah_approval_requirement"
+ ],
+ "asset_groups": [
+  {
+   "group_id": "AG-01",
+   "label": "Six-step maintenance process",
+   "parent": "PENJAGAAN DAN PENYELENGGARAAN",
+   "composite_rationale": "The six steps are one linear flow in the source. They could be six separate illustrations, one six-panel composite, or a sequence of states over the redrawn diagram."
+  },
+  {
+   "group_id": "AG-02",
+   "label": "Landskap Lembut — category",
+   "parent": "Landskap Lembut",
+   "composite_rationale": "A single category-establishing visual."
+  },
+  {
+   "group_id": "AG-03",
+   "label": "Siram — operation and subtopics",
+   "parent": "Siram",
+   "composite_rationale": "Two natural composites sit inside this group: the implementation methods, and the monitoring signs. The management subtopics are more likely individual."
+  },
+  {
+   "group_id": "AG-04",
+   "label": "Baja — operation and subtopics",
+   "parent": "Baja",
+   "composite_rationale": "The three application methods are presented together in the source and are a strong composite candidate."
+  },
+  {
+   "group_id": "AG-05",
+   "label": "Racun — IPM, control types and pesticide types",
+   "parent": "Racun",
+   "composite_rationale": "The IPM priority order and the three pesticide types are each inherently comparative and would lose meaning split apart."
+  },
+  {
+   "group_id": "AG-06",
+   "label": "Racun — legal, HSE and risk compliance",
+   "parent": "Racun",
+   "composite_rationale": "Safety and compliance visuals. These interact with the D-04 base/reveal split, so their grouping is not purely a production question."
+  },
+  {
+   "group_id": "AG-07",
+   "label": "Landskap Kejur — category and four functions",
+   "parent": "Landskap Kejur",
+   "composite_rationale": "Five visuals whose subjects are architectural; a shared visual language matters more here than elsewhere."
+  }
+ ],
+ "plan": [
+  {
+   "obligation_id": "T04-VO-001",
+   "proposed_asset_group_id": "AG-01",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-01 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-002",
+   "proposed_asset_group_id": "AG-01",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-01 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-003",
+   "proposed_asset_group_id": "AG-01",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-01 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-004",
+   "proposed_asset_group_id": "AG-01",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-01 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-005",
+   "proposed_asset_group_id": "AG-01",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-01 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-006",
+   "proposed_asset_group_id": "AG-01",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-01 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-007",
+   "proposed_asset_group_id": "AG-02",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-008",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-009",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — the source presents the methods as a set",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-010",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-011",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — sprinkler against drip, one frame",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-012",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "NOT_APPLICABLE — no subject proposed",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-013",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-014",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-015",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — both failure directions in one frame",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-016",
+   "proposed_asset_group_id": "AG-03",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-017",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-018",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — the source presents the methods as a set",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-019",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-020",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-021",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-022",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "NOT_APPLICABLE — no subject proposed",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-023",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-024",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-025",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "SIMILAR_SUBJECT_DO_NOT_REUSE",
+   "reuse_note": "Fertiliser storage is dry, secure and away from water. Pesticide storage is locked, labelled and ventilated. Reusing one for the other would understate the pesticide requirement.",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-026",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "SIMILAR_SUBJECT_DO_NOT_REUSE",
+   "reuse_note": "PPE appears here (gloves and face mask for chemical fertiliser) and again under Racun HSE (respirator, goggles, chemical gloves, protective suit). Different equipment for different hazards — one asset would misstate one of them.",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-027",
+   "proposed_asset_group_id": "AG-04",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-028",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-029",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — the order is the teaching point",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-030",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-031",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-032",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-033",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-034",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — type paired with target",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-035",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-036",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-037",
+   "proposed_asset_group_id": "AG-05",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-02 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-038",
+   "proposed_asset_group_id": "AG-06",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "NOT_APPLICABLE — no subject proposed",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-03 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-039",
+   "proposed_asset_group_id": "AG-06",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-03 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-040",
+   "proposed_asset_group_id": "AG-06",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "SIMILAR_SUBJECT_DO_NOT_REUSE",
+   "reuse_note": "See T04-ROW-042. The pesticide PPE set is materially heavier.",
+   "screens_or_states_served": "T04-SC-03 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-041",
+   "proposed_asset_group_id": "AG-06",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-03 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-042",
+   "proposed_asset_group_id": "AG-07",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-05 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-043",
+   "proposed_asset_group_id": "AG-07",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-05 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-044",
+   "proposed_asset_group_id": "AG-07",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-05 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-045",
+   "proposed_asset_group_id": "AG-07",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "UNDETERMINED_PENDING_BARIAH",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-05 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  },
+  {
+   "obligation_id": "T04-VO-046",
+   "proposed_asset_group_id": "AG-07",
+   "unique_asset_candidate_id": "NOT_YET_ASSIGNED",
+   "composite_or_individual": "COMPOSITE_CANDIDATE — contrast needs two things in frame",
+   "reuse_allowed": "NOT_YET_ASSESSED",
+   "reuse_note": "",
+   "screens_or_states_served": "T04-SC-05 — state count not yet decided",
+   "production_status": "NOT_STARTED",
+   "bariah_approval_requirement": "SUBJECT_AND_STYLE_APPROVAL_REQUIRED"
+  }
+ ]
+}

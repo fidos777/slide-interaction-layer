@@ -1,0 +1,706 @@
+{
+ "pack": "T04_BARIAH_FINAL_STRUCTURAL_RULINGS",
+ "version": "v1",
+ "stage": "4.2F-B0.7",
+ "unit_id": "K5-PL06-T04-B01",
+ "content_status": "CAIR_ASSISTED_DRAFT",
+ "approval_status": "PENDING_BARIAH_REVIEW",
+ "instructional_authority": "BARIAH",
+ "approval_totals": {
+  "CONFIRMED_POLICY_DECISIONS": 6,
+  "CONDITIONALLY_CONFIRMED_DECISIONS": 1,
+  "APPROVED_FINAL_INSTRUCTIONAL_CONTENT_ITEMS": 0,
+  "PENDING_BARIAH_CONTENT_REVIEWS": 4,
+  "confirmed_policy_decision_ids": [
+   "D-01",
+   "D-02A",
+   "D-02B",
+   "D-02C",
+   "D-04",
+   "D-05"
+  ],
+  "conditionally_confirmed_decision_ids": [
+   "D-03"
+  ],
+  "superseded_field": "APPROVED_ITEMS",
+  "supersession_note": "Stage 4.2F-B0.6 reported APPROVED_ITEMS = 0. That single number conflated policy with content: it was true of learner-facing text and false of structure, since Bariah had already confirmed the visual ruling and the quiz composition. Four typed totals replace it. APPROVED_ITEMS is not emitted by this stage."
+ },
+ "evidence_delivery": {
+  "expected_by_instruction": 3,
+  "actually_received": 1,
+  "status": "ONE_IMAGE_CARRIES_ALL_THREE_CONFIRMATIONS",
+  "checked": [
+   "the instruction message image blocks",
+   "/root/.claude/uploads/<session>/ — no new files since the Stage 4.2F-A2 ZIP",
+   "the session transcript"
+  ],
+  "consequence": "No ruling is missing. The three confirmations the instruction lists are all legible in T04-EV-03. Only the evidence-item count differs."
+ },
+ "evidence_dir": "reviews/storyboard-bariah/t04_bariah_review",
+ "evidence_new": [
+  {
+   "evidence_id": "T04-EV-03",
+   "frozen_filename": "T04_BARIAH_FINAL_STRUCTURAL_CONFIRMATIONS_20260802.webp",
+   "frozen_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_FINAL_STRUCTURAL_CONFIRMATIONS_20260802.webp",
+   "original_uploaded_filename": "NOT_RECOVERABLE_FROM_SESSION_TRANSPORT",
+   "byte_size": 138074,
+   "sha256": "9cf3842e70b24d304bb32e5e3947ece0db2b3bbc826727a3915be80ab068c353",
+   "media_type": "image/webp",
+   "dimensions_px": "1194 x 1520",
+   "colour_mode": "RGB",
+   "evidence_date": "2026-08-02",
+   "received_utc": "2026-08-02T09:22:55Z",
+   "reviewer": "BARIAH",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "scope": "K5-PL06-T04-B01",
+   "modification": "NONE — byte-identical",
+   "description": "WhatsApp conversation 'Bariah eLearning', 4:56 PM to 4:59 PM. Carries four separate confirmations: the legal base/reveal split, the 60 percent pass mark for all PLs, an additional character in a dialogue scenario on Slide 2, and the six-step diagram treatment — plus the condition on reusing Alya and Encik Rahman.",
+   "ruling_locators": [
+    "BR-C1",
+    "BR-C2",
+    "BR-C3",
+    "BR-C4",
+    "BR-C5"
+   ]
+  }
+ ],
+ "evidence_all": [
+  {
+   "evidence_id": "T04-EV-01",
+   "frozen_filename": "T04_BARIAH_VISUAL_REQUIREMENT_SHEET_20260802.jpg",
+   "frozen_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_VISUAL_REQUIREMENT_SHEET_20260802.jpg",
+   "original_uploaded_filename": "NOT_RECOVERABLE_FROM_SESSION_TRANSPORT",
+   "byte_size": 75362,
+   "sha256": "95f84819c70b6ef89fb8fe29ddd8ac19850014790de18587a0cfe850637a2008",
+   "media_type": "image/jpeg",
+   "dimensions_px": "772 x 697",
+   "colour_mode": "RGB",
+   "evidence_date": "2026-08-02",
+   "received_utc": "2026-08-02T08:52:01Z",
+   "reviewer": "BARIAH",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "scope": "K5-PL06-T04-B01",
+   "modification": "NONE — byte-identical",
+   "description": "Bariah's marked-up T04 visual requirement sheet, titled 'PL06 Topik 4'. A three-row table: the module's opening process diagram, Landskap Lembut, and Landskap Kejur, each with a handwritten-style requirement in the right-hand cell.",
+   "ruling_locators": [
+    "BR-L1",
+    "BR-L2",
+    "BR-L3",
+    "BR-L4",
+    "BR-L5",
+    "BR-L6"
+   ]
+  },
+  {
+   "evidence_id": "T04-EV-02",
+   "frozen_filename": "T04_BARIAH_QUIZ_RUMUSAN_WHATSAPP_20260802.webp",
+   "frozen_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_QUIZ_RUMUSAN_WHATSAPP_20260802.webp",
+   "original_uploaded_filename": "NOT_RECOVERABLE_FROM_SESSION_TRANSPORT",
+   "byte_size": 121162,
+   "sha256": "0ae2aa29a05640495f42863b9c5e7daa2a1adaa1961f925951b9e393fd2154e9",
+   "media_type": "image/webp",
+   "dimensions_px": "1076 x 1338",
+   "colour_mode": "RGB",
+   "evidence_date": "2026-08-02",
+   "received_utc": "2026-08-02T08:52:01Z",
+   "reviewer": "BARIAH",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "scope": "K5-PL06-T04-B01",
+   "modification": "NONE — byte-identical",
+   "description": "WhatsApp conversation 'Bariah eLearning'. Carries the same requirement sheet shared at 4:41 PM captioned '1. Visual', then two written messages at 4:44 PM and 4:45 PM giving the quiz, Rumusan and Kandungan Akta rulings.",
+   "ruling_locators": [
+    "BR-W1",
+    "BR-W2",
+    "BR-W3",
+    "BR-W4",
+    "BR-W5"
+   ]
+  },
+  {
+   "evidence_id": "T04-EV-03",
+   "frozen_filename": "T04_BARIAH_FINAL_STRUCTURAL_CONFIRMATIONS_20260802.webp",
+   "frozen_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_FINAL_STRUCTURAL_CONFIRMATIONS_20260802.webp",
+   "original_uploaded_filename": "NOT_RECOVERABLE_FROM_SESSION_TRANSPORT",
+   "byte_size": 138074,
+   "sha256": "9cf3842e70b24d304bb32e5e3947ece0db2b3bbc826727a3915be80ab068c353",
+   "media_type": "image/webp",
+   "dimensions_px": "1194 x 1520",
+   "colour_mode": "RGB",
+   "evidence_date": "2026-08-02",
+   "received_utc": "2026-08-02T09:22:55Z",
+   "reviewer": "BARIAH",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "scope": "K5-PL06-T04-B01",
+   "modification": "NONE — byte-identical",
+   "description": "WhatsApp conversation 'Bariah eLearning', 4:56 PM to 4:59 PM. Carries four separate confirmations: the legal base/reveal split, the 60 percent pass mark for all PLs, an additional character in a dialogue scenario on Slide 2, and the six-step diagram treatment — plus the condition on reusing Alya and Encik Rahman.",
+   "ruling_locators": [
+    "BR-C1",
+    "BR-C2",
+    "BR-C3",
+    "BR-C4",
+    "BR-C5"
+   ]
+  }
+ ],
+ "evidence_legibility": [
+  {
+   "item": "The word 'Akta' in the D-04 base-screen list",
+   "legible_in_screenshot": false,
+   "what_is_legible": "The quoted proposal is cropped at the left margin. The line reads '…rator berlesen dan PPE dipaparkan terus pada skrin' — the item before 'operator berlesen' is cut off.",
+   "authority": "INFERRED_FROM_CROPPED_LINE_PLUS_FIRDAUS_STAGE_INSTRUCTION",
+   "basis": "The Stage 4.2F-B0.7 instruction states the base screen must show Akta Racun Makhluk Perosak 1974, the licensed operator requirement and PPE. The cropped line is consistent with that and 'rator' is the tail of 'operator'. Bariah's 'yes ok, confirmed' applies to the whole proposal she was sent.",
+   "note": "Recorded here so that the statute's place on the base screen is traceable to an inference plus a stage instruction, not misattributed to a legible screenshot line."
+  }
+ ],
+ "ruling_locators_new": [
+  {
+   "locator": "BR-C1",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:56 PM",
+   "verbatim": "yes ok, confirmed",
+   "replying_to": "…rator berlesen dan PPE dipaparkan terus pada skrin; …S, penyimpanan, penyemburan, notifikasi dan laporan boleh guna cli… …n cadangan ini.",
+   "reading": "D-04 confirmed. The base screen carries the statute, the licensed-operator requirement and PPE; SDS, storage, spraying conditions, notification and reporting may use click-to-reveal.",
+   "decision": "D-04"
+  },
+  {
+   "locator": "BR-C2",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:58 PM, line 1",
+   "verbatim": "1. Markah lulus 60% semua PL",
+   "replying_to": "…ah lulus 60% juga terpakai kepada semua PL?",
+   "reading": "D-02B confirmed. 60 percent, and the scope is all PLs — not T04, not PL06.",
+   "decision": "D-02B"
+  },
+  {
+   "locator": "BR-C3",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:58 PM, line 2",
+   "verbatim": "2. Guna watak tambahan di Slide 2 (perbualan dialog senario)",
+   "replying_to": "…oleh guna Hilmi sebagai narrator sahaja, tanpa wata…",
+   "reading": "D-03 answered, and answered AGAINST the narrator-only option that was put to her. Slide 2 takes an additional character in a dialogue scenario.",
+   "decision": "D-03"
+  },
+  {
+   "locator": "BR-C4",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:58 PM",
+   "verbatim": "yes ok, confirmed",
+   "replying_to": "…guna diagram enam langkah d… …ohon confirm juga.",
+   "reading": "D-05 confirmed — the six-step source diagram is used, redrawn later, order unchanged.",
+   "decision": "D-05"
+  },
+  {
+   "locator": "BR-C5",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:59 PM",
+   "verbatim": "jika Alya & Encik Rahman, sesuai, boleh guna semula. Jika tidak, guna watak baru",
+   "replying_to": "1. Markah lulus 60% semua PL / 2. Guna watak tambahan di Slide 2 (perbualan dialog senario)",
+   "reading": "The cast is confirmed WITH A CONDITION. Reuse the existing pair if they suit; create a new character if they do not. Judging the fit is the work, and it cannot be skipped by simply naming them.",
+   "decision": "D-03"
+  }
+ ],
+ "ruling_locators_all": [
+  {
+   "locator": "BR-L1",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 1 (process diagram), right cell",
+   "verbatim": "Perlu visual juga untuk setiap langkah",
+   "reading": "A visual is required for EVERY step of the six-step process, in addition to the existing diagram."
+  },
+  {
+   "locator": "BR-L2",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 2 (Landskap Lembut), right cell, line 1",
+   "verbatim": "Penerangan utama – perlu visual",
+   "reading": "The Landskap Lembut main explanation requires a visual."
+  },
+  {
+   "locator": "BR-L3",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 2 (Landskap Lembut), right cell, line 2",
+   "verbatim": "Siram, Baja, Racun, - penerangan utama perlu visual",
+   "reading": "Each of the three named operations requires a visual for its main explanation."
+  },
+  {
+   "locator": "BR-L4",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 2 (Landskap Lembut), right cell, line 3",
+   "verbatim": "Their sub – perlu visual",
+   "reading": "Every source subtopic beneath Siram, Baja and Racun requires a visual. Bariah did not enumerate them; this inventory enumerates them from the controlled extract so that 'their sub' is never carried forward as a vague phrase."
+  },
+  {
+   "locator": "BR-L5",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 3 (Landskap Kejur), right cell, line 1",
+   "verbatim": "Penerangan utama – perlu visual",
+   "reading": "The Landskap Kejur main explanation requires a visual."
+  },
+  {
+   "locator": "BR-L6",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 3 (Landskap Kejur), right cell, line 2",
+   "verbatim": "Pengurusan Ruang dan Sirkulasi, Fungsi Struktur dan Kejuruteraan, Kebolehgunaan dan Kemudahan, Estetika dan Reka Bentuk – perlu visual",
+   "reading": "The four named Landskap Kejur groups each require a visual. Bariah named these four explicitly and did NOT extend the requirement to their sub-items — see SCOPE_ASYMMETRY below."
+  },
+  {
+   "locator": "BR-W1",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 1",
+   "verbatim": "Kuiz & Rumusan - Yes. please draft. I will check.",
+   "reading": "CAIR is authorised to prepare drafts of both. Bariah reviews them. Drafting authorisation is not approval."
+  },
+  {
+   "locator": "BR-W2",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 2",
+   "verbatim": "Kuiz - 4 MCQ, 1 Multiple Response - Apply to ALL PLs in Kursus",
+   "reading": "Quiz composition is confirmed and its scope is the whole Kursus, not T04 and not PL06 alone."
+  },
+  {
+   "locator": "BR-W3",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 3",
+   "verbatim": "Rumusan - Follow writing style Topik 3 Bahagian 2",
+   "reading": "A STYLE instruction. It governs how the Rumusan is written, not what it says. T04 facts only."
+  },
+  {
+   "locator": "BR-W4",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 4",
+   "verbatim": "Kandungan Akta - Tak pasti ni yang di mana?",
+   "reading": "Bariah is asking which content the legislative question referred to. This is a question back to us, not a ruling."
+  },
+  {
+   "locator": "BR-W5",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:45 PM",
+   "verbatim": "4. Kandungan Akta - tak pasti penerangan tambahan yang mana? Click to reveal jika diperlukan",
+   "reading": "Bariah asks which supplementary explanation was meant, and indicates that click-to-reveal is acceptable IF needed. That is a conditional, not a confirmed split."
+  },
+  {
+   "locator": "BR-C1",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:56 PM",
+   "verbatim": "yes ok, confirmed",
+   "replying_to": "…rator berlesen dan PPE dipaparkan terus pada skrin; …S, penyimpanan, penyemburan, notifikasi dan laporan boleh guna cli… …n cadangan ini.",
+   "reading": "D-04 confirmed. The base screen carries the statute, the licensed-operator requirement and PPE; SDS, storage, spraying conditions, notification and reporting may use click-to-reveal.",
+   "decision": "D-04"
+  },
+  {
+   "locator": "BR-C2",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:58 PM, line 1",
+   "verbatim": "1. Markah lulus 60% semua PL",
+   "replying_to": "…ah lulus 60% juga terpakai kepada semua PL?",
+   "reading": "D-02B confirmed. 60 percent, and the scope is all PLs — not T04, not PL06.",
+   "decision": "D-02B"
+  },
+  {
+   "locator": "BR-C3",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:58 PM, line 2",
+   "verbatim": "2. Guna watak tambahan di Slide 2 (perbualan dialog senario)",
+   "replying_to": "…oleh guna Hilmi sebagai narrator sahaja, tanpa wata…",
+   "reading": "D-03 answered, and answered AGAINST the narrator-only option that was put to her. Slide 2 takes an additional character in a dialogue scenario.",
+   "decision": "D-03"
+  },
+  {
+   "locator": "BR-C4",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:58 PM",
+   "verbatim": "yes ok, confirmed",
+   "replying_to": "…guna diagram enam langkah d… …ohon confirm juga.",
+   "reading": "D-05 confirmed — the six-step source diagram is used, redrawn later, order unchanged.",
+   "decision": "D-05"
+  },
+  {
+   "locator": "BR-C5",
+   "evidence_id": "T04-EV-03",
+   "position": "WhatsApp, 4:59 PM",
+   "verbatim": "jika Alya & Encik Rahman, sesuai, boleh guna semula. Jika tidak, guna watak baru",
+   "replying_to": "1. Markah lulus 60% semua PL / 2. Guna watak tambahan di Slide 2 (perbualan dialog senario)",
+   "reading": "The cast is confirmed WITH A CONDITION. Reuse the existing pair if they suit; create a new character if they do not. Judging the fit is the work, and it cannot be skipped by simply naming them.",
+   "decision": "D-03"
+  }
+ ],
+ "decision_statuses": [
+  "CONFIRMED_BARIAH_DIRECT",
+  "CONFIRMED_WITH_EXPANSION",
+  "CONFIRMED_WITH_CONDITION",
+  "DRAFT_AUTHORISED_PENDING_BARIAH_REVIEW",
+  "PARTIALLY_RESOLVED",
+  "CLARIFICATION_REQUIRED",
+  "UNRESOLVED"
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-01",
+   "title": "Visual treatment",
+   "status": "CONFIRMED_WITH_EXPANSION",
+   "ruling": "VISUAL_REQUIRED_FOR_BARIAH_NAMED_POPULATION",
+   "evidence": [
+    "BR-L1",
+    "BR-L2",
+    "BR-L3",
+    "BR-L4",
+    "BR-L5",
+    "BR-L6"
+   ],
+   "changed_this_stage": false,
+   "scope": "THIS_UNIT_ONLY",
+   "structural_status": "RESOLVED",
+   "open_content_points": [
+    "visual subject and style approval for all 46 obligations"
+   ]
+  },
+  {
+   "decision_id": "D-02A",
+   "title": "Quiz composition",
+   "status": "CONFIRMED_BARIAH_DIRECT",
+   "ruling": "4 MCQ + 1 MULTIPLE_RESPONSE",
+   "evidence": [
+    "BR-W2"
+   ],
+   "changed_this_stage": false,
+   "scope": "ALL_PLS_IN_KURSUS",
+   "structural_status": "RESOLVED",
+   "open_content_points": [
+    "what each slot tests; the questions themselves"
+   ]
+  },
+  {
+   "decision_id": "D-02B",
+   "title": "Passing threshold",
+   "status": "CONFIRMED_BARIAH_DIRECT",
+   "ruling": "60_PERCENT",
+   "evidence": [
+    "BR-C2"
+   ],
+   "changed_this_stage": true,
+   "previous_status": "UNRESOLVED",
+   "change_note": "Stage 4.2F-B0.6 held this open and refused to carry 60 percent forward as a default. Bariah has now confirmed it directly, and confirmed the scope is all PLs in the Kursus. The A3 figure and her ruling agree, but it is her ruling that authorises it.",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "structural_status": "RESOLVED",
+   "open_content_points": []
+  },
+  {
+   "decision_id": "D-02C",
+   "title": "Rumusan",
+   "status": "DRAFT_AUTHORISED_PENDING_BARIAH_REVIEW",
+   "ruling": "FOLLOW_WRITING_STYLE_TOPIK_3_BAHAGIAN_2",
+   "evidence": [
+    "BR-W1",
+    "BR-W3"
+   ],
+   "changed_this_stage": false,
+   "scope": "THIS_UNIT_ONLY",
+   "structural_status": "RESOLVED",
+   "open_content_points": [
+    "review, edit or approve the four drafted statements"
+   ]
+  },
+  {
+   "decision_id": "D-03",
+   "title": "T04 cast and Slide 2 treatment",
+   "status": "CONFIRMED_WITH_CONDITION",
+   "ruling": "SLIDE_2_DIALOGUE_SCENARIO_WITH_ADDITIONAL_CHARACTER",
+   "evidence": [
+    "BR-C3",
+    "BR-C5"
+   ],
+   "changed_this_stage": true,
+   "previous_status": "UNRESOLVED",
+   "change_note": "Bariah was asked whether Hilmi alone, as narrator with no characters, would do. She answered against that: an additional character in a dialogue scenario on Slide 2. Reuse of Alya and Encik Rahman is permitted ONLY if they suit; otherwise a new character. The condition is the ruling — naming them without assessing fit would ignore half of what she wrote.",
+   "scope": "THIS_UNIT_ONLY",
+   "structural_status": "CONDITIONALLY_RESOLVED",
+   "open_content_points": [
+    "character instance mapping",
+    "Slide 2 dialogue review"
+   ]
+  },
+  {
+   "decision_id": "D-04",
+   "title": "Legislative content base/reveal split",
+   "status": "CONFIRMED_BARIAH_DIRECT",
+   "ruling": "BASE_STATUTE_OPERATOR_PPE__REVEAL_ELIGIBLE_SDS_STORAGE_SPRAY_NOTIFY_REPORT",
+   "evidence": [
+    "BR-C1"
+   ],
+   "changed_this_stage": true,
+   "previous_status": "CLARIFICATION_REQUIRED",
+   "change_note": "Confirmed, and BROADER than the proposal CAIR recommended. Stage 4.2F-B0.6 marked only three rows as reveal candidates and held spraying conditions, notification and reporting as base-visible obligations. Bariah's confirmed split makes those three reveal-eligible too. Her ruling is implemented as written; the delta is recorded so the change is visible rather than absorbed.",
+   "scope": "K5-PL06-T04-B01",
+   "structural_status": "RESOLVED",
+   "open_content_points": []
+  },
+  {
+   "decision_id": "D-05",
+   "title": "SmartArt production treatment",
+   "status": "CONFIRMED_BARIAH_DIRECT",
+   "ruling": "SOURCE_BOUND_IN_REVIEW__CONTROLLED_REDRAW_IN_MMD__SIX_NODE_ORDER_INVARIANT",
+   "evidence": [
+    "BR-L1",
+    "BR-C4"
+   ],
+   "changed_this_stage": true,
+   "previous_status": "PARTIALLY_RESOLVED",
+   "change_note": "All three outstanding confirmations are given. D-05 is removed from every unresolved list.",
+   "scope": "THIS_UNIT_ONLY",
+   "structural_status": "RESOLVED",
+   "open_content_points": []
+  }
+ ],
+ "d02b": {
+  "decision_id": "D-02B",
+  "status": "CONFIRMED_BARIAH_DIRECT",
+  "pass_threshold": "60_PERCENT",
+  "scope": "ALL_PLS_IN_KURSUS",
+  "evidence": "BR-C2"
+ },
+ "d03_policy": {
+  "decision_id": "D-03",
+  "slide": "SLIDE_2",
+  "treatment": "DIALOGUE_SCENARIO_WITH_ADDITIONAL_CHARACTER",
+  "policy_status": "CONFIRMED_WITH_CONDITION",
+  "preferred_existing_cast": [
+   "ALYA",
+   "ENCIK_RAHMAN"
+  ],
+  "reuse_condition": "USE_IF_CONTEXTUALLY_APPROPRIATE",
+  "fallback": "CREATE_NEW_CHARACTER_IF_EXISTING_PAIR_IS_NOT_CONTEXTUALLY_APPROPRIATE",
+  "character_instance_mapping": "NOT_COMPLETE",
+  "evidence": [
+   "BR-C3",
+   "BR-C5"
+  ],
+  "prior_b02_policy": {
+   "source": "reviews/source-completion/generator/audit/b02_decision_oracle_v0_4_4.py — D3",
+   "verbatim": "Yes lulus. Boleh diguna pakai di Bahagian/Topik/PL lain jika bersesuaian",
+   "reuse_policy": "APPROVED_WHERE_CONTEXTUALLY_APPROPRIATE",
+   "consistency": "BR-C5 restates the same conditional policy for T04. The two rulings agree; neither makes the reuse automatic."
+  },
+  "roles_as_established_in_b02": [
+   [
+    "Alya",
+    "Kontraktor Junior"
+   ],
+   [
+    "Encik Rahman",
+    "Mentor / Kontraktor Senior"
+   ]
+  ],
+  "roles_source": "reviews/source-completion/generator/v0_4/b02_proof_content_v0_4.py, S02 cast"
+ },
+ "d04_split": {
+  "decision_id": "D-04",
+  "status": "CONFIRMED_BARIAH_DIRECT",
+  "evidence": [
+   "BR-C1"
+  ],
+  "scope": "K5-PL06-T04-B01",
+  "applied_to_contracts": true,
+  "base_screen_must_show": [
+   {
+    "item": "Akta Racun Makhluk Perosak 1974",
+    "rows": [
+     "T04-ROW-066"
+    ],
+    "legibility": "INFERRED — see EVIDENCE_LEGIBILITY"
+   },
+   {
+    "item": "licensed operator requirement",
+    "rows": [
+     "T04-ROW-067"
+    ],
+    "legibility": "LEGIBLE — 'rator berlesen … dipaparkan terus pada skrin'"
+   },
+   {
+    "item": "PPE",
+    "rows": [
+     "T04-ROW-069",
+     "T04-ROW-070"
+    ],
+    "legibility": "LEGIBLE — 'dan PPE dipaparkan terus pada skrin'"
+   }
+  ],
+  "reveal_may_contain": [
+   {
+    "item": "SDS",
+    "rows": [
+     "T04-ROW-073",
+     "T04-ROW-074"
+    ]
+   },
+   {
+    "item": "safe or locked storage",
+    "rows": [
+     "T04-ROW-071",
+     "T04-ROW-072"
+    ]
+   },
+   {
+    "item": "spraying conditions",
+    "rows": [
+     "T04-ROW-076"
+    ]
+   },
+   {
+    "item": "notification",
+    "rows": [
+     "T04-ROW-077"
+    ]
+   },
+   {
+    "item": "reporting",
+    "rows": [
+     "T04-ROW-078"
+    ]
+   }
+  ],
+  "headings_always_visible": [
+   "T04-ROW-065",
+   "T04-ROW-068",
+   "T04-ROW-075"
+  ],
+  "base_visible_rows": [
+   "T04-ROW-065",
+   "T04-ROW-066",
+   "T04-ROW-067",
+   "T04-ROW-068",
+   "T04-ROW-069",
+   "T04-ROW-070",
+   "T04-ROW-075"
+  ],
+  "reveal_eligible_rows": [
+   "T04-ROW-071",
+   "T04-ROW-072",
+   "T04-ROW-073",
+   "T04-ROW-074",
+   "T04-ROW-076",
+   "T04-ROW-077",
+   "T04-ROW-078"
+  ],
+  "out_of_scope_rows_unchanged": [
+   "T04-ROW-037",
+   "T04-ROW-039",
+   "T04-ROW-041",
+   "T04-ROW-043",
+   "T04-ROW-045"
+  ],
+  "reveal_is_permissive": "'boleh guna click to reveal' permits reveal; it does not require it. A build that shows all seven on the base screen still complies.",
+  "delta_from_cair_proposal": {
+   "cair_proposed_reveal": [
+    "T04-ROW-070",
+    "T04-ROW-072",
+    "T04-ROW-074"
+   ],
+   "bariah_confirmed_reveal": [
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "moved_to_base": [
+    "T04-ROW-070"
+   ],
+   "newly_reveal_eligible": [
+    "T04-ROW-071",
+    "T04-ROW-073",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "note": "Two changes, in opposite directions. PPE detail moves ONTO the base screen — Bariah put PPE there explicitly. Spraying conditions, notification and reporting become reveal-eligible, which Stage 4.2F-B0.6 had argued against on the grounds that a learner who never interacts should still see them. She is the Instructional Designer and she has ruled; the ruling is implemented as written and the disagreement is recorded here rather than quietly re-litigated in a contract."
+  },
+  "residual_risk": "A learner who never interacts will not see the spray-drift limit, the notification duty or the reporting duty. Worth one sentence to Bariah at some future point; NOT worth re-asking now, since she answered the exact question that was put to her."
+ },
+ "d05": {
+  "decision_id": "D-05",
+  "status": "CONFIRMED_BARIAH_DIRECT",
+  "review_storyboard": "USE_SOURCE_BOUND_SIX_STEP_DIAGRAM",
+  "future_mmd": "CONTROLLED_REDRAW",
+  "invariant": "PRESERVE_SIX_NODE_IDENTITY_AND_ORDER",
+  "mmd_production_status": "NOT_STARTED",
+  "six_nodes_in_order": [
+   "Koordinasi dan Demonstrasi Penyelenggaraan Taman",
+   "Penyeliaan Penyelenggaraan Taman",
+   "Penyeliaan Operasi Nurseri",
+   "Penyeliaan Alatan dan Mesin Penyelenggaraan Taman",
+   "Penyeliaan Inventori Taman",
+   "Perancangan Sumber Manusia dan Kebajikan Pekerja"
+  ],
+  "asset_id": "T04-DGM-01",
+  "asset_sha256": "f88edf2d305a546dfd05e45b9306503fbe7963bdd7ea1bcfe1ff9d74a1516e43",
+  "hierarchy": "NONE — flat; a redraw must not introduce a tree, cycle or grouping",
+  "evidence": [
+   "BR-L1",
+   "BR-C4"
+  ]
+ },
+ "readiness": {
+  "structural_decisions_status": "CLOSED",
+  "structural_decisions": [
+   {
+    "decision_id": "D-01",
+    "title": "Visual treatment",
+    "status": "CONFIRMED_WITH_EXPANSION",
+    "structural_status": "RESOLVED"
+   },
+   {
+    "decision_id": "D-02A",
+    "title": "Quiz composition",
+    "status": "CONFIRMED_BARIAH_DIRECT",
+    "structural_status": "RESOLVED"
+   },
+   {
+    "decision_id": "D-02B",
+    "title": "Passing threshold",
+    "status": "CONFIRMED_BARIAH_DIRECT",
+    "structural_status": "RESOLVED"
+   },
+   {
+    "decision_id": "D-02C",
+    "title": "Rumusan",
+    "status": "DRAFT_AUTHORISED_PENDING_BARIAH_REVIEW",
+    "structural_status": "RESOLVED"
+   },
+   {
+    "decision_id": "D-03",
+    "title": "T04 cast and Slide 2 treatment",
+    "status": "CONFIRMED_WITH_CONDITION",
+    "structural_status": "CONDITIONALLY_RESOLVED"
+   },
+   {
+    "decision_id": "D-04",
+    "title": "Legislative content base/reveal split",
+    "status": "CONFIRMED_BARIAH_DIRECT",
+    "structural_status": "RESOLVED"
+   },
+   {
+    "decision_id": "D-05",
+    "title": "SmartArt production treatment",
+    "status": "CONFIRMED_BARIAH_DIRECT",
+    "structural_status": "RESOLVED"
+   }
+  ],
+  "remaining_work": [
+   "Character instance mapping",
+   "Slide 2 dialogue review",
+   "Rumusan v2 review",
+   "Five-slot quiz authoring, editing and approval"
+  ],
+  "storyboard_status": "NOT_GENERATED",
+  "storyboard_approval": "NOT_APPROVED — no storyboard exists for T04",
+  "mmd_status": "NOT_STARTED",
+  "what_is_not_claimed": [
+   "that the final storyboard is approved — none has been generated",
+   "a final screen count",
+   "a unique MMD asset count",
+   "that any learner-facing text is approved",
+   "that the character instance mapping is complete"
+  ]
+ }
+}
