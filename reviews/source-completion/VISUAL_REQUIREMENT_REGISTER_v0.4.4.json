@@ -210,5 +210,28 @@
    "persistence_required": true,
    "evidence_id_persistence": "D3"
   }
- ]
+ ],
+ "stage_4_2e_b_implementation": {
+  "date": "2026-08-02",
+  "implemented_in": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx",
+  "component_main_overview_counts": {
+   "STRUKTUR_PERSISIR_AIR": 5,
+   "STRUKTUR_TEDUHAN": 5,
+   "KEMUDAHAN_AWAM": 3,
+   "WATER_FEATURE": 3,
+   "KERUSI_TAMAN": 3,
+   "PAPAN_TANDA": 2,
+   "TONG_SAMPAH": 3,
+   "DRINKING_FOUNTAIN": 2,
+   "BBQ_PIT": 1
+  },
+  "total_overview_subjects_rendered": 27,
+  "overview_rendered_on_every_state_of_the_screen": true,
+  "component_main_state_pages": 22,
+  "popup_focused_panel_width_in": 4.14,
+  "overview_card_max_width_in": 2.6,
+  "specification_popups_with_visual_panel": 0,
+  "cardinality_rule": "MINIMUM_OVERVIEW_CARDINALITY = 1, source-derived; UNIVERSAL_FIXED_CARD_COUNT = false",
+  "invented_visual_subjects": 0
+ }
 }

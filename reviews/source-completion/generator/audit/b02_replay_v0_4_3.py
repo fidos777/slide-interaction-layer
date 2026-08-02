@@ -51,14 +51,14 @@ def build_all(tmp):
     add("R-012", "removed S01 orientation sentence restored to the spoken VO",
         "SHOT_S01_PACKAGE_NOTES_EXACT|S01_ORIENTATION_SENTENCE_REMOVED",
         [(notes(s01), lambda x: _sub_text(
-            x, "<a:t>Topik 3 Bahagian 2: Komponen Landskap.</a:t>",
-            "<a:t>Topik 3 Bahagian 2: Komponen Landskap.</a:t></a:r><a:r><a:t>"
+            x, "<a:t>Topik 3 Bahagian 2: Komponen Landskap</a:t>",
+            "<a:t>Topik 3 Bahagian 2: Komponen Landskap</a:t></a:r><a:r><a:t>"
             "Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.</a:t>"))])
 
     add("R-013", "S01 PL06 title reverted to the superseded long form",
         "SHOT_S01_PACKAGE_NOTES_EXACT|S01_PL06_TITLE_SPOKEN|S01_PL06_TITLE_LONG_FORM_WITHDRAWN",
         [(notes(s01), lambda x: _sub_text(
-            x, "<a:t>PL06: Pengurusan Operasi Pembinaan Landskap.</a:t>",
+            x, "<a:t>PL06: Pengurusan Operasi Pembinaan Landskap</a:t>",
             "<a:t>Pakej Latihan 06: Pengurusan Operasi Pembinaan Landskap.</a:t>"))])
 
     add("R-014", "S01 Mula instruction reverted to the superseded wording",

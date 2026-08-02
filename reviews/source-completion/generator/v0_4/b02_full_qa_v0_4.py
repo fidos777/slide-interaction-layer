@@ -192,7 +192,10 @@ def run(pptx):
     chk("S01_SPOKEN_ELEMENTS", len(st_of[s01]["spoken_transcript_elements"]), 3)
     n1 = notes[s01]
     chk("S01_PL06_TITLE_SPOKEN__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT", "SUPERSEDED", "SUPERSEDED")
-    chk("S01_PL06_TITLE_SPOKEN", "PL06: Pengurusan Operasi Pembinaan Landskap." in n1, True)
+    chk("S01_PL06_TITLE_SPOKEN__SUPERSEDED_BY_D3_PUNCTUATION_RULING", "SUPERSEDED", "SUPERSEDED")
+    chk("S01_PL06_TITLE_SPOKEN", "PL06: Pengurusan Operasi Pembinaan Landskap" in n1, True)
+    chk("S01_PL06_TITLE_SPOKEN_WITH_TRAILING_PERIOD",
+        "PL06: Pengurusan Operasi Pembinaan Landskap." in n1, False)
     chk("S01_PL06_TITLE_LONG_FORM_WITHDRAWN", "Pakej Latihan 06" in n1, False)
     chk("S01_TOPIC_TITLE_SPOKEN", "Topik 3 Bahagian 2" in n1, True)
     chk("S01_ORIENTATION_SPOKEN__SUPERSEDED_BY_LATEST_BARIAH_SCREENSHOT", "SUPERSEDED", "SUPERSEDED")

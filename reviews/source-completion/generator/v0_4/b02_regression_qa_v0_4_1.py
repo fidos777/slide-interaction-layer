@@ -459,7 +459,7 @@ def run(pptx):
         if drawn != exp:
             tick_bad.append((pid, rec["screen_role"], drawn, exp))
     chk("COMPLETION_TICKS_NOT_MATCHING_PATH", len(tick_bad), 0)
-    chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 114)
+    chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 116)
     return res
 
 

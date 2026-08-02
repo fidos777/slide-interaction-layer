@@ -21,6 +21,7 @@ import b02_model_adapter_v0_4 as ADAPT
 import b02_proof_content_v0_4 as C
 import b02_glossary_v0_4 as GL
 import b02_visual_directions_v0_4 as VD
+import b02_overview_mapping_v0_4_4 as OV
 import b02_instructions_v0_4 as INS
 import b02_visual_policy_v0_4 as VP
 
@@ -220,7 +221,58 @@ def _nav(add, st, kembali_label="Kembali"):
 
 
 def _visual(add, i, y, lines, w=BAND_W, x=BAND_X, sz=1100):
-    add(txt(i, "VisualDir", x, y, w, 0.28 * len(lines) + 0.12, lines, sz=sz, clr=GREY))
+    h = 0.28 * len(lines) + 0.12
+    add(txt(i, "VisualDir", x, y, w, h, lines, sz=sz, clr=GREY))
+    return y + h
+
+
+# Calibrated against the package renderer's own Liberation Sans metrics at 110 dpi, with a
+# safety margin, so the generator over-estimates line counts rather than under-estimating and
+# silently clipping. avg chars/in: 7.5pt 20.6, 9pt bold 15.4. Line heights: 0.118 / 0.145.
+OVR_CW_MAX, OVR_GAP = 2.60, 0.20
+OVR_H_MAX = 1.34
+SUBJ_CPI, SUBJ_LEAD = 12.5, 0.152
+DIR_CPI, DIR_LEAD = 18.5, 0.125
+
+
+def _overview(add, component_id, y0, start=300):
+    """Component-main overview: several SMALLER source-bound visual placeholders.
+
+    Cardinality comes from the frozen mapping, never from a constant here. Card width is
+    capped so an overview card is always visibly smaller than a popup's focused panel —
+    that size relationship is the treatment Bariah described, and a one-card overview
+    (BBQ Pit) must not stretch to full width and read as the larger treatment.
+
+    Box heights are derived from the measured line counts, not assumed.
+    """
+    subs = OV.subjects(component_id)
+    n = len(subs)
+    cw = min(OVR_CW_MAX, (BAND_W - (n - 1) * OVR_GAP) / n)
+    inner = cw - 0.20
+    laid = []
+    for label, direction in subs:
+        sl = V3._wrap_lines(label, max(6, int(inner * SUBJ_CPI)))[:3]
+        dl = V3._wrap_lines(direction, max(8, int(inner * DIR_CPI)))
+        laid.append((sl, dl))
+    subj_h = max(len(sl) for sl, _ in laid) * SUBJ_LEAD + 0.06
+    room = OVR_H_MAX - 0.06 - subj_h - 0.04 - 0.08
+    keep = max(1, int(room / DIR_LEAD))
+    dir_h = min(max(len(dl) for _, dl in laid), keep) * DIR_LEAD + 0.06
+    card_h = 0.06 + subj_h + 0.04 + dir_h + 0.08
+
+    add(txt(start, "OverviewHead", BAND_X, y0, BAND_W, 0.22, [OV.HEADING], sz=850,
+            b=True, clr=GOLD))
+    top = y0 + 0.26
+    i = start + 1
+    for k, ((sl, dl), (label, direction)) in enumerate(zip(laid, subs)):
+        x = BAND_X + k * (cw + OVR_GAP)
+        add(box(i, "OverviewCard", x, top, cw, card_h, "", fill="F7F7F7", ln="BFBFBF",
+                dash=False, lnw=12700)); i += 1
+        add(txt(i, "OverviewSubject", x + 0.10, top + 0.06, inner, subj_h,
+                rt(sl), sz=900, b=True)); i += 1
+        add(txt(i, "OverviewDir", x + 0.10, top + 0.06 + subj_h + 0.04, inner, dir_h,
+                dl[:keep], sz=750, clr=GREY)); i += 1
+    return top + card_h
 
 
 def _modal(add, M, st, title, blocks, visual=None):
@@ -235,19 +287,21 @@ def _modal(add, M, st, title, blocks, visual=None):
     PY_MIN, PY_BOT = 1.42, 6.88
     AVAIL = PY_BOT - PY_MIN
     spec_only = bool(visual) and visual.get("visual_requirement") != VP.REQUIRED
-    LW = 10.07 if spec_only else 6.05      # left content column
-    VX, VW = PX + 6.62, 3.72               # right visual panel
+    LW = 10.07 if spec_only else 5.75      # left content column
+    # Focused popup treatment (D2): the popup visual is LARGER than a component-main
+    # overview card (capped at OVR_CW_MAX) and carries a single selected subject.
+    VX, VW = PX + 6.20, 4.14               # right visual panel — focused, larger
     TW = LW - 1.30 if spec_only else LW   # always clear of the close icon
     kicker, main = (title.split(" — ", 1) if " — " in title else ("", title))
     tsz, tlead = 2000, 0.34
-    tl = V3._wrap_lines(main, 54 if spec_only else 40)
+    tl = V3._wrap_lines(main, 54 if spec_only else 38)
     if len(tl) > 1:
         tsz, tlead = 1600, 0.28
-        tl = V3._wrap_lines(main, 68 if spec_only else 52)
+        tl = V3._wrap_lines(main, 68 if spec_only else 49)
     head_h = (0.24 if kicker else 0.0) + len(tl) * tlead + 0.14
 
     WRAPS = ((1250, 92, 0.235), (1150, 100, 0.216), (1050, 110, 0.198)) if spec_only else \
-            ((1250, 55, 0.235), (1150, 60, 0.216), (1050, 66, 0.198))
+            ((1250, 52, 0.235), (1150, 57, 0.216), (1050, 63, 0.198))
     for bsz, cpl, lead in WRAPS:
         h = 0.0; meas = []
         for hd, lines in blocks:
@@ -290,9 +344,9 @@ def _modal(add, M, st, title, blocks, visual=None):
                 dash=False, lnw=12700))
         add(txt(231, "VisualPanelHead", VX + 0.18, vy + 0.14, VW - 0.36, 0.24,
                 [VD.HEADING], sz=900, b=True, clr=GOLD))
-        vw_ = V3._wrap_lines(visual["visual_direction"], 46)
+        vw_ = V3._wrap_lines(visual["visual_direction"], max(8, int((VW - 0.36) * 11.3)))
         add(txt(232, "VisualPanelBody", VX + 0.18, vy + 0.42, VW - 0.36,
-                min(vh - 0.62, 0.22 * len(vw_) + 0.08), rt(vw_), sz=1050))
+                min(vh - 0.62, 0.200 * len(vw_) + 0.08), rt(vw_), sz=1150))
         add(txt(233, "VisualPanelArea", VX + 0.18, vy + vh - 0.30, VW - 0.36, 0.22,
                 ["Ruang visual produksi — aset tidak dibenamkan."], sz=800, clr=GREY))
     elif need:
@@ -364,12 +418,29 @@ def render_family_s(M, page, rec, st, add, viewed):
     if role == "COMPONENT_MAIN_EXPLANATION":
         add(title_ph_rt(c["name"]), titlebar(6, M.groups[c["group"]]["name"]))
         add(txt(20, "Head", BAND_X, 1.30, BAND_W, 0.46, rt([c["name"]]), sz=2000, b=True))
-        add(bullets(22, "Body", BAND_X, 1.92, BAND_W, 3.4,
-                    [(0, ital_parts(l)) for l in c["display"]], sz=1500, spc=600))
+        sub = C.COMPONENT_SUBSECTIONS.get(rec["component_id"])
+        # Bariah's Slide 5 ruling: the sub-heading and its two bullets are additional text on
+        # the SAME screen, and the on-screen copy follows the VO. Both surfaces are derived
+        # from one controlled record, so they cannot drift apart.
+        disp = list(c["display"])
+        blocks = [(0, ital_parts(l)) for l in disp]
+        if sub:
+            disp = disp[:3]                       # the 4th bullet is superseded by the block
+            blocks = [(0, ital_parts(l)) for l in disp]
+            blocks.append((0, [(sub["heading"], False)]))
+            blocks += [(1, ital_parts(b)) for b in sub["bullets"]]
+        add(bullets(22, "Body", BAND_X, 1.92, BAND_W, 3.4, blocks, sz=1500, spc=600))
         vp = VP.classify(M, rec, st)
+        vbot = 5.10
         if vp["visual_direction"]:
-            _visual(add, 30, 5.55, V3._wrap_lines(vp["visual_direction"], 108))
-        spoken = [c["vo"] + f" Mari lihat contoh bagi {c['name']} di halaman seterusnya."]
+            vbot = _visual(add, 30, 5.10, V3._wrap_lines(vp["visual_direction"], 108))
+        # Overview is drawn from the SCREEN's component, on every state of that screen, and
+        # is placed BELOW whatever the component direction actually occupied.
+        _overview(add, rec["component_id"], vbot + 0.06)
+        vo = c["vo"]
+        if sub:
+            vo = vo + " " + C.subsection_vo(rec["component_id"])
+        spoken = [vo + f" Mari lihat contoh bagi {c['name']} di halaman seterusnya."]
         return spoken, ["INTERAKSI:", "  Tiada interaksi kandungan. Kemajuan melalui shell LMS."]
 
     # example-selection screen (base / popup / all-viewed)
@@ -432,8 +503,11 @@ def render_family_p1(M, page, rec, st, add, viewed):
                 [INS.for_screen(rec)], sz=1500, algn="ctr"))
         _cards(add, ids, labels, viewed, y0=2.36)
         vp = VP.classify(M, rec, st)
+        vbot = 4.86
         if vp["visual_direction"]:
-            _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"], 108))
+            vbot = _visual(add, 30, 4.86, V3._wrap_lines(vp["visual_direction"], 108))
+        # Drawn on the base AND the all-viewed state: the obligation belongs to the screen.
+        _overview(add, rec["component_id"], max(5.44, vbot + 0.06))
         _nav(add, st)
         spoken = [c["vo"]] if c.get("vo") else []
         return spoken, ["INTERAKSI:",
@@ -496,8 +570,11 @@ def render_family_p2(M, page, rec, st, add, viewed):
             [INS.for_screen(rec)], sz=1500, algn="ctr"))
     _cards(add, ids, labels, viewed, y0=2.68)
     vp = VP.classify(M, rec, st)
+    vbot = 4.86
     if vp["visual_direction"]:
-        _visual(add, 30, 5.90, V3._wrap_lines(vp["visual_direction"], 108))
+        vbot = _visual(add, 30, 4.86, V3._wrap_lines(vp["visual_direction"], 108))
+    # Drawn on the base state, all four specification-popup states and the all-viewed state.
+    _overview(add, rec["component_id"], max(5.44, vbot + 0.06))
     _nav(add, st)
     spoken = []
     if st["screen_role"] == "STATE_POPUP":
@@ -730,6 +807,14 @@ def render_frame(M, page, rec, st, add, viewed):
                  f"  salinan Tamat: {C.TAMAT['copy_status']}",
                  f"  destinasi logik: {ex['logical_destination']}",
                  f"  kelakuan navigasi fizikal: {C.TAMAT['physical_status']}",
+                 # Firdaus / LMS owner ruling, Stage 4.2E-A. Production metadata only —
+                 # the learner-facing copy is unchanged and no route is claimed as proven.
+                 "  MEKANISME NAVIGASI (FIRDAUS / PEMILIK LMS):",
+                 "    tindakan pelajar: menutup lesson/content window",
+                 "    hasil navigasi: kembali ke course menu",
+                 "    langkah seterusnya: pelajar memilih bahagian pembelajaran seterusnya",
+                 "    laluan seterusnya automatik: TIDAK TERBUKTI",
+                 "    LMS shell Next: TIDAK TERBUKTI",
                  "  Tiada dakwaan dibuat tentang keadaan Seterusnya shell LMS.",
                  "  Tiada butang navigasi kanvas tersuai dicipta.",
                  "  Segitiga merah dalam contoh Bariah dianggap ISYARAT VISUAL,",
@@ -819,11 +904,14 @@ def _render_quiz(M, page, rec, st, add):
             spoken += [f"{lab}. {opt}" for lab, opt in d["options"]]
         else:
             spoken += list(d["options"])
-        spoken += [f"Maklum balas betul: {fb['correct']['text']}",
-                   f"Maklum balas salah: {fb['incorrect']['text']}"]
+        # Bariah 1 Aug 7:03 PM (D3): learner feedback after submission only.
+        # QUIZ_FEEDBACK_VO = NOT_REQUIRED unless separately authorised, so the two feedback
+        # strings are rendered on canvas and described in the production panel, but are NOT
+        # added to the spoken transcript.
         extra = ["MAKLUM BALAS SERTA-MERTA:",
-                 f"  betul: teks \"{fb['correct']['text']}\" · SFX {fb['correct']['sfx']} · VO sama",
-                 f"  salah: teks \"{fb['incorrect']['text']}\" · SFX {fb['incorrect']['sfx']} · VO sama",
+                 f"  betul: teks \"{fb['correct']['text']}\" · SFX {fb['correct']['sfx']} · TIADA VO",
+                 f"  salah: teks \"{fb['incorrect']['text']}\" · SFX {fb['incorrect']['sfx']} · TIADA VO",
+                 "  maklum balas dipaparkan selepas penghantaran sahaja; tidak dituturkan.",
                  "KUNCI JAWAPAN (blok semakan CIDB pada halaman semakan):",
                  "  " + (d["answer"] if d["kind"] == "MCQ" else ", ".join(d["answers"])),
                  "  Dijana daripada data jawapan berstruktur yang sama dengan logik kuiz.",
@@ -1042,7 +1130,7 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
     return out, manifest
 
 
-FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx"
+FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx"
 
 
 def generate_full(outdir, outname=FULL_OUTNAME):

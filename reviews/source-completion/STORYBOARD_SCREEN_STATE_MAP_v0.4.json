@@ -131,16 +131,18 @@
     {
      "order": 1,
      "element": "PL06_TITLE",
-     "text": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+     "text": "PL06: Pengurusan Operasi Pembinaan Landskap",
      "spoken": true,
-     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 1"
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 1",
+     "punctuation_ruling": "trailing full stop removed — Bariah 1 Aug 7:03 PM 'Buang noktah', evidence D3"
     },
     {
      "order": 2,
      "element": "TOPIC_BAHAGIAN_TITLE",
-     "text": "Topik 3 Bahagian 2: Komponen Landskap.",
+     "text": "Topik 3 Bahagian 2: Komponen Landskap",
      "spoken": true,
-     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 2"
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 2",
+     "punctuation_ruling": "trailing full stop removed — Bariah 1 Aug 7:03 PM 'Buang noktah', evidence D3"
     },
     {
      "order": 3,
@@ -1717,16 +1719,18 @@
     {
      "order": 1,
      "element": "PL06_TITLE",
-     "text": "PL06: Pengurusan Operasi Pembinaan Landskap.",
+     "text": "PL06: Pengurusan Operasi Pembinaan Landskap",
      "spoken": true,
-     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 1"
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 1",
+     "punctuation_ruling": "trailing full stop removed — Bariah 1 Aug 7:03 PM 'Buang noktah', evidence D3"
     },
     {
      "order": 2,
      "element": "TOPIC_BAHAGIAN_TITLE",
-     "text": "Topik 3 Bahagian 2: Komponen Landskap.",
+     "text": "Topik 3 Bahagian 2: Komponen Landskap",
      "spoken": true,
-     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 2"
+     "evidence": "B02_BARIAH_S01_EVIDENCE.jpg — Speaker Notes 'Edit to this', line 2",
+     "punctuation_ruling": "trailing full stop removed — Bariah 1 Aug 7:03 PM 'Buang noktah', evidence D3"
     },
     {
      "order": 3,
@@ -8303,5 +8307,13 @@
    "source_assets",
    "components"
   ]
+ },
+ "amended_stage_4_2e_b": {
+  "evidence": "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png (D3) + B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png (D4)",
+  "changes": [
+   "S01 spoken lines 1 and 2 lose their trailing full stop; line 3 unchanged",
+   "block count remains 3"
+  ],
+  "counts_unchanged": true
  }
 }

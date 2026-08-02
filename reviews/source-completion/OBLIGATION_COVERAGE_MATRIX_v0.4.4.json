@@ -1,0 +1,170 @@
+{
+ "matrix": "OBLIGATION_COVERAGE_MATRIX_v0.4.4",
+ "stage": "Stage 4.2E-B",
+ "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx",
+ "rule": "A model-only row is NOT artifact assurance. Every row below states, per layer, whether the obligation is actually checked there.",
+ "totals": {
+  "OBLIGATIONS": 17,
+  "CHECKED_AT_MODEL": 17,
+  "CHECKED_IN_GENERATED_PPTX": 17,
+  "CHECKED_ON_RENDERED_PAGE": 11,
+  "CHECKED_AGAINST_INDEPENDENT_ORACLE": 13,
+  "CHECKED_BY_NEGATIVE_MUTATION": 17,
+  "MODEL_ONLY_ROWS": 0
+ },
+ "obligations": [
+  {
+   "obligation": "Papan Tanda overview = 2 source-bound visuals",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-01, C-02, C-03, C-07",
+   "note": "oracle = D4 cardinality screenshot, re-hashed each run"
+  },
+  {
+   "obligation": "BBQ Pit overview = 1 source-bound visual",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-04, C-05, C-06",
+   "note": "oracle = D4"
+  },
+  {
+   "obligation": "all nine component-main overviews rendered",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": false,
+   "negative_mutation": "C-06",
+   "note": "cardinality per component comes from the frozen mapping contract, not from an oracle"
+  },
+  {
+   "obligation": "no invented or cross-component overview subject",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-02, C-03, C-07",
+   "note": "subject strings are MODULE_SOURCE_ATTESTED; D4 names only the two Papan Tanda figures"
+  },
+  {
+   "obligation": "overview persists on all-viewed and return states",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-08, C-09",
+   "note": "population pinned to learner_screen_id; oracle = D3 persistence reply"
+  },
+  {
+   "obligation": "example/information popup carries a larger focused visual",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "R-015, R-016",
+   "note": "oracle = D2 treatment reply"
+  },
+  {
+   "obligation": "specification popup carries no visual panel",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "R-009, C-21",
+   "note": "oracle = the 4:37 PM subtype ruling"
+  },
+  {
+   "obligation": "Slide 5 Asas Pembinaan on canvas",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-10, C-11",
+   "note": "oracle = D1"
+  },
+  {
+   "obligation": "Slide 5 canvas/VO parity",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": false,
+   "independent_oracle": true,
+   "negative_mutation": "C-12",
+   "note": "package twin added after C-12 was missed; not separately visible on a rendered page"
+  },
+  {
+   "obligation": "S01 three blocks, lines 1-2 without a full stop",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": false,
+   "independent_oracle": true,
+   "negative_mutation": "C-13, R-012, R-013, R-014",
+   "note": "oracle = D3 'Buang noktah'"
+  },
+  {
+   "obligation": "exact quiz feedback strings",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-15",
+   "note": "oracle = D3"
+  },
+  {
+   "obligation": "no quiz rationale in Notes or spoken export",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": false,
+   "independent_oracle": true,
+   "negative_mutation": "C-14",
+   "note": "rationale retained in the production panel and asserted there"
+  },
+  {
+   "obligation": "no micro-control instruction in spoken VO",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": false,
+   "independent_oracle": true,
+   "negative_mutation": "C-16",
+   "note": "package twin added after C-16 was missed"
+  },
+  {
+   "obligation": "cast names only on bound screens",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": true,
+   "negative_mutation": "C-18",
+   "note": "oracle = D3 cast reply; reuse permitted but never automatic"
+  },
+  {
+   "obligation": "Tamat learner copy unchanged, mechanism in metadata",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": true,
+   "independent_oracle": false,
+   "negative_mutation": "C-19, R-006",
+   "note": "LMS-owner ruling, not Bariah; no independent artifact oracle exists"
+  },
+  {
+   "obligation": "PL06 pronunciation remains inactive",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": false,
+   "independent_oracle": false,
+   "negative_mutation": "C-20",
+   "note": "absence assertion; no oracle can confirm an unratified rule"
+  },
+  {
+   "obligation": "structural totals unchanged",
+   "model": true,
+   "generated_pptx": true,
+   "rendered_page": false,
+   "independent_oracle": false,
+   "negative_mutation": "R-004",
+   "note": "model + package counts"
+  }
+ ]
+}

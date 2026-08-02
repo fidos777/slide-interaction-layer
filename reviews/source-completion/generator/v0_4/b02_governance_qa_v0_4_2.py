@@ -242,7 +242,7 @@ def run(pptx):
         sum(1 for pid in sup
             if pol[pid]["superseded_ruling"]["superseded_direction"] in ctext[pid]), 0)
 
-    chk("PRIOR_SUITE_CHECKS", n_prior, 216)
+    chk("PRIOR_SUITE_CHECKS", n_prior, 218)
     return res
 
 

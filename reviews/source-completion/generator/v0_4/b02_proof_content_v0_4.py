@@ -202,3 +202,26 @@ ITALIC_TERMS = ["Wood-Plastic Composite", "Drinking Fountain", "Water Feature", 
 
 # Never italicised even though they are English-looking: production IDs and metadata.
 NEVER_ITALIC_PREFIXES = ("K5-PL06", "K5PL06", "SCR_", "ST_", "II_", "RP-", "B02-", "SFX_")
+
+# ---------------------------------------------------------------- Slide 5 tambahan text
+# Bariah, 2 August 2026 evidence D1 (1 Aug 6:48 PM):
+#   "Slide 5 (tambahan text pada skrin sama, to follow VO) - yg ni:"
+# Verbatim from the frozen screenshot. The bullets carry NO trailing full stop; the
+# DECISION_SUMMARY.md copy that adds them is not the oracle.
+#
+# ONE controlled record derives the canvas block AND the spoken VO sentence, so the two
+# cannot drift. Nothing here is a new source row: the module VO already asserts both facts.
+COMPONENT_SUBSECTIONS = {
+    "STRUKTUR_PERSISIR_AIR": dict(
+        heading='Asas Pembinaan',
+        bullets=['Asas stabil dan rata, dengan sistem saliran permukaan berkesan untuk mengelakkan genangan air',
+                 'Pemilihan bahan permukaan bergantung pada fungsi utama'],
+        vo_lead="Asas pembinaannya:",
+    ),
+}
+
+
+def subsection_vo(key):
+    """Spoken form derived from the same controlled record the canvas uses."""
+    d = COMPONENT_SUBSECTIONS[key]
+    return d["vo_lead"] + " " + "; ".join(d["bullets"]) + "."

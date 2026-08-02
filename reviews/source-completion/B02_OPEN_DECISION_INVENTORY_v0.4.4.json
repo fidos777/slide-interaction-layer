@@ -1,24 +1,25 @@
 {
  "inventory": "B02_OPEN_DECISION_INVENTORY_v0.4.4",
  "supersedes": "B02_OPEN_DECISION_INVENTORY_v0.4.3",
- "stage": "Stage 4.2E-A",
+ "stage": "Stage 4.2E-B",
  "evidence_date": "2026-08-01",
- "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx",
- "deck_sha256": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+ "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx",
+ "deck_sha256": "f74b81364d6f901a1ada9c364409861d2b75277961d7ef6b7a991dc8bfa17479",
  "totals": {
   "OPEN_DECISIONS": 3,
   "BARIAH_OPEN_DECISIONS": 0,
   "FIRDAUS_LMS_OPEN_DECISIONS": 0,
   "SOURCE_AUTHORITY_OPEN_DECISIONS": 3,
-  "CLOSED_THIS_STAGE": 8,
-  "CLOSED_BY_BARIAH": 7,
+  "CLOSED_THIS_STAGE": 9,
+  "CLOSED_BY_BARIAH": 8,
   "CLOSED_BY_LMS_OWNER": 1,
   "BLOCKING_CURRENT_BARIAH_REVIEW": 0,
   "BLOCKING_POWERPOINT_SMOKE": 0,
   "BLOCKING_MMD_BUILD": 1,
   "BLOCKING_CANONICAL_FREEZE": 3,
   "BLOCKING_PRODUCTION": 3,
-  "RESOLVED_BY_CC_IN_THIS_STAGE": 0
+  "RESOLVED_BY_CC_IN_THIS_STAGE": 0,
+  "ALL_BARIAH_DECISIONS_IMPLEMENTED_IN_DECK": true
  },
  "closed_this_stage": [
   {
@@ -92,6 +93,15 @@
    "resolution": "Learner closes the lesson/content window and returns to the course menu, then selects the next section. Automatic next route and LMS shell Next both recorded as NOT PROVEN. Learner-facing copy unchanged.",
    "decision_id": "B02-U-03",
    "implementation": "METADATA_ONLY_V0_4_4"
+  },
+  {
+   "id": "OD-11",
+   "title": "Papan Tanda and BBQ Pit overview cardinality",
+   "authority": "Bariah",
+   "closed_by": "D4 (2 Aug 8:24 AM)",
+   "resolution": "Papan Tanda = 2 source-bound visuals (Informasi, Penunjuk Arah); BBQ Pit = 1. MINIMUM_OVERVIEW_CARDINALITY = 1, source-derived, no universal card count.",
+   "decision_id": "B02-BARIAH-20260802-OVERVIEW-CARDINALITY-01",
+   "implementation": "IMPLEMENTED_IN_V0_4_4"
   }
  ],
  "open": [
@@ -144,5 +154,6 @@
    "status": "PENDING_SOURCE_GOVERNANCE_RATIFICATION",
    "note": "Promoted to a first-class open decision at Stage 4.2E-A. It was previously carried inside the pronunciation register as IMPLEMENTATION_REQUIRED_NEXT_STAGE; that understated it, because the precedence question is not CC's to settle."
   }
- ]
+ ],
+ "implementation_note": "At Stage 4.2E-A every closure carried IMPLEMENTATION_REQUIRED_V0_4_4 and none was in the deck. At Stage 4.2E-B all of them are implemented in K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx."
 }

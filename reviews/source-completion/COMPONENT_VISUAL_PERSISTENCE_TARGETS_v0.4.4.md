@@ -1,35 +1,8 @@
 # COMPONENT_VISUAL_PERSISTENCE_TARGETS — v0.4.4
 
-Recomputed from the frozen model for all nine component-main learner screens.
+Recomputed from the frozen model for all nine component-main learner screens, then verified against the generated v0.4.4 deck.
 
-# 1. How this population was built
-
-| Step | |
-|---|---|
-| 1 | pin to `learner_screen_id` where `screen_role` is a component-main role |
-| 2 | enumerate **every** runtime state bound to that screen, from the model |
-| 3 | record the review page for each state |
-| 4 | classify the required visual treatment per state |
-
-`POPULATION_PINNED_BY_LEARNER_SCREEN_ID = true` · `CLASSIFICATION_PRIMARY_SELECTOR = false` · `OLD_13_PAGE_TARGET_LIST_REUSED = 0`
-
-## 1.1 The recomputation changed the answer — and prevented an error
-
-The Stage 4.2E-A list said **13 pages need change**. That list was built by diffing the v0.4.3 *deck*, so it enumerated pages that merely *differed*: 5 all-viewed states **and 8 specification popups**.
-
-Under the confirmed treatment rules those 8 specification popups must stay **text-led with no visual panel**. Reusing the old list would have pushed component-main overview visuals onto them — precisely what Part 12A forbids. The obligation population is:
-
-| Treatment | Pages |
-|---|---:|
-| overview persistence targets (all-viewed / return) | **5** |
-| focused popup targets on component-main screens | 0 |
-| specification popups — **no visual** | 8 |
-| base states carrying the overview | 9 |
-| **total runtime states bound** | **22** |
-
-`FOCUSED_POPUP_TARGET_PAGES = 0` on component-main screens is correct, not an omission: example popups belong to the selection screens and the Family P1 example-detail screens, not to the component mains.
-
-# 2. Totals
+# 1. Population
 
 | Metric | Value |
 |---|---:|
@@ -42,19 +15,37 @@ Under the confirmed treatment rules those 8 specification popups must stay **tex
 | `POPULATION_PINNED_BY_LEARNER_SCREEN_ID` | True |
 | `CLASSIFICATION_PRIMARY_SELECTOR` | False |
 
+`OLD_13_PAGE_TARGET_LIST_REUSED = 0`. The Stage 4.2E-A figure of 13 pages came from diffing the v0.4.3 **deck** and conflated two obligations: 5 all-viewed states that must carry the overview and 8 specification popups that must stay text-led. Reusing it would have pushed overview visuals onto specification popups.
+
+# 2. Implementation result
+
+| Metric | Value |
+|---|---:|
+| `deck` | K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx |
+| `state_pages_with_base_identity_overview` | 22 |
+| `state_pages_total` | 22 |
+| `BASE_TO_ALL_VIEWED_OVERVIEW_IDENTITY_MISMATCHES` | 0 |
+| `BASE_TO_RETURN_OVERVIEW_IDENTITY_MISMATCHES` | 0 |
+| `PERSISTENCE_TARGET_PAGES_MISSING_VISUALS` | 0 |
+| `SPECIFICATION_POPUPS_REMAIN_TEXT_LED` | True |
+| `OLD_13_PAGE_TARGET_LIST_REUSED` | 0 |
+| `comparison_basis` | subject identity, not shape count |
+
+All 22 component-main state pages carry the **same subject identities** as their base page. The comparison is by subject, not by shape count, so a page with the right number of wrong cards fails.
+
 # 3. Per screen
 
-| Learner screen | States | Base | Overview persistence | Focused popup | Spec popup |
-|---|---:|---:|---:|---:|---:|
-| `SCR_BBQ_PIT_MAIN` | 6 | 1 | 1 | 0 | 4 |
-| `SCR_DRINKING_FOUNTAIN_MAIN` | 2 | 1 | 1 | 0 | 0 |
-| `SCR_KEMUDAHAN_AWAM_MAIN` | 1 | 1 | 0 | 0 | 0 |
-| `SCR_KERUSI_TAMAN_MAIN` | 2 | 1 | 1 | 0 | 0 |
-| `SCR_PAPAN_TANDA_MAIN` | 6 | 1 | 1 | 0 | 4 |
-| `SCR_STRUKTUR_PERSISIR_AIR_MAIN` | 1 | 1 | 0 | 0 | 0 |
-| `SCR_STRUKTUR_TEDUHAN_MAIN` | 1 | 1 | 0 | 0 | 0 |
-| `SCR_TONG_SAMPAH_MAIN` | 2 | 1 | 1 | 0 | 0 |
-| `SCR_WATER_FEATURE_MAIN` | 1 | 1 | 0 | 0 | 0 |
+| Learner screen | Overview count | States | Base | All-viewed | Spec popups | Identity matches |
+|---|---:|---:|---:|---:|---:|---:|
+| `SCR_BBQ_PIT_MAIN` | 1 | 6 | 1 | 1 | 4 | 6/6 |
+| `SCR_DRINKING_FOUNTAIN_MAIN` | 2 | 2 | 1 | 1 | 0 | 2/2 |
+| `SCR_KEMUDAHAN_AWAM_MAIN` | 3 | 1 | 1 | 0 | 0 | 1/1 |
+| `SCR_KERUSI_TAMAN_MAIN` | 3 | 2 | 1 | 1 | 0 | 2/2 |
+| `SCR_PAPAN_TANDA_MAIN` | 2 | 6 | 1 | 1 | 4 | 6/6 |
+| `SCR_STRUKTUR_PERSISIR_AIR_MAIN` | 5 | 1 | 1 | 0 | 0 | 1/1 |
+| `SCR_STRUKTUR_TEDUHAN_MAIN` | 5 | 1 | 1 | 0 | 0 | 1/1 |
+| `SCR_TONG_SAMPAH_MAIN` | 3 | 2 | 1 | 1 | 0 | 2/2 |
+| `SCR_WATER_FEATURE_MAIN` | 3 | 1 | 1 | 0 | 0 | 1/1 |
 
 # 4. Treatment rules in force
 
@@ -66,6 +57,4 @@ Under the confirmed treatment rules those 8 specification popups must stay **tex
 | `ALL_VIEWED` | same component-main overview visuals as the base state |
 | `RETURN_STATE` | same component-main overview visuals as the base state |
 
-# 5. Standing
-
-This population is complete and independent of the overview-subject question. It is **not implemented**: `COMPONENT_OVERVIEW_MAPPING_v0.4.4` is blocked on two components, so no v0.4.4 deck was generated and the v0.4.3 deck is unchanged.
+Population selector: `learner_screen_id` plus every bound runtime state. Review-page classification is reported as an attribute, never used as the selector.

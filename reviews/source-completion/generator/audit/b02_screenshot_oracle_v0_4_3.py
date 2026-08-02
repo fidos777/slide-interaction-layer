@@ -109,6 +109,14 @@ def s01_ruling():
                       "Topik 3 Bahagian 2: Komponen Landskap.",
                       "Klik butang “Mula” untuk memulakan pembelajaran."],
         removed_sentence="Dalam bahagian ini, anda akan mempelajari tentang komponen landskap.",
+        # SUPERSEDED at Stage 4.2E-B. spoken_after above remains the faithful transcription of
+        # THIS image, whose lines 1-2 were read as ending in a full stop at MEDIUM punctuation
+        # confidence. Bariah's later ruling (D3, 1 Aug 7:03 PM, "Buang noktah") removes them.
+        # The transcription is not rewritten; the current expected form is carried separately.
+        spoken_after_current=["PL06: Pengurusan Operasi Pembinaan Landskap",
+                              "Topik 3 Bahagian 2: Komponen Landskap",
+                              "Klik butang “Mula” untuk memulakan pembelajaran."],
+        spoken_after_superseded_by="D3 — B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png",
         # Reading limit, recorded rather than hidden: at the resolution of the boxed block a
         # trailing full stop on lines 1 and 2 is consistent with the pixels but not separable
         # from the spell-check underline beneath it. The sentence-final period is carried over

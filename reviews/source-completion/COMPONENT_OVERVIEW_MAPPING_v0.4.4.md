@@ -2,34 +2,23 @@
 
 Source-bound overview subjects for all nine component-main learner screens.
 
-> ## ⛔ Generation is blocked
+> ## ✅ Closed
 
-> `COMPONENT_OVERVIEW_MAPPING_REQUIRES_HUMAN_LAYOUT_RULING`
+> `INSTANCE_MAPPING_COMPLETE = 9/9` · `AMBIGUOUS_OVERVIEW_MAPPINGS = 0` · `PENDING_BARIAH_OVERVIEW_QUESTIONS = 0`
 
-> **2 of 9 components** cannot supply a defensible source-bound overview without inventing a selection rule: **BBQ_PIT, PAPAN_TANDA**. Details in §4.
+The two blocking components were closed by Bariah's reply of 2 August 2026, 8:24 AM, frozen as `B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png`:
 
-# 1. Authority — requirement and treatment are hers, subjects are not
+> *"Yup, papan tanda Pilihan A, ok bbq pit 1 gamba"*
+
+# 1. Authority
 
 | Field | Value |
 |---|---|
-| `VISUAL_REQUIREMENT_AUTHORITY` | `BARIAH_DIRECT_SCREENSHOT` — D2, 6:52 PM |
-| `VISUAL_TREATMENT_AUTHORITY` | `BARIAH_DIRECT_SCREENSHOT` — D2, 6:52 PM |
-| `VISUAL_SUBJECT_DIRECTLY_NAMED_BY_BARIAH` | **false for every subject in this file** |
+| `VISUAL_REQUIREMENT_AUTHORITY` | `BARIAH_DIRECT_SCREENSHOT` — D2, 1 Aug 6:52 PM |
+| `VISUAL_TREATMENT_AUTHORITY` | `BARIAH_DIRECT_SCREENSHOT` — D2, 1 Aug 6:52 PM |
+| `CARDINALITY_AUTHORITY` | `BARIAH_DIRECT_SCREENSHOT` — D4, 2 Aug 8:24 AM |
 
-Requirement, verbatim: *"Soalan 1: Component-main - Visual diperlukan"*
-
-Treatment, verbatim: *"Soalan 2: Pop up - visual diperlukan. Kemungkinan visual di component main, saiznya lebih kecil dan ada banyak visual lain. Jadi di pop up, visual nya lebih besar dan fokus. Kan?"*
-
-She confirmed **that** component mains need a visual and **how** it should look. She named no subject for any of the nine. Every subject below is therefore `MODULE_SOURCE_ATTESTED`, read from the frozen 26-row matrix.
-
-## Selection rules applied
-
-- one overview subject per distinct source row bound to the component
-- exact-deduplicate on resolved visual-direction text
-- no subject generated from the component name
-- no subject borrowed from another component
-- no generic subject
-- DECISION_SUMMARY.md not used as a visual oracle
+Subjects are `MODULE_SOURCE_ATTESTED` throughout, **except** the two Papan Tanda figures, which D4 names directly in its option block. Nothing else is named by Bariah and nothing else is invented.
 
 # 2. Totals
 
@@ -39,75 +28,65 @@ She confirmed **that** component mains need a visual and **how** it should look.
 | `INVENTED_VISUAL_SUBJECTS` | 0 |
 | `CROSS_COMPONENT_SUBJECT_REUSE_WITHOUT_AUTHORITY` | 0 |
 | `UNEXPLAINED_OVERVIEW_COUNTS` | 0 |
-| `AMBIGUOUS_OVERVIEW_MAPPINGS` | 2 |
-| `COMPONENTS_RESOLVED` | 7 |
-| `GENERATION_PERMITTED` | False |
+| `AMBIGUOUS_OVERVIEW_MAPPINGS` | 0 |
+| `COMPONENTS_RESOLVED` | 9 |
+| `GENERATION_PERMITTED` | True |
+| `POLICY_RESOLVED` | True |
+| `INSTANCE_MAPPING_COMPLETE` | 9/9 |
+| `IMPLEMENTATION_CONTRACT_COMPLETE` | True |
+| `PENDING_BARIAH_OVERVIEW_QUESTIONS` | 0 |
+| `TOTAL_OVERVIEW_SUBJECTS` | 27 |
 
-# 3. The nine components
+# 3. Final counts — all nine
 
-| Component | Family | Rows | Assets | Overview subjects | Count | Status |
-|---|---|---:|---:|---|---:|---|
-| Struktur Persisir Air | `FAMILY_S` | 5 | 1 | Promenade<br>Jeti<br>Dek Kayu<br>Boardwalk<br>Footbridge | 5 | `RESOLVED` |
-| Struktur Teduhan | `FAMILY_S` | 5 | 1 | Gazebo<br>Wakaf<br>Pergola<br>Canopy<br>Struktur Teduhan Moden | 5 | `RESOLVED` |
-| Kemudahan Awam | `FAMILY_S` | 3 | 0 | Tandas Awam<br>Surau<br>Bangunan Interpretatif | 3 | `RESOLVED` |
-| Water Feature | `FAMILY_S` | 3 | 0 | Air Pancut (Fountain)<br>Kolam (Pond)<br>Kolam Renang / Kolam Hiasan Besar (Pool) | 3 | `RESOLVED` |
-| Kerusi Taman | `FAMILY_P1` | 3 | 3 | Kerusi Kayu Keras<br>Kerusi Konkrit<br>Kerusi Komposit | 3 | `RESOLVED` |
-| Papan Tanda | `FAMILY_P2` | 1 | 2 | Papan Tanda Arah / Papan Tanda Interpretatif | 1 | `AMBIGUOUS` |
-| Tong Sampah | `FAMILY_P1` | 3 | 4 | Tong Sampah Logam<br>Tong Sampah Konkrit/Batu<br>Tong Sampah Plastik Kitar Semula (HDPE) | 3 | `RESOLVED` |
-| Drinking Fountain | `FAMILY_P1` | 2 | 2 | Pancutan Air Minum Keluli Tahan Karat<br>Pancutan Air Minum Konkrit/Batu | 2 | `RESOLVED` |
-| BBQ Pit | `FAMILY_P2` | 1 | 1 | BBQ Pit Struktur Kekal | 1 | `AMBIGUOUS` |
+| Component | Family | Rows | Overview subjects | Count | Source |
+|---|---|---:|---|---:|---|
+| Struktur Persisir Air | `FAMILY_S` | 5 | Promenade<br>Jeti<br>Dek Kayu<br>Boardwalk<br>Footbridge | **5** | MODULE_SOURCE_ATTESTED |
+| Struktur Teduhan | `FAMILY_S` | 5 | Gazebo<br>Wakaf<br>Pergola<br>Canopy<br>Struktur Teduhan Moden | **5** | MODULE_SOURCE_ATTESTED |
+| Kemudahan Awam | `FAMILY_S` | 3 | Tandas Awam<br>Surau<br>Bangunan Interpretatif | **3** | MODULE_SOURCE_ATTESTED |
+| Water Feature | `FAMILY_S` | 3 | Air Pancut (Fountain)<br>Kolam (Pond)<br>Kolam Renang / Kolam Hiasan Besar (Pool) | **3** | MODULE_SOURCE_ATTESTED |
+| Kerusi Taman | `FAMILY_P1` | 3 | Kerusi Kayu Keras<br>Kerusi Konkrit<br>Kerusi Komposit | **3** | MODULE_SOURCE_ATTESTED |
+| Papan Tanda | `FAMILY_P2` | 1 | Papan Tanda Informasi<br>Papan Tanda Penunjuk Arah | **2** | BARIAH_DIRECT (figures named in D4) |
+| Tong Sampah | `FAMILY_P1` | 3 | Tong Sampah Logam<br>Tong Sampah Konkrit/Batu<br>Tong Sampah Plastik Kitar Semula (HDPE) | **3** | MODULE_SOURCE_ATTESTED |
+| Drinking Fountain | `FAMILY_P1` | 2 | Pancutan Air Minum Keluli Tahan Karat<br>Pancutan Air Minum Konkrit/Batu | **2** | MODULE_SOURCE_ATTESTED |
+| BBQ Pit | `FAMILY_P2` | 1 | BBQ Pit Struktur Kekal | **1** | MODULE_SOURCE_ATTESTED |
 
-**`overview_visual_count` is not a constant.** It is one subject per distinct source row bound to that component, exact-deduplicated on the resolved direction text — 5, 5, 3, 3, 3, 3, 2 for the seven resolved components. No universal number was imposed.
+Counts are 5, 5, 3, 3, 3, **2**, 3, 2, **1** — derived per component, never a fixed number.
 
-## 3.1 Struktur Persisir Air — the one Bariah-direct string
+# 4. The source-aware cardinality rule
 
-Its component-main screen carries her own direction `[Visual: Pelbagai Struktur Persisir Air. Tidak dibenamkan.]`. *Pelbagai* means *several*, so her string and the overview treatment agree: the direction stays as the overview heading and the five source rows supply the several smaller visuals. Nothing is overwritten.
+```
+If a component has multiple distinct source-bound visual subjects,
+  display the approved multiple subjects as smaller overview visuals.
+If a component has only one defensible source-bound visual subject,
+  a single-visual component-main overview is permitted.
+No additional visual may be invented merely to satisfy the word 'several'.
+```
 
-# 4. Why generation is blocked
+| Assertion | Value |
+|---|---|
+| `MINIMUM_OVERVIEW_CARDINALITY` | 1 |
+| `CARDINALITY_SOURCE_DERIVED` | true |
+| `INVENTED_SUBJECTS_TO_REACH_MINIMUM` | 0 |
+| `UNIVERSAL_FIXED_CARD_COUNT` | false |
 
-## Papan Tanda (`PAPAN_TANDA`) — `SCR_PAPAN_TANDA_MAIN`
+This is **not** permission to reduce a component that already has multiple approved source-bound subjects. The seven previously resolved counts are unchanged.
 
-- source rows: **1**
-- row label: `Papan Tanda Arah / Papan Tanda Interpretatif`
-- distinct source assets: 2 — `K5PL06T03-B02-IMG-p245-x37`, `K5PL06T03-B02-IMG-p245-x38`
-- row visual direction: `[Visual: Rajah 25 — Lukisan Spesifikasi Papan Tanda Informasi, dan Rajah 26 — Spesifikasi Papan Tanda Penunjuk Arah, kedua-duanya modul ms 245. Aset K5PL06T03-B02-IMG-p245-x37 dan K5PL06T03-B02-IMG-p245-x38. Tidak dibenamkan.]`
-- row contoh: —
+# 5. The two closures
 
-| Reading | Subjects | Count |
-|---|---|---:|
-| **A** — one overview subject = the single source row | Papan Tanda Arah / Papan Tanda Interpretatif | 1 |
-| **B** — two overview subjects = the two separately named and separately asset-bound figures inside the single row's visual direction… | [Visual: Rajah 25 — Lukisan Spesifikasi Papan Tanda Informasi, Rajah 26 — Spesifikasi Papan Tanda Penunjuk Arah, kedua-duanya modul ms 245. Aset K5PL06T03-B02-IMG-p245-x37 | 2 |
+## Papan Tanda — Pilihan A, two visuals
 
-**Why CC will not choose.** Choosing between these readings is a selection rule, and Part 1 forbids inventing one. Reading B for PAPAN_TANDA is defensible because both figures are separately named with separate asset IDs in the frozen source; but the row label names 'Papan Tanda Arah / Papan Tanda Interpretatif' while the figures name 'Papan Tanda Informasi' and 'Papan Tanda Penunjuk Arah', so even pairing label to figure is interpretive.
+Bariah selected `A. Paparkan kedua-dua visual`. Both figures are displayed:
 
-Specification categories were considered and rejected as overview subjects — Bahan Panel, Bahan Struktur/Tiang, Grafik, Rekaan — because specification popups are ruled `NOT_REQUIRED` for visuals, so promoting them here would contradict a frozen ruling.
+| # | Subject | Figure | Asset |
+|---|---|---|---|
+| 1 | Papan Tanda Informasi | Rajah 25 | `K5PL06T03-B02-IMG-p245-x37` |
+| 2 | Papan Tanda Penunjuk Arah | Rajah 26 | `K5PL06T03-B02-IMG-p245-x38` |
 
-> **Question:** Papan Tanda: overview shows ONE subject (the single source row) or TWO (Rajah 25 Papan Tanda Informasi and Rajah 26 Papan Tanda Penunjuk Arah)?
+**Terminology guard.** The source row's LABEL reads *Papan Tanda Arah / Papan Tanda Interpretatif*; the FIGURES read *Informasi* and *Penunjuk Arah*. The ruling names the figures, so the figure-bound names are used on the overview. **No global equivalence between *Informasi* and *Interpretatif* is created** — the row label is untouched and still appears as the screen's sub-heading.
 
-## BBQ Pit (`BBQ_PIT`) — `SCR_BBQ_PIT_MAIN`
+## BBQ Pit — one image
 
-- source rows: **1**
-- row label: `BBQ Pit Struktur Kekal`
-- distinct source assets: 1 — `K5PL06T03-B02-IMG-p249-x57`
-- row visual direction: `[Visual: Foto jadual spesifikasi BBQ Pit Struktur Kekal, modul ms 249. Aset K5PL06T03-B02-IMG-p249-x57. Tidak dibenamkan.]`
-- row contoh: `Lubang barbeku yang dibina tetap di taman perumahan, tapak perkhemahan awam, atau kawasan rekreasi keluarga seperti di Taman Rekreasi Bukit Jalil, Kuala Lumpur.`
+Bariah's option A: *satu visual dibenarkan kerana source hanya satu*. One card, one source-bound subject, `BBQ Pit Struktur Kekal` / `K5PL06T03-B02-IMG-p249-x57`.
 
-| Reading | Subjects | Count |
-|---|---|---:|
-| **A** — one overview subject = the single source row | BBQ Pit Struktur Kekal | 1 |
-| **B** — two overview subjects = the spec-table figure plus the row's contoh location. This elevates a FALLBACK direction source to a co-equal overview subject… | — | 0 |
-
-**Why CC will not choose.** BBQ Pit has exactly one source row, one source asset and one figure. There is no second distinct source-bound subject. A second could only come from the row's contoh text (a location, semantically unlike a spec-table photo) or from the four specification categories — and specification popups are ruled NOT_REQUIRED for visuals, so using them as overview subjects would contradict a frozen ruling.
-
-Specification categories were considered and rejected as overview subjects — Bahan Pembinaan, Dimensi, Gril, Keselamatan — because specification popups are ruled `NOT_REQUIRED` for visuals, so promoting them here would contradict a frozen ruling.
-
-> **Question:** BBQ Pit has only ONE source-bound visual subject. Does 'several smaller visuals as an overview' permit a single-visual overview here, or is another subject authorised?
-
-# 5. What would unblock this
-
-One ruling per component, from whoever owns the layout decision:
-
-1. **Papan Tanda** — one overview subject or two?
-2. **BBQ Pit** — is a single-visual overview acceptable, or is a second subject authorised (and if so, which)?
-
-Neither is answerable from the frozen evidence. D2 settles the requirement and the treatment; it does not settle how a one-row component supplies *several* visuals. Guessing would put an invented subject on a learner screen, which Part 1 and Part 4 both forbid.
+Explicitly rejected and gate-checked: duplicating the visual, inventing a second subject, promoting the four specification categories to visual subjects, using the row's *contoh* location text as a second subject, and borrowing from another component.

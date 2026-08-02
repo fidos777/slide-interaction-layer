@@ -123,6 +123,16 @@
    "sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
    "authority_class": "BARIAH_DIRECT_SCREENSHOT",
    "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
+  },
+  {
+   "ref": "D4",
+   "filename": "B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png",
+   "original_filename": "Screenshot 2026-08-02 at 9.04.34 AM.png",
+   "captured": "2026-08-02 08:24",
+   "bytes": 757585,
+   "sha256": "f46c2a371b93ebadc6e4bf99c619bf52621d7bc29421ebd36205f6ed6ec5ef64",
+   "authority_class": "BARIAH_DIRECT_SCREENSHOT",
+   "path": "reviews/storyboard-bariah/v0_3_bariah_review/"
   }
  ],
  "decisions": [
@@ -842,7 +852,7 @@
     "RUNTIME_STATES": 100,
     "INTERACTION_ITEMS": 54
    },
-   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4",
    "feedback_ids": []
   },
   {
@@ -858,7 +868,7 @@
    "supersedes": "B02-BARIAH-20260801-COMPONENT-MAIN-PROPAGATION-01 — the qualified 'apply to yang lain where applicable/necessary' caption is now answered",
    "closes": "the eight PENDING_HUMAN component-main records; PENDING_HUMAN_AFTER = 0",
    "scope_limit": "D2 confirms the REQUIREMENT and the TREATMENT. It does not name new visual subjects, so the module's own source-attested visual text is ratified as the overview subject and no subject is invented.",
-   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4",
    "feedback_ids": []
   },
   {
@@ -875,7 +885,7 @@
    "pages_needing_change": 13,
    "population_selector": "learner_screen_id + every bound runtime state — NOT review-page classification",
    "target_list": "B02_PINNED_POPULATION_TARGETS_v0.4.4.json",
-   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4",
    "repaired_in_this_stage": false,
    "feedback_ids": []
   },
@@ -892,7 +902,7 @@
    "supersedes": "the Stage 4.2A correction CONFIRMED_CANON -> CONFIRMED_LOCAL_ARTIFACT; DIRECT_BARIAH_NAME_PROVENANCE moves PENDING -> CONFIRMED",
    "hilmi": "unchanged — artifact-backed in all four frozen sources",
    "guard": "Reuse is conditional on contextual suitability. Alya and Encik Rahman must NOT be inserted automatically into unrelated screens; 'jika bersesuaian' is a judgement retained by the reviewer.",
-   "implementation_status": "REGISTER_UPDATE_ONLY — no deck change required",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4 — register only",
    "feedback_ids": []
   },
   {
@@ -916,7 +926,7 @@
     "QUIZ_FEEDBACK_VO": "NOT_REQUIRED unless separately authorised"
    },
    "detailed_rationale": "The existing per-question rationales are retained in production metadata only. They are not inserted into Speaker Notes and not shown to the learner.",
-   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4",
    "feedback_ids": []
   },
   {
@@ -942,7 +952,7 @@
    },
    "confirms": "the bounded parity scope adopted at Stage 4.2B, which was CC's conservative reading and is now ratified. MICRO_CONTROL_SCOPE_SELF_RESOLVED stays 0.",
    "guard": "Production metadata describing control behaviour is NOT removed; only spoken VO is excluded.",
-   "implementation_status": "CONFORMANCE_TARGET_V0_4_4 — denylist gate, no copy change",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4 — denylist gate",
    "feedback_ids": []
   },
   {
@@ -963,7 +973,7 @@
    },
    "supersedes": "BARIAH_RASTER_TRANSCRIPTION_REGISTER_v0.4.3.json records S1-c and S1-d, PUNCTUATION_CONFIRMATION PENDING_BARIAH -> RESOLVED_BY_BARIAH",
    "note": "Line 3 was not mentioned. Its full stop was HIGH confidence in the earlier transcription and is retained.",
-   "implementation_status": "IMPLEMENTATION_REQUIRED_V0_4_4",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4",
    "feedback_ids": []
   },
   {
@@ -984,7 +994,33 @@
    "learner_facing_copy_unchanged": "Teruskan pembelajaran ke bahagian seterusnya.",
    "production_interaction_metadata": "Learner menutup lesson/content window untuk kembali ke course menu dan memilih bahagian pembelajaran seterusnya.",
    "guard": "The learner-facing copy is NOT changed. The mechanism is recorded as production metadata only, and the two unproven routes are recorded as unproven rather than asserted. TAMAT_UNVERIFIED_PHYSICAL_NAVIGATION_CLAIM stays live.",
-   "implementation_status": "METADATA_ONLY_V0_4_4",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4 — production metadata only",
+   "feedback_ids": []
+  },
+  {
+   "decision_id": "B02-BARIAH-20260802-OVERVIEW-CARDINALITY-01",
+   "title": "Overview cardinality for Papan Tanda and BBQ Pit",
+   "status": "RESOLVED_BY_BARIAH",
+   "resolved_on": "2026-08-02",
+   "authority": "Bariah — WhatsApp 8:24 AM, 2 August 2026",
+   "evidence": "B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png",
+   "evidence_sha256": "f46c2a371b93ebadc6e4bf99c619bf52621d7bc29421ebd36205f6ed6ec5ef64",
+   "ruling_verbatim": "Yup, papan tanda Pilihan A, ok bbq pit 1 gamba",
+   "ruling": {
+    "PAPAN_TANDA_OVERVIEW_VISUAL_COUNT": 2,
+    "PAPAN_TANDA_OVERVIEW_SUBJECTS": [
+     "Papan Tanda Informasi",
+     "Papan Tanda Penunjuk Arah"
+    ],
+    "BBQ_PIT_OVERVIEW_VISUAL_COUNT": 1,
+    "BBQ_PIT_OVERVIEW_SUBJECT": "BBQ Pit Struktur Kekal — existing frozen source-bound figure",
+    "MINIMUM_OVERVIEW_CARDINALITY": 1,
+    "CARDINALITY_SOURCE_DERIVED": true,
+    "UNIVERSAL_FIXED_CARD_COUNT": false
+   },
+   "guard": "No global equivalence is created between 'Informasi' and 'Interpretatif'. The row label is unchanged; only the overview uses the figure-bound names.",
+   "supersedes": "COMPONENT_OVERVIEW_MAPPING_REQUIRES_HUMAN_LAYOUT_RULING",
+   "implementation_status": "IMPLEMENTED_IN_V0_4_4",
    "feedback_ids": []
   }
  ],
@@ -1323,5 +1359,34 @@
   "source_authority_open_decisions_after": 3,
   "pending_human_closed_by_cc": 0,
   "implementation_delta": "B02_V0_4_4_IMPLEMENTATION_DELTA.md / .json"
+ },
+ "stage_4_2e_b_consolidated_build": {
+  "date": "2026-08-02",
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx",
+  "deck_sha256": "f74b81364d6f901a1ada9c364409861d2b75277961d7ef6b7a991dc8bfa17479",
+  "v0_4_3_unchanged": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f",
+  "overview_counts": {
+   "STRUKTUR_PERSISIR_AIR": 5,
+   "STRUKTUR_TEDUHAN": 5,
+   "KEMUDAHAN_AWAM": 3,
+   "WATER_FEATURE": 3,
+   "KERUSI_TAMAN": 3,
+   "PAPAN_TANDA": 2,
+   "TONG_SAMPAH": 3,
+   "DRINKING_FOUNTAIN": 2,
+   "BBQ_PIT": 1
+  },
+  "instance_mapping_complete": "9/9",
+  "ambiguous_overview_mappings": 0,
+  "invented_visual_subjects": 0,
+  "active_test_gates_passing": "367/367",
+  "supersession_markers": 19,
+  "total_emitted_gate_records": 386,
+  "mutation_fixtures": "39/39 detected, 0 missed",
+  "pages_rendered": 100,
+  "pages_visually_inspected": 100,
+  "slides_manually_patched": 0,
+  "source_authority_open_decisions": 3,
+  "source_governance_complete": false
  }
 }

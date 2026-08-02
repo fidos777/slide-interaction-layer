@@ -33,6 +33,17 @@
    "wired_note": "Gates are specified in B02_V0_4_4_IMPLEMENTATION_DELTA and will be added in the generating stage. Wiring them now would assert obligations the v0.4.3 deck does not yet meet, and this stage may not regenerate it.",
    "bytes": 10313,
    "sha256": "d8329e84cc10389a2f917fb8b35c86aca617f9a0a8857e334f9d11e68051eb7c"
+  },
+  "audit/b02_cardinality_oracle_v0_4_4.py": {
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "source": [
+    "B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png"
+   ],
+   "status": "ACTIVE",
+   "wired_into_qa_suite": true,
+   "gates": "CARDINALITY_EVIDENCE_*, PAPAN_TANDA_OVERVIEW_*, BBQ_PIT_OVERVIEW_*",
+   "bytes": 6498,
+   "sha256": "c8f9b54f38d0b219df413636a4a78b73149d817c9f2da8616449782a60fdd340"
   }
  },
  "frozen_decision_screenshots": [
@@ -65,6 +76,20 @@
    "sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b",
    "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
    "repository_path": "reviews/storyboard-bariah/v0_3_bariah_review/B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png"
+  },
+  {
+   "evidence_id": "D4",
+   "file": "B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png",
+   "original_filename": "Screenshot 2026-08-02 at 9.04.34 AM.png",
+   "message_time": "2026-08-02 08:24",
+   "bytes": 757585,
+   "sha256": "f46c2a371b93ebadc6e4bf99c619bf52621d7bc29421ebd36205f6ed6ec5ef64",
+   "dimensions": [
+    1172,
+    1538
+   ],
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "repository_path": "reviews/storyboard-bariah/v0_3_bariah_review/B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png"
   }
  ],
  "transport_archive": {
@@ -193,6 +218,76 @@
    "notes_block_count": 3,
    "transcription_confidence": "HIGH",
    "punctuation_confidence": "HIGH"
+  },
+  "overview_cardinality": {
+   "reply": {
+    "evidence_id": "D4",
+    "captured": "2026-08-02 08:24",
+    "crop": "(40,1355)-(780,1415)",
+    "verbatim": "Yup, papan tanda Pilihan A, ok bbq pit 1 gamba",
+    "note": "The final word renders as 'gamba' — colloquial Malay for 'gambar'. It is transcribed exactly as shown and is unambiguous in meaning: one image.",
+    "transcription_confidence": "HIGH",
+    "punctuation_confidence": "HIGH"
+   },
+   "papan_tanda": {
+    "evidence_id": "D4",
+    "captured": "2026-08-02 08:24",
+    "crop_options": "(370,420)-(960,800)",
+    "crop_reply": "(40,1355)-(780,1415)",
+    "question_ms": "Untuk skrin utama Papan Tanda, ada dua visual sumber: 1. Papan Tanda Informasi 2. Papan Tanda Penunjuk Arah. Adakah kedua-dua visual ini perlu dipaparkan sebagai overview pada skrin utama, atau gunakan satu visual sahaja?",
+    "options": {
+     "A": "Paparkan kedua-dua visual",
+     "B": "Paparkan satu visual sahaja"
+    },
+    "selected_option": "A",
+    "selected_option_text": "Paparkan kedua-dua visual",
+    "overview_visual_count": 2,
+    "overview_subjects": [
+     "Papan Tanda Informasi",
+     "Papan Tanda Penunjuk Arah"
+    ],
+    "subject_names_are_figure_bound": true,
+    "informasi_equals_interpretatif_global_rule": false,
+    "collapse_into_one_subject_permitted": false,
+    "status": "RESOLVED_BY_BARIAH",
+    "transcription_confidence": "HIGH"
+   },
+   "bbq_pit": {
+    "evidence_id": "D4",
+    "captured": "2026-08-02 08:24",
+    "crop_options": "(370,820)-(990,1200)",
+    "crop_reply": "(40,1355)-(780,1415)",
+    "question_ms": "Untuk skrin utama BBQ Pit, modul hanya mempunyai satu visual sumber. Adakah dibenarkan skrin overview menggunakan satu visual sahaja untuk komponen ini?",
+    "options": {
+     "A": "Ya, satu visual dibenarkan kerana source hanya satu",
+     "B": "Perlu visual kedua — nyatakan subject yang dikehendaki"
+    },
+    "selected_option": "A",
+    "selected_option_text": "Ya, satu visual dibenarkan kerana source hanya satu",
+    "reply_fragment": "ok bbq pit 1 gamba",
+    "overview_visual_count": 1,
+    "overview_subject": "existing frozen source-bound BBQ Pit figure",
+    "duplicate_visual_permitted": false,
+    "invented_second_subject_permitted": false,
+    "specification_categories_as_visuals_permitted": false,
+    "location_text_as_visual_subject_permitted": false,
+    "cross_component_borrow_permitted": false,
+    "status": "RESOLVED_BY_BARIAH",
+    "transcription_confidence": "HIGH"
+   },
+   "cardinality_rule": {
+    "rule": "If a component has multiple distinct source-bound visual subjects, display the approved multiple subjects as smaller overview visuals. If a component has only one defensible source-bound visual subject, a single-visual component-main overview is permitted. No additional visual may be invented merely to satisfy the word 'several'.",
+    "supported_by": [
+     "D2 6:52 PM overview-treatment ruling",
+     "D4 Papan Tanda Pilihan A selection",
+     "D4 BBQ Pit one-image exception"
+    ],
+    "MINIMUM_OVERVIEW_CARDINALITY": 1,
+    "CARDINALITY_SOURCE_DERIVED": true,
+    "INVENTED_SUBJECTS_TO_REACH_MINIMUM": 0,
+    "UNIVERSAL_FIXED_CARD_COUNT": false,
+    "not_a_licence_to_reduce": "This does not permit reducing a component that already has multiple approved source-bound subjects."
+   }
   }
  },
  "inherited_from_v0_4_3": {
@@ -281,6 +376,13 @@
    "now": "same screen, additional text, follows the VO",
    "evidence": "D1",
    "superseded_record": "B02-D-TAMBAHAN-TEXT-01"
+  },
+  {
+   "ruling": "Papan Tanda / BBQ Pit overview cardinality",
+   "was": "AMBIGUOUS_OVERVIEW_MAPPINGS = 2, generation blocked",
+   "now": "Papan Tanda = 2, BBQ Pit = 1, both RESOLVED_BY_BARIAH",
+   "evidence": "D4",
+   "superseded_record": "COMPONENT_OVERVIEW_MAPPING_REQUIRES_HUMAN_LAYOUT_RULING"
   }
  ]
 }

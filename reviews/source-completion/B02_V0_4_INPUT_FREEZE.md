@@ -321,6 +321,47 @@ things D3 settles outright.
 
 ---
 
+## 2E. Final overview-cardinality evidence — frozen
+
+```
+FINAL_OVERVIEW_CARDINALITY_EVIDENCE_FROZEN
+EVIDENCE_CLASS = BARIAH_DIRECT_SCREENSHOT
+DELIVERED_AS   = B02_OVERVIEW_CARDINALITY_EVIDENCE_20260802.zip
+FROZEN 2 August 2026 — second delivery attempt
+```
+
+One screenshot, closing the last two open overview mappings.
+
+| Archive | Bytes | SHA-256 | ZIP validity |
+|---|---:|---|---|
+| `B02_OVERVIEW_CARDINALITY_EVIDENCE_20260802.zip` | 744,564 | `d45f0b2e45c7b6efc73334f20f895ac0046ee954524fee2a0ce7997effc418c9` | valid; `testzip()` clean; 3 members plus the folder entry |
+
+| Ref | Repository filename | Original filename | Msg time | Bytes | Dimensions | SHA-256 |
+|---|---|---|---|---:|---|---|
+| **D4** | `B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png` | `Screenshot 2026-08-02 at 9.04.34 AM.png` | 8:24 AM, 2 Aug 2026 | 757,585 | 1172 × 1538 | `f46c2a371b93ebadc6e4bf99c619bf52621d7bc29421ebd36205f6ed6ec5ef64` |
+
+Subject: **final overview cardinality for Papan Tanda and BBQ Pit**. Independently hashed and
+measured after extraction, compared against the task-supplied identities and the archive
+`MANIFEST.txt` — all agree — then re-hashed and `cmp`-verified byte-identical in the repository.
+
+Supersedes `COMPONENT_OVERVIEW_MAPPING_REQUIRES_HUMAN_LAYOUT_RULING` and closes the two
+`AMBIGUOUS_OVERVIEW_MAPPINGS` recorded at the blocked Stage 4.2E-B run.
+
+### 2E.1 Delivery history
+
+| Attempt | Outcome |
+|---|---|
+| 1 | The screenshot rendered inline in the task message but no file reached the container. Stopped with `FINAL_OVERVIEW_CARDINALITY_EVIDENCE_NOT_AVAILABLE`; no hash was estimated and the visible content was not used as an oracle. |
+| 2 | Delivered as a ZIP. Verified, extracted, hashed, measured, frozen. |
+
+### 2E.2 The reply is read only against its own option blocks
+
+`generator/audit/b02_cardinality_oracle_v0_4_4.py` transcribes both option blocks and the reply
+from named crops, and records `SUMMARY_IS_ORACLE = False`. The reply's final word renders as
+*gamba* — colloquial for *gambar* — and is transcribed exactly as shown.
+
+---
+
 ## 3. Generator toolchain frozen
 
 | Module | Bytes | SHA-256 |

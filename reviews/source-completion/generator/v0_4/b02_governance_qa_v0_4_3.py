@@ -100,8 +100,13 @@ def run(pptx):
         any(s["text"].strip() == o_s01["button"] for s in D[s01]["canvas"]), True)
     spoken = [t for t in GEN.spoken_export(nblocks[s01]) if t.strip()]
     chk("SHOT_S01_SPOKEN_BLOCK_COUNT", len(spoken), len(o_s01["spoken_after"]))
+    # SUPERSEDED at Stage 4.2E-B: D3 removed the trailing full stops from lines 1 and 2.
+    # The oracle's own transcription is unchanged; the comparison target moves to the
+    # ruled current form, which is strictly more specific about punctuation.
+    chk("SHOT_S01_SPOKEN_BLOCKS_EXACT__SUPERSEDED_BY_D3_PUNCTUATION_RULING",
+        "SUPERSEDED", "SUPERSEDED")
     chk("SHOT_S01_SPOKEN_BLOCKS_EXACT",
-        [_norm(t) for t in spoken], [_norm(t) for t in o_s01["spoken_after"]])
+        [_norm(t) for t in spoken], [_norm(t) for t in o_s01["spoken_after_current"]])
     chk("SHOT_S01_REMOVED_SENTENCE_GONE",
         any(_norm(o_s01["removed_sentence"]) in _norm(t) for t in spoken), False)
     # The block list above is model-derived, so it cannot see a package-level edit. Read the
@@ -109,8 +114,10 @@ def run(pptx):
     pkg = [ "".join(t for t, _ in runs)
             for runs in PKG.notes_runs(pptx)[list(D).index(s01)] ]
     pkg = [t for t in pkg if t.strip()]
+    chk("SHOT_S01_PACKAGE_NOTES_EXACT__SUPERSEDED_BY_D3_PUNCTUATION_RULING",
+        "SUPERSEDED", "SUPERSEDED")
     chk("SHOT_S01_PACKAGE_NOTES_EXACT",
-        [_norm(t) for t in pkg], [_norm(t) for t in o_s01["spoken_after"]])
+        [_norm(t) for t in pkg], [_norm(t) for t in o_s01["spoken_after_current"]])
     chk("SHOT_S01_SUPERSEDED_SPOKEN_LINES_GONE",
         [l for l in o_s01["spoken_before"]
          if l not in o_s01["spoken_after"] and any(_norm(l) in _norm(t) for t in spoken)], [])
@@ -185,7 +192,7 @@ def run(pptx):
     chk("QUIZ_REVIEW_STATE_QUESTIONS_MISSING", miss_q, 0)
     chk("QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG", miss_a, 0)
 
-    chk("STAGE_4_2B_SUITE_CHECKS", n_prior, 265)
+    chk("STAGE_4_2B_SUITE_CHECKS", n_prior, 267)
     return res
 
 

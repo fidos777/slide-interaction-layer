@@ -47,7 +47,9 @@
      "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
      "is_persistence_target": true,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 1,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_BBQ_PIT_CAT01",
@@ -57,7 +59,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 1,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_BBQ_PIT_CAT02",
@@ -67,7 +71,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 1,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_BBQ_PIT_CAT03",
@@ -77,7 +83,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 1,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_BBQ_PIT_CAT04",
@@ -87,7 +95,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 1,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_BBQ_PIT_MAIN_BASE",
@@ -97,9 +107,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 1,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 1
   },
   {
    "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
@@ -119,7 +132,9 @@
      "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
      "is_persistence_target": true,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_DRINKING_FOUNTAIN_MAIN_BASE",
@@ -129,9 +144,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 2
   },
   {
    "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
@@ -151,9 +169,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 3,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 3
   },
   {
    "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
@@ -173,7 +194,9 @@
      "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
      "is_persistence_target": true,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 3,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_KERUSI_TAMAN_MAIN_BASE",
@@ -183,9 +206,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 3,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 3
   },
   {
    "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
@@ -205,7 +231,9 @@
      "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
      "is_persistence_target": true,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_PAPAN_TANDA_CAT01",
@@ -215,7 +243,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_PAPAN_TANDA_CAT02",
@@ -225,7 +255,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_PAPAN_TANDA_CAT03",
@@ -235,7 +267,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_PAPAN_TANDA_CAT04",
@@ -245,7 +279,9 @@
      "required_visual_treatment": "NO_VISUAL_PANEL_TEXT_LED",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": true
+     "is_specification_popup": true,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_PAPAN_TANDA_MAIN_BASE",
@@ -255,9 +291,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 2,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 2
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
@@ -277,9 +316,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 5,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 5
   },
   {
    "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
@@ -299,9 +341,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 5,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 5
   },
   {
    "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
@@ -321,7 +366,9 @@
      "required_visual_treatment": "OVERVIEW_IDENTICAL_TO_BASE",
      "is_persistence_target": true,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 3,
+     "matches_base_identity": true
     },
     {
      "runtime_state_id": "ST_TONG_SAMPAH_MAIN_BASE",
@@ -331,9 +378,12 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 3,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 3
   },
   {
    "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
@@ -353,9 +403,23 @@
      "required_visual_treatment": "OVERVIEW_SEVERAL_SMALLER_SOURCE_BOUND_VISUALS",
      "is_persistence_target": false,
      "is_focused_popup_target": false,
-     "is_specification_popup": false
+     "is_specification_popup": false,
+     "overview_subjects_rendered": 3,
+     "matches_base_identity": true
     }
-   ]
+   ],
+   "overview_visual_count": 3
   }
- ]
+ ],
+ "implementation_v0_4_4": {
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx",
+  "state_pages_with_base_identity_overview": 22,
+  "state_pages_total": 22,
+  "BASE_TO_ALL_VIEWED_OVERVIEW_IDENTITY_MISMATCHES": 0,
+  "BASE_TO_RETURN_OVERVIEW_IDENTITY_MISMATCHES": 0,
+  "PERSISTENCE_TARGET_PAGES_MISSING_VISUALS": 0,
+  "SPECIFICATION_POPUPS_REMAIN_TEXT_LED": true,
+  "OLD_13_PAGE_TARGET_LIST_REUSED": 0,
+  "comparison_basis": "subject identity, not shape count"
+ }
 }

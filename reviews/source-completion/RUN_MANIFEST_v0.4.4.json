@@ -1,0 +1,217 @@
+{
+ "manifest": "RUN_MANIFEST_v0.4.4",
+ "stage": "Stage 4.2E-B — consolidated review candidate",
+ "evidence_date": "2026-08-02",
+ "status_tokens": [
+  "REVIEW_CANDIDATE",
+  "FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+  "INSTANCE_MAPPING_COMPLETE",
+  "READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+  "NOT_FOR_MMD_BUILD",
+  "NOT_CANONICALLY_FROZEN",
+  "MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "not_asserted": [
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY",
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "MICROSOFT_POWERPOINT_EQUIVALENCE",
+  "SOURCE_GOVERNANCE_COMPLETE"
+ ],
+ "repository": {
+  "branch": "claude/verify-powerpoint-file-vpfzkg",
+  "head_at_authoring": "a1e876123f0962d27897d06a32eef6913454ed2f"
+ },
+ "outputs": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx": {
+   "bytes": 465681,
+   "sha256": "f74b81364d6f901a1ada9c364409861d2b75277961d7ef6b7a991dc8bfa17479"
+  }
+ },
+ "retained_unchanged": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx": {
+   "bytes": 439329,
+   "sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx": {
+   "bytes": 453859,
+   "sha256": "247eadb10bde4e7f227c6df947b1821c55faad140b212465ae774bd2c932f59a"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx": {
+   "bytes": 452752,
+   "sha256": "09bb08f2e391326a9e87cdee797b6ea3197c54373201b010e54096a1ec57ea1e"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx": {
+   "bytes": 457221,
+   "sha256": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f"
+  }
+ },
+ "frozen_decision_evidence": {
+  "B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png": {
+   "bytes": 757585,
+   "sha256": "f46c2a371b93ebadc6e4bf99c619bf52621d7bc29421ebd36205f6ed6ec5ef64",
+   "original_filename": "Screenshot 2026-08-02 at 9.04.34 AM.png",
+   "captured": "2026-08-02 08:24",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT"
+  }
+ },
+ "transport_archive": {
+  "name": "B02_OVERVIEW_CARDINALITY_EVIDENCE_20260802.zip",
+  "bytes": 744564,
+  "sha256": "d45f0b2e45c7b6efc73334f20f895ac0046ee954524fee2a0ce7997effc418c9"
+ },
+ "overview_mapping": {
+  "STRUKTUR_PERSISIR_AIR": 5,
+  "STRUKTUR_TEDUHAN": 5,
+  "KEMUDAHAN_AWAM": 3,
+  "WATER_FEATURE": 3,
+  "KERUSI_TAMAN": 3,
+  "PAPAN_TANDA": 2,
+  "TONG_SAMPAH": 3,
+  "DRINKING_FOUNTAIN": 2,
+  "BBQ_PIT": 1
+ },
+ "toolchain": {
+  "v0_4/b02_full_qa_v0_4.py": {
+   "bytes": 21416,
+   "sha256": "4479ba4bd140533ca156d88ed38acdfb6bbe7ec6a901c521d3c58e7fd69d089e"
+  },
+  "v0_4/b02_generator_v0_4.py": {
+   "bytes": 59294,
+   "sha256": "8e4ae1c8c5f9343e2c7e5b79c82170b64699962d56378c5d21cc51e41efa570c"
+  },
+  "v0_4/b02_glossary_v0_4.py": {
+   "bytes": 2406,
+   "sha256": "eecf0bba9ab61f1b5f1d29a063476c7e38a3e5457245e15e27ac4fa73e2a117b"
+  },
+  "v0_4/b02_governance_qa_v0_4_2.py": {
+   "bytes": 14080,
+   "sha256": "e04e3063005d7177976a1f6e69f34c3627c48bfe5a770e738f2c1a49e0df34fb"
+  },
+  "v0_4/b02_governance_qa_v0_4_3.py": {
+   "bytes": 11281,
+   "sha256": "06ea4bcb31735fe41609bb6a085d24ff291d90fe926a905a3d4d84a57e6bb07f"
+  },
+  "v0_4/b02_governance_qa_v0_4_4.py": {
+   "bytes": 14997,
+   "sha256": "af5cb975f81c65ca6278f109cefdf4ccbcf7588258a1baed22fc951a25cdecf1"
+  },
+  "v0_4/b02_instructions_v0_4.py": {
+   "bytes": 4514,
+   "sha256": "f0df5073f996c0bdb91aed0f4e41d8a22a7ebf6c2d4f3be201d219d662b4c358"
+  },
+  "v0_4/b02_model_adapter_v0_4.py": {
+   "bytes": 14706,
+   "sha256": "54b84c3b3703f188fbdd49f262b015de8040b89f1212f211f3bbd813231333de"
+  },
+  "v0_4/b02_overview_mapping_v0_4_4.py": {
+   "bytes": 3136,
+   "sha256": "3d50c826cdd1cbcc9350c572d2a61ad91d67f3b78b32c9b0f7b75e512eaebab7"
+  },
+  "v0_4/b02_proof_content_v0_4.py": {
+   "bytes": 13222,
+   "sha256": "9e93877d48e71cb399651d8e59e57fb1b87c157718be05eceb39abd975f4c2f1"
+  },
+  "v0_4/b02_proof_qa_v0_4.py": {
+   "bytes": 18910,
+   "sha256": "5dd2194c0784b54cff053a561d145175229ac44ee9b0ec1859ad3c2d9f58fe02"
+  },
+  "v0_4/b02_regression_qa_v0_4_1.py": {
+   "bytes": 27055,
+   "sha256": "c715ba1ac854bdd34f4a4cbe6f1d70511f08dbf9bb059771f412b6fcf4fa385f"
+  },
+  "v0_4/b02_visual_directions_v0_4.py": {
+   "bytes": 3559,
+   "sha256": "21d25743b6a0971cb745122d630ae674dbf2442a5ca98da9d88978027418e1d8"
+  },
+  "v0_4/b02_visual_policy_v0_4.py": {
+   "bytes": 11685,
+   "sha256": "12b91fa0602e1306ebc297304e6e86452fbedab617579fa85f34fb581c8a8a2c"
+  },
+  "audit/b02_cardinality_oracle_v0_4_4.py": {
+   "bytes": 6498,
+   "sha256": "c8f9b54f38d0b219df413636a4a78b73149d817c9f2da8616449782a60fdd340"
+  },
+  "audit/b02_classification_scope_fixtures_v0_4_3.py": {
+   "bytes": 8847,
+   "sha256": "ec3b393cbbaa98565bede934e8b7ee02e81037af386b0b0b033aaa2ca5ded4f2"
+  },
+  "audit/b02_decision_oracle_v0_4_4.py": {
+   "bytes": 10313,
+   "sha256": "d8329e84cc10389a2f917fb8b35c86aca617f9a0a8857e334f9d11e68051eb7c"
+  },
+  "audit/b02_oracle_extract_v0_4_2.py": {
+   "bytes": 4939,
+   "sha256": "8ae7f9fbb4445988ea4650c6676e8bb10a63695464e490b6d3436db7a9ad0890"
+  },
+  "audit/b02_population_audit_v0_4_3.py": {
+   "bytes": 15257,
+   "sha256": "1b0d0b02453ee6825bbd91dcecd88a7290bc6e42270eaf958c1d8fc7a11b4681"
+  },
+  "audit/b02_replay_v0_4_2.py": {
+   "bytes": 9174,
+   "sha256": "290f7c06b3056cf181489389571bb0c30f7d552bea55f16e92c01fbb3e8a1f3e"
+  },
+  "audit/b02_replay_v0_4_3.py": {
+   "bytes": 6704,
+   "sha256": "150929a92a40eb19ef29bdc10654608422dcbcb54cdbe835c00f8ab0e82a22f2"
+  },
+  "audit/b02_replay_v0_4_4.py": {
+   "bytes": 12152,
+   "sha256": "9a1d2d0dcbe59240df3acf263953b9a3787ccf91c38f7559ac9f76242bdac9b3"
+  },
+  "audit/b02_screenshot_oracle_v0_4_3.py": {
+   "bytes": 8601,
+   "sha256": "05d6f528b302803f98a2c3ce1578e55ecf995857b1130c752bdfa197ad48752f"
+  }
+ },
+ "qa": {
+  "ACTIVE_TEST_GATES_PASSING": 367,
+  "ACTIVE_TEST_GATES": 367,
+  "SUPERSESSION_MARKERS_PRESENT": 19,
+  "TOTAL_EMITTED_GATE_RECORDS": 386,
+  "FAILING": 0
+ },
+ "mutation": {
+  "MUTATION_FIXTURES_DETECTED": 39,
+  "MUTATION_FIXTURES_TOTAL": 39,
+  "MUTATION_FIXTURES_MISSED": 0,
+  "CORRECTED_V0_4_4_FALSE_FAILURES": 0
+ },
+ "historical_replay": {
+  "v0_4": 91,
+  "v0_4_1": 41,
+  "v0_4_2": 42,
+  "v0_4_3": 25,
+  "v0_4_4": 0
+ },
+ "rendered_inspection": {
+  "PAGES_RENDERED": 100,
+  "PAGES_VISUALLY_INSPECTED": 100,
+  "SHAPES_INSPECTED": 1813,
+  "TEXT_BOXES_MEASURED": 1425,
+  "FOUR_EDGE_BOUNDARY_ASSERTIONS": 6852,
+  "OVERLAP_PAIRS_EVALUATED": 15689,
+  "PERSISTENCE_TARGET_PAGES_INSPECTED": 22,
+  "POPUP_VISUAL_TARGETS_INSPECTED": 46,
+  "TEXT_OVERFLOW": 0,
+  "SHAPES_OUTSIDE_STAGE": 0,
+  "UNINTENDED_NON_MODAL_OVERLAPS": 0,
+  "MODAL_OVERLAPS_BY_DESIGN": 202
+ },
+ "totals": {
+  "REVIEW_PAGES": 100,
+  "LEARNER_SCREENS": 29,
+  "RUNTIME_STATES": 100,
+  "INTERACTION_ITEMS": 54,
+  "SOURCE_ROWS": 26,
+  "SOURCE_ASSETS": 14,
+  "COMPONENTS": 9,
+  "SLIDES_MANUALLY_PATCHED": 0
+ },
+ "environment_limitations": [
+  "LibreOffice has no Impress import filter in this container. Rendering uses the package parser with Liberation Sans metrics. MICROSOFT_POWERPOINT_EQUIVALENCE is NOT claimed and no smoke test has run.",
+  "The five frozen decision screenshots are raster images with no text layer; every expected value derived from them is transcribed from a named crop."
+ ]
+}
