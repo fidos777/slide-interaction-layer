@@ -27,6 +27,11 @@ def run(pptx):
     D = {p["id"]: d for p, d in zip(pages, deck)}
     ctext = {pid: " ".join(s["text"] for s in d["canvas"]) for pid, d in D.items()}
     ptext = {pid: " ".join(s["text"] for s in d["panel"]) for pid, d in D.items()}
+    # Panel paragraphs in order. The production panel writes one run per paragraph, so the
+    # run list IS the line list — which is what lets the identity block be read back as
+    # lines instead of being grepped out of one concatenated string.
+    plines = {pid: [r for s in d["panel"] if s["name"] == "ProdPanel" for r in s["runs"]]
+              for pid, d in D.items()}
     ticks = {pid: sum(1 for s in d["canvas"] if s["name"] == "Tick") for pid, d in D.items()}
     notes = {pid: d["notes"] for pid, d in D.items()}
     fam_of = {}
@@ -317,11 +322,35 @@ def run(pptx):
         sum(1 for pid in notes for m in MARKERS if m in notes[pid]), 0)
     chk("V0_3_TOKENS_IN_PANEL",
         sum(1 for pid in ptext if "v0.3" in ptext[pid] or "PAPAN CERITA v0.3" in ptext[pid]), 0)
-    for tok in ("REVIEW_READY", "BARIAH_FEEDBACK_IMPLEMENTED", "PENDING_TARGETED_CONFIRMATION",
-                "NOT_FOR_MMD_BUILD", "MULTIMEDIA_NOT_PRODUCED"):
-        chk(f"PACKAGE_TOKEN_{tok}", all(tok in ptext[pid] for pid in ptext), True)
-    for tok in ("PRODUCTION_APPROVED", "CANONICAL_FREEZE", "MMD_BUILD_READY",
-                "SOURCE_INTEGRITY_FULLY_VERIFIED"):
+    # Stage 4.2E-C, defect B02-META-REG-001. The two gates that used to live here are the
+    # reason four releases shipped stamped "v0.4" with the Stage 4 tokens: one forbade only
+    # the literal "v0.3", and the other REQUIRED REVIEW_READY / BARIAH_FEEDBACK_IMPLEMENTED /
+    # PENDING_TARGETED_CONFIRMATION to be present on every page. A suite that mandates the
+    # stale value cannot report the drift. Both are now driven by the controlled identity
+    # source, and the panel's token set is compared for EQUALITY, not for presence.
+    import b02_artifact_identity_v0_4_4_1 as IDENT
+    ident = {pid: IDENT.panel_identity_from_text(plines[pid]) for pid in plines}
+    chk("PANEL_VERSION_LINES_READ", sum(1 for pid in ident if ident[pid][0]), len(ptext))
+    chk("ACTIVE_PANEL_VERSION",
+        sorted({(v or "").replace("K5 PL06 T03 B02 — PAPAN CERITA ", "")
+                for v, _ in ident.values()}), [IDENT.VERSION])
+    chk("PANEL_VERSION_MISMATCHES",
+        sum(1 for v, _ in ident.values() if v != IDENT.VERSION_LINE), 0)
+    # Exact line equality, not substring: "…PAPAN CERITA v0.4" is a prefix of
+    # "…PAPAN CERITA v0.4.4.1", so a substring test would report the active version as stale.
+    chk("SUPERSEDED_VERSION_LINES_IN_PANEL",
+        sum(1 for v, _ in ident.values() if v in IDENT.SUPERSEDED_VERSION_LINES), 0)
+    chk("PANEL_STATUS_TOKEN_SET_MISMATCHES",
+        sum(1 for _, t in ident.values() if t != IDENT.STATUS_TOKENS), 0)
+    for tok in IDENT.STATUS_TOKENS:
+        chk(f"PACKAGE_TOKEN_{tok}", all(tok in t for _, t in ident.values()), True)
+    for tok in IDENT.STALE_STATUS_TOKENS:
+        chk(f"STALE_STATUS_TOKEN_{tok}", sum(1 for _, t in ident.values() if tok in t), 0)
+    chk("STALE_RELEASE_TOKENS",
+        sum(1 for _, t in ident.values() for tok in IDENT.STALE_STATUS_TOKENS if tok in t), 0)
+    for tok in IDENT.FORBIDDEN_STATUS_TOKENS:
+        chk(f"FORBIDDEN_STATUS_TOKEN_{tok}", sum(1 for _, t in ident.values() if tok in t), 0)
+    for tok in IDENT.FORBIDDEN_CLAIM_STRINGS:
         chk(f"FORBIDDEN_TOKEN_{tok}", sum(1 for pid in ptext if tok in ptext[pid]), 0)
 
     # ============================ RICH TEXT ============================

@@ -1,0 +1,54 @@
+{
+ "registry": "ARTIFACT_IDENTITY_AND_VERSION",
+ "controlled_source": "generator/v0_4/b02_artifact_identity_v0_4_4_1.py",
+ "defect_corrected": "B02-META-REG-001",
+ "consumers": [
+  "production panel (b02_generator_v0_4.prodpanel_v4)",
+  "RUN_MANIFEST_v0.4.4.1.json",
+  "b02_full_qa_v0_4 (package identity gates)",
+  "b02_governance_qa_v0_4_4_1 (manifest agreement gates)",
+  "BARIAH_REVIEW_CHECKLIST_v0.4.4.1.md",
+  "STORYBOARD_QA_REPORT_v0.4.4.1.md"
+ ],
+ "panel_lines": [
+  "K5 PL06 T03 B02 — PAPAN CERITA v0.4.4.1",
+  "REVIEW_CANDIDATE · FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+  "INSTANCE_MAPPING_COMPLETE · READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+  "NOT_FOR_MMD_BUILD",
+  "NOT_CANONICALLY_FROZEN · MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "artifact_version": "v0.4.4.1",
+ "artifact_version_line": "K5 PL06 T03 B02 — PAPAN CERITA v0.4.4.1",
+ "deck_filename": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4_1.pptx",
+ "status_tokens": [
+  "REVIEW_CANDIDATE",
+  "FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+  "INSTANCE_MAPPING_COMPLETE",
+  "READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+  "NOT_FOR_MMD_BUILD",
+  "NOT_CANONICALLY_FROZEN",
+  "MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "stale_status_tokens_prohibited": [
+  "REVIEW_READY",
+  "PENDING_TARGETED_CONFIRMATION",
+  "BARIAH_FEEDBACK_IMPLEMENTED"
+ ],
+ "forbidden_status_tokens": [
+  "PRODUCTION_READY",
+  "MMD_READY",
+  "CANONICALLY_FROZEN"
+ ],
+ "forbidden_claim_strings": [
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY",
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "MICROSOFT_POWERPOINT_EQUIVALENCE",
+  "SOURCE_GOVERNANCE_COMPLETE"
+ ],
+ "superseded_version_lines": [
+  "K5 PL06 T03 B02 — PAPAN CERITA v0.3",
+  "K5 PL06 T03 B02 — PAPAN CERITA v0.4"
+ ]
+}

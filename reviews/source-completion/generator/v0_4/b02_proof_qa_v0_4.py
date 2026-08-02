@@ -47,8 +47,14 @@ def read_pptx(path):
             ital = [r.get("i") == "1" for r in sp.iter(f"{A}rPr")]
             geom = "custGeom" if sp.find(f".//{A}custGeom") is not None else (
                 sp.find(f".//{A}prstGeom").get("prst") if sp.find(f".//{A}prstGeom") is not None else "")
+            # Placeholder identity, read from the package. Stage 4.2E-C: the registered
+            # off-stage geometry exemption keys on the real <p:ph type="..."/> element, so a
+            # shape merely renamed "Title 1" cannot inherit the exemption.
+            ph = sp.find(f".//{P}ph")
             shapes.append(dict(name=name, x=x, y=y, w=w, h=h, text="".join(runs),
                                runs=runs, italics=ital, geom=geom,
+                               is_placeholder=ph is not None,
+                               ph_type=(ph.get("type") if ph is not None else None),
                                offcanvas=(x + w) <= 0.001))
         out.append(dict(slide=i, shapes=shapes, notes=notes,
                         canvas=[s for s in shapes if not s["offcanvas"]],

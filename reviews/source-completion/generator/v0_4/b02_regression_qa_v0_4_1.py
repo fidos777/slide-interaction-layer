@@ -102,19 +102,31 @@ def run(pptx):
     # that report the real position instead of engineering it away. ID retained.
     chk("CONDITIONAL_VISUAL_REQUIREMENTS_UNRESOLVED__SUPERSEDED_BY_CONDITIONAL_PENDING_HUMAN",
         "SUPERSEDED", "SUPERSEDED")
-    chk("CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY",
-        sum(1 for pid in cond if pol[pid]["visual_status"] == "RESOLVED_BY_DIRECT_AUTHORITY"), 1)
-    # 12 -> 8 at Stage 4.2C: the four EXAMPLE_SELECTION_SCREENs left CONDITIONAL when the
-    # 4:37 PM ruling made them REQUIRED. The eight remaining are the component mains other
-    # than Struktur Persisir Air, and they stay a human decision.
-    chk("CONDITIONAL_PENDING_HUMAN",
-        sum(1 for pid in cond if pol[pid]["visual_status"] == "PENDING_HUMAN"), 8)
-    chk("CONDITIONAL_PENDING_HUMAN_ARE_COMPONENT_MAINS",
-        sorted({pol[pid]["semantic_screen_subtype"] for pid in cond
-                if pol[pid]["visual_status"] == "PENDING_HUMAN"}), ["COMPONENT_MAIN_SCREEN"])
+    # SUPERSEDED at Stage 4.2E-C. These three gates asserted the OPEN position — eight
+    # component mains CONDITIONAL / PENDING_HUMAN / PROVISIONAL — which was the correct
+    # position until D2 settled the requirement and the treatment and the 9/9 overview
+    # mapping was frozen. They are retained as markers, not deleted, so the change of
+    # position is visible; the replacements live in the Stage 4.2E-C suite and assert
+    # REQUIRED / RESOLVED / 0 pending on all nine. IDs retained.
+    chk("CONDITIONAL_RESOLVED_BY_DIRECT_AUTHORITY__SUPERSEDED_BY_D2_COMPONENT_MAIN_RULING",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("CONDITIONAL_PENDING_HUMAN__SUPERSEDED_BY_D2_COMPONENT_MAIN_RULING",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("CONDITIONAL_PENDING_HUMAN_ARE_COMPONENT_MAINS__SUPERSEDED_BY_D2_COMPONENT_MAIN_RULING",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("COMPONENT_MAINS_MARKED_PROVISIONAL__SUPERSEDED_BY_D2_COMPONENT_MAIN_RULING",
+        "SUPERSEDED", "SUPERSEDED")
     chk("COMPONENT_MAIN_SELF_RESOLVED_BY_CC", 0, 0)
-    chk("COMPONENT_MAINS_MARKED_PROVISIONAL",
-        sum(1 for pid in cond if pol[pid].get("proposal_class") == VP.PROVISIONAL), 8)
+    # What replaces them at this layer: no component main may sit CONDITIONAL, PENDING_HUMAN
+    # or PROVISIONAL any more, and the requirement must be REQUIRED for all nine.
+    cmains = [pid for pid in pol
+              if pol[pid]["semantic_screen_subtype"] == "COMPONENT_MAIN_SCREEN"]
+    chk("COMPONENT_MAINS_STILL_CONDITIONAL",
+        sum(1 for pid in cmains if pol[pid]["visual_requirement"] == VP.CONDITIONAL), 0)
+    chk("COMPONENT_MAINS_STILL_PENDING_HUMAN",
+        sum(1 for pid in cmains if pol[pid]["visual_status"] == "PENDING_HUMAN"), 0)
+    chk("COMPONENT_MAINS_STILL_PROVISIONAL",
+        sum(1 for pid in cmains if pol[pid].get("proposal_class") == VP.PROVISIONAL), 0)
     chk("CONDITIONAL_SELF_RESOLVED_BY_CC", 0, 0)
     chk("CONDITIONAL_WITH_GENERIC_FALLBACK_FILLER",
         sum(1 for pid in cond if pol[pid]["visual_direction"]
@@ -459,7 +471,7 @@ def run(pptx):
         if drawn != exp:
             tick_bad.append((pid, rec["screen_role"], drawn, exp))
     chk("COMPLETION_TICKS_NOT_MATCHING_PATH", len(tick_bad), 0)
-    chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 116)
+    chk("ORIGINAL_STAGE_4_CHECKS", n_orig, 132)
     return res
 
 

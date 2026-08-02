@@ -279,7 +279,7 @@ def run(pptx):
             or "PL enam" in D[p]["notes"]), 0)
     chk("SOURCE_GOVERNANCE_COMPLETE", False, False)
 
-    chk("STAGE_4_2C_SUITE_CHECKS", n_prior, 311)
+    chk("STAGE_4_2C_SUITE_CHECKS", n_prior, 334)
     return res
 
 

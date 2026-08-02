@@ -146,16 +146,30 @@ def run(pptx):
     chk("ANSWER_KEYS_COVERED", sum(1 for pid, n, o in covered if n == "AnswerKeyBody"), 0)
 
     # ============================ FOUR-EDGE GEOMETRY, EVERY SHAPE ============================
+    # Stage 4.2E-C. Two changes, both tightening.
+    #
+    # The top threshold was `y < -0.66`, a number picked to clear the title placeholder at
+    # -0.631 in. Any ordinary shape parked between -0.66 and 0 passed with it. It is now
+    # `y < -0.01` like the other three edges, with the placeholder cleared by an entry in the
+    # exemption registry that matches on placeholder type, name and all four coordinates.
+    #
+    # The population was `d["canvas"]`, which is the reader's partition of shapes with
+    # (x + w) <= 0 — so the production panel, and anything else pushed fully left of the
+    # stage, was never evaluated at all. It is now every shape on the slide.
+    import b02_geometry_exemptions_v0_4_4_1 as GEX
     edges = collections.Counter()
-    for pid, d in D.items():
-        for s in d["canvas"]:
-            if s["x"] < -0.01: edges["left"] += 1
-            if s["y"] < -0.66: edges["top"] += 1
-            if s["x"] + s["w"] > STAGE_W + .01: edges["right"] += 1
-            if s["y"] + s["h"] > STAGE_H + .01: edges["bottom"] += 1
+    allshapes = [s for d in D.values() for s in d["shapes"]]
+    for s in allshapes:
+        ex = GEX.exemption_for(s)
+        for e in GEX.edges_outside(s):
+            if ex is not None and e in ex["edges_exempted"]:
+                continue
+            edges[e] += 1
     for e in ("left", "right", "top", "bottom"):
         chk(f"SHAPES_BEYOND_{e.upper()}_EDGE", edges[e], 0)
     chk("GEOMETRY_SHAPES_EVALUATED", sum(len(d["canvas"]) for d in D.values()) > 500, True)
+    chk("GEOMETRY_SHAPES_EVALUATED_INCLUDING_OFF_CANVAS", len(allshapes) > 500, True)
+    chk("UNREGISTERED_OFF_CANVAS_EXEMPTIONS", GEX.unregistered_off_canvas(allshapes), [])
 
     # ============================ TYPED NOTES ============================
     allb = [b for nb in nblocks.values() for b in nb]
@@ -242,7 +256,7 @@ def run(pptx):
         sum(1 for pid in sup
             if pol[pid]["superseded_ruling"]["superseded_direction"] in ctext[pid]), 0)
 
-    chk("PRIOR_SUITE_CHECKS", n_prior, 218)
+    chk("PRIOR_SUITE_CHECKS", n_prior, 237)
     return res
 
 

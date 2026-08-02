@@ -1,0 +1,54 @@
+{
+ "registry": "GEOMETRY_EXEMPTION_REGISTRY",
+ "artifact_version": "v0.4.4.1",
+ "stage": "4.2E-C",
+ "outcome": "B_UNREGISTERED_GEOMETRY_EXEMPTION_NOW_REGISTERED",
+ "rule": "A shape outside the 13.3333 x 7.5 in stage fails the four-edge geometry gate unless an entry below matches its placeholder-ness, placeholder type, shape name and all four coordinates to 0.001 in, AND the edge it crosses is one the entry exempts. Naming a shape after an exempt one, or moving an exempt shape, matches nothing.",
+ "prior_mechanism": {
+  "title_placeholder": "ad hoc numeric threshold `y < -0.66` in the four-edge gate",
+  "production_panel": "excluded by the reader's (x + w) <= 0 canvas/panel partition, which the four-edge gate never iterated past",
+  "classification": "UNREGISTERED_GEOMETRY_EXEMPTION"
+ },
+ "exemptions": [
+  {
+   "exemption_id": "GEX-001",
+   "shape_name": "Title 1",
+   "requires_placeholder": true,
+   "ph_type": "title",
+   "x": 0.0,
+   "y": -0.6311001749781278,
+   "w": 13.333300524934383,
+   "h": 0.5722003499562555,
+   "edges_exempted": [
+    "top"
+   ],
+   "page_population": "ALL_REVIEW_PAGES",
+   "learner_facing": false,
+   "visible_in_slide_show": false,
+   "purpose": "PowerPoint slide-title identity: outline pane, accessibility name, slide navigator and search. Off the top edge so it never paints on the learner canvas while remaining the slide's programmatic title.",
+   "why_not_deleted": "Deleting it would leave every slide untitled in the outline pane and in the accessibility tree. It is not proven unnecessary.",
+   "enforcement_gate": "OFF_CANVAS_PLACEHOLDER_EXEMPTION_REGISTERED",
+   "registered_at": "Stage 4.2E-C"
+  },
+  {
+   "exemption_id": "GEX-002",
+   "shape_name": "ProdPanel",
+   "requires_placeholder": false,
+   "ph_type": null,
+   "x": -6.9,
+   "y": 0.0,
+   "w": 6.6,
+   "h": 7.5,
+   "edges_exempted": [
+    "left"
+   ],
+   "page_population": "ALL_REVIEW_PAGES",
+   "learner_facing": false,
+   "visible_in_slide_show": false,
+   "purpose": "Review-only production metadata panel. Deliberately parked left of the stage so a reviewer reads it in Normal view and a learner never sees it.",
+   "why_not_deleted": "It is the review surface this whole storyboard exists to carry.",
+   "enforcement_gate": "OFF_CANVAS_PRODUCTION_PANEL_EXEMPTION_REGISTERED",
+   "registered_at": "Stage 4.2E-C"
+  }
+ ]
+}

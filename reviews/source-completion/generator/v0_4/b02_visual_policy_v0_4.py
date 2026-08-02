@@ -120,6 +120,49 @@ SUPERSEDED_RULINGS = {
 }
 
 
+# ---------------------------------------------------------------------------------------
+# Stage 4.2E-C — component-main active visual governance.
+#
+# Until v0.4.4 the nine component mains still carried CONDITIONAL / PENDING_HUMAN /
+# PROVISIONAL_VISUAL_PROPOSAL on the page. Those were correct while the question was open.
+# They stopped being correct when D2 (6:52 PM) settled the requirement and the treatment and
+# the 9/9 overview mapping was frozen — and the deck kept printing them anyway.
+#
+# Nothing here is asserted by this module. Every value is read from the frozen mapping
+# contract, which records the authority for each field separately. The one distinction that
+# must survive: Bariah settled the REQUIREMENT and the TREATMENT; she named no SUBJECT except
+# the two Papan Tanda figures in D4. Subject provenance therefore stays per-subject.
+SOURCE_BOUND_OVERVIEW = "SOURCE_BOUND_OVERVIEW"
+BARIAH_SHOT = "BARIAH_DIRECT_SCREENSHOT"
+
+
+class SubjectAuthorityError(RuntimeError):
+    """A subject claims BARIAH_DIRECT provenance the frozen mapping does not support."""
+
+
+def component_main_governance(component_id):
+    """Active governance metadata for one component-main screen, from the frozen mapping."""
+    import b02_overview_mapping_v0_4_4 as OV
+    c = OV.by_component()[component_id]
+    prov = {}
+    for s in c["subjects"]:
+        p = s["provenance"]
+        if p == "BARIAH_DIRECT" and not s.get("directly_named_by_bariah"):
+            raise SubjectAuthorityError(
+                f"{component_id}/{s['subject_label']}: provenance BARIAH_DIRECT but the "
+                "frozen mapping does not record Bariah naming it. Refusing to promote.")
+        prov[p] = prov.get(p, 0) + 1
+    return dict(visual_requirement=REQUIRED,
+                requirement_authority=c["VISUAL_REQUIREMENT_AUTHORITY"],
+                treatment=SOURCE_BOUND_OVERVIEW,
+                treatment_authority=c["VISUAL_TREATMENT_AUTHORITY"],
+                subject_provenance=prov,
+                overview_subject_count=c["overview_visual_count"],
+                mapping_status="RESOLVED",
+                instance_mapping="COMPLETE",
+                pending_human=False)
+
+
 def classify(M, rec, st):
     """Semantic subtype + visual requirement + resolved direction for one review page.
 
@@ -210,19 +253,20 @@ def classify(M, rec, st):
     # ---- component main / explanation screens ----
     if srole in ("COMPONENT_MAIN_EXPLANATION", "COMPONENT_EXPLANATION_WITH_EXAMPLE_LIST",
                  "COMPONENT_EXPLANATION_WITH_SPEC_LIST"):
-        out.update(semantic_screen_subtype="COMPONENT_MAIN_SCREEN", visual_requirement=CONDITIONAL)
+        out.update(semantic_screen_subtype="COMPONENT_MAIN_SCREEN")
+        out.update(component_main_governance(rec["component_id"]))
         if sid in BARIAH_DIRECT:
-            resolved(bariah_direct(sid), BARIAH_DIRECT_AUTH, "RESOLVED_BY_DIRECT_AUTHORITY")
+            resolved(bariah_direct(sid), BARIAH_DIRECT_AUTH, "RESOLVED")
             return out
-        # No per-screen ruling. Bariah's 4:40 PM caption is "Slide 5 – apply to yang lain where
-        # applicable/necessary" — a qualified instruction, not a blanket mandate naming content
-        # for the other eight. So each retains the module's OWN visual direction, flagged as a
-        # PROVISIONAL_VISUAL_PROPOSAL awaiting her decision. CC does not decide "applicable".
+        # The DIRECTION text is still the module's own — Bariah named no subject for any of
+        # the nine, and the 4:40 PM caption remains qualified. What changed at Stage 4.2E-C is
+        # only the governance metadata: the requirement and the overview treatment are now
+        # settled by direct screenshot, and the 9/9 instance mapping is frozen. The direction's
+        # own authority is untouched, which is what keeps this from being a promotion.
         c = M.comps[rec["component_id"]]
         vis = VD.normalise_display((c.get("visual") or "").strip())
-        out["proposal_class"] = PROVISIONAL
         if vis:
-            resolved(vis, "SOURCE_ATTESTED_COMPONENT_VISUAL", "PENDING_HUMAN")
+            resolved(vis, "SOURCE_ATTESTED_COMPONENT_VISUAL", "RESOLVED")
         else:
             out["visual_status"] = "PENDING_SPECIFIC_VISUAL_DIRECTION"
         return out

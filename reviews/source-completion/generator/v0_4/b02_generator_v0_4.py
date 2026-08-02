@@ -87,13 +87,14 @@ def close_icon(i, x, y, size=0.42):
 
 
 # ============================ off-canvas production panel ============================
-TOKENS_V4 = ["REVIEW_READY", "BARIAH_FEEDBACK_IMPLEMENTED", "PENDING_TARGETED_CONFIRMATION",
-             "NOT_FOR_MMD_BUILD", "MULTIMEDIA_NOT_PRODUCED"]
+# Stage 4.2E-C: the version line and the release tokens are no longer written here. They come
+# from the one controlled artifact-identity source, which the manifest, the QA suite, the
+# checklist and the release report all read as well. See B02-META-REG-001.
+import b02_artifact_identity_v0_4_4_1 as IDENT
 
 
 def prodpanel_v4(i, page, rec, st, lines):
-    head = ["K5 PL06 T03 B02 — PAPAN CERITA v0.4",
-            " · ".join(TOKENS_V4[:2]), " · ".join(TOKENS_V4[2:]),
+    head = IDENT.panel_head_lines() + [
             "Tiada imej, audio, video atau animasi dibenamkan.", "",
             f"FUNGSI SKRIN: {rec['semantic_screen_name']}",
             f"KELUARGA PELAKSANAAN: {st['execution_family']}",
@@ -1001,6 +1002,21 @@ def build_page(M, page, pages):
         f"  keperluan visual: {vpol['visual_requirement']}",
         f"  status: {vpol['visual_status']}",
         f"  kuasa: {vpol['visual_authority'] or '—'}"]
+    # Component-main active governance. Printed from the frozen mapping contract, never
+    # restated by hand. The requirement and the treatment carry Bariah's direct authority;
+    # the subject provenance is counted per subject and stays separate, because she named no
+    # subject except the two Papan Tanda figures.
+    if vpol.get("treatment"):
+        extra += [f"  kuasa keperluan: {vpol['requirement_authority']}",
+                  f"  rawatan: {vpol['treatment']}",
+                  f"  kuasa rawatan: {vpol['treatment_authority']}",
+                  "  sumber subjek: " + " · ".join(
+                      f"{k} {v}" for k, v in sorted(vpol["subject_provenance"].items())),
+                  f"  bilangan subjek overview: {vpol['overview_subject_count']}",
+                  f"  status pemetaan: {vpol['mapping_status']}",
+                  f"  pemetaan instans: {vpol['instance_mapping']}",
+                  "  menunggu keputusan manusia: "
+                  + ("YA" if vpol["pending_human"] else "TIDAK")]
     if vpol.get("proposal_class"):
         extra += [f"  kelas cadangan: {vpol['proposal_class']}"]
     if vpol.get("evidence_conflict"):
@@ -1130,7 +1146,7 @@ def generate(outdir, outname=OUTNAME, page_fn=None):
     return out, manifest
 
 
-FULL_OUTNAME = "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx"
+FULL_OUTNAME = IDENT.DECK_FILENAME
 
 
 def generate_full(outdir, outname=FULL_OUTNAME):

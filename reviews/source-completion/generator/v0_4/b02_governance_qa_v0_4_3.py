@@ -152,18 +152,26 @@ def run(pptx):
     mains = [pid for pid in pol
              if pol[pid]["semantic_screen_subtype"] == "COMPONENT_MAIN_SCREEN"]
     chk("COMPONENT_MAINS_EVALUATED", len(mains), 9)
-    chk("COMPONENT_MAINS_RESOLVED_BY_DIRECT_AUTHORITY",
+    # SUPERSEDED at Stage 4.2E-C, with the eight-pending position they asserted. IDs retained.
+    chk("COMPONENT_MAINS_RESOLVED_BY_DIRECT_AUTHORITY__SUPERSEDED_BY_D2_COMPONENT_MAIN_RULING",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("COMPONENT_MAINS_PENDING_HUMAN__SUPERSEDED_BY_D2_COMPONENT_MAIN_RULING",
+        "SUPERSEDED", "SUPERSEDED")
+    # SUPERSEDED at Stage 4.2E-C for a different reason: it conflated two authorities. It
+    # required the DIRECTION's authority to be BARIAH_DIRECT wherever the status was RESOLVED,
+    # which was serviceable while only Struktur Persisir Air was resolved. It cannot survive
+    # the split D2 forces — Bariah settled the REQUIREMENT and the TREATMENT for all nine and
+    # named a SUBJECT for none of them. Reading it forward unchanged would have demanded
+    # exactly the promotion Part 3 forbids. Replaced by the pair below.
+    chk("COMPONENT_MAIN_RESOLVED_WITHOUT_BARIAH_AUTHORITY__SUPERSEDED_BY_AUTHORITY_SPLIT",
+        "SUPERSEDED", "SUPERSEDED")
+    chk("COMPONENT_MAIN_REQUIREMENT_WITHOUT_BARIAH_AUTHORITY",
         sum(1 for pid in mains
-            if pol[pid]["visual_status"] == "RESOLVED_BY_DIRECT_AUTHORITY"), 1)
-    chk("COMPONENT_MAINS_PENDING_HUMAN",
-        sum(1 for pid in mains if pol[pid]["visual_status"] == "PENDING_HUMAN"), 8)
-    # distinct ID: the regression suite already owns COMPONENT_MAIN_SELF_RESOLVED_BY_CC, and
-    # two checks sharing one name collapse into a single key when the replay harness indexes
-    # results by gate, silently hiding one of them.
-    chk("COMPONENT_MAIN_RESOLVED_WITHOUT_BARIAH_AUTHORITY",
-        sum(1 for pid in mains
-            if pol[pid]["visual_status"].startswith("RESOLVED")
-            and pol[pid]["visual_authority"] != VP.BARIAH_DIRECT_AUTH), 0)
+            if pol[pid].get("requirement_authority") != "BARIAH_DIRECT_SCREENSHOT"
+            or pol[pid].get("treatment_authority") != "BARIAH_DIRECT_SCREENSHOT"), 0)
+    chk("COMPONENT_MAIN_DIRECTION_AUTHORITIES",
+        sorted({pol[pid]["visual_authority"] for pid in mains}),
+        ["BARIAH_DIRECT", "SOURCE_ATTESTED_COMPONENT_VISUAL"])
     chk("PENDING_HUMAN_ITEMS_CLOSED_BY_CC", 0, 0)
 
     # ==================== PINNED POPULATION: QUIZ REVIEW STATE ====================
@@ -192,7 +200,7 @@ def run(pptx):
     chk("QUIZ_REVIEW_STATE_QUESTIONS_MISSING", miss_q, 0)
     chk("QUIZ_REVIEW_STATE_ANSWERS_MISSING_OR_WRONG", miss_a, 0)
 
-    chk("STAGE_4_2B_SUITE_CHECKS", n_prior, 267)
+    chk("STAGE_4_2B_SUITE_CHECKS", n_prior, 288)
     return res
 
 

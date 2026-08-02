@@ -1,0 +1,407 @@
+{
+ "registry": "COMPONENT_MAIN_VISUAL_GOVERNANCE",
+ "artifact_version": "v0.4.4.1",
+ "authority_split": {
+  "requirement": "BARIAH_DIRECT_SCREENSHOT — D2, 6:52 PM",
+  "treatment": "BARIAH_DIRECT_SCREENSHOT — D2, 6:52 PM",
+  "subject_identity": "per subject: MODULE_SOURCE_ATTESTED, except the two Papan Tanda figures named in D4",
+  "note": "Bariah settled the requirement and the treatment for all nine and named a subject for none of them except those two figures. The direction authorities on the page are unchanged from v0.4.4."
+ },
+ "totals": {
+  "COMPONENT_MAIN_PAGES": 9,
+  "COMPONENT_MAIN_VISUAL_REQUIREMENT_REQUIRED": 9,
+  "COMPONENT_MAIN_PENDING_HUMAN": 0,
+  "COMPONENT_MAIN_PROVISIONAL_VISUAL_PROPOSALS": 0,
+  "COMPONENT_MAIN_MAPPING_COMPLETE": 9,
+  "UNAUTHORISED_SUBJECT_AUTHORITY_PROMOTIONS": 0
+ },
+ "components": [
+  {
+   "component_id": "STRUKTUR_PERSISIR_AIR",
+   "component_name": "Struktur Persisir Air",
+   "learner_screen_id": "SCR_STRUKTUR_PERSISIR_AIR_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 5
+    },
+    "overview_subject_count": 5,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Promenade",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Jeti",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Dek Kayu",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Boardwalk",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Footbridge",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "RESOLVED_BY_DIRECT_AUTHORITY",
+    "proposal_class": null,
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "STRUKTUR_TEDUHAN",
+   "component_name": "Struktur Teduhan",
+   "learner_screen_id": "SCR_STRUKTUR_TEDUHAN_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 5
+    },
+    "overview_subject_count": 5,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Gazebo",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Wakaf",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Pergola",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Canopy",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Struktur Teduhan Moden",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "KEMUDAHAN_AWAM",
+   "component_name": "Kemudahan Awam",
+   "learner_screen_id": "SCR_KEMUDAHAN_AWAM_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 3
+    },
+    "overview_subject_count": 3,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Tandas Awam",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Surau",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Bangunan Interpretatif",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "WATER_FEATURE",
+   "component_name": "Water Feature",
+   "learner_screen_id": "SCR_WATER_FEATURE_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 3
+    },
+    "overview_subject_count": 3,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Air Pancut (Fountain)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Kolam (Pond)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Kolam Renang / Kolam Hiasan Besar (Pool)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "KERUSI_TAMAN",
+   "component_name": "Kerusi Taman",
+   "learner_screen_id": "SCR_KERUSI_TAMAN_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 3
+    },
+    "overview_subject_count": 3,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Kerusi Kayu Keras",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Kerusi Konkrit",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Kerusi Komposit",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "PAPAN_TANDA",
+   "component_name": "Papan Tanda",
+   "learner_screen_id": "SCR_PAPAN_TANDA_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 2
+    },
+    "overview_subject_count": 2,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Papan Tanda Informasi",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": true
+    },
+    {
+     "label": "Papan Tanda Penunjuk Arah",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": true
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "TONG_SAMPAH",
+   "component_name": "Tong Sampah",
+   "learner_screen_id": "SCR_TONG_SAMPAH_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 3
+    },
+    "overview_subject_count": 3,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Tong Sampah Logam",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Tong Sampah Konkrit/Batu",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Tong Sampah Plastik Kitar Semula (HDPE)",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "DRINKING_FOUNTAIN",
+   "component_name": "Drinking Fountain",
+   "learner_screen_id": "SCR_DRINKING_FOUNTAIN_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 2
+    },
+    "overview_subject_count": 2,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "Pancutan Air Minum Keluli Tahan Karat",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    },
+    {
+     "label": "Pancutan Air Minum Konkrit/Batu",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  },
+  {
+   "component_id": "BBQ_PIT",
+   "component_name": "BBQ Pit",
+   "learner_screen_id": "SCR_BBQ_PIT_MAIN",
+   "active": {
+    "visual_requirement": "REQUIRED",
+    "requirement_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "treatment": "SOURCE_BOUND_OVERVIEW",
+    "treatment_authority": "BARIAH_DIRECT_SCREENSHOT",
+    "subject_provenance": {
+     "MODULE_SOURCE_ATTESTED": 1
+    },
+    "overview_subject_count": 1,
+    "mapping_status": "RESOLVED",
+    "instance_mapping": "COMPLETE",
+    "pending_human": false
+   },
+   "subjects": [
+    {
+     "label": "BBQ Pit Struktur Kekal",
+     "provenance": "MODULE_SOURCE_ATTESTED",
+     "directly_named_by_bariah": false
+    }
+   ],
+   "superseded_lineage": {
+    "until_version": "v0.4.4",
+    "visual_requirement": "CONDITIONAL",
+    "visual_status": "PENDING_HUMAN",
+    "proposal_class": "PROVISIONAL_VISUAL_PROPOSAL",
+    "superseded_by": "D2 6:52 PM component-main ruling + frozen 9/9 overview mapping (Stage 4.2E-B)",
+    "recorded_here_not_on_the_page": true
+   }
+  }
+ ]
+}

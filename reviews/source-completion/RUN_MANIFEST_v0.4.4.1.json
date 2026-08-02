@@ -1,0 +1,343 @@
+{
+ "manifest": "B02_RUN_MANIFEST",
+ "stage": "4.2E-C",
+ "artifact_identity": {
+  "registry": "ARTIFACT_IDENTITY_AND_VERSION",
+  "controlled_source": "generator/v0_4/b02_artifact_identity_v0_4_4_1.py",
+  "defect_corrected": "B02-META-REG-001",
+  "consumers": [
+   "production panel (b02_generator_v0_4.prodpanel_v4)",
+   "RUN_MANIFEST_v0.4.4.1.json",
+   "b02_full_qa_v0_4 (package identity gates)",
+   "b02_governance_qa_v0_4_4_1 (manifest agreement gates)",
+   "BARIAH_REVIEW_CHECKLIST_v0.4.4.1.md",
+   "STORYBOARD_QA_REPORT_v0.4.4.1.md"
+  ],
+  "panel_lines": [
+   "K5 PL06 T03 B02 — PAPAN CERITA v0.4.4.1",
+   "REVIEW_CANDIDATE · FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+   "INSTANCE_MAPPING_COMPLETE · READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+   "NOT_FOR_MMD_BUILD",
+   "NOT_CANONICALLY_FROZEN · MULTIMEDIA_NOT_PRODUCED"
+  ],
+  "artifact_version": "v0.4.4.1",
+  "artifact_version_line": "K5 PL06 T03 B02 — PAPAN CERITA v0.4.4.1",
+  "deck_filename": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4_1.pptx",
+  "status_tokens": [
+   "REVIEW_CANDIDATE",
+   "FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+   "INSTANCE_MAPPING_COMPLETE",
+   "READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+   "NOT_FOR_MMD_BUILD",
+   "NOT_CANONICALLY_FROZEN",
+   "MULTIMEDIA_NOT_PRODUCED"
+  ],
+  "stale_status_tokens_prohibited": [
+   "REVIEW_READY",
+   "PENDING_TARGETED_CONFIRMATION",
+   "BARIAH_FEEDBACK_IMPLEMENTED"
+  ],
+  "forbidden_status_tokens": [
+   "PRODUCTION_READY",
+   "MMD_READY",
+   "CANONICALLY_FROZEN"
+  ],
+  "forbidden_claim_strings": [
+   "PRODUCTION_APPROVED",
+   "CANONICAL_FREEZE",
+   "MMD_BUILD_READY",
+   "SOURCE_INTEGRITY_FULLY_VERIFIED",
+   "MICROSOFT_POWERPOINT_EQUIVALENCE",
+   "SOURCE_GOVERNANCE_COMPLETE"
+  ],
+  "superseded_version_lines": [
+   "K5 PL06 T03 B02 — PAPAN CERITA v0.3",
+   "K5 PL06 T03 B02 — PAPAN CERITA v0.4"
+  ]
+ },
+ "status_tokens": [
+  "REVIEW_CANDIDATE",
+  "FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+  "INSTANCE_MAPPING_COMPLETE",
+  "READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+  "NOT_FOR_MMD_BUILD",
+  "NOT_CANONICALLY_FROZEN",
+  "MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "not_asserted": [
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY",
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "MICROSOFT_POWERPOINT_EQUIVALENCE",
+  "SOURCE_GOVERNANCE_COMPLETE"
+ ],
+ "defect_corrected": {
+  "id": "B02-META-REG-001",
+  "title": "ARTIFACT_VERSION_AND_STATUS_DRIFT",
+  "affected_pages": 100,
+  "stale_version_line": "K5 PL06 T03 B02 — PAPAN CERITA v0.4",
+  "stale_status_tokens": [
+   "REVIEW_READY",
+   "BARIAH_FEEDBACK_IMPLEMENTED",
+   "PENDING_TARGETED_CONFIRMATION"
+  ],
+  "retained_tokens": [
+   "NOT_FOR_MMD_BUILD",
+   "MULTIMEDIA_NOT_PRODUCED"
+  ],
+  "emitting_source": "b02_generator_v0_4.prodpanel_v4 head[] + TOKENS_V4"
+ },
+ "repository": {
+  "branch": "claude/verify-powerpoint-file-vpfzkg"
+ },
+ "outputs": {
+  "deck": "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4_1.pptx",
+  "bytes": 471881,
+  "sha256": "faef6c85745d2750236ffdf23fb7d14b81d26ed37c7db58ed274cb8d0f0178e5"
+ },
+ "retained_unchanged": {
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_3.pptx": {
+   "bytes": 273740,
+   "sha256": "f4e2a3797c8cf24c9d861141a9589ae460659d591c43f691cd248c3719bc4f58"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4.pptx": {
+   "bytes": 439329,
+   "sha256": "8cb0abe5cb393f3bafd613220683939faa8a3a7014547af08b9392fbc540d108"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_1.pptx": {
+   "bytes": 453859,
+   "sha256": "247eadb10bde4e7f227c6df947b1821c55faad140b212465ae774bd2c932f59a"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_2.pptx": {
+   "bytes": 452752,
+   "sha256": "09bb08f2e391326a9e87cdee797b6ea3197c54373201b010e54096a1ec57ea1e"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_3.pptx": {
+   "bytes": 457221,
+   "sha256": "b9c24dac48047581f31b4f4cb165d3cf419851d1a845f2d2caf87edba034924f"
+  },
+  "K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4.pptx": {
+   "bytes": 465681,
+   "sha256": "f74b81364d6f901a1ada9c364409861d2b75277961d7ef6b7a991dc8bfa17479"
+  }
+ },
+ "frozen_decision_evidence": {
+  "B02_BARIAH_S01_EVIDENCE.jpg": {
+   "bytes": 96289,
+   "sha256": "7e59a0e882c1de063f9e86ee16ea1ed079ad6bdbf95ce4998d76636b943bbff0"
+  },
+  "B02_BARIAH_STRUKTUR_PERSISIR_EVIDENCE.jpg": {
+   "bytes": 53895,
+   "sha256": "936b78c270274874bfa4921a35205e4ca1d679959ebf6f1880e7c76e6f890ab7"
+  },
+  "B02_BARIAH_VISUAL_POLICY_EVIDENCE.png": {
+   "bytes": 655935,
+   "sha256": "feb29e86228b7f240379b9830bbd59f3e30db2fae03389a68e1ba1bd32ef867b"
+  },
+  "B02_BARIAH_DECISION_TAMBAHAN_TEXT.png": {
+   "bytes": 213065,
+   "sha256": "e425f5ae00dd556e0295913e8837e5784bf8ff1fb53a208ae88dbc0756a92016"
+  },
+  "B02_BARIAH_DECISION_VISUAL_PERSISTENCE.png": {
+   "bytes": 205072,
+   "sha256": "8b4defe1eecb67c2438acb01b1204a025a64ebe848356715b94116d12f7bc3f2"
+  },
+  "B02_BARIAH_DECISION_CAST_QUIZ_VO_PUNCTUATION.png": {
+   "bytes": 567168,
+   "sha256": "d855d5f8e53679beb78feb8aacd4e231b9fde0f52148501acd518039da2eb26b"
+  },
+  "B02_BARIAH_DECISION_OVERVIEW_CARDINALITY_20260802.png": {
+   "bytes": 757585,
+   "sha256": "f46c2a371b93ebadc6e4bf99c619bf52621d7bc29421ebd36205f6ed6ec5ef64"
+  }
+ },
+ "toolchain": {
+  "b02_content_v0_3.py": "04e56936cf2aaff5c08915d5a37cf4204055cf874151ff89b14732d5c2746bb2",
+  "b02_content_v0_3.json": "4401f9b54336f2c830a06e5a363479ba9ac99aefa9c80ffaa34e2161c579ac5a",
+  "b02_model_v0_3.py": "f05908eea56c111cea2ef918b872cd4a9ebb59ef48de3b5a21bab745870c527b",
+  "b02_generator_v0_3.py": "1cc9ca74b6ad50ea70c33594fa883e755ee224205048bc71ef0b10b0c76b1d35",
+  "b02_render_check.py": "e65b6f38e58ea88a21e60d498af99f497af62f8e3ad71c0cc42e1d0f406346e2",
+  "b02_qa_v0_3.py": "9d98dc164562c2f55e28f0ac5a7ff847c420bc50085596aaad3c0554243a70d4",
+  "b02_docs_v0_3.py": "56c7777730d7e80ccbf21319aefc7859f4441c6008efe0734d411f86c279be9d"
+ },
+ "overview_mapping": {
+  "STRUKTUR_PERSISIR_AIR": 5,
+  "STRUKTUR_TEDUHAN": 5,
+  "KEMUDAHAN_AWAM": 3,
+  "WATER_FEATURE": 3,
+  "KERUSI_TAMAN": 3,
+  "PAPAN_TANDA": 2,
+  "TONG_SAMPAH": 3,
+  "DRINKING_FOUNTAIN": 2,
+  "BBQ_PIT": 1
+ },
+ "geometry_exemptions": {
+  "registry": "GEOMETRY_EXEMPTION_REGISTRY",
+  "artifact_version": "v0.4.4.1",
+  "stage": "4.2E-C",
+  "outcome": "B_UNREGISTERED_GEOMETRY_EXEMPTION_NOW_REGISTERED",
+  "rule": "A shape outside the 13.3333 x 7.5 in stage fails the four-edge geometry gate unless an entry below matches its placeholder-ness, placeholder type, shape name and all four coordinates to 0.001 in, AND the edge it crosses is one the entry exempts. Naming a shape after an exempt one, or moving an exempt shape, matches nothing.",
+  "prior_mechanism": {
+   "title_placeholder": "ad hoc numeric threshold `y < -0.66` in the four-edge gate",
+   "production_panel": "excluded by the reader's (x + w) <= 0 canvas/panel partition, which the four-edge gate never iterated past",
+   "classification": "UNREGISTERED_GEOMETRY_EXEMPTION"
+  },
+  "exemptions": [
+   {
+    "exemption_id": "GEX-001",
+    "shape_name": "Title 1",
+    "requires_placeholder": true,
+    "ph_type": "title",
+    "x": 0.0,
+    "y": -0.6311001749781278,
+    "w": 13.333300524934383,
+    "h": 0.5722003499562555,
+    "edges_exempted": [
+     "top"
+    ],
+    "page_population": "ALL_REVIEW_PAGES",
+    "learner_facing": false,
+    "visible_in_slide_show": false,
+    "purpose": "PowerPoint slide-title identity: outline pane, accessibility name, slide navigator and search. Off the top edge so it never paints on the learner canvas while remaining the slide's programmatic title.",
+    "why_not_deleted": "Deleting it would leave every slide untitled in the outline pane and in the accessibility tree. It is not proven unnecessary.",
+    "enforcement_gate": "OFF_CANVAS_PLACEHOLDER_EXEMPTION_REGISTERED",
+    "registered_at": "Stage 4.2E-C"
+   },
+   {
+    "exemption_id": "GEX-002",
+    "shape_name": "ProdPanel",
+    "requires_placeholder": false,
+    "ph_type": null,
+    "x": -6.9,
+    "y": 0.0,
+    "w": 6.6,
+    "h": 7.5,
+    "edges_exempted": [
+     "left"
+    ],
+    "page_population": "ALL_REVIEW_PAGES",
+    "learner_facing": false,
+    "visible_in_slide_show": false,
+    "purpose": "Review-only production metadata panel. Deliberately parked left of the stage so a reviewer reads it in Normal view and a learner never sees it.",
+    "why_not_deleted": "It is the review surface this whole storyboard exists to carry.",
+    "enforcement_gate": "OFF_CANVAS_PRODUCTION_PANEL_EXEMPTION_REGISTERED",
+    "registered_at": "Stage 4.2E-C"
+   }
+  ]
+ },
+ "package_status_contract": {
+  "contract": "ACTIVE_PACKAGE_STATUS",
+  "artifact_version": "v0.4.4.1",
+  "status_tokens": [
+   "REVIEW_CANDIDATE",
+   "FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+   "INSTANCE_MAPPING_COMPLETE",
+   "READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+   "NOT_FOR_MMD_BUILD",
+   "NOT_CANONICALLY_FROZEN",
+   "MULTIMEDIA_NOT_PRODUCED"
+  ],
+  "meaning": {
+   "REVIEW_CANDIDATE": "offered for review; not accepted, not frozen",
+   "FINAL_BARIAH_DECISIONS_IMPLEMENTED": "every decision frozen at Stage 4.2E-A is built into this package",
+   "INSTANCE_MAPPING_COMPLETE": "9/9 component-main overview mappings resolved, 0 ambiguous",
+   "READY_FOR_MICROSOFT_POWERPOINT_SMOKE": "the next step is opening it in Microsoft PowerPoint; that has not happened and no equivalence is claimed",
+   "NOT_FOR_MMD_BUILD": "multimedia development must not start from this package",
+   "NOT_CANONICALLY_FROZEN": "the canonical module source is still open (MS2680, B02-CAIR-INT-001)",
+   "MULTIMEDIA_NOT_PRODUCED": "no image, audio, video or animation is embedded or produced"
+  },
+  "prohibited_as_current_status": [
+   "REVIEW_READY",
+   "PENDING_TARGETED_CONFIRMATION",
+   "BARIAH_FEEDBACK_IMPLEMENTED"
+  ],
+  "never_assertable_status_tokens": [
+   "PRODUCTION_READY",
+   "MMD_READY",
+   "CANONICALLY_FROZEN"
+  ],
+  "never_assertable_claims": [
+   "PRODUCTION_APPROVED",
+   "CANONICAL_FREEZE",
+   "MMD_BUILD_READY",
+   "SOURCE_INTEGRITY_FULLY_VERIFIED",
+   "MICROSOFT_POWERPOINT_EQUIVALENCE",
+   "SOURCE_GOVERNANCE_COMPLETE"
+  ]
+ },
+ "qa": {
+  "suite": "generator/v0_4/b02_governance_qa_v0_4_4_1.py",
+  "ACTIVE_TEST_GATES_PASSING": "441/441",
+  "SUPERSESSION_MARKERS_PRESENT": 20,
+  "TOTAL_EMITTED_GATE_RECORDS": 461,
+  "FAILING": [],
+  "DUPLICATE_GATE_IDS": 0,
+  "marker_definition": "expected == actual == the constant SUPERSEDED",
+  "v0_4_4_published_figures_corrected": {
+   "published": "367/19/386",
+   "corrected": "373/13/386",
+   "reason": "markers were counted by substring on the gate ID"
+  }
+ },
+ "mutation": {
+  "harness": "generator/audit/b02_replay_v0_4_4_1.py",
+  "fixtures": 51,
+  "detected": 51,
+  "MUTATION_FIXTURES_MISSED": 0,
+  "CORRECTED_V0_4_4_1_FALSE_FAILURES": 0,
+  "new_fixtures": [
+   "M-01",
+   "M-02",
+   "M-03",
+   "M-04",
+   "M-05",
+   "M-06",
+   "M-07",
+   "M-08",
+   "M-09",
+   "M-10",
+   "M-11",
+   "M-12"
+  ],
+  "artifacts_committed": false
+ },
+ "historical_replay": {
+  "v0_4": 121,
+  "v0_4_1": 72,
+  "v0_4_2": 74,
+  "v0_4_3": 58,
+  "v0_4_4": 33
+ },
+ "rendered_inspection": {
+  "renderer": "generator/b02_render_check.py (frozen v0.3 toolchain)",
+  "pages_rendered": 100,
+  "TEXT_OVERFLOW": 0,
+  "SHAPES_OUTSIDE_STAGE": 0,
+  "UNINTENDED_OVERLAPS": 0,
+  "modal_overlays_reported": 202,
+  "render_report_identical_to_v0_4_4": true,
+  "LEARNER_CONTENT_DIFFS": 0,
+  "NOTES_DIFFS": 0,
+  "NOTES_ITALIC_RUNS": 40,
+  "PANEL_DIFF_PAGES": 100,
+  "OVERVIEW_CARDINALITY_DIFFS": 0,
+  "microsoft_powerpoint_smoke": "NOT RUN"
+ },
+ "totals": {
+  "REVIEW_PAGES": 100,
+  "LEARNER_SCREENS": 29,
+  "RUNTIME_STATES": 100,
+  "INTERACTION_ITEMS": 54,
+  "SOURCE_ROWS": 26,
+  "SOURCE_ASSETS": 14,
+  "COMPONENTS": 9,
+  "EMBEDDED_MEDIA": 0,
+  "SLIDES_MANUALLY_PATCHED": 0
+ },
+ "environment_limitations": {
+  "libreoffice_impress_import": "unavailable in this container",
+  "microsoft_powerpoint_smoke": "NOT RUN",
+  "microsoft_powerpoint_equivalence": "NOT CLAIMED"
+ }
+}

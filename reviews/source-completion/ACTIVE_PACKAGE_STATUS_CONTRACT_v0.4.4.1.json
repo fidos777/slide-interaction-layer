@@ -1,0 +1,40 @@
+{
+ "contract": "ACTIVE_PACKAGE_STATUS",
+ "artifact_version": "v0.4.4.1",
+ "status_tokens": [
+  "REVIEW_CANDIDATE",
+  "FINAL_BARIAH_DECISIONS_IMPLEMENTED",
+  "INSTANCE_MAPPING_COMPLETE",
+  "READY_FOR_MICROSOFT_POWERPOINT_SMOKE",
+  "NOT_FOR_MMD_BUILD",
+  "NOT_CANONICALLY_FROZEN",
+  "MULTIMEDIA_NOT_PRODUCED"
+ ],
+ "meaning": {
+  "REVIEW_CANDIDATE": "offered for review; not accepted, not frozen",
+  "FINAL_BARIAH_DECISIONS_IMPLEMENTED": "every decision frozen at Stage 4.2E-A is built into this package",
+  "INSTANCE_MAPPING_COMPLETE": "9/9 component-main overview mappings resolved, 0 ambiguous",
+  "READY_FOR_MICROSOFT_POWERPOINT_SMOKE": "the next step is opening it in Microsoft PowerPoint; that has not happened and no equivalence is claimed",
+  "NOT_FOR_MMD_BUILD": "multimedia development must not start from this package",
+  "NOT_CANONICALLY_FROZEN": "the canonical module source is still open (MS2680, B02-CAIR-INT-001)",
+  "MULTIMEDIA_NOT_PRODUCED": "no image, audio, video or animation is embedded or produced"
+ },
+ "prohibited_as_current_status": [
+  "REVIEW_READY",
+  "PENDING_TARGETED_CONFIRMATION",
+  "BARIAH_FEEDBACK_IMPLEMENTED"
+ ],
+ "never_assertable_status_tokens": [
+  "PRODUCTION_READY",
+  "MMD_READY",
+  "CANONICALLY_FROZEN"
+ ],
+ "never_assertable_claims": [
+  "PRODUCTION_APPROVED",
+  "CANONICAL_FREEZE",
+  "MMD_BUILD_READY",
+  "SOURCE_INTEGRITY_FULLY_VERIFIED",
+  "MICROSOFT_POWERPOINT_EQUIVALENCE",
+  "SOURCE_GOVERNANCE_COMPLETE"
+ ]
+}
