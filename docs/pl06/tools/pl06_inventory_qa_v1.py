@@ -553,6 +553,22 @@ def run():
         sorted({c["status"] for c in D.STOP_CONDITIONS
                 if c["status"] not in D.STOP_STATUSES}), [])
 
+    # ==================== 11A. TYPED INSTRUCTIONAL READINESS (Stage 4.2F-B0) ====================
+    chk("INVALID_INSTRUCTIONAL_READINESS", INVENTORY_INTEGRITY,
+        sorted({u["instructional_readiness"] for u in U
+                if u["instructional_readiness"] not in D.INSTRUCTIONAL_READINESS_VALUES}), [])
+    chk("T04_INSTRUCTIONAL_READINESS", INVENTORY_INTEGRITY,
+        next(u["instructional_readiness"] for u in U if u["unit_id"] == "K5-PL06-T04-B01"),
+        "CONTENT_ASSESSMENT_PENDING")
+    chk("UNEXAMINED_UNITS_TYPED_CORRECTLY", INVENTORY_INTEGRITY,
+        sum(1 for u in U
+            if u["instructional_readiness"] == "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"), 12)
+    # A unit nobody has read may not claim its content assessment is pending.
+    chk("UNREAD_UNIT_CLAIMING_ASSESSMENT_PENDING", INVENTORY_INTEGRITY,
+        [u["unit_id"] for u in U
+         if u["instructional_readiness"] == "CONTENT_ASSESSMENT_PENDING"
+         and u["unit_id"] != "K5-PL06-T04-B01"], [])
+
     # ==================== 12. ACCOUNTING ====================
     gate_ids = [r["gate_id"] for r in res]
     chk("DUPLICATE_GATE_IDS", ACCOUNTING,

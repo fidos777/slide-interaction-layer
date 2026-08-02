@@ -1,0 +1,3 @@
+table_id,unit_id,sequence,heading_path,rows,columns,merged_cells,module_page,segment_index
+# NO TABLES IN K5-PL06-T04-B01 — 140 body elements in the
+# boundary, all <w:p>, zero <w:tbl>. Measured, not assumed.

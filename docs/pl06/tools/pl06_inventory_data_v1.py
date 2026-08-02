@@ -298,6 +298,12 @@ APPROVAL_RECORD = dict(
 # ==========================================================================================
 # 2. PART 2 — THE UNIT INVENTORY
 # ==========================================================================================
+# Stage 4.2F-B0 typed readiness. "SOURCE_INCOMPLETE" says a unit is not ready; it does not
+# say whether that is because nobody has read it, because the treatment is unsettled, or
+# because the content is genuinely absent from the module. Those have different owners.
+INSTRUCTIONAL_READINESS_VALUES = ["READY_WITH_HOLDS", "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED",
+                                  "CONTENT_ASSESSMENT_PENDING", "SOURCE_GAP_CONFIRMED"]
+
 READINESS_VALUES = ["READY", "READY_WITH_HOLDS", "SOURCE_INCOMPLETE",
                     "REQUIRES_BARIAH_DECISION", "UNSUPPORTED_INTERACTION",
                     "SOURCE_AUTHORITY_UNRESOLVED"]
@@ -406,6 +412,13 @@ def _unit_from_map(r, order):
                            else "SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT"),
         lane=("LANE_A_EXISTING_SUPPORTED_PATTERN" if delivered else "LANE_D_SOURCE_INCOMPLETE"),
         readiness_status=("READY_WITH_HOLDS" if delivered else "SOURCE_INCOMPLETE"),
+        # Stage 4.2F-B0. SOURCE_INCOMPLETE conflated three states with three different owners.
+        # The typed field carries the real one; readiness_status keeps its Stage 4.2F-A
+        # vocabulary so the existing gates stay meaningful rather than being renamed away.
+        instructional_readiness=(
+            "READY_WITH_HOLDS" if delivered
+            else "CONTENT_ASSESSMENT_PENDING" if r["unit_id"] == PREFERRED_PROOF_UNIT
+            else "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"),
         blocker_reason=(
             "Delivered and call-approved. Holds are source-authority only and none blocks this "
             "unit's review candidacy: MS2680, B02-CAIR-INT-001, and the LMS navigation ruling. "
@@ -450,6 +463,7 @@ CSV_COLUMNS = [
     "interaction_pattern_candidate", "visual_requirement", "narration_requirement",
     "terminology_risks", "standards_or_external_claims", "open_human_decisions",
     "generator_support_status", "qa_support_status", "lane", "readiness_status",
+    "instructional_readiness",
     "blocker_reason", "blocking_conditions", "recommended_execution_order",
 ]
 

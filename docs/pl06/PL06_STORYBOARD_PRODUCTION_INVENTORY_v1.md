@@ -103,6 +103,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | FULLY_SUPPORTED — 461 gate records, 51 mutation fixtures |
 | lane | LANE_A_EXISTING_SUPPORTED_PATTERN |
 | readiness_status | READY_WITH_HOLDS |
+| instructional_readiness | READY_WITH_HOLDS |
 | blocker_reason | Delivered and call-approved. Holds are source-authority only and none blocks this unit's review candidacy: MS2680, B02-CAIR-INT-001, and the LMS navigation ruling. Microsoft PowerPoint smoke is not recorded. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 0 |
@@ -143,6 +144,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | CONTENT_ASSESSMENT_PENDING |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Page boundary is clean. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 1 |
@@ -183,6 +185,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: end page 181 shared with the next lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 2 |
@@ -223,6 +226,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: start page 181 shared with the preceding lesson; end page 188 shared with the next lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 3 |
@@ -263,6 +267,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: start page 188 shared with the preceding lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 4 |
@@ -303,6 +308,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: end page 215 shared with the next lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 5 |
@@ -343,6 +349,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: start page 215 shared with the preceding lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 6 |
@@ -383,6 +390,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: end page 237 shared with the next lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 7 |
@@ -423,6 +431,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: start page 250 shared with the preceding lesson; end page 255 shared with the next lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 8 |
@@ -463,6 +472,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Boundary needs heading-anchor extraction, not page slicing: start page 255 shared with the preceding lesson. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 9 |
@@ -503,6 +513,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Page boundary is clean. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 10 |
@@ -543,6 +554,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Page boundary is clean. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 11 |
@@ -583,6 +595,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Page boundary is clean. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 12 |
@@ -623,6 +636,7 @@ Six of the fourteen units start or end on a **shared** module page (181, 188, 21
 | qa_support_status | SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT |
 | lane | LANE_D_SOURCE_INCOMPLETE |
 | readiness_status | SOURCE_INCOMPLETE |
+| instructional_readiness | SOURCE_PRESENT_CONTENT_NOT_EXTRACTED |
 | blocker_reason | Source document and unit boundary are now in custody by identity — that is what Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no controlled content, no visual inventory, no Rumusan and no quiz source for this unit. Page boundary is clean. |
 | blocking_conditions | CONTROLLED_CONTENT_NOT_EXTRACTED; NO_RUMUSAN_SOURCE; NO_QUIZ_SOURCE; VISUAL_INVENTORY_NOT_EXTRACTED; CAST_BINDING_UNRESOLVED |
 | recommended_execution_order | 13 |
