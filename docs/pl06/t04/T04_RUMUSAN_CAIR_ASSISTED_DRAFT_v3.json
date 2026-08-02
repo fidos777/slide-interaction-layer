@@ -1,0 +1,225 @@
+{
+ "pack": "T04_RUMUSAN",
+ "version": "v3",
+ "stage": "4.2F-B0.8",
+ "unit_id": "K5-PL06-T04-B01",
+ "style_rules": [
+  {
+   "rule_id": "SR-01",
+   "characteristic": "heading",
+   "observed": "One heading line naming the topic and its two structural halves, joined by an em dash.",
+   "applied_as": "Penjagaan dan Penyelenggaraan — Landskap Lembut dan Landskap Kejur"
+  },
+  {
+   "rule_id": "SR-02",
+   "characteristic": "number of recap points",
+   "observed": "Exactly four.",
+   "applied_as": "Four. Stage 4.2F-B0.5 drafted five; the consolidation is shown in full in RUMUSAN_V1_TO_V2 so nothing is dropped silently."
+  },
+  {
+   "rule_id": "SR-03",
+   "characteristic": "sentence pattern",
+   "observed": "'<Label> - <expansion>' with a spaced hyphen, not a colon. One clause per point.",
+   "applied_as": "Same pattern in all four points."
+  },
+  {
+   "rule_id": "SR-04",
+   "characteristic": "opening point",
+   "observed": "A capability statement joined to its consequence — 'Mengenal pasti … - … dirancang dengan tepat'.",
+   "applied_as": "PARTIALLY. T04's opening point enumerates the six process activities instead, because the module opens on that flow and Bariah requires a visual for each step. Recorded as a deliberate adaptation, not an oversight."
+  },
+  {
+   "rule_id": "SR-05",
+   "characteristic": "middle points",
+   "observed": "The two structural groups, each enumerating its named members.",
+   "applied_as": "Landskap Lembut with its three operations; Landskap Kejur with its four function groups."
+  },
+  {
+   "rule_id": "SR-06",
+   "characteristic": "closing point",
+   "observed": "A contractor-outcome statement opening 'Kontraktor dapat …'.",
+   "applied_as": "Same opener. This is also where the medium-risk generalisation sits."
+  },
+  {
+   "rule_id": "SR-07",
+   "characteristic": "terminology treatment",
+   "observed": "English technical terms kept in English and given emphasis; Malay terms left in Malay.",
+   "applied_as": "T04's technical terms are Malay throughout, so no term needed the English treatment. The rule is recorded as applicable-but-unused rather than dropped."
+  },
+  {
+   "rule_id": "SR-08",
+   "characteristic": "punctuation treatment",
+   "observed": "No terminal full stop on any bullet.",
+   "applied_as": "Same."
+  },
+  {
+   "rule_id": "SR-09",
+   "characteristic": "tone",
+   "observed": "Impersonal and declarative. No direct address to the learner in the Rumusan bullets.",
+   "applied_as": "Same. 'Anda' does not appear."
+  },
+  {
+   "rule_id": "SR-10",
+   "characteristic": "length",
+   "observed": "Single clauses, roughly 12 to 28 words each.",
+   "applied_as": "Same range."
+  }
+ ],
+ "style_source": {
+  "unit": "K5 PL06 T03 B02 — Komponen Landskap",
+  "artifact": "reviews/source-completion/generator/b02_content_v0_3.py, FRAMES['rumusan']",
+  "authority": "APPROVED_B02_TREATMENT — style reference only",
+  "prohibition": "No B02 fact, component name, group name or example may appear in the T04 Rumusan. Style was instructed; content was not."
+ },
+ "rumusan": {
+  "version": "v3",
+  "supersedes": "v2",
+  "change_from_v2": "The four statements are carried forward UNCHANGED. v3 adds the explicit ACCEPT / EDIT / REMOVE / COMMENT field per point that this stage requires. Rewording text that already satisfies the style rules, purely to justify a version bump, would churn content Bariah has not yet seen.",
+  "content_status": "CAIR_ASSISTED_DRAFT",
+  "instructional_authority": "BARIAH",
+  "approval_status": "PENDING_BARIAH_REVIEW",
+  "heading": "Penjagaan dan Penyelenggaraan — Landskap Lembut dan Landskap Kejur",
+  "provenance": "Every statement compresses rows already in the controlled T04 extract. The module contains no Rumusan — zero hits across all 6,167 body paragraphs — so this is drafted, not extracted. Bariah authorised the drafting (BR-W1) and instructed the style (BR-W3). She has not seen the text.",
+  "points": [
+   {
+    "point_id": "T04-RUM2-01",
+    "draft_text": "Aliran proses penjagaan dan penyelenggaraan merangkumi enam aktiviti penyeliaan - koordinasi dan demonstrasi, penyelenggaraan taman, operasi nurseri, alatan dan mesin, inventori taman, serta sumber manusia dan kebajikan pekerja",
+    "source_row_ids": [
+     "T04-ROW-002",
+     "T04-ROW-003"
+    ],
+    "source_heading": "PENJAGAAN DAN PENYELENGGARAAN",
+    "style_rule_applied": [
+     "SR-03",
+     "SR-05",
+     "SR-08",
+     "SR-09",
+     "SR-10"
+    ],
+    "style_deviation": "SR-04 not applied — see the rule's applied_as note.",
+    "factual_risk_status": "LOW — the six activities and their order are measured from T04-DGM-01",
+    "bariah_review": {
+     "accept": null,
+     "edit": null,
+     "remove": null,
+     "comment": null
+    }
+   },
+   {
+    "point_id": "T04-RUM2-02",
+    "draft_text": "Landskap Lembut - elemen hortikultur dan hidupan yang diselenggara melalui tiga operasi utama, iaitu siram, baja dan racun",
+    "source_row_ids": [
+     "T04-ROW-005",
+     "T04-ROW-006",
+     "T04-ROW-026",
+     "T04-ROW-046"
+    ],
+    "source_heading": "Landskap Lembut",
+    "style_rule_applied": [
+     "SR-03",
+     "SR-05",
+     "SR-08",
+     "SR-09",
+     "SR-10"
+    ],
+    "style_deviation": null,
+    "factual_risk_status": "LOW",
+    "bariah_review": {
+     "accept": null,
+     "edit": null,
+     "remove": null,
+     "comment": null
+    }
+   },
+   {
+    "point_id": "T04-RUM2-03",
+    "draft_text": "Landskap Kejur - elemen binaan kekal yang menyumbang kepada pengurusan ruang dan sirkulasi, fungsi struktur dan kejuruteraan, kebolehgunaan dan kemudahan, serta estetika dan reka bentuk",
+    "source_row_ids": [
+     "T04-ROW-080",
+     "T04-ROW-081",
+     "T04-ROW-086",
+     "T04-ROW-091",
+     "T04-ROW-096"
+    ],
+    "source_heading": "Landskap Kejur",
+    "style_rule_applied": [
+     "SR-03",
+     "SR-05",
+     "SR-08",
+     "SR-09",
+     "SR-10"
+    ],
+    "style_deviation": null,
+    "factual_risk_status": "LOW",
+    "bariah_review": {
+     "accept": null,
+     "edit": null,
+     "remove": null,
+     "comment": null
+    }
+   },
+   {
+    "point_id": "T04-RUM2-04",
+    "draft_text": "Kontraktor dapat merancang, melaksana dan mendokumentasikan setiap operasi mengikut spesifikasi, dengan penggunaan racun tertakluk kepada perundangan, pengendali berlesen, PPE lengkap dan penyimpanan berkunci",
+    "source_row_ids": [
+     "T04-ROW-016",
+     "T04-ROW-035",
+     "T04-ROW-064",
+     "T04-ROW-066",
+     "T04-ROW-067",
+     "T04-ROW-069",
+     "T04-ROW-071"
+    ],
+    "source_heading": "Aspek Pengurusan untuk Kontraktor",
+    "style_rule_applied": [
+     "SR-06",
+     "SR-08",
+     "SR-09",
+     "SR-10"
+    ],
+    "style_deviation": null,
+    "factual_risk_status": "MEDIUM — the contractor-responsibility pattern is repeated under all three operations but the source never states it as a general rule. This is the same generalisation flagged at Stage 4.2F-B0.5 as T04-RUM-03, preserved deliberately so Bariah can narrow or cut it rather than discover it later. Note that the approved B02 Rumusan ends on the same 'Kontraktor dapat …' shape, so the style rule invites the generalisation — that does not make the source support it.",
+    "bariah_review": {
+     "accept": null,
+     "edit": null,
+     "remove": null,
+     "comment": null
+    }
+   }
+  ],
+  "medium_risk_point_id": "T04-RUM2-04",
+  "consolidation_note": "Five statements became four because SR-02 — the Topik 3 Bahagian 2 four-point rule — is part of the writing style Bariah instructed. T04 has five structural blocks (process, soft landscape, hard landscape, compliance, contractor responsibility) against B02's four, so exactly one merge was unavoidable. Compliance was merged into the contractor-outcome point because compliance IS a contractor obligation and B02's own fourth point is the contractor-outcome point. If Bariah prefers compliance to stand alone, the fix is a five-point Rumusan, which departs from SR-02 — that trade is hers to make, not ours.",
+  "v1_to_v2_mapping": [
+   {
+    "v1": "T04-RUM-01",
+    "v1_topic": "six supervisory activities",
+    "v2": "T04-RUM2-01",
+    "change": "Retained. v1 named only the first and last node to stay short; v2 names all six, because Bariah now requires a visual per step and the recap should not under-report the population."
+   },
+   {
+    "v1": "T04-RUM-02",
+    "v1_topic": "Landskap Lembut and its three operations",
+    "v2": "T04-RUM2-02",
+    "change": "Retained, reworded to the SR-03 pattern."
+   },
+   {
+    "v1": "T04-RUM-03",
+    "v1_topic": "contractor responsibility across operations",
+    "v2": "T04-RUM2-04",
+    "change": "MERGED with T04-RUM-04. The medium factual-risk flag travels with it."
+   },
+   {
+    "v1": "T04-RUM-04",
+    "v1_topic": "pesticide legal and safety obligations",
+    "v2": "T04-RUM2-04",
+    "change": "MERGED into the contractor-outcome point. Nothing was dropped: statute, licensed operator, PPE and locked storage are all still named. What changed is that they now sit inside the closing point instead of having one of their own — the cost of applying SR-02's four-point rule to a unit with five structural blocks."
+   },
+   {
+    "v1": "T04-RUM-05",
+    "v1_topic": "Landskap Kejur and its four function groups",
+    "v2": "T04-RUM2-03",
+    "change": "Retained, reworded to the SR-03 pattern."
+   }
+  ]
+ }
+}

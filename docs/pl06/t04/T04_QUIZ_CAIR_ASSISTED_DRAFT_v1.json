@@ -1,0 +1,286 @@
+{
+ "pack": "T04_QUIZ",
+ "version": "v1",
+ "stage": "4.2F-B0.8",
+ "unit_id": "K5-PL06-T04-B01",
+ "fields": [
+  "question_id",
+  "question_type",
+  "draft_stem",
+  "draft_options",
+  "proposed_correct_answer",
+  "distractor_rationale",
+  "source_row_ids",
+  "correct_answer_evidence",
+  "cognitive_demand",
+  "misconception_assessed",
+  "overlap_check",
+  "visual_dependency",
+  "feedback_proposal",
+  "factual_risk_status"
+ ],
+ "quiz": {
+  "content_status": "CAIR_ASSISTED_DRAFT",
+  "final_instructional_authority": "BARIAH",
+  "approval_status": "PENDING_BARIAH_REVIEW",
+  "answer_key_status": "PROPOSED_ANSWER_KEY",
+  "answer_key_approval": "PENDING_BARIAH_APPROVAL",
+  "composition": "4 MCQ + 1 MULTIPLE_RESPONSE",
+  "pass_threshold": "60_PERCENT",
+  "scope": "ALL_PLS_IN_KURSUS",
+  "coverage_accounting": {
+   "blueprint_points": [
+    "T04-QB-01",
+    "T04-QB-02",
+    "T04-QB-03",
+    "T04-QB-04",
+    "T04-QB-05",
+    "T04-QB-06"
+   ],
+   "slots": 5,
+   "discarded": 0,
+   "merged": {
+    "into": "Q5",
+    "from_points": [
+     "T04-QB-03",
+     "T04-QB-04"
+    ],
+    "disclosure": "The two compliance blueprint points are the same cluster split by heading, not by concept, and the source presents their controls as co-applying. As one Multiple Response item they test what the source actually says.",
+    "cost": "The statute's NAME has no stem of its own. No option names the Act. If Bariah wants it tested by name, it must displace another slot."
+   }
+  },
+  "items": [
+   {
+    "question_id": "Q1",
+    "question_type": "MCQ",
+    "draft_stem": "Apakah tiga operasi utama penyelenggaraan landskap lembut yang dinyatakan dalam modul?",
+    "draft_options": [
+     [
+      "A",
+      "Siram, baja dan racun"
+     ],
+     [
+      "B",
+      "Siram, potong dan tanam"
+     ],
+     [
+      "C",
+      "Baja, racun dan turap"
+     ],
+     [
+      "D",
+      "Racun, siram dan pembinaan"
+     ]
+    ],
+    "proposed_correct_answer": [
+     "A"
+    ],
+    "distractor_rationale": "B, C and D each keep one or two of the real operations and substitute an activity the module places outside soft-landscape maintenance — turap and pembinaan belong to landskap kejur. All four options are three-item lists of similar length, so no option is correct on shape alone.",
+    "source_row_ids": [
+     "T04-ROW-006",
+     "T04-ROW-026",
+     "T04-ROW-046"
+    ],
+    "correct_answer_evidence": "Three Heading-3 operations sit under Landskap Lembut: Siram (T04-ROW-006), Baja (T04-ROW-026), Racun (T04-ROW-046).",
+    "cognitive_demand": "RECALL",
+    "misconception_assessed": "that soft-landscape maintenance is only watering",
+    "overlap_check": "Q2 assumes Siram is known; no answer overlap.",
+    "visual_dependency": "T04-VO-008, T04-VO-017, T04-VO-028",
+    "feedback_proposal": {
+     "correct": "Pilihan jawapan tepat.",
+     "incorrect": "Pilihan jawapan tidak tepat."
+    },
+    "factual_risk_status": "LOW"
+   },
+   {
+    "question_id": "Q2",
+    "question_type": "MCQ",
+    "draft_stem": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Mengikut modul, sistem manakah yang paling sesuai?",
+    "draft_options": [
+     [
+      "A",
+      "Sistem Semburan (Sprinkler System)"
+     ],
+     [
+      "B",
+      "Sistem Titis (Drip Irrigation System)"
+     ],
+     [
+      "C",
+      "Penyiraman manual menggunakan hos getah"
+     ],
+     [
+      "D",
+      "Semburan folia menggunakan baja cecair"
+     ]
+    ],
+    "proposed_correct_answer": [
+     "A"
+    ],
+    "distractor_rationale": "B is what the module recommends for individual trees and shrubs, not broad turf. C is manual, so it fails the 'automatic' condition in the stem. D is a fertilising method, not irrigation. Every distractor is a real thing the module names, placed in the wrong situation.",
+    "source_row_ids": [
+     "T04-ROW-012",
+     "T04-ROW-013",
+     "T04-ROW-014",
+     "T04-ROW-015"
+    ],
+    "correct_answer_evidence": "T04-ROW-013 states the sprinkler system is 'sesuai untuk kawasan rumput yang luas'; T04-ROW-015 states drip is for individual trees and shrubs.",
+    "cognitive_demand": "APPLICATION",
+    "misconception_assessed": "that sprinkler and drip irrigation are interchangeable",
+    "overlap_check": "Draws on Siram only; no overlap with Q3, Q4 or Q5.",
+    "visual_dependency": "T04-VO-011",
+    "feedback_proposal": {
+     "correct": "Pilihan jawapan tepat.",
+     "incorrect": "Pilihan jawapan tidak tepat."
+    },
+    "factual_risk_status": "LOW"
+   },
+   {
+    "question_id": "Q3",
+    "question_type": "MCQ",
+    "draft_stem": "Mengikut susunan keutamaan IPM dalam modul, kaedah kawalan manakah yang disenaraikan paling akhir?",
+    "draft_options": [
+     [
+      "A",
+      "Kawalan Kultur"
+     ],
+     [
+      "B",
+      "Kawalan Fizikal"
+     ],
+     [
+      "C",
+      "Kawalan Biologi"
+     ],
+     [
+      "D",
+      "Kawalan Kimia"
+     ]
+    ],
+    "proposed_correct_answer": [
+     "D"
+    ],
+    "distractor_rationale": "A, B and C are the three controls the module lists ahead of chemical control. A learner who believes chemicals come first will not pick D. The options are single terms of equal length.",
+    "source_row_ids": [
+     "T04-ROW-048",
+     "T04-ROW-049",
+     "T04-ROW-051",
+     "T04-ROW-053",
+     "T04-ROW-055"
+    ],
+    "correct_answer_evidence": "T04-ROW-048 introduces the priority list and the module then gives Kawalan Kultur, Kawalan Fizikal, Kawalan Biologi and Kawalan Kimia in that order.",
+    "cognitive_demand": "UNDERSTANDING",
+    "misconception_assessed": "that chemical control is the first response to a pest problem",
+    "overlap_check": "Q5 tests the controls that apply WHEN chemicals are used; Q3 tests what comes before. Disclosed, not accidental.",
+    "visual_dependency": "T04-VO-029",
+    "feedback_proposal": {
+     "correct": "Pilihan jawapan tepat.",
+     "incorrect": "Pilihan jawapan tidak tepat."
+    },
+    "factual_risk_status": "LOW — the stem asks about the module's own listing order, which is exactly what the source supports. Bariah may prefer a 'which comes first' framing; that is an edit, not a correction."
+   },
+   {
+    "question_id": "Q4",
+    "question_type": "MCQ",
+    "draft_stem": "Modul menyenaraikan empat kumpulan fungsi landskap kejur. Kumpulan manakah yang merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "draft_options": [
+     [
+      "A",
+      "Pengurusan Ruang dan Sirkulasi"
+     ],
+     [
+      "B",
+      "Fungsi Struktur dan Kejuruteraan"
+     ],
+     [
+      "C",
+      "Kebolehgunaan dan Kemudahan"
+     ],
+     [
+      "D",
+      "Estetika dan Reka Bentuk"
+     ]
+    ],
+    "proposed_correct_answer": [
+     "B"
+    ],
+    "distractor_rationale": "A, C and D are the module's other three function groups, so every distractor is a real category rather than an invented one. A learner who thinks hard landscape is decorative will be drawn to D.",
+    "source_row_ids": [
+     "T04-ROW-081",
+     "T04-ROW-086",
+     "T04-ROW-087",
+     "T04-ROW-089",
+     "T04-ROW-091",
+     "T04-ROW-096"
+    ],
+    "correct_answer_evidence": "T04-ROW-086 Fungsi Struktur dan Kejuruteraan has exactly two sub-headings: Menstabilkan Tanah (T04-ROW-087) and Pengurusan Air (T04-ROW-089).",
+    "cognitive_demand": "RECALL",
+    "misconception_assessed": "that hard landscape is decorative only",
+    "overlap_check": "Only item drawing on Landskap Kejur.",
+    "visual_dependency": "T04-VO-044",
+    "feedback_proposal": {
+     "correct": "Pilihan jawapan tepat.",
+     "incorrect": "Pilihan jawapan tidak tepat."
+    },
+    "factual_risk_status": "LOW"
+   },
+   {
+    "question_id": "Q5",
+    "question_type": "MULTIPLE_RESPONSE",
+    "draft_stem": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun, mengikut modul.",
+    "draft_options": [
+     [
+      "A",
+      "Pengendali semburan mesti berlesen atau telah menerima latihan"
+     ],
+     [
+      "B",
+      "Pekerja mesti memakai PPE yang lengkap dan bersesuaian"
+     ],
+     [
+      "C",
+      "Semburan hanya dilakukan semasa cuaca tenang"
+     ],
+     [
+      "D",
+      "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak"
+     ],
+     [
+      "E",
+      "Bekas racun kosong boleh digunakan semula untuk kegunaan lain"
+     ],
+     [
+      "F",
+      "Semburan boleh dijalankan tanpa memaklumkan penduduk sekitar"
+     ]
+    ],
+    "proposed_correct_answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "distractor_rationale": "E and F are not merely unlisted — the module states the opposite of each. T04-ROW-072 says empty pesticide containers may not be reused; T04-ROW-077 requires notification before spraying. Both are refutable from the source rather than from outside knowledge.",
+    "source_row_ids": [
+     "T04-ROW-067",
+     "T04-ROW-069",
+     "T04-ROW-070",
+     "T04-ROW-072",
+     "T04-ROW-074",
+     "T04-ROW-076",
+     "T04-ROW-077"
+    ],
+    "correct_answer_evidence": "A — T04-ROW-067 licensed or trained operator. B — T04-ROW-069 and T04-ROW-070 full PPE. C — T04-ROW-076 calm weather only. D — T04-ROW-074 SDS copy kept on site. E is contradicted by T04-ROW-072. F is contradicted by T04-ROW-077.",
+    "cognitive_demand": "RECALL",
+    "misconception_assessed": "that PPE alone, or a licence alone, is sufficient compliance",
+    "overlap_check": "Absorbs the whole compliance cluster — blueprint points T04-QB-03 and T04-QB-04, merged and disclosed. No other item touches it.",
+    "visual_dependency": "T04-VO-039, T04-VO-040, T04-VO-041",
+    "feedback_proposal": {
+     "correct": "Pilihan jawapan tepat.",
+     "incorrect": "Pilihan jawapan tidak tepat."
+    },
+    "factual_risk_status": "LOW — no option names the Act, so nothing depends on the EXTERNAL_VERIFICATION_REQUIRED citation being right"
+   }
+  ]
+ }
+}

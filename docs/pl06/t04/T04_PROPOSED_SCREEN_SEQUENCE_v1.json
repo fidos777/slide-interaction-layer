@@ -1,0 +1,825 @@
+{
+ "pack": "T04_PROPOSED_SCREEN_SEQUENCE",
+ "version": "v1",
+ "stage": "4.2F-B0.8",
+ "unit_id": "K5-PL06-T04-B01",
+ "content_status": "CAIR_ASSISTED_DRAFT",
+ "approval_status": "PENDING_BARIAH_REVIEW",
+ "instructional_authority": "BARIAH",
+ "proposed_learner_screen_count": 21,
+ "final_learner_screen_count": "PENDING_BARIAH_APPROVAL",
+ "b02_screen_count_inherited": false,
+ "b02_families_propagated": 0,
+ "screen_count_note": "21 proposed learner screens. This is NOT derived from B02's 29 — B02 is a different unit with 14 extracted photographs and a different structure. T04's count falls out of its own source: three operations with two sub-screens each, three compliance screens forced apart by the D-04 split, and one stepped process screen.",
+ "required_populations": [
+  {
+   "population": "introductory dialogue",
+   "screens": [
+    "T04-S02"
+   ]
+  },
+  {
+   "population": "six-step process",
+   "screens": [
+    "T04-S03"
+   ]
+  },
+  {
+   "population": "Landskap Lembut main explanation",
+   "screens": [
+    "T04-S04"
+   ]
+  },
+  {
+   "population": "Siram",
+   "screens": [
+    "T04-S05",
+    "T04-S06",
+    "T04-S07"
+   ]
+  },
+  {
+   "population": "Baja",
+   "screens": [
+    "T04-S08",
+    "T04-S09",
+    "T04-S10"
+   ]
+  },
+  {
+   "population": "Racun",
+   "screens": [
+    "T04-S11",
+    "T04-S12",
+    "T04-S13",
+    "T04-S14",
+    "T04-S15",
+    "T04-S16"
+   ]
+  },
+  {
+   "population": "every ruled descendant subtopic",
+   "screens": [
+    "T04-S06",
+    "T04-S07",
+    "T04-S09",
+    "T04-S10",
+    "T04-S12",
+    "T04-S13",
+    "T04-S14",
+    "T04-S15",
+    "T04-S16",
+    "T04-S18"
+   ]
+  },
+  {
+   "population": "Landskap Kejur main explanation",
+   "screens": [
+    "T04-S17"
+   ]
+  },
+  {
+   "population": "four named Landskap Kejur groups",
+   "screens": [
+    "T04-S18"
+   ]
+  },
+  {
+   "population": "legal and compliance treatment",
+   "screens": [
+    "T04-S14",
+    "T04-S15",
+    "T04-S16"
+   ]
+  },
+  {
+   "population": "Rumusan",
+   "screens": [
+    "T04-S19"
+   ]
+  },
+  {
+   "population": "quiz",
+   "screens": [
+    "T04-S20"
+   ]
+  },
+  {
+   "population": "Tamat",
+   "screens": [
+    "T04-S21"
+   ]
+  }
+ ],
+ "source_row_coverage": {
+  "total_rows": 100,
+  "rows_on_at_least_one_screen": 100,
+  "uncovered_rows": []
+ },
+ "fields": [
+  "screen_id",
+  "working_title",
+  "source_row_ids",
+  "instructional_purpose",
+  "learner_outcome",
+  "treatment",
+  "base_state",
+  "interaction_states",
+  "visual_obligations_served",
+  "asset_groups_used",
+  "narration_treatment",
+  "speaker_notes_treatment",
+  "completion_condition",
+  "accessibility_treatment",
+  "technical_claim_dependency",
+  "bariah_review_status"
+ ],
+ "screens": [
+  {
+   "screen_id": "T04-S01",
+   "working_title": "Tajuk dan Mula",
+   "source_row_ids": [],
+   "instructional_purpose": "Open the unit and give the learner the topic and Bahagian before anything else.",
+   "learner_outcome": "The learner knows which Topik and Bahagian they are in.",
+   "treatment": "TITLE",
+   "base_state": "Title, unit name and a MULA button, all visible.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [],
+   "asset_groups_used": [],
+   "narration_treatment": "One short screen-level VO naming the course, Topik and Bahagian.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT: unit provenance. SPOKEN_CONTENT_VO: the welcome line.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "The MULA button must be keyboard reachable and labelled.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S02",
+   "working_title": "Pengenalan — perbualan di tapak",
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003",
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "instructional_purpose": "Open from the site at the moment construction ends and maintenance begins, so the six activities arrive as work rather than as a diagram.",
+   "learner_outcome": "The learner can say what the maintenance phase covers and that it splits into soft and hard landscape.",
+   "treatment": "DIALOGUE_SCENARIO",
+   "base_state": "Site visual with both characters; dialogue plays as character video, full text in Notes.",
+   "interaction_states": [
+    "BASE — dialogue plays"
+   ],
+   "visual_obligations_served": [],
+   "asset_groups_used": [],
+   "narration_treatment": "Dialogue is the audio. No separate narrator VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT: unit provenance. SPOKEN_CONTENT_VO: the five turns. PRODUCTION_INSTRUCTION_NOT_SPOKEN: character direction and the compliance-exclusion rule.",
+   "completion_condition": "dialogue complete",
+   "accessibility_treatment": "Full dialogue must exist as attributed text, not audio only.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S03",
+   "working_title": "Aliran proses penjagaan dan penyelenggaraan",
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003"
+   ],
+   "instructional_purpose": "Present the six supervisory activities in source order and give each one a visual, as Bariah ruled.",
+   "learner_outcome": "The learner can name the six activities and place them in order.",
+   "treatment": "PROCESS_FLOW_STEPPED",
+   "base_state": "The source-bound six-step diagram with all six labels visible from the start.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ST-06",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-001",
+    "T04-VO-002",
+    "T04-VO-003",
+    "T04-VO-004",
+    "T04-VO-005",
+    "T04-VO-006"
+   ],
+   "asset_groups_used": [
+    "AG-01"
+   ],
+   "narration_treatment": "One screen-level VO plus a short line per step.",
+   "speaker_notes_treatment": "PRODUCTION_INSTRUCTION_NOT_SPOKEN: D-05 redraw rule — six nodes, linear, no hierarchy.",
+   "completion_condition": "all six steps viewed; the six labels are already in the base state",
+   "accessibility_treatment": "The six labels must be selectable text, not only pixels inside an image.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S04",
+   "working_title": "Landskap Lembut — pengenalan",
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005"
+   ],
+   "instructional_purpose": "Establish the soft-landscape category before its three operations are taught.",
+   "learner_outcome": "The learner can say what soft landscape includes.",
+   "treatment": "CONTENT_STATIC",
+   "base_state": "Category visual and the source definition, both visible.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-007"
+   ],
+   "asset_groups_used": [
+    "AG-02"
+   ],
+   "narration_treatment": "One screen-level VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus one SPOKEN_CONTENT_VO block.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S05",
+   "working_title": "Siram — penerangan utama",
+   "source_row_ids": [
+    "T04-ROW-006",
+    "T04-ROW-007"
+   ],
+   "instructional_purpose": "Give watering a concrete image and its purpose before methods are broken down.",
+   "learner_outcome": "The learner can state why watering is done.",
+   "treatment": "CONTENT_STATIC",
+   "base_state": "Operation visual and the source definition.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-008"
+   ],
+   "asset_groups_used": [
+    "AG-03"
+   ],
+   "narration_treatment": "One screen-level VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus SPOKEN_CONTENT_VO.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S06",
+   "working_title": "Siram — kaedah pelaksanaan",
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-010",
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "instructional_purpose": "Contrast manual watering with automatic irrigation, and inside automatic, sprinkler with drip.",
+   "learner_outcome": "The learner can choose an irrigation method for a given situation.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "Both method labels visible; the comparison composite is the persistent visual.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-009",
+    "T04-VO-010",
+    "T04-VO-011"
+   ],
+   "asset_groups_used": [
+    "AG-03"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per method.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "both methods revealed",
+   "accessibility_treatment": "Reveals keyboard reachable and state announced; stacked fallback loses nothing.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S07",
+   "working_title": "Siram — aspek pengurusan untuk kontraktor",
+   "source_row_ids": [
+    "T04-ROW-016",
+    "T04-ROW-017",
+    "T04-ROW-018",
+    "T04-ROW-019",
+    "T04-ROW-020",
+    "T04-ROW-021",
+    "T04-ROW-022",
+    "T04-ROW-023",
+    "T04-ROW-024",
+    "T04-ROW-025"
+   ],
+   "instructional_purpose": "Cover the four management topics the source groups under contractor responsibility.",
+   "learner_outcome": "The learner can state the contractor's watering-management duties.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "Four topic labels visible before any interaction.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "asset_groups_used": [
+    "AG-03"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per topic.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "all four revealed",
+   "accessibility_treatment": "As T04-S06.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S08",
+   "working_title": "Baja — penerangan utama",
+   "source_row_ids": [
+    "T04-ROW-026",
+    "T04-ROW-027"
+   ],
+   "instructional_purpose": "Give fertilising a concrete image and its purpose.",
+   "learner_outcome": "The learner can state why fertiliser is applied.",
+   "treatment": "CONTENT_STATIC",
+   "base_state": "Operation visual and the source definition.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-017"
+   ],
+   "asset_groups_used": [
+    "AG-04"
+   ],
+   "narration_treatment": "One screen-level VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus SPOKEN_CONTENT_VO.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S09",
+   "working_title": "Baja — kaedah pelaksanaan",
+   "source_row_ids": [
+    "T04-ROW-028",
+    "T04-ROW-029",
+    "T04-ROW-030",
+    "T04-ROW-031",
+    "T04-ROW-032",
+    "T04-ROW-033",
+    "T04-ROW-034"
+   ],
+   "instructional_purpose": "Distinguish the three application methods the source names.",
+   "learner_outcome": "The learner can match an application method to a planting situation.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "Three method labels visible; the comparison composite is the persistent visual.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-018",
+    "T04-VO-019",
+    "T04-VO-020",
+    "T04-VO-021"
+   ],
+   "asset_groups_used": [
+    "AG-04"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per method.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "all three revealed",
+   "accessibility_treatment": "As T04-S06.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S10",
+   "working_title": "Baja — aspek pengurusan untuk kontraktor",
+   "source_row_ids": [
+    "T04-ROW-035",
+    "T04-ROW-036",
+    "T04-ROW-037",
+    "T04-ROW-038",
+    "T04-ROW-039",
+    "T04-ROW-040",
+    "T04-ROW-041",
+    "T04-ROW-042",
+    "T04-ROW-043",
+    "T04-ROW-044",
+    "T04-ROW-045"
+   ],
+   "instructional_purpose": "Cover the five management topics the source groups under contractor responsibility.",
+   "learner_outcome": "The learner can state the contractor's fertilising-management duties.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "Five topic labels visible before any interaction.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "asset_groups_used": [
+    "AG-04"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per topic.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "all five revealed",
+   "accessibility_treatment": "As T04-S06.",
+   "technical_claim_dependency": "T04-ROW-039 names the Pegawai Penguasa (S.O.) approval requirement — quoted, not asserted.",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S11",
+   "working_title": "Racun — penerangan utama",
+   "source_row_ids": [
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "instructional_purpose": "Establish that pest control addresses three different problems, not one.",
+   "learner_outcome": "The learner can name the three threats pest control addresses.",
+   "treatment": "CONTENT_STATIC",
+   "base_state": "Three-threat visual and the source definition.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-028"
+   ],
+   "asset_groups_used": [
+    "AG-05"
+   ],
+   "narration_treatment": "One screen-level VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus SPOKEN_CONTENT_VO.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S12",
+   "working_title": "Racun — pendekatan IPM",
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "instructional_purpose": "Teach the IPM priority order — that chemical control is not the first response.",
+   "learner_outcome": "The learner can place chemical control last in the IPM priority order.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "The priority-order diagram persistent, with all four control names visible.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-029",
+    "T04-VO-030",
+    "T04-VO-031",
+    "T04-VO-032",
+    "T04-VO-033"
+   ],
+   "asset_groups_used": [
+    "AG-05"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per control.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "all four revealed",
+   "accessibility_treatment": "The order must be conveyed by text and structure, not by colour alone.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S13",
+   "working_title": "Racun — jenis racun",
+   "source_row_ids": [
+    "T04-ROW-057",
+    "T04-ROW-058",
+    "T04-ROW-059",
+    "T04-ROW-060",
+    "T04-ROW-061",
+    "T04-ROW-062",
+    "T04-ROW-063"
+   ],
+   "instructional_purpose": "Pair each pesticide type with the problem it controls.",
+   "learner_outcome": "The learner can match pesticide type to target.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "The three-type comparison visible as the persistent visual.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-034",
+    "T04-VO-035",
+    "T04-VO-036",
+    "T04-VO-037"
+   ],
+   "asset_groups_used": [
+    "AG-05"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per type.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "all three revealed",
+   "accessibility_treatment": "As T04-S06.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S14",
+   "working_title": "Racun — perundangan dan pelesenan",
+   "source_row_ids": [
+    "T04-ROW-064",
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067"
+   ],
+   "instructional_purpose": "Carry the statutory control and the licensed-operator requirement, both base-visible.",
+   "learner_outcome": "The learner can state who may legally carry out pesticide spraying.",
+   "treatment": "CONTENT_STATIC",
+   "base_state": "Statute and licensed-operator requirement verbatim, both visible. NOTHING on this screen is behind an interaction.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-039"
+   ],
+   "asset_groups_used": [
+    "AG-06"
+   ],
+   "narration_treatment": "One screen-level VO; the obligations are spoken as written.",
+   "speaker_notes_treatment": "PRODUCTION_INSTRUCTION_NOT_SPOKEN: this screen carries legal content and must not be abbreviated in MMD.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Legal content reachable without interaction, and not dependent on colour or hover.",
+   "technical_claim_dependency": "T04-CLM-01 Akta Racun Makhluk Perosak 1974 and T04-CLM-02 licensed operator — both EXTERNAL_VERIFICATION_REQUIRED, quoted verbatim, never paraphrased.",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S15",
+   "working_title": "Racun — keselamatan dan kesihatan (HSE)",
+   "source_row_ids": [
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074"
+   ],
+   "instructional_purpose": "Carry full PPE on the base screen, with storage and SDS detail reveal-eligible under the D-04 ruling.",
+   "learner_outcome": "The learner can state the PPE required and where pesticide must be stored.",
+   "treatment": "CONTENT_WITH_CONFIRMED_REVEAL",
+   "base_state": "PPE Lengkap and its item list VISIBLE — Bariah placed PPE on the base screen.",
+   "interaction_states": [
+    "BASE (PPE visible)",
+    "REVEAL_STORAGE",
+    "REVEAL_SDS",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-040"
+   ],
+   "asset_groups_used": [
+    "AG-06"
+   ],
+   "narration_treatment": "Screen-level VO; PPE spoken on the base state.",
+   "speaker_notes_treatment": "PRODUCTION_INSTRUCTION_NOT_SPOKEN: D-04 split — PPE may not be moved behind a reveal.",
+   "completion_condition": "screen viewed; the base state already discharges the PPE disclosure",
+   "accessibility_treatment": "PPE reachable without interaction.",
+   "technical_claim_dependency": "T04-CLM-03 PPE and T04-CLM-04 SDS — quoted verbatim.",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S16",
+   "working_title": "Racun — pengurusan risiko",
+   "source_row_ids": [
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "instructional_purpose": "Carry the risk-management heading on the base screen with spray conditions, notification and reporting reveal-eligible under the D-04 ruling.",
+   "learner_outcome": "The learner can state the conditions under which spraying may proceed.",
+   "treatment": "CONTENT_WITH_CONFIRMED_REVEAL",
+   "base_state": "The Pengurusan Risiko heading visible so the learner knows the topic exists.",
+   "interaction_states": [
+    "BASE",
+    "REVEAL_SPRAY_CONDITIONS",
+    "REVEAL_NOTIFICATION",
+    "REVEAL_REPORTING",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-041"
+   ],
+   "asset_groups_used": [
+    "AG-06"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per obligation.",
+   "speaker_notes_treatment": "PRODUCTION_INSTRUCTION_NOT_SPOKEN: D-04 made these three reveal-eligible; a non-interacting learner will not see them, which is recorded as a residual risk.",
+   "completion_condition": "all three revealed",
+   "accessibility_treatment": "Reveals keyboard reachable and state announced.",
+   "technical_claim_dependency": "T04-CLM-05 spray drift — quoted verbatim.",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S17",
+   "working_title": "Landskap Kejur — pengenalan",
+   "source_row_ids": [
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "instructional_purpose": "Establish the hard-landscape category and its contrast with soft landscape.",
+   "learner_outcome": "The learner can distinguish soft from hard landscape.",
+   "treatment": "CONTENT_STATIC",
+   "base_state": "Category visual and the source definition.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-042"
+   ],
+   "asset_groups_used": [
+    "AG-07"
+   ],
+   "narration_treatment": "One screen-level VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus SPOKEN_CONTENT_VO.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S18",
+   "working_title": "Landskap Kejur — empat kumpulan fungsi",
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085",
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090",
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095",
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "instructional_purpose": "Present the four functions hard landscape performs, each with its two source sub-items.",
+   "learner_outcome": "The learner can name the four functions and give an example of each.",
+   "treatment": "CLICK_TO_REVEAL",
+   "base_state": "Four group labels visible before any interaction.",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "asset_groups_used": [
+    "AG-07"
+   ],
+   "narration_treatment": "Screen-level instruction plus one line per group.",
+   "speaker_notes_treatment": "SPOKEN_INTERACTION_INSTRUCTION plus per-reveal SPOKEN_CONTENT_VO.",
+   "completion_condition": "all four revealed",
+   "accessibility_treatment": "As T04-S06.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S19",
+   "working_title": "Rumusan",
+   "source_row_ids": [],
+   "instructional_purpose": "Recap the unit in four points, in the Topik 3 Bahagian 2 style Bariah instructed.",
+   "learner_outcome": "The learner can restate the unit's structure and the contractor's responsibilities.",
+   "treatment": "RUMUSAN",
+   "base_state": "Heading and four recap points, all visible.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [],
+   "asset_groups_used": [],
+   "narration_treatment": "One screen-level VO reading the recap.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus SPOKEN_CONTENT_VO.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "None — the Rumusan deliberately says 'perundangan' rather than naming an Act.",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S20",
+   "working_title": "Kuiz",
+   "source_row_ids": [],
+   "instructional_purpose": "Assess the unit with four MCQ and one Multiple Response, at a 60 percent pass mark.",
+   "learner_outcome": "The learner demonstrates recall and application across the unit's coverage.",
+   "treatment": "QUIZ",
+   "base_state": "Five items presented in sequence.",
+   "interaction_states": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "RESULT"
+   ],
+   "visual_obligations_served": [],
+   "asset_groups_used": [],
+   "narration_treatment": "Screen-level instruction only; no VO reads the questions aloud.",
+   "speaker_notes_treatment": "PRODUCTION_INSTRUCTION_NOT_SPOKEN: pass mark 60 percent, scope all PLs in the Kursus.",
+   "completion_condition": "all five submitted",
+   "accessibility_treatment": "Options keyboard reachable; feedback not conveyed by colour alone.",
+   "technical_claim_dependency": "Q5 draws on rows carrying EXTERNAL_VERIFICATION_REQUIRED claims; no option names the Act.",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  },
+  {
+   "screen_id": "T04-S21",
+   "working_title": "Tamat Bahagian",
+   "source_row_ids": [],
+   "instructional_purpose": "Close the unit and confirm completion.",
+   "learner_outcome": "The learner knows the Bahagian is complete.",
+   "treatment": "CLOSING",
+   "base_state": "Closing statement, visible.",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "visual_obligations_served": [],
+   "asset_groups_used": [],
+   "narration_treatment": "One short closing VO.",
+   "speaker_notes_treatment": "NON_SPOKEN_CONTEXT plus SPOKEN_CONTENT_VO.",
+   "completion_condition": "screen viewed",
+   "accessibility_treatment": "Standard reading order.",
+   "technical_claim_dependency": "none",
+   "bariah_review_status": "PENDING_BARIAH_REVIEW"
+  }
+ ]
+}
