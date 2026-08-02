@@ -1,0 +1,307 @@
+{
+ "pack": "T04_BARIAH_PARTIAL_RULINGS",
+ "version": "v1",
+ "stage": "4.2F-B0.6",
+ "unit_id": "K5-PL06-T04-B01",
+ "content_status": "CAIR_ASSISTED_DRAFT",
+ "approval_status": "PENDING_BARIAH_REVIEW",
+ "instructional_authority": "BARIAH",
+ "approved_items": 0,
+ "evidence_dir": "reviews/storyboard-bariah/t04_bariah_review",
+ "evidence": [
+  {
+   "evidence_id": "T04-EV-01",
+   "frozen_filename": "T04_BARIAH_VISUAL_REQUIREMENT_SHEET_20260802.jpg",
+   "frozen_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_VISUAL_REQUIREMENT_SHEET_20260802.jpg",
+   "original_uploaded_filename": "NOT_RECOVERABLE_FROM_SESSION_TRANSPORT",
+   "byte_size": 75362,
+   "sha256": "95f84819c70b6ef89fb8fe29ddd8ac19850014790de18587a0cfe850637a2008",
+   "media_type": "image/jpeg",
+   "dimensions_px": "772 x 697",
+   "colour_mode": "RGB",
+   "evidence_date": "2026-08-02",
+   "received_utc": "2026-08-02T08:52:01Z",
+   "reviewer": "BARIAH",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "scope": "K5-PL06-T04-B01",
+   "modification": "NONE — byte-identical",
+   "description": "Bariah's marked-up T04 visual requirement sheet, titled 'PL06 Topik 4'. A three-row table: the module's opening process diagram, Landskap Lembut, and Landskap Kejur, each with a handwritten-style requirement in the right-hand cell.",
+   "ruling_locators": [
+    "BR-L1",
+    "BR-L2",
+    "BR-L3",
+    "BR-L4",
+    "BR-L5",
+    "BR-L6"
+   ]
+  },
+  {
+   "evidence_id": "T04-EV-02",
+   "frozen_filename": "T04_BARIAH_QUIZ_RUMUSAN_WHATSAPP_20260802.webp",
+   "frozen_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_QUIZ_RUMUSAN_WHATSAPP_20260802.webp",
+   "original_uploaded_filename": "NOT_RECOVERABLE_FROM_SESSION_TRANSPORT",
+   "byte_size": 121162,
+   "sha256": "0ae2aa29a05640495f42863b9c5e7daa2a1adaa1961f925951b9e393fd2154e9",
+   "media_type": "image/webp",
+   "dimensions_px": "1076 x 1338",
+   "colour_mode": "RGB",
+   "evidence_date": "2026-08-02",
+   "received_utc": "2026-08-02T08:52:01Z",
+   "reviewer": "BARIAH",
+   "evidence_class": "BARIAH_DIRECT_SCREENSHOT",
+   "scope": "K5-PL06-T04-B01",
+   "modification": "NONE — byte-identical",
+   "description": "WhatsApp conversation 'Bariah eLearning'. Carries the same requirement sheet shared at 4:41 PM captioned '1. Visual', then two written messages at 4:44 PM and 4:45 PM giving the quiz, Rumusan and Kandungan Akta rulings.",
+   "ruling_locators": [
+    "BR-W1",
+    "BR-W2",
+    "BR-W3",
+    "BR-W4",
+    "BR-W5"
+   ]
+  }
+ ],
+ "ruling_locators": [
+  {
+   "locator": "BR-L1",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 1 (process diagram), right cell",
+   "verbatim": "Perlu visual juga untuk setiap langkah",
+   "reading": "A visual is required for EVERY step of the six-step process, in addition to the existing diagram."
+  },
+  {
+   "locator": "BR-L2",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 2 (Landskap Lembut), right cell, line 1",
+   "verbatim": "Penerangan utama – perlu visual",
+   "reading": "The Landskap Lembut main explanation requires a visual."
+  },
+  {
+   "locator": "BR-L3",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 2 (Landskap Lembut), right cell, line 2",
+   "verbatim": "Siram, Baja, Racun, - penerangan utama perlu visual",
+   "reading": "Each of the three named operations requires a visual for its main explanation."
+  },
+  {
+   "locator": "BR-L4",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 2 (Landskap Lembut), right cell, line 3",
+   "verbatim": "Their sub – perlu visual",
+   "reading": "Every source subtopic beneath Siram, Baja and Racun requires a visual. Bariah did not enumerate them; this inventory enumerates them from the controlled extract so that 'their sub' is never carried forward as a vague phrase."
+  },
+  {
+   "locator": "BR-L5",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 3 (Landskap Kejur), right cell, line 1",
+   "verbatim": "Penerangan utama – perlu visual",
+   "reading": "The Landskap Kejur main explanation requires a visual."
+  },
+  {
+   "locator": "BR-L6",
+   "evidence_id": "T04-EV-01",
+   "position": "requirement sheet, row 3 (Landskap Kejur), right cell, line 2",
+   "verbatim": "Pengurusan Ruang dan Sirkulasi, Fungsi Struktur dan Kejuruteraan, Kebolehgunaan dan Kemudahan, Estetika dan Reka Bentuk – perlu visual",
+   "reading": "The four named Landskap Kejur groups each require a visual. Bariah named these four explicitly and did NOT extend the requirement to their sub-items — see SCOPE_ASYMMETRY below."
+  },
+  {
+   "locator": "BR-W1",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 1",
+   "verbatim": "Kuiz & Rumusan - Yes. please draft. I will check.",
+   "reading": "CAIR is authorised to prepare drafts of both. Bariah reviews them. Drafting authorisation is not approval."
+  },
+  {
+   "locator": "BR-W2",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 2",
+   "verbatim": "Kuiz - 4 MCQ, 1 Multiple Response - Apply to ALL PLs in Kursus",
+   "reading": "Quiz composition is confirmed and its scope is the whole Kursus, not T04 and not PL06 alone."
+  },
+  {
+   "locator": "BR-W3",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 3",
+   "verbatim": "Rumusan - Follow writing style Topik 3 Bahagian 2",
+   "reading": "A STYLE instruction. It governs how the Rumusan is written, not what it says. T04 facts only."
+  },
+  {
+   "locator": "BR-W4",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:44 PM, line 4",
+   "verbatim": "Kandungan Akta - Tak pasti ni yang di mana?",
+   "reading": "Bariah is asking which content the legislative question referred to. This is a question back to us, not a ruling."
+  },
+  {
+   "locator": "BR-W5",
+   "evidence_id": "T04-EV-02",
+   "position": "WhatsApp, 4:45 PM",
+   "verbatim": "4. Kandungan Akta - tak pasti penerangan tambahan yang mana? Click to reveal jika diperlukan",
+   "reading": "Bariah asks which supplementary explanation was meant, and indicates that click-to-reveal is acceptable IF needed. That is a conditional, not a confirmed split."
+  }
+ ],
+ "decision_statuses": [
+  "CONFIRMED_BARIAH_DIRECT",
+  "CONFIRMED_WITH_EXPANSION",
+  "DRAFT_AUTHORISED_PENDING_BARIAH_REVIEW",
+  "PARTIALLY_RESOLVED",
+  "CLARIFICATION_REQUIRED",
+  "UNRESOLVED"
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-01",
+   "title": "Visual treatment",
+   "status": "CONFIRMED_WITH_EXPANSION",
+   "ruling": "VISUAL_REQUIRED_FOR_BARIAH_NAMED_POPULATION",
+   "evidence": [
+    "BR-L1",
+    "BR-L2",
+    "BR-L3",
+    "BR-L4",
+    "BR-L5",
+    "BR-L6"
+   ],
+   "superseded_recommendation": "TEXT_AND_DIAGRAM_LED",
+   "supersession_note": "The Stage 4.2F-B0.5 recommendation was TEXT_AND_DIAGRAM_LED — that photographs were unnecessary and the SmartArt plus text layouts would carry the unit. Bariah did not accept that as the final ruling. It is recorded here as SUPERSEDED and must not be carried forward as though it were confirmed.",
+   "what_bariah_required": [
+    "A. a visual for every step in the main six-step process",
+    "B. Landskap Lembut — main explanation; Siram, Baja and Racun main explanations; and every source subtopic beneath each of the three",
+    "C. Landskap Kejur — main explanation, plus Pengurusan Ruang dan Sirkulasi, Fungsi Struktur dan Kejuruteraan, Kebolehgunaan dan Kemudahan, and Estetika dan Reka Bentuk"
+   ],
+   "what_bariah_did_not_specify": "The SUBJECT of any visual. Every subject in the inventory is derived from the module and carries subject_authority = MODULE_SOURCE_ATTESTED.",
+   "scope": "THIS_UNIT_ONLY",
+   "open_points": [
+    "visual subject and style approval for all 46 obligations",
+    "whether the eight Landskap Kejur sub-items are in or out — see SCOPE_ASYMMETRY"
+   ]
+  },
+  {
+   "decision_id": "D-02A",
+   "title": "Quiz composition",
+   "status": "CONFIRMED_BARIAH_DIRECT",
+   "ruling": "4 MCQ + 1 MULTIPLE_RESPONSE",
+   "evidence": [
+    "BR-W2"
+   ],
+   "superseded_recommendation": "Structure options A and B offered in Stage 4.2F-B0.5",
+   "supersession_note": "Option A is confirmed. Option B is closed.",
+   "what_bariah_required": [
+    "exactly four MCQ items",
+    "exactly one Multiple Response item"
+   ],
+   "what_bariah_did_not_specify": "Any question content, stem, option, key or rationale.",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "open_points": [
+    "none on composition — the composition itself is settled"
+   ]
+  },
+  {
+   "decision_id": "D-02B",
+   "title": "Passing threshold",
+   "status": "UNRESOLVED",
+   "ruling": null,
+   "evidence": [],
+   "superseded_recommendation": null,
+   "supersession_note": "Bariah's message settles composition and says nothing about a pass mark. The 60 percent figure comes from A3, which is the B02 slice of the Style and Guidelines. It remains UNCONFIRMED for T04 and for the Kursus.",
+   "what_bariah_required": [],
+   "what_bariah_did_not_specify": "The pass threshold.",
+   "scope": "POTENTIALLY_ALL_PLS_IN_KURSUS",
+   "open_points": [
+    "confirm or set the pass mark"
+   ]
+  },
+  {
+   "decision_id": "D-02C",
+   "title": "Rumusan",
+   "status": "DRAFT_AUTHORISED_PENDING_BARIAH_REVIEW",
+   "ruling": "FOLLOW_WRITING_STYLE_TOPIK_3_BAHAGIAN_2",
+   "evidence": [
+    "BR-W1",
+    "BR-W3"
+   ],
+   "superseded_recommendation": null,
+   "supersession_note": "'Yes. please draft. I will check.' authorises drafting and reserves approval. Drafting authorisation is NOT approval, and the draft stays CAIR_ASSISTED_DRAFT.",
+   "what_bariah_required": [
+    "a draft she can check",
+    "the writing style of Topik 3 Bahagian 2"
+   ],
+   "what_bariah_did_not_specify": "Any T04 content. Style was specified; facts were not. No B02 fact is copied into the T04 Rumusan.",
+   "scope": "THIS_UNIT_ONLY",
+   "open_points": [
+    "review, edit or approve the four drafted statements",
+    "confirm the four-point consolidation"
+   ]
+  },
+  {
+   "decision_id": "D-03",
+   "title": "T04 cast",
+   "status": "UNRESOLVED",
+   "ruling": null,
+   "evidence": [],
+   "superseded_recommendation": "HILMI_NARRATOR_LED",
+   "supersession_note": "The Stage 4.2F-B0.5 recommendation named Hilmi as narrator. Bariah's rulings say nothing about cast. Hilmi must NOT be carried forward as approved treatment.",
+   "what_bariah_required": [],
+   "what_bariah_did_not_specify": "Anything about narrator or characters for T04.",
+   "scope": "THIS_UNIT_ONLY",
+   "open_points": [
+    "choose narrator/cast treatment for T04"
+   ]
+  },
+  {
+   "decision_id": "D-04",
+   "title": "Legislative content",
+   "status": "CLARIFICATION_REQUIRED",
+   "ruling": null,
+   "evidence": [
+    "BR-W4",
+    "BR-W5"
+   ],
+   "superseded_recommendation": "Core legal obligations on the base screen; supplementary explanation may use reveal",
+   "supersession_note": "Bariah asked two questions rather than confirming: which content was meant, and which supplementary explanation was meant. She added that click-to-reveal is acceptable 'jika diperlukan' — a conditional. The prior recommendation is NOT approved.",
+   "what_bariah_required": [],
+   "what_bariah_did_not_specify": "Which rows are mandatory-visible and which may reveal.",
+   "scope": "THIS_UNIT_ONLY",
+   "open_points": [
+    "identify the affected rows precisely, then confirm the base/reveal split row by row"
+   ]
+  },
+  {
+   "decision_id": "D-05",
+   "title": "SmartArt production treatment",
+   "status": "PARTIALLY_RESOLVED",
+   "ruling": "EVERY_PROCESS_STEP_REQUIRES_A_VISUAL",
+   "evidence": [
+    "BR-L1"
+   ],
+   "superseded_recommendation": null,
+   "supersession_note": "BR-L1 settles one part of D-05 and leaves three parts open.",
+   "what_bariah_required": [
+    "a visual for each of the six process steps"
+   ],
+   "what_bariah_did_not_specify": "Whether the review storyboard uses the source-bound six-step diagram; how MMD redraws it; and what mechanism preserves the six-node identity and order.",
+   "scope": "THIS_UNIT_ONLY",
+   "open_points": [
+    "source-bound diagram in the review storyboard — not confirmed",
+    "MMD redraw treatment — not confirmed",
+    "six-node sequence preservation mechanism — not confirmed"
+   ]
+  }
+ ],
+ "scope_asymmetry": {
+  "observation": "Under Landskap Lembut, Bariah wrote 'Their sub – perlu visual' (BR-L4). Under Landskap Kejur she named four groups and stopped (BR-L6); the eight source sub-items beneath those four groups are not covered by her ruling.",
+  "handling": "The inventory covers exactly what she named. No obligation was created for the eight Landskap Kejur sub-items. The asymmetry may be deliberate — the Kejur sub-items are one-line examples, whereas the Lembut sub-items are full management topics.",
+  "status": "RECORDED_NOT_ESCALATED",
+  "reason": "Part 9 restricts the follow-up to the six genuinely unresolved items, and asking Bariah to restate a ruling she gave clearly would be exactly the reconfirmation the brief prohibits.",
+  "kejur_sub_items_not_covered": [
+   "T04-ROW-082",
+   "T04-ROW-084",
+   "T04-ROW-087",
+   "T04-ROW-089",
+   "T04-ROW-092",
+   "T04-ROW-094",
+   "T04-ROW-097",
+   "T04-ROW-099"
+  ]
+ }
+}
