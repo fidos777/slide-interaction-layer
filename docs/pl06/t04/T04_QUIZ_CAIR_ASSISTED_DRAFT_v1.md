@@ -159,20 +159,20 @@ ACCEPT ☐   EDIT ☐   REMOVE ☐   COMMENT: ______________________
 - **B.** Pekerja mesti memakai PPE yang lengkap dan bersesuaian ←
 - **C.** Semburan hanya dilakukan semasa cuaca tenang ←
 - **D.** Salinan Helaian Data Keselamatan (SDS) disimpan di tapak ←
-- **E.** Bekas racun kosong boleh digunakan semula untuk kegunaan lain
-- **F.** Semburan boleh dijalankan tanpa memaklumkan penduduk sekitar
+- **E.** Baja disimpan di tempat yang kering dan jauh dari sumber air
+- **F.** Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran
 
 ```
 proposed_correct_answer = A, B, C, D   (PROPOSED_ANSWER_KEY · PENDING_BARIAH_APPROVAL)
-source_row_ids          = T04-ROW-067, T04-ROW-069, T04-ROW-070, T04-ROW-072, T04-ROW-074, T04-ROW-076, T04-ROW-077
+source_row_ids          = T04-ROW-067, T04-ROW-069, T04-ROW-070, T04-ROW-074, T04-ROW-076, T04-ROW-041, T04-ROW-045
 cognitive_demand        = RECALL
 visual_dependency       = T04-VO-039, T04-VO-040, T04-VO-041
 factual_risk_status     = LOW — no option names the Act, so nothing depends on the EXTERNAL_VERIFICATION_REQUIRED citation being right
 ```
 
-**Correct-answer evidence.** A — T04-ROW-067 licensed or trained operator. B — T04-ROW-069 and T04-ROW-070 full PPE. C — T04-ROW-076 calm weather only. D — T04-ROW-074 SDS copy kept on site. E is contradicted by T04-ROW-072. F is contradicted by T04-ROW-077.
+**Correct-answer evidence.** A — T04-ROW-067 licensed or trained operator. B — T04-ROW-069 and T04-ROW-070 full PPE. C — T04-ROW-076 calm weather only. D — T04-ROW-074 SDS copy kept on site. E is true of fertiliser storage (T04-ROW-041), not of pesticide spraying. F is true of fertiliser records (T04-ROW-045); the spraying record duty is a different row.
 
-**Distractor rationale.** E and F are not merely unlisted — the module states the opposite of each. T04-ROW-072 says empty pesticide containers may not be reused; T04-ROW-077 requires notification before spraying. Both are refutable from the source rather than from outside knowledge.
+**Distractor rationale.** E and F are BOTH TRUE STATEMENTS IN THE MODULE — and both belong to Baja, not to pesticide spraying. T04-ROW-041 is fertiliser storage; T04-ROW-045 is fertiliser record-keeping. A learner must attribute a control to the right operation rather than recognise an obviously absurd statement. See Q5_DISTRACTOR_REVIEW for what this replaced and what it costs.
 
 **Misconception assessed.** that PPE alone, or a licence alone, is sufficient compliance
 

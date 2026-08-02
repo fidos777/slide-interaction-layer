@@ -149,8 +149,8 @@ Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan
 - B. Pekerja mesti memakai PPE yang lengkap dan bersesuaian  ← cadangan jawapan
 - C. Semburan hanya dilakukan semasa cuaca tenang  ← cadangan jawapan
 - D. Salinan Helaian Data Keselamatan (SDS) disimpan di tapak  ← cadangan jawapan
-- E. Bekas racun kosong boleh digunakan semula untuk kegunaan lain
-- F. Semburan boleh dijalankan tanpa memaklumkan penduduk sekitar
+- E. Baja disimpan di tempat yang kering dan jauh dari sumber air
+- F. Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran
 
 ACCEPT ☐   EDIT ☐   REMOVE ☐   COMMENT: ______________________
 

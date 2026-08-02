@@ -1111,22 +1111,27 @@ QUIZ = dict(
                  ("B", "Pekerja mesti memakai PPE yang lengkap dan bersesuaian"),
                  ("C", "Semburan hanya dilakukan semasa cuaca tenang"),
                  ("D", "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak"),
-                 ("E", "Bekas racun kosong boleh digunakan semula untuk kegunaan lain"),
-                 ("F", "Semburan boleh dijalankan tanpa memaklumkan penduduk sekitar")],
+                 ("E", "Baja disimpan di tempat yang kering dan jauh dari sumber air"),
+                 ("F", "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan "
+                       "bayaran")],
              proposed_correct_answer=["A", "B", "C", "D"],
-             distractor_rationale="E and F are not merely unlisted — the module states the "
-                                  "opposite of each. T04-ROW-072 says empty pesticide "
-                                  "containers may not be reused; T04-ROW-077 requires "
-                                  "notification before spraying. Both are refutable from the "
-                                  "source rather than from outside knowledge.",
-             source_row_ids=["T04-ROW-067", "T04-ROW-069", "T04-ROW-070", "T04-ROW-072",
-                             "T04-ROW-074", "T04-ROW-076", "T04-ROW-077"],
+             distractor_rationale="E and F are BOTH TRUE STATEMENTS IN THE MODULE — and both "
+                                  "belong to Baja, not to pesticide spraying. T04-ROW-041 is "
+                                  "fertiliser storage; T04-ROW-045 is fertiliser "
+                                  "record-keeping. A learner must attribute a control to the "
+                                  "right operation rather than recognise an obviously absurd "
+                                  "statement. See Q5_DISTRACTOR_REVIEW for what this "
+                                  "replaced and what it costs.",
+             source_row_ids=["T04-ROW-067", "T04-ROW-069", "T04-ROW-070", "T04-ROW-074",
+                             "T04-ROW-076", "T04-ROW-041", "T04-ROW-045"],
              correct_answer_evidence="A — T04-ROW-067 licensed or trained operator. "
                                      "B — T04-ROW-069 and T04-ROW-070 full PPE. "
                                      "C — T04-ROW-076 calm weather only. "
                                      "D — T04-ROW-074 SDS copy kept on site. "
-                                     "E is contradicted by T04-ROW-072. "
-                                     "F is contradicted by T04-ROW-077.",
+                                     "E is true of fertiliser storage (T04-ROW-041), not of "
+                                     "pesticide spraying. "
+                                     "F is true of fertiliser records (T04-ROW-045); the "
+                                     "spraying record duty is a different row.",
              cognitive_demand="RECALL",
              misconception_assessed="that PPE alone, or a licence alone, is sufficient "
                                     "compliance",
@@ -1138,6 +1143,47 @@ QUIZ = dict(
              factual_risk_status="LOW — no option names the Act, so nothing depends on the "
                                  "EXTERNAL_VERIFICATION_REQUIRED citation being right"),
     ])
+
+# Part 10 of Stage 4.2F-B0.8A: Q5 distractor review, recorded rather than applied silently.
+Q5_DISTRACTOR_REVIEW = dict(
+    reviewed_at_stage="4.2F-B0.8A",
+    concern="Options E and F were direct negations of stated duties — empty containers may be "
+            "reused, spraying needs no notification. Both are refutable without understanding "
+            "the material, which lowers discrimination.",
+    search_scope="The controlled T04 extract only. No external knowledge, no invented fact.",
+    outcome="REVISED",
+    option_mapping=[
+        dict(option="A", change="UNCHANGED"),
+        dict(option="B", change="UNCHANGED"),
+        dict(option="C", change="UNCHANGED"),
+        dict(option="D", change="UNCHANGED"),
+        dict(option="E",
+             old="Bekas racun kosong boleh digunakan semula untuk kegunaan lain",
+             old_basis="contradicted by T04-ROW-072",
+             new="Baja disimpan di tempat yang kering dan jauh dari sumber air",
+             new_basis="T04-ROW-041 — TRUE of fertiliser storage, not a pesticide-spraying "
+                       "control"),
+        dict(option="F",
+             old="Semburan boleh dijalankan tanpa memaklumkan penduduk sekitar",
+             old_basis="contradicted by T04-ROW-077",
+             new="Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
+             new_basis="T04-ROW-045 — TRUE of fertiliser records, not a pesticide-spraying "
+                       "control"),
+    ],
+    correct_answer_count_before=4, correct_answer_count_after=4,
+    difficulty_before="LOW_DISTRACTOR_DIFFICULTY",
+    difficulty_after="MODERATE_DISTRACTOR_DIFFICULTY",
+    trade_off="The old distractors could be eliminated by anyone who noticed they were absurd. "
+              "The new ones require the learner to attribute a control to the correct "
+              "operation. That is better discrimination, but option F is a fine distinction — "
+              "'rekod pembajaan' against the spraying record duty in T04-ROW-078 — and a "
+              "reviewer could reasonably call it a trick. Flagged for Bariah rather than "
+              "decided.",
+    bariah_note_ms="Pilihan E dan F ialah kenyataan yang BETUL dalam modul, tetapi ia "
+                   "berkaitan baja, bukan kawalan semasa semburan racun. Tujuannya supaya "
+                   "pelajar perlu membezakan kawalan mengikut operasi. Jika Bariah rasa ini "
+                   "terlalu halus, kedua-dua pilihan boleh ditukar.",
+    status=CONTENT_STATUS, approval_status=APPROVAL_STATUS)
 
 QUIZ_ITEM_FIELDS = ["question_id", "question_type", "draft_stem", "draft_options",
                     "proposed_correct_answer", "distractor_rationale", "source_row_ids",

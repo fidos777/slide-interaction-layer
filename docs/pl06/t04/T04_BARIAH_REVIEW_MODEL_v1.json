@@ -1,0 +1,1807 @@
+{
+ "model_version": "T04_BARIAH_REVIEW_MODEL_v1",
+ "stage": "4.2F-B0.8A",
+ "unit_id": "K5-PL06-T04-B01",
+ "lesson_title": "Penjagaan dan Penyelenggaraan",
+ "artifact_hierarchy": {
+  "CONTROLLED_CONTENT_SOURCE_OF_TRUTH": "docs/pl06/t04/T04_BARIAH_REVIEW_MODEL_v1.json",
+  "GENERATED_REFERENCE_VIEW": "docs/pl06/t04/T04_BARIAH_CONTENT_REVIEW_PACK_v2.md",
+  "HUMAN_APPROVAL_ARTIFACT": "reviews/storyboard-bariah/t04_bariah_review/T04_Pakej_Semakan_Bariah_v2.docx",
+  "rule": "Every substantive item in the DOCX is generated from the model. Nothing substantive may exist only in the DOCX, and no reviewable item may exist only in the Markdown."
+ },
+ "external_manual_docx": {
+  "filename": "T04_Pakej_Semakan_Bariah_v1.docx",
+  "byte_size": 46676,
+  "sha256": "9c354b0e39e8667401b70a675775ce990169e8dbbb3f403e7d7bd57d32f24873",
+  "declared_pages_in_docprops": 1,
+  "declared_pages_reliable": false,
+  "page_count_note": "docProps/app.xml declares Pages=1 and Words=0, which Word writes when a document has never been repaginated by the application. The real page count is not readable from the package, and no renderer is available to determine it.",
+  "non_empty_paragraphs": 296,
+  "status": "NON_GOVERNED_REFERENCE",
+  "delivery_status": "WITHDRAWN_NOT_FOR_BARIAH",
+  "used_as_authority": false,
+  "copied_into_evidence": false,
+  "divergences_observed": [
+   "reviewer instructions ('Cara semak') present in the DOCX, absent from the Markdown",
+   "a 'Ringkasan cadangan' totals line present only in the DOCX",
+   "TWO different final-verdict vocabularies in one document — 'Lulus / Lulus dengan pindaan / Perlu dibaiki' near the top and 'Lulus untuk generate storyboard / Lulus dengan pindaan / Belum lulus' at the end",
+   "decision checkboxes abbreviated to A / E / M / R, which a reviewer cannot expand without the legend",
+   "MERGE offered with no target-ID field, so a merge decision could not be recorded",
+   "'Arahan selepas semakan' instructions present only in the DOCX"
+  ],
+  "conclusion": "It is a competent human document. It is not a governed one: six classes of substantive content existed only inside it."
+ },
+ "source_artifacts": {
+  "screen_sequence": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+  "visual_asset_grouping": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+  "visual_obligation_closure": "T04_VISUAL_OBLIGATION_CLOSURE_v1.json",
+  "slide_2_dialogue": "T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+  "rumusan": "T04_RUMUSAN_CAIR_ASSISTED_DRAFT_v3.json",
+  "quiz": "T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json"
+ },
+ "document_metadata": {
+  "title_ms": "PAKEJ SEMAKAN BARIAH",
+  "subtitle_ms": "Topik 4: Penjagaan dan Penyelenggaraan",
+  "unit_line_ms": "K5 · PL06 · T04-B01",
+  "version": "v2",
+  "model_version": "T04_BARIAH_REVIEW_MODEL_v1",
+  "stage": "4.2F-B0.8A",
+  "content_status": "CAIR_ASSISTED_DRAFT",
+  "instructional_authority": "BARIAH",
+  "approval_status": "PENDING_BARIAH_REVIEW",
+  "opening_disclosure_ms": "Semua kandungan dalam dokumen ini ialah draf CAIR untuk semakan Bariah. Bariah kekal sebagai satu-satunya Instructional Designer dan pihak yang menyemak, meminda serta meluluskan kandungan. Storyboard PowerPoint dan aset MMD belum dihasilkan.",
+  "status_lines_ms": [
+   "Storyboard PowerPoint belum dijana.",
+   "Aset visual MMD belum dihasilkan.",
+   "41 visual dicadangkan — belum diluluskan.",
+   "Kelulusan diperlukan bagi perbualan, Rumusan, kuiz, susunan skrin dan kumpulan visual."
+  ],
+  "reviewer_name_ms": "Bariah",
+  "reviewer_role_ms": "Instructional Designer",
+  "reviewer_date_field_ms": "Tarikh semakan: ____________________________"
+ },
+ "reviewer_instructions": {
+  "lines_ms": [
+   "Tandakan TERIMA jika item boleh dikekalkan seperti yang dicadangkan.",
+   "Tandakan PINDA dan tulis pindaan yang dikehendaki dalam ruang komen.",
+   "Tandakan BUANG jika item tidak sepatutnya digunakan.",
+   "Tandakan GABUNG hanya untuk skrin atau kumpulan visual, dan WAJIB tulis ID item yang hendak digabungkan serta sebabnya. Tanpa ID, gabungan tidak boleh dilaksanakan.",
+   "GABUNG bermaksud dua item dijadikan satu. Ia berbeza daripada perkongsian visual, yang mempunyai ruangan tersendiri.",
+   "Bagi perbualan, Rumusan dan kuiz, pilihan hanya TERIMA, PINDA atau BUANG."
+  ],
+  "merge_rule_ms": "GABUNG memerlukan ID sasaran. Kotak GABUNG tanpa ID tidak boleh diterima sebagai keputusan."
+ },
+ "decision_vocabulary": {
+  "content": [
+   "ACCEPT",
+   "EDIT",
+   "REMOVE"
+  ],
+  "structural": [
+   "ACCEPT",
+   "EDIT",
+   "REMOVE",
+   "MERGE"
+  ],
+  "reuse": [
+   "REUSE_ALLOWED",
+   "REUSE_NOT_ALLOWED",
+   "REUSE_WITH_CONDITIONS"
+  ],
+  "labels_ms": {
+   "ACCEPT": "TERIMA",
+   "EDIT": "PINDA",
+   "REMOVE": "BUANG",
+   "MERGE": "GABUNG"
+  },
+  "reuse_labels_ms": {
+   "REUSE_ALLOWED": "Boleh dikongsi",
+   "REUSE_NOT_ALLOWED": "Tidak boleh dikongsi",
+   "REUSE_WITH_CONDITIONS": "Boleh dikongsi dengan syarat"
+  },
+  "merge_rule": {
+   "applies_to": [
+    "screen_sequence",
+    "visual_asset_grouping"
+   ],
+   "forbidden_for": [
+    "slide_2_dialogue",
+    "rumusan",
+    "quiz"
+   ],
+   "required_fields": [
+    "merge_source_id",
+    "merge_target_id",
+    "merge_reason",
+    "proposed_resulting_title_or_group"
+   ],
+   "constraint": "MERGE is a relationship, not a standalone checkbox. A MERGE with no target ID is not a decision — it records that the reviewer wanted something merged without saying with what, which cannot be actioned.",
+   "source_target_must_differ": true,
+   "not_the_same_as_reuse": "MERGE combines two proposed items into one. REUSE shares one produced asset across more than one screen. Conflating them would let a reuse answer silently delete a screen.",
+   "docx_fields_ms": [
+    "☐ TERIMA",
+    "☐ PINDA",
+    "☐ BUANG",
+    "☐ GABUNG DENGAN ID: __________",
+    "Sebab / cadangan susunan baharu: ____________________________________"
+   ]
+  }
+ },
+ "sections": [
+  {
+   "section_id": "A",
+   "title_ms": "Cadangan susunan skrin",
+   "item_class": "screen_sequence"
+  },
+  {
+   "section_id": "B",
+   "title_ms": "Cadangan visual dan kumpulan aset",
+   "item_class": "visual_asset_grouping"
+  },
+  {
+   "section_id": "C",
+   "title_ms": "Perbualan Slide 2",
+   "item_class": "slide_2_dialogue"
+  },
+  {
+   "section_id": "D",
+   "title_ms": "Rumusan",
+   "item_class": "rumusan"
+  },
+  {
+   "section_id": "E",
+   "title_ms": "Kuiz",
+   "item_class": "quiz"
+  },
+  {
+   "section_id": "F",
+   "title_ms": "Keputusan dan pindaan Bariah",
+   "item_class": "approvals"
+  }
+ ],
+ "screen_sequence": {
+  "proposed_learner_screen_count": 21,
+  "final_learner_screen_count": "PENDING_BARIAH_APPROVAL",
+  "treatment_labels_ms": {
+   "TITLE": "Skrin tajuk",
+   "DIALOGUE_SCENARIO": "Senario perbualan",
+   "PROCESS_FLOW_STEPPED": "Aliran proses berperingkat",
+   "CONTENT_STATIC": "Kandungan statik",
+   "CLICK_TO_REVEAL": "Klik untuk paparkan maklumat",
+   "CONTENT_WITH_CONFIRMED_REVEAL": "Kandungan utama dengan maklumat tambahan boleh dibuka",
+   "RUMUSAN": "Rumusan",
+   "QUIZ": "Kuiz",
+   "CLOSING": "Skrin penutup"
+  },
+  "screens": [
+   {
+    "item_id": "T04-S01",
+    "item_class": "screen_sequence",
+    "display_title": "Tajuk dan Mula",
+    "treatment_code": "TITLE",
+    "treatment_ms": "Skrin tajuk",
+    "purpose_ms": "Membuka topik dan menyatakan Topik serta Bahagian.",
+    "population_ms": "Tajuk unit",
+    "visual_ms": "Tiada visual khusus",
+    "visual_obligation_count": 0,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S02",
+    "item_class": "screen_sequence",
+    "display_title": "Pengenalan — perbualan di tapak",
+    "treatment_code": "DIALOGUE_SCENARIO",
+    "treatment_ms": "Senario perbualan",
+    "purpose_ms": "Membuka dari tapak — apa yang perlu diuruskan selepas kerja pembinaan siap.",
+    "population_ms": "Aliran proses dan dua kategori landskap",
+    "visual_ms": "Tiada visual khusus",
+    "visual_obligation_count": 0,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S03",
+    "item_class": "screen_sequence",
+    "display_title": "Aliran proses penjagaan dan penyelenggaraan",
+    "treatment_code": "PROCESS_FLOW_STEPPED",
+    "treatment_ms": "Aliran proses berperingkat",
+    "purpose_ms": "Memperkenalkan enam aktiviti penyeliaan mengikut turutan.",
+    "population_ms": "Enam aktiviti penyeliaan",
+    "visual_ms": "Rajah enam langkah, satu visual bagi setiap langkah",
+    "visual_obligation_count": 6,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S04",
+    "item_class": "screen_sequence",
+    "display_title": "Landskap Lembut — pengenalan",
+    "treatment_code": "CONTENT_STATIC",
+    "treatment_ms": "Kandungan statik",
+    "purpose_ms": "Menetapkan kategori landskap lembut sebelum tiga operasinya diajar.",
+    "population_ms": "Definisi landskap lembut",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S05",
+    "item_class": "screen_sequence",
+    "display_title": "Siram — penerangan utama",
+    "treatment_code": "CONTENT_STATIC",
+    "treatment_ms": "Kandungan statik",
+    "purpose_ms": "Menerangkan tujuan penyiraman.",
+    "population_ms": "Definisi dan tujuan siram",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S06",
+    "item_class": "screen_sequence",
+    "display_title": "Siram — kaedah pelaksanaan",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Membezakan penyiraman manual dengan sistem pengairan automatik.",
+    "population_ms": "Penyiraman manual, sistem semburan, sistem titis",
+    "visual_ms": "Visual perbandingan kaedah penyiraman",
+    "visual_obligation_count": 3,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S07",
+    "item_class": "screen_sequence",
+    "display_title": "Siram — aspek pengurusan untuk kontraktor",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Empat aspek pengurusan penyiraman untuk kontraktor.",
+    "population_ms": "Jadual penyiraman, sumber air, pemantauan, kecekapan kos",
+    "visual_ms": "4 visual dicadangkan",
+    "visual_obligation_count": 4,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S08",
+    "item_class": "screen_sequence",
+    "display_title": "Baja — penerangan utama",
+    "treatment_code": "CONTENT_STATIC",
+    "treatment_ms": "Kandungan statik",
+    "purpose_ms": "Menerangkan tujuan pembajaan.",
+    "population_ms": "Definisi dan tujuan baja",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S09",
+    "item_class": "screen_sequence",
+    "display_title": "Baja — kaedah pelaksanaan",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Membezakan tiga kaedah pembajaan.",
+    "population_ms": "Pembajaan tabur, poket, semburan folia",
+    "visual_ms": "Visual perbandingan tiga kaedah pembajaan",
+    "visual_obligation_count": 4,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S10",
+    "item_class": "screen_sequence",
+    "display_title": "Baja — aspek pengurusan untuk kontraktor",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Lima aspek pengurusan pembajaan untuk kontraktor.",
+    "population_ms": "Program, pematuhan spesifikasi, stok, keselamatan pekerja, dokumentasi",
+    "visual_ms": "5 visual dicadangkan",
+    "visual_obligation_count": 5,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S11",
+    "item_class": "screen_sequence",
+    "display_title": "Racun — penerangan utama",
+    "treatment_code": "CONTENT_STATIC",
+    "treatment_ms": "Kandungan statik",
+    "purpose_ms": "Menetapkan tiga masalah yang dikawal oleh racun.",
+    "population_ms": "Perosak, penyakit dan rumpai",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S12",
+    "item_class": "screen_sequence",
+    "display_title": "Racun — pendekatan IPM",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Susunan keutamaan IPM — kawalan kimia bukan tindakan pertama.",
+    "population_ms": "Kawalan kultur, fizikal, biologi dan kimia",
+    "visual_ms": "Rajah susunan keutamaan IPM",
+    "visual_obligation_count": 5,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S13",
+    "item_class": "screen_sequence",
+    "display_title": "Racun — jenis racun",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Memadankan jenis racun dengan sasarannya.",
+    "population_ms": "Racun serangga, racun kulat, racun rumpai",
+    "visual_ms": "Visual perbandingan jenis racun dan sasarannya",
+    "visual_obligation_count": 4,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S14",
+    "item_class": "screen_sequence",
+    "display_title": "Racun — perundangan dan pelesenan",
+    "treatment_code": "CONTENT_STATIC",
+    "treatment_ms": "Kandungan statik",
+    "purpose_ms": "Kawalan perundangan dan keperluan pengendali berlesen.",
+    "population_ms": "Akta, pengendali berlesen",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S15",
+    "item_class": "screen_sequence",
+    "display_title": "Racun — keselamatan dan kesihatan (HSE)",
+    "treatment_code": "CONTENT_WITH_CONFIRMED_REVEAL",
+    "treatment_ms": "Kandungan utama dengan maklumat tambahan boleh dibuka",
+    "purpose_ms": "PPE lengkap, dengan penyimpanan dan SDS sebagai maklumat tambahan.",
+    "population_ms": "PPE lengkap, penyimpanan berkunci, SDS",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S16",
+    "item_class": "screen_sequence",
+    "display_title": "Racun — pengurusan risiko",
+    "treatment_code": "CONTENT_WITH_CONFIRMED_REVEAL",
+    "treatment_ms": "Kandungan utama dengan maklumat tambahan boleh dibuka",
+    "purpose_ms": "Pengurusan risiko semburan.",
+    "population_ms": "Cuaca semburan, notifikasi, pelaporan",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S17",
+    "item_class": "screen_sequence",
+    "display_title": "Landskap Kejur — pengenalan",
+    "treatment_code": "CONTENT_STATIC",
+    "treatment_ms": "Kandungan statik",
+    "purpose_ms": "Menetapkan kategori landskap kejur dan bezanya dengan landskap lembut.",
+    "population_ms": "Definisi landskap kejur",
+    "visual_ms": "1 visual dicadangkan",
+    "visual_obligation_count": 1,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S18",
+    "item_class": "screen_sequence",
+    "display_title": "Landskap Kejur — empat kumpulan fungsi",
+    "treatment_code": "CLICK_TO_REVEAL",
+    "treatment_ms": "Klik untuk paparkan maklumat",
+    "purpose_ms": "Empat kumpulan fungsi landskap kejur.",
+    "population_ms": "Ruang dan sirkulasi, struktur dan kejuruteraan, kebolehgunaan, estetika",
+    "visual_ms": "Empat visual fungsi landskap kejur",
+    "visual_obligation_count": 4,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S19",
+    "item_class": "screen_sequence",
+    "display_title": "Rumusan",
+    "treatment_code": "RUMUSAN",
+    "treatment_ms": "Rumusan",
+    "purpose_ms": "Rumusan empat ayat.",
+    "population_ms": "Empat ayat rumusan",
+    "visual_ms": "Tiada visual khusus",
+    "visual_obligation_count": 0,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S20",
+    "item_class": "screen_sequence",
+    "display_title": "Kuiz",
+    "treatment_code": "QUIZ",
+    "treatment_ms": "Kuiz",
+    "purpose_ms": "Kuiz lima soalan.",
+    "population_ms": "Lima soalan kuiz",
+    "visual_ms": "Tiada visual khusus",
+    "visual_obligation_count": 0,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   },
+   {
+    "item_id": "T04-S21",
+    "item_class": "screen_sequence",
+    "display_title": "Tamat Bahagian",
+    "treatment_code": "CLOSING",
+    "treatment_ms": "Skrin penutup",
+    "purpose_ms": "Menutup Bahagian.",
+    "population_ms": "Penutup Bahagian",
+    "visual_ms": "Tiada visual khusus",
+    "visual_obligation_count": 0,
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+    "internal_provenance": "CAIR proposal derived from the controlled T04 extract"
+   }
+  ]
+ },
+ "visual_asset_grouping": {
+  "totals": {
+   "visual_obligations": 46,
+   "asset_groups": 8,
+   "proposed_unique_assets": 41,
+   "status": "PROPOSED_NOT_APPROVED",
+   "composite_covered": 5,
+   "no_separate_asset": 3,
+   "additional_assets": 3,
+   "do_not_reuse_groups": 2,
+   "do_not_reuse_obligations": 3
+  },
+  "arithmetic_ms": [
+   "46 keperluan visual",
+   "tolak 5 keperluan yang dipenuhi oleh visual gabungan",
+   "tolak 3 tajuk pengelompokan yang tidak memerlukan visual berasingan",
+   "tambah 3 aset tambahan yang bukan keperluan visual: 1 lukisan semula rajah enam langkah dan 2 aset senario Slide 2",
+   "bersamaan 41 visual berasingan yang dicadangkan"
+  ],
+  "arithmetic_check": 41,
+  "authority_statement_ms": "Bariah menetapkan bahawa kandungan yang dinyatakan memerlukan layanan visual. Hierarki tajuk dalam modul digunakan untuk menyenaraikan populasi terperinci. CAIR mencadangkan pengumpulan aset dan pendekatan penghasilan.",
+  "origin_labels": [
+   "KEPERLUAN_VISUAL_BARIAH",
+   "CADANGAN_PELAKSANAAN_CAIR_DARIPADA_RULING_BARIAH",
+   "CADANGAN_CAIR_UNTUK_SENARIO",
+   "SUMBER_MODUL",
+   "GABUNGAN_BEBERAPA_KEPERLUAN_VISUAL"
+  ],
+  "origin_labels_ms": {
+   "KEPERLUAN_VISUAL_BARIAH": "Keperluan visual yang ditetapkan oleh Bariah",
+   "CADANGAN_PELAKSANAAN_CAIR_DARIPADA_RULING_BARIAH": "Cadangan pelaksanaan CAIR berdasarkan ruling Bariah",
+   "CADANGAN_CAIR_UNTUK_SENARIO": "Cadangan CAIR untuk senario",
+   "SUMBER_MODUL": "Daripada modul",
+   "GABUNGAN_BEBERAPA_KEPERLUAN_VISUAL": "Gabungan beberapa keperluan visual"
+  },
+  "ag01_seventh_asset": {
+   "asset_group_id": "AG-01",
+   "six_step_visuals_origin": "KEPERLUAN_VISUAL_BARIAH",
+   "seventh_asset": "Lukisan semula terkawal rajah proses enam langkah",
+   "seventh_asset_origin": "CADANGAN_PELAKSANAAN_CAIR_DARIPADA_D05",
+   "disclosure_ms": "Enam visual langkah ialah keperluan visual yang ditetapkan oleh Bariah. Aset ketujuh — lukisan semula rajah proses enam langkah — ialah cadangan pelaksanaan CAIR berdasarkan keputusan D-05, bukan item yang dinamakan secara langsung oleh Bariah."
+  },
+  "ag08_scenario": {
+   "asset_group_id": "AG-08",
+   "origin": "CADANGAN_CAIR_UNTUK_SENARIO",
+   "asset_count": 2,
+   "part_of_46_obligations": false,
+   "disclosure_ms": "Dua aset senario Slide 2 ialah cadangan CAIR untuk senario perbualan. Ia BUKAN sebahagian daripada 46 keperluan visual yang ditetapkan oleh Bariah, kerana ruling visual Bariah meliputi tajuk kandungan, bukan skrin senario."
+  },
+  "composite_disclosure_ms": "Lima keperluan visual dipenuhi oleh satu visual gabungan yang telah pun menyokong keperluan lain yang berkaitan. Setiap satu tetap mendapat layanan visual — sebagai panel berlabel di dalam visual gabungan itu.",
+  "composite_items": [
+   "Kaedah Pelaksanaan (Siram)",
+   "Kaedah Pelaksanaan (Baja)",
+   "Racun Serangga (Insecticide) (Racun)",
+   "Racun Kulat (Fungicide) (Racun)",
+   "Racun Rumpai (Herbicide) (Racun)"
+  ],
+  "no_separate_asset_disclosure_ms": "Tiga tajuk berfungsi sebagai pengelompokan kandungan sahaja dan tidak memerlukan imej tersendiri. Tajuk-tajuk ini tiada teks kandungan di bawahnya dalam modul.",
+  "no_separate_asset_items": [
+   "Aspek Pengurusan untuk Kontraktor (Siram)",
+   "Aspek Pengurusan untuk Kontraktor (Baja)",
+   "Aspek Pengurusan untuk Kontraktor (Racun — pematuhan)"
+  ],
+  "do_not_reuse_items": [
+   {
+    "item": "Pengurusan Stok dan Penyimpanan (Baja)",
+    "reason_ms": "Penyimpanan baja (kering, selamat, jauh dari air) berbeza daripada penyimpanan racun (berkunci, berlabel, berpengudaraan)."
+   },
+   {
+    "item": "Keselamatan Pekerja (Baja)",
+    "reason_ms": "PPE untuk baja (sarung tangan, topeng muka) berbeza daripada PPE untuk racun (topeng pernafasan, cermin mata, sarung tangan kimia, sut pelindung)."
+   },
+   {
+    "item": "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)",
+    "reason_ms": "Set PPE racun jauh lebih berat dan tidak boleh dikongsi dengan skrin baja."
+   }
+  ],
+  "reuse_question_ms": "Selain visual yang telah ditandakan tidak boleh digunakan semula, adakah visual lain boleh dikongsi antara lebih daripada satu skrin?",
+  "reuse_question_rule": "The question must name the known constraints first. An unrestricted 'adakah visual tertentu boleh digunakan semula?' hides three items that are already known not to be shareable.",
+  "groups": [
+   {
+    "item_id": "AG-01",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Aliran proses enam langkah",
+    "origin_label": "KEPERLUAN_VISUAL_BARIAH",
+    "origin_label_ms": "Keperluan visual yang ditetapkan oleh Bariah",
+    "obligations_covered": 6,
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S03"
+    ],
+    "reuse_status": "REUSE_WITH_CONDITIONS",
+    "reuse_status_ms": "Boleh dikongsi dengan syarat",
+    "known_restriction_ms": "Tiada sekatan diketahui setakat ini; menunggu pengesahan Bariah.",
+    "do_not_reuse_obligations": [],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-02",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Landskap Lembut — kategori",
+    "origin_label": "KEPERLUAN_VISUAL_BARIAH",
+    "origin_label_ms": "Keperluan visual yang ditetapkan oleh Bariah",
+    "obligations_covered": 1,
+    "proposed_unique_assets": 1,
+    "affected_screens": [
+     "T04-S04",
+     "T04-S02"
+    ],
+    "reuse_status": "REUSE_WITH_CONDITIONS",
+    "reuse_status_ms": "Boleh dikongsi dengan syarat",
+    "known_restriction_ms": "Tiada sekatan diketahui setakat ini; menunggu pengesahan Bariah.",
+    "do_not_reuse_obligations": [],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-03",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Siram — operasi dan sub-topik",
+    "origin_label": "GABUNGAN_BEBERAPA_KEPERLUAN_VISUAL",
+    "origin_label_ms": "Gabungan beberapa keperluan visual",
+    "obligations_covered": 9,
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S05",
+     "T04-S06",
+     "T04-S07"
+    ],
+    "reuse_status": "REUSE_WITH_CONDITIONS",
+    "reuse_status_ms": "Boleh dikongsi dengan syarat",
+    "known_restriction_ms": "Tiada sekatan diketahui setakat ini; menunggu pengesahan Bariah.",
+    "do_not_reuse_obligations": [],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-04",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Baja — operasi dan sub-topik",
+    "origin_label": "GABUNGAN_BEBERAPA_KEPERLUAN_VISUAL",
+    "origin_label_ms": "Gabungan beberapa keperluan visual",
+    "obligations_covered": 11,
+    "proposed_unique_assets": 9,
+    "affected_screens": [
+     "T04-S08",
+     "T04-S09",
+     "T04-S10"
+    ],
+    "reuse_status": "REUSE_NOT_ALLOWED",
+    "reuse_status_ms": "Tidak boleh dikongsi",
+    "known_restriction_ms": "Tidak boleh dikongsi: Pengurusan Stok dan Penyimpanan (Baja), Keselamatan Pekerja (Baja)",
+    "do_not_reuse_obligations": [
+     "T04-VO-025",
+     "T04-VO-026"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-05",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Racun — IPM, kawalan dan jenis racun",
+    "origin_label": "GABUNGAN_BEBERAPA_KEPERLUAN_VISUAL",
+    "origin_label_ms": "Gabungan beberapa keperluan visual",
+    "obligations_covered": 10,
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S11",
+     "T04-S12",
+     "T04-S13"
+    ],
+    "reuse_status": "REUSE_WITH_CONDITIONS",
+    "reuse_status_ms": "Boleh dikongsi dengan syarat",
+    "known_restriction_ms": "Tiada sekatan diketahui setakat ini; menunggu pengesahan Bariah.",
+    "do_not_reuse_obligations": [],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-06",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Racun — perundangan, HSE dan risiko",
+    "origin_label": "KEPERLUAN_VISUAL_BARIAH",
+    "origin_label_ms": "Keperluan visual yang ditetapkan oleh Bariah",
+    "obligations_covered": 4,
+    "proposed_unique_assets": 3,
+    "affected_screens": [
+     "T04-S14",
+     "T04-S15",
+     "T04-S16"
+    ],
+    "reuse_status": "REUSE_NOT_ALLOWED",
+    "reuse_status_ms": "Tidak boleh dikongsi",
+    "known_restriction_ms": "Tidak boleh dikongsi: Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)",
+    "do_not_reuse_obligations": [
+     "T04-VO-040"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-07",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Landskap Kejur — kategori dan empat fungsi",
+    "origin_label": "KEPERLUAN_VISUAL_BARIAH",
+    "origin_label_ms": "Keperluan visual yang ditetapkan oleh Bariah",
+    "obligations_covered": 5,
+    "proposed_unique_assets": 5,
+    "affected_screens": [
+     "T04-S17",
+     "T04-S18"
+    ],
+    "reuse_status": "REUSE_WITH_CONDITIONS",
+    "reuse_status_ms": "Boleh dikongsi dengan syarat",
+    "known_restriction_ms": "Tiada sekatan diketahui setakat ini; menunggu pengesahan Bariah.",
+    "do_not_reuse_obligations": [],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   },
+   {
+    "item_id": "AG-08",
+    "item_class": "visual_asset_grouping",
+    "display_title": "Slide 2 — senario pengenalan",
+    "origin_label": "CADANGAN_CAIR_UNTUK_SENARIO",
+    "origin_label_ms": "Cadangan CAIR untuk senario",
+    "obligations_covered": 0,
+    "proposed_unique_assets": 2,
+    "affected_screens": [
+     "T04-S02"
+    ],
+    "reuse_status": "REUSE_WITH_CONDITIONS",
+    "reuse_status_ms": "Boleh dikongsi dengan syarat",
+    "known_restriction_ms": "Tiada sekatan diketahui setakat ini; menunggu pengesahan Bariah.",
+    "do_not_reuse_obligations": [],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE",
+     "MERGE"
+    ],
+    "allowed_reuse_decisions": [
+     "REUSE_ALLOWED",
+     "REUSE_NOT_ALLOWED",
+     "REUSE_WITH_CONDITIONS"
+    ],
+    "merge": {
+     "merge_source_id": null,
+     "merge_target_id": null,
+     "merge_reason": null,
+     "proposed_resulting_title_or_group": null
+    },
+    "reuse_decision": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json",
+    "internal_provenance": "CAIR grouping proposal over the Bariah-ruled obligation population"
+   }
+  ]
+ },
+ "slide_2_dialogue": {
+  "item_class": "slide_2_dialogue",
+  "screen_id": "T04-S02",
+  "cast": [
+   {
+    "name": "Alya",
+    "role_ms": "Kontraktor Junior"
+   },
+   {
+    "name": "Encik Rahman",
+    "role_ms": "Mentor / Kontraktor Senior"
+   }
+  ],
+  "cast_status": "PROPOSED_SUBJECT_TO_BARIAH_APPROVAL",
+  "cast_status_ms": "Draf CAIR untuk semakan Bariah",
+  "contextual_fit_result": "ALYA_ENCIK_RAHMAN_CONTEXTUALLY_SUITABLE",
+  "contextual_fit_scope_ms": "Alya dan Encik Rahman dicadangkan sesuai untuk Slide 2 sahaja.",
+  "boundaries": {
+   "level": "PROCESS_OVERVIEW_ONLY",
+   "rules": [
+    "process overview only",
+    "no statutory obligation in character dialogue",
+    "Encik Rahman is not represented as a licensed pesticide operator",
+    "no PPE, SDS or chemical-storage instruction in the dialogue"
+   ],
+   "rules_ms": [
+    "Perbualan hanya di peringkat gambaran keseluruhan proses.",
+    "Tiada kewajipan undang-undang diletakkan dalam dialog watak.",
+    "Encik Rahman tidak digambarkan sebagai pengendali racun berlesen.",
+    "Tiada arahan PPE, SDS atau penyimpanan bahan kimia dalam dialog."
+   ],
+   "enforced_in": "controlled review model and generated DOCX, not the DOCX alone"
+  },
+  "allowed_decisions": [
+   "ACCEPT",
+   "EDIT",
+   "REMOVE"
+  ],
+  "lines": [
+   {
+    "item_id": "T04-DLG-01",
+    "item_class": "slide_2_dialogue",
+    "speaker": "Alya",
+    "display_text": "Encik Rahman, kerja pembinaan dan tanaman di tapak ini dah siap. Selepas ini apa yang perlu diuruskan?",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-002"
+   },
+   {
+    "item_id": "T04-DLG-02",
+    "item_class": "slide_2_dialogue",
+    "speaker": "Encik Rahman",
+    "display_text": "Sekarang masuk fasa penjagaan dan penyelenggaraan. Ada enam aktiviti penyeliaan yang perlu berjalan, daripada koordinasi kerja sampailah kepada perancangan sumber manusia.",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-001, T04-ROW-002, T04-ROW-003"
+   },
+   {
+    "item_id": "T04-DLG-03",
+    "item_class": "slide_2_dialogue",
+    "speaker": "Alya",
+    "display_text": "Semua elemen di tapak diselenggara sama caranya?",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-005, T04-ROW-080"
+   },
+   {
+    "item_id": "T04-DLG-04",
+    "item_class": "slide_2_dialogue",
+    "speaker": "Encik Rahman",
+    "display_text": "Tidak. Landskap lembut itu elemen hidup — pokok, rumput, tanaman. Landskap kejur pula elemen binaan yang kekal. Keperluan penyelenggaraannya berbeza.",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-004, T04-ROW-005, T04-ROW-079, T04-ROW-080"
+   },
+   {
+    "item_id": "T04-DLG-05",
+    "item_class": "slide_2_dialogue",
+    "speaker": "Alya",
+    "display_text": "Jadi saya kena faham keperluan kedua-duanya sebelum susun jadual penyelenggaraan.",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-002"
+   }
+  ]
+ },
+ "rumusan": {
+  "item_class": "rumusan",
+  "heading": "Penjagaan dan Penyelenggaraan — Landskap Lembut dan Landskap Kejur",
+  "allowed_decisions": [
+   "ACCEPT",
+   "EDIT",
+   "REMOVE"
+  ],
+  "points": [
+   {
+    "item_id": "T04-RUM2-01",
+    "item_class": "rumusan",
+    "display_text": "Aliran proses penjagaan dan penyelenggaraan merangkumi enam aktiviti penyeliaan - koordinasi dan demonstrasi, penyelenggaraan taman, operasi nurseri, alatan dan mesin, inventori taman, serta sumber manusia dan kebajikan pekerja",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "risk_flag": null,
+    "risk_flag_secondary": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_RUMUSAN_CAIR_ASSISTED_DRAFT_v3.json",
+    "internal_provenance": "source rows T04-ROW-002, T04-ROW-003"
+   },
+   {
+    "item_id": "T04-RUM2-02",
+    "item_class": "rumusan",
+    "display_text": "Landskap Lembut - elemen hortikultur dan hidupan yang diselenggara melalui tiga operasi utama, iaitu siram, baja dan racun",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "risk_flag": null,
+    "risk_flag_secondary": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_RUMUSAN_CAIR_ASSISTED_DRAFT_v3.json",
+    "internal_provenance": "source rows T04-ROW-005, T04-ROW-006, T04-ROW-026, T04-ROW-046"
+   },
+   {
+    "item_id": "T04-RUM2-03",
+    "item_class": "rumusan",
+    "display_text": "Landskap Kejur - elemen binaan kekal yang menyumbang kepada pengurusan ruang dan sirkulasi, fungsi struktur dan kejuruteraan, kebolehgunaan dan kemudahan, serta estetika dan reka bentuk",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "risk_flag": null,
+    "risk_flag_secondary": null,
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_RUMUSAN_CAIR_ASSISTED_DRAFT_v3.json",
+    "internal_provenance": "source rows T04-ROW-080, T04-ROW-081, T04-ROW-086, T04-ROW-091, T04-ROW-096"
+   },
+   {
+    "item_id": "T04-RUM2-04",
+    "item_class": "rumusan",
+    "display_text": "Kontraktor dapat merancang, melaksana dan mendokumentasikan setiap operasi mengikut spesifikasi, dengan penggunaan racun tertakluk kepada perundangan, pengendali berlesen, PPE lengkap dan penyimpanan berkunci",
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "risk_flag": "MEDIUM_FACTUAL_RISK",
+    "risk_flag_secondary": "GENERALISATION_REQUIRES_BARIAH_DECISION",
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_RUMUSAN_CAIR_ASSISTED_DRAFT_v3.json",
+    "internal_provenance": "source rows T04-ROW-016, T04-ROW-035, T04-ROW-064, T04-ROW-066, T04-ROW-067, T04-ROW-069, T04-ROW-071"
+   }
+  ],
+  "risk_note_item_id": "T04-RUM2-04",
+  "risk_note_ms": "Ayat 04 merumuskan corak tanggungjawab kontraktor sebagai satu kenyataan umum. Modul menyebut corak ini dalam beberapa bahagian tetapi tidak menyatakannya sebagai satu peraturan umum. Mohon Bariah terima, sempitkan atau buang ayat ini."
+ },
+ "quiz": {
+  "item_class": "quiz",
+  "composition": "4 MCQ + 1 MULTIPLE_RESPONSE",
+  "composition_ms": "4 MCQ dan 1 Multiple Response",
+  "pass_threshold": "60_PERCENT",
+  "pass_threshold_ms": "Markah lulus 60 peratus",
+  "scope": "ALL_PLS_IN_KURSUS",
+  "scope_ms": "Terpakai kepada semua PL dalam Kursus",
+  "answer_key_status": "PROPOSED_ANSWER_KEY",
+  "answer_key_approval": "PENDING_BARIAH_APPROVAL",
+  "answer_key_ms": "Cadangan jawapan sahaja — belum muktamad.",
+  "allowed_decisions": [
+   "ACCEPT",
+   "EDIT",
+   "REMOVE"
+  ],
+  "source_evidence_status": "SUPPORTED_BY_CONTROLLED_EXTRACT",
+  "source_evidence_caveat": "ORIGINAL_DOCX_ROUND_TRIP_NOT_REPROVEN",
+  "source_evidence_caveat_placement": "internal run manifest and QA report only — not shown to Bariah, where it would read as doubt about the questions rather than a custody note",
+  "distractor_review": {
+   "reviewed_at_stage": "4.2F-B0.8A",
+   "concern": "Options E and F were direct negations of stated duties — empty containers may be reused, spraying needs no notification. Both are refutable without understanding the material, which lowers discrimination.",
+   "search_scope": "The controlled T04 extract only. No external knowledge, no invented fact.",
+   "outcome": "REVISED",
+   "option_mapping": [
+    {
+     "option": "A",
+     "change": "UNCHANGED"
+    },
+    {
+     "option": "B",
+     "change": "UNCHANGED"
+    },
+    {
+     "option": "C",
+     "change": "UNCHANGED"
+    },
+    {
+     "option": "D",
+     "change": "UNCHANGED"
+    },
+    {
+     "option": "E",
+     "old": "Bekas racun kosong boleh digunakan semula untuk kegunaan lain",
+     "old_basis": "contradicted by T04-ROW-072",
+     "new": "Baja disimpan di tempat yang kering dan jauh dari sumber air",
+     "new_basis": "T04-ROW-041 — TRUE of fertiliser storage, not a pesticide-spraying control"
+    },
+    {
+     "option": "F",
+     "old": "Semburan boleh dijalankan tanpa memaklumkan penduduk sekitar",
+     "old_basis": "contradicted by T04-ROW-077",
+     "new": "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
+     "new_basis": "T04-ROW-045 — TRUE of fertiliser records, not a pesticide-spraying control"
+    }
+   ],
+   "correct_answer_count_before": 4,
+   "correct_answer_count_after": 4,
+   "difficulty_before": "LOW_DISTRACTOR_DIFFICULTY",
+   "difficulty_after": "MODERATE_DISTRACTOR_DIFFICULTY",
+   "trade_off": "The old distractors could be eliminated by anyone who noticed they were absurd. The new ones require the learner to attribute a control to the correct operation. That is better discrimination, but option F is a fine distinction — 'rekod pembajaan' against the spraying record duty in T04-ROW-078 — and a reviewer could reasonably call it a trick. Flagged for Bariah rather than decided.",
+   "bariah_note_ms": "Pilihan E dan F ialah kenyataan yang BETUL dalam modul, tetapi ia berkaitan baja, bukan kawalan semasa semburan racun. Tujuannya supaya pelajar perlu membezakan kawalan mengikut operasi. Jika Bariah rasa ini terlalu halus, kedua-dua pilihan boleh ditukar.",
+   "status": "CAIR_ASSISTED_DRAFT",
+   "approval_status": "PENDING_BARIAH_REVIEW"
+  },
+  "items": [
+   {
+    "item_id": "Q1",
+    "item_class": "quiz",
+    "question_type": "MCQ",
+    "display_text": "Apakah tiga operasi utama penyelenggaraan landskap lembut yang dinyatakan dalam modul?",
+    "options": [
+     {
+      "key": "A",
+      "text": "Siram, baja dan racun",
+      "proposed_correct": true
+     },
+     {
+      "key": "B",
+      "text": "Siram, potong dan tanam",
+      "proposed_correct": false
+     },
+     {
+      "key": "C",
+      "text": "Baja, racun dan turap",
+      "proposed_correct": false
+     },
+     {
+      "key": "D",
+      "text": "Racun, siram dan pembinaan",
+      "proposed_correct": false
+     }
+    ],
+    "proposed_correct_answer": [
+     "A"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-006, T04-ROW-026, T04-ROW-046",
+    "internal_answer_evidence": "Three Heading-3 operations sit under Landskap Lembut: Siram (T04-ROW-006), Baja (T04-ROW-026), Racun (T04-ROW-046)."
+   },
+   {
+    "item_id": "Q2",
+    "item_class": "quiz",
+    "question_type": "MCQ",
+    "display_text": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Mengikut modul, sistem manakah yang paling sesuai?",
+    "options": [
+     {
+      "key": "A",
+      "text": "Sistem Semburan (Sprinkler System)",
+      "proposed_correct": true
+     },
+     {
+      "key": "B",
+      "text": "Sistem Titis (Drip Irrigation System)",
+      "proposed_correct": false
+     },
+     {
+      "key": "C",
+      "text": "Penyiraman manual menggunakan hos getah",
+      "proposed_correct": false
+     },
+     {
+      "key": "D",
+      "text": "Semburan folia menggunakan baja cecair",
+      "proposed_correct": false
+     }
+    ],
+    "proposed_correct_answer": [
+     "A"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-012, T04-ROW-013, T04-ROW-014, T04-ROW-015",
+    "internal_answer_evidence": "T04-ROW-013 states the sprinkler system is 'sesuai untuk kawasan rumput yang luas'; T04-ROW-015 states drip is for individual trees and shrubs."
+   },
+   {
+    "item_id": "Q3",
+    "item_class": "quiz",
+    "question_type": "MCQ",
+    "display_text": "Mengikut susunan keutamaan IPM dalam modul, kaedah kawalan manakah yang disenaraikan paling akhir?",
+    "options": [
+     {
+      "key": "A",
+      "text": "Kawalan Kultur",
+      "proposed_correct": false
+     },
+     {
+      "key": "B",
+      "text": "Kawalan Fizikal",
+      "proposed_correct": false
+     },
+     {
+      "key": "C",
+      "text": "Kawalan Biologi",
+      "proposed_correct": false
+     },
+     {
+      "key": "D",
+      "text": "Kawalan Kimia",
+      "proposed_correct": true
+     }
+    ],
+    "proposed_correct_answer": [
+     "D"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-048, T04-ROW-049, T04-ROW-051, T04-ROW-053, T04-ROW-055",
+    "internal_answer_evidence": "T04-ROW-048 introduces the priority list and the module then gives Kawalan Kultur, Kawalan Fizikal, Kawalan Biologi and Kawalan Kimia in that order."
+   },
+   {
+    "item_id": "Q4",
+    "item_class": "quiz",
+    "question_type": "MCQ",
+    "display_text": "Modul menyenaraikan empat kumpulan fungsi landskap kejur. Kumpulan manakah yang merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "options": [
+     {
+      "key": "A",
+      "text": "Pengurusan Ruang dan Sirkulasi",
+      "proposed_correct": false
+     },
+     {
+      "key": "B",
+      "text": "Fungsi Struktur dan Kejuruteraan",
+      "proposed_correct": true
+     },
+     {
+      "key": "C",
+      "text": "Kebolehgunaan dan Kemudahan",
+      "proposed_correct": false
+     },
+     {
+      "key": "D",
+      "text": "Estetika dan Reka Bentuk",
+      "proposed_correct": false
+     }
+    ],
+    "proposed_correct_answer": [
+     "B"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-081, T04-ROW-086, T04-ROW-087, T04-ROW-089, T04-ROW-091, T04-ROW-096",
+    "internal_answer_evidence": "T04-ROW-086 Fungsi Struktur dan Kejuruteraan has exactly two sub-headings: Menstabilkan Tanah (T04-ROW-087) and Pengurusan Air (T04-ROW-089)."
+   },
+   {
+    "item_id": "Q5",
+    "item_class": "quiz",
+    "question_type": "MULTIPLE_RESPONSE",
+    "display_text": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun, mengikut modul.",
+    "options": [
+     {
+      "key": "A",
+      "text": "Pengendali semburan mesti berlesen atau telah menerima latihan",
+      "proposed_correct": true
+     },
+     {
+      "key": "B",
+      "text": "Pekerja mesti memakai PPE yang lengkap dan bersesuaian",
+      "proposed_correct": true
+     },
+     {
+      "key": "C",
+      "text": "Semburan hanya dilakukan semasa cuaca tenang",
+      "proposed_correct": true
+     },
+     {
+      "key": "D",
+      "text": "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
+      "proposed_correct": true
+     },
+     {
+      "key": "E",
+      "text": "Baja disimpan di tempat yang kering dan jauh dari sumber air",
+      "proposed_correct": false
+     },
+     {
+      "key": "F",
+      "text": "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
+      "proposed_correct": false
+     }
+    ],
+    "proposed_correct_answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "content_status": "CAIR_ASSISTED_DRAFT",
+    "instructional_authority": "BARIAH",
+    "approval_status": "PENDING_BARIAH_REVIEW",
+    "allowed_decisions": [
+     "ACCEPT",
+     "EDIT",
+     "REMOVE"
+    ],
+    "decision": null,
+    "comment": null,
+    "source_artifact": "T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json",
+    "internal_provenance": "source rows T04-ROW-067, T04-ROW-069, T04-ROW-070, T04-ROW-074, T04-ROW-076, T04-ROW-041, T04-ROW-045",
+    "internal_answer_evidence": "A — T04-ROW-067 licensed or trained operator. B — T04-ROW-069 and T04-ROW-070 full PPE. C — T04-ROW-076 calm weather only. D — T04-ROW-074 SDS copy kept on site. E is true of fertiliser storage (T04-ROW-041), not of pesticide spraying. F is true of fertiliser records (T04-ROW-045); the spraying record duty is a different row."
+   }
+  ]
+ },
+ "cross_item_dependencies": [
+  {
+   "dependency_id": "DEP-RUM04-Q5",
+   "trigger": "RUMUSAN_04_EDITED_OR_REMOVED_DUE_TO_OVER_GENERALISATION",
+   "effect": "Q5_REQUIRES_CONSISTENCY_REVIEW",
+   "from_item": "T04-RUM2-04",
+   "to_item": "Q5",
+   "automatic_invalidation": false,
+   "note_ms": "Jika ayat 04 dipinda atau dibuang kerana generalisasi terlalu luas, wording Q5 perlu disemak semula supaya kekal khusus kepada kawalan racun yang dinyatakan dalam modul.",
+   "internal_note": "Editing or removing Rumusan 04 does NOT invalidate Q5. It triggers a consistency review, because both express how broadly contractor duties are stated."
+  }
+ ],
+ "remaining_approvals": [
+  {
+   "item_id": "BA-1",
+   "title_ms": "Watak dan perbualan Slide 2",
+   "what_ms": "Sahkan Alya dan Encik Rahman, kemudian terima, pinda atau ganti lima baris perbualan."
+  },
+  {
+   "item_id": "BA-2",
+   "title_ms": "Rumusan — empat ayat",
+   "what_ms": "Terima, pinda atau buang setiap ayat; sahkan penggabungan kepada empat ayat."
+  },
+  {
+   "item_id": "BA-3",
+   "title_ms": "Kuiz — lima soalan",
+   "what_ms": "Terima, pinda atau tulis semula soalan, pilihan dan cadangan jawapan."
+  },
+  {
+   "item_id": "BA-4",
+   "title_ms": "Susunan skrin dan kumpulan visual",
+   "what_ms": "Sahkan bentuk 21 skrin dan lapan kumpulan visual, atau cadangkan susunan baharu."
+  }
+ ],
+ "final_review_record": {
+  "verdict_options_ms": [
+   "LULUS TANPA PINDAAN",
+   "LULUS DENGAN PINDAAN DINYATAKAN",
+   "PERLU SEMAKAN SEMULA"
+  ],
+  "single_verdict_block": true,
+  "single_verdict_note": "One verdict block only. The non-governed v1 DOCX carried two different verdict vocabularies in one document, which is unsignable — a reviewer could tick both and mean different things.",
+  "reviewer_name_field_ms": "Nama penyemak: ____________________________________",
+  "reviewer_date_field_ms": "Tarikh: ____________________________________",
+  "signature_field_ms": "Tandatangan / pengesahan bertulis: ____________________________________",
+  "closing_note_ms": "Catatan akhir: ________________________________________________________________"
+ },
+ "production_guards": {
+  "PPTX_GENERATED": 0,
+  "GENERATOR_TOUCHED": 0,
+  "MMD_PRODUCTION_STARTED": 0
+ }
+}

@@ -1,0 +1,120 @@
+{
+ "stage": "4.2F-B0.8A",
+ "unit_id": "K5-PL06-T04-B01",
+ "artifact_hierarchy": {
+  "CONTROLLED_CONTENT_SOURCE_OF_TRUTH": "docs/pl06/t04/T04_BARIAH_REVIEW_MODEL_v1.json",
+  "GENERATED_REFERENCE_VIEW": "docs/pl06/t04/T04_BARIAH_CONTENT_REVIEW_PACK_v2.md",
+  "HUMAN_APPROVAL_ARTIFACT": "reviews/storyboard-bariah/t04_bariah_review/T04_Pakej_Semakan_Bariah_v2.docx",
+  "rule": "Every substantive item in the DOCX is generated from the model. Nothing substantive may exist only in the DOCX, and no reviewable item may exist only in the Markdown."
+ },
+ "external_manual_docx": {
+  "filename": "T04_Pakej_Semakan_Bariah_v1.docx",
+  "byte_size": 46676,
+  "sha256": "9c354b0e39e8667401b70a675775ce990169e8dbbb3f403e7d7bd57d32f24873",
+  "declared_pages_in_docprops": 1,
+  "declared_pages_reliable": false,
+  "page_count_note": "docProps/app.xml declares Pages=1 and Words=0, which Word writes when a document has never been repaginated by the application. The real page count is not readable from the package, and no renderer is available to determine it.",
+  "non_empty_paragraphs": 296,
+  "status": "NON_GOVERNED_REFERENCE",
+  "delivery_status": "WITHDRAWN_NOT_FOR_BARIAH",
+  "used_as_authority": false,
+  "copied_into_evidence": false,
+  "divergences_observed": [
+   "reviewer instructions ('Cara semak') present in the DOCX, absent from the Markdown",
+   "a 'Ringkasan cadangan' totals line present only in the DOCX",
+   "TWO different final-verdict vocabularies in one document — 'Lulus / Lulus dengan pindaan / Perlu dibaiki' near the top and 'Lulus untuk generate storyboard / Lulus dengan pindaan / Belum lulus' at the end",
+   "decision checkboxes abbreviated to A / E / M / R, which a reviewer cannot expand without the legend",
+   "MERGE offered with no target-ID field, so a merge decision could not be recorded",
+   "'Arahan selepas semakan' instructions present only in the DOCX"
+  ],
+  "conclusion": "It is a competent human document. It is not a governed one: six classes of substantive content existed only inside it."
+ },
+ "governed_docx": {
+  "path": "reviews/storyboard-bariah/t04_bariah_review/T04_Pakej_Semakan_Bariah_v2.docx",
+  "filename": "T04_Pakej_Semakan_Bariah_v2.docx",
+  "byte_size": 12571,
+  "sha256": "d7e62a8cb5625a6023ea4c951f52b195cced031a3eb0418a91fcde1315f7473d",
+  "page_count_estimated_from_preview": 10,
+  "page_count_source": "deterministic preview from the same model — NOT a Word pagination; Word decides the real count",
+  "generation_timestamp": "2026-08-02T10:40:00Z",
+  "source_model_hash": "52b71c9e2874d40b974a3d648373b387e0b9030902a8ca89441605b081f9c86d",
+  "generator_version": "t04_review_render_v1",
+  "semantic_item_count": 47,
+  "delivery_status": "READY_FOR_FIRDAUS_VISUAL_CHECK"
+ },
+ "generated_markdown": {
+  "path": "docs/pl06/t04/T04_BARIAH_CONTENT_REVIEW_PACK_v2.md",
+  "byte_size": 25371,
+  "sha256": "f74338950106d990507070af1830fb71d6334580a47b2163c630d61dc40b2f63"
+ },
+ "controlled_model": {
+  "path": "docs/pl06/t04/T04_BARIAH_REVIEW_MODEL_v1.json",
+  "byte_size": 63655,
+  "sha256": "52b71c9e2874d40b974a3d648373b387e0b9030902a8ca89441605b081f9c86d",
+  "model_hash": "52b71c9e2874d40b974a3d648373b387e0b9030902a8ca89441605b081f9c86d"
+ },
+ "semantic_parity": {
+  "JSON_MODEL_SEMANTIC_DIGEST": "22d42f1b9b6bd1e0b57650b078d342fe574cb2e04d07d732e68dba98bc834145",
+  "MARKDOWN_SEMANTIC_DIGEST": "22d42f1b9b6bd1e0b57650b078d342fe574cb2e04d07d732e68dba98bc834145",
+  "DOCX_SEMANTIC_DIGEST": "22d42f1b9b6bd1e0b57650b078d342fe574cb2e04d07d732e68dba98bc834145",
+  "all_three_agree": true,
+  "substantive_string_counts": {
+   "model": 489,
+   "markdown": 489,
+   "docx": 489
+  },
+  "docx_only_substantive": [],
+  "markdown_only_substantive": [],
+  "permitted_formatting_differences": [
+   "heading markers",
+   "bold and italic markers",
+   "bullet glyphs",
+   "table pipes",
+   "blockquote markers",
+   "horizontal rules",
+   "runs of underscores used as write-in rules"
+  ],
+  "proves": "that no substantive sentence exists in one artifact and not the others",
+  "does_not_prove": "that the DOCX renders correctly — see the visual-check record"
+ },
+ "native_render": {
+  "status": "NOT_CHECKED_RENDERER_UNAVAILABLE",
+  "evidence": "LibreOffice 24.2.7.2 is installed but only libreoffice-core and libreoffice-common are present — there is no libreoffice-writer package and therefore no Writer import filter. `soffice --convert-to pdf` and `--convert-to txt` both fail with 'source file could not be loaded' on a known-good DOCX. Same shape as the missing Impress filter recorded in earlier stages."
+ },
+ "fallback_preview": {
+  "pages": 10,
+  "files": [
+   "T04_Pakej_Semakan_Bariah_v2_p01.png",
+   "T04_Pakej_Semakan_Bariah_v2_p02.png",
+   "T04_Pakej_Semakan_Bariah_v2_p03.png",
+   "T04_Pakej_Semakan_Bariah_v2_p04.png",
+   "T04_Pakej_Semakan_Bariah_v2_p05.png",
+   "T04_Pakej_Semakan_Bariah_v2_p06.png",
+   "T04_Pakej_Semakan_Bariah_v2_p07.png",
+   "T04_Pakej_Semakan_Bariah_v2_p08.png",
+   "T04_Pakej_Semakan_Bariah_v2_p09.png",
+   "T04_Pakej_Semakan_Bariah_v2_p10.png"
+  ],
+  "directory": "docs/pl06/t04/preview",
+  "limitation": "A deterministic layout approximation, not a Word render. It uses Liberation Sans, which lacks the U+2610 ballot box, so checkboxes appear as a fallback glyph in the preview only."
+ },
+ "qa": {
+  "suite_id": "T04_BARIAH_REVIEW_ARTIFACT_QA_v1",
+  "sibling_suite": "T04_CONTENT_QA_v1",
+  "sibling_note": "This suite governs the review ARTIFACT. T04_CONTENT_QA_v1 governs the CONTENT. Their gate counts are not additive and must never be merged.",
+  "not_checked": [
+   "how Microsoft Word paginates the document — no Writer-compatible renderer exists here",
+   "whether the ☐ glyph (U+2610) resolves in Word's font fallback on the reviewer's machine",
+   "whether any table overflows its page width once Word applies its own column fitting",
+   "whether headings orphan at page boundaries in Word",
+   "whether the document reads well to a native Malay speaker",
+   "whether Bariah finds the decision fields usable in practice",
+   "the real page count — the deterministic preview estimates it, Word decides it"
+  ]
+ },
+ "production_guards": {
+  "PPTX_GENERATED": 0,
+  "GENERATOR_TOUCHED": 0,
+  "MMD_PRODUCTION_STARTED": 0
+ }
+}
