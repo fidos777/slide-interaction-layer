@@ -7,7 +7,7 @@ WAVE_0_UNITS = 1
 WAVE_1_UNITS = 0
 WAVE_2_UNITS = 0
 WAVE_3_UNITS = 0
-HELD_UNITS = 6
+HELD_UNITS = 12
 WAVE_0_WORKING_TIME = 2h46m
 ```
 
@@ -34,23 +34,29 @@ Every figure in this plan is either measured in this repository or marked `NOT_E
 
 | wave | title | units | entry condition |
 |---|---|---|---|
-| Wave 0 | First non-B02 proof | `K5-PL06-T04` | PRE-01 through PRE-05 satisfied |
-| Wave 1 | Lane A units | — | a unit is Lane A only after its source is in custody and its structure matches an already-supported pattern. No unit qualifies today. |
-| Wave 2 | Lane B units | — | source mapped, treatment portable with per-unit binding. None today. |
-| Wave 3 | Lane C units after human ruling | — | new treatment or Bariah ruling obtained. None today. |
-| Hold | Lane D units | `K5-PL06-T01`, `K5-PL06-T02`, `K5-PL06-T03-BNEXT`, `K5-PL06-T05`, `K5-PL06-T06`, `K5-PL06-T07` | held until source is delivered — this is every remaining unit except the Wave 0 selection, which is itself held on PRE-01 |
+| Wave 0 | First non-B02 proof | `K5-PL06-T04-B01` | PRE-03 through PRE-06 satisfied. PRE-01 and PRE-02 closed by the Stage 4.2F-A2 source ingest. |
+| Wave 1 | Lane A units | — | a unit is Lane A only once its content is extracted and its structure matches an already-supported pattern. No unit qualifies yet. |
+| Wave 2 | Lane B units | — | content extracted, treatment portable with per-unit binding. None yet. |
+| Wave 3 | Lane C units after human ruling | — | new treatment or Bariah ruling obtained. None yet. |
+| Hold | Lane D units | `K5-PL06-T01-B01`, `K5-PL06-T01-B02`, `K5-PL06-T01-B03`, `K5-PL06-T02-B01`, `K5-PL06-T02-B02`, `K5-PL06-T03-B01`, `K5-PL06-T03-B03`, `K5-PL06-T03-B04`, `K5-PL06-T03-B05`, `K5-PL06-T05-B01`, `K5-PL06-T06-B01`, `K5-PL06-T07-B01` | held until content extraction, which is now unblocked for every one of them — the source and the boundaries are in custody |
 
 # 3. Per-unit plan
 
 | unit_id | wave | owner | deps | source | model | gen | QA | render | smoke | Bariah | output | blocker |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `K5-PL06-T04` | Wave 0 | CC, with FIRDAUS on source delivery | PRE-01, PRE-02, PRE-03, PRE-04, PRE-05 | 25m | 1h41m | 5m | 5m | 30m | NOT_EVIDENCED | 14h15m calendar | v0.1 review candidate | STOP-001, STOP-002, STOP-003, STOP-005, STOP-006 |
-| `K5-PL06-T03-BNEXT` | Hold | FIRDAUS / CAIR — source delivery | STOP-001, STOP-002 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | no source in custody |
-| `K5-PL06-T01` | Hold | FIRDAUS / CAIR — source delivery | STOP-001, STOP-002 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | no source in custody |
-| `K5-PL06-T02` | Hold | FIRDAUS / CAIR — source delivery | STOP-001, STOP-002 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | no source in custody |
-| `K5-PL06-T05` | Hold | FIRDAUS / CAIR — source delivery | STOP-001, STOP-002 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | no source in custody |
-| `K5-PL06-T06` | Hold | FIRDAUS / CAIR — source delivery | STOP-001, STOP-002 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | no source in custody |
-| `K5-PL06-T07` | Hold | FIRDAUS / CAIR — source delivery | STOP-001, STOP-002 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | no source in custody |
+| `K5-PL06-T04-B01` | Wave 0 | CC | PRE-03, PRE-04, PRE-05, PRE-06 | 25m | 1h41m | 5m | 5m | 30m | NOT_EVIDENCED | 14h15m calendar | v0.1 review candidate | STOP-003, STOP-004, STOP-005, STOP-006 |
+| `K5-PL06-T01-B01` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T01-B02` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T01-B03` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T02-B01` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T02-B02` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T03-B01` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T03-B03` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T03-B04` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T03-B05` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T05-B01` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T06-B01` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
+| `K5-PL06-T07-B01` | Hold | CC — after the Wave 0 proof | STOP-003, STOP-004, STOP-005, STOP-006 | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | NOT_EVIDENCED | none | content not extracted |
 
 # 4. Wave 0 total
 

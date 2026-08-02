@@ -87,7 +87,114 @@ EVIDENCE = [
          sha256="faef6c85745d2750236ffdf23fb7d14b81d26ed37c7db58ed274cb8d0f0178e5",
          establishes="the delivered and call-approved B02 storyboard, 100 review pages",
          authority_class="DELIVERED_REVIEW_CANDIDATE"),
+    # ---- Stage 4.2F-A2 ----
+    dict(ref="F1", kind="PRIMARY_SOURCE_ARTIFACT_EXTERNAL",
+         path="[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+         bytes=16832861,
+         sha256="5a9142cdfa1a8090c2075e78caf45609438844daeac88e331bed3069a6a78df7",
+         establishes="the complete CE14 module, PL01-PL08. PL06 spans module pages 162-309; "
+                     "PL07 begins at 310. Held externally by identity, Drive file ID "
+                     "16j15Knt75d1ybg1i1E2SWfeUfMRmcbJ4 — not in this repository",
+         authority_class="PROOFREAD_FINAL_MODULE_SOURCE"),
+    dict(ref="F2", kind="FROZEN_BOUNDARY_MAP",
+         path="docs/pl06/source-freeze/PL06_LESSON_BOUNDARY_MAP_v1.json",
+         bytes=12977,
+         sha256="aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+         establishes="the 14-unit PL06 lesson boundary map: per-unit module and rendered-PDF "
+                     "page ranges, DOCX paragraph anchors, start and end heading anchors, and "
+                     "shared-page flags. Ingested byte-identically from the verified freeze",
+         authority_class="DOCX_BODY_HEADINGS_PLUS_REFERENCED_LESSON_GROUPING"),
 ]
+
+# ==========================================================================================
+# 0A. STAGE 4.2F-A2 — INGEST, CUSTODY AND GROUPING AUTHORITY
+# ==========================================================================================
+FREEZE_DIR = "docs/pl06/source-freeze"
+
+# Every file ingested from the freeze, with the identity it must still hash to. The QA gate
+# INGESTED_FILES_MATCH_FREEZE_HASHES re-hashes each one against FREEZE_MANIFEST.json.
+# `manifest_path` is the path the frozen manifest knows it by; None means the hash register
+# itself, which cannot contain its own hash.
+INGESTED_FILES = [
+    ("SOURCE_CUSTODY_RECORD.md", "records/SOURCE_CUSTODY_RECORD.md"),
+    ("BOUNDARY_EVIDENCE_REGISTER.md", "records/BOUNDARY_EVIDENCE_REGISTER.md"),
+    ("FREEZE_MANIFEST.json", "records/FREEZE_MANIFEST.json"),
+    ("SHA256SUMS.txt", None),
+    ("PL06_LESSON_BOUNDARY_MAP_v1.md", "derived/PL06_LESSON_BOUNDARY_MAP_v1.md"),
+    ("PL06_LESSON_BOUNDARY_MAP_v1.csv", "derived/PL06_LESSON_BOUNDARY_MAP_v1.csv"),
+    ("PL06_LESSON_BOUNDARY_MAP_v1.json", "derived/PL06_LESSON_BOUNDARY_MAP_v1.json"),
+    ("PACKAGE_README.md", "README.md"),
+    ("tools/verify_freeze.sh", "tools/verify_freeze.sh"),
+    ("tools/verify_manifest.py", "tools/verify_manifest.py"),
+    ("PL06_TOPIK_LIST_USER_SCREENSHOT_2026-08-02.png",
+     "derived/PL06_TOPIK_LIST_USER_SCREENSHOT_2026-08-02.png"),
+    ("boundary_pages/p294.png", "derived/boundary_pages/p294.png"),
+    ("boundary_pages/p302.png", "derived/boundary_pages/p302.png"),
+]
+
+# Paths that must NEVER appear in the Git index, by decision.
+FORBIDDEN_TRACKED_PATTERNS = [
+    ("FULL_DOCX", ".docx", "SKP 2025 PEMBINAAN LANDSKAP LUAR"),
+    ("RENDERED_PDF", ".pdf", "SKP 2025 PEMBINAAN LANDSKAP LUAR"),
+    ("TRANSPORT_ZIP", ".zip", "PL06_SOURCE_BOUNDARY_EVIDENCE_FREEZE"),
+]
+
+# The 14-lesson grouping is anchored to DOCX body headings, but the human authority behind
+# THOSE PARTICULAR GROUPINGS is referenced by the map and is not held anywhere we can reach.
+# Searched the whole repository for all four identifiers: zero hits outside the freeze
+# package's own metadata, which is a reference, not the artifact.
+GROUPING_AUTHORITY = dict(
+    status="REFERENCED_NOT_FROZEN",
+    referenced_identifiers=["SMC-CIDB-K5-DAFTAR-KEPUTUSAN-BARIAH-KONSOLIDASI_v1.0",
+                            "K5-STR-004", "K5-STR-006", "K5-STR-005"],
+    referenced_from=["docs/pl06/source-freeze/PL06_LESSON_BOUNDARY_MAP_v1.json "
+                     "-> metadata.lesson_grouping_authority",
+                     "docs/pl06/source-freeze/PL06_LESSON_BOUNDARY_MAP_v1.md "
+                     "-> K5-STR-005 governs the canonical Topik 4 title",
+                     "docs/pl06/source-freeze/SOURCE_CUSTODY_RECORD.md "
+                     "-> dependency disclosure"],
+    search_result="0 occurrences anywhere in the repository outside the freeze package's own "
+                  "metadata",
+    what_is_established="the boundaries themselves — every unit's start and end anchor is a "
+                        "named DOCX body heading with a paragraph index, independently checkable "
+                        "against the source",
+    what_is_not_established="why these particular 14 groupings. Two adjacent subtopics being one "
+                            "lesson rather than two is a human decision, and the artifact "
+                            "recording it is not here",
+    canonical_authority_claimed=False,
+    blocks_extraction=False,
+    blocks_canonical_freeze=True,
+    note="Not a blocker for T04 extraction, by explicit instruction and on the merits: the T04 "
+         "boundary is a single Topik with a single lesson, so no grouping judgement is involved "
+         "in it at all. It matters most for Topik 1, 2 and 3, where 3 + 2 + 5 lessons were "
+         "grouped out of subtopics that could have been split differently.")
+
+EXTERNAL_CUSTODY = dict(
+    primary_docx=dict(
+        filename="[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+        bytes=16832861,
+        sha256="5a9142cdfa1a8090c2075e78caf45609438844daeac88e331bed3069a6a78df7",
+        drive_file_id="16j15Knt75d1ybg1i1E2SWfeUfMRmcbJ4",
+        drive_folder="https://drive.google.com/drive/folders/1p18qHATFfn0oLHyCvYOfA8rQQlxkwJXS",
+        custody="EXTERNAL_DURABLE_SOURCE_BY_IDENTITY",
+        tracked_in_git=False),
+    freeze_package=dict(
+        filename="PL06_SOURCE_BOUNDARY_EVIDENCE_FREEZE_v1.zip",
+        bytes=25142903,
+        sha256="c32f9bee73f9044f3b041417d6a8955854bc6c1e62045fd5fa96d37b56cd3927",
+        durable_location="NOT_YET_SUPPLIED",
+        custody="DURABLE_CUSTODY_PENDING",
+        shared_team_custody_claimed=False,
+        tracked_in_git=False),
+    rendered_pdf=dict(
+        filename="[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.pdf",
+        bytes=9039981,
+        sha256="295a1749cf3fce16d9dfd8c3b45b2e3b5c64c1c9a6073ccc26235f81ec6fbb4b",
+        pages=350,
+        classification="DERIVED_ARTIFACT_PRESERVED_INSIDE_FREEZE_PACKAGE",
+        tracked_in_git=False),
+    git_lfs="NOT_CONFIGURED",
+    record="docs/pl06/source-freeze/PL06_EXTERNAL_CUSTODY_RECORD_v1.md")
 
 # Source anomalies found while reading the evidence. Recorded, not silently corrected.
 SOURCE_ANOMALIES = [
@@ -120,6 +227,32 @@ SOURCE_ANOMALIES = [
                  "Encik Rahman over the ratified pair, or the reverse, is NOT settled.",
          impact="Blocks cast binding for every non-B02 PL06 unit. Does not block B02.",
          owner="BARIAH_AND_CAIR", status="OPEN_BLOCKING_SCALE_OUT"),
+    # ---- carried in from the freeze package, which recorded rather than corrected them ----
+    dict(id="SRC-ANOM-004", evidence="F1",
+         locus="module body heading, Topik 4, module page 276",
+         verbatim="4.0 PENJAAGAAN DAN PENYELENGGARAAN",
+         finding="The body heading of the selected first-proof unit is misspelled in the source. "
+                 "The canonical title 'Penjagaan dan Penyelenggaraan' comes from the Table of "
+                 "Contents under K5-STR-005. Extraction anchors on the body string as written; "
+                 "the learner-facing label uses the canonical form.",
+         impact="Directly affects T04-B01 extraction. An anchor search for the correctly spelled "
+                "heading finds nothing.",
+         owner="BARIAH", status="RECORDED_NOT_SILENTLY_CORRECTED"),
+    dict(id="SRC-ANOM-005", evidence="F1",
+         locus="module body heading, section 7.2, Topik 7",
+         verbatim="Proses Demoblisasi",
+         finding="Misspelled in the source body; governed label is 'Proses Demobilisasi'.",
+         impact="Affects T07-B01 extraction only.",
+         owner="BARIAH", status="RECORDED_NOT_SILENTLY_CORRECTED"),
+    dict(id="SRC-ANOM-006", evidence="F1",
+         locus="module Table of Contents vs body heading positions",
+         verbatim="Several TOC offsets differ from body starts",
+         finding="The TOC and the body disagree on where sections begin. The freeze package "
+                 "resolves this by BODY_ANCHOR_PRECEDENCE: body heading anchors govern "
+                 "extraction, the TOC is cross-check only.",
+         impact="Any extraction driven from the TOC would land on the wrong page. This is the "
+                "reason the boundary map carries DOCX paragraph indices as well as page ranges.",
+         owner="NONE", status="RESOLVED_BY_BODY_ANCHOR_PRECEDENCE"),
 ]
 
 # ==========================================================================================
@@ -175,154 +308,136 @@ LANE_VALUES = ["LANE_A_EXISTING_SUPPORTED_PATTERN", "LANE_B_SUPPORTED_WITH_SOURC
 UNIT_SCOPE_VALUES = ["DELIVERED_BASELINE", "REMAINING"]
 
 # The seven Topik titles are quoted verbatim from M2 slide 3.
-_TOPIK = [
-    (1, "Proses Memula Kerja"),
-    (2, "Elemen Pembinaan Landskap"),
-    (3, "Komponen Landskap"),
-    (4, "Penjagaan Dan Penyelenggaraan"),
-    (5, "Pengurusan Kualiti Projek"),
-    (6, "Perlindungan Dan Penambahbaikan Alam Sekitar"),
-    (7, "Demobilisasi"),
-]
+# The seven Topik titles and the fourteen lesson units are no longer asserted here. They are
+# READ from the frozen boundary map ingested at Stage 4.2F-A2, so this inventory cannot drift
+# from the source evidence: change the map and the inventory changes with it, or the hash gate
+# fails and nothing is emitted at all.
+import json as _json, os as _os
 
-_NO_SOURCE_BLOCKERS = [
-    "NO_APPROVED_SOURCE_DOCUMENT_IN_CUSTODY",
-    "BAHAGIAN_BOUNDARY_UNRESOLVED",
+_HERE = _os.path.dirname(_os.path.abspath(__file__))
+_DOCS = _os.path.dirname(_HERE)
+BOUNDARY_MAP = _os.path.join(_DOCS, "source-freeze", "PL06_LESSON_BOUNDARY_MAP_v1.json")
+
+
+class BoundaryMapError(RuntimeError):
+    """The frozen boundary map is missing or internally inconsistent. Fail closed."""
+
+
+def _load_map():
+    if not _os.path.exists(BOUNDARY_MAP):
+        raise BoundaryMapError(f"frozen boundary map missing: {BOUNDARY_MAP}")
+    m = _json.load(open(BOUNDARY_MAP, encoding="utf-8"))
+    meta, rows = m["metadata"], m["lessons"]
+    if len(rows) != meta["lesson_count"]:
+        raise BoundaryMapError(f"{len(rows)} rows but lesson_count={meta['lesson_count']}")
+    if len({r["topik"] for r in rows}) != meta["topic_count"]:
+        raise BoundaryMapError("distinct topik does not equal topic_count")
+    return meta, rows
+
+
+BOUNDARY_META, BOUNDARY_ROWS = _load_map()
+_TOPIK = sorted({(r["topik"], r["topik_title"]) for r in BOUNDARY_ROWS})
+
+# Status in the frozen map -> what this inventory records.
+DELIVERED_UNIT = "K5-PL06-T03-B02"
+PREFERRED_PROOF_UNIT = "K5-PL06-T04-B01"
+
+# Blockers that survive the source ingest. STOP-001 and STOP-002 are closed by it; what
+# remains is everything that needs the CONTENT read, plus the cast question.
+_REMAINING_BLOCKERS = [
+    "CONTROLLED_CONTENT_NOT_EXTRACTED",
     "NO_RUMUSAN_SOURCE",
     "NO_QUIZ_SOURCE",
+    "VISUAL_INVENTORY_NOT_EXTRACTED",
     "CAST_BINDING_UNRESOLVED",
 ]
 
 
-def _unresolved_topik(n, title, order):
-    """A Topik whose existence and title are source-attested and whose content is not."""
+def _unit_from_map(r, order):
+    delivered = r["unit_id"] == DELIVERED_UNIT
+    shared = []
+    if r["shared_start"]:
+        shared.append(f"start page {r['module_start']} shared with the preceding lesson")
+    if r["shared_end"]:
+        shared.append(f"end page {r['module_end']} shared with the next lesson")
     return dict(
-        unit_id=f"K5-PL06-T{n:02d}",
-        pl="PL06", topik_number=n, topik_title=title,
-        bahagian_number=None, bahagian_title=None,
-        unit_scope="REMAINING",
-        source_document="NONE_IN_CUSTODY",
-        source_page_range="UNKNOWN",
-        source_reference="M2 — SB_K5PL6_montaj_v1.pptx slide 3, "
-                         f"verbatim 'Topik {n}: {title}'",
-        source_authority_class="BARIAH_SUPPLIED_UPSTREAM_ARTIFACT",
-        source_attests="TOPIK_EXISTENCE_AND_TITLE_ONLY",
-        controlled_content_available=False,
-        existing_id_input_available=False,
-        storyboard_input_available=False,
-        source_rows_count=None, source_figures_count=None,
-        source_tables_count=None, source_assets_count=None,
-        rumusan_available=False, quiz_mcq_available=False, quiz_mr_available=False,
-        interaction_requirement="UNKNOWN",
-        interaction_pattern_candidate="NOT_DETERMINABLE_WITHOUT_SOURCE",
-        visual_requirement="UNKNOWN",
-        narration_requirement="PL06_SHELL_GRAMMAR_APPLIES (A3) — content unknown",
-        terminology_risks="PL06 pronunciation precedence unratified; English-term italics list is "
-                          "B02-derived and must be re-derived per unit",
-        standards_or_external_claims="UNKNOWN — no source read",
-        open_human_decisions=["BAHAGIAN_BOUNDARY", "CAST_BINDING_PL06_SCOPE"],
-        generator_support_status="SHELL_SUPPORTED_CONTENT_UNSUPPORTED",
-        qa_support_status="SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT",
-        lane="LANE_D_SOURCE_INCOMPLETE",
-        readiness_status="SOURCE_AUTHORITY_UNRESOLVED",
-        blocker_reason="No approved source document for this Topik is in custody. Its existence "
-                       "and title are attested by the PL06 montage; nothing else about it is.",
-        blocking_conditions=list(_NO_SOURCE_BLOCKERS),
+        unit_id=r["unit_id"],
+        pl="PL06", topik_number=r["topik"], topik_title=r["topik_title"],
+        bahagian_number=r["bahagian"], bahagian_title=r["lesson_title"],
+        unit_scope="DELIVERED_BASELINE" if delivered else "REMAINING",
+        source_document="[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+        source_page_range=f"modul ms {r['module_page_range']} / rendered PDF {r['pdf_page_range']}",
+        source_reference=f"F2 — frozen boundary map, {r['unit_id']}: start anchor "
+                         f"'{r['start_anchor']}', stop before '{r['end_before']}', "
+                         f"DOCX paragraph {r['docx_para_start']} to before {r['docx_para_end_before']}",
+        source_authority_class="DOCX_BODY_HEADINGS_PLUS_REFERENCED_LESSON_GROUPING",
+        # The boundary map attests every unit's BOUNDARY. Only B02's CONTENT has additionally
+        # been extracted and bound — 26 source rows and 14 assets in STORYBOARD_SOURCE_MAP_v0.4.
+        # Claiming FULL_UNIT_CONTENT for a unit nobody has read is the promotion this
+        # inventory exists to prevent.
+        source_attests="FULL_UNIT_CONTENT" if delivered else "UNIT_BOUNDARY_AND_PAGE_RANGE",
+        controlled_content_available=delivered,
+        existing_id_input_available=delivered,
+        storyboard_input_available=delivered,
+        source_rows_count=26 if delivered else None,
+        source_figures_count=4 if delivered else None,
+        source_tables_count=10 if delivered else None,
+        source_assets_count=14 if delivered else None,
+        rumusan_available=delivered, quiz_mcq_available=delivered, quiz_mr_available=delivered,
+        interaction_requirement="REQUIRED" if delivered else "UNKNOWN",
+        interaction_pattern_candidate=(
+            "FAMILY_S / FAMILY_P1 / FAMILY_P2 (B02-specific taxonomy)" if delivered
+            else "NOT_DETERMINABLE_WITHOUT_CONTENT_EXTRACTION"),
+        visual_requirement=("REQUIRED — source-bound overview, 9/9 mapped" if delivered
+                            else "UNKNOWN"),
+        narration_requirement=("A3 shell grammar, three spoken S01 blocks, screen-level VO only"
+                               if delivered else "PL06_SHELL_GRAMMAR_APPLIES (A3) — content unknown"),
+        terminology_risks=("PL06 pronunciation precedence RESERVED_NOT_ACTIVE; 'BBQ pit' "
+                           "lowercase source form measured" if delivered
+                           else "PL06 pronunciation precedence unratified; the English-term "
+                                "italics list is B02-derived and must be re-derived per unit"),
+        standards_or_external_claims=("MS2680 cited in source, verification open" if delivered
+                                      else "UNKNOWN — content not read"),
+        open_human_decisions=(["MS2680", "B02-CAIR-INT-001", "OD-10 / L-01 LMS navigation"]
+                              if delivered else ["CAST_BINDING_PL06_SCOPE"]),
+        generator_support_status=("FULLY_SUPPORTED" if delivered
+                                  else "SHELL_SUPPORTED_CONTENT_UNSUPPORTED"),
+        qa_support_status=("FULLY_SUPPORTED — 461 gate records, 51 mutation fixtures" if delivered
+                           else "SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT"),
+        lane=("LANE_A_EXISTING_SUPPORTED_PATTERN" if delivered else "LANE_D_SOURCE_INCOMPLETE"),
+        readiness_status=("READY_WITH_HOLDS" if delivered else "SOURCE_INCOMPLETE"),
+        blocker_reason=(
+            "Delivered and call-approved. Holds are source-authority only and none blocks this "
+            "unit's review candidacy: MS2680, B02-CAIR-INT-001, and the LMS navigation ruling. "
+            "Microsoft PowerPoint smoke is not recorded."
+            if delivered else
+            "Source document and unit boundary are now in custody by identity — that is what "
+            "Stage 4.2F-A2 closed. What remains is that the CONTENT has not been extracted: no "
+            "controlled content, no visual inventory, no Rumusan and no quiz source for this "
+            "unit."
+            + (" Boundary needs heading-anchor extraction, not page slicing: " + "; ".join(shared)
+               + "." if shared else " Page boundary is clean.")),
+        blocking_conditions=list(_REMAINING_BLOCKERS),
         recommended_execution_order=order,
     )
 
 
-UNITS = [
-    # ---- the delivered baseline ----
-    dict(
-        unit_id="K5-PL06-T03-B02",
-        pl="PL06", topik_number=3, topik_title="Komponen Landskap",
-        bahagian_number=2, bahagian_title="Komponen Landskap",
-        unit_scope="DELIVERED_BASELINE",
-        source_document="K5_PL06_T03_B02_pages_256269.pdf",
-        source_page_range="modul ms 238-249 / physical 256-269",
-        source_reference="P1 — sha256 30a6903d…, identity recorded in B02_ASSET_MANIFEST.md; "
-                         "26 source rows bound in STORYBOARD_SOURCE_MAP_v0.4.md",
-        source_authority_class="SOURCE_ATTESTED_EXTRACT",
-        source_attests="FULL_UNIT_CONTENT",
-        controlled_content_available=True,
-        existing_id_input_available=True,
-        storyboard_input_available=True,
-        source_rows_count=26, source_figures_count=4,
-        source_tables_count=10, source_assets_count=14,
-        rumusan_available=True, quiz_mcq_available=True, quiz_mr_available=True,
-        interaction_requirement="REQUIRED",
-        interaction_pattern_candidate="FAMILY_S / FAMILY_P1 / FAMILY_P2 (B02-specific taxonomy)",
-        visual_requirement="REQUIRED — source-bound overview, 9/9 mapped",
-        narration_requirement="A3 shell grammar, three spoken S01 blocks, screen-level VO only",
-        terminology_risks="PL06 pronunciation precedence RESERVED_NOT_ACTIVE; 'BBQ pit' lowercase "
-                          "source form measured",
-        standards_or_external_claims="MS2680 cited in source, verification open",
-        open_human_decisions=["MS2680", "B02-CAIR-INT-001", "OD-10 / L-01 LMS navigation"],
-        generator_support_status="FULLY_SUPPORTED",
-        qa_support_status="FULLY_SUPPORTED — 441 active gates, 51 mutation fixtures",
-        lane="LANE_A_EXISTING_SUPPORTED_PATTERN",
-        readiness_status="READY_WITH_HOLDS",
-        blocker_reason="Delivered and call-approved. Holds are source-authority only and none of "
-                       "them blocks this unit's review candidacy: MS2680, B02-CAIR-INT-001, and "
-                       "the LMS navigation ruling. Microsoft PowerPoint smoke is not recorded.",
-        blocking_conditions=["MS2680_VERIFICATION", "B02_CAIR_INT_001",
-                             "LMS_NAVIGATION_RULING", "POWERPOINT_SMOKE_NOT_RECORDED"],
-        recommended_execution_order=0,
-    ),
-    # ---- the one non-B02 Bahagian a human has attested ----
-    dict(
-        unit_id="K5-PL06-T03-BNEXT",
-        pl="PL06", topik_number=3, topik_title="Komponen Landskap",
-        # Both null, deliberately. A human attested that this Bahagian exists; nobody gave it a
-        # number or a title, and a descriptor such as "the next one" is not a title. The
-        # attestation itself is carried verbatim in source_reference below.
-        bahagian_number=None, bahagian_title=None,
-        unit_scope="REMAINING",
-        source_document="NONE_IN_CUSTODY",
-        source_page_range="UNKNOWN — the B02 extract ends at modul ms 249",
-        source_reference="A2 — Bariah's answered review guide, Tamat destination question, "
-                         "verbatim '✓ A. Bahagian seterusnya dalam Topik 3.'; corroborated by A3 "
-                         "'Logical next destination is the next Bahagian in Topik 3'",
-        source_authority_class="BARIAH_DIRECT_WRITTEN_CONFIRMATION",
-        source_attests="EXISTENCE_ONLY — no number, no title, no page range was given",
-        controlled_content_available=False,
-        existing_id_input_available=False,
-        storyboard_input_available=False,
-        source_rows_count=None, source_figures_count=None,
-        source_tables_count=None, source_assets_count=None,
-        rumusan_available=False, quiz_mcq_available=False, quiz_mr_available=False,
-        interaction_requirement="UNKNOWN",
-        interaction_pattern_candidate="NOT_DETERMINABLE_WITHOUT_SOURCE",
-        visual_requirement="UNKNOWN",
-        narration_requirement="PL06_SHELL_GRAMMAR_APPLIES (A3) — content unknown",
-        terminology_risks="Same Topik as B02, so the B02 glossary is likely but not proven to apply",
-        standards_or_external_claims="UNKNOWN — no source read",
-        open_human_decisions=["BAHAGIAN_NUMBER_AND_TITLE", "CAST_BINDING_PL06_SCOPE"],
-        generator_support_status="SHELL_SUPPORTED_CONTENT_UNSUPPORTED",
-        qa_support_status="SHELL_GATES_REUSABLE_CONTENT_GATES_ABSENT",
-        lane="LANE_D_SOURCE_INCOMPLETE",
-        readiness_status="SOURCE_AUTHORITY_UNRESOLVED",
-        blocker_reason="A human attested that this unit exists and that the B02 learner navigates "
-                       "to it. Nobody has said what number it carries, what it is called, or "
-                       "which module pages it occupies. No source is in custody.",
-        blocking_conditions=list(_NO_SOURCE_BLOCKERS),
-        # Third, not second: the strongest existence evidence of any remaining unit, but the
-        # weakest proof value. Building it before the portability question is answered would
-        # tell us least about whether the capability travels.
-        recommended_execution_order=3,
-    ),
-]
+# Order: 0 = the delivered unit. 1 = the human-designated first scale-out proof. Everything
+# else follows MODULE PAGE ORDER, which is mechanical and traceable rather than a judgement.
+_rest = sorted((r for r in BOUNDARY_ROWS
+                if r["unit_id"] not in (DELIVERED_UNIT, PREFERRED_PROOF_UNIT)),
+               key=lambda r: r["module_start"])
+_ORDER = {DELIVERED_UNIT: 0, PREFERRED_PROOF_UNIT: 1}
+for _i, _r in enumerate(_rest, start=2):
+    _ORDER[_r["unit_id"]] = _i
 
-# Topik 1, 2, 4, 5, 6, 7 — existence and title attested, nothing else.
-# 1 = the Wave 0 selection, 2 = first runner-up, then the remainder.
-_ORDER = {4: 1, 2: 2, 1: 4, 5: 5, 6: 6, 7: 7}
-for _n, _t in _TOPIK:
-    if _n == 3:
-        continue
-    UNITS.append(_unresolved_topik(_n, _t, _ORDER[_n]))
-
+UNITS = [_unit_from_map(r, _ORDER[r["unit_id"]]) for r in BOUNDARY_ROWS]
 UNITS.sort(key=lambda u: u["recommended_execution_order"])
+
+# Topology asserted by the frozen boundary evidence register, checked against the map.
+TOPOLOGY = {t: sum(1 for r in BOUNDARY_ROWS if r["topik"] == t) for t, _ in _TOPIK}
+SHARED_BOUNDARY_PAGES = sorted({r["module_start"] for r in BOUNDARY_ROWS if r["shared_start"]}
+                               | {r["module_end"] for r in BOUNDARY_ROWS if r["shared_end"]})
 
 # The CSV column order. Also the field-completeness contract the QA suite enforces.
 CSV_COLUMNS = [
@@ -546,91 +661,99 @@ RULES = [
 ]
 
 # ==========================================================================================
+# ==========================================================================================
 # 4. PART 6 — STOP CONDITIONS
 # ==========================================================================================
 STOP_SCOPES = ["BLOCKS_THIS_UNIT", "BLOCKS_CANONICAL_FREEZE_ONLY", "BLOCKS_MMD_ONLY",
                "BLOCKS_FINAL_RELEASE_ONLY"]
+STOP_STATUSES = ["OPEN", "RESOLVED"]
+
+_ALL_REMAINING = [u["unit_id"] for u in UNITS if u["unit_scope"] == "REMAINING"]
 
 STOP_CONDITIONS = [
-    dict(id="STOP-001", condition="MISSING_APPROVED_SOURCE",
+    dict(id="STOP-001", condition="MISSING_APPROVED_SOURCE", status="RESOLVED",
          description="No approved source document for the unit is in custody.",
-         scope="BLOCKS_THIS_UNIT",
-         applies_to=["K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T03-BNEXT", "K5-PL06-T04",
-                     "K5-PL06-T05", "K5-PL06-T06", "K5-PL06-T07"],
-         resolver="FIRDAUS / CAIR — deliver the module extract for the unit",
-         evidence="C1 F2 MEASURED_FACT"),
-    dict(id="STOP-002", condition="MISSING_BAHAGIAN_BOUNDARY",
-         description="The unit's Bahagian boundaries are not established by any source. "
-                     "Numbering alone is not evidence.",
-         scope="BLOCKS_THIS_UNIT",
-         applies_to=["K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T03-BNEXT", "K5-PL06-T04",
-                     "K5-PL06-T05", "K5-PL06-T06", "K5-PL06-T07"],
-         resolver="BARIAH / CAIR — confirm the Bahagian list per Topik",
-         evidence="M2 attests Topik only; no artifact enumerates Bahagian"),
-    dict(id="STOP-003", condition="MISSING_VISUAL_SUBJECT_AUTHORITY",
-         description="No source figure or table photograph is bound, so no visual subject can be "
-                     "named without inventing one.",
-         scope="BLOCKS_THIS_UNIT",
-         applies_to=["K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T03-BNEXT", "K5-PL06-T04",
-                     "K5-PL06-T05", "K5-PL06-T06", "K5-PL06-T07"],
-         resolver="follows STOP-001", evidence="RP-104, RP-209"),
-    dict(id="STOP-004", condition="MISSING_INTERACTION_RULING",
-         description="The unit's interaction pattern cannot be derived without its source "
-                     "structure. The B02 families must not be assumed.",
-         scope="BLOCKS_THIS_UNIT",
-         applies_to=["K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T03-BNEXT", "K5-PL06-T04",
-                     "K5-PL06-T05", "K5-PL06-T06", "K5-PL06-T07"],
-         resolver="follows STOP-001, then BARIAH ruling if the structure is novel",
+         scope="BLOCKS_THIS_UNIT", applies_to=[],
+         resolver="FIRDAUS / CAIR",
+         evidence="CLOSED at Stage 4.2F-A2. The complete module DOCX is in custody by identity "
+                  "(F1, 16,832,861 B, sha 5a9142cd…78df7, Drive 16j15Knt75d1ybg1i1E2SWfeUfMRmcbJ4). "
+                  "This is the item that had blocked every remaining unit since 31 July."),
+    dict(id="STOP-002", condition="MISSING_BAHAGIAN_BOUNDARY", status="RESOLVED",
+         description="The unit's Bahagian boundaries are not established by any source.",
+         scope="BLOCKS_THIS_UNIT", applies_to=[],
+         resolver="BARIAH / CAIR",
+         evidence="CLOSED at Stage 4.2F-A2. All 14 boundaries carry a named DOCX body heading "
+                  "and a paragraph index (F2). Stage 4.2F-A recorded 7 Topik and 1 named "
+                  "Bahagian; the map gives 14 units with start and stop anchors."),
+    dict(id="STOP-003", condition="VISUAL_INVENTORY_NOT_EXTRACTED", status="OPEN",
+         description="No figure or table photograph has been extracted or hashed for the unit, "
+                     "so no visual subject can be named without inventing one.",
+         scope="BLOCKS_THIS_UNIT", applies_to=list(_ALL_REMAINING),
+         resolver="CC — extract from the module page range now that it is known",
+         evidence="RP-104, RP-209; B02_ASSET_MANIFEST.md is the precedent for what this produces"),
+    dict(id="STOP-004", condition="CONTROLLED_CONTENT_NOT_EXTRACTED", status="OPEN",
+         description="The unit's controlled content model has not been derived, so its screen "
+                     "inventory and interaction pattern cannot be determined. The B02 families "
+                     "must not be assumed.",
+         scope="BLOCKS_THIS_UNIT", applies_to=list(_ALL_REMAINING),
+         resolver="CC — extract by heading anchor, then BARIAH if the structure is novel",
          evidence="RP-201 to RP-203"),
-    dict(id="STOP-005", condition="MISSING_QUIZ_ANSWER_KEY",
+    dict(id="STOP-005", condition="NO_QUIZ_SOURCE", status="OPEN",
          description="No quiz source or answer key exists for the unit.",
-         scope="BLOCKS_THIS_UNIT",
-         applies_to=["K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T03-BNEXT", "K5-PL06-T04",
-                     "K5-PL06-T05", "K5-PL06-T06", "K5-PL06-T07"],
-         resolver="follows STOP-001; SME sign-off on the key", evidence="RP-108"),
-    dict(id="STOP-006", condition="CAST_BINDING_UNRESOLVED",
+         scope="BLOCKS_THIS_UNIT", applies_to=list(_ALL_REMAINING),
+         resolver="CC extraction, then SME sign-off on the key", evidence="RP-108"),
+    dict(id="STOP-006", condition="CAST_BINDING_UNRESOLVED", status="OPEN",
          description="The ratified character bank marks Haziq and Encik Roslan CANONICAL; B02 "
                      "ships Alya and Encik Rahman; Bariah's PL06-wide instruction names neither.",
-         scope="BLOCKS_THIS_UNIT",
-         applies_to=["K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T03-BNEXT", "K5-PL06-T04",
-                     "K5-PL06-T05", "K5-PL06-T06", "K5-PL06-T07"],
+         scope="BLOCKS_THIS_UNIT", applies_to=list(_ALL_REMAINING),
          resolver="BARIAH + CAIR", evidence="SRC-ANOM-003, RP-106, RP-215"),
-    dict(id="STOP-007", condition="PL06_PRONUNCIATION_PRECEDENCE_UNRATIFIED",
-         description="The PL06 pronunciation rule ('PL satu', not 'PL kosong satu') is present in "
-                     "both montage decks as a Note to MMD but is not a ratified narration contract.",
-         scope="BLOCKS_MMD_ONLY", applies_to=["ALL"],
-         resolver="source governance",
-         evidence="M1 and M2 Note to MMD; PRONUNCIATION_REGISTER_PL06_v0.4.4.json "
-                  "RESERVED_NOT_ACTIVE"),
-    dict(id="STOP-008", condition="MS2680_VERIFICATION",
+    dict(id="STOP-007", condition="PL06_PRONUNCIATION_PRECEDENCE_UNRATIFIED", status="OPEN",
+         description="The PL06 pronunciation rule ('PL satu', not 'PL kosong satu') appears in "
+                     "both montage decks as a Note to MMD but is not a ratified contract.",
+         scope="BLOCKS_MMD_ONLY", applies_to=["ALL"], resolver="source governance",
+         evidence="M1 and M2 Note to MMD; PRONUNCIATION_REGISTER_PL06_v0.4.4.json"),
+    dict(id="STOP-008", condition="MS2680_VERIFICATION", status="OPEN",
          description="A standards citation in the B02 source is unverified.",
          scope="BLOCKS_FINAL_RELEASE_ONLY", applies_to=["K5-PL06-T03-B02"],
          resolver="source authority", evidence="B02_OPEN_DECISION_INVENTORY_v0.4.4"),
-    dict(id="STOP-009", condition="B02_CAIR_INT_001",
-         description="The canonical module DOCX has an identity pinned but no hash; integrity is "
-                     "unverified.",
-         scope="BLOCKS_CANONICAL_FREEZE_ONLY", applies_to=["ALL"],
-         resolver="FIRDAUS / CAIR", evidence="B02_V0_4_INPUT_FREEZE.md §1 input E"),
-    dict(id="STOP-010", condition="K5_COURSE_LOCKED",
+    dict(id="STOP-009", condition="B02_CAIR_INT_001", status="OPEN",
+         description="The canonical module DOCX had an identity pinned but no hash. Stage "
+                     "4.2F-A2 now supplies a hashed module DOCX; whether THIS document is the "
+                     "canonical one B02 was built against has not been established.",
+         scope="BLOCKS_CANONICAL_FREEZE_ONLY", applies_to=["ALL"], resolver="FIRDAUS / CAIR",
+         evidence="B02_V0_4_INPUT_FREEZE.md §1 input E; now checkable against F1"),
+    dict(id="STOP-010", condition="K5_COURSE_LOCKED", status="OPEN",
          description="SBAT-ADR-004 §3 locks K2, K3 and K5 in the CAIR decision desk; "
-                     "OPEN_COURSES = [\"K4\"]. This governs where DECISIONS may be written, not "
-                     "whether storyboards may be produced — but no PL06 decision may be recorded "
-                     "in cair_decisions while it holds.",
-         scope="BLOCKS_CANONICAL_FREEZE_ONLY", applies_to=["ALL"],
-         resolver="CAIR — the lock lifts when the per-course source drill is complete",
-         evidence="D1"),
-    dict(id="STOP-011", condition="POWERPOINT_SMOKE_NOT_RECORDED",
+                     "OPEN_COURSES = [\"K4\"]. Governs where DECISIONS may be written, not "
+                     "whether storyboards may be produced.",
+         scope="BLOCKS_CANONICAL_FREEZE_ONLY", applies_to=["ALL"], resolver="CAIR", evidence="D1"),
+    dict(id="STOP-011", condition="POWERPOINT_SMOKE_NOT_RECORDED", status="OPEN",
          description="No Microsoft PowerPoint smoke test has been executed or recorded in this "
-                     "environment for any unit. Bariah's call reports the deck opened acceptably "
-                     "on her machine; that is a human observation, not a recorded test.",
-         scope="BLOCKS_FINAL_RELEASE_ONLY", applies_to=["ALL"],
-         resolver="FIRDAUS — run and record the smoke test",
+                     "environment for any unit.",
+         scope="BLOCKS_FINAL_RELEASE_ONLY", applies_to=["ALL"], resolver="FIRDAUS",
          evidence="APPROVAL_RECORD.powerpoint_smoke_status"),
-    dict(id="STOP-012", condition="SOURCE_CONTRADICTION",
+    dict(id="STOP-012", condition="SOURCE_CONTRADICTION", status="OPEN",
          description="The PL06 montage numbers its own topic-list header PL01 while carrying "
-                     "PL06's title.",
-         scope="BLOCKS_FINAL_RELEASE_ONLY", applies_to=["ALL"],
-         resolver="BARIAH — the montage is hers", evidence="SRC-ANOM-001"),
+                     "PL06's title; the module body carries two heading typos.",
+         scope="BLOCKS_FINAL_RELEASE_ONLY", applies_to=["ALL"], resolver="BARIAH",
+         evidence="SRC-ANOM-001, SRC-ANOM-004, SRC-ANOM-005"),
+    dict(id="STOP-013", condition="GROUPING_AUTHORITY_NOT_FROZEN", status="OPEN",
+         description="The human authority behind the 14-lesson grouping is referenced by the "
+                     "boundary map and held nowhere we can reach. The BOUNDARIES are anchored to "
+                     "named DOCX headings and are independently checkable; WHY these particular "
+                     "groupings is not.",
+         scope="BLOCKS_CANONICAL_FREEZE_ONLY", applies_to=["ALL"],
+         resolver="CAIR — supply SMC-CIDB-K5-DAFTAR-KEPUTUSAN-BARIAH-KONSOLIDASI_v1.0",
+         evidence="GROUPING_AUTHORITY = REFERENCED_NOT_FROZEN. Explicitly NOT a blocker for T04 "
+                  "extraction: T04 is one Topik with one lesson, so no grouping judgement enters "
+                  "it."),
+    dict(id="STOP-014", condition="FREEZE_PACKAGE_DURABLE_CUSTODY_PENDING", status="OPEN",
+         description="No durable location has been supplied for the 25.1 MB freeze ZIP. Thirteen "
+                     "of its files are ingested; the rendered PDF, fifteen boundary images and "
+                     "the contact sheet survive only as identities.",
+         scope="BLOCKS_CANONICAL_FREEZE_ONLY", applies_to=["ALL"],
+         resolver="FIRDAUS — supply the Drive location",
+         evidence="EXTERNAL_CUSTODY.freeze_package.custody = DURABLE_CUSTODY_PENDING"),
 ]
 
 # ==========================================================================================
@@ -642,107 +765,125 @@ SELECTION_CRITERIA = [
     "qa_compatibility", "b02_coupling_exposure", "expected_proof_value", "estimated_duration",
 ]
 
-# Scores are 0-5. A criterion nobody has evidence for scores 0 — not a midpoint.
+# Scores are 0-5. A criterion nobody has evidence for still scores 0 — the source ingest moved
+# source_completeness and source_authority for every unit, and moved nothing else, because
+# nobody has read the content yet.
 CANDIDATE_SCORES = [
-    dict(unit_id="K5-PL06-T04", label="Topik 4 — Penjagaan Dan Penyelenggaraan",
-         scores=dict(source_completeness=0, source_authority=2, visual_availability=0,
+    dict(unit_id="K5-PL06-T04-B01", label="Topik 4 Bahagian 1 — Penjagaan dan Penyelenggaraan",
+         scores=dict(source_completeness=4, source_authority=4, visual_availability=0,
                      interaction_representativeness=0, quiz_completeness=0,
                      generator_compatibility=3, qa_compatibility=3, b02_coupling_exposure=5,
-                     expected_proof_value=5, estimated_duration=3),
-         note="Different Topik, so a successful build proves portability rather than repeating "
-              "B02's grammar. Adjacent to the only page range whose custody chain is proven, so "
-              "one contiguous extraction request covers it."),
-    dict(unit_id="K5-PL06-T03-BNEXT", label="Topik 3 — the next Bahagian after B02",
-         scores=dict(source_completeness=0, source_authority=4, visual_availability=0,
+                     expected_proof_value=5, estimated_duration=4),
+         note="Designated PREFERRED_FIRST_SCALE_OUT_PROOF by the freeze package itself. Different "
+              "Topik from B02; clean page boundary on both sides — no shared page, no heading "
+              "split; the smallest remaining unit at 8 module pages; and the only unit whose "
+              "boundary carries frozen visual evidence in this repository (p294, p302)."),
+    dict(unit_id="K5-PL06-T03-B03", label="Topik 3 Bahagian 3 — Infrastruktur",
+         scores=dict(source_completeness=4, source_authority=4, visual_availability=0,
                      interaction_representativeness=0, quiz_completeness=0,
                      generator_compatibility=4, qa_compatibility=4, b02_coupling_exposure=1,
-                     expected_proof_value=2, estimated_duration=4),
-         note="Strongest existence evidence of any non-B02 unit — a human ruled in writing that "
-              "the B02 learner navigates to it. But it sits in the same Topik as B02 and would "
-              "very likely reuse B02's component grammar, so a green build would prove almost "
-              "nothing about portability."),
-    dict(unit_id="K5-PL06-T01", label="Topik 1 — Proses Memula Kerja",
-         scores=dict(source_completeness=0, source_authority=2, visual_availability=0,
+                     expected_proof_value=2, estimated_duration=5),
+         note="This is what Stage 4.2F-A called T03-BNEXT — the unit Bariah's Tamat ruling sends "
+              "the B02 learner to. Smallest of all at 6 module pages, but it sits in B02's own "
+              "Topik and both its boundaries are shared pages. A green build here would most "
+              "likely be B02's grammar succeeding at B02's shape."),
+    dict(unit_id="K5-PL06-T07-B01", label="Topik 7 Bahagian 1 — Demobilisasi",
+         scores=dict(source_completeness=4, source_authority=4, visual_availability=0,
                      interaction_representativeness=0, quiz_completeness=0,
                      generator_compatibility=2, qa_compatibility=2, b02_coupling_exposure=5,
-                     expected_proof_value=4, estimated_duration=2),
-         note="A process topic is structurally furthest from B02's component catalogue, which is "
-              "high coupling exposure but also the highest chance of needing new treatment. "
-              "Not a first proof."),
-    dict(unit_id="K5-PL06-T02", label="Topik 2 — Elemen Pembinaan Landskap",
-         scores=dict(source_completeness=0, source_authority=2, visual_availability=0,
+                     expected_proof_value=3, estimated_duration=4),
+         note="7 module pages, clean boundaries, three subtopics. Structurally furthest from a "
+              "component catalogue, which is high coupling exposure and also the highest chance "
+              "of needing new treatment."),
+    dict(unit_id="K5-PL06-T05-B01", label="Topik 5 Bahagian 1 — Pengurusan Kualiti Projek",
+         scores=dict(source_completeness=4, source_authority=4, visual_availability=0,
+                     interaction_representativeness=0, quiz_completeness=0,
+                     generator_compatibility=2, qa_compatibility=2, b02_coupling_exposure=5,
+                     expected_proof_value=4, estimated_duration=3),
+         note="10 module pages, four subtopics, clean boundaries. Good proof value; larger and "
+              "more procedural than T04."),
+    dict(unit_id="K5-PL06-T02-B02", label="Topik 2 Bahagian 2 — Mekanikal & Elektrikal (M&E)",
+         scores=dict(source_completeness=4, source_authority=4, visual_availability=0,
                      interaction_representativeness=0, quiz_completeness=0,
                      generator_compatibility=3, qa_compatibility=3, b02_coupling_exposure=4,
                      expected_proof_value=4, estimated_duration=3),
-         note="An element catalogue is plausibly close to B02's structure. Reasonable runner-up "
-              "to T04 on the same evidence footing."),
-    dict(unit_id="K5-PL06-T07", label="Topik 7 — Demobilisasi",
-         scores=dict(source_completeness=0, source_authority=2, visual_availability=0,
-                     interaction_representativeness=0, quiz_completeness=0,
-                     generator_compatibility=2, qa_compatibility=2, b02_coupling_exposure=5,
-                     expected_proof_value=3, estimated_duration=2),
-         note="Likely the smallest unit and likely process-shaped. 'Likely' is doing all the work "
-              "in that sentence — nobody has read it."),
+         note="11 module pages with a shared start page, so it also exercises heading-anchor "
+              "extraction. Worth doing early, but not first — one new variable at a time."),
 ]
 
 SELECTION = dict(
-    selected_unit_id="K5-PL06-T04",
-    selection_status="SELECTED_CONDITIONAL_PENDING_SOURCE_DELIVERY",
+    selected_unit_id="K5-PL06-T04-B01",
+    selection_status="SELECTED_CONDITIONAL_PENDING_CONTENT_EXTRACTION",
     selection_is_unconditional=False,
     rationale=[
+        "The freeze package designates it PREFERRED_FIRST_SCALE_OUT_PROOF in the frozen boundary "
+        "map — this is no longer only our judgement.",
         "It is a different Topik from B02, which is the only way a first scale-out proof can "
-        "distinguish portable capability from B02-shaped capability. A build inside Topik 3 that "
-        "went green would not tell us which of the two we have.",
-        "Its existence and title are source-attested by the frozen PL06 montage — the same class "
-        "of evidence available for every other Topik, and the best available for any of them.",
-        "It is adjacent to modul ms 238-249, the only page range whose custody chain this project "
-        "has ever completed, so the extraction request that unblocks it is a contiguous "
-        "continuation rather than a new acquisition.",
-        "It scores highest on expected proof value among candidates that are not inside Topik 3.",
+        "distinguish portable capability from B02-shaped capability.",
+        "Its boundary is clean on both sides: shared_start and shared_end are both false, and "
+        "the map records 'page boundary is clean'. Six of the fourteen units start or end on a "
+        "shared page; this one does not, so extraction is not also a test of heading-anchor "
+        "splitting.",
+        "At 8 module pages (276-283) it is among the smallest units, and it is the only unit "
+        "whose start and stop headings are backed by frozen page images in this repository — "
+        "p294 for '4.0 PENJAAGAAN DAN PENYELENGGARAAN' and p302 for the '5.0 PENGURUSAN KUALITI "
+        "PROJEK' heading that defines its stop.",
+        "The 14-lesson grouping authority being unfrozen does not touch it: Topik 4 has exactly "
+        "one lesson, so no grouping judgement is involved.",
     ],
     honest_caveat=
-        "This selection is NOT a readiness statement. Every candidate scored ZERO on source "
-        "completeness, visual availability, interaction representativeness and quiz completeness, "
-        "because no source document exists in custody for any of them. T04 wins a comparison "
-        "between units we cannot yet build. The differentiators that decided it — proof value and "
-        "extraction adjacency — are planning judgements, not measurements, and the ranking should "
-        "be re-run the moment any unit's source actually arrives, because a single page of real "
-        "content will outweigh all of it.",
+        "Stage 4.2F-A2 moved two of ten scoring columns and left eight where they were. Source "
+        "completeness and source authority went from 0 to 4 for every unit, because the module "
+        "and the boundaries are now in custody. Visual availability, interaction "
+        "representativeness and quiz completeness are still ZERO for all fourteen — nobody has "
+        "read a single page of content. What changed is that these are now questions we can "
+        "answer by working, rather than questions blocked on someone else sending a file. The "
+        "selection still cannot be called ready, and the ranking should be re-run the moment T04's "
+        "content is extracted, because the first real look at a unit's structure will outweigh "
+        "every proxy above it.",
     rejected=[
-        dict(unit_id="K5-PL06-T03-BNEXT",
-             reason="Same Topik as B02. Highest existence evidence, lowest proof value — a green "
-                    "build would most likely be B02's grammar succeeding at B02's shape."),
-        dict(unit_id="K5-PL06-T02",
-             reason="Equal evidence footing with T04, slightly lower expected proof value. "
-                    "Retained as first runner-up."),
-        dict(unit_id="K5-PL06-T01",
-             reason="A process topic is the most likely to require new treatment, which makes it "
-                    "a poor FIRST proof and a good second one."),
-        dict(unit_id="K5-PL06-T07",
-             reason="Everything asserted about its size and shape is guesswork."),
-        dict(unit_id="K5-PL06-T05",
-             reason="Not scored separately — same zero source footing, no differentiator."),
-        dict(unit_id="K5-PL06-T06",
-             reason="Not scored separately — same zero source footing, no differentiator."),
+        dict(unit_id="K5-PL06-T03-B03",
+             reason="Same Topik as B02 and both boundaries are shared pages. Was Stage 4.2F-A's "
+                    "T03-BNEXT; now fully identified as Infrastruktur, module 250-255."),
+        dict(unit_id="K5-PL06-T05-B01",
+             reason="Strong second choice — clean boundaries, high proof value — but 10 pages and "
+                    "four subtopics against T04's 8 pages and two."),
+        dict(unit_id="K5-PL06-T02-B02",
+             reason="Shared start page adds heading-anchor extraction as a second new variable."),
+        dict(unit_id="K5-PL06-T07-B01",
+             reason="Most likely of all to need new treatment, which makes it a poor first proof "
+                    "and a useful second."),
+        dict(unit_id="K5-PL06-T01-B01",
+             reason="Not scored — Topik 1 groups 3 lessons out of 4 subtopics, so it leans "
+                    "hardest on the grouping authority that is REFERENCED_NOT_FROZEN."),
+        dict(unit_id="K5-PL06-T01-B02", reason="As T01-B01; shared on both boundaries."),
+        dict(unit_id="K5-PL06-T01-B03", reason="As T01-B01; shared start page."),
+        dict(unit_id="K5-PL06-T02-B01", reason="Shared end page; 15 module pages, the largest."),
+        dict(unit_id="K5-PL06-T03-B01", reason="Same Topik as B02; shared end page."),
+        dict(unit_id="K5-PL06-T03-B04", reason="Same Topik as B02; shared start page."),
+        dict(unit_id="K5-PL06-T03-B05", reason="Same Topik as B02; 14 module pages."),
+        dict(unit_id="K5-PL06-T06-B01", reason="Clean boundaries and 9 pages — a reasonable "
+                                               "third proof, no differentiator over T04."),
     ],
     required_preconditions=[
-        "PRE-01 — the approved module extract covering Topik 4 is delivered, with byte size and "
-        "SHA-256, and frozen in the repository (resolves STOP-001)",
-        "PRE-02 — the Bahagian boundaries of Topik 4 are stated by a human with authority, "
-        "including how many there are and what each is called (resolves STOP-002)",
-        "PRE-03 — figures and table photographs are extracted from the delivered range and "
-        "hashed into an asset manifest (resolves STOP-003)",
-        "PRE-04 — the quiz source and answer key for the selected Bahagian are supplied and "
-        "SME-signed (resolves STOP-005)",
-        "PRE-05 — the cast binding for non-B02 PL06 units is settled against the ratified "
-        "character bank (resolves STOP-006, SRC-ANOM-003)",
-        "PRE-06 — written confirmation of Bariah's call approval is received and frozen, "
-        "upgrading APPROVAL_RECORD from FIRDAUS_ATTESTED_BARIAH_CALL",
+        "PRE-01 — CLOSED at Stage 4.2F-A2: the module source is in custody by identity",
+        "PRE-02 — CLOSED at Stage 4.2F-A2: the Topik 4 boundary is stated by named heading "
+        "anchor, module 276-283, DOCX paragraph 5220 to before 5360",
+        "PRE-03 — extract and hash figures and table photographs from module 276-283 into an "
+        "asset manifest (resolves STOP-003)",
+        "PRE-04 — extract the controlled content model by heading anchor; determine the "
+        "interaction pattern from this unit's own structure, not B02's (resolves STOP-004)",
+        "PRE-05 — establish Rumusan and quiz source with an SME-signed answer key "
+        "(resolves STOP-005)",
+        "PRE-06 — settle the cast binding against the ratified character bank (resolves STOP-006)",
+        "PRE-07 — written confirmation of Bariah's call approval, upgrading APPROVAL_RECORD from "
+        "FIRDAUS_ATTESTED_BARIAH_CALL",
     ],
     expected_end_to_end_path=[
-        "1. freeze the delivered source extract and its hash",
+        "1. extract module pages 276-283 from the external DOCX by heading anchor, "
+        "paragraph 5220 to before 5360 — not by page slicing",
         "2. extract and hash figures and table photographs into an asset manifest",
-        "3. derive the controlled content module from the source — no content invented",
+        "3. derive the controlled content module from that extract — no content invented",
         "4. derive the screen / state / interaction-item model and its counts from that content",
         "5. re-derive the interaction pattern from the unit's own structure; do NOT import "
         "FAMILY_S / P1 / P2",
@@ -759,9 +900,6 @@ SELECTION = dict(
 # ==========================================================================================
 # 6. PART 7 — EXECUTION PLAN
 # ==========================================================================================
-# Durations below are split by basis. MEASURED values come from this repository: machine
-# runtimes timed in Stage 4.2E-C, and elapsed working blocks read off the commit history.
-# Anything with no basis is NOT_EVIDENCED and is not given a number.
 MEASURED_BASIS = [
     dict(metric="source acquisition to bound asset manifest", value="25m",
          basis="commit history 31 Jul 04:07 (intake BLOCKED) to 04:32 (14 assets extracted)"),
@@ -784,44 +922,41 @@ MEASURED_BASIS = [
 ]
 
 WAVES = [
-    dict(wave="Wave 0", title="First non-B02 proof", units=["K5-PL06-T04"],
-         entry_condition="PRE-01 through PRE-05 satisfied"),
+    dict(wave="Wave 0", title="First non-B02 proof", units=["K5-PL06-T04-B01"],
+         entry_condition="PRE-03 through PRE-06 satisfied. PRE-01 and PRE-02 closed by the "
+                         "Stage 4.2F-A2 source ingest."),
     dict(wave="Wave 1", title="Lane A units", units=[],
-         entry_condition="a unit is Lane A only after its source is in custody and its structure "
-                         "matches an already-supported pattern. No unit qualifies today."),
+         entry_condition="a unit is Lane A only once its content is extracted and its structure "
+                         "matches an already-supported pattern. No unit qualifies yet."),
     dict(wave="Wave 2", title="Lane B units", units=[],
-         entry_condition="source mapped, treatment portable with per-unit binding. None today."),
+         entry_condition="content extracted, treatment portable with per-unit binding. None yet."),
     dict(wave="Wave 3", title="Lane C units after human ruling", units=[],
-         entry_condition="new treatment or Bariah ruling obtained. None today."),
-    dict(wave="Hold", title="Lane D units", units=["K5-PL06-T01", "K5-PL06-T02",
-                                                   "K5-PL06-T03-BNEXT", "K5-PL06-T05",
-                                                   "K5-PL06-T06", "K5-PL06-T07"],
-         entry_condition="held until source is delivered — this is every remaining unit "
-                         "except the Wave 0 selection, which is itself held on PRE-01"),
+         entry_condition="new treatment or Bariah ruling obtained. None yet."),
+    dict(wave="Hold", title="Lane D units",
+         units=[u for u in _ALL_REMAINING if u != "K5-PL06-T04-B01"],
+         entry_condition="held until content extraction, which is now unblocked for every one of "
+                         "them — the source and the boundaries are in custody"),
 ]
 
 PLAN_ROWS = [
-    dict(unit_id="K5-PL06-T04", wave="Wave 0", owner="CC, with FIRDAUS on source delivery",
-         dependencies="PRE-01, PRE-02, PRE-03, PRE-04, PRE-05",
+    dict(unit_id="K5-PL06-T04-B01", wave="Wave 0", owner="CC",
+         dependencies="PRE-03, PRE-04, PRE-05, PRE-06",
          source_extraction="25m", controlled_model="1h41m", generation="5m",
          automated_qa="5m", rendered_inspection="30m",
          powerpoint_smoke="NOT_EVIDENCED", bariah_review="14h15m calendar",
          expected_output_version="v0.1 review candidate",
-         blocker="STOP-001, STOP-002, STOP-003, STOP-005, STOP-006"),
+         blocker="STOP-003, STOP-004, STOP-005, STOP-006"),
 ]
-for _u in ["K5-PL06-T03-BNEXT", "K5-PL06-T01", "K5-PL06-T02", "K5-PL06-T05",
-           "K5-PL06-T06", "K5-PL06-T07"]:
+for _u in [u for u in _ALL_REMAINING if u != "K5-PL06-T04-B01"]:
     PLAN_ROWS.append(dict(
-        unit_id=_u, wave="Hold", owner="FIRDAUS / CAIR — source delivery",
-        dependencies="STOP-001, STOP-002",
+        unit_id=_u, wave="Hold", owner="CC — after the Wave 0 proof",
+        dependencies="STOP-003, STOP-004, STOP-005, STOP-006",
         source_extraction="NOT_EVIDENCED", controlled_model="NOT_EVIDENCED",
         generation="NOT_EVIDENCED", automated_qa="NOT_EVIDENCED",
         rendered_inspection="NOT_EVIDENCED", powerpoint_smoke="NOT_EVIDENCED",
         bariah_review="NOT_EVIDENCED", expected_output_version="none",
-        blocker="no source in custody"))
+        blocker="content not extracted"))
 
-# Wave 0's working-time total, machine + measured human blocks only. Excludes the Bariah
-# review turnaround, which is calendar time and not ours to spend.
 WAVE0_WORKING_TIME = "2h46m"
 WAVE0_WORKING_TIME_BASIS = ("25m source extraction + 1h41m controlled model + 5m generation + "
                             "5m automated QA + 30m rendered inspection. Every component is a "
@@ -848,22 +983,22 @@ CAPABILITY = [
 _UNKNOWN_CAP = dict(
     lane="LANE_D_SOURCE_INCOMPLETE",
     supported_screen_types=["TOPIC_ENTRY", "DIALOG", "ORIENTATION", "RUMUSAN", "QUIZ", "TAMAT"],
-    unsupported_screen_types=["UNKNOWN — the unit's screen inventory cannot be derived without "
-                              "its source"],
+    unsupported_screen_types=["UNKNOWN — the unit's screen inventory cannot be derived until its "
+                              "content is extracted from the now-available source"],
     supported_interaction_types=["none proven — the B02 families are not transferable"],
     missing_generator_capability=["content model for this unit"],
-    missing_package_oracle=["no frozen artifact to hash"],
+    missing_package_oracle=["no generated artifact to hash yet"],
     missing_mutation_fixture=["all unit-specific fixtures"],
-    missing_visual_binding=["all — no assets extracted"],
+    missing_visual_binding=["all — no assets extracted from the unit's page range"],
     missing_notes_handling=["unit VO content"],
     missing_quiz_handling=["questions, options and answer key"],
-    source_authority_dependency="STOP-001, STOP-002",
-    estimated_implementation_effort="NOT_EVIDENCED — cannot be estimated without source")
+    source_authority_dependency="STOP-003, STOP-004, STOP-005, STOP-006",
+    estimated_implementation_effort="NOT_EVIDENCED — estimable only after extraction")
 for _u in UNITS:
     if _u["unit_id"] == "K5-PL06-T03-B02":
         continue
     CAPABILITY.append(dict(unit_id=_u["unit_id"], **_UNKNOWN_CAP))
 
-VERDICT = "PL06_SCALE_OUT_BLOCKED_BY_UNRESOLVED_UNIT_BOUNDARIES"
+VERDICT = "PL06_SOURCE_BOUNDARY_INGEST_COMPLETE_READY_FOR_T04_EXTRACTION"
 FORBIDDEN_VERDICTS = ["PL06_STORYBOARDS_COMPLETE", "PL06_READY_FOR_MMD",
                       "PL06_CANONICALLY_FROZEN", "PL06_PRODUCTION_RELEASED"]

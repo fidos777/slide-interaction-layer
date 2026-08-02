@@ -45,37 +45,61 @@ def _md_table(headers, rows):
 
 # ------------------------------------------------------------------ inventory
 def inventory_md():
+    topo = " / ".join(str(D.TOPOLOGY[t]) for t in sorted(D.TOPOLOGY))
+    done = sum(1 for u in D.UNITS if u["unit_scope"] == "DELIVERED_BASELINE")
     L = ["# PL06_STORYBOARD_PRODUCTION_INVENTORY — v1", "",
          f"Stage {D.STAGE}. Generated from `{D.GENERATED_BY}` — do not hand-edit this file; "
          "edit the controlled data source and re-emit.", "",
          "```", f"UNITS = {len(D.UNITS)}",
-         f"TOPIK_ENUMERATED = 7 of 7",
-         f"BAHAGIAN_ENUMERATED = 1 of unknown",
+         "TOPIK_ENUMERATED = 7 of 7",
+         f"BAHAGIAN_ENUMERATED = {len(D.UNITS)} of {len(D.UNITS)}",
+         f"TOPOLOGY = {topo}",
+         f"COMPLETED = {done}   REMAINING = {len(D.UNITS) - done}",
+         f"GROUPING_AUTHORITY = {D.GROUPING_AUTHORITY['status']}",
          f"VERDICT = {D.VERDICT}", "```", "",
-         "> **Read the Bahagian column before anything else.** Exactly one Bahagian in the whole "
-         "of PL06 is named by a source: `B02`, the one already delivered. One more is attested to "
-         "exist without a number or a title. The other six Topik have no Bahagian enumeration of "
-         "any kind, and none has been invented here.", "",
-         "# 1. What the evidence actually establishes", "",
+         "> **Stage 4.2F-A2 replaced this inventory's foundation.** The previous version listed "
+         "**8** units at Topik granularity with every Bahagian unresolved, because the only "
+         "artifact describing PL06 was a montage slide that enumerates Topik and nothing else. "
+         "The source ingest supplies the complete module by identity and a frozen boundary map "
+         "with a named DOCX heading anchor for all **14** lesson units. Every row below is now "
+         "read from that map, not asserted here.", "",
+         "# 1. What the evidence establishes", "",
          "| Level | Established | Evidence |", "|---|---|---|",
          "| Course | K5 — Kursus Kerja Bangunan – Pembinaan Landskap Luar | M1 |",
          "| Pakej Latihan | eight, PL01–PL08, named | M1 slide 2 |",
-         "| PL06 Topik | **seven, named** | M2 slide 3 |",
-         "| PL06 Bahagian | **not enumerated for any Topik** | — no artifact carries it |",
-         "| T03 B02 content | 26 source rows, 14 assets, modul ms 238–249 | P1 |",
-         "| Any other unit's content | **nothing** | C1 F2 `MEASURED_FACT` |", "",
-         "The seven Topik titles, verbatim from M2 slide 3:", ""]
+         "| PL06 Topik | **seven, named** | M2 slide 3, corroborated by F1 body headings |",
+         f"| PL06 Bahagian | **fourteen**, topology {topo} | F2 boundary map |",
+         "| PL06 module span | pages 162–309; PL07 begins at 310 | F1 / F2 |",
+         "| Per-unit boundary | named DOCX heading anchor + paragraph index | F2 |",
+         "| T03 B02 content | 26 source rows, 14 assets, modul ms 237–250 | P1, F2 |",
+         "| Any other unit's content | **not yet extracted** | — |", "",
+         "# 1.1 What it does not establish", "",
+         f"The lesson **grouping** authority is `{D.GROUPING_AUTHORITY['status']}`. "
+         + D.GROUPING_AUTHORITY["what_is_established"].capitalize()
+         + ". What is not established: " + D.GROUPING_AUTHORITY["what_is_not_established"]
+         + ". Referenced as "
+         + ", ".join(f"`{i}`" for i in D.GROUPING_AUTHORITY["referenced_identifiers"])
+         + " — " + D.GROUPING_AUTHORITY["search_result"] + ".", "",
+         D.GROUPING_AUTHORITY["note"], "",
+         "The seven Topik titles, as carried by the frozen boundary map:", ""]
     for n, t in D._TOPIK:
-        L.append(f"{n}. **Topik {n}: {t}**")
+        L.append(f"{n}. **Topik {n}: {t}** — {D.TOPOLOGY[n]} "
+                 + ("lesson" if D.TOPOLOGY[n] == 1 else "lessons"))
     L += ["", "# 2. Unit inventory", ""]
+    _bm = {r["unit_id"]: r for r in D.BOUNDARY_ROWS}
     L.append(_md_table(
-        ["order", "unit_id", "Topik", "Bahagian", "scope", "source", "readiness", "lane"],
-        [[u["recommended_execution_order"], f"`{u['unit_id']}`",
-          f"T{u['topik_number']:02d} {u['topik_title']}",
-          (u["bahagian_number"] if u["bahagian_number"] is not None else "**unresolved**"),
-          u["unit_scope"], u["source_document"], f"`{u['readiness_status']}`",
+        ["order", "unit_id", "lesson title", "modul ms", "boundary", "scope", "readiness", "lane"],
+        [[u["recommended_execution_order"], f"`{u['unit_id']}`", u["bahagian_title"],
+          _bm[u["unit_id"]]["module_page_range"],
+          ("shared" if (_bm[u["unit_id"]]["shared_start"] or _bm[u["unit_id"]]["shared_end"])
+           else "clean"),
+          u["unit_scope"], f"`{u['readiness_status']}`",
           u["lane"].replace("LANE_", "").split("_")[0]]
          for u in D.UNITS]))
+    L += ["",
+          f"Six of the fourteen units start or end on a **shared** module page "
+          f"({', '.join(str(p) for p in D.SHARED_BOUNDARY_PAGES)}) and must be split by heading "
+          "anchor, never by page extraction.", ""]
     L += ["", "# 3. Per-unit detail", ""]
     for u in D.UNITS:
         L += [f"## `{u['unit_id']}` — {u['topik_title']}"

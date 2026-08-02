@@ -3,8 +3,8 @@
 Stage 4.2F-A. Generated from `docs/pl06/tools/pl06_emit_v1.py`.
 
 ```
-SELECTED_FIRST_SCALE_OUT_UNIT = K5-PL06-T04
-SELECTION_STATUS = SELECTED_CONDITIONAL_PENDING_SOURCE_DELIVERY
+SELECTED_FIRST_SCALE_OUT_UNIT = K5-PL06-T04-B01
+SELECTION_STATUS = SELECTED_CONDITIONAL_PENDING_CONTENT_EXTRACTION
 SELECTION_IS_UNCONDITIONAL = false
 ```
 
@@ -14,58 +14,66 @@ Scores are 0–5. **A criterion with no evidence scores 0, not a midpoint.** Tha
 
 | candidate | source_completeness | source_authority | visual_availability | interaction_representativeness | quiz_completeness | generator_compatibility | qa_compatibility | b02_coupling_exposure | expected_proof_value | estimated_duration | total |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| `K5-PL06-T04` | 0 | 2 | 0 | 0 | 0 | 3 | 3 | 5 | 5 | 3 | 21 |
-| `K5-PL06-T03-BNEXT` | 0 | 4 | 0 | 0 | 0 | 4 | 4 | 1 | 2 | 4 | 19 |
-| `K5-PL06-T01` | 0 | 2 | 0 | 0 | 0 | 2 | 2 | 5 | 4 | 2 | 17 |
-| `K5-PL06-T02` | 0 | 2 | 0 | 0 | 0 | 3 | 3 | 4 | 4 | 3 | 19 |
-| `K5-PL06-T07` | 0 | 2 | 0 | 0 | 0 | 2 | 2 | 5 | 3 | 2 | 16 |
+| `K5-PL06-T04-B01` | 4 | 4 | 0 | 0 | 0 | 3 | 3 | 5 | 5 | 4 | 28 |
+| `K5-PL06-T03-B03` | 4 | 4 | 0 | 0 | 0 | 4 | 4 | 1 | 2 | 5 | 24 |
+| `K5-PL06-T07-B01` | 4 | 4 | 0 | 0 | 0 | 2 | 2 | 5 | 3 | 4 | 24 |
+| `K5-PL06-T05-B01` | 4 | 4 | 0 | 0 | 0 | 2 | 2 | 5 | 4 | 3 | 24 |
+| `K5-PL06-T02-B02` | 4 | 4 | 0 | 0 | 0 | 3 | 3 | 4 | 4 | 3 | 25 |
 
 Notes on each candidate:
 
-- **`K5-PL06-T04`** — Topik 4 — Penjagaan Dan Penyelenggaraan. Different Topik, so a successful build proves portability rather than repeating B02's grammar. Adjacent to the only page range whose custody chain is proven, so one contiguous extraction request covers it.
-- **`K5-PL06-T03-BNEXT`** — Topik 3 — the next Bahagian after B02. Strongest existence evidence of any non-B02 unit — a human ruled in writing that the B02 learner navigates to it. But it sits in the same Topik as B02 and would very likely reuse B02's component grammar, so a green build would prove almost nothing about portability.
-- **`K5-PL06-T01`** — Topik 1 — Proses Memula Kerja. A process topic is structurally furthest from B02's component catalogue, which is high coupling exposure but also the highest chance of needing new treatment. Not a first proof.
-- **`K5-PL06-T02`** — Topik 2 — Elemen Pembinaan Landskap. An element catalogue is plausibly close to B02's structure. Reasonable runner-up to T04 on the same evidence footing.
-- **`K5-PL06-T07`** — Topik 7 — Demobilisasi. Likely the smallest unit and likely process-shaped. 'Likely' is doing all the work in that sentence — nobody has read it.
+- **`K5-PL06-T04-B01`** — Topik 4 Bahagian 1 — Penjagaan dan Penyelenggaraan. Designated PREFERRED_FIRST_SCALE_OUT_PROOF by the freeze package itself. Different Topik from B02; clean page boundary on both sides — no shared page, no heading split; the smallest remaining unit at 8 module pages; and the only unit whose boundary carries frozen visual evidence in this repository (p294, p302).
+- **`K5-PL06-T03-B03`** — Topik 3 Bahagian 3 — Infrastruktur. This is what Stage 4.2F-A called T03-BNEXT — the unit Bariah's Tamat ruling sends the B02 learner to. Smallest of all at 6 module pages, but it sits in B02's own Topik and both its boundaries are shared pages. A green build here would most likely be B02's grammar succeeding at B02's shape.
+- **`K5-PL06-T07-B01`** — Topik 7 Bahagian 1 — Demobilisasi. 7 module pages, clean boundaries, three subtopics. Structurally furthest from a component catalogue, which is high coupling exposure and also the highest chance of needing new treatment.
+- **`K5-PL06-T05-B01`** — Topik 5 Bahagian 1 — Pengurusan Kualiti Projek. 10 module pages, four subtopics, clean boundaries. Good proof value; larger and more procedural than T04.
+- **`K5-PL06-T02-B02`** — Topik 2 Bahagian 2 — Mekanikal & Elektrikal (M&E). 11 module pages with a shared start page, so it also exercises heading-anchor extraction. Worth doing early, but not first — one new variable at a time.
 
 # 2. Selection rationale
 
-- It is a different Topik from B02, which is the only way a first scale-out proof can distinguish portable capability from B02-shaped capability. A build inside Topik 3 that went green would not tell us which of the two we have.
-- Its existence and title are source-attested by the frozen PL06 montage — the same class of evidence available for every other Topik, and the best available for any of them.
-- It is adjacent to modul ms 238-249, the only page range whose custody chain this project has ever completed, so the extraction request that unblocks it is a contiguous continuation rather than a new acquisition.
-- It scores highest on expected proof value among candidates that are not inside Topik 3.
+- The freeze package designates it PREFERRED_FIRST_SCALE_OUT_PROOF in the frozen boundary map — this is no longer only our judgement.
+- It is a different Topik from B02, which is the only way a first scale-out proof can distinguish portable capability from B02-shaped capability.
+- Its boundary is clean on both sides: shared_start and shared_end are both false, and the map records 'page boundary is clean'. Six of the fourteen units start or end on a shared page; this one does not, so extraction is not also a test of heading-anchor splitting.
+- At 8 module pages (276-283) it is among the smallest units, and it is the only unit whose start and stop headings are backed by frozen page images in this repository — p294 for '4.0 PENJAAGAAN DAN PENYELENGGARAAN' and p302 for the '5.0 PENGURUSAN KUALITI PROJEK' heading that defines its stop.
+- The 14-lesson grouping authority being unfrozen does not touch it: Topik 4 has exactly one lesson, so no grouping judgement is involved.
 
 # 3. What this selection is not
 
-This selection is NOT a readiness statement. Every candidate scored ZERO on source completeness, visual availability, interaction representativeness and quiz completeness, because no source document exists in custody for any of them. T04 wins a comparison between units we cannot yet build. The differentiators that decided it — proof value and extraction adjacency — are planning judgements, not measurements, and the ranking should be re-run the moment any unit's source actually arrives, because a single page of real content will outweigh all of it.
+Stage 4.2F-A2 moved two of ten scoring columns and left eight where they were. Source completeness and source authority went from 0 to 4 for every unit, because the module and the boundaries are now in custody. Visual availability, interaction representativeness and quiz completeness are still ZERO for all fourteen — nobody has read a single page of content. What changed is that these are now questions we can answer by working, rather than questions blocked on someone else sending a file. The selection still cannot be called ready, and the ranking should be re-run the moment T04's content is extracted, because the first real look at a unit's structure will outweigh every proxy above it.
 
 # 4. Rejected candidates
 
 | unit_id | reason |
 |---|---|
-| `K5-PL06-T03-BNEXT` | Same Topik as B02. Highest existence evidence, lowest proof value — a green build would most likely be B02's grammar succeeding at B02's shape. |
-| `K5-PL06-T02` | Equal evidence footing with T04, slightly lower expected proof value. Retained as first runner-up. |
-| `K5-PL06-T01` | A process topic is the most likely to require new treatment, which makes it a poor FIRST proof and a good second one. |
-| `K5-PL06-T07` | Everything asserted about its size and shape is guesswork. |
-| `K5-PL06-T05` | Not scored separately — same zero source footing, no differentiator. |
-| `K5-PL06-T06` | Not scored separately — same zero source footing, no differentiator. |
+| `K5-PL06-T03-B03` | Same Topik as B02 and both boundaries are shared pages. Was Stage 4.2F-A's T03-BNEXT; now fully identified as Infrastruktur, module 250-255. |
+| `K5-PL06-T05-B01` | Strong second choice — clean boundaries, high proof value — but 10 pages and four subtopics against T04's 8 pages and two. |
+| `K5-PL06-T02-B02` | Shared start page adds heading-anchor extraction as a second new variable. |
+| `K5-PL06-T07-B01` | Most likely of all to need new treatment, which makes it a poor first proof and a useful second. |
+| `K5-PL06-T01-B01` | Not scored — Topik 1 groups 3 lessons out of 4 subtopics, so it leans hardest on the grouping authority that is REFERENCED_NOT_FROZEN. |
+| `K5-PL06-T01-B02` | As T01-B01; shared on both boundaries. |
+| `K5-PL06-T01-B03` | As T01-B01; shared start page. |
+| `K5-PL06-T02-B01` | Shared end page; 15 module pages, the largest. |
+| `K5-PL06-T03-B01` | Same Topik as B02; shared end page. |
+| `K5-PL06-T03-B04` | Same Topik as B02; shared start page. |
+| `K5-PL06-T03-B05` | Same Topik as B02; 14 module pages. |
+| `K5-PL06-T06-B01` | Clean boundaries and 9 pages — a reasonable third proof, no differentiator over T04. |
 
 # 5. Required preconditions
 
 None of these is ours to satisfy alone.
 
-- PRE-01 — the approved module extract covering Topik 4 is delivered, with byte size and SHA-256, and frozen in the repository (resolves STOP-001)
-- PRE-02 — the Bahagian boundaries of Topik 4 are stated by a human with authority, including how many there are and what each is called (resolves STOP-002)
-- PRE-03 — figures and table photographs are extracted from the delivered range and hashed into an asset manifest (resolves STOP-003)
-- PRE-04 — the quiz source and answer key for the selected Bahagian are supplied and SME-signed (resolves STOP-005)
-- PRE-05 — the cast binding for non-B02 PL06 units is settled against the ratified character bank (resolves STOP-006, SRC-ANOM-003)
-- PRE-06 — written confirmation of Bariah's call approval is received and frozen, upgrading APPROVAL_RECORD from FIRDAUS_ATTESTED_BARIAH_CALL
+- PRE-01 — CLOSED at Stage 4.2F-A2: the module source is in custody by identity
+- PRE-02 — CLOSED at Stage 4.2F-A2: the Topik 4 boundary is stated by named heading anchor, module 276-283, DOCX paragraph 5220 to before 5360
+- PRE-03 — extract and hash figures and table photographs from module 276-283 into an asset manifest (resolves STOP-003)
+- PRE-04 — extract the controlled content model by heading anchor; determine the interaction pattern from this unit's own structure, not B02's (resolves STOP-004)
+- PRE-05 — establish Rumusan and quiz source with an SME-signed answer key (resolves STOP-005)
+- PRE-06 — settle the cast binding against the ratified character bank (resolves STOP-006)
+- PRE-07 — written confirmation of Bariah's call approval, upgrading APPROVAL_RECORD from FIRDAUS_ATTESTED_BARIAH_CALL
 
 # 6. Expected end-to-end path
 
-1. freeze the delivered source extract and its hash
+1. extract module pages 276-283 from the external DOCX by heading anchor, paragraph 5220 to before 5360 — not by page slicing
 2. extract and hash figures and table photographs into an asset manifest
-3. derive the controlled content module from the source — no content invented
+3. derive the controlled content module from that extract — no content invented
 4. derive the screen / state / interaction-item model and its counts from that content
 5. re-derive the interaction pattern from the unit's own structure; do NOT import FAMILY_S / P1 / P2
 6. generate the review deck through the shared shell, with the artifact-identity source carrying the new unit's version line
