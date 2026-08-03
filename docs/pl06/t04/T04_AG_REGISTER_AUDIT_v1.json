@@ -1,0 +1,183 @@
+{
+ "stage": "4.2F-B0.9.1",
+ "generated_by": "docs/pl06/t04/tools/t04_supplementary_evidence_emit_v1.py",
+ "set_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+ "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+ "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+ "forbidden_representations": [
+  "eight direct individual acceptances",
+  "eight fully unanswered decisions",
+  "eight pending-human blockers"
+ ],
+ "distinction_layers": [
+  {
+   "layer": 1,
+   "name": "SET_LEVEL_ACCEPTANCE",
+   "value": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "quote": "cadangan perkongsian bersyarat (AG-01–AG-08) munasabah untuk pengoptimuman produksi",
+   "source": "AUTH-EV-01 §B KOMEN KESELURUHAN"
+  },
+  {
+   "layer": 2,
+   "name": "INDIVIDUAL_CARD_MARKINGS",
+   "value": "NOT_INDIVIDUALLY_MARKED",
+   "basis": "OBSERVED_IN_THE_AUTHORITY_DOCX",
+   "quote": null,
+   "source": "AUTH-EV-01 §B, the eight per-group decision cards. Every TERIMA / PINDA / BUANG / GABUNG box and every sharing box is blank."
+  },
+  {
+   "layer": 3,
+   "name": "ITEM_LEVEL_NO_REUSE_RESTRICTIONS",
+   "value": "THREE_ITEMS_CLOSED",
+   "basis": "DERIVED_FROM_BARIAH_SECTION_LEVEL_NARRATIVE",
+   "quote": "Saya sahkan item \"tidak boleh dikongsi\" (PPE baja, PPE racun, stok baja vs stok racun) memang memerlukan aset berasingan kerana visualnya berbeza secara ketara.",
+   "source": "AUTH-EV-01 §B KOMEN KESELURUHAN"
+  },
+  {
+   "layer": 4,
+   "name": "S14_SPECIFIC_AG06_REUSE",
+   "value": "CONFIRMED_ON_CAIR_PROPOSAL",
+   "basis": "AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY",
+   "quote": "Yes to both screenshots.",
+   "source": "WA-01 item 2 + WA-02 + WA-05"
+  }
+ ],
+ "section_level_narrative_contents": [
+  "AG-01 to AG-08 conditional sharing is reasonable for production optimisation.",
+  "The distinct PPE and storage requirements genuinely need separate assets.",
+  "The 46 → 41 calculation is accepted as production scope.",
+  "Instructional clarity overrides production optimisation where the two conflict."
+ ],
+ "no_reuse_closed": [
+  {
+   "obligation_id": "T04-VO-025",
+   "label": "Baja — Pengurusan Stok dan Penyimpanan",
+   "asset_group_id": "AG-04"
+  },
+  {
+   "obligation_id": "T04-VO-026",
+   "label": "Baja — Keselamatan Pekerja",
+   "asset_group_id": "AG-04"
+  },
+  {
+   "obligation_id": "T04-VO-039",
+   "label": "Racun — Keselamatan dan Kesihatan (HSE)",
+   "asset_group_id": "AG-06"
+  }
+ ],
+ "no_reuse_decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+ "no_reuse_evidence_precision": "DERIVED_FROM_BARIAH_SECTION_LEVEL_NARRATIVE",
+ "no_reuse_not_claimed": "Bariah did not individually tick a decision-basis field for each of the three items. She stated both grounds once, at section level, covering all three. The basis is derived from that statement and is labelled as derived.",
+ "groups": [
+  {
+   "asset_group_id": "AG-01",
+   "label": "Aliran proses enam langkah",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-02",
+   "label": "Landskap Lembut — kategori",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-03",
+   "label": "Siram — operasi dan sub-topik",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-04",
+   "label": "Baja — operasi dan sub-topik",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [
+    "T04-VO-025",
+    "T04-VO-026"
+   ],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-05",
+   "label": "Racun — IPM, kawalan dan jenis racun",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-06",
+   "label": "Racun — perundangan, HSE dan risiko",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [
+    "T04-VO-039"
+   ],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-07",
+   "label": "Landskap Kejur — kategori dan empat fungsi",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  },
+  {
+   "asset_group_id": "AG-08",
+   "label": "Slide 2 — senario pengenalan",
+   "set_level_status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "authority_basis": "BARIAH_DIRECT_SET_LEVEL_NARRATIVE",
+   "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
+   "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
+   "item_level_restrictions": [],
+   "restriction_applies_to_whole_group": false,
+   "represented_as_individual_acceptance": false,
+   "represented_as_unanswered": false,
+   "represented_as_pending_human_blocker": false
+  }
+ ]
+}

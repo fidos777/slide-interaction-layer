@@ -227,6 +227,10 @@ CONFIRMATION_STATUSES = [
     "CONFIRMED_BY_AUTHORITY",
     "DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION",
     "AMBIGUOUS_REFERENT_NOT_ACTIONABLE",
+    # Added in Stage 4.2F-B0.9.1 when visual inspection showed one recorded "confirmation"
+    # was not an authority statement at all.
+    "NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9",
+    "RETAINED_FOR_TRACEABILITY_NOT_ACTIONABLE",
 ]
 
 CONFIRMATIONS = [
@@ -271,9 +275,18 @@ CONFIRMATIONS = [
         evidence_id="AUTH-EV-02",
         authority_quote="Q3 tu nnt u pilih ya",
         also_recorded_as=None,
-        subject="A deferred choice on an item Bariah referred to as 'Q3'",
-        status="AMBIGUOUS_REFERENT_NOT_ACTIONABLE",
-        secondary_status="DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION",
+        # CORRECTED IN STAGE 4.2F-B0.9.1 (T04-COR-02). This line was recorded here as a
+        # Bariah message and a delegation from the authority to CAIR. Visual inspection of
+        # the rendered WhatsApp screenshot shows it is FIRDAUS'S message — green,
+        # right-aligned, sent/read ticks. Stage 4.2F-B0.9 had no image and read the line from
+        # an unattributed transcription. It is not an authority statement at all.
+        subject="A line recorded here in error as Bariah's; it is Firdaus deferring his own "
+                "third confirmation request",
+        author="FIRDAUS",
+        is_authority_statement=False,
+        status="NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9",
+        secondary_status="RETAINED_FOR_TRACEABILITY_NOT_ACTIONABLE",
+        correction_id="T04-COR-02",
         evidence_grade="DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
         ambiguous_label_as_written="Q3",
         label_not_used_as_decision_id=True,
@@ -283,9 +296,10 @@ CONFIRMATIONS = [
             "cannot see.",
         ],
         interpretation=(
-            "Bariah deferred a choice and asked CAIR to make it later. That is a delegation, "
-            "not a rule Bariah issued. It is therefore NOT classified as an authority-"
-            "originated rule, and it produces no content change in this stage."),
+            "Firdaus deferred his own third confirmation request. Bariah answered that "
+            "request explicitly three minutes later. There is no delegation from the "
+            "authority to CAIR anywhere in this exchange, and this record produces no "
+            "content change."),
         what_this_does_not_establish=(
             "What 'Q3' refers to, and what the choice is between. Quiz Q3 already has a "
             "specific, complete PINDA instruction in the DOCX, which makes the quiz-item "
@@ -555,11 +569,14 @@ _DECISIONS = [
      "F", ["T04-VIS-GOV-01"], _SCOPE_T04,
      "Conditional approval. The amendments named in each section are part of the approval."),
     # ---- Delegated / unresolved ---------------------------------------------------------
-    ("T04-DEC-X01", _DP, "The 'Q3' WhatsApp line is deferred to CAIR with an unclear referent",
+    ("T04-DEC-X01", _DP, "The 'Q3' WhatsApp line — misattributed in Stage 4.2F-B0.9, "
+                          "corrected to Firdaus authorship",
      "Q3 tu nnt u pilih ya",
      "WHATSAPP", ["T04-CNF-03"], _SCOPE_T04,
-     "No content change. The referent is ambiguous and the choice is unmade. This is a "
-     "delegation, not an authority-originated rule."),
+     "No content change, and no authority act. Stage 4.2F-B0.9 recorded this as a Bariah "
+     "delegation; the rendered screenshot shows it is Firdaus's own message. See T04-COR-02. "
+     "The record is retained so the correction is traceable, not because it decides "
+     "anything."),
     ("T04-DEC-X02", _DP, "The Q5 answer key remains a proposal",
      "Jawapan | Cadangan jawapan sahaja — belum muktamad.",
      "E", ["T04-QZ-Q1", "T04-QZ-Q2", "T04-QZ-Q3", "T04-QZ-Q4", "T04-QZ-Q5"], _SCOPE_T04,
@@ -577,7 +594,10 @@ def _decision_register():
             decision_class=cls,
             decision_class_meaning=DECISION_CLASS_MEANING[cls],
             subject=subject,
-            authority="BARIAH_AHMAD",
+            # T04-DEC-X01 is retained for traceability only and is NOT a Bariah act — see
+            # T04-COR-02. Every other decision in this register is hers.
+            authority=("FIRDAUS_NOT_AN_AUTHORITY_ACT" if did == "T04-DEC-X01"
+                       else "BARIAH_AHMAD"),
             authority_quote=quote,
             source_artifact=("AUTH-EV-02" if section == "WHATSAPP" else "AUTH-EV-01"),
             source_section=section,

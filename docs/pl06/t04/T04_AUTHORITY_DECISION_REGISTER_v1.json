@@ -935,8 +935,8 @@
    "decision_id": "T04-DEC-X01",
    "decision_class": "DELEGATED_PENDING_AUTHORITY_CONFIRMATION",
    "decision_class_meaning": "Bariah handed the choice to CAIR, or the referent is ambiguous. Not settled.",
-   "subject": "The 'Q3' WhatsApp line is deferred to CAIR with an unclear referent",
-   "authority": "BARIAH_AHMAD",
+   "subject": "The 'Q3' WhatsApp line — misattributed in Stage 4.2F-B0.9, corrected to Firdaus authorship",
+   "authority": "FIRDAUS_NOT_AN_AUTHORITY_ACT",
    "authority_quote": "Q3 tu nnt u pilih ya",
    "source_artifact": "AUTH-EV-02",
    "source_section": "WHATSAPP",
@@ -945,7 +945,7 @@
     "T04-CNF-03"
    ],
    "scope": "T04_ONLY",
-   "effect": "No content change. The referent is ambiguous and the choice is unmade. This is a delegation, not an authority-originated rule.",
+   "effect": "No content change, and no authority act. Stage 4.2F-B0.9 recorded this as a Bariah delegation; the rendered screenshot shows it is Firdaus's own message. See T04-COR-02. The record is retained so the correction is traceable, not because it decides anything.",
    "authored_by_authority": false,
    "settled": false
   },

@@ -19,7 +19,7 @@ The WhatsApp screenshot itself was not supplied to this run. Its byte size, SHA-
 |---|---|---|---|
 | T04-CNF-01 | “Yes to both screenshots” | CONFIRMED_BY_AUTHORITY | no |
 | T04-CNF-02 | “Q5 multiple response - yes, ok” | CONFIRMED_BY_AUTHORITY | yes |
-| T04-CNF-03 | “Q3 tu nnt u pilih ya” | AMBIGUOUS_REFERENT_NOT_ACTIONABLE | no |
+| T04-CNF-03 | “Q3 tu nnt u pilih ya” | NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9 | no |
 
 ## T04-CNF-01 — Acceptance of both structural screenshot items put to Bariah
 
@@ -53,19 +53,19 @@ The WhatsApp screenshot itself was not supplied to this run. Its byte size, SHA-
 
 **What this does not establish.** Anything about the Q5 option set or the answer key. Both are governed by the DOCX instruction and remain unconfirmed.
 
-## T04-CNF-03 — A deferred choice on an item Bariah referred to as 'Q3'
+## T04-CNF-03 — A line recorded here in error as Bariah's; it is Firdaus deferring his own third confirmation request
 
 **Authority wording.** “Q3 tu nnt u pilih ya”
 
 | Field | Value |
 |---|---|
 | evidence | AUTH-EV-02 |
-| status | AMBIGUOUS_REFERENT_NOT_ACTIONABLE |
+| status | NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9 |
 | evidence grade | DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED |
 | applied to content | no |
 | blocking | no |
 
-**Interpretation.** Bariah deferred a choice and asked CAIR to make it later. That is a delegation, not a rule Bariah issued. It is therefore NOT classified as an authority-originated rule, and it produces no content change in this stage.
+**Interpretation.** Firdaus deferred his own third confirmation request. Bariah answered that request explicitly three minutes later. There is no delegation from the authority to CAIR anywhere in this exchange, and this record produces no content change.
 
 **What this does not establish.** What 'Q3' refers to, and what the choice is between. Quiz Q3 already has a specific, complete PINDA instruction in the DOCX, which makes the quiz-item reading redundant and therefore suspect. The referent stays open.
 

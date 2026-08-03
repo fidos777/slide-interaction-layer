@@ -275,8 +275,11 @@ def run():
         + [d["decision_id"] for d in REG if d["decision_id"] in ("Q3", "T04-DEC-Q3")], [],
         len(CNF) + len(REG), "T04_AUTHORITY_CONFIRMATIONS_v1.json")
     q3 = [c for c in CNF if c.get("ambiguous_label_as_written") == "Q3"]
-    chk("Q3_AMBIGUITY_RECORDED_AS_AMBIGUOUS", CONFIRMATION_DISCIPLINE,
-        [c["status"] for c in q3], ["AMBIGUOUS_REFERENT_NOT_ACTIONABLE"], len(q3),
+    # Corrected in Stage 4.2F-B0.9.1: the line is Firdaus's, so it is not an authority
+    # statement and must not be carried as one. See T04-COR-02.
+    chk("Q3_LINE_RECORDED_AS_FIRDAUS_NOT_AUTHORITY", CONFIRMATION_DISCIPLINE,
+        [(c["status"], c.get("author"), c.get("is_authority_statement")) for c in q3],
+        [("NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9", "FIRDAUS", False)], len(q3),
         "T04_AUTHORITY_CONFIRMATIONS_v1.json")
     chk("Q3_CANDIDATE_REFERENTS_BOTH_LISTED", CONFIRMATION_DISCIPLINE,
         [len(c["candidate_referents"]) for c in q3], [2], len(q3),
@@ -288,9 +291,12 @@ def run():
         [c["confirmation_id"] for c in CNF
          if "BARIAH_ORIGINATED_RULE" in json.dumps(c, ensure_ascii=False)], [], len(CNF),
         "T04_AUTHORITY_CONFIRMATIONS_v1.json")
-    chk("Q3_DELEGATION_RECORDED_AS_DELEGATION", CONFIRMATION_DISCIPLINE,
+    chk("Q3_LINE_NOT_RECORDED_AS_A_DELEGATION", CONFIRMATION_DISCIPLINE,
         [c.get("secondary_status") for c in q3],
-        ["DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION"], len(q3),
+        ["RETAINED_FOR_TRACEABILITY_NOT_ACTIONABLE"], len(q3),
+        "T04_AUTHORITY_CONFIRMATIONS_v1.json")
+    chk("Q3_MISATTRIBUTION_CARRIES_ITS_CORRECTION_ID", CONFIRMATION_DISCIPLINE,
+        [c.get("correction_id") for c in q3], ["T04-COR-02"], len(q3),
         "T04_AUTHORITY_CONFIRMATIONS_v1.json")
     chk("EVERY_CONFIRMATION_CARRIES_ITS_QUOTE", CONFIRMATION_DISCIPLINE,
         [c["confirmation_id"] for c in CNF if not c["authority_quote"]], [], len(CNF),
@@ -977,9 +983,15 @@ def run():
         [s for s in guard_blob
          if re.search(r"CAIR[^.]{0,40}instructional designer", s, re.I)], [],
         len(guard_blob), "T04_FINAL_CONTENT_MODEL_v1.json")
-    chk("AUTHORITY_IS_ALWAYS_BARIAH", PRODUCTION_GUARD,
-        sorted({d["authority"] for d in REG}), ["BARIAH_AHMAD"], len(REG),
-        "T04_AUTHORITY_DECISION_REGISTER_v1.json")
+    # Every decision that decides anything is Bariah's. Exactly one record is retained for
+    # traceability without being an authority act, and it is named rather than filtered out —
+    # a bare filter here would let a second non-authority record slip in unseen.
+    chk("EVERY_AUTHORITY_ACT_IS_BARIAHS", PRODUCTION_GUARD,
+        sorted({d["authority"] for d in REG if d["decision_id"] != "T04-DEC-X01"}),
+        ["BARIAH_AHMAD"], len(REG), "T04_AUTHORITY_DECISION_REGISTER_v1.json")
+    chk("EXACTLY_ONE_NON_AUTHORITY_RECORD_AND_IT_IS_NAMED", PRODUCTION_GUARD,
+        sorted(d["decision_id"] for d in REG if d["authority"] != "BARIAH_AHMAD"),
+        ["T04-DEC-X01"], len(REG), "T04_AUTHORITY_DECISION_REGISTER_v1.json")
     try:
         touched = subprocess.run(["git", "status", "--porcelain"], cwd=REPO,
                                  capture_output=True, text=True, timeout=60).stdout

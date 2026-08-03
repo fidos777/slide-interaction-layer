@@ -5,7 +5,9 @@
  "statuses": [
   "CONFIRMED_BY_AUTHORITY",
   "DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION",
-  "AMBIGUOUS_REFERENT_NOT_ACTIONABLE"
+  "AMBIGUOUS_REFERENT_NOT_ACTIONABLE",
+  "NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9",
+  "RETAINED_FOR_TRACEABILITY_NOT_ACTIONABLE"
  ],
  "records": [
   {
@@ -40,9 +42,12 @@
    "evidence_id": "AUTH-EV-02",
    "authority_quote": "Q3 tu nnt u pilih ya",
    "also_recorded_as": null,
-   "subject": "A deferred choice on an item Bariah referred to as 'Q3'",
-   "status": "AMBIGUOUS_REFERENT_NOT_ACTIONABLE",
-   "secondary_status": "DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION",
+   "subject": "A line recorded here in error as Bariah's; it is Firdaus deferring his own third confirmation request",
+   "author": "FIRDAUS",
+   "is_authority_statement": false,
+   "status": "NOT_AN_AUTHORITY_STATEMENT_MISATTRIBUTED_IN_B0_9",
+   "secondary_status": "RETAINED_FOR_TRACEABILITY_NOT_ACTIONABLE",
+   "correction_id": "T04-COR-02",
    "evidence_grade": "DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
    "ambiguous_label_as_written": "Q3",
    "label_not_used_as_decision_id": true,
@@ -50,7 +55,7 @@
     "Quiz item Q3 in Section E of the review package (Pendekatan IPM).",
     "The third question or third item in the WhatsApp exchange itself, which this run cannot see."
    ],
-   "interpretation": "Bariah deferred a choice and asked CAIR to make it later. That is a delegation, not a rule Bariah issued. It is therefore NOT classified as an authority-originated rule, and it produces no content change in this stage.",
+   "interpretation": "Firdaus deferred his own third confirmation request. Bariah answered that request explicitly three minutes later. There is no delegation from the authority to CAIR anywhere in this exchange, and this record produces no content change.",
    "what_this_does_not_establish": "What 'Q3' refers to, and what the choice is between. Quiz Q3 already has a specific, complete PINDA instruction in the DOCX, which makes the quiz-item reading redundant and therefore suspect. The referent stays open.",
    "applied_to_content": false,
    "blocking": false,

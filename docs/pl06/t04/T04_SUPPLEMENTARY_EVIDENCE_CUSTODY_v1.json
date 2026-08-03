@@ -1,0 +1,126 @@
+{
+ "stage": "4.2F-B0.9.1",
+ "generated_by": "docs/pl06/t04/tools/t04_supplementary_evidence_emit_v1.py",
+ "custody_outcome": "FAILED_NO_BINARY_SUPPLIED",
+ "intended_custody_path": "reviews/storyboard-bariah/t04_bariah_review/T04_BARIAH_WHATSAPP_CONFIRMATION_2026-08-03.png",
+ "search_locations": [
+  {
+   "location": "/mnt/data",
+   "result": "DOES_NOT_EXIST",
+   "note": "Named in the stage brief. This environment has no such mount, as was already recorded in Stage 4.2F-B0.9."
+  },
+  {
+   "location": "/root/.claude/uploads/12837c42-b6ab-597b-8301-85c5b457471b/",
+   "result": "NO_IMAGE_NEWER_THAN_THE_PREVIOUS_STAGE",
+   "note": "21 files. The newest is 698bf575-T04_Pakej_Semakan_Bariah_v3_vBariah.docx at 2026-08-03 02:28. No PNG, JPG or WEBP was added for this stage."
+  },
+  {
+   "location": "whole filesystem, one device, modified after 2026-08-03 02:29",
+   "result": "NO_MATCHING_IMAGE",
+   "note": "find over png/webp/jpg excluding system and vendor trees returned nothing."
+  },
+  {
+   "location": "/root/.claude/projects/<session>/tool-results/",
+   "result": "NO_IMAGE",
+   "note": "Two cached tool-result text files, neither an image."
+  }
+ ],
+ "custody_fields": [
+  {
+   "field": "original_runtime_path",
+   "value": "NOT_AVAILABLE_NO_BINARY",
+   "why": "The image was rendered into the conversation, not written to disk."
+  },
+  {
+   "field": "repository_custody_path",
+   "value": "NOT_CREATED",
+   "why": "Nothing to copy. An empty or reconstructed file would be a forgery, not custody."
+  },
+  {
+   "field": "byte_size",
+   "value": "NOT_AVAILABLE_NO_BINARY",
+   "why": "No file to measure."
+  },
+  {
+   "field": "sha256",
+   "value": "NOT_AVAILABLE_NO_BINARY",
+   "why": "No bytes to hash."
+  },
+  {
+   "field": "mime_type",
+   "value": "NOT_AVAILABLE_NO_BINARY",
+   "why": "No file header to read. The conversation labels it a PNG; that is a label, not a measurement, and it is not recorded as one."
+  },
+  {
+   "field": "pixel_width",
+   "value": "NOT_AVAILABLE_NO_BINARY",
+   "why": "No image header."
+  },
+  {
+   "field": "pixel_height",
+   "value": "NOT_AVAILABLE_NO_BINARY",
+   "why": "No image header."
+  },
+  {
+   "field": "file_format_validation",
+   "value": "NOT_PERFORMED_NO_BINARY",
+   "why": "Nothing to validate."
+  },
+  {
+   "field": "intake_time",
+   "value": "NOT_APPLICABLE_NO_INTAKE",
+   "why": "No file was taken in, so there is no intake event to timestamp."
+  },
+  {
+   "field": "byte_identity_vs_source",
+   "value": "NOT_VERIFIABLE_NO_BINARY",
+   "why": "A custody copy can only be compared against a source that exists."
+  }
+ ],
+ "timestamp_classes": [
+  {
+   "timestamp_class": "VISIBLE_IN_SCREENSHOT",
+   "available": true,
+   "values": [
+    "7:17 AM",
+    "7:18 AM",
+    "7:20 AM",
+    "7:20 AM",
+    "7:21 AM"
+   ],
+   "date_shown": "Today (the thread's own date separator; the calendar date is not rendered in the captured region)",
+   "basis": "read from the rendered pixels",
+   "note": "These are the times WhatsApp displays beside each bubble. They are evidence of message ordering within the conversation, nothing more. They are not file timestamps and are not treated as any."
+  },
+  {
+   "timestamp_class": "RUNTIME_FILESYSTEM",
+   "available": false,
+   "values": "NOT_AVAILABLE_NO_BINARY",
+   "basis": null,
+   "note": "There is no file, so there is no mtime, ctime or atime."
+  },
+  {
+   "timestamp_class": "IMAGE_METADATA_EXIF",
+   "available": false,
+   "values": "NOT_AVAILABLE_NO_BINARY",
+   "basis": null,
+   "note": "No EXIF was read and none is asserted. WhatsApp screenshots frequently carry none at all, but that is a general remark and not a finding about this file."
+  }
+ ],
+ "blocker": {
+  "blocker_id": "B091-BLOCK-01",
+  "subject": "Supplementary screenshot custody",
+  "required": "A PNG binary to hash, measure, validate and freeze.",
+  "observed": "No image file exists in this environment.",
+  "consequence": "The evidence class cannot be upgraded to AUTHORITY_DIRECT_SCREENSHOT, the NOT_SUPPLIED custody state cannot be cleared, and no superseding release record is issued. Stage 4.2F-B1 does not start.",
+  "what_would_unblock": "Re-send the screenshot as a file attachment so it lands in the uploads directory. Everything else in this stage is already done and will not need repeating.",
+  "owner": "FIRDAUS"
+ },
+ "release_record_not_issued": {
+  "would_be_verdict": "T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD",
+  "issued": false,
+  "why_not_issued": "Custody failed. See B091-BLOCK-01.",
+  "superseding": false,
+  "prior_release_record_stands": "STAGE_4_2F_B0_9_RUN_MANIFEST.md §16"
+ }
+}

@@ -169,10 +169,11 @@ FIXTURES = [
              s for s in D.SUPERSEDED_ARTIFACTS if "v2.docx" not in s["path"]])),
 
     # ================= confirmation discipline =================
-    dict(fid="B-01", title="the ambiguous Q3 line is resolved to quiz Q3 without authority",
-         gates=["Q3_AMBIGUITY_RECORDED_AS_AMBIGUOUS", "Q3_CHANGES_NO_CONTENT"],
+    dict(fid="B-01", title="the Firdaus-authored Q3 line is re-presented as a Bariah confirmation",
+         gates=["Q3_LINE_RECORDED_AS_FIRDAUS_NOT_AUTHORITY", "Q3_CHANGES_NO_CONTENT"],
          patch=_cnf(lambda c: _find(c, "confirmation_id", "T04-CNF-03").update(
-             status="CONFIRMED_BY_AUTHORITY", applied_to_content=True))),
+             status="CONFIRMED_BY_AUTHORITY", author="BARIAH", is_authority_statement=True,
+             applied_to_content=True))),
     dict(fid="B-02", title="the Q3 delegation is relabelled a Bariah-originated rule",
          gates=["Q3_NOT_LABELLED_AN_AUTHORITY_ORIGINATED_RULE"],
          patch=_cnf(lambda c: _find(c, "confirmation_id", "T04-CNF-03").update(
@@ -567,8 +568,8 @@ FIXTURES = [
          gates=["CAIR_NOT_NAMED_INSTRUCTIONAL_DESIGNER"],
          patch=_vis(lambda v: v.update(
              what_is_not_approved="CAIR acts as instructional designer for the asset set."))),
-    dict(fid="K-10", title="a decision is attributed to an authority other than Bariah",
-         gates=["AUTHORITY_IS_ALWAYS_BARIAH"],
+    dict(fid="K-10", title="a deciding record is attributed to someone other than Bariah",
+         gates=["EVERY_AUTHORITY_ACT_IS_BARIAHS"],
          patch=_reg(lambda r: _find(r, "decision_id", "T04-DEC-B05").update(
              authority="FIRDAUS"))),
 

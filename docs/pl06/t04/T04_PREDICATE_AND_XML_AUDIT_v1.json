@@ -1,0 +1,624 @@
+{
+ "stage": "4.2F-B0.9.1",
+ "generated_by": "docs/pl06/t04/tools/t04_supplementary_evidence_emit_v1.py",
+ "predicate_audit": {
+  "stage": "4.2F-B0.9.1",
+  "closed_populations": 18,
+  "excluded_populations": 5,
+  "failing": [],
+  "total_unexpected_additions": 0,
+  "total_unexpected_removals": 0,
+  "rows": [
+   {
+    "population_id": "POP-01",
+    "selector": "decision_class == \"DELEGATED_PENDING_AUTHORITY_CONFIRMATION\"",
+    "mutable_property": "decision_class",
+    "expected_members": [
+     "T04-DEC-X01",
+     "T04-DEC-X02"
+    ],
+    "observed_members": [
+     "T04-DEC-X01",
+     "T04-DEC-X02"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 2,
+    "observed_count": 2,
+    "count_delta": 0,
+    "guarded_by": [
+     "THE_Q3_DELEGATION_KEEPS_ITS_DELEGATED_CLASS",
+     "UNSETTLED_DECISIONS_ARE_ONLY_THE_DELEGATED_CLASS"
+    ],
+    "origin_fixture": "C-05",
+    "ok": true
+   },
+   {
+    "population_id": "POP-02",
+    "selector": "settled is False",
+    "mutable_property": "settled",
+    "expected_members": [
+     "T04-DEC-X01",
+     "T04-DEC-X02"
+    ],
+    "observed_members": [
+     "T04-DEC-X01",
+     "T04-DEC-X02"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 2,
+    "observed_count": 2,
+    "count_delta": 0,
+    "guarded_by": [
+     "THE_TWO_NAMED_DELEGATIONS_REMAIN_UNSETTLED"
+    ],
+    "origin_fixture": "C-05",
+    "ok": true
+   },
+   {
+    "population_id": "POP-03",
+    "selector": "scope == \"ALL_PLS_IN_KURSUS\"",
+    "mutable_property": "scope",
+    "expected_members": [
+     "T04-DEC-E06",
+     "T04-DEC-E07"
+    ],
+    "observed_members": [
+     "T04-DEC-E06",
+     "T04-DEC-E07"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 2,
+    "observed_count": 2,
+    "count_delta": 0,
+    "guarded_by": [
+     "ONLY_TWO_DECISIONS_ARE_COURSE_WIDE",
+     "NO_RUMUSAN_DECISION_IS_COURSE_WIDE",
+     "NO_DIALOGUE_DECISION_IS_COURSE_WIDE"
+    ],
+    "origin_fixture": "G-03 / G-04",
+    "ok": true
+   },
+   {
+    "population_id": "POP-04",
+    "selector": "change_type contains \"TREATMENT_CHANGED\"",
+    "mutable_property": "change_type",
+    "expected_members": [
+     "T04-S12",
+     "T04-S13",
+     "T04-S16",
+     "T04-S17"
+    ],
+    "observed_members": [
+     "T04-S12",
+     "T04-S13",
+     "T04-S16",
+     "T04-S17"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 4,
+    "observed_count": 4,
+    "count_delta": 0,
+    "guarded_by": [
+     "FOUR_TREATMENTS_CHANGED",
+     "EVERY_TREATMENT_CHANGE_ACTUALLY_CHANGES_THE_TREATMENT"
+    ],
+    "origin_fixture": "D-08",
+    "ok": true
+   },
+   {
+    "population_id": "POP-05",
+    "selector": "change_type == \"INSERTED\"",
+    "mutable_property": "change_type",
+    "expected_members": [
+     "T04-S14"
+    ],
+    "observed_members": [
+     "T04-S14"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 1,
+    "observed_count": 1,
+    "count_delta": 0,
+    "guarded_by": [
+     "EXACTLY_ONE_SCREEN_INSERTED",
+     "INSERTED_SCREEN_IS_SOURCE_BOUND"
+    ],
+    "origin_fixture": "D-01",
+    "ok": true
+   },
+   {
+    "population_id": "POP-06",
+    "selector": "change_type == \"RENUMBERED\"",
+    "mutable_property": "change_type",
+    "expected_members": [
+     "T04-S15",
+     "T04-S19"
+    ],
+    "observed_members": [
+     "T04-S15",
+     "T04-S19"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 2,
+    "observed_count": 2,
+    "count_delta": 0,
+    "guarded_by": [
+     "RENUMBER_ONLY_SCREENS_KEEP_THEIR_TREATMENT",
+     "EIGHT_SCREENS_RENUMBERED"
+    ],
+    "origin_fixture": "D-09",
+    "ok": true
+   },
+   {
+    "population_id": "POP-07",
+    "selector": "question_type == \"MULTIPLE_RESPONSE\"",
+    "mutable_property": "question_type",
+    "expected_members": [
+     "T04-QZ-Q5"
+    ],
+    "observed_members": [
+     "T04-QZ-Q5"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 1,
+    "observed_count": 1,
+    "count_delta": 0,
+    "guarded_by": [
+     "MULTIPLE_RESPONSE_OPTIONS_USE_CHECKBOXES",
+     "MULTIPLE_RESPONSE_OPTIONS_CARRY_NO_LETTER",
+     "MULTIPLE_RESPONSE_HAS_MORE_THAN_ONE_KEY",
+     "Q5_HAS_SIX_OPTIONS"
+    ],
+    "origin_fixture": "F-03",
+    "ok": true
+   },
+   {
+    "population_id": "POP-08",
+    "selector": "question_type == \"MCQ\"",
+    "mutable_property": "question_type",
+    "expected_members": [
+     "T04-QZ-Q1",
+     "T04-QZ-Q2",
+     "T04-QZ-Q3",
+     "T04-QZ-Q4"
+    ],
+    "observed_members": [
+     "T04-QZ-Q1",
+     "T04-QZ-Q2",
+     "T04-QZ-Q3",
+     "T04-QZ-Q4"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 4,
+    "observed_count": 4,
+    "count_delta": 0,
+    "guarded_by": [
+     "MCQ_OPTIONS_KEEP_THEIR_LETTERS",
+     "MCQ_ITEMS_HAVE_EXACTLY_ONE_KEY"
+    ],
+    "origin_fixture": "F-03",
+    "ok": true
+   },
+   {
+    "population_id": "POP-09",
+    "selector": "treatment == \"CONTENT_STATIC\"",
+    "mutable_property": "treatment",
+    "expected_members": [
+     "T04-S04",
+     "T04-S05",
+     "T04-S08",
+     "T04-S11",
+     "T04-S12",
+     "T04-S13",
+     "T04-S15",
+     "T04-S17",
+     "T04-S18"
+    ],
+    "observed_members": [
+     "T04-S04",
+     "T04-S05",
+     "T04-S08",
+     "T04-S11",
+     "T04-S12",
+     "T04-S13",
+     "T04-S15",
+     "T04-S17",
+     "T04-S18"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 9,
+    "observed_count": 9,
+    "count_delta": 0,
+    "guarded_by": [
+     "STATIC_SCREENS_HAVE_NO_REVEAL_STATES"
+    ],
+    "origin_fixture": "D-10",
+    "ok": true
+   },
+   {
+    "population_id": "POP-10",
+    "selector": "named_reveal_items is non-empty",
+    "mutable_property": "named_reveal_items",
+    "expected_members": [
+     "T04-S14",
+     "T04-S16"
+    ],
+    "observed_members": [
+     "T04-S14",
+     "T04-S16"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 2,
+    "observed_count": 2,
+    "count_delta": 0,
+    "guarded_by": [
+     "NAMED_REVEAL_ITEMS_PRESENT_ON_BOTH_SCREENS",
+     "REVEAL_SCREENS_HAVE_A_STATE_PER_NAMED_ITEM",
+     "PPE_LENGKAP_IS_A_NAMED_REVEAL_ON_S16"
+    ],
+    "origin_fixture": "D-07",
+    "ok": true
+   },
+   {
+    "population_id": "POP-11",
+    "selector": "named_aspect_list is non-empty",
+    "mutable_property": "named_aspect_list",
+    "expected_members": [
+     "T04-S05",
+     "T04-S08",
+     "T04-S11"
+    ],
+    "observed_members": [
+     "T04-S05",
+     "T04-S08",
+     "T04-S11"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 3,
+    "observed_count": 3,
+    "count_delta": 0,
+    "guarded_by": [
+     "ASPECT_LISTS_ON_THE_THREE_MAIN_EXPLANATION_SCREENS"
+    ],
+    "origin_fixture": "D-15",
+    "ok": true
+   },
+   {
+    "population_id": "POP-12",
+    "selector": "decision_class == \"AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR\"",
+    "mutable_property": "decision_class",
+    "expected_members": [
+     "T04-DEC-A12",
+     "T04-DEC-A13",
+     "T04-DEC-A16",
+     "T04-DEC-A17",
+     "T04-DEC-A18",
+     "T04-DEC-A22",
+     "T04-DEC-B06",
+     "T04-DEC-C03",
+     "T04-DEC-E08"
+    ],
+    "observed_members": [
+     "T04-DEC-A12",
+     "T04-DEC-A13",
+     "T04-DEC-A16",
+     "T04-DEC-A17",
+     "T04-DEC-A18",
+     "T04-DEC-A22",
+     "T04-DEC-B06",
+     "T04-DEC-C03",
+     "T04-DEC-E08"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 9,
+    "observed_count": 9,
+    "count_delta": 0,
+    "guarded_by": [
+     "CAIR_EXECUTED_DECISIONS_ARE_NOT_AUTHORITY_AUTHORED"
+    ],
+    "origin_fixture": "C-02",
+    "ok": true
+   },
+   {
+    "population_id": "POP-13",
+    "selector": "decision_class == \"AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT\"",
+    "mutable_property": "decision_class",
+    "expected_members": [
+     "T04-DEC-C01",
+     "T04-DEC-D01",
+     "T04-DEC-E01",
+     "T04-DEC-E02",
+     "T04-DEC-E03",
+     "T04-DEC-E04",
+     "T04-DEC-E05"
+    ],
+    "observed_members": [
+     "T04-DEC-C01",
+     "T04-DEC-D01",
+     "T04-DEC-E01",
+     "T04-DEC-E02",
+     "T04-DEC-E03",
+     "T04-DEC-E04",
+     "T04-DEC-E05"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 7,
+    "observed_count": 7,
+    "count_delta": 0,
+    "guarded_by": [
+     "AUTHORITY_SUPPLIED_TEXT_IS_MARKED_AUTHORITY_AUTHORED"
+    ],
+    "origin_fixture": "C-01",
+    "ok": true
+   },
+   {
+    "population_id": "POP-14",
+    "selector": "source_artifact == \"AUTH-EV-02\"  (the WhatsApp evidence)",
+    "mutable_property": "source_artifact",
+    "expected_members": [
+     "T04-DEC-X01"
+    ],
+    "observed_members": [
+     "T04-DEC-X01"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 1,
+    "observed_count": 1,
+    "count_delta": 0,
+    "guarded_by": [
+     "WHATSAPP_DECISIONS_CARRY_THE_DEGRADED_GRADE"
+    ],
+    "origin_fixture": "C-04",
+    "ok": true
+   },
+   {
+    "population_id": "POP-15",
+    "selector": "settled is False, among the ten final states",
+    "mutable_property": "settled",
+    "expected_members": [
+     "FS-07",
+     "FS-08"
+    ],
+    "observed_members": [
+     "FS-07",
+     "FS-08"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 2,
+    "observed_count": 2,
+    "count_delta": 0,
+    "guarded_by": [
+     "TWO_CLASSES_ARE_FROZEN_BUT_NOT_SETTLED",
+     "Q5_OPTIONS_STATE_IS_PENDING_CONFIRMATION",
+     "ANSWER_KEY_STATE_IS_PROPOSED_NOT_FINAL"
+    ],
+    "origin_fixture": "K-01 / K-02",
+    "ok": true
+   },
+   {
+    "population_id": "POP-16",
+    "selector": "supplied_in_this_run is False, among the evidence records",
+    "mutable_property": "supplied_in_this_run",
+    "expected_members": [
+     "AUTH-EV-02"
+    ],
+    "observed_members": [
+     "AUTH-EV-02"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 1,
+    "observed_count": 1,
+    "count_delta": 0,
+    "guarded_by": [
+     "SUPPLEMENTARY_EVIDENCE_MARKED_NOT_SUPPLIED",
+     "NO_FABRICATED_HASH_FOR_UNSUPPLIED_EVIDENCE"
+    ],
+    "origin_fixture": "A-02",
+    "ok": true
+   },
+   {
+    "population_id": "POP-17",
+    "selector": "restriction == \"REUSE_NOT_ALLOWED\"",
+    "mutable_property": "restriction",
+    "expected_members": [
+     "T04-VO-025",
+     "T04-VO-026",
+     "T04-VO-039"
+    ],
+    "observed_members": [
+     "T04-VO-025",
+     "T04-VO-026",
+     "T04-VO-039"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 3,
+    "observed_count": 3,
+    "count_delta": 0,
+    "guarded_by": [
+     "THREE_DO_NOT_REUSE_ITEMS",
+     "ALL_THREE_BASES_ARE_BOTH_LENSES",
+     "RESTRICTIONS_ARE_ITEM_LEVEL_NOT_GROUP_LEVEL"
+    ],
+    "origin_fixture": "H-03 / H-05",
+    "ok": true
+   },
+   {
+    "population_id": "POP-18",
+    "selector": "open items carried past this stage",
+    "mutable_property": "membership of OPEN_AFTER_THIS_STAGE",
+    "expected_members": [
+     "E-01",
+     "E-02",
+     "E-03",
+     "E-04",
+     "E-05",
+     "E-06"
+    ],
+    "observed_members": [
+     "E-01",
+     "E-02",
+     "E-03",
+     "E-04",
+     "E-05",
+     "E-06"
+    ],
+    "unexpected_additions": [],
+    "unexpected_removals": [],
+    "expected_count": 6,
+    "observed_count": 6,
+    "count_delta": 0,
+    "guarded_by": [
+     "E01_TO_E04_ARE_NOT_CLOSED",
+     "SIX_ITEMS_STAY_OPEN_AFTER_THIS_STAGE"
+    ],
+    "origin_fixture": "K-04",
+    "ok": true
+   }
+  ],
+  "exclusions": [
+   {
+    "exclusion_id": "EXC-01",
+    "selector": "every substantive string in the record set",
+    "used_by": [
+     "FORBIDDEN_LABELS_ABSENT_FROM_EVERY_RECORD",
+     "CAIR_NOT_NAMED_INSTRUCTIONAL_DESIGNER",
+     "FINAL_CONTENT_IS_NOT_MARKED_SOURCE_UNSUPPORTED"
+    ],
+    "why": "Population size is in the thousands and changes with any prose edit. The gate asserts an empty result over everything, which is the strongest form already — nothing can leave the population without leaving the model entirely.",
+    "delta_guard": "the gate fails if the population reaches zero (NO_VACUOUS_GATES)"
+   },
+   {
+    "exclusion_id": "EXC-02",
+    "selector": "every file in docs/pl06/t04/",
+    "used_by": [
+     "NO_T04_PPTX_ON_DISK"
+    ],
+    "why": "Directory contents legitimately grow every stage. Naming the members would require editing this list on every unrelated artifact addition, which trains the reader to ignore it.",
+    "delta_guard": "the assertion is an empty result over all files, not over a subset"
+   },
+   {
+    "exclusion_id": "EXC-03",
+    "selector": "every gate record emitted by this suite",
+    "used_by": [
+     "EVERY_GATE_IS_TYPED",
+     "NO_DUPLICATE_GATE_IDS",
+     "NO_VACUOUS_GATES",
+     "EVERY_GATE_NAMES_ITS_SOURCE_ARTIFACT",
+     "EVERY_GATE_DECLARES_A_POPULATION"
+    ],
+    "why": "Self-referential and open by design — the suite grows. Membership is the whole suite, so nothing can leave it without being deleted, which the count catches.",
+    "delta_guard": "ACTIVE_GATE_COUNT is reported and compared stage to stage"
+   },
+   {
+    "exclusion_id": "EXC-04",
+    "selector": "every controlled source row referenced by the sequence or the quiz",
+    "used_by": [
+     "EVERY_SOURCE_ROW_RESOLVES",
+     "EVERY_QUIZ_SOURCE_ROW_RESOLVES"
+    ],
+    "why": "The row set is large and is governed by the extraction stage's own suite, not this one. Duplicating 100 row IDs here would create a second source of truth.",
+    "delta_guard": "SOURCE_BINDINGS_NOT_REMOVED_FROM_THE_MODEL asserts the prior row set is still fully covered — a genuine delta assertion"
+   },
+   {
+    "exclusion_id": "EXC-05",
+    "selector": "every emitted artifact scanned for stale facts",
+    "used_by": [
+     "NO_EMITTED_ARTIFACT_ASSERTS_A_STALE_FACT_AS_CURRENT"
+    ],
+    "why": "Artifact list grows per stage; membership is asserted separately by EVERY_DECLARED_ARTIFACT_WAS_EMITTED and TWENTY_FOUR_ARTIFACTS_DECLARED.",
+    "delta_guard": "STALE_FACT_SCAN_ACTUALLY_MATCHED_SOMETHING prevents the scan going vacuously green"
+   }
+  ]
+ },
+ "xml_proofs": [
+  {
+   "case_id": "XML-01",
+   "description": "<w:insideH> is not <w:ins>",
+   "local_name": "ins",
+   "exact_match_count": 0,
+   "expected_exact": 0,
+   "naive_substring_count": 1,
+   "exact_is_correct": true,
+   "kind": "CONFUSION",
+   "naive_would_have_been_wrong": true,
+   "ok": true
+  },
+  {
+   "case_id": "XML-02",
+   "description": "<w:insideV> is not <w:ins>",
+   "local_name": "ins",
+   "exact_match_count": 0,
+   "expected_exact": 0,
+   "naive_substring_count": 1,
+   "exact_is_correct": true,
+   "kind": "CONFUSION",
+   "naive_would_have_been_wrong": true,
+   "ok": true
+  },
+  {
+   "case_id": "XML-03",
+   "description": "<w:tcPr> is not <w:t>",
+   "local_name": "t",
+   "exact_match_count": 0,
+   "expected_exact": 0,
+   "naive_substring_count": 4,
+   "exact_is_correct": true,
+   "kind": "CONFUSION",
+   "naive_would_have_been_wrong": true,
+   "ok": true
+  },
+  {
+   "case_id": "XML-04",
+   "description": "a real <w:ins> is still found",
+   "local_name": "ins",
+   "exact_match_count": 1,
+   "expected_exact": 1,
+   "naive_substring_count": 1,
+   "exact_is_correct": true,
+   "kind": "POSITIVE_CONTROL",
+   "naive_would_have_been_wrong": false,
+   "ok": true
+  },
+  {
+   "case_id": "XML-05",
+   "description": "a real <w:t> is still found alongside <w:tcPr>",
+   "local_name": "t",
+   "exact_match_count": 1,
+   "expected_exact": 1,
+   "naive_substring_count": 5,
+   "exact_is_correct": true,
+   "kind": "CONFUSION",
+   "naive_would_have_been_wrong": true,
+   "ok": true
+  },
+  {
+   "case_id": "XML-06",
+   "description": "<w:delText> is not <w:del>",
+   "local_name": "del",
+   "exact_match_count": 0,
+   "expected_exact": 0,
+   "naive_substring_count": 1,
+   "exact_is_correct": true,
+   "kind": "CONFUSION",
+   "naive_would_have_been_wrong": true,
+   "ok": true
+  }
+ ]
+}

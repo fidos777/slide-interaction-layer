@@ -75,7 +75,7 @@ Every decision is typed. A single `ACCEPTED` bucket would erase the difference b
 | T04-DEC-E08 | AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR | Q5 options E and F must be changed | T04-QZ-Q5 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-F01 | ACCEPTED_AS_PROPOSED | BA-1 to BA-4 all marked complete | BA-1, BA-2, BA-3, BA-4 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-F02 | ACCEPTED_AS_PROPOSED | Overall verdict: approved with the stated amendments | T04-VIS-GOV-01 | T04_ONLY | AUTH-EV-01 |
-| T04-DEC-X01 | DELEGATED_PENDING_AUTHORITY_CONFIRMATION | The 'Q3' WhatsApp line is deferred to CAIR with an unclear referent | T04-CNF-03 | T04_ONLY | AUTH-EV-02 |
+| T04-DEC-X01 | DELEGATED_PENDING_AUTHORITY_CONFIRMATION | The 'Q3' WhatsApp line — misattributed in Stage 4.2F-B0.9, corrected to Firdaus authorship | T04-CNF-03 | T04_ONLY | AUTH-EV-02 |
 | T04-DEC-X02 | DELEGATED_PENDING_AUTHORITY_CONFIRMATION | The Q5 answer key remains a proposal | T04-QZ-Q1, T04-QZ-Q2, T04-QZ-Q3, T04-QZ-Q4, T04-QZ-Q5 | T04_ONLY | AUTH-EV-01 |
 
 # 3. Quoted authority wording, per decision
@@ -424,11 +424,11 @@ Every decision is typed. A single `ACCEPTED` bucket would erase the difference b
 
 *Source.* AUTH-EV-01 §F · evidence grade VERIFIED_PRIMARY_ARTIFACT · authored by the authority: yes
 
-**T04-DEC-X01** — The 'Q3' WhatsApp line is deferred to CAIR with an unclear referent
+**T04-DEC-X01** — The 'Q3' WhatsApp line — misattributed in Stage 4.2F-B0.9, corrected to Firdaus authorship
 
 > Q3 tu nnt u pilih ya
 
-*Effect.* No content change. The referent is ambiguous and the choice is unmade. This is a delegation, not an authority-originated rule.
+*Effect.* No content change, and no authority act. Stage 4.2F-B0.9 recorded this as a Bariah delegation; the rendered screenshot shows it is Firdaus's own message. See T04-COR-02. The record is retained so the correction is traceable, not because it decides anything.
 
 *Source.* AUTH-EV-02 §WHATSAPP · evidence grade DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED · authored by the authority: no
 
@@ -503,5 +503,5 @@ Two decisions state their own scope as the whole Kursus. They are recorded as co
 
 | ID | Subject | Why it is open |
 |---|---|---|
-| T04-DEC-X01 | The 'Q3' WhatsApp line is deferred to CAIR with an unclear referent | No content change. The referent is ambiguous and the choice is unmade. This is a delegation, not an authority-originated rule. |
+| T04-DEC-X01 | The 'Q3' WhatsApp line — misattributed in Stage 4.2F-B0.9, corrected to Firdaus authorship | No content change, and no authority act. Stage 4.2F-B0.9 recorded this as a Bariah delegation; the rendered screenshot shows it is Firdaus's own message. See T04-COR-02. The record is retained so the correction is traceable, not because it decides anything. |
 | T04-DEC-X02 | The Q5 answer key remains a proposal | Bariah did not mark any answer key final. All five keys stay PROPOSED_NOT_FINAL. |
