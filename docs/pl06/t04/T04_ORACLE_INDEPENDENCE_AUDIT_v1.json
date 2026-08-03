@@ -1,0 +1,200 @@
+{
+ "stage": "4.2F-B1.1",
+ "release_critical_gates": 12,
+ "oracle_independent": 11,
+ "shared_generator": [
+  "EVERY_MODEL_BLOCK_APPEARS_IN_THE_DECK"
+ ],
+ "shared_generator_justified": [
+  "EVERY_MODEL_BLOCK_APPEARS_IN_THE_DECK"
+ ],
+ "fixed_after_a_fixture": [
+  "THE_RELEASE_DECISION_IS_CARRIED_FORWARD",
+  "THE_PAGE_BUDGET_STAYS_WITHIN_THE_RENDERER_CAPACITY",
+  "EVERY_APPENDIX_PAGE_HOLDS_AT_MOST_TWO_PANELS",
+  "EVERY_FROZEN_PANEL_STATE_IS_IN_THE_APPENDIX_DECK"
+ ],
+ "rows": [
+  {
+   "gate_id": "EXACTLY_TWENTY_TWO_SCREENS",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "literal 22",
+   "observed_value_source": "len(M.screens())",
+   "imported_modules": [
+    "t04_storyboard_model_v1"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "TITLES_MATCH_THE_FIXED_LIST",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "M.EXPECTED_TITLES — a hand-written list, not derived from screens()",
+   "observed_value_source": "[s['title_ms'] for s in M.screens()]",
+   "imported_modules": [
+    "t04_storyboard_model_v1"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "TITLES_AGREE_WITH_THE_FROZEN_SEQUENCE",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "IMMUTABLE_AUTHORITY_ARTIFACT",
+   "expected_detail": "A._final_sequence() — the frozen B0.9 model",
+   "observed_value_source": "M.screens()",
+   "imported_modules": [
+    "t04_authority_data_v1"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "THE_FOUR_DOCX_STEMS_APPEAR_VERBATIM_IN_THE_AUTHORITY_DOCX",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "IMMUTABLE_AUTHORITY_ARTIFACT",
+   "expected_detail": "text extracted from the frozen v3 DOCX on disk",
+   "observed_value_source": "the quiz model",
+   "imported_modules": [
+    "zipfile"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "SOURCE_STRINGS_ARE_VERBATIM",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "HASH_PINNED_CONTROLLED_EXTRACT",
+   "expected_detail": "C.BY_ID[row]['controlled_display_text']",
+   "observed_value_source": "the storyboard block text",
+   "imported_modules": [
+    "t04_content_data_v1"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "DO_NOT_REUSE_IDS_AGREE_WITH_THE_CLOSURE",
+   "suite": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+   "expected_value_source": "HASH_PINNED_CONTROLLED_EXTRACT",
+   "expected_detail": "the closure's own reuse_policy field",
+   "observed_value_source": "the typed do-not-reuse register",
+   "imported_modules": [
+    "t04_content_data_v1"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "THE_RELEASE_DECISION_IS_CARRIED_FORWARD",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "the three verdict tokens written literally in the suite",
+   "observed_value_source": "the evidence-status register",
+   "imported_modules": [],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": "Compared against S.RELEASE_DECISION until fixture E-02 showed it was validating the register against the object it was copied from."
+  },
+  {
+   "gate_id": "THE_PAGE_BUDGET_STAYS_WITHIN_THE_RENDERER_CAPACITY",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "RENDERER_LINE_CAPACITY, measured from the renderer's geometry",
+   "observed_value_source": "MAX_LINES_PER_PAGE, the tunable budget",
+   "imported_modules": [],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": "Compared against MAX_LINES_PER_PAGE until fixture S-11 showed a raised budget made every page 'fit' by definition."
+  },
+  {
+   "gate_id": "AUTHORITY_DOCX_SHA256_MATCHES",
+   "suite": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "the pinned SHA-256 literal",
+   "observed_value_source": "hashing the file on disk",
+   "imported_modules": [
+    "hashlib"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": null
+  },
+  {
+   "gate_id": "EVERY_MODEL_BLOCK_APPEARS_IN_THE_DECK",
+   "suite": "T04_STORYBOARD_QA_v1",
+   "expected_value_source": "SAME_GENERATOR",
+   "expected_detail": "M.screens() block text",
+   "observed_value_source": "text re-extracted from the saved PPTX",
+   "imported_modules": [
+    "t04_storyboard_model_v1",
+    "zipfile"
+   ],
+   "expected_and_observed_share_a_generator_helper": true,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": false,
+   "justification": "Both sides come from the model, but the OBSERVED side has made a round trip through python-pptx and back off disk. The gate proves the writer did not drop or mangle content, which is its only purpose. It is not a content-correctness oracle and is not treated as one — correctness is covered by SOURCE_STRINGS_ARE_VERBATIM against the extract.",
+   "history": null
+  },
+  {
+   "gate_id": "EVERY_APPENDIX_PAGE_HOLDS_AT_MOST_TWO_PANELS",
+   "suite": "T04_STATE_COVERAGE_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "the literal 2, with PANEL_BUDGET_LITERAL checked separately and SE.renderer_panel_capacity() measured from the panel geometry",
+   "observed_value_source": "len(p['states']) on the built page plan",
+   "imported_modules": [
+    "t04_state_emit_v1"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": "Compared pages built from PANELS_PER_PAGE against PANELS_PER_PAGE until fixture A-01 raised the constant to 3 and the gate raised with it."
+  },
+  {
+   "gate_id": "EVERY_FROZEN_PANEL_STATE_IS_IN_THE_APPENDIX_DECK",
+   "suite": "T04_STATE_COVERAGE_QA_v1",
+   "expected_value_source": "GENERATOR_INDEPENDENT_LITERAL",
+   "expected_detail": "DECLARED_PANEL_STATE_IDS — the hand-written roll, not appendix_pages()",
+   "observed_value_source": "text re-extracted from the saved appendix PPTX",
+   "imported_modules": [
+    "zipfile"
+   ],
+   "expected_and_observed_share_a_generator_helper": false,
+   "mutation_of_generated_side_detectable": true,
+   "oracle_independent": true,
+   "justification": null,
+   "history": "The deck was compared only with the page plan that generated it until fixture A-03 deleted a state and both sides agreed it was never there."
+  }
+ ],
+ "preserved_protections": [
+  "filtered-population named-membership and delta assertions (18 closed populations, t04_predicate_audit_v1)",
+  "exact namespace + local-name OOXML matching (t04_ooxml_v1, six proof cases)"
+ ]
+}

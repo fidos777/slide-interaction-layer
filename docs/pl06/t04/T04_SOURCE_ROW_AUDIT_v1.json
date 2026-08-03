@@ -1,0 +1,148 @@
+{
+ "stage": "4.2F-B1.1",
+ "audited": [
+  "T04-ROW-074",
+  "T04-ROW-076",
+  "T04-ROW-077"
+ ],
+ "not_found_token": "BRIEF_REFERENCE_NOT_FOUND_IN_CONTROLLED_EXTRACT",
+ "rows": [
+  {
+   "row_id": "T04-ROW-074",
+   "exists": true,
+   "status": "FOUND",
+   "controlled_source_text": "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun yang digunakan di tapak dan memastikan pekerja memahaminya.",
+   "module_page": 280,
+   "source_position": {
+    "sequence": 74,
+    "paragraph_start": 5323,
+    "paragraph_end": 5323,
+    "segment_index": 103,
+    "heading_path": [
+     "PENJAAGAAN DAN PENYELENGGARAAN",
+     "Landskap Lembut",
+     "Keselamatan dan Kesihatan (HSE)"
+    ],
+    "content_type": "PARAGRAPH"
+   },
+   "proposition_supported": "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun yang digunakan di tapak dan memastikan pekerja memahaminya.",
+   "used_in_states": [
+    "T04-S16-ST-03",
+    "T04-S21-ST-05"
+   ],
+   "q5_links": [
+    {
+     "option_id": "T04-QZ-Q5-OPT-4",
+     "position": 4,
+     "option_text": "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
+     "option_set": "LIVE_SET_B",
+     "is_proposed_key": true,
+     "matched_on": "SDS",
+     "row_agrees_with_option": true,
+     "relation": "SUPPORTS"
+    },
+    {
+     "option_id": "SET-A-OPT-6",
+     "position": 6,
+     "option_text": "SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak",
+     "option_set": "REJECTED_SET_A",
+     "is_proposed_key": false,
+     "matched_on": "SDS",
+     "row_agrees_with_option": false,
+     "relation": "CONTRADICTS"
+    }
+   ],
+   "semantic_binding": "CONTRADICTORY",
+   "semantic_binding_note": "The row states the opposite of at least one linked option. That is the property a correct distractor needs: the module says the reverse, so a learner who read it will not select it. LIVE_SET_B option 4 (SUPPORTS); REJECTED_SET_A option 6 (CONTRADICTS)",
+   "replacement_manufactured": false
+  },
+  {
+   "row_id": "T04-ROW-076",
+   "exists": true,
+   "status": "FOUND",
+   "controlled_source_text": "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak berangin) untuk mengelakkan spray drift.",
+   "module_page": 280,
+   "source_position": {
+    "sequence": 76,
+    "paragraph_start": 5326,
+    "paragraph_end": 5326,
+    "segment_index": 106,
+    "heading_path": [
+     "PENJAAGAAN DAN PENYELENGGARAAN",
+     "Landskap Lembut",
+     "Pengurusan Risiko"
+    ],
+    "content_type": "LIST_ITEM"
+   },
+   "proposition_supported": "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak berangin) untuk mengelakkan spray drift.",
+   "used_in_states": [
+    "T04-S17-ST-BASE",
+    "T04-S21-ST-05"
+   ],
+   "q5_links": [
+    {
+     "option_id": "T04-QZ-Q5-OPT-3",
+     "position": 3,
+     "option_text": "Semburan hanya dilakukan semasa cuaca tenang",
+     "option_set": "LIVE_SET_B",
+     "is_proposed_key": true,
+     "matched_on": "spray weather",
+     "row_agrees_with_option": true,
+     "relation": "SUPPORTS"
+    },
+    {
+     "option_id": "T04-QZ-Q5-OPT-5",
+     "position": 5,
+     "option_text": "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+     "option_set": "LIVE_SET_B",
+     "is_proposed_key": false,
+     "matched_on": "spray weather",
+     "row_agrees_with_option": false,
+     "relation": "CONTRADICTS"
+    }
+   ],
+   "semantic_binding": "CONTRADICTORY",
+   "semantic_binding_note": "The row states the opposite of at least one linked option. That is the property a correct distractor needs: the module says the reverse, so a learner who read it will not select it. LIVE_SET_B option 3 (SUPPORTS); LIVE_SET_B option 5 (CONTRADICTS)",
+   "replacement_manufactured": false
+  },
+  {
+   "row_id": "T04-ROW-077",
+   "exists": true,
+   "status": "FOUND",
+   "controlled_source_text": "Maklumkan kepada pihak pengurusan bangunan atau penduduk sekitar sebelum aktiviti semburan dijalankan. Letakkan papan tanda amaran di kawasan kerja.",
+   "module_page": 280,
+   "source_position": {
+    "sequence": 77,
+    "paragraph_start": 5327,
+    "paragraph_end": 5327,
+    "segment_index": 107,
+    "heading_path": [
+     "PENJAAGAAN DAN PENYELENGGARAAN",
+     "Landskap Lembut",
+     "Pengurusan Risiko"
+    ],
+    "content_type": "LIST_ITEM"
+   },
+   "proposition_supported": "Maklumkan kepada pihak pengurusan bangunan atau penduduk sekitar sebelum aktiviti semburan dijalankan. Letakkan papan tanda amaran di kawasan kerja.",
+   "used_in_states": [
+    "T04-S17-ST-BASE",
+    "T04-S21-ST-05"
+   ],
+   "q5_links": [
+    {
+     "option_id": "SET-A-OPT-5",
+     "position": 5,
+     "option_text": "Notifikasi kepada penduduk dibuat hanya selepas semburan selesai",
+     "option_set": "REJECTED_SET_A",
+     "is_proposed_key": false,
+     "matched_on": "resident notification",
+     "row_agrees_with_option": false,
+     "relation": "CONTRADICTS"
+    }
+   ],
+   "semantic_binding": "CONTRADICTORY",
+   "semantic_binding_note": "The row states the opposite of at least one linked option. That is the property a correct distractor needs: the module says the reverse, so a learner who read it will not select it. REJECTED_SET_A option 5 (CONTRADICTS)",
+   "replacement_manufactured": false
+  }
+ ]
+}

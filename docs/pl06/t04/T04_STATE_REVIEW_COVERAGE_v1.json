@@ -1,0 +1,2178 @@
+{
+ "stage": "4.2F-B1.1",
+ "criteria": [
+  "what triggers the state",
+  "what content appears in it",
+  "how it differs from the base state",
+  "how the learner returns or continues",
+  "which source and authority records support it"
+ ],
+ "before_appendix": {
+  "total_states": 65,
+  "represented_states": 13,
+  "unrepresented_states": [
+   "T04-S03-ST-BASE",
+   "T04-S03-ST-01",
+   "T04-S03-ST-02",
+   "T04-S03-ST-03",
+   "T04-S03-ST-04",
+   "T04-S03-ST-05",
+   "T04-S03-ST-06",
+   "T04-S03-ST-ALL_VIEWED",
+   "T04-S06-ST-BASE",
+   "T04-S06-ST-01",
+   "T04-S06-ST-02",
+   "T04-S06-ST-ALL_VIEWED",
+   "T04-S07-ST-BASE",
+   "T04-S07-ST-01",
+   "T04-S07-ST-02",
+   "T04-S07-ST-03",
+   "T04-S07-ST-04",
+   "T04-S07-ST-ALL_VIEWED",
+   "T04-S09-ST-BASE",
+   "T04-S09-ST-01",
+   "T04-S09-ST-02",
+   "T04-S09-ST-03",
+   "T04-S09-ST-ALL_VIEWED",
+   "T04-S10-ST-BASE",
+   "T04-S10-ST-01",
+   "T04-S10-ST-02",
+   "T04-S10-ST-03",
+   "T04-S10-ST-04",
+   "T04-S10-ST-05",
+   "T04-S10-ST-ALL_VIEWED",
+   "T04-S14-ST-BASE",
+   "T04-S14-ST-01",
+   "T04-S14-ST-02",
+   "T04-S14-ST-03",
+   "T04-S14-ST-ALL_VIEWED",
+   "T04-S16-ST-BASE",
+   "T04-S16-ST-01",
+   "T04-S16-ST-02",
+   "T04-S16-ST-03",
+   "T04-S16-ST-ALL_VIEWED",
+   "T04-S19-ST-BASE",
+   "T04-S19-ST-01",
+   "T04-S19-ST-02",
+   "T04-S19-ST-03",
+   "T04-S19-ST-04",
+   "T04-S19-ST-ALL_VIEWED",
+   "T04-S21-ST-01",
+   "T04-S21-ST-02",
+   "T04-S21-ST-03",
+   "T04-S21-ST-04",
+   "T04-S21-ST-05",
+   "T04-S21-ST-RESULT"
+  ],
+  "unrepresented_count": 52,
+  "by_class": {
+   "FULL_PAGE_VISIBLE": 13,
+   "MULTI_PANEL_VISIBLE": 0,
+   "NOTES_ONLY": 0,
+   "METADATA_ONLY": 52,
+   "NOT_REPRESENTED": 0
+  },
+  "duplicate_representations": [],
+  "orphan_review_panels": [],
+  "review_pages_with_no_state_mapping": [
+   "p1"
+  ],
+  "cover_page_declared": "p1",
+  "unmapped_pages_excluding_cover": [],
+  "every_state_uniquely_mapped": true,
+  "criteria": [
+   "what triggers the state",
+   "what content appears in it",
+   "how it differs from the base state",
+   "how the learner returns or continues",
+   "which source and authority records support it"
+  ]
+ },
+ "after_appendix": {
+  "total_states": 65,
+  "represented_states": 65,
+  "unrepresented_states": [],
+  "unrepresented_count": 0,
+  "by_class": {
+   "FULL_PAGE_VISIBLE": 13,
+   "MULTI_PANEL_VISIBLE": 52,
+   "NOTES_ONLY": 0,
+   "METADATA_ONLY": 0,
+   "NOT_REPRESENTED": 0
+  },
+  "duplicate_representations": [],
+  "orphan_review_panels": [],
+  "review_pages_with_no_state_mapping": [
+   "p1"
+  ],
+  "cover_page_declared": "p1",
+  "unmapped_pages_excluding_cover": [],
+  "every_state_uniquely_mapped": true,
+  "criteria": [
+   "what triggers the state",
+   "what content appears in it",
+   "how it differs from the base state",
+   "how the learner returns or continues",
+   "which source and authority records support it"
+  ]
+ },
+ "decision_before": "T04_LAYOUT_READY_STATE_REVIEW_APPENDIX_REQUIRED",
+ "decision_after": "T04_INTERACTION_STATE_REVIEW_COVERAGE_PROVEN",
+ "appendix": {
+  "name": "K5PL06T04B01_STATE_REVIEW_APPENDIX_v1_0.pptx",
+  "pages": 28,
+  "panels_per_page": 2
+ },
+ "matrix": [
+  {
+   "state_id": "T04-S01-ST-BASE",
+   "screen_id": "T04-S01",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p2",
+   "b1_review_pages_all": [
+    "p2"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A01"
+   ]
+  },
+  {
+   "state_id": "T04-S02-ST-BASE",
+   "screen_id": "T04-S02",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p3",
+   "b1_review_pages_all": [
+    "p3"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [
+    "T04-DLG-F01",
+    "T04-DLG-F02",
+    "T04-DLG-F03",
+    "T04-DLG-F04"
+   ],
+   "decision_ids": [
+    "T04-DEC-A02",
+    "T04-DEC-C01",
+    "T04-DEC-C02",
+    "T04-DEC-C03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-BASE",
+   "screen_id": "T04-S03",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A1",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-01",
+   "screen_id": "T04-S03",
+   "state_kind": "STEP",
+   "trigger_id": "T04-S03-TRG-01",
+   "trigger_label": "Koordinasi dan Demonstrasi Penyelenggaraan Taman",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A1",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-02",
+   "screen_id": "T04-S03",
+   "state_kind": "STEP",
+   "trigger_id": "T04-S03-TRG-02",
+   "trigger_label": "Penyeliaan Penyelenggaraan Taman",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A2",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-03",
+   "screen_id": "T04-S03",
+   "state_kind": "STEP",
+   "trigger_id": "T04-S03-TRG-03",
+   "trigger_label": "Penyeliaan Operasi Nurseri",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A2",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-04",
+   "screen_id": "T04-S03",
+   "state_kind": "STEP",
+   "trigger_id": "T04-S03-TRG-04",
+   "trigger_label": "Penyeliaan Alatan dan Mesin Penyelenggaraan Taman",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A3",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-05",
+   "screen_id": "T04-S03",
+   "state_kind": "STEP",
+   "trigger_id": "T04-S03-TRG-05",
+   "trigger_label": "Penyeliaan Inventori Taman",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A3",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-06",
+   "screen_id": "T04-S03",
+   "state_kind": "STEP",
+   "trigger_id": "T04-S03-TRG-06",
+   "trigger_label": "Perancangan Sumber Manusia dan Kebajikan Pekerja",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A4",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S03-ST-ALL_VIEWED",
+   "screen_id": "T04-S03",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S03-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p4",
+   "b1_review_pages_all": [
+    "p4"
+   ],
+   "appendix_page": "A4",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ]
+  },
+  {
+   "state_id": "T04-S04-ST-BASE",
+   "screen_id": "T04-S04",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p5",
+   "b1_review_pages_all": [
+    "p5"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A04"
+   ]
+  },
+  {
+   "state_id": "T04-S05-ST-BASE",
+   "screen_id": "T04-S05",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p6",
+   "b1_review_pages_all": [
+    "p6"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-006",
+    "T04-ROW-007"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A05"
+   ]
+  },
+  {
+   "state_id": "T04-S06-ST-BASE",
+   "screen_id": "T04-S06",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p7",
+   "b1_review_pages_all": [
+    "p7"
+   ],
+   "appendix_page": "A5",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-011"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ]
+  },
+  {
+   "state_id": "T04-S06-ST-01",
+   "screen_id": "T04-S06",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S06-TRG-01",
+   "trigger_label": "Penyiraman Manual",
+   "b1_review_page": "p7",
+   "b1_review_pages_all": [
+    "p7"
+   ],
+   "appendix_page": "A5",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-009",
+    "T04-ROW-010"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ]
+  },
+  {
+   "state_id": "T04-S06-ST-02",
+   "screen_id": "T04-S06",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S06-TRG-02",
+   "trigger_label": "Sistem Pengairan Automatik",
+   "b1_review_page": "p7",
+   "b1_review_pages_all": [
+    "p7"
+   ],
+   "appendix_page": "A6",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ]
+  },
+  {
+   "state_id": "T04-S06-ST-ALL_VIEWED",
+   "screen_id": "T04-S06",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S06-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p7",
+   "b1_review_pages_all": [
+    "p7"
+   ],
+   "appendix_page": "A6",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ]
+  },
+  {
+   "state_id": "T04-S07-ST-BASE",
+   "screen_id": "T04-S07",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p8",
+   "b1_review_pages_all": [
+    "p8",
+    "p9"
+   ],
+   "appendix_page": "A7",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-016",
+    "T04-ROW-017",
+    "T04-ROW-020",
+    "T04-ROW-022",
+    "T04-ROW-024"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ]
+  },
+  {
+   "state_id": "T04-S07-ST-01",
+   "screen_id": "T04-S07",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S07-TRG-01",
+   "trigger_label": "Jadual Penyiraman",
+   "b1_review_page": "p8",
+   "b1_review_pages_all": [
+    "p8",
+    "p9"
+   ],
+   "appendix_page": "A7",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-017",
+    "T04-ROW-018",
+    "T04-ROW-019"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ]
+  },
+  {
+   "state_id": "T04-S07-ST-02",
+   "screen_id": "T04-S07",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S07-TRG-02",
+   "trigger_label": "Pengurusan Sumber Air",
+   "b1_review_page": "p8",
+   "b1_review_pages_all": [
+    "p8",
+    "p9"
+   ],
+   "appendix_page": "A8",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-020",
+    "T04-ROW-021"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ]
+  },
+  {
+   "state_id": "T04-S07-ST-03",
+   "screen_id": "T04-S07",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S07-TRG-03",
+   "trigger_label": "Pemantauan & Pelaporan",
+   "b1_review_page": "p8",
+   "b1_review_pages_all": [
+    "p8",
+    "p9"
+   ],
+   "appendix_page": "A8",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-022",
+    "T04-ROW-023"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ]
+  },
+  {
+   "state_id": "T04-S07-ST-04",
+   "screen_id": "T04-S07",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S07-TRG-04",
+   "trigger_label": "Kecekapan Kos",
+   "b1_review_page": "p8",
+   "b1_review_pages_all": [
+    "p8",
+    "p9"
+   ],
+   "appendix_page": "A9",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-024",
+    "T04-ROW-025"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ]
+  },
+  {
+   "state_id": "T04-S07-ST-ALL_VIEWED",
+   "screen_id": "T04-S07",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S07-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p8",
+   "b1_review_pages_all": [
+    "p8",
+    "p9"
+   ],
+   "appendix_page": "A9",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ]
+  },
+  {
+   "state_id": "T04-S08-ST-BASE",
+   "screen_id": "T04-S08",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p10",
+   "b1_review_pages_all": [
+    "p10"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-026",
+    "T04-ROW-027"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A08"
+   ]
+  },
+  {
+   "state_id": "T04-S09-ST-BASE",
+   "screen_id": "T04-S09",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p11",
+   "b1_review_pages_all": [
+    "p11"
+   ],
+   "appendix_page": "A10",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-028",
+    "T04-ROW-029",
+    "T04-ROW-031",
+    "T04-ROW-033"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ]
+  },
+  {
+   "state_id": "T04-S09-ST-01",
+   "screen_id": "T04-S09",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S09-TRG-01",
+   "trigger_label": "Pembajaan Tabur (Broadcasting)",
+   "b1_review_page": "p11",
+   "b1_review_pages_all": [
+    "p11"
+   ],
+   "appendix_page": "A10",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-029",
+    "T04-ROW-030"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ]
+  },
+  {
+   "state_id": "T04-S09-ST-02",
+   "screen_id": "T04-S09",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S09-TRG-02",
+   "trigger_label": "Pembajaan Poket (Pocketing)",
+   "b1_review_page": "p11",
+   "b1_review_pages_all": [
+    "p11"
+   ],
+   "appendix_page": "A11",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-031",
+    "T04-ROW-032"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ]
+  },
+  {
+   "state_id": "T04-S09-ST-03",
+   "screen_id": "T04-S09",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S09-TRG-03",
+   "trigger_label": "Semburan Folia (Foliar Spray)",
+   "b1_review_page": "p11",
+   "b1_review_pages_all": [
+    "p11"
+   ],
+   "appendix_page": "A11",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-033",
+    "T04-ROW-034"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ]
+  },
+  {
+   "state_id": "T04-S09-ST-ALL_VIEWED",
+   "screen_id": "T04-S09",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S09-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p11",
+   "b1_review_pages_all": [
+    "p11"
+   ],
+   "appendix_page": "A12",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-BASE",
+   "screen_id": "T04-S10",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A13",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-035",
+    "T04-ROW-036",
+    "T04-ROW-038",
+    "T04-ROW-040",
+    "T04-ROW-042",
+    "T04-ROW-044"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-01",
+   "screen_id": "T04-S10",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S10-TRG-01",
+   "trigger_label": "Program Pembajaan",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A13",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-036",
+    "T04-ROW-037"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-02",
+   "screen_id": "T04-S10",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S10-TRG-02",
+   "trigger_label": "Pematuhan Spesifikasi",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A14",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-038",
+    "T04-ROW-039"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-03",
+   "screen_id": "T04-S10",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S10-TRG-03",
+   "trigger_label": "Pengurusan Stok dan Penyimpanan",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A14",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-040",
+    "T04-ROW-041"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-04",
+   "screen_id": "T04-S10",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S10-TRG-04",
+   "trigger_label": "Keselamatan Pekerja",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A15",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-042",
+    "T04-ROW-043"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-05",
+   "screen_id": "T04-S10",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S10-TRG-05",
+   "trigger_label": "Dokumentasi",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A15",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-044",
+    "T04-ROW-045"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S10-ST-ALL_VIEWED",
+   "screen_id": "T04-S10",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S10-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p12",
+   "b1_review_pages_all": [
+    "p12",
+    "p13"
+   ],
+   "appendix_page": "A16",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ]
+  },
+  {
+   "state_id": "T04-S11-ST-BASE",
+   "screen_id": "T04-S11",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p14",
+   "b1_review_pages_all": [
+    "p14"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A11"
+   ]
+  },
+  {
+   "state_id": "T04-S12-ST-BASE",
+   "screen_id": "T04-S12",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p15",
+   "b1_review_pages_all": [
+    "p15"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A12"
+   ]
+  },
+  {
+   "state_id": "T04-S13-ST-BASE",
+   "screen_id": "T04-S13",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p16",
+   "b1_review_pages_all": [
+    "p16"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-057",
+    "T04-ROW-058",
+    "T04-ROW-059",
+    "T04-ROW-060",
+    "T04-ROW-061",
+    "T04-ROW-062",
+    "T04-ROW-063"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A13"
+   ]
+  },
+  {
+   "state_id": "T04-S14-ST-BASE",
+   "screen_id": "T04-S14",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p17",
+   "b1_review_pages_all": [
+    "p17"
+   ],
+   "appendix_page": "A17",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ]
+  },
+  {
+   "state_id": "T04-S14-ST-01",
+   "screen_id": "T04-S14",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S14-TRG-01",
+   "trigger_label": "Perundangan Dan Pelesenan",
+   "b1_review_page": "p17",
+   "b1_review_pages_all": [
+    "p17"
+   ],
+   "appendix_page": "A17",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [
+    "T04-DEC-A14"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ]
+  },
+  {
+   "state_id": "T04-S14-ST-02",
+   "screen_id": "T04-S14",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S14-TRG-02",
+   "trigger_label": "Keselamatan Dan Kesihatan (HSE)",
+   "b1_review_page": "p17",
+   "b1_review_pages_all": [
+    "p17"
+   ],
+   "appendix_page": "A18",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [
+    "T04-DEC-A14"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ]
+  },
+  {
+   "state_id": "T04-S14-ST-03",
+   "screen_id": "T04-S14",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S14-TRG-03",
+   "trigger_label": "Pengurusan Risiko",
+   "b1_review_page": "p17",
+   "b1_review_pages_all": [
+    "p17"
+   ],
+   "appendix_page": "A18",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [
+    "T04-DEC-A14"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ]
+  },
+  {
+   "state_id": "T04-S14-ST-ALL_VIEWED",
+   "screen_id": "T04-S14",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S14-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p17",
+   "b1_review_pages_all": [
+    "p17"
+   ],
+   "appendix_page": "A19",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ]
+  },
+  {
+   "state_id": "T04-S15-ST-BASE",
+   "screen_id": "T04-S15",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p18",
+   "b1_review_pages_all": [
+    "p18"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A15"
+   ]
+  },
+  {
+   "state_id": "T04-S16-ST-BASE",
+   "screen_id": "T04-S16",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p19",
+   "b1_review_pages_all": [
+    "p19"
+   ],
+   "appendix_page": "A20",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-071",
+    "T04-ROW-073"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ]
+  },
+  {
+   "state_id": "T04-S16-ST-01",
+   "screen_id": "T04-S16",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S16-TRG-01",
+   "trigger_label": "PPE Lengkap",
+   "b1_review_page": "p19",
+   "b1_review_pages_all": [
+    "p19"
+   ],
+   "appendix_page": "A20",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-069",
+    "T04-ROW-070"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ]
+  },
+  {
+   "state_id": "T04-S16-ST-02",
+   "screen_id": "T04-S16",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S16-TRG-02",
+   "trigger_label": "Penyimpanan & Pelupusan",
+   "b1_review_page": "p19",
+   "b1_review_pages_all": [
+    "p19"
+   ],
+   "appendix_page": "A21",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-071",
+    "T04-ROW-072"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ]
+  },
+  {
+   "state_id": "T04-S16-ST-03",
+   "screen_id": "T04-S16",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S16-TRG-03",
+   "trigger_label": "Helaian Data Keselamatan (SDS)",
+   "b1_review_page": "p19",
+   "b1_review_pages_all": [
+    "p19"
+   ],
+   "appendix_page": "A21",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-073",
+    "T04-ROW-074"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ]
+  },
+  {
+   "state_id": "T04-S16-ST-ALL_VIEWED",
+   "screen_id": "T04-S16",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S16-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p19",
+   "b1_review_pages_all": [
+    "p19"
+   ],
+   "appendix_page": "A22",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ]
+  },
+  {
+   "state_id": "T04-S17-ST-BASE",
+   "screen_id": "T04-S17",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p20",
+   "b1_review_pages_all": [
+    "p20"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A17"
+   ]
+  },
+  {
+   "state_id": "T04-S18-ST-BASE",
+   "screen_id": "T04-S18",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p21",
+   "b1_review_pages_all": [
+    "p21"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A18"
+   ]
+  },
+  {
+   "state_id": "T04-S19-ST-BASE",
+   "screen_id": "T04-S19",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p22",
+   "b1_review_pages_all": [
+    "p22",
+    "p23"
+   ],
+   "appendix_page": "A23",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-086",
+    "T04-ROW-091",
+    "T04-ROW-096"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ]
+  },
+  {
+   "state_id": "T04-S19-ST-01",
+   "screen_id": "T04-S19",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S19-TRG-01",
+   "trigger_label": "Pengurusan Ruang dan Sirkulasi",
+   "b1_review_page": "p22",
+   "b1_review_pages_all": [
+    "p22",
+    "p23"
+   ],
+   "appendix_page": "A23",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ]
+  },
+  {
+   "state_id": "T04-S19-ST-02",
+   "screen_id": "T04-S19",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S19-TRG-02",
+   "trigger_label": "Fungsi Struktur dan Kejuruteraan",
+   "b1_review_page": "p22",
+   "b1_review_pages_all": [
+    "p22",
+    "p23"
+   ],
+   "appendix_page": "A24",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ]
+  },
+  {
+   "state_id": "T04-S19-ST-03",
+   "screen_id": "T04-S19",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S19-TRG-03",
+   "trigger_label": "Kebolehgunaan dan Kemudahan",
+   "b1_review_page": "p22",
+   "b1_review_pages_all": [
+    "p22",
+    "p23"
+   ],
+   "appendix_page": "A24",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ]
+  },
+  {
+   "state_id": "T04-S19-ST-04",
+   "screen_id": "T04-S19",
+   "state_kind": "REVEAL",
+   "trigger_id": "T04-S19-TRG-04",
+   "trigger_label": "Estetika dan Reka Bentuk",
+   "b1_review_page": "p22",
+   "b1_review_pages_all": [
+    "p22",
+    "p23"
+   ],
+   "appendix_page": "A25",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ]
+  },
+  {
+   "state_id": "T04-S19-ST-ALL_VIEWED",
+   "screen_id": "T04-S19",
+   "state_kind": "COMPLETION",
+   "trigger_id": "T04-S19-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "b1_review_page": "p22",
+   "b1_review_pages_all": [
+    "p22",
+    "p23"
+   ],
+   "appendix_page": "A25",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ]
+  },
+  {
+   "state_id": "T04-S20-ST-BASE",
+   "screen_id": "T04-S20",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p24",
+   "b1_review_pages_all": [
+    "p24"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [
+    "T04-RUM-F01",
+    "T04-RUM-F02",
+    "T04-RUM-F03"
+   ],
+   "decision_ids": [
+    "T04-DEC-A20",
+    "T04-DEC-D01",
+    "T04-DEC-D02"
+   ]
+  },
+  {
+   "state_id": "T04-S21-ST-01",
+   "screen_id": "T04-S21",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p25",
+   "b1_review_pages_all": [
+    "p25",
+    "p26"
+   ],
+   "appendix_page": "A26",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-006",
+    "T04-ROW-007",
+    "T04-ROW-026",
+    "T04-ROW-027",
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q1"
+   ],
+   "decision_ids": [
+    "T04-DEC-E01"
+   ]
+  },
+  {
+   "state_id": "T04-S21-ST-02",
+   "screen_id": "T04-S21",
+   "state_kind": "QUIZ_ITEM",
+   "trigger_id": "T04-S21-TRG-02",
+   "trigger_label": "submitting T04-QZ-Q1",
+   "b1_review_page": "p25",
+   "b1_review_pages_all": [
+    "p25",
+    "p26"
+   ],
+   "appendix_page": "A26",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-010",
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q2"
+   ],
+   "decision_ids": [
+    "T04-DEC-E02"
+   ]
+  },
+  {
+   "state_id": "T04-S21-ST-03",
+   "screen_id": "T04-S21",
+   "state_kind": "QUIZ_ITEM",
+   "trigger_id": "T04-S21-TRG-03",
+   "trigger_label": "submitting T04-QZ-Q2",
+   "b1_review_page": "p25",
+   "b1_review_pages_all": [
+    "p25",
+    "p26"
+   ],
+   "appendix_page": "A27",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q3"
+   ],
+   "decision_ids": [
+    "T04-DEC-E03"
+   ]
+  },
+  {
+   "state_id": "T04-S21-ST-04",
+   "screen_id": "T04-S21",
+   "state_kind": "QUIZ_ITEM",
+   "trigger_id": "T04-S21-TRG-04",
+   "trigger_label": "submitting T04-QZ-Q3",
+   "b1_review_page": "p25",
+   "b1_review_pages_all": [
+    "p25",
+    "p26"
+   ],
+   "appendix_page": "A27",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085",
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090",
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095",
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q4"
+   ],
+   "decision_ids": [
+    "T04-DEC-E04"
+   ]
+  },
+  {
+   "state_id": "T04-S21-ST-05",
+   "screen_id": "T04-S21",
+   "state_kind": "QUIZ_ITEM",
+   "trigger_id": "T04-S21-TRG-05",
+   "trigger_label": "submitting T04-QZ-Q4",
+   "b1_review_page": "p25",
+   "b1_review_pages_all": [
+    "p25",
+    "p26"
+   ],
+   "appendix_page": "A28",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067",
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074",
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q5"
+   ],
+   "decision_ids": [
+    "T04-DEC-E05"
+   ]
+  },
+  {
+   "state_id": "T04-S21-ST-RESULT",
+   "screen_id": "T04-S21",
+   "state_kind": "QUIZ_RESULT",
+   "trigger_id": "T04-S21-TRG-RESULT",
+   "trigger_label": "submitting Q5",
+   "b1_review_page": "p25",
+   "b1_review_pages_all": [
+    "p25",
+    "p26"
+   ],
+   "appendix_page": "A28",
+   "representation": "MULTI_PANEL_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A21"
+   ]
+  },
+  {
+   "state_id": "T04-S22-ST-BASE",
+   "screen_id": "T04-S22",
+   "state_kind": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "b1_review_page": "p27",
+   "b1_review_pages_all": [
+    "p27"
+   ],
+   "appendix_page": null,
+   "representation": "FULL_PAGE_VISIBLE",
+   "criteria_met": {
+    "what triggers the state": true,
+    "what content appears in it": true,
+    "how it differs from the base state": true,
+    "how the learner returns or continues": true,
+    "which source and authority records support it": true
+   },
+   "criteria_met_count": 5,
+   "review_covered": true,
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A22"
+   ]
+  }
+ ]
+}

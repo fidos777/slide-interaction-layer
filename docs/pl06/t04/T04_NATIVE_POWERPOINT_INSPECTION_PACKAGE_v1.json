@@ -1,0 +1,575 @@
+{
+ "stage": "4.2F-B1.1",
+ "purpose": "A compact brief for opening these decks in real Microsoft PowerPoint or the Claude PowerPoint plugin, and for recording what is found.",
+ "artifacts": [
+  {
+   "role": "layout storyboard",
+   "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STORYBOARD_FOR_BARIAH_REVIEW_v1_0.pptx",
+   "bytes": 76248,
+   "sha256": "d2157155a89c7fd2ff362daad08355296118cce72b74b8fb4c7825e1917042fa",
+   "slides": 27
+  },
+  {
+   "role": "state review appendix",
+   "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STATE_REVIEW_APPENDIX_v1_0.pptx",
+   "bytes": 83234,
+   "sha256": "41fc8d56b64bfbd752fd0b20df38a99af38d2ef37752ebfb9fafa91f15f4a3ab",
+   "slides": 29
+  }
+ ],
+ "learner_screen_to_review_page": {
+  "T04-S01": [
+   "p2"
+  ],
+  "T04-S02": [
+   "p3"
+  ],
+  "T04-S03": [
+   "p4"
+  ],
+  "T04-S04": [
+   "p5"
+  ],
+  "T04-S05": [
+   "p6"
+  ],
+  "T04-S06": [
+   "p7"
+  ],
+  "T04-S07": [
+   "p8",
+   "p9"
+  ],
+  "T04-S08": [
+   "p10"
+  ],
+  "T04-S09": [
+   "p11"
+  ],
+  "T04-S10": [
+   "p12",
+   "p13"
+  ],
+  "T04-S11": [
+   "p14"
+  ],
+  "T04-S12": [
+   "p15"
+  ],
+  "T04-S13": [
+   "p16"
+  ],
+  "T04-S14": [
+   "p17"
+  ],
+  "T04-S15": [
+   "p18"
+  ],
+  "T04-S16": [
+   "p19"
+  ],
+  "T04-S17": [
+   "p20"
+  ],
+  "T04-S18": [
+   "p21"
+  ],
+  "T04-S19": [
+   "p22",
+   "p23"
+  ],
+  "T04-S20": [
+   "p24"
+  ],
+  "T04-S21": [
+   "p25",
+   "p26"
+  ],
+  "T04-S22": [
+   "p27"
+  ]
+ },
+ "runtime_state_to_review_page": {
+  "T04-S01-ST-BASE": {
+   "b1": "p2",
+   "appendix": null
+  },
+  "T04-S02-ST-BASE": {
+   "b1": "p3",
+   "appendix": null
+  },
+  "T04-S03-ST-BASE": {
+   "b1": "p4",
+   "appendix": "A1"
+  },
+  "T04-S03-ST-01": {
+   "b1": "p4",
+   "appendix": "A1"
+  },
+  "T04-S03-ST-02": {
+   "b1": "p4",
+   "appendix": "A2"
+  },
+  "T04-S03-ST-03": {
+   "b1": "p4",
+   "appendix": "A2"
+  },
+  "T04-S03-ST-04": {
+   "b1": "p4",
+   "appendix": "A3"
+  },
+  "T04-S03-ST-05": {
+   "b1": "p4",
+   "appendix": "A3"
+  },
+  "T04-S03-ST-06": {
+   "b1": "p4",
+   "appendix": "A4"
+  },
+  "T04-S03-ST-ALL_VIEWED": {
+   "b1": "p4",
+   "appendix": "A4"
+  },
+  "T04-S04-ST-BASE": {
+   "b1": "p5",
+   "appendix": null
+  },
+  "T04-S05-ST-BASE": {
+   "b1": "p6",
+   "appendix": null
+  },
+  "T04-S06-ST-BASE": {
+   "b1": "p7",
+   "appendix": "A5"
+  },
+  "T04-S06-ST-01": {
+   "b1": "p7",
+   "appendix": "A5"
+  },
+  "T04-S06-ST-02": {
+   "b1": "p7",
+   "appendix": "A6"
+  },
+  "T04-S06-ST-ALL_VIEWED": {
+   "b1": "p7",
+   "appendix": "A6"
+  },
+  "T04-S07-ST-BASE": {
+   "b1": "p8",
+   "appendix": "A7"
+  },
+  "T04-S07-ST-01": {
+   "b1": "p8",
+   "appendix": "A7"
+  },
+  "T04-S07-ST-02": {
+   "b1": "p8",
+   "appendix": "A8"
+  },
+  "T04-S07-ST-03": {
+   "b1": "p8",
+   "appendix": "A8"
+  },
+  "T04-S07-ST-04": {
+   "b1": "p8",
+   "appendix": "A9"
+  },
+  "T04-S07-ST-ALL_VIEWED": {
+   "b1": "p8",
+   "appendix": "A9"
+  },
+  "T04-S08-ST-BASE": {
+   "b1": "p10",
+   "appendix": null
+  },
+  "T04-S09-ST-BASE": {
+   "b1": "p11",
+   "appendix": "A10"
+  },
+  "T04-S09-ST-01": {
+   "b1": "p11",
+   "appendix": "A10"
+  },
+  "T04-S09-ST-02": {
+   "b1": "p11",
+   "appendix": "A11"
+  },
+  "T04-S09-ST-03": {
+   "b1": "p11",
+   "appendix": "A11"
+  },
+  "T04-S09-ST-ALL_VIEWED": {
+   "b1": "p11",
+   "appendix": "A12"
+  },
+  "T04-S10-ST-BASE": {
+   "b1": "p12",
+   "appendix": "A13"
+  },
+  "T04-S10-ST-01": {
+   "b1": "p12",
+   "appendix": "A13"
+  },
+  "T04-S10-ST-02": {
+   "b1": "p12",
+   "appendix": "A14"
+  },
+  "T04-S10-ST-03": {
+   "b1": "p12",
+   "appendix": "A14"
+  },
+  "T04-S10-ST-04": {
+   "b1": "p12",
+   "appendix": "A15"
+  },
+  "T04-S10-ST-05": {
+   "b1": "p12",
+   "appendix": "A15"
+  },
+  "T04-S10-ST-ALL_VIEWED": {
+   "b1": "p12",
+   "appendix": "A16"
+  },
+  "T04-S11-ST-BASE": {
+   "b1": "p14",
+   "appendix": null
+  },
+  "T04-S12-ST-BASE": {
+   "b1": "p15",
+   "appendix": null
+  },
+  "T04-S13-ST-BASE": {
+   "b1": "p16",
+   "appendix": null
+  },
+  "T04-S14-ST-BASE": {
+   "b1": "p17",
+   "appendix": "A17"
+  },
+  "T04-S14-ST-01": {
+   "b1": "p17",
+   "appendix": "A17"
+  },
+  "T04-S14-ST-02": {
+   "b1": "p17",
+   "appendix": "A18"
+  },
+  "T04-S14-ST-03": {
+   "b1": "p17",
+   "appendix": "A18"
+  },
+  "T04-S14-ST-ALL_VIEWED": {
+   "b1": "p17",
+   "appendix": "A19"
+  },
+  "T04-S15-ST-BASE": {
+   "b1": "p18",
+   "appendix": null
+  },
+  "T04-S16-ST-BASE": {
+   "b1": "p19",
+   "appendix": "A20"
+  },
+  "T04-S16-ST-01": {
+   "b1": "p19",
+   "appendix": "A20"
+  },
+  "T04-S16-ST-02": {
+   "b1": "p19",
+   "appendix": "A21"
+  },
+  "T04-S16-ST-03": {
+   "b1": "p19",
+   "appendix": "A21"
+  },
+  "T04-S16-ST-ALL_VIEWED": {
+   "b1": "p19",
+   "appendix": "A22"
+  },
+  "T04-S17-ST-BASE": {
+   "b1": "p20",
+   "appendix": null
+  },
+  "T04-S18-ST-BASE": {
+   "b1": "p21",
+   "appendix": null
+  },
+  "T04-S19-ST-BASE": {
+   "b1": "p22",
+   "appendix": "A23"
+  },
+  "T04-S19-ST-01": {
+   "b1": "p22",
+   "appendix": "A23"
+  },
+  "T04-S19-ST-02": {
+   "b1": "p22",
+   "appendix": "A24"
+  },
+  "T04-S19-ST-03": {
+   "b1": "p22",
+   "appendix": "A24"
+  },
+  "T04-S19-ST-04": {
+   "b1": "p22",
+   "appendix": "A25"
+  },
+  "T04-S19-ST-ALL_VIEWED": {
+   "b1": "p22",
+   "appendix": "A25"
+  },
+  "T04-S20-ST-BASE": {
+   "b1": "p24",
+   "appendix": null
+  },
+  "T04-S21-ST-01": {
+   "b1": "p25",
+   "appendix": "A26"
+  },
+  "T04-S21-ST-02": {
+   "b1": "p25",
+   "appendix": "A26"
+  },
+  "T04-S21-ST-03": {
+   "b1": "p25",
+   "appendix": "A27"
+  },
+  "T04-S21-ST-04": {
+   "b1": "p25",
+   "appendix": "A27"
+  },
+  "T04-S21-ST-05": {
+   "b1": "p25",
+   "appendix": "A28"
+  },
+  "T04-S21-ST-RESULT": {
+   "b1": "p25",
+   "appendix": "A28"
+  },
+  "T04-S22-ST-BASE": {
+   "b1": "p27",
+   "appendix": null
+  }
+ },
+ "continuation_pages": [
+  {
+   "screen_id": "T04-S07",
+   "page": "p9",
+   "page_index": 2,
+   "page_count": 2
+  },
+  {
+   "screen_id": "T04-S10",
+   "page": "p13",
+   "page_index": 2,
+   "page_count": 2
+  },
+  {
+   "screen_id": "T04-S19",
+   "page": "p23",
+   "page_index": 2,
+   "page_count": 2
+  },
+  {
+   "screen_id": "T04-S21",
+   "page": "p26",
+   "page_index": 2,
+   "page_count": 2
+  }
+ ],
+ "font_inventory": {
+  "b1": [
+   "Arial"
+  ],
+  "appendix": [
+   "Arial"
+  ]
+ },
+ "master_and_layout_usage": {
+  "b1": {
+   "layouts_in_package": 11,
+   "masters_in_package": 2,
+   "layouts_actually_used": [
+    7
+   ]
+  },
+  "appendix": {
+   "layouts_in_package": 11,
+   "masters_in_package": 2,
+   "layouts_actually_used": [
+    7
+   ]
+  }
+ },
+ "notes_and_metadata": {
+  "b1": {
+   "notes_slides": 0,
+   "has_notes_master": false,
+   "note": "No speaker notes are written by the generator. Everything a reviewer needs is on the slide face, because a state recorded only in Notes is not review-visible by this stage's own definition."
+  },
+  "appendix": {
+   "notes_slides": 0,
+   "has_notes_master": false,
+   "note": "No speaker notes are written by the generator. Everything a reviewer needs is on the slide face, because a state recorded only in Notes is not review-visible by this stage's own definition."
+  }
+ },
+ "interaction_ids": [
+  "T04-S03-TRG-01",
+  "T04-S03-TRG-02",
+  "T04-S03-TRG-03",
+  "T04-S03-TRG-04",
+  "T04-S03-TRG-05",
+  "T04-S03-TRG-06",
+  "T04-S03-TRG-ALL",
+  "T04-S06-TRG-01",
+  "T04-S06-TRG-02",
+  "T04-S06-TRG-ALL",
+  "T04-S07-TRG-01",
+  "T04-S07-TRG-02",
+  "T04-S07-TRG-03",
+  "T04-S07-TRG-04",
+  "T04-S07-TRG-ALL",
+  "T04-S09-TRG-01",
+  "T04-S09-TRG-02",
+  "T04-S09-TRG-03",
+  "T04-S09-TRG-ALL",
+  "T04-S10-TRG-01",
+  "T04-S10-TRG-02",
+  "T04-S10-TRG-03",
+  "T04-S10-TRG-04",
+  "T04-S10-TRG-05",
+  "T04-S10-TRG-ALL",
+  "T04-S14-TRG-01",
+  "T04-S14-TRG-02",
+  "T04-S14-TRG-03",
+  "T04-S14-TRG-ALL",
+  "T04-S16-TRG-01",
+  "T04-S16-TRG-02",
+  "T04-S16-TRG-03",
+  "T04-S16-TRG-ALL",
+  "T04-S19-TRG-01",
+  "T04-S19-TRG-02",
+  "T04-S19-TRG-03",
+  "T04-S19-TRG-04",
+  "T04-S19-TRG-ALL",
+  "T04-S21-TRG-02",
+  "T04-S21-TRG-03",
+  "T04-S21-TRG-04",
+  "T04-S21-TRG-05",
+  "T04-S21-TRG-RESULT"
+ ],
+ "visual_obligation_mapping": {
+  "T04-S01": [],
+  "T04-S02": [],
+  "T04-S03": [
+   "T04-VO-001",
+   "T04-VO-002",
+   "T04-VO-003",
+   "T04-VO-004",
+   "T04-VO-005",
+   "T04-VO-006"
+  ],
+  "T04-S04": [
+   "T04-VO-007"
+  ],
+  "T04-S05": [
+   "T04-VO-008"
+  ],
+  "T04-S06": [
+   "T04-VO-009",
+   "T04-VO-010",
+   "T04-VO-011"
+  ],
+  "T04-S07": [
+   "T04-VO-013",
+   "T04-VO-014",
+   "T04-VO-015",
+   "T04-VO-016"
+  ],
+  "T04-S08": [
+   "T04-VO-017"
+  ],
+  "T04-S09": [
+   "T04-VO-018",
+   "T04-VO-019",
+   "T04-VO-020",
+   "T04-VO-021"
+  ],
+  "T04-S10": [
+   "T04-VO-023",
+   "T04-VO-024",
+   "T04-VO-025",
+   "T04-VO-026",
+   "T04-VO-027"
+  ],
+  "T04-S11": [
+   "T04-VO-028"
+  ],
+  "T04-S12": [
+   "T04-VO-029",
+   "T04-VO-030",
+   "T04-VO-031",
+   "T04-VO-032",
+   "T04-VO-033"
+  ],
+  "T04-S13": [
+   "T04-VO-034",
+   "T04-VO-035",
+   "T04-VO-036",
+   "T04-VO-037"
+  ],
+  "T04-S14": [],
+  "T04-S15": [
+   "T04-VO-039"
+  ],
+  "T04-S16": [
+   "T04-VO-040"
+  ],
+  "T04-S17": [
+   "T04-VO-041"
+  ],
+  "T04-S18": [
+   "T04-VO-042"
+  ],
+  "T04-S19": [
+   "T04-VO-043",
+   "T04-VO-044",
+   "T04-VO-045",
+   "T04-VO-046"
+  ],
+  "T04-S20": [],
+  "T04-S21": [],
+  "T04-S22": []
+ },
+ "known_open_statuses": {
+  "T04-OPEN": [
+   "T04-OPEN-51",
+   "T04-OPEN-52",
+   "T04-OPEN-53",
+   "T04-OPEN-54",
+   "T04-OPEN-55"
+  ],
+  "T04-EXT": [
+   "T04-EXT-01",
+   "T04-EXT-02"
+  ]
+ },
+ "native_render_status": "NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE",
+ "correction_intake_template": {
+  "fields": [
+   "correction_id",
+   "found_in",
+   "slide_or_page",
+   "screen_id",
+   "state_id",
+   "what_is_wrong",
+   "expected_instead",
+   "severity",
+   "generator_module_to_change",
+   "regeneration_required",
+   "raised_by",
+   "date"
+  ],
+  "policy": "Any correction found in native PowerPoint is applied to the GENERATOR and followed by a complete regeneration, structural QA re-run, full re-render and visual inspection. The PPTX is never hand-patched: a hand patch would be lost on the next build and would break the guarantee that every string in the deck exists in the controlled model."
+ }
+}

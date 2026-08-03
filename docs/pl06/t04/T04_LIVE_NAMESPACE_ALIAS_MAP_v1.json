@@ -1,0 +1,141 @@
+{
+ "stage": "4.2F-B1.1",
+ "registers": [
+  "T04-EXT",
+  "T04-OPEN"
+ ],
+ "alias_rows": [
+  {
+   "historical_id": "E-01",
+   "live_id": null,
+   "register": null,
+   "subject": "Q5 replacement options E and F",
+   "disposition": "CLOSED_BEFORE_THE_SPLIT",
+   "closed_by": "T04-DEC-E09 — Bariah selected Set B",
+   "note": "Closed in Stage 4.2F-B0.9.1, so it takes no live identifier."
+  },
+  {
+   "historical_id": "E-02",
+   "live_id": "T04-OPEN-51",
+   "register": "T04-OPEN",
+   "subject": "Quiz answer keys, all five",
+   "disposition": "LIVE",
+   "owner": "BARIAH",
+   "note": "Assessment authority. Not extraction."
+  },
+  {
+   "historical_id": "E-03",
+   "live_id": null,
+   "register": null,
+   "subject": "The 'Q3' WhatsApp referent",
+   "disposition": "CLOSED_BEFORE_THE_SPLIT",
+   "closed_by": "T04-COR-02 — the line is Firdaus's, so there is no authority referent",
+   "note": "Closed in Stage 4.2F-B0.9.1."
+  },
+  {
+   "historical_id": "E-04",
+   "live_id": "T04-OPEN-52",
+   "register": "T04-OPEN",
+   "subject": "The pembajaan → racun wording correction on T04-S14",
+   "disposition": "LIVE",
+   "owner": "BARIAH",
+   "note": "Evidence confirmation. Not extraction."
+  },
+  {
+   "historical_id": "E-05",
+   "live_id": "T04-EXT-01",
+   "register": "T04-EXT",
+   "subject": "Original module DOCX round trip and hash proof",
+   "disposition": "LIVE",
+   "owner": "FIRDAUS",
+   "note": "Extraction and reproducibility — the only historical E-* item of that kind."
+  },
+  {
+   "historical_id": "E-06",
+   "live_id": "T04-OPEN-53",
+   "register": "T04-OPEN",
+   "subject": "Individual asset subjects and styles",
+   "disposition": "LIVE",
+   "owner": "BARIAH",
+   "note": "Production authority. Not extraction."
+  },
+  {
+   "historical_id": "E-07",
+   "live_id": null,
+   "register": null,
+   "subject": "Which Q5 option pair stands",
+   "disposition": "CLOSED_BEFORE_THE_SPLIT",
+   "closed_by": "T04-DEC-E09 — Set B",
+   "note": "Closed in Stage 4.2F-B0.9.1."
+  },
+  {
+   "historical_id": "E-08",
+   "live_id": "T04-OPEN-54",
+   "register": "T04-OPEN",
+   "subject": "Supplementary screenshot binary custody",
+   "disposition": "LIVE",
+   "owner": "FIRDAUS",
+   "note": "Evidence custody. Adjacent to extraction but not about the module source, so it belongs in OPEN rather than EXT."
+  }
+ ],
+ "new_items": [
+  {
+   "live_id": "T04-EXT-02",
+   "register": "T04-EXT",
+   "subject": "T04-ROW-003 carries the six-step diagram as a single row with no text, so the six process-step states are bound to visual obligations rather than to text rows",
+   "owner": "FIRDAUS",
+   "raised_by": "Lane A state inventory",
+   "blocking": "nothing — the labels are obligation-derived and traceable"
+  },
+  {
+   "live_id": "T04-OPEN-55",
+   "register": "T04-OPEN",
+   "subject": "Runtime return and reset behaviour is CAIR-specified, not authority-ruled; Bariah has never been shown a state-level interaction model",
+   "owner": "BARIAH",
+   "raised_by": "Lane A coverage matrix",
+   "blocking": "interaction review sign-off, not layout"
+  }
+ ],
+ "live_ids": [
+  "T04-EXT-01",
+  "T04-EXT-02",
+  "T04-OPEN-51",
+  "T04-OPEN-52",
+  "T04-OPEN-53",
+  "T04-OPEN-54",
+  "T04-OPEN-55"
+ ],
+ "live_count": 7,
+ "closed_before_the_split": [
+  "E-01",
+  "E-03",
+  "E-07"
+ ],
+ "by_register": {
+  "T04-OPEN": [
+   "T04-OPEN-51",
+   "T04-OPEN-52",
+   "T04-OPEN-53",
+   "T04-OPEN-54",
+   "T04-OPEN-55"
+  ],
+  "T04-EXT": [
+   "T04-EXT-01",
+   "T04-EXT-02"
+  ]
+ },
+ "unqualified_collisions": [],
+ "register_blocks": {
+  "T04-EXT": [
+   1,
+   49
+  ],
+  "T04-OPEN": [
+   51,
+   99
+  ]
+ },
+ "ids_outside_their_block": [],
+ "every_historical_id_accounted": true,
+ "historical_records_rewritten": false
+}

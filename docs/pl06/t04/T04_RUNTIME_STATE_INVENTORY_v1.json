@@ -1,0 +1,2350 @@
+{
+ "stage": "4.2F-B1.1",
+ "status": "T04_LAYOUT_STORYBOARD_BUILT",
+ "forbidden_status_claims": [
+  "T04_INTERACTION_REVIEW_COMPLETE",
+  "T04_STORYBOARD_FROZEN",
+  "T04_CANONICAL_PRODUCTION_TEMPLATE"
+ ],
+ "totals": {
+  "learner_screens": 22,
+  "base_states": 22,
+  "triggered_states": 35,
+  "completion_flags": 8,
+  "total_runtime_states": 65,
+  "interactions": 35,
+  "review_pages_b1": 26,
+  "continuation_pages_b1": 4
+ },
+ "verification": [
+  {
+   "screen_id": "T04-S06",
+   "declared_reveal_states": 2,
+   "declared_targets": 2,
+   "counts_agree": true,
+   "rows_outside_the_screen": [],
+   "triggers_are_heading_or_list_rows": [],
+   "all_rows_resolve": true
+  },
+  {
+   "screen_id": "T04-S07",
+   "declared_reveal_states": 4,
+   "declared_targets": 4,
+   "counts_agree": true,
+   "rows_outside_the_screen": [],
+   "triggers_are_heading_or_list_rows": [],
+   "all_rows_resolve": true
+  },
+  {
+   "screen_id": "T04-S09",
+   "declared_reveal_states": 3,
+   "declared_targets": 3,
+   "counts_agree": true,
+   "rows_outside_the_screen": [],
+   "triggers_are_heading_or_list_rows": [],
+   "all_rows_resolve": true
+  },
+  {
+   "screen_id": "T04-S10",
+   "declared_reveal_states": 5,
+   "declared_targets": 5,
+   "counts_agree": true,
+   "rows_outside_the_screen": [],
+   "triggers_are_heading_or_list_rows": [],
+   "all_rows_resolve": true
+  },
+  {
+   "screen_id": "T04-S16",
+   "declared_reveal_states": 3,
+   "declared_targets": 3,
+   "counts_agree": true,
+   "rows_outside_the_screen": [],
+   "triggers_are_heading_or_list_rows": [],
+   "all_rows_resolve": true
+  },
+  {
+   "screen_id": "T04-S19",
+   "declared_reveal_states": 4,
+   "declared_targets": 4,
+   "counts_agree": true,
+   "rows_outside_the_screen": [],
+   "triggers_are_heading_or_list_rows": [],
+   "all_rows_resolve": true
+  }
+ ],
+ "states": [
+  {
+   "state_id": "T04-S01-ST-BASE",
+   "screen_id": "T04-S01",
+   "position": 1,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S01-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Topik 4",
+    "Penjagaan dan Penyelenggaraan",
+    "MULA",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A01"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S02-ST-BASE",
+   "screen_id": "T04-S02",
+   "position": 2,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE — dialogue plays",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S02-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Alya: Encik Rahman, projek dah siap dibina. Kenapa kita masih perlu jaga taman ni setiap minggu?",
+    "Encik Rahman: Sebab membina dan mengekalkan landskap dua benda berbeza, Alya. Tumbuhan kena disiram, dibaja dan dikawal perosak. Guna IPM, dan racun kimia pilihan terakhir. Struktur pula perlu dipantau supaya kekal berfungsi.",
+    "Alya: Dan semua kena direkod untuk tempoh DLP?",
+    "Encik Rahman: Ya. Penyelenggaraan berjadual dan dokumentasi lengkap, itu yang melindungi kerja pembinaan kita dan mencerminkan kualiti kontraktor.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [],
+   "authority_refs": [
+    "T04-DLG-F01",
+    "T04-DLG-F02",
+    "T04-DLG-F03",
+    "T04-DLG-F04"
+   ],
+   "decision_ids": [
+    "T04-DEC-A02",
+    "T04-DEC-C01",
+    "T04-DEC-C02",
+    "T04-DEC-C03"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S03-ST-BASE",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S03-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "PENJAGAAN DAN PENYELENGGARAAN",
+    "Secara umumnya, berikut ialah aliran proses penjagaan dan penyelenggaran yang terlibat di dalam kerja pembinaan landskap luar:",
+    "Klik setiap langkah mengikut turutan.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-001",
+    "T04-VO-002",
+    "T04-VO-003",
+    "T04-VO-004",
+    "T04-VO-005",
+    "T04-VO-006"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S03-ST-01",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "STEP",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S03-TRG-01",
+   "trigger_label": "Koordinasi dan Demonstrasi Penyelenggaraan Taman",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-01",
+   "return_behaviour": "The step stays highlighted; the learner advances to the next step or returns to the flow overview. No navigation away from the screen.",
+   "return_behaviour_ms": "Langkah kekal ditandakan. Pelajar meneruskan ke langkah berikutnya atau kembali ke pandangan aliran. Tiada navigasi keluar dari skrin.",
+   "content_block_texts": [
+    "Koordinasi dan Demonstrasi Penyelenggaraan Taman"
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Highlights step 1 of six, \"Koordinasi dan Demonstrasi Penyelenggaraan Taman\". The six labels are already visible in the base state; the step state marks position, it does not disclose new text.",
+   "differs_from_base_ms": "Menandakan langkah 1 daripada enam, \"Koordinasi dan Demonstrasi Penyelenggaraan Taman\". Keenam-enam label sudah kelihatan dalam keadaan asas; keadaan langkah menandakan kedudukan, ia tidak mendedahkan teks baharu.",
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-001"
+   ],
+   "binding_kind": "DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW",
+   "binding_limitation_ms": "Enam aktiviti berada di dalam rajah SmartArt T04-DGM-01. Ekstrak terkawal membawa rajah itu sebagai satu baris tanpa teks, jadi keadaan ini terikat kepada keperluan visual dan bukan kepada baris teks.",
+   "binding_limitation": "The six activities live inside the SmartArt diagram T04-DGM-01. The controlled extract carries that diagram as one row with no text, so this state is bound to a visual obligation rather than to a text row. The label is the obligation's source heading."
+  },
+  {
+   "state_id": "T04-S03-ST-02",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "STEP",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S03-TRG-02",
+   "trigger_label": "Penyeliaan Penyelenggaraan Taman",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-02",
+   "return_behaviour": "The step stays highlighted; the learner advances to the next step or returns to the flow overview. No navigation away from the screen.",
+   "return_behaviour_ms": "Langkah kekal ditandakan. Pelajar meneruskan ke langkah berikutnya atau kembali ke pandangan aliran. Tiada navigasi keluar dari skrin.",
+   "content_block_texts": [
+    "Penyeliaan Penyelenggaraan Taman"
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Highlights step 2 of six, \"Penyeliaan Penyelenggaraan Taman\". The six labels are already visible in the base state; the step state marks position, it does not disclose new text.",
+   "differs_from_base_ms": "Menandakan langkah 2 daripada enam, \"Penyeliaan Penyelenggaraan Taman\". Keenam-enam label sudah kelihatan dalam keadaan asas; keadaan langkah menandakan kedudukan, ia tidak mendedahkan teks baharu.",
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-002"
+   ],
+   "binding_kind": "DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW",
+   "binding_limitation_ms": "Enam aktiviti berada di dalam rajah SmartArt T04-DGM-01. Ekstrak terkawal membawa rajah itu sebagai satu baris tanpa teks, jadi keadaan ini terikat kepada keperluan visual dan bukan kepada baris teks.",
+   "binding_limitation": "The six activities live inside the SmartArt diagram T04-DGM-01. The controlled extract carries that diagram as one row with no text, so this state is bound to a visual obligation rather than to a text row. The label is the obligation's source heading."
+  },
+  {
+   "state_id": "T04-S03-ST-03",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "STEP",
+   "declared_state_label": "ST-03",
+   "trigger_id": "T04-S03-TRG-03",
+   "trigger_label": "Penyeliaan Operasi Nurseri",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-03",
+   "return_behaviour": "The step stays highlighted; the learner advances to the next step or returns to the flow overview. No navigation away from the screen.",
+   "return_behaviour_ms": "Langkah kekal ditandakan. Pelajar meneruskan ke langkah berikutnya atau kembali ke pandangan aliran. Tiada navigasi keluar dari skrin.",
+   "content_block_texts": [
+    "Penyeliaan Operasi Nurseri"
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Highlights step 3 of six, \"Penyeliaan Operasi Nurseri\". The six labels are already visible in the base state; the step state marks position, it does not disclose new text.",
+   "differs_from_base_ms": "Menandakan langkah 3 daripada enam, \"Penyeliaan Operasi Nurseri\". Keenam-enam label sudah kelihatan dalam keadaan asas; keadaan langkah menandakan kedudukan, ia tidak mendedahkan teks baharu.",
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-003"
+   ],
+   "binding_kind": "DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW",
+   "binding_limitation_ms": "Enam aktiviti berada di dalam rajah SmartArt T04-DGM-01. Ekstrak terkawal membawa rajah itu sebagai satu baris tanpa teks, jadi keadaan ini terikat kepada keperluan visual dan bukan kepada baris teks.",
+   "binding_limitation": "The six activities live inside the SmartArt diagram T04-DGM-01. The controlled extract carries that diagram as one row with no text, so this state is bound to a visual obligation rather than to a text row. The label is the obligation's source heading."
+  },
+  {
+   "state_id": "T04-S03-ST-04",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "STEP",
+   "declared_state_label": "ST-04",
+   "trigger_id": "T04-S03-TRG-04",
+   "trigger_label": "Penyeliaan Alatan dan Mesin Penyelenggaraan Taman",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-04",
+   "return_behaviour": "The step stays highlighted; the learner advances to the next step or returns to the flow overview. No navigation away from the screen.",
+   "return_behaviour_ms": "Langkah kekal ditandakan. Pelajar meneruskan ke langkah berikutnya atau kembali ke pandangan aliran. Tiada navigasi keluar dari skrin.",
+   "content_block_texts": [
+    "Penyeliaan Alatan dan Mesin Penyelenggaraan Taman"
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Highlights step 4 of six, \"Penyeliaan Alatan dan Mesin Penyelenggaraan Taman\". The six labels are already visible in the base state; the step state marks position, it does not disclose new text.",
+   "differs_from_base_ms": "Menandakan langkah 4 daripada enam, \"Penyeliaan Alatan dan Mesin Penyelenggaraan Taman\". Keenam-enam label sudah kelihatan dalam keadaan asas; keadaan langkah menandakan kedudukan, ia tidak mendedahkan teks baharu.",
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-004"
+   ],
+   "binding_kind": "DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW",
+   "binding_limitation_ms": "Enam aktiviti berada di dalam rajah SmartArt T04-DGM-01. Ekstrak terkawal membawa rajah itu sebagai satu baris tanpa teks, jadi keadaan ini terikat kepada keperluan visual dan bukan kepada baris teks.",
+   "binding_limitation": "The six activities live inside the SmartArt diagram T04-DGM-01. The controlled extract carries that diagram as one row with no text, so this state is bound to a visual obligation rather than to a text row. The label is the obligation's source heading."
+  },
+  {
+   "state_id": "T04-S03-ST-05",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "STEP",
+   "declared_state_label": "ST-05",
+   "trigger_id": "T04-S03-TRG-05",
+   "trigger_label": "Penyeliaan Inventori Taman",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-05",
+   "return_behaviour": "The step stays highlighted; the learner advances to the next step or returns to the flow overview. No navigation away from the screen.",
+   "return_behaviour_ms": "Langkah kekal ditandakan. Pelajar meneruskan ke langkah berikutnya atau kembali ke pandangan aliran. Tiada navigasi keluar dari skrin.",
+   "content_block_texts": [
+    "Penyeliaan Inventori Taman"
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Highlights step 5 of six, \"Penyeliaan Inventori Taman\". The six labels are already visible in the base state; the step state marks position, it does not disclose new text.",
+   "differs_from_base_ms": "Menandakan langkah 5 daripada enam, \"Penyeliaan Inventori Taman\". Keenam-enam label sudah kelihatan dalam keadaan asas; keadaan langkah menandakan kedudukan, ia tidak mendedahkan teks baharu.",
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-005"
+   ],
+   "binding_kind": "DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW",
+   "binding_limitation_ms": "Enam aktiviti berada di dalam rajah SmartArt T04-DGM-01. Ekstrak terkawal membawa rajah itu sebagai satu baris tanpa teks, jadi keadaan ini terikat kepada keperluan visual dan bukan kepada baris teks.",
+   "binding_limitation": "The six activities live inside the SmartArt diagram T04-DGM-01. The controlled extract carries that diagram as one row with no text, so this state is bound to a visual obligation rather than to a text row. The label is the obligation's source heading."
+  },
+  {
+   "state_id": "T04-S03-ST-06",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "STEP",
+   "declared_state_label": "ST-06",
+   "trigger_id": "T04-S03-TRG-06",
+   "trigger_label": "Perancangan Sumber Manusia dan Kebajikan Pekerja",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-06",
+   "return_behaviour": "The step stays highlighted; the learner advances to the next step or returns to the flow overview. No navigation away from the screen.",
+   "return_behaviour_ms": "Langkah kekal ditandakan. Pelajar meneruskan ke langkah berikutnya atau kembali ke pandangan aliran. Tiada navigasi keluar dari skrin.",
+   "content_block_texts": [
+    "Perancangan Sumber Manusia dan Kebajikan Pekerja"
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Highlights step 6 of six, \"Perancangan Sumber Manusia dan Kebajikan Pekerja\". The six labels are already visible in the base state; the step state marks position, it does not disclose new text.",
+   "differs_from_base_ms": "Menandakan langkah 6 daripada enam, \"Perancangan Sumber Manusia dan Kebajikan Pekerja\". Keenam-enam label sudah kelihatan dalam keadaan asas; keadaan langkah menandakan kedudukan, ia tidak mendedahkan teks baharu.",
+   "source_row_ids": [
+    "T04-ROW-003"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [
+    "T04-VO-006"
+   ],
+   "binding_kind": "DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW",
+   "binding_limitation_ms": "Enam aktiviti berada di dalam rajah SmartArt T04-DGM-01. Ekstrak terkawal membawa rajah itu sebagai satu baris tanpa teks, jadi keadaan ini terikat kepada keperluan visual dan bukan kepada baris teks.",
+   "binding_limitation": "The six activities live inside the SmartArt diagram T04-DGM-01. The controlled extract carries that diagram as one row with no text, so this state is bound to a visual obligation rather than to a text row. The label is the obligation's source heading."
+  },
+  {
+   "state_id": "T04-S03-ST-ALL_VIEWED",
+   "screen_id": "T04-S03",
+   "position": 3,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S03-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S03-ST-BASE",
+   "resulting_state_id": "T04-S03-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S04-ST-BASE",
+   "screen_id": "T04-S04",
+   "position": 4,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S04-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Landskap Lembut",
+    "Landskap lembut merujuk kepada semua elemen hortikultur atau hidupan dalam sesebuah projek landskap. Ini termasuk pokok, palma, pokok renek, penutup bumi, dan rumput. Bagi seorang kontraktor, pengurusan landskap lembut bukan sahaja terhad kepada peringkat penanaman, tetapi merangkumi tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan (maintenance during construction) dan tempoh tanggungan kecacatan (Defect Liability Period - DLP).",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 3,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A04"
+   ],
+   "visual_obligations": [
+    "T04-VO-007"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S05-ST-BASE",
+   "screen_id": "T04-S05",
+   "position": 5,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S05-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Siram",
+    "Membekalkan kuantiti air yang mencukupi untuk kelangsungan hidup dan proses fisiologi tumbuhan (fotosintesis, penyerapan nutrien), terutamanya bagi tanaman yang baru ditanam dan belum matang.",
+    "Aspek yang dibincangkan:",
+    "Kaedah Pelaksanaan",
+    "Aspek Pengurusan Untuk Kontraktor",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 6,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-006",
+    "T04-ROW-007"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A05"
+   ],
+   "visual_obligations": [
+    "T04-VO-008"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S06-ST-BASE",
+   "screen_id": "T04-S06",
+   "position": 6,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S06-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Kaedah Pelaksanaan",
+    "Penyiraman Manual",
+    "Sistem Pengairan Automatik",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-011"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ],
+   "visual_obligations": [
+    "T04-VO-009",
+    "T04-VO-010",
+    "T04-VO-011"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S06-ST-01",
+   "screen_id": "T04-S06",
+   "position": 6,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S06-TRG-01",
+   "trigger_label": "Penyiraman Manual",
+   "parent_state_id": "T04-S06-ST-BASE",
+   "resulting_state_id": "T04-S06-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menggunakan hos getah dengan muncung semburan (nozzle). Kaedah ini fleksibel tetapi memerlukan tenaga kerja yang ramai dan kurang konsisten."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Penyiraman Manual\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Penyiraman Manual\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-009",
+    "T04-ROW-010"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ],
+   "visual_obligations": [
+    "T04-VO-009",
+    "T04-VO-010",
+    "T04-VO-011"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S06-ST-02",
+   "screen_id": "T04-S06",
+   "position": 6,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S06-TRG-02",
+   "trigger_label": "Sistem Pengairan Automatik",
+   "parent_state_id": "T04-S06-ST-BASE",
+   "resulting_state_id": "T04-S06-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Sistem Semburan (Sprinkler System)",
+    "Sesuai untuk kawasan rumput yang luas.",
+    "Sistem Titis (Drip Irrigation System)",
+    "Sangat efisien untuk pokok individu atau pokok renek kerana ia membekalkan air terus ke zon akar, mengurangkan pembaziran air melalui penyejatan."
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "Adds the body of \"Sistem Pengairan Automatik\" — 4 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Sistem Pengairan Automatik\" — 4 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ],
+   "visual_obligations": [
+    "T04-VO-009",
+    "T04-VO-010",
+    "T04-VO-011"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S06-ST-ALL_VIEWED",
+   "screen_id": "T04-S06",
+   "position": 6,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S06-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S06-ST-BASE",
+   "resulting_state_id": "T04-S06-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S07-ST-BASE",
+   "screen_id": "T04-S07",
+   "position": 7,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S07-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Aspek Pengurusan untuk Kontraktor:",
+    "Jadual Penyiraman",
+    "Pengurusan Sumber Air",
+    "Pemantauan & Pelaporan",
+    "Kecekapan Kos",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 6,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-016",
+    "T04-ROW-017",
+    "T04-ROW-020",
+    "T04-ROW-022",
+    "T04-ROW-024"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "visual_obligations": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S07-ST-01",
+   "screen_id": "T04-S07",
+   "position": 7,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S07-TRG-01",
+   "trigger_label": "Jadual Penyiraman",
+   "parent_state_id": "T04-S07-ST-BASE",
+   "resulting_state_id": "T04-S07-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Membangunkan jadual kerja penyiraman yang sistematik. Amalan terbaik adalah menyiram pada awal pagi atau lewat petang untuk meminimumkan kehilangan air akibat penyejatan.",
+    "Kekerapan dan kuantiti siraman mesti disesuaikan mengikut jenis tanaman, keadaan cuaca, dan peringkat tumbesaran. Tanaman baru memerlukan siraman lebih kerap."
+   ],
+   "content_record_count": 2,
+   "differs_from_base": "Adds the body of \"Jadual Penyiraman\" — 2 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Jadual Penyiraman\" — 2 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-017",
+    "T04-ROW-018",
+    "T04-ROW-019"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "visual_obligations": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S07-ST-02",
+   "screen_id": "T04-S07",
+   "position": 7,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S07-TRG-02",
+   "trigger_label": "Pengurusan Sumber Air",
+   "parent_state_id": "T04-S07-ST-BASE",
+   "resulting_state_id": "T04-S07-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Memastikan sumber air mencukupi dan tekanan air memadai untuk keseluruhan tapak. Sekiranya menggunakan sistem automatik, kontraktor bertanggungjawab untuk memeriksa, menguji, dan membaiki sebarang kerosakan seperti muncung tersumbat atau kebocoran paip."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Pengurusan Sumber Air\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pengurusan Sumber Air\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-020",
+    "T04-ROW-021"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "visual_obligations": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S07-ST-03",
+   "screen_id": "T04-S07",
+   "position": 7,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-03",
+   "trigger_id": "T04-S07-TRG-03",
+   "trigger_label": "Pemantauan & Pelaporan",
+   "parent_state_id": "T04-S07-ST-BASE",
+   "resulting_state_id": "T04-S07-ST-03",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Pekerja perlu dilatih untuk mengenal pasti tanda-tanda kekurangan air (daun layu, kering) atau terlebih air (daun kuning, akar reput). Aktiviti penyiraman perlu direkodkan dalam laporan harian tapak sebagai bukti pelaksanaan kerja."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Pemantauan & Pelaporan\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pemantauan & Pelaporan\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-022",
+    "T04-ROW-023"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "visual_obligations": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S07-ST-04",
+   "screen_id": "T04-S07",
+   "position": 7,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-04",
+   "trigger_id": "T04-S07-TRG-04",
+   "trigger_label": "Kecekapan Kos",
+   "parent_state_id": "T04-S07-ST-BASE",
+   "resulting_state_id": "T04-S07-ST-04",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Mengoptimumkan kaedah penyiraman untuk mengawal kos bil air, terutamanya dalam projek berskala besar."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Kecekapan Kos\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Kecekapan Kos\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-024",
+    "T04-ROW-025"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "visual_obligations": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S07-ST-ALL_VIEWED",
+   "screen_id": "T04-S07",
+   "position": 7,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S07-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S07-ST-BASE",
+   "resulting_state_id": "T04-S07-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S08-ST-BASE",
+   "screen_id": "T04-S08",
+   "position": 8,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S08-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Baja",
+    "Membekalkan nutrien penting yang mungkin kurang di dalam tanah untuk merangsang pertumbuhan yang sihat, pengeluaran bunga/buah, dan meningkatkan daya tahan tumbuhan terhadap penyakit.",
+    "Aspek yang dibincangkan:",
+    "Kaedah Pelaksanaan",
+    "Aspek Pengurusan Untuk Kontraktor",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 6,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-026",
+    "T04-ROW-027"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A08"
+   ],
+   "visual_obligations": [
+    "T04-VO-017"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S09-ST-BASE",
+   "screen_id": "T04-S09",
+   "position": 9,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S09-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Kaedah Pelaksanaan",
+    "Pembajaan Tabur (Broadcasting)",
+    "Pembajaan Poket (Pocketing)",
+    "Semburan Folia (Foliar Spray)",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-028",
+    "T04-ROW-029",
+    "T04-ROW-031",
+    "T04-ROW-033"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "visual_obligations": [
+    "T04-VO-018",
+    "T04-VO-019",
+    "T04-VO-020",
+    "T04-VO-021"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S09-ST-01",
+   "screen_id": "T04-S09",
+   "position": 9,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S09-TRG-01",
+   "trigger_label": "Pembajaan Tabur (Broadcasting)",
+   "parent_state_id": "T04-S09-ST-BASE",
+   "resulting_state_id": "T04-S09-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menabur baja butiran (granular) secara rata di sekeliling zon akar tumbuhan atau di atas permukaan rumput."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Pembajaan Tabur (Broadcasting)\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pembajaan Tabur (Broadcasting)\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-029",
+    "T04-ROW-030"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "visual_obligations": [
+    "T04-VO-018",
+    "T04-VO-019",
+    "T04-VO-020",
+    "T04-VO-021"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S09-ST-02",
+   "screen_id": "T04-S09",
+   "position": 9,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S09-TRG-02",
+   "trigger_label": "Pembajaan Poket (Pocketing)",
+   "parent_state_id": "T04-S09-ST-BASE",
+   "resulting_state_id": "T04-S09-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menggali lubang-lubang kecil di sekeliling zon akar pokok, memasukkan baja, dan menutupnya kembali. Kaedah ini lebih berkesan untuk pokok besar."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Pembajaan Poket (Pocketing)\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pembajaan Poket (Pocketing)\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-031",
+    "T04-ROW-032"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "visual_obligations": [
+    "T04-VO-018",
+    "T04-VO-019",
+    "T04-VO-020",
+    "T04-VO-021"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S09-ST-03",
+   "screen_id": "T04-S09",
+   "position": 9,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-03",
+   "trigger_id": "T04-S09-TRG-03",
+   "trigger_label": "Semburan Folia (Foliar Spray)",
+   "parent_state_id": "T04-S09-ST-BASE",
+   "resulting_state_id": "T04-S09-ST-03",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menyembur baja cecair terus ke daun untuk penyerapan nutrien yang pantas."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Semburan Folia (Foliar Spray)\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Semburan Folia (Foliar Spray)\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-033",
+    "T04-ROW-034"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "visual_obligations": [
+    "T04-VO-018",
+    "T04-VO-019",
+    "T04-VO-020",
+    "T04-VO-021"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S09-ST-ALL_VIEWED",
+   "screen_id": "T04-S09",
+   "position": 9,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S09-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S09-ST-BASE",
+   "resulting_state_id": "T04-S09-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S10-ST-BASE",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S10-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Aspek Pengurusan untuk Kontraktor",
+    "Program Pembajaan",
+    "Pematuhan Spesifikasi",
+    "Pengurusan Stok dan Penyimpanan",
+    "Keselamatan Pekerja",
+    "Dokumentasi",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 7,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-035",
+    "T04-ROW-036",
+    "T04-ROW-038",
+    "T04-ROW-040",
+    "T04-ROW-042",
+    "T04-ROW-044"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S10-ST-01",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S10-TRG-01",
+   "trigger_label": "Program Pembajaan",
+   "parent_state_id": "T04-S10-ST-BASE",
+   "resulting_state_id": "T04-S10-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Merancang program pembajaan yang mematuhi spesifikasi kontrak. Program ini perlu menyatakan jenis baja (organik atau kimia), kadar NPK, kuantiti, dan kekerapan aplikasi untuk setiap jenis tanaman."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Program Pembajaan\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Program Pembajaan\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-036",
+    "T04-ROW-037"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S10-ST-02",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S10-TRG-02",
+   "trigger_label": "Pematuhan Spesifikasi",
+   "parent_state_id": "T04-S10-ST-BASE",
+   "resulting_state_id": "T04-S10-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Memastikan baja yang digunakan adalah seperti yang ditetapkan dalam dokumen kontrak atau diluluskan oleh Pegawai Penguasa (S.O.). Penggunaan baja yang salah boleh merosakkan tanaman atau tidak memberi kesan."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Pematuhan Spesifikasi\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pematuhan Spesifikasi\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-038",
+    "T04-ROW-039"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S10-ST-03",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-03",
+   "trigger_id": "T04-S10-TRG-03",
+   "trigger_label": "Pengurusan Stok dan Penyimpanan",
+   "parent_state_id": "T04-S10-ST-BASE",
+   "resulting_state_id": "T04-S10-ST-03",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Baja mesti disimpan di tempat yang kering, selamat, dan jauh dari sumber air untuk mengelakkan pencemaran."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Pengurusan Stok dan Penyimpanan\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pengurusan Stok dan Penyimpanan\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-040",
+    "T04-ROW-041"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S10-ST-04",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-04",
+   "trigger_id": "T04-S10-TRG-04",
+   "trigger_label": "Keselamatan Pekerja",
+   "parent_state_id": "T04-S10-ST-BASE",
+   "resulting_state_id": "T04-S10-ST-04",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Memastikan pekerja menggunakan Peralatan Pelindung Diri (PPE) yang sesuai seperti sarung tangan dan topeng muka semasa mengendalikan baja kimia."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Keselamatan Pekerja\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Keselamatan Pekerja\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-042",
+    "T04-ROW-043"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S10-ST-05",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-05",
+   "trigger_id": "T04-S10-TRG-05",
+   "trigger_label": "Dokumentasi",
+   "parent_state_id": "T04-S10-ST-BASE",
+   "resulting_state_id": "T04-S10-ST-05",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Merekodkan tarikh, jenis baja, kuantiti yang digunakan, dan kawasan yang telah dibaja. Ini penting sebagai bukti kerja untuk tuntutan bayaran dan rujukan semasa tempoh DLP."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Dokumentasi\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Dokumentasi\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-044",
+    "T04-ROW-045"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S10-ST-ALL_VIEWED",
+   "screen_id": "T04-S10",
+   "position": 10,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S10-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S10-ST-BASE",
+   "resulting_state_id": "T04-S10-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S11-ST-BASE",
+   "screen_id": "T04-S11",
+   "position": 11,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S11-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Racun",
+    "Mengawal dan mengurus serangan perosak (serangga), penyakit (kulat), dan pertumbuhan rumpai yang boleh menjejaskan kesihatan dan estetika landskap lembut. Konsep utama yang diamalkan ialah Pengurusan Perosak Bersepadu (Integrated Pest Management – IPM). Sebagai kontraktor profesional, adalah penting untuk melaksanakan konsep IPM, di mana penggunaan racun kimia hanya dijadikan pilihan terakhir.",
+    "Aspek yang dibincangkan:",
+    "Pendekatan IPM",
+    "Jenis Racun",
+    "Aspek Pengurusan Untuk Kontraktor",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 7,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A11"
+   ],
+   "visual_obligations": [
+    "T04-VO-028"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S12-ST-BASE",
+   "screen_id": "T04-S12",
+   "position": 12,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S12-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "IPM memberi keutamaan kepada:",
+    "Kawalan Kultur",
+    "Amalan penyelenggaraan yang baik (penyiraman, pembajaan seimbang).",
+    "Kawalan Fizikal",
+    "Membuang bahagian berpenyakit secara manual, mencabut rumpai.",
+    "Kawalan Biologi",
+    "Menggunakan musuh semula jadi kepada perosak.",
+    "Kawalan Kimia",
+    "Penggunaan racun secara terkawal dan bersasar.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 10,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A12"
+   ],
+   "visual_obligations": [
+    "T04-VO-029",
+    "T04-VO-030",
+    "T04-VO-031",
+    "T04-VO-032",
+    "T04-VO-033"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S13-ST-BASE",
+   "screen_id": "T04-S13",
+   "position": 13,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S13-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Jenis Racun",
+    "Racun Serangga (Insecticide)",
+    "Untuk mengawal serangga perosak.",
+    "Racun Kulat (Fungicide)",
+    "Untuk mengawal penyakit disebabkan kulat.",
+    "Racun Rumpai (Herbicide)",
+    "Untuk mengawal pertumbuhan rumpai.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 8,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-057",
+    "T04-ROW-058",
+    "T04-ROW-059",
+    "T04-ROW-060",
+    "T04-ROW-061",
+    "T04-ROW-062",
+    "T04-ROW-063"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A13"
+   ],
+   "visual_obligations": [
+    "T04-VO-034",
+    "T04-VO-035",
+    "T04-VO-036",
+    "T04-VO-037"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S14-ST-BASE",
+   "screen_id": "T04-S14",
+   "position": 14,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S14-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Aspek Pengurusan untuk Kontraktor:",
+    "Klik setiap tajuk untuk memaparkan maklumat.",
+    "Perundangan Dan Pelesenan",
+    "Keselamatan Dan Kesihatan (HSE)",
+    "Pengurusan Risiko",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 6,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S14-ST-01",
+   "screen_id": "T04-S14",
+   "position": 14,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S14-TRG-01",
+   "trigger_label": "Perundangan Dan Pelesenan",
+   "parent_state_id": "T04-S14-ST-BASE",
+   "resulting_state_id": "T04-S14-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Ringkasan aspek: Perundangan Dan Pelesenan",
+    "Butiran penuh dibentangkan pada skrin T04-S15."
+   ],
+   "content_record_count": 2,
+   "differs_from_base": "Adds a short overview panel for \"Perundangan Dan Pelesenan\" and names the screen that carries it in full (T04-S15).",
+   "differs_from_base_ms": "Menambah panel ringkasan bagi \"Perundangan Dan Pelesenan\" dan menyatakan skrin yang membentangkannya secara penuh (T04-S15).",
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [
+    "T04-DEC-A14"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "AUTHORITY_DECLARED_NAVIGATION_HUB",
+   "navigation_target": "T04-S15"
+  },
+  {
+   "state_id": "T04-S14-ST-02",
+   "screen_id": "T04-S14",
+   "position": 14,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S14-TRG-02",
+   "trigger_label": "Keselamatan Dan Kesihatan (HSE)",
+   "parent_state_id": "T04-S14-ST-BASE",
+   "resulting_state_id": "T04-S14-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Ringkasan aspek: Keselamatan Dan Kesihatan (HSE)",
+    "Butiran penuh dibentangkan pada skrin T04-S16."
+   ],
+   "content_record_count": 2,
+   "differs_from_base": "Adds a short overview panel for \"Keselamatan Dan Kesihatan (HSE)\" and names the screen that carries it in full (T04-S16).",
+   "differs_from_base_ms": "Menambah panel ringkasan bagi \"Keselamatan Dan Kesihatan (HSE)\" dan menyatakan skrin yang membentangkannya secara penuh (T04-S16).",
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [
+    "T04-DEC-A14"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "AUTHORITY_DECLARED_NAVIGATION_HUB",
+   "navigation_target": "T04-S16"
+  },
+  {
+   "state_id": "T04-S14-ST-03",
+   "screen_id": "T04-S14",
+   "position": 14,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-03",
+   "trigger_id": "T04-S14-TRG-03",
+   "trigger_label": "Pengurusan Risiko",
+   "parent_state_id": "T04-S14-ST-BASE",
+   "resulting_state_id": "T04-S14-ST-03",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Ringkasan aspek: Pengurusan Risiko",
+    "Butiran penuh dibentangkan pada skrin T04-S17."
+   ],
+   "content_record_count": 2,
+   "differs_from_base": "Adds a short overview panel for \"Pengurusan Risiko\" and names the screen that carries it in full (T04-S17).",
+   "differs_from_base_ms": "Menambah panel ringkasan bagi \"Pengurusan Risiko\" dan menyatakan skrin yang membentangkannya secara penuh (T04-S17).",
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "authority_refs": [
+    "T04-DEC-A14"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "AUTHORITY_DECLARED_NAVIGATION_HUB",
+   "navigation_target": "T04-S17"
+  },
+  {
+   "state_id": "T04-S14-ST-ALL_VIEWED",
+   "screen_id": "T04-S14",
+   "position": 14,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S14-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S14-ST-BASE",
+   "resulting_state_id": "T04-S14-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S15-ST-BASE",
+   "screen_id": "T04-S15",
+   "position": 15,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S15-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Perundangan dan Pelesenan",
+    "Penggunaan racun kimia dikawal oleh Akta Racun Makhluk Perosak 1974.",
+    "Kontraktor mesti memastikan pekerja yang menjalankan semburan racun adalah pengendali racun berlesen atau sekurang-kurangnya telah menerima latihan dan di bawah seliaan pemegang lesen. Ini adalah satu kewajipan undang-undang.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A15"
+   ],
+   "visual_obligations": [
+    "T04-VO-039"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S16-ST-BASE",
+   "screen_id": "T04-S16",
+   "position": 16,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S16-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Keselamatan dan Kesihatan (HSE)",
+    "PPE Lengkap",
+    "Penyimpanan & Pelupusan",
+    "Helaian Data Keselamatan (SDS)",
+    "Klik setiap tajuk untuk memaparkan maklumat.",
+    "PPE Lengkap",
+    "Penyimpanan Dan Pelupusan",
+    "Helaian Data Keselamatan (SDS)",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 9,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-071",
+    "T04-ROW-073"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "visual_obligations": [
+    "T04-VO-040"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S16-ST-01",
+   "screen_id": "T04-S16",
+   "position": 16,
+   "state_kind": "REVEAL",
+   "declared_state_label": "REVEAL_PPE_LENGKAP",
+   "trigger_id": "T04-S16-TRG-01",
+   "trigger_label": "PPE Lengkap",
+   "parent_state_id": "T04-S16-ST-BASE",
+   "resulting_state_id": "T04-S16-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Memastikan pekerja memakai PPE yang lengkap dan bersesuaian (topeng pernafasan, cermin mata keselamatan, sarung tangan kimia, sut pelindung)."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"PPE Lengkap\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"PPE Lengkap\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-069",
+    "T04-ROW-070"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "visual_obligations": [
+    "T04-VO-040"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S16-ST-02",
+   "screen_id": "T04-S16",
+   "position": 16,
+   "state_kind": "REVEAL",
+   "declared_state_label": "REVEAL_PENYIMPANAN_DAN_PELUPUSAN",
+   "trigger_id": "T04-S16-TRG-02",
+   "trigger_label": "Penyimpanan & Pelupusan",
+   "parent_state_id": "T04-S16-ST-BASE",
+   "resulting_state_id": "T04-S16-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Racun mesti disimpan di dalam stor berkunci, berlabel, dan mempunyai pengudaraan yang baik. Bekas racun kosong tidak boleh digunakan semula dan mesti dilupuskan mengikut peraturan Jabatan Alam Sekitar (JAS)."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Penyimpanan & Pelupusan\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Penyimpanan & Pelupusan\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-071",
+    "T04-ROW-072"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "visual_obligations": [
+    "T04-VO-040"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S16-ST-03",
+   "screen_id": "T04-S16",
+   "position": 16,
+   "state_kind": "REVEAL",
+   "declared_state_label": "REVEAL_SDS",
+   "trigger_id": "T04-S16-TRG-03",
+   "trigger_label": "Helaian Data Keselamatan (SDS)",
+   "parent_state_id": "T04-S16-ST-BASE",
+   "resulting_state_id": "T04-S16-ST-03",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun yang digunakan di tapak dan memastikan pekerja memahaminya."
+   ],
+   "content_record_count": 1,
+   "differs_from_base": "Adds the body of \"Helaian Data Keselamatan (SDS)\" — 1 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Helaian Data Keselamatan (SDS)\" — 1 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-073",
+    "T04-ROW-074"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "visual_obligations": [
+    "T04-VO-040"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S16-ST-ALL_VIEWED",
+   "screen_id": "T04-S16",
+   "position": 16,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S16-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S16-ST-BASE",
+   "resulting_state_id": "T04-S16-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S17-ST-BASE",
+   "screen_id": "T04-S17",
+   "position": 17,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S17-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Pengurusan Risiko",
+    "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak berangin) untuk mengelakkan spray drift.",
+    "Maklumkan kepada pihak pengurusan bangunan atau penduduk sekitar sebelum aktiviti semburan dijalankan. Letakkan papan tanda amaran di kawasan kerja.",
+    "Pelaporan: Menyimpan rekod lengkap bagi setiap aktiviti semburan, termasuk: tarikh, lokasi, jenis racun, kadar bancuhan, nama pengendali, dan keadaan cuaca. Rekod ini amat penting untuk tujuan audit keselamatan dan liabiliti.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A17"
+   ],
+   "visual_obligations": [
+    "T04-VO-041"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S18-ST-BASE",
+   "screen_id": "T04-S18",
+   "position": 18,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S18-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Landskap Kejur",
+    "Landskap Kejur merujuk kepada semua elemen binaan yang bukan hidup dan bersifat kekal dalam reka bentuk landskap. Ia membentuk struktur, rangka, dan 'tulang belakang' bagi sesuatu ruang luaran, serta menyediakan fungsi, bentuk, dan ketahanan. Elemen landskap kejur dibina untuk memenuhi empat fungsi utama:",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 3,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A18"
+   ],
+   "visual_obligations": [
+    "T04-VO-042"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S19-ST-BASE",
+   "screen_id": "T04-S19",
+   "position": 19,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S19-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Pengurusan Ruang dan Sirkulasi",
+    "Fungsi Struktur dan Kejuruteraan",
+    "Kebolehgunaan dan Kemudahan",
+    "Estetika dan Reka Bentuk",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-086",
+    "T04-ROW-091",
+    "T04-ROW-096"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "visual_obligations": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S19-ST-01",
+   "screen_id": "T04-S19",
+   "position": 19,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-01",
+   "trigger_id": "T04-S19-TRG-01",
+   "trigger_label": "Pengurusan Ruang dan Sirkulasi",
+   "parent_state_id": "T04-S19-ST-BASE",
+   "resulting_state_id": "T04-S19-ST-01",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Membentuk Ruang",
+    "Dinding, pagar, dan perubahan aras lantai digunakan untuk membahagikan ruang luaran kepada \"bilik\" yang berbeza (cth., kawasan rehat, kawasan permainan).",
+    "Laluan Pergerakan",
+    "Lorong pejalan kaki (pathways), jalan masuk (driveways), dan tangga menyediakan laluan yang selamat dan jelas untuk pergerakan manusia dan kenderaan."
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "Adds the body of \"Pengurusan Ruang dan Sirkulasi\" — 4 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Pengurusan Ruang dan Sirkulasi\" — 4 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "visual_obligations": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S19-ST-02",
+   "screen_id": "T04-S19",
+   "position": 19,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-02",
+   "trigger_id": "T04-S19-TRG-02",
+   "trigger_label": "Fungsi Struktur dan Kejuruteraan",
+   "parent_state_id": "T04-S19-ST-BASE",
+   "resulting_state_id": "T04-S19-ST-02",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menstabilkan Tanah",
+    "Dinding penahan (retaining walls) dibina untuk menahan tanah di kawasan bercerun, mengelakkan hakisan dan tanah runtuh.",
+    "Pengurusan Air",
+    "Parit, longkang, dan permukaan yang dicerunkan dengan betul (properly graded surfaces) adalah penting untuk menguruskan aliran air larian permukaan."
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "Adds the body of \"Fungsi Struktur dan Kejuruteraan\" — 4 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Fungsi Struktur dan Kejuruteraan\" — 4 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "visual_obligations": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S19-ST-03",
+   "screen_id": "T04-S19",
+   "position": 19,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-03",
+   "trigger_id": "T04-S19-TRG-03",
+   "trigger_label": "Kebolehgunaan dan Kemudahan",
+   "parent_state_id": "T04-S19-ST-BASE",
+   "resulting_state_id": "T04-S19-ST-03",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menyediakan Permukaan Rata",
+    "Laman (patios), dek (decks), dan dataran (plazas) menyediakan permukaan yang stabil dan selesa untuk aktiviti seperti meletakkan perabot luar, barbeku, atau sebagai ruang perhimpunan.",
+    "Menyediakan Kemudahan",
+    "Struktur seperti wakaf, gazebo, pergola, bangku, dan lampu landskap meningkatkan keselesaan dan kebolehgunaan ruang pada waktu yang berbeza."
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "Adds the body of \"Kebolehgunaan dan Kemudahan\" — 4 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Kebolehgunaan dan Kemudahan\" — 4 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "visual_obligations": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S19-ST-04",
+   "screen_id": "T04-S19",
+   "position": 19,
+   "state_kind": "REVEAL",
+   "declared_state_label": "ST-04",
+   "trigger_id": "T04-S19-TRG-04",
+   "trigger_label": "Estetika dan Reka Bentuk",
+   "parent_state_id": "T04-S19-ST-BASE",
+   "resulting_state_id": "T04-S19-ST-04",
+   "return_behaviour": "Panel closes on a second activation or on opening another panel; the base state is restored and remains reachable throughout. No navigation occurs.",
+   "return_behaviour_ms": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. Keadaan asas kembali dan sentiasa boleh dicapai. Tiada navigasi berlaku.",
+   "content_block_texts": [
+    "Menambah Tekstur, Warna, dan Corak",
+    "Penggunaan bahan seperti batu, kayu, dan konkrit menambah dimensi visual kepada landskap.",
+    "Mencipta Kontras",
+    "Elemen kejur memberikan kontras yang menarik kepada kelembutan elemen tumbuhan."
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "Adds the body of \"Estetika dan Reka Bentuk\" — 4 record(s) not shown in the base state.",
+   "differs_from_base_ms": "Menambah kandungan \"Estetika dan Reka Bentuk\" — 4 rekod yang tidak dipaparkan dalam keadaan asas.",
+   "source_row_ids": [
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "visual_obligations": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S19-ST-ALL_VIEWED",
+   "screen_id": "T04-S19",
+   "position": 19,
+   "state_kind": "COMPLETION",
+   "declared_state_label": "ALL_VIEWED",
+   "trigger_id": "T04-S19-TRG-ALL",
+   "trigger_label": "every reveal or step viewed",
+   "parent_state_id": "T04-S19-ST-BASE",
+   "resulting_state_id": "T04-S19-ST-ALL_VIEWED",
+   "return_behaviour": "Not a displayed state. A flag that becomes true once every reveal or step has been viewed, which is what unlocks SETERUSNYA.",
+   "return_behaviour_ms": "Bukan keadaan yang dipaparkan. Penanda yang menjadi benar setelah semua pendedahan atau langkah dilihat, dan inilah yang membuka SETERUSNYA.",
+   "content_block_texts": [],
+   "content_record_count": 0,
+   "content_empty_by_design": true,
+   "differs_from_base": "Displays nothing of its own. It is the completion flag that unlocks SETERUSNYA.",
+   "differs_from_base_ms": "Tidak memaparkan apa-apa kandungan sendiri. Ia penanda selesai yang membuka SETERUSNYA.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S20-ST-BASE",
+   "screen_id": "T04-S20",
+   "position": 20,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S20-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "[Kepentingan] Penjagaan dan penyelenggaraan memastikan landskap yang telah dibina kekal sihat, berfungsi dan selamat dalam jangka masa panjang. Membina dan mengekalkan landskap adalah dua tanggungjawab berbeza.",
+    "[Skop/Isi Utama] Penjagaan dan penyelenggaraan merangkumi landskap lembut dan landskap kejur. Landskap lembut memfokuskan kepada penyiraman, pembajaan dan kawalan racun, manakala landskap kejur memfokuskan kepada memastikan elemen binaan kekal berfungsi dan selamat.",
+    "[Manfaat] Dengan melaksanakan penjagaan dan penyelenggaraan yang berjadual dan terancang, kontraktor dapat memelihara kualiti landskap sepanjang DLP, memenuhi kewajipan kontrak, dan memastikan ruang luaran kekal lestari dan bernilai untuk pengguna.",
+    "SETERUSNYA"
+   ],
+   "content_record_count": 4,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [],
+   "authority_refs": [
+    "T04-RUM-F01",
+    "T04-RUM-F02",
+    "T04-RUM-F03"
+   ],
+   "decision_ids": [
+    "T04-DEC-A20",
+    "T04-DEC-D01",
+    "T04-DEC-D02"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  },
+  {
+   "state_id": "T04-S21-ST-01",
+   "screen_id": "T04-S21",
+   "position": 21,
+   "state_kind": "BASE",
+   "declared_state_label": "Q1",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S21-ST-01",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
+    "A. Siram, baja dan racun",
+    "B. Siram, potong dan tanam",
+    "C. Baja, racun dan turap",
+    "D. Racun, siram dan pembinaan"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "— this is the base state; the screen opens on Q1 —",
+   "differs_from_base_ms": "— ini keadaan asas; skrin bermula pada Q1 —",
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-006",
+    "T04-ROW-007",
+    "T04-ROW-026",
+    "T04-ROW-027",
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q1"
+   ],
+   "decision_ids": [
+    "T04-DEC-E01"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S21-ST-02",
+   "screen_id": "T04-S21",
+   "position": 21,
+   "state_kind": "QUIZ_ITEM",
+   "declared_state_label": "Q2",
+   "trigger_id": "T04-S21-TRG-02",
+   "trigger_label": "submitting T04-QZ-Q1",
+   "parent_state_id": "T04-S21-ST-01",
+   "resulting_state_id": "T04-S21-ST-02",
+   "return_behaviour": "Submitting the item advances to the next item. There is no back navigation between quiz items.",
+   "return_behaviour_ms": "Menghantar jawapan membawa pelajar ke item berikutnya. Tiada navigasi kembali antara item kuiz.",
+   "content_block_texts": [
+    "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
+    "A. Sistem Semburan (Sprinkler System)",
+    "B. Sistem Titis (Drip Irrigation System)",
+    "C. Penyiraman manual menggunakan hos getah",
+    "D. Semburan folia menggunakan baja cecair"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "Presents T04-QZ-Q2 and replaces the previous item. Only one item is on screen at a time.",
+   "differs_from_base_ms": "Memaparkan T04-QZ-Q2 dan menggantikan item sebelumnya. Hanya satu item dipaparkan pada satu masa.",
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-010",
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q2"
+   ],
+   "decision_ids": [
+    "T04-DEC-E02"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S21-ST-03",
+   "screen_id": "T04-S21",
+   "position": 21,
+   "state_kind": "QUIZ_ITEM",
+   "declared_state_label": "Q3",
+   "trigger_id": "T04-S21-TRG-03",
+   "trigger_label": "submitting T04-QZ-Q2",
+   "parent_state_id": "T04-S21-ST-02",
+   "resulting_state_id": "T04-S21-ST-03",
+   "return_behaviour": "Submitting the item advances to the next item. There is no back navigation between quiz items.",
+   "return_behaviour_ms": "Menghantar jawapan membawa pelajar ke item berikutnya. Tiada navigasi kembali antara item kuiz.",
+   "content_block_texts": [
+    "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
+    "A. Kawalan Kultur",
+    "B. Kawalan Fizikal",
+    "C. Kawalan Biologi",
+    "D. Kawalan Kimia"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "Presents T04-QZ-Q3 and replaces the previous item. Only one item is on screen at a time.",
+   "differs_from_base_ms": "Memaparkan T04-QZ-Q3 dan menggantikan item sebelumnya. Hanya satu item dipaparkan pada satu masa.",
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q3"
+   ],
+   "decision_ids": [
+    "T04-DEC-E03"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S21-ST-04",
+   "screen_id": "T04-S21",
+   "position": 21,
+   "state_kind": "QUIZ_ITEM",
+   "declared_state_label": "Q4",
+   "trigger_id": "T04-S21-TRG-04",
+   "trigger_label": "submitting T04-QZ-Q3",
+   "parent_state_id": "T04-S21-ST-03",
+   "resulting_state_id": "T04-S21-ST-04",
+   "return_behaviour": "Submitting the item advances to the next item. There is no back navigation between quiz items.",
+   "return_behaviour_ms": "Menghantar jawapan membawa pelajar ke item berikutnya. Tiada navigasi kembali antara item kuiz.",
+   "content_block_texts": [
+    "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "A. Pengurusan Ruang dan Sirkulasi",
+    "B. Fungsi Struktur dan Kejuruteraan",
+    "C. Kebolehgunaan dan Kemudahan",
+    "D. Estetika dan Reka Bentuk"
+   ],
+   "content_record_count": 5,
+   "differs_from_base": "Presents T04-QZ-Q4 and replaces the previous item. Only one item is on screen at a time.",
+   "differs_from_base_ms": "Memaparkan T04-QZ-Q4 dan menggantikan item sebelumnya. Hanya satu item dipaparkan pada satu masa.",
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085",
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090",
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095",
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q4"
+   ],
+   "decision_ids": [
+    "T04-DEC-E04"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S21-ST-05",
+   "screen_id": "T04-S21",
+   "position": 21,
+   "state_kind": "QUIZ_ITEM",
+   "declared_state_label": "Q5",
+   "trigger_id": "T04-S21-TRG-05",
+   "trigger_label": "submitting T04-QZ-Q4",
+   "parent_state_id": "T04-S21-ST-04",
+   "resulting_state_id": "T04-S21-ST-05",
+   "return_behaviour": "Submitting the item advances to the next item. There is no back navigation between quiz items.",
+   "return_behaviour_ms": "Menghantar jawapan membawa pelajar ke item berikutnya. Tiada navigasi kembali antara item kuiz.",
+   "content_block_texts": [
+    "Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.",
+    "☐ Pengendali semburan mesti berlesen atau telah menerima latihan",
+    "☐ Pekerja mesti memakai PPE yang lengkap dan bersesuaian",
+    "☐ Semburan hanya dilakukan semasa cuaca tenang",
+    "☐ Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
+    "☐ Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+    "☐ Semua racun dibeli daripada satu pembekal tunggal"
+   ],
+   "content_record_count": 7,
+   "differs_from_base": "Presents T04-QZ-Q5 and replaces the previous item. Only one item is on screen at a time.",
+   "differs_from_base_ms": "Memaparkan T04-QZ-Q5 dan menggantikan item sebelumnya. Hanya satu item dipaparkan pada satu masa.",
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067",
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074",
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "authority_refs": [
+    "T04-QZ-Q5"
+   ],
+   "decision_ids": [
+    "T04-DEC-E05"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "SOURCE_ROWS"
+  },
+  {
+   "state_id": "T04-S21-ST-RESULT",
+   "screen_id": "T04-S21",
+   "position": 21,
+   "state_kind": "QUIZ_RESULT",
+   "declared_state_label": "RESULT",
+   "trigger_id": "T04-S21-TRG-RESULT",
+   "trigger_label": "submitting Q5",
+   "parent_state_id": "T04-S21-ST-05",
+   "resulting_state_id": "T04-S21-ST-RESULT",
+   "return_behaviour": "Terminal state for the screen. The learner continues with SETERUSNYA.",
+   "return_behaviour_ms": "Keadaan akhir bagi skrin ini. Pelajar meneruskan dengan SETERUSNYA.",
+   "content_block_texts": [
+    "Markah lulus 60 peratus",
+    "Keputusan kuiz dipaparkan."
+   ],
+   "content_record_count": 2,
+   "differs_from_base": "Shows the outcome against the pass mark. No item is shown.",
+   "differs_from_base_ms": "Memaparkan keputusan berbanding markah lulus. Tiada item kuiz dipaparkan.",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A21"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL",
+   "binding_limitation": "Scoring behaviour is not specified in B1 and no answer key is final — see T04-OPEN-51.",
+   "binding_limitation_ms": "Kelakuan pemarkahan tidak ditetapkan dalam B1 dan tiada kunci jawapan yang muktamad — lihat T04-OPEN-01."
+  },
+  {
+   "state_id": "T04-S22-ST-BASE",
+   "screen_id": "T04-S22",
+   "position": 22,
+   "state_kind": "BASE",
+   "declared_state_label": "BASE only",
+   "trigger_id": null,
+   "trigger_label": "screen entry",
+   "parent_state_id": null,
+   "resulting_state_id": "T04-S22-ST-BASE",
+   "return_behaviour": "Entry state. The learner continues with SETERUSNYA once the completion condition is met.",
+   "return_behaviour_ms": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai dipenuhi.",
+   "content_block_texts": [
+    "Tamat Topik",
+    "Penjagaan dan Penyelenggaraan"
+   ],
+   "content_record_count": 2,
+   "differs_from_base": "— this is the base state —",
+   "differs_from_base_ms": "— ini keadaan asas —",
+   "source_row_ids": [],
+   "authority_refs": [],
+   "decision_ids": [
+    "T04-DEC-A22"
+   ],
+   "visual_obligations": [],
+   "binding_kind": "STRUCTURAL"
+  }
+ ]
+}
