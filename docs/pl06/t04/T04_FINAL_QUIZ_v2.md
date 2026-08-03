@@ -113,7 +113,7 @@ All five stems are Bariah's own replacement wording, carried verbatim. The Q5 op
 
 ## T04-QZ-Q5 (MULTIPLE_RESPONSE)
 
-**Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.**
+**Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.**
 
 | Option | Text | Proposed key |
 |---|---|---|
@@ -121,14 +121,14 @@ All five stems are Bariah's own replacement wording, carried verbatim. The Q5 op
 | ☐ | Pekerja mesti memakai PPE yang lengkap dan bersesuaian | ✓ |
 | ☐ | Semburan hanya dilakukan semasa cuaca tenang | ✓ |
 | ☐ | Salinan Helaian Data Keselamatan (SDS) disimpan di tapak | ✓ |
-| ☐ | Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat |  |
-| ☐ | Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek |  |
+| ☐ | Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca |  |
+| ☐ | Semua racun dibeli daripada satu pembekal tunggal |  |
 
 | Field | Value |
 |---|---|
-| stem authorship | AUTHORITY_SUPPLIED_REPLACEMENT_TEXT |
+| stem authorship | FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY |
 | stem decision | T04-DEC-E05 |
-| options authorship | AUTHORITY_INSTRUCTED_CHANGE_EXECUTED_BY_CAIR |
+| options authorship | AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS |
 | option marker | checkbox |
 | answer key | PROPOSED_NOT_FINAL |
 | global rules applied | QUIZ-GLOBAL-01, QUIZ-GLOBAL-02 |
@@ -144,25 +144,25 @@ Bariah ordered options 5 and 6 changed because both were about fertiliser and th
 |---|---|
 | position | 5 (was labelled E) |
 | superseded text | Baja disimpan di tempat yang kering dan jauh dari sumber air |
-| replacement text | Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat |
-| authorship | CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION |
-| approval | PENDING_BARIAH_CONFIRMATION |
+| replacement text | Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca |
+| authorship | AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS |
+| approval | CLOSED_BY_E07_SET_B_SELECTION |
 
 *Why it was superseded.* Bariah: the option is obviously wrong because it is about fertiliser, not about controls during pesticide spraying.
 
-*Why the replacement works.* It is about pesticide spraying, so it no longer gives itself away by subject. It is a plausible site practice but is not one of the controls the module states as mandatory, so it remains a correct distractor.
+*Why the replacement works.* It is about pesticide spraying, so it no longer gives itself away by subject, and it is not a control the module states as mandatory. Bariah chose this wording over the Set A alternative and called the pair 'better distractors'.
 
 | Field | Value |
 |---|---|
 | position | 6 (was labelled F) |
 | superseded text | Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran |
-| replacement text | Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek |
-| authorship | CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION |
-| approval | PENDING_BARIAH_CONFIRMATION |
+| replacement text | Semua racun dibeli daripada satu pembekal tunggal |
+| authorship | AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS |
+| approval | CLOSED_BY_E07_SET_B_SELECTION |
 
 *Why it was superseded.* Bariah: same defect — a fertiliser record, obviously outside the scope of pesticide spraying controls.
 
-*Why the replacement works.* A procurement condition, phrased about pesticide. It sounds like a contract requirement and is not a spraying control the module states, so a learner has to reason about what the control is for rather than about what the option mentions.
+*Why the replacement works.* A procurement condition, phrased about pesticide. A learner has to reason about what the control is for rather than about what the option mentions. Selected by Bariah as part of Set B.
 
 # 3. Which route was taken, and who chose
 

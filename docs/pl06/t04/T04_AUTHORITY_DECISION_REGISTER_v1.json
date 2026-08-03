@@ -40,6 +40,7 @@
    "T04-DEC-B05",
    "T04-DEC-C02",
    "T04-DEC-D02",
+   "T04-DEC-E09",
    "T04-DEC-F01",
    "T04-DEC-F02"
   ],
@@ -890,6 +891,24 @@
    "scope": "T04_ONLY",
    "effect": "Bariah gave two routes and did not choose between them. CAIR took the first — change the options, keep the question — because Bariah separately supplied replacement wording for the Q5 stem, which settles the question. The two replacement distractors are CAIR-drafted and are NOT Bariah-approved.",
    "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E09",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Q5 incorrect options: Set B selected from an enumerated forced choice",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Set B. Better distractors",
+   "source_artifact": "AUTH-EV-02",
+   "source_section": "WHATSAPP",
+   "evidence_grade": "READ_FROM_RENDERED_IMAGE_CUSTODY_UNVERIFIED",
+   "applies_to": [
+    "T04-QZ-Q5"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The two incorrect Q5 options are Set B, verbatim: 'Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca' and 'Semua racun dibeli daripada satu pembekal tunggal'. Set A is REJECTED_NOT_SELECTED. This closes E-07 and supersedes the CAIR-drafted wording from Stage 4.2F-B0.9.",
+   "authored_by_authority": true,
    "settled": true
   },
   {

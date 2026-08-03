@@ -13,7 +13,7 @@ SCREENS       = 22
 DIALOGUE      = 4 lines
 RUMUSAN       = 3 beats
 QUIZ          = 5 items
-SETTLED       = 8/10
+SETTLED       = 9/10
 ```
 
 This is the build input. Each content class carries its own final state, because *frozen* and *approved* are not the same thing: two of these classes are frozen without being settled, and a third is settled while carrying an open risk.
@@ -28,7 +28,7 @@ This is the build input. Each content class carries its own final state, because
 | FS-04 | FINAL_DIALOGUE | AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN | yes | T04-DEC-C01, T04-DEC-C02, T04-DEC-C03 |
 | FS-05 | FINAL_RUMUSAN | AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN | yes | T04-DEC-D01, T04-DEC-D02 |
 | FS-06 | FINAL_QUIZ_STEMS | AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN | yes | T04-DEC-E01, T04-DEC-E02, T04-DEC-E03, T04-DEC-E04, T04-DEC-E05 |
-| FS-07 | FINAL_QUIZ_Q5_OPTIONS | CAIR_EXECUTED_UNDER_AUTHORITY_INSTRUCTION_PENDING_CONFIRMATION | **no** | T04-DEC-E08 |
+| FS-07 | FINAL_QUIZ_Q5_OPTIONS | AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS_FROZEN | yes | T04-DEC-E08, T04-DEC-E09 |
 | FS-08 | FINAL_QUIZ_ANSWER_KEY | PROPOSED_NOT_FINAL | **no** | T04-DEC-X02 |
 | FS-09 | FINAL_VISUAL_SCOPE | ACCEPTED_AS_A_SET_WITH_CONDITIONS | yes | T04-DEC-B01, T04-DEC-B03, T04-DEC-B04, T04-DEC-B05, T04-DEC-B06 |
 | FS-10 | FINAL_SOURCE_BINDINGS | PRESENT_WITH_OPEN_REPRODUCIBILITY_RISK | yes | — |
@@ -40,7 +40,7 @@ This is the build input. Each content class carries its own final state, because
 - **FS-04 FINAL_DIALOGUE** — Four lines, written by Bariah, carried verbatim. Five became four.
 - **FS-05 FINAL_RUMUSAN** — Three beats, written by Bariah, carried verbatim. Four points became three.
 - **FS-06 FINAL_QUIZ_STEMS** — All five stems replaced with Bariah's wording, carried verbatim.
-- **FS-07 FINAL_QUIZ_Q5_OPTIONS** — Options 5 and 6 replaced on Bariah's instruction. The replacement wording is CAIR's and is not approved.
+- **FS-07 FINAL_QUIZ_Q5_OPTIONS** — Options 5 and 6 are Set B, selected by Bariah from an enumerated forced choice and carried verbatim. The CAIR draft that stood here in Stage 4.2F-B0.9 is superseded.
 - **FS-08 FINAL_QUIZ_ANSWER_KEY** — No answer key was marked final by the authority. All five remain proposals.
 - **FS-09 FINAL_VISUAL_SCOPE** — 41 proposed unique assets across 8 groups, conditional sharing, three named do-not-reuse items, instructional precedence.
 - **FS-10 FINAL_SOURCE_BINDINGS** — Bindings present and resolving; original-DOCX round trip and hash proof remain open and non-blocking.
@@ -50,9 +50,7 @@ This is the build input. Each content class carries its own final state, because
 
 | ID | Subject | Owner | Why |
 |---|---|---|---|
-| E-01 | Q5 replacement options E and F | BARIAH | CAIR wrote them under instruction; not confirmed. |
-| E-02 | Quiz answer key for all five items | BARIAH | Recorded as 'cadangan jawapan sahaja' in the package. |
-| E-03 | The 'Q3' WhatsApp referent | BARIAH | Ambiguous referent; the choice was delegated and unmade. |
+| E-02 | Quiz answer key for all five items | BARIAH | Recorded as 'cadangan jawapan sahaja' in the package. The E-07 forced choice explicitly left the four correct answers untouched and asked only about the two incorrect options, so it does not close this. |
 | E-04 | The pembajaan-to-racun wording correction on T04-S14 | BARIAH | Correction applied and recorded; confirmation outstanding. |
 | E-05 | Original module DOCX round trip and hash proof | FIRDAUS | Not re-run in this session; non-blocking. |
 | E-06 | Individual asset subjects and styles | BARIAH | The set was accepted; no artwork has been approved. |

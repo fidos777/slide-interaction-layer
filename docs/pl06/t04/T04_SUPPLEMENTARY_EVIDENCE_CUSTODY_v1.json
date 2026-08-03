@@ -23,6 +23,11 @@
    "location": "/root/.claude/projects/<session>/tool-results/",
    "result": "NO_IMAGE",
    "note": "Two cached tool-result text files, neither an image."
+  },
+  {
+   "location": "/root/.claude/uploads/… — SECOND ATTEMPT after the follow-up brief",
+   "result": "DIRECTORY_UNCHANGED",
+   "note": "Re-checked after the follow-up brief declared the PNG a real binary file. The uploads directory is byte-for-byte the same as at the previous attempt: 21 files, newest still the 02:28 authority DOCX. A second whole-filesystem sweep for images newer than 02:29 also returned nothing."
   }
  ],
  "custody_fields": [
@@ -109,6 +114,8 @@
  ],
  "blocker": {
   "blocker_id": "B091-BLOCK-01",
+  "still_open": true,
+  "scope_after_the_rerun": "Narrowed. It no longer blocks content decisions — the E-07 selection is unambiguous on its face. What it still blocks is canonical evidence closure: no artifact can be frozen, hashed or re-verified later.",
   "subject": "Supplementary screenshot custody",
   "required": "A PNG binary to hash, measure, validate and freeze.",
   "observed": "No image file exists in this environment.",
@@ -119,7 +126,7 @@
  "release_record_not_issued": {
   "would_be_verdict": "T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD",
   "issued": false,
-  "why_not_issued": "Custody failed. See B091-BLOCK-01.",
+  "why_not_issued": "Custody failed for a second time. See B091-BLOCK-01.",
   "superseding": false,
   "prior_release_record_stands": "STAGE_4_2F_B0_9_RUN_MANIFEST.md §16"
  }

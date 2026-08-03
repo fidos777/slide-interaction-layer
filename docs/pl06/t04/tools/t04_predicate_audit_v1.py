@@ -174,16 +174,20 @@ CLOSED_POPULATIONS = [
          mutable_property="source_artifact",
          members=lambda: sorted(d["decision_id"] for d in D._decision_register()
                                 if d["source_artifact"] == "AUTH-EV-02"),
-         expected=["T04-DEC-X01"],
-         guarded_by=["WHATSAPP_DECISIONS_CARRY_THE_DEGRADED_GRADE"],
+         # T04-DEC-E09 joined this population when the E-07 selection was ingested. The
+         # audit caught the change, which is what it is for.
+         expected=["T04-DEC-E09", "T04-DEC-X01"],
+         guarded_by=["WHATSAPP_RECORDS_ARE_GRADED_BY_HOW_THEY_WERE_READ"],
          origin_fixture="C-04"),
     dict(population_id="POP-15",
          selector="settled is False, among the ten final states",
          mutable_property="settled",
          members=lambda: sorted(s["state_id"] for s in D.final_states() if not s["settled"]),
-         expected=["FS-07", "FS-08"],
-         guarded_by=["TWO_CLASSES_ARE_FROZEN_BUT_NOT_SETTLED",
-                     "Q5_OPTIONS_STATE_IS_PENDING_CONFIRMATION",
+         # FS-07 left this population when Bariah selected Set B. Only the answer key is
+         # still unsettled.
+         expected=["FS-08"],
+         guarded_by=["ONE_CLASS_IS_FROZEN_BUT_NOT_SETTLED",
+                     "Q5_OPTIONS_STATE_IS_SELECTED_BY_THE_AUTHORITY",
                      "ANSWER_KEY_STATE_IS_PROPOSED_NOT_FINAL"],
          origin_fixture="K-01 / K-02"),
     dict(population_id="POP-16",
@@ -208,8 +212,11 @@ CLOSED_POPULATIONS = [
          selector="open items carried past this stage",
          mutable_property="membership of OPEN_AFTER_THIS_STAGE",
          members=lambda: sorted(o["open_id"] for o in D.OPEN_AFTER_THIS_STAGE),
-         expected=["E-01", "E-02", "E-03", "E-04", "E-05", "E-06"],
-         guarded_by=["E01_TO_E04_ARE_NOT_CLOSED", "SIX_ITEMS_STAY_OPEN_AFTER_THIS_STAGE"],
+         # E-01, E-03 and E-07 closed in the Stage 4.2F-B0.9.1 re-run, each naming what
+         # closed it. E-02 and E-04 are still open and are still asserted open.
+         expected=["E-02", "E-04", "E-05", "E-06"],
+         guarded_by=["E02_AND_E04_ARE_NOT_CLOSED", "FOUR_ITEMS_STAY_OPEN_AFTER_THIS_STAGE",
+                     "EVERY_CLOSURE_NAMES_WHAT_CLOSED_IT"],
          origin_fixture="K-04"),
 ]
 

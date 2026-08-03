@@ -54,8 +54,9 @@ def emit_custody():
                 release_record_not_issued=S.RELEASE_RECORD_NOT_ISSUED))
 
     p = [_hdr("T04 — SUPPLEMENTARY SCREENSHOT CUSTODY",
-              [f"CUSTODY_OUTCOME = {S.CUSTODY_OUTCOME}",
-               f"CUSTODY_PATH    = NOT_CREATED"]),
+              [f"CUSTODY_OUTCOME  = {S.CUSTODY_OUTCOME}",
+               f"CUSTODY_ATTEMPTS = {S.CUSTODY_ATTEMPTS}",
+               f"CUSTODY_PATH     = NOT_CREATED"]),
          "The screenshot reached this run as a rendered image in the conversation. It is not "
          "a file. Every field below that can only be measured from a binary is recorded as "
          "unavailable — not estimated, not reconstructed, not inferred from the conversation "
@@ -87,7 +88,32 @@ def emit_custody():
           ]), "",
           f"**Consequence.** {b['consequence']}", "",
           f"**What would unblock it.** {b['what_would_unblock']}", "",
-          "# 5. The release record that was not issued", "",
+          "# 5. Expected identity, supplied but unverifiable", "",
+         "The follow-up brief supplies an expected identity for the PNG. These are recorded "
+         "as **expectations**, not measurements — there is still no file to measure, so "
+         "nothing below was read from a binary and nothing below is verified.", "",
+         _tbl(["Field", "Expected value", "Verified"],
+              [("filename", S.EXPECTED_IDENTITY["filename"], "no"),
+               ("byte size", S.EXPECTED_IDENTITY["byte_size"], "no"),
+               ("SHA-256", S.EXPECTED_IDENTITY["sha256"], "no"),
+               ("format", S.EXPECTED_IDENTITY["image_format"], "no"),
+               ("dimensions", f"{S.EXPECTED_IDENTITY['pixel_width']} × "
+                              f"{S.EXPECTED_IDENTITY['pixel_height']}", "no")]), "",
+         S.EXPECTED_IDENTITY["note"], "",
+         "# 6. The release decision", "",
+         _tbl(["Field", "Value"], [
+             ("verdict", " · ".join(S.RELEASE_DECISION["verdict_tokens"])),
+             ("branch taken", S.RELEASE_DECISION["branch_taken"]),
+             ("branch not taken", S.RELEASE_DECISION["branch_not_taken"]),
+             ("open mapping blocks", S.RELEASE_DECISION["what_the_open_mapping_blocks"]),
+             ("blocks storyboard layout",
+              "no" if not S.RELEASE_DECISION["blocks_storyboard_layout"] else "yes"),
+         ]), "",
+         f"**Why the other branch was not taken.** "
+         f"{S.RELEASE_DECISION['why_branch_not_taken']}", "",
+         f"**Why layout is not blocked.** {S.RELEASE_DECISION['why_layout_is_not_blocked']}",
+         "",
+         "# 7. The full-approval record that was not issued", "",
           _tbl(["Field", "Value"], [
               ("would-be verdict", S.RELEASE_RECORD_NOT_ISSUED["would_be_verdict"]),
               ("issued", "**no**"),
@@ -111,7 +137,12 @@ def emit_reading():
                 confirmation_id_mapping=S.CONFIRMATION_ID_MAPPING,
                 confirmation_readings=S.CONFIRMATION_READINGS,
                 q5_divergence=S.Q5_DIVERGENCE,
-                new_open_items=S.NEW_OPEN_ITEMS))
+                e07_closure=S.E07_CLOSURE,
+                set_b_frozen=S.SET_B_FROZEN,
+                set_a_rejected=S.SET_A_REJECTED,
+                stem_provenance_change=S.STEM_PROVENANCE_CHANGE,
+                new_open_items=S.NEW_OPEN_ITEMS,
+                closed_in_the_rerun=S.CLOSED_IN_THE_RERUN))
 
     m = S.READING_METHOD
     p = [_hdr("T04 — AUTHORITY EXCHANGE READING",
@@ -183,8 +214,52 @@ def emit_reading():
         if r.get("mutability"):
             p += [f"**Mutability.** {r['mutability']}", ""]
 
+    E = S.E07_CLOSURE
+    p += ["# 5. E-07 closed by an explicit selection", "",
+          "The cleanest authority act in the whole exchange: a closed option set, both "
+          "alternatives written out in full, an instruction to answer with one of them, and a "
+          "reply that names one. There is nothing to interpret.", "",
+          f"> {E['request_quote']}", "", f"> **{E['authority_quote']}**", "",
+          _tbl(["Field", "Value"], [
+              ("status", E["status"]),
+              ("decision type", E["decision_type"]),
+              ("authority", E["authority"]),
+              ("selected", E["selected_set"]),
+              ("rejected", f"{E['rejected_set']} — {E['rejected_set_status']}"),
+              ("sets combined", "no"),
+              ("custody", E["custody_status"]),
+          ]), "",
+          f"**Why the closure is sound despite the custody gap.** "
+          f"{E['why_closure_is_still_sound']}", "",
+          "**What this does not approve:**", ""]
+    p += [f"- {x}" for x in E["what_this_does_not_approve"]]
+
+    p += ["", "## 5.1 The frozen Set B wording", "",
+          "Copied from the enumerated Set B, character for character.", "",
+          _tbl(["#", "In force (Set B)", "Superseded CAIR draft"],
+               [(x["position"], f"**{x['text_ms']}**", x["superseded_b09_text"])
+                for x in S.SET_B_FROZEN]), "",
+          "## 5.2 Set A — rejected, retained for the record", "",
+          _tbl(["#", "Text", "Status"],
+               [(x["position"], x["text_ms"], x["status"]) for x in S.SET_A_REJECTED]), ""]
+
+    sp = S.STEM_PROVENANCE_CHANGE
+    p += ["## 5.3 The stem changed provenance", "",
+          _tbl(["Field", "Value"], [
+              ("correction", sp["correction_id"]),
+              ("was", sp["b09_stem"]),
+              ("was, provenance", sp["b09_stem_provenance"]),
+              ("now", sp["final_stem"]),
+              ("now, provenance", sp["final_stem_provenance"]),
+              ("status", sp["status"]),
+          ]), "",
+          f"**How it was presented.** {sp['how_it_was_presented']}", "",
+          f"**What Bariah actually answered.** {sp['what_bariah_actually_answered']}", "",
+          f"**Therefore.** {sp['therefore']}", "",
+          "# 6. The divergence this closes", ""]
+
     d = S.Q5_DIVERGENCE
-    p += ["# 5. A divergence the screenshot exposes", "",
+    p += ["",
           f"## {d['finding_id']} — {d['subject']}", "",
           f"Severity `{d['severity']}`.", "",
           "**Stems**", "",
@@ -199,18 +274,24 @@ def emit_reading():
                 for i, (a_, b_) in enumerate(zip(d["options_put_to_authority"],
                                                  d["options_in_frozen_model"]))]), "",
           f"**What this means.** {d['what_this_means']}", "",
-          f"**Why it is not resolved here.** {d['why_it_is_not_resolved_here']}", "",
+          f"**Resolution.** {d['resolution']}", "",
           _tbl(["Field", "Value"], [
-              ("frozen model changed", "no" if d["frozen_model_unchanged"] else "yes"),
-              ("resolution required from", d["resolution_required_from"]),
+              ("status", d["status"]),
+              ("closed by", d["closed_by"]),
+              ("closing record", d["closing_record"]),
+              ("frozen model now carries", d["frozen_model_now_carries"]),
               ("tracked as", d["tracked_as"]),
               ("blocks storyboard layout",
                "no" if not d["blocking_storyboard_layout"] else "yes"),
               ("blocks a scored quiz", "yes" if d["blocking_scored_quiz"] else "no"),
           ]), "",
-          "# 6. New open items", "",
-          _tbl(["ID", "Subject", "Owner", "Raised by"],
-               [(o["open_id"], o["subject"], o["owner"], o["raised_by"])
+          "# 7. Closed in this re-run", "",
+          _tbl(["ID", "Subject", "Closed by", "Record"],
+               [(o["open_id"], o["subject"], o["closed_by"], o["closing_record"])
+                for o in S.CLOSED_IN_THE_RERUN]), "",
+          "# 8. Still open", "",
+          _tbl(["ID", "Subject", "Owner", "Raised by", "Status"],
+               [(o["open_id"], o["subject"], o["owner"], o["raised_by"], o["status"])
                 for o in S.NEW_OPEN_ITEMS]), ""]
     return [a, _w("T04_AUTHORITY_EXCHANGE_READING_v1.md", "\n".join(p))]
 

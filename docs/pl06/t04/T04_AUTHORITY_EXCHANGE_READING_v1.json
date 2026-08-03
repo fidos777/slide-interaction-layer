@@ -86,6 +86,40 @@
    "verbatim_fragments": [
     "Yes to both screenshots. Q5 multiple response - yes, ok"
    ]
+  },
+  {
+   "msg_id": "WA-06",
+   "position": 6,
+   "time_shown": "12:38 PM",
+   "sender": "FIRDAUS",
+   "direction": "OUTGOING",
+   "bubble": "green, right-aligned, sent/read ticks, quoted block",
+   "summary": "A forced-choice request to close E-07. It fixes the stem, states that the four correct answers are unchanged, and asks Bariah to pick between two enumerated pairs of incorrect options. It closes 'Boleh jawab Set A atau Set B sahaja' — answer Set A or Set B only.",
+   "verbatim_fragments": [
+    "Salam Bariah, nak tutup satu perkara kecil untuk Q5 Topik 4.",
+    "Stem kekal:",
+    "“Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.”",
+    "Empat jawapan betul kekal seperti yang telah dicadangkan. Untuk dua pilihan salah terakhir, yang mana satu kita patut kekalkan?",
+    "Set A",
+    "Notifikasi kepada penduduk dibuat hanya selepas semburan selesai",
+    "SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak",
+    "Set B",
+    "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+    "Semua racun dibeli daripada satu pembekal tunggal",
+    "Boleh jawab Set A atau Set B sahaja."
+   ]
+  },
+  {
+   "msg_id": "WA-07",
+   "position": 7,
+   "time_shown": "12:40 PM",
+   "sender": "BARIAH",
+   "direction": "INCOMING",
+   "bubble": "white, left-aligned, below the '1 unread message' separator",
+   "summary": "An explicit selection from two enumerated options, with a one-phrase reason. This is the strongest evidence class in the whole exchange: the choice set was closed, the options were written out in full, and the reply names one of them.",
+   "verbatim_fragments": [
+    "Set B. Better distractors"
+   ]
   }
  ],
  "attribution_corrections": [
@@ -160,11 +194,12 @@
    "original_wording": "Tiga aspek pengurusan pembajaan untuk kontraktor",
    "controlled_correction": "Tiga aspek pengurusan racun untuk kontraktor",
    "would_be_status_if_custody_passed": "CONFIRMED_THROUGH_BUNDLED_SCREENSHOT_ACCEPTANCE",
-   "actual_status": "CONTENT_CONFIRMED_CUSTODY_UNVERIFIED",
+   "actual_status": "CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE",
    "evidence_class": "AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY",
    "mapping_basis": "Firdaus's proposition in WA-01 item 1 plus Bariah's bundled acceptance in WA-02, whose scope she confirmed in WA-05.",
    "not_claimed": "Bariah did not write the corrected sentence. She answered a yes/no question that Firdaus phrased. The corrected wording is a CAIR-authored sentence the authority assented to, and it is not recorded as a standalone Bariah-originated sentence.",
-   "upgrade_blocked_by": "CUSTODY_FAILED_NO_BINARY"
+   "upgrade_blocked_by": "CUSTODY_FAILED_NO_BINARY",
+   "unseen_screenshot_limit": "A visible message reading 'Yes to both screenshots' is not proof of what those screenshots contained. The referenced images are not themselves rendered in the capture; what is rendered is Firdaus's own quoted request. The mapping from her 'yes' to this specific proposition is an inference from message order, and it is labelled as one."
   },
   {
    "confirmation_id": "T04-CNF-02",
@@ -178,10 +213,11 @@
    "production_consequence": "new unique assets = 0",
    "final_unique_asset_scope": 41,
    "would_be_status_if_custody_passed": "CONFIRMED_BARIAH_ON_CAIR_PROPOSAL",
-   "actual_status": "CONTENT_CONFIRMED_CUSTODY_UNVERIFIED",
+   "actual_status": "CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE",
    "evidence_class": "AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY",
    "origin": "CAIR production proposal confirmed by the authority.",
    "not_claimed": "41 is not an idea Bariah originated, and the AG-06 reuse is not a Bariah-authored design. Both are CAIR production proposals she assented to.",
+   "unseen_screenshot_limit": "As for CNF-01: the acceptance is visible, the accepted screenshots are not.",
    "mutability": "41 is not immutable. If MMD production later demonstrates a genuine new asset requirement, the change to 42 must be recorded as a new scope-change decision with its own authority, never absorbed silently into the existing total.",
    "upgrade_blocked_by": "CUSTODY_FAILED_NO_BINARY"
   },
@@ -197,6 +233,7 @@
    "confirms": "Q5 item type = MULTIPLE_RESPONSE",
    "would_be_status_if_custody_passed": "EXPLICITLY_CONFIRMED",
    "actual_status": "CONTENT_CONFIRMED_CUSTODY_UNVERIFIED",
+   "why_this_one_is_stronger": "Unlike CNF-01 and CNF-02 this does not depend on mapping a bundled 'yes' onto an unseen proposition. The words 'Q5 multiple response' name their own subject.",
    "evidence_class": "AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY",
    "does_not_confirm": [
     "all five answer keys",
@@ -245,24 +282,112 @@
   "proposed_key": "the first four options, in both versions",
   "what_this_means": "Positions 1 to 4 are identical in both versions and are not in question. Positions 5 and 6 are not: Firdaus put two distractors to Bariah that differ from the two Stage 4.2F-B0.9 froze. Bariah's 'Q5 multiple response - yes, ok' was written against Firdaus's set, not against the frozen set.",
   "why_it_is_not_resolved_here": "Resolving it would mean either overwriting Bariah's frozen stem with Firdaus's wording, or asserting that her 'yes, ok' reaches option text she was never shown. Both are decisions for the authority, not for CAIR, and neither is taken.",
-  "frozen_model_unchanged": true,
-  "resolution_required_from": "Bariah — one line stating which six-option set stands.",
+  "status": "CLOSED",
+  "closed_by": "E-07 forced choice — WA-06 / WA-07",
+  "closing_record": "T04-DEC-E09",
+  "resolution": "Set B, verbatim. Neither the Stage 4.2F-B0.9 CAIR draft nor the earlier WhatsApp pair is in force; the selected pair supersedes both.",
+  "frozen_model_unchanged": false,
+  "frozen_model_now_carries": "SET_B",
+  "resolution_required_from": null,
   "tracked_as": "E-07",
   "blocking_storyboard_layout": false,
-  "blocking_scored_quiz": true
+  "blocking_scored_quiz": false
+ },
+ "e07_closure": {
+  "open_id": "E-07",
+  "status": "CLOSED",
+  "decision_type": "DIRECT_SELECTION_FROM_EXPLICIT_OPTIONS",
+  "authority": "BARIAH_DIRECT_SELECTION",
+  "selected_set": "SET_B",
+  "rejected_set": "SET_A",
+  "rejected_set_status": "REJECTED_NOT_SELECTED",
+  "request_msg": "WA-06",
+  "response_msg": "WA-07",
+  "authority_quote": "Set B. Better distractors",
+  "request_quote": "Boleh jawab Set A atau Set B sahaja.",
+  "sets_were_mutually_exclusive": true,
+  "sets_combined": false,
+  "both_sets_retained_active": false,
+  "evidence_class": "AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY",
+  "custody_status": "CUSTODY_UNVERIFIED_NO_BINARY",
+  "why_closure_is_still_sound": "The reply selects from a set the requester enumerated in the same thread. Unlike a bundled 'yes to both', there is no scope question: 'Set B' can only mean the two options written under the heading Set B. The missing binary means the artifact cannot be frozen and re-verified later; it does not make the sentence ambiguous.",
+  "what_this_does_not_approve": [
+   "the five quiz answer keys — the request said the four correct answers were unchanged and asked only about the two incorrect options",
+   "any other quiz item",
+   "the source-row bindings",
+   "a general delegation to CAIR over assessment content"
+  ],
+  "supersedes_finding": "T04-DIV-01"
+ },
+ "set_b_frozen": [
+  {
+   "position": 5,
+   "text_ms": "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+   "superseded_b09_text": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+   "wording_source": "WA-06 Set B, first option",
+   "paraphrased": false
+  },
+  {
+   "position": 6,
+   "text_ms": "Semua racun dibeli daripada satu pembekal tunggal",
+   "superseded_b09_text": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+   "wording_source": "WA-06 Set B, second option",
+   "paraphrased": false
+  }
+ ],
+ "set_a_rejected": [
+  {
+   "position": 5,
+   "text_ms": "Notifikasi kepada penduduk dibuat hanya selepas semburan selesai",
+   "status": "REJECTED_NOT_SELECTED"
+  },
+  {
+   "position": 6,
+   "text_ms": "SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak",
+   "status": "REJECTED_NOT_SELECTED"
+  }
+ ],
+ "stem_provenance_change": {
+  "correction_id": "T04-COR-04",
+  "subject": "The Q5 stem now in force is not the one Bariah wrote in the authority DOCX",
+  "b09_stem": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+  "b09_stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT — Bariah wrote it in AUTH-EV-01 §E",
+  "final_stem": "Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.",
+  "final_stem_provenance": "FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY",
+  "how_it_was_presented": "WA-06 shows it under the heading 'Stem kekal' — the stem stands. It was put to Bariah as a fixed premise of the forced choice, not as something to decide.",
+  "what_bariah_actually_answered": "the two incorrect options, not the stem",
+  "therefore": "The stem in force is a Firdaus-directed wording that the authority saw and did not contest. That is weaker than the DOCX stem it replaces, which she wrote herself. It is recorded at the weaker grade rather than inheriting the stronger one.",
+  "status": "APPLIED_PROVENANCE_DOWNGRADED",
+  "reversible": true,
+  "confirmation_would_close": "a one-line confirmation from Bariah that the stem wording is hers to keep"
  },
  "new_open_items": [
-  {
-   "open_id": "E-07",
-   "subject": "Which Q5 six-option set stands — the one put to Bariah in WhatsApp, or the one frozen in the content model",
-   "owner": "BARIAH",
-   "raised_by": "T04-DIV-01"
-  },
   {
    "open_id": "E-08",
    "subject": "Supplementary screenshot binary custody",
    "owner": "FIRDAUS",
-   "raised_by": "B091-BLOCK-01"
+   "raised_by": "B091-BLOCK-01",
+   "status": "OPEN_SECOND_ATTEMPT_FAILED"
+  }
+ ],
+ "closed_in_the_rerun": [
+  {
+   "open_id": "E-07",
+   "subject": "Which Q5 option pair stands",
+   "closed_by": "Bariah selected Set B from an enumerated forced choice",
+   "closing_record": "T04-DEC-E09"
+  },
+  {
+   "open_id": "E-01",
+   "subject": "Q5 replacement options E and F",
+   "closed_by": "the same selection — the CAIR draft is superseded",
+   "closing_record": "T04-DEC-E09"
+  },
+  {
+   "open_id": "E-03",
+   "subject": "The 'Q3' referent",
+   "closed_by": "T04-COR-02 — the line is Firdaus's, so no authority referent exists",
+   "closing_record": "T04-COR-02"
   }
  ]
 }

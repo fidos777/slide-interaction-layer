@@ -5,11 +5,11 @@
 ```
 STAGE      = 4.2F-B0.9.1
 SUITE_ID   = T04_SUPPLEMENTARY_EVIDENCE_QA_v1
-PART_A     = BLOCKED
+PART_A     = PARTIAL_CUSTODY_BLOCKED_CONTENT_CLOSED
 METHOD         = DIRECT_VISUAL_INSPECTION_OF_THE_RENDERED_IMAGE
 OCR_USED       = False
 EVIDENCE_CLASS = AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY
-MESSAGES_READ  = 5
+MESSAGES_READ  = 7
 ```
 
 The exchange was read by looking at the rendered image. OCR was not used, and no prior transcript was treated as sufficient on its own — which matters, because the transcript-only reading in the previous stage got a speaker wrong.
@@ -31,6 +31,8 @@ The exchange was read by looking at the rendered image. OCR was not used, and no
 | 3 | 7:20 AM | **FIRDAUS** | OUTGOING | Q3 tu nnt u pilih ya |
 | 4 | 7:20 AM | **FIRDAUS** | OUTGOING | Ni for first 2 Q kan |
 | 5 | 7:21 AM | **BARIAH** | INCOMING | Yes to both screenshots. Q5 multiple response - yes, ok |
+| 6 | 12:38 PM | **FIRDAUS** | OUTGOING | Salam Bariah, nak tutup satu perkara kecil untuk Q5 Topik 4. / Stem kekal: / “Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.” / Empat jawapan bet |
+| 7 | 12:40 PM | **BARIAH** | INCOMING | Set B. Better distractors |
 
 ## WA-01 — FIRDAUS, 7:17 AM
 
@@ -77,6 +79,32 @@ Firdaus asks Bariah to confirm the scope of her bundled acceptance — whether i
 Bariah confirms the scope of her earlier acceptance and separately answers the third question.
 
 > Yes to both screenshots. Q5 multiple response - yes, ok
+
+## WA-06 — FIRDAUS, 12:38 PM
+
+*green, right-aligned, sent/read ticks, quoted block*
+
+A forced-choice request to close E-07. It fixes the stem, states that the four correct answers are unchanged, and asks Bariah to pick between two enumerated pairs of incorrect options. It closes 'Boleh jawab Set A atau Set B sahaja' — answer Set A or Set B only.
+
+> Salam Bariah, nak tutup satu perkara kecil untuk Q5 Topik 4.
+> Stem kekal:
+> “Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.”
+> Empat jawapan betul kekal seperti yang telah dicadangkan. Untuk dua pilihan salah terakhir, yang mana satu kita patut kekalkan?
+> Set A
+> Notifikasi kepada penduduk dibuat hanya selepas semburan selesai
+> SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak
+> Set B
+> Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca
+> Semua racun dibeli daripada satu pembekal tunggal
+> Boleh jawab Set A atau Set B sahaja.
+
+## WA-07 — BARIAH, 12:40 PM
+
+*white, left-aligned, below the '1 unread message' separator*
+
+An explicit selection from two enumerated options, with a one-phrase reason. This is the strongest evidence class in the whole exchange: the choice set was closed, the options were written out in full, and the reply names one of them.
+
+> Set B. Better distractors
 
 # 2. Corrections this reading forces
 
@@ -135,7 +163,7 @@ Status `PROPOSED_NOT_APPLIED`, blocked by `B091-BLOCK-01`. The stage brief re-sc
 |---|---|
 | confirmation mode | BUNDLED_ACCEPTANCE_OF_TWO_PROPOSITIONS |
 | status if custody had passed | `CONFIRMED_THROUGH_BUNDLED_SCREENSHOT_ACCEPTANCE` |
-| **actual status** | **`CONTENT_CONFIRMED_CUSTODY_UNVERIFIED`** |
+| **actual status** | **`CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE`** |
 | evidence class | `AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY` |
 | upgrade blocked by | CUSTODY_FAILED_NO_BINARY |
 
@@ -155,7 +183,7 @@ Status `PROPOSED_NOT_APPLIED`, blocked by `B091-BLOCK-01`. The stage brief re-sc
 |---|---|
 | confirmation mode | CAIR_PROPOSAL_CONFIRMED_BY_AUTHORITY |
 | status if custody had passed | `CONFIRMED_BARIAH_ON_CAIR_PROPOSAL` |
-| **actual status** | **`CONTENT_CONFIRMED_CUSTODY_UNVERIFIED`** |
+| **actual status** | **`CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE`** |
 | evidence class | `AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY` |
 | upgrade blocked by | CUSTODY_FAILED_NO_BINARY |
 
@@ -190,7 +218,68 @@ Status `PROPOSED_NOT_APPLIED`, blocked by `B091-BLOCK-01`. The stage brief re-sc
 - every source-row binding
 - a general delegation to approve assessment content
 
-# 5. A divergence the screenshot exposes
+# 5. E-07 closed by an explicit selection
+
+The cleanest authority act in the whole exchange: a closed option set, both alternatives written out in full, an instruction to answer with one of them, and a reply that names one. There is nothing to interpret.
+
+> Boleh jawab Set A atau Set B sahaja.
+
+> **Set B. Better distractors**
+
+| Field | Value |
+|---|---|
+| status | CLOSED |
+| decision type | DIRECT_SELECTION_FROM_EXPLICIT_OPTIONS |
+| authority | BARIAH_DIRECT_SELECTION |
+| selected | SET_B |
+| rejected | SET_A — REJECTED_NOT_SELECTED |
+| sets combined | no |
+| custody | CUSTODY_UNVERIFIED_NO_BINARY |
+
+**Why the closure is sound despite the custody gap.** The reply selects from a set the requester enumerated in the same thread. Unlike a bundled 'yes to both', there is no scope question: 'Set B' can only mean the two options written under the heading Set B. The missing binary means the artifact cannot be frozen and re-verified later; it does not make the sentence ambiguous.
+
+**What this does not approve:**
+
+- the five quiz answer keys — the request said the four correct answers were unchanged and asked only about the two incorrect options
+- any other quiz item
+- the source-row bindings
+- a general delegation to CAIR over assessment content
+
+## 5.1 The frozen Set B wording
+
+Copied from the enumerated Set B, character for character.
+
+| # | In force (Set B) | Superseded CAIR draft |
+|---|---|---|
+| 5 | **Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca** | Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat |
+| 6 | **Semua racun dibeli daripada satu pembekal tunggal** | Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek |
+
+## 5.2 Set A — rejected, retained for the record
+
+| # | Text | Status |
+|---|---|---|
+| 5 | Notifikasi kepada penduduk dibuat hanya selepas semburan selesai | REJECTED_NOT_SELECTED |
+| 6 | SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak | REJECTED_NOT_SELECTED |
+
+## 5.3 The stem changed provenance
+
+| Field | Value |
+|---|---|
+| correction | T04-COR-04 |
+| was | Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun. |
+| was, provenance | AUTHORITY_SUPPLIED_REPLACEMENT_TEXT — Bariah wrote it in AUTH-EV-01 §E |
+| now | Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun. |
+| now, provenance | FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY |
+| status | APPLIED_PROVENANCE_DOWNGRADED |
+
+**How it was presented.** WA-06 shows it under the heading 'Stem kekal' — the stem stands. It was put to Bariah as a fixed premise of the forced choice, not as something to decide.
+
+**What Bariah actually answered.** the two incorrect options, not the stem
+
+**Therefore.** The stem in force is a Firdaus-directed wording that the authority saw and did not contest. That is weaker than the DOCX stem it replaces, which she wrote herself. It is recorded at the weaker grade rather than inheriting the stronger one.
+
+# 6. The divergence this closes
+
 
 ## T04-DIV-01 — The Q5 put to Bariah is not the Q5 in the frozen content model
 
@@ -218,19 +307,28 @@ The frozen stem's source is AUTH-EV-01 §E — Bariah's own written replacement 
 
 **What this means.** Positions 1 to 4 are identical in both versions and are not in question. Positions 5 and 6 are not: Firdaus put two distractors to Bariah that differ from the two Stage 4.2F-B0.9 froze. Bariah's 'Q5 multiple response - yes, ok' was written against Firdaus's set, not against the frozen set.
 
-**Why it is not resolved here.** Resolving it would mean either overwriting Bariah's frozen stem with Firdaus's wording, or asserting that her 'yes, ok' reaches option text she was never shown. Both are decisions for the authority, not for CAIR, and neither is taken.
+**Resolution.** Set B, verbatim. Neither the Stage 4.2F-B0.9 CAIR draft nor the earlier WhatsApp pair is in force; the selected pair supersedes both.
 
 | Field | Value |
 |---|---|
-| frozen model changed | no |
-| resolution required from | Bariah — one line stating which six-option set stands. |
+| status | CLOSED |
+| closed by | E-07 forced choice — WA-06 / WA-07 |
+| closing record | T04-DEC-E09 |
+| frozen model now carries | SET_B |
 | tracked as | E-07 |
 | blocks storyboard layout | no |
-| blocks a scored quiz | yes |
+| blocks a scored quiz | no |
 
-# 6. New open items
+# 7. Closed in this re-run
 
-| ID | Subject | Owner | Raised by |
+| ID | Subject | Closed by | Record |
 |---|---|---|---|
-| E-07 | Which Q5 six-option set stands — the one put to Bariah in WhatsApp, or the one frozen in the content model | BARIAH | T04-DIV-01 |
-| E-08 | Supplementary screenshot binary custody | FIRDAUS | B091-BLOCK-01 |
+| E-07 | Which Q5 option pair stands | Bariah selected Set B from an enumerated forced choice | T04-DEC-E09 |
+| E-01 | Q5 replacement options E and F | the same selection — the CAIR draft is superseded | T04-DEC-E09 |
+| E-03 | The 'Q3' referent | T04-COR-02 — the line is Firdaus's, so no authority referent exists | T04-COR-02 |
+
+# 8. Still open
+
+| ID | Subject | Owner | Raised by | Status |
+|---|---|---|---|---|
+| E-08 | Supplementary screenshot binary custody | FIRDAUS | B091-BLOCK-01 | OPEN_SECOND_ATTEMPT_FAILED |

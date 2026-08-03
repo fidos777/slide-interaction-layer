@@ -349,9 +349,12 @@ def run():
     chk("EVERY_DECISION_APPLIES_TO_SOMETHING", DECISION_TYPING,
         [d["decision_id"] for d in REG if not d["applies_to"]], [], len(REG),
         "T04_AUTHORITY_DECISION_REGISTER_v1.json")
-    chk("WHATSAPP_DECISIONS_CARRY_THE_DEGRADED_GRADE", DECISION_TYPING,
+    # Two WhatsApp records, read two different ways, graded accordingly. A single blanket
+    # grade would have hidden that one of them was actually looked at.
+    chk("WHATSAPP_RECORDS_ARE_GRADED_BY_HOW_THEY_WERE_READ", DECISION_TYPING,
         sorted({d["evidence_grade"] for d in REG if d["source_artifact"] == "AUTH-EV-02"}),
-        ["DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED"],
+        ["DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
+         "READ_FROM_RENDERED_IMAGE_CUSTODY_UNVERIFIED"],
         len([d for d in REG if d["source_artifact"] == "AUTH-EV-02"]),
         "T04_AUTHORITY_DECISION_REGISTER_v1.json")
     chk("DOCX_DECISIONS_CARRY_THE_VERIFIED_GRADE", DECISION_TYPING,
@@ -602,16 +605,34 @@ def run():
         [q["question_type"] for q in QUIZ],
         ["MCQ", "MCQ", "MCQ", "MCQ", "MULTIPLE_RESPONSE"], len(QUIZ),
         "T04_FINAL_QUIZ_v2.json")
+    # Four stems are Bariah's own DOCX wording. Q5's is not, since Stage 4.2F-B0.9.1: it is
+    # the wording Firdaus fixed in the E-07 forced choice, which she saw and did not contest.
+    # The exception is NAMED rather than filtered out, so a second stem cannot join it unseen.
+    DOCX_STEM_ITEMS = ["T04-QZ-Q1", "T04-QZ-Q2", "T04-QZ-Q3", "T04-QZ-Q4"]
     if docx_present:
-        smiss = [q["question_id"] for q in QUIZ
-                 if re.sub(r"\s+", " ", q["stem_ms"]) not in re.sub(r"\s+", " ", dtext)]
+        smiss = [q["question_id"] for q in QUIZ if q["question_id"] in DOCX_STEM_ITEMS
+                 and re.sub(r"\s+", " ", q["stem_ms"]) not in re.sub(r"\s+", " ", dtext)]
     else:
         smiss = ["docx-unavailable"]
-    chk("EVERY_QUIZ_STEM_APPEARS_VERBATIM_IN_THE_AUTHORITY_DOCX", ASSESSMENT_INTEGRITY,
-        smiss, [], len(QUIZ), DOCX_SRC)
-    chk("EVERY_STEM_IS_AUTHORITY_AUTHORED", ASSESSMENT_INTEGRITY,
-        sorted({q["stem_authorship"] for q in QUIZ}),
-        ["AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"], len(QUIZ), "T04_FINAL_QUIZ_v2.json")
+    chk("THE_FOUR_DOCX_STEMS_APPEAR_VERBATIM_IN_THE_AUTHORITY_DOCX", ASSESSMENT_INTEGRITY,
+        smiss, [], len(DOCX_STEM_ITEMS), DOCX_SRC)
+    chk("EXACTLY_ONE_STEM_IS_NOT_DOCX_SOURCED_AND_IT_IS_NAMED", ASSESSMENT_INTEGRITY,
+        sorted(q["question_id"] for q in QUIZ
+               if q["stem_provenance"] != "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"),
+        ["T04-QZ-Q5"], len(QUIZ), "T04_FINAL_QUIZ_v2.json")
+    chk("THE_FOUR_DOCX_STEMS_ARE_AUTHORITY_AUTHORED", ASSESSMENT_INTEGRITY,
+        sorted({q["stem_provenance"] for q in QUIZ
+                if q["question_id"] in DOCX_STEM_ITEMS}),
+        ["AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"], len(DOCX_STEM_ITEMS),
+        "T04_FINAL_QUIZ_v2.json")
+    chk("THE_Q5_STEM_CARRIES_THE_WEAKER_PROVENANCE", ASSESSMENT_INTEGRITY,
+        [q["stem_provenance"] for q in QUIZ if q["question_id"] == "T04-QZ-Q5"],
+        ["FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY"], len(QUIZ),
+        "T04_FINAL_QUIZ_v2.json")
+    chk("THE_BARIAH_WRITTEN_Q5_STEM_IS_STILL_ON_RECORD", ASSESSMENT_INTEGRITY,
+        [bool(q.get("superseded_stem_b09")) for q in QUIZ
+         if q["question_id"] == "T04-QZ-Q5"], [True], len(QUIZ),
+        "T04_FINAL_QUIZ_v2.json")
     chk("EVERY_STEM_CHANGED", ASSESSMENT_INTEGRITY,
         [q["question_id"] for q in QUIZ if q["stem_ms"] == q["superseded_stem_ms"]], [],
         len(QUIZ), "T04_FINAL_QUIZ_v2.json")
@@ -656,13 +677,19 @@ def run():
         [s["position"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS
          if re.search(r"\bbaja|pembajaan\b", s["replacement_text"], re.I)], [],
         len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
-    chk("REPLACEMENT_DISTRACTORS_ARE_NOT_AUTHORITY_AUTHORED", ASSESSMENT_INTEGRITY,
+    # The distractors are now SELECTED by the authority from an enumerated pair. Selecting is
+    # not authoring, and the record must not drift into claiming she wrote them.
+    chk("REPLACEMENT_DISTRACTORS_ARE_SELECTED_NOT_AUTHORED", ASSESSMENT_INTEGRITY,
         sorted({s["authorship"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS}),
-        ["CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION"], len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS),
+        ["AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS"], len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS),
         "T04_FINAL_QUIZ_v2.json")
-    chk("REPLACEMENT_DISTRACTORS_ARE_PENDING_CONFIRMATION", ASSESSMENT_INTEGRITY,
+    chk("REPLACEMENT_DISTRACTORS_ARE_NEVER_MARKED_AUTHORITY_WRITTEN", ASSESSMENT_INTEGRITY,
+        [s["position"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS
+         if s["authorship"] == "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"], [],
+        len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
+    chk("REPLACEMENT_DISTRACTORS_ARE_CLOSED_BY_E07", ASSESSMENT_INTEGRITY,
         sorted({s["approval_status"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS}),
-        ["PENDING_BARIAH_CONFIRMATION"], len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS),
+        ["CLOSED_BY_E07_SET_B_SELECTION"], len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS),
         "T04_FINAL_QUIZ_v2.json")
     chk("THE_ROUTE_CHOICE_IS_ATTRIBUTED_TO_CAIR", ASSESSMENT_INTEGRITY,
         (D.QUIZ_Q5_ROUTE_CHOICE["chosen_by"], D.QUIZ_Q5_ROUTE_CHOICE["route_taken"]),
@@ -917,13 +944,23 @@ def run():
     chk("FINAL_STATE_IDS_ARE_UNIQUE", FREEZE_HONESTY,
         len({s["state_id"] for s in STATES}), len(STATES), len(STATES),
         "T04_FINAL_CONTENT_MODEL_v1.json")
-    chk("TWO_CLASSES_ARE_FROZEN_BUT_NOT_SETTLED", FREEZE_HONESTY,
-        sorted([s["state_id"] for s in STATES if not s["settled"]]), ["FS-07", "FS-08"],
+    chk("ONE_CLASS_IS_FROZEN_BUT_NOT_SETTLED", FREEZE_HONESTY,
+        sorted([s["state_id"] for s in STATES if not s["settled"]]), ["FS-08"],
         len(STATES), "T04_FINAL_CONTENT_MODEL_v1.json")
-    chk("Q5_OPTIONS_STATE_IS_PENDING_CONFIRMATION", FREEZE_HONESTY,
+    chk("Q5_OPTIONS_STATE_IS_SELECTED_BY_THE_AUTHORITY", FREEZE_HONESTY,
         [s["final_state"] for s in STATES if s["state_id"] == "FS-07"],
-        ["CAIR_EXECUTED_UNDER_AUTHORITY_INSTRUCTION_PENDING_CONFIRMATION"], len(STATES),
+        ["AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS_FROZEN"], len(STATES),
         "T04_FINAL_CONTENT_MODEL_v1.json")
+    # Selecting is not authoring. Bariah chose between two pairs CAIR wrote; the record must
+    # never promote that to her having written them.
+    chk("SELECTION_IS_NOT_PROMOTED_TO_AUTHORSHIP", FREEZE_HONESTY,
+        sorted({s["authorship"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS}),
+        ["AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS"],
+        len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
+    chk("THE_SUPERSEDED_CAIR_DRAFT_WORDING_IS_RETAINED", FREEZE_HONESTY,
+        [x["position"] for x in D.QUIZ_Q5_OPTION_SUBSTITUTIONS
+         if not x.get("cair_draft_superseded_by_e07")], [],
+        len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
     chk("ANSWER_KEY_STATE_IS_PROPOSED_NOT_FINAL", FREEZE_HONESTY,
         [s["final_state"] for s in STATES if s["state_id"] == "FS-08"],
         ["PROPOSED_NOT_FINAL"], len(STATES), "T04_FINAL_CONTENT_MODEL_v1.json")
@@ -938,13 +975,21 @@ def run():
     chk("COURSE_WIDE_STATE_IS_SEPARATE_FROM_THE_TEN", FREEZE_HONESTY,
         D.COURSE_WIDE_STATE["state_id"] in {s["state_id"] for s in STATES}, False, 1,
         "T04_FINAL_CONTENT_MODEL_v1.json")
-    chk("SIX_ITEMS_STAY_OPEN_AFTER_THIS_STAGE", FREEZE_HONESTY,
-        len(D.OPEN_AFTER_THIS_STAGE), 6, len(D.OPEN_AFTER_THIS_STAGE),
+    chk("FOUR_ITEMS_STAY_OPEN_AFTER_THIS_STAGE", FREEZE_HONESTY,
+        len(D.OPEN_AFTER_THIS_STAGE), 4, len(D.OPEN_AFTER_THIS_STAGE),
         "T04_FINAL_CONTENT_MODEL_v1.json")
-    chk("E01_TO_E04_ARE_NOT_CLOSED", FREEZE_HONESTY,
-        sorted({o["open_id"] for o in D.OPEN_AFTER_THIS_STAGE}
-               & {"E-01", "E-02", "E-03", "E-04"}),
-        ["E-01", "E-02", "E-03", "E-04"], len(D.OPEN_AFTER_THIS_STAGE),
+    chk("EVERY_CLOSURE_NAMES_WHAT_CLOSED_IT", FREEZE_HONESTY,
+        [c["open_id"] for c in D.CLOSED_SINCE_B0_9
+         if not (c["closed_by"] and c["closing_record"])], [],
+        len(D.CLOSED_SINCE_B0_9), "T04_FINAL_CONTENT_MODEL_v1.json")
+    chk("THREE_ITEMS_CLOSED_SINCE_B0_9", FREEZE_HONESTY,
+        sorted(c["open_id"] for c in D.CLOSED_SINCE_B0_9), ["E-01", "E-03", "E-07"],
+        len(D.CLOSED_SINCE_B0_9), "T04_FINAL_CONTENT_MODEL_v1.json")
+    # E-01 and E-03 closed with named closing records. E-02 and E-04 did not, and a gate
+    # asserts they are still open rather than trusting that nobody quietly closed them.
+    chk("E02_AND_E04_ARE_NOT_CLOSED", FREEZE_HONESTY,
+        sorted({o["open_id"] for o in D.OPEN_AFTER_THIS_STAGE} & {"E-02", "E-04"}),
+        ["E-02", "E-04"], len(D.OPEN_AFTER_THIS_STAGE),
         "T04_FINAL_CONTENT_MODEL_v1.json")
     chk("EVERY_OPEN_ITEM_NAMES_AN_OWNER", FREEZE_HONESTY,
         [o["open_id"] for o in D.OPEN_AFTER_THIS_STAGE if not o["owner"]], [],

@@ -158,6 +158,9 @@ FIXTURES = [
     dict(fid="B-02", title="a Bariah message is re-attributed to Firdaus",
          gates=["BARIAH_SENT_EXACTLY_TWO_MESSAGES", "SENDER_AND_DIRECTION_AGREE"],
          patch=_msgs(lambda m: _find(m, "msg_id", "WA-05").update(sender="FIRDAUS"))),
+    dict(fid="B-02b", title="the Set B selection is re-attributed to Firdaus",
+         gates=["BARIAH_SENT_EXACTLY_THREE_MESSAGES", "SENDER_AND_DIRECTION_AGREE"],
+         patch=_msgs(lambda m: _find(m, "msg_id", "WA-07").update(sender="FIRDAUS"))),
     dict(fid="B-03", title="sender and bubble direction are made to disagree",
          gates=["SENDER_AND_DIRECTION_AGREE"],
          patch=_msgs(lambda m: _find(m, "msg_id", "WA-02").update(direction="OUTGOING"))),
@@ -224,38 +227,88 @@ FIXTURES = [
          patch=lambda: dict(ANSWER_KEY_STATUS="BARIAH_DIRECT_APPROVED")),
     dict(fid="C-09", title="the Q5 distractors are relabelled Bariah-direct-authored",
          target="D",
-         gates=["Q5_DISTRACTORS_NOT_RELABELLED_BARIAH_DIRECT_AUTHORED"],
+         gates=["Q5_DISTRACTORS_NOT_RELABELLED_BARIAH_AUTHORED",
+                "Q5_DISTRACTORS_ARE_SELECTED_NOT_AUTHORED"],
          patch=lambda: dict(QUIZ_Q5_OPTION_SUBSTITUTIONS=[
              dict(s, authorship="AUTHORITY_SUPPLIED_REPLACEMENT_TEXT")
              for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS])),
-    dict(fid="C-10", title="the Q5 distractors are marked approved",
+    dict(fid="C-10", title="the Q5 distractors are promoted from selected to authored",
          target="D",
-         gates=["Q5_DISTRACTORS_STILL_PENDING_CONFIRMATION"],
+         gates=["Q5_DISTRACTORS_ARE_SELECTED_NOT_AUTHORED",
+                "Q5_DISTRACTORS_NOT_RELABELLED_BARIAH_AUTHORED"],
          patch=lambda: dict(QUIZ_Q5_OPTION_SUBSTITUTIONS=[
-             dict(s, approval_status="BARIAH_APPROVED")
+             dict(s, authorship="AUTHORITY_SUPPLIED_REPLACEMENT_TEXT")
              for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS])),
 
     # ============ the Q5 divergence ============
-    dict(fid="E-01", title="the divergence finding is deleted",
-         gates=["Q5_DIVERGENCE_IS_RECORDED", "DIVERGENCE_IS_AT_POSITIONS_FIVE_AND_SIX"],
-         patch=_div(lambda d: d.update(finding_id="NONE", severity="NONE",
-                                       diverging_positions=[]))),
-    dict(fid="E-02", title="the divergence is downgraded to cosmetic",
-         gates=["Q5_DIVERGENCE_IS_RECORDED"],
-         patch=_div(lambda d: d.update(severity="COSMETIC"))),
-    dict(fid="E-03", title="the WhatsApp options are silently adopted into the frozen model",
+    dict(fid="E-01", title="E-07 is reopened after an explicit selection closed it",
+         gates=["E07_IS_CLOSED", "THE_DIVERGENCE_IS_CLOSED"],
+         patch=lambda: dict(E07_CLOSURE=dict(S.E07_CLOSURE, status="OPEN"),
+                            Q5_DIVERGENCE=dict(S.Q5_DIVERGENCE, status="OPEN",
+                                               blocking_scored_quiz=True))),
+    dict(fid="E-02", title="Set A is selected instead of Set B",
+         gates=["E07_SELECTED_SET_B"],
+         patch=lambda: dict(E07_CLOSURE=dict(
+             S.E07_CLOSURE, selected_set="SET_A", rejected_set="SET_B"))),
+    dict(fid="E-03", title="the two sets are combined instead of one being chosen",
+         gates=["THE_SETS_WERE_NOT_COMBINED"],
+         patch=lambda: dict(E07_CLOSURE=dict(
+             S.E07_CLOSURE, sets_combined=True, both_sets_retained_active=True))),
+    dict(fid="E-04", title="the selected Set B wording is paraphrased",
+         gates=["SET_B_IS_FROZEN_VERBATIM_NOT_PARAPHRASED",
+                "THE_LIVE_MODEL_CARRIES_SET_B_EXACTLY"],
+         patch=lambda: dict(SET_B_FROZEN=[
+             dict(S.SET_B_FROZEN[0], paraphrased=True,
+                  text_ms="Semburan dijadualkan waktu petang tanpa kira cuaca"),
+             S.SET_B_FROZEN[1]])),
+    dict(fid="E-05", title="the rejected Set A is restored to the live model",
          target="D",
-         gates=["THE_FROZEN_MODEL_WAS_NOT_SILENTLY_OVERWRITTEN",
-                "THE_WHATSAPP_OPTIONS_WERE_NOT_ADOPTED"],
+         gates=["SET_A_IS_NOT_IN_THE_LIVE_MODEL", "THE_LIVE_MODEL_CARRIES_SET_B_EXACTLY"],
          patch=lambda: dict(_QUIZ=[
-             dict(q, options=list(S.Q5_DIVERGENCE["options_put_to_authority"]))
+             dict(q, options=q["options"][:4]
+                  + [x["text_ms"] for x in S.SET_A_REJECTED])
              if q["qid"] == "T04-QZ-Q5" else q for q in D._QUIZ])),
-    dict(fid="E-04", title="the divergence is declared non-blocking for a scored quiz",
-         gates=["DIVERGENCE_DOES_NOT_BLOCK_LAYOUT_BUT_BLOCKS_A_SCORED_QUIZ"],
-         patch=_div(lambda d: d.update(blocking_scored_quiz=False))),
-    dict(fid="E-05", title="the divergence stops being tracked as an open item",
-         gates=["DIVERGENCE_IS_TRACKED_AS_AN_OPEN_ITEM"],
+    dict(fid="E-06", title="the superseded CAIR draft is restored to the live model",
+         target="D",
+         gates=["THE_SUPERSEDED_CAIR_DRAFT_IS_NOT_IN_THE_LIVE_MODEL",
+                "THE_LIVE_MODEL_CARRIES_SET_B_EXACTLY"],
+         patch=lambda: dict(_QUIZ=[
+             dict(q, options=q["options"][:4]
+                  + [x["superseded_b09_text"] for x in S.SET_B_FROZEN])
+             if q["qid"] == "T04-QZ-Q5" else q for q in D._QUIZ])),
+    dict(fid="E-07", title="Set A stops being recorded as rejected",
+         gates=["SET_A_IS_RECORDED_AS_REJECTED"],
+         patch=lambda: dict(SET_A_REJECTED=[
+             dict(x, status="RETAINED_ACTIVE") for x in S.SET_A_REJECTED])),
+    dict(fid="E-08", title="E-07 is stretched into approval of all five answer keys",
+         gates=["E07_DOES_NOT_APPROVE_THE_ANSWER_KEYS"],
+         patch=lambda: dict(E07_CLOSURE=dict(
+             S.E07_CLOSURE, what_this_does_not_approve=[]))),
+    dict(fid="E-09", title="the answer keys are marked final on the back of E-07",
+         target="D",
+         gates=["THE_ANSWER_KEY_IS_STILL_NOT_FINAL"],
+         patch=lambda: dict(ANSWER_KEY_STATUS="APPROVED_BY_E07")),
+    dict(fid="E-10", title="the first four correct options are altered",
+         target="D",
+         gates=["THE_FIRST_FOUR_OPTIONS_ARE_UNTOUCHED"],
+         patch=lambda: dict(_QUIZ=[
+             dict(q, options=["Pengendali semburan perlu berlesen"] + q["options"][1:])
+             if q["qid"] == "T04-QZ-Q5" else q for q in D._QUIZ])),
+    dict(fid="E-11", title="Q5 is switched away from Multiple Response after the selection",
+         target="D",
+         gates=["Q5_IS_STILL_MULTIPLE_RESPONSE", "Q5_OPTIONS_STILL_CARRY_NO_LETTERS"],
+         patch=lambda: dict(_QUIZ=[
+             dict(q, qtype="MCQ") if q["qid"] == "T04-QZ-Q5" else q for q in D._QUIZ])),
+    dict(fid="E-12", title="the stem provenance downgrade is erased",
+         gates=["THE_STEM_PROVENANCE_CHANGE_IS_RECORDED"],
+         patch=lambda: dict(STEM_PROVENANCE_CHANGE=dict(
+             S.STEM_PROVENANCE_CHANGE, correction_id="NONE", status="NONE"))),
+    dict(fid="E-13", title="E-08 is dropped so nothing is left open",
+         gates=["E08_IS_THE_ONLY_ITEM_THIS_RERUN_LEFT_OPEN"],
          patch=lambda: dict(NEW_OPEN_ITEMS=[])),
+    dict(fid="E-14", title="a closure in the re-run loses its closing record",
+         gates=["THREE_ITEMS_CLOSED_IN_THE_RERUN"],
+         patch=lambda: dict(CLOSED_IN_THE_RERUN=S.CLOSED_IN_THE_RERUN[:2])),
 
     # ============ AG register ============
     dict(fid="F-01", title="the eight groups are shown as individual acceptances",
@@ -369,21 +422,33 @@ FIXTURES = [
              for c in X.PROOF_CASES])),
 
     # ============ release guard ============
-    dict(fid="J-01", title="Part A is declared passed while custody failed",
-         gates=["PART_A_RESULT_IS_BLOCKED"],
+    dict(fid="J-01", title="Part A is declared fully passed while custody failed",
+         gates=["PART_A_RESULT_SEPARATES_CUSTODY_FROM_CONTENT"],
          patch=lambda: dict(PART_A_RESULT="PASSED")),
-    dict(fid="J-02", title="a superseding release record is issued anyway",
-         gates=["NO_SUPERSEDING_RELEASE_RECORD_WAS_ISSUED"],
+    dict(fid="J-01b", title="the full-approval verdict is issued without binary custody",
+         gates=["THE_PARTIAL_VERDICT_WAS_ISSUED_WITH_ALL_THREE_TOKENS"],
+         patch=lambda: dict(RELEASE_DECISION=dict(
+             S.RELEASE_DECISION,
+             verdict_tokens=["T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD"]))),
+    dict(fid="J-01c", title="the untaken branch stops being named",
+         gates=["THE_UNTAKEN_BRANCH_IS_NAMED_WITH_ITS_REASON"],
+         patch=lambda: dict(RELEASE_DECISION=dict(
+             S.RELEASE_DECISION, branch_not_taken="", why_branch_not_taken=""))),
+    dict(fid="J-01d", title="the open mapping is claimed to block storyboard layout",
+         gates=["THE_OPEN_MAPPING_BLOCKS_EVIDENCE_CLOSURE_NOT_LAYOUT"],
+         patch=lambda: dict(RELEASE_DECISION=dict(
+             S.RELEASE_DECISION, blocks_storyboard_layout=True,
+             what_the_open_mapping_blocks="STORYBOARD_LAYOUT"))),
+    dict(fid="J-02", title="the full-approval record is marked issued anyway",
+         gates=["THE_FULL_APPROVAL_VERDICT_WAS_NOT_ISSUED"],
          patch=lambda: dict(RELEASE_RECORD_NOT_ISSUED=dict(
              S.RELEASE_RECORD_NOT_ISSUED, issued=True, superseding=True))),
     dict(fid="J-03", title="the blocker loses its owner and remedy",
          gates=["THE_BLOCKER_NAMES_AN_OWNER_AND_A_REMEDY"],
          patch=lambda: dict(PART_A_BLOCKER=dict(
              S.PART_A_BLOCKER, owner="", what_would_unblock=""))),
-    dict(fid="J-04", title="Part B is recorded as started",
-         gates=["PART_B_DID_NOT_START"], patch=lambda: dict(PART_B_STARTED=1)),
-    dict(fid="J-05", title="a PPTX is recorded as generated",
-         gates=["NO_PPTX_GENERATED"], patch=lambda: dict(PPTX_GENERATED=1)),
+    dict(fid="J-05", title="a PPTX is recorded as generated in the evidence stage",
+         gates=["NO_PPTX_GENERATED_IN_THIS_STAGE"], patch=lambda: dict(PPTX_GENERATED=1)),
     dict(fid="J-06", title="MMD or SCORM work is recorded as started",
          gates=["NO_MMD_REACT_SCORM_OR_LMS_WORK"],
          patch=lambda: dict(MMD_PRODUCTION_STARTED=1, LMS_WORK_STARTED=1)),

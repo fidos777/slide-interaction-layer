@@ -8,7 +8,7 @@ SUITE_ID             = T04_AUTHORITY_DECISION_INGESTION_QA_v1
 INTERNAL_UNIT_ID     = K5-PL06-T04-B01
 LEARNER_DISPLAY_UNIT = Topik 4 — Penjagaan dan Penyelenggaraan
 INSTRUCTIONAL_AUTHORITY = BARIAH_AHMAD
-DECISION_RECORDS = 45
+DECISION_RECORDS = 46
 DECISION_CLASSES = 7
 COURSE_WIDE      = 2
 UNSETTLED        = 2
@@ -20,7 +20,7 @@ Every decision is typed. A single `ACCEPTED` bucket would erase the difference b
 
 | Class | Count | What it means |
 |---|---|---|
-| ACCEPTED_AS_PROPOSED | 20 | Bariah ticked TERIMA. The proposed item stands unchanged. |
+| ACCEPTED_AS_PROPOSED | 21 | Bariah ticked TERIMA. The proposed item stands unchanged. |
 | AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT | 7 | Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim. |
 | AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR | 9 | Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation. |
 | STRUCTURAL_INSERTION | 1 | Bariah added an item that did not exist in the proposal. |
@@ -73,6 +73,7 @@ Every decision is typed. A single `ACCEPTED` bucket would erase the difference b
 | T04-DEC-E06 | GLOBAL_COURSE_RULE | Module-attribution phrasing is banned course-wide | QUIZ-GLOBAL-01 | ALL_PLS_IN_KURSUS | AUTH-EV-01 |
 | T04-DEC-E07 | GLOBAL_COURSE_RULE | Multiple Response items use checkboxes, never A/B/C letters | QUIZ-GLOBAL-02 | ALL_PLS_IN_KURSUS | AUTH-EV-01 |
 | T04-DEC-E08 | AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR | Q5 options E and F must be changed | T04-QZ-Q5 | T04_ONLY | AUTH-EV-01 |
+| T04-DEC-E09 | ACCEPTED_AS_PROPOSED | Q5 incorrect options: Set B selected from an enumerated forced choice | T04-QZ-Q5 | T04_ONLY | AUTH-EV-02 |
 | T04-DEC-F01 | ACCEPTED_AS_PROPOSED | BA-1 to BA-4 all marked complete | BA-1, BA-2, BA-3, BA-4 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-F02 | ACCEPTED_AS_PROPOSED | Overall verdict: approved with the stated amendments | T04-VIS-GOV-01 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-X01 | DELEGATED_PENDING_AUTHORITY_CONFIRMATION | The 'Q3' WhatsApp line — misattributed in Stage 4.2F-B0.9, corrected to Firdaus authorship | T04-CNF-03 | T04_ONLY | AUTH-EV-02 |
@@ -407,6 +408,14 @@ Every decision is typed. A single `ACCEPTED` bucket would erase the difference b
 *Effect.* Bariah gave two routes and did not choose between them. CAIR took the first — change the options, keep the question — because Bariah separately supplied replacement wording for the Q5 stem, which settles the question. The two replacement distractors are CAIR-drafted and are NOT Bariah-approved.
 
 *Source.* AUTH-EV-01 §E · evidence grade VERIFIED_PRIMARY_ARTIFACT · authored by the authority: no
+
+**T04-DEC-E09** — Q5 incorrect options: Set B selected from an enumerated forced choice
+
+> Set B. Better distractors
+
+*Effect.* The two incorrect Q5 options are Set B, verbatim: 'Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca' and 'Semua racun dibeli daripada satu pembekal tunggal'. Set A is REJECTED_NOT_SELECTED. This closes E-07 and supersedes the CAIR-drafted wording from Stage 4.2F-B0.9.
+
+*Source.* AUTH-EV-02 §WHATSAPP · evidence grade READ_FROM_RENDERED_IMAGE_CUSTODY_UNVERIFIED · authored by the authority: yes
 
 **T04-DEC-F01** — BA-1 to BA-4 all marked complete
 

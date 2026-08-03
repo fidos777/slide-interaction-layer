@@ -45,9 +45,12 @@ NOT_CHECKED = [
     "the screenshot's true pixel dimensions, byte size, format or hash",
     "whether the WhatsApp thread contains further messages outside the captured region",
     "the calendar date of the exchange — the thread shows only a 'Today' separator",
-    "whether Bariah would accept the frozen Q5 option set, which is not the one she was shown",
+    "whether the Set B distractors discriminate well in practice — she called them better, "
+    "the gates carry her selection, they do not judge the pedagogy",
     "whether 'Q3' meant the third request or quiz item Q3 — the supported reading is recorded "
     "and the alternative is retained, neither is asserted",
+    "whether Bariah intended her silence on the Q5 stem as agreement — she was shown it as "
+    "fixed and answered about the options, and the record says exactly that",
 ]
 
 # Anything matching these in a custody field would be a fabricated measurement.
@@ -155,7 +158,10 @@ def run():
     chk("READING_STATES_ITS_LIMITATIONS", READING_DISCIPLINE,
         len(S.READING_METHOD["limitations"]) >= 3, True,
         len(S.READING_METHOD["limitations"]), "T04_AUTHORITY_EXCHANGE_READING_v1.md")
-    chk("FIVE_MESSAGES_READ", READING_DISCIPLINE, len(S.MESSAGES), 5, len(S.MESSAGES),
+    chk("SEVEN_MESSAGES_READ", READING_DISCIPLINE, len(S.MESSAGES), 7, len(S.MESSAGES),
+        "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("MESSAGE_POSITIONS_ARE_CONTIGUOUS", READING_DISCIPLINE,
+        [m["position"] for m in S.MESSAGES], list(range(1, 8)), len(S.MESSAGES),
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
     chk("EVERY_MESSAGE_HAS_A_SENDER_AND_A_DIRECTION", READING_DISCIPLINE,
         [m["msg_id"] for m in S.MESSAGES
@@ -173,14 +179,16 @@ def run():
         sorted(f for m in S.MESSAGES if m["sender"] == "BARIAH"
                for f in m["verbatim_fragments"]),
         sorted(["Yes to both",
-                "Yes to both screenshots. Q5 multiple response - yes, ok"]),
+                "Yes to both screenshots. Q5 multiple response - yes, ok",
+                "Set B. Better distractors"]),
         len(S.MESSAGES), "T04_AUTHORITY_EXCHANGE_READING_v1.md")
-    chk("BARIAH_SENT_EXACTLY_TWO_MESSAGES", READING_DISCIPLINE,
-        [m["msg_id"] for m in S.MESSAGES if m["sender"] == "BARIAH"], ["WA-02", "WA-05"],
+    chk("BARIAH_SENT_EXACTLY_THREE_MESSAGES", READING_DISCIPLINE,
+        [m["msg_id"] for m in S.MESSAGES if m["sender"] == "BARIAH"],
+        ["WA-02", "WA-05", "WA-07"],
         len(S.MESSAGES), "T04_AUTHORITY_EXCHANGE_READING_v1.json")
-    chk("FIRDAUS_SENT_EXACTLY_THREE_MESSAGES", READING_DISCIPLINE,
+    chk("FIRDAUS_SENT_EXACTLY_FOUR_MESSAGES", READING_DISCIPLINE,
         [m["msg_id"] for m in S.MESSAGES if m["sender"] == "FIRDAUS"],
-        ["WA-01", "WA-03", "WA-04"], len(S.MESSAGES),
+        ["WA-01", "WA-03", "WA-04", "WA-06"], len(S.MESSAGES),
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
 
     # ==================== 4. ATTRIBUTION ====================
@@ -219,10 +227,22 @@ def run():
         [r["confirmation_id"] for r in READ
          if r["evidence_class"] == S.BLOCKED_EVIDENCE_CLASS], [], len(READ),
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
-    chk("EVERY_READING_CARRIES_THE_UNVERIFIED_CUSTODY_STATUS", READING_DISCIPLINE,
+    chk("EVERY_READING_CARRIES_A_CUSTODY_QUALIFIED_STATUS", READING_DISCIPLINE,
         sorted({r["actual_status"] for r in READ}),
-        ["CONTENT_CONFIRMED_CUSTODY_UNVERIFIED"], len(READ),
+        ["CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE",
+         "CONTENT_CONFIRMED_CUSTODY_UNVERIFIED"], len(READ),
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("THE_TWO_BUNDLED_CONFIRMATIONS_ARE_MAPPING_INCOMPLETE", READING_DISCIPLINE,
+        sorted(r["confirmation_id"] for r in READ
+               if r["actual_status"] == "CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE"),
+        ["T04-CNF-01", "T04-CNF-02"], len(READ),
+        "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("UNSEEN_SCREENSHOT_CONTENTS_CANNOT_BE_INFERRED", READING_DISCIPLINE,
+        [r["confirmation_id"] for r in READ
+         if r["actual_status"] == "CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE"
+         and "not proof of what those" not in r.get("unseen_screenshot_limit", "")
+         and "the accepted screenshots are not" not in r.get("unseen_screenshot_limit", "")],
+        [], len(READ), "T04_AUTHORITY_EXCHANGE_READING_v1.md")
     chk("EVERY_READING_NAMES_WHAT_BLOCKS_ITS_UPGRADE", READING_DISCIPLINE,
         sorted({r["upgrade_blocked_by"] for r in READ}), ["CUSTODY_FAILED_NO_BINARY"],
         len(READ), "T04_AUTHORITY_EXCHANGE_READING_v1.json")
@@ -273,43 +293,101 @@ def run():
     chk("ANSWER_KEYS_NOT_RELABELLED_BARIAH_DIRECT_APPROVED", READING_DISCIPLINE,
         sorted({q["answer_key_status"] for q in D.quiz_items()}), ["PROPOSED_NOT_FINAL"],
         len(D.quiz_items()), "T04_FINAL_QUIZ_v2.json")
-    chk("Q5_DISTRACTORS_NOT_RELABELLED_BARIAH_DIRECT_AUTHORED", READING_DISCIPLINE,
+    # Selecting from two written pairs is not authoring either of them. The distinction is
+    # exactly what separates a defensible record from an overstated one.
+    chk("Q5_DISTRACTORS_ARE_SELECTED_NOT_AUTHORED", READING_DISCIPLINE,
         sorted({s["authorship"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS}),
-        ["CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION"],
+        ["AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS"],
         len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
-    chk("Q5_DISTRACTORS_STILL_PENDING_CONFIRMATION", READING_DISCIPLINE,
-        sorted({s["approval_status"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS}),
-        ["PENDING_BARIAH_CONFIRMATION"], len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS),
-        "T04_FINAL_QUIZ_v2.json")
+    chk("Q5_DISTRACTORS_NOT_RELABELLED_BARIAH_AUTHORED", READING_DISCIPLINE,
+        [s["position"] for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS
+         if s["authorship"] == "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"], [],
+        len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
 
-    # ==================== 6. THE Q5 DIVERGENCE ====================
+    # ==================== 6. E-07 CLOSURE AND THE SET B FREEZE ====================
     d = S.Q5_DIVERGENCE
-    chk("Q5_DIVERGENCE_IS_RECORDED", READING_DISCIPLINE,
-        (d["finding_id"], d["severity"]),
-        ("T04-DIV-01", "MATERIAL_UNRESOLVED_DIVERGENCE"), 2,
+    E = S.E07_CLOSURE
+    q5 = [q for q in D.quiz_items() if q["question_id"] == "T04-QZ-Q5"][0]
+    live_q5 = [o["text_ms"] for o in q5["options"]]
+
+    chk("E07_IS_CLOSED", READING_DISCIPLINE,
+        (E["open_id"], E["status"]), ("E-07", "CLOSED"), 2,
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
-    chk("DIVERGENCE_IS_AT_POSITIONS_FIVE_AND_SIX", READING_DISCIPLINE,
-        d["diverging_positions"], [5, 6], 6,
+    chk("E07_DECISION_TYPE_IS_A_DIRECT_SELECTION", READING_DISCIPLINE,
+        (E["decision_type"], E["authority"]),
+        ("DIRECT_SELECTION_FROM_EXPLICIT_OPTIONS", "BARIAH_DIRECT_SELECTION"), 2,
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
-    chk("FIRST_FOUR_OPTIONS_AGREE", READING_DISCIPLINE,
-        [i + 1 for i in range(4)
-         if d["options_put_to_authority"][i] != d["options_in_frozen_model"][i]], [], 4,
+    chk("E07_SELECTED_SET_B", READING_DISCIPLINE,
+        (E["selected_set"], E["rejected_set"], E["rejected_set_status"]),
+        ("SET_B", "SET_A", "REJECTED_NOT_SELECTED"), 3,
         "T04_AUTHORITY_EXCHANGE_READING_v1.json")
-    chk("THE_FROZEN_MODEL_WAS_NOT_SILENTLY_OVERWRITTEN", READING_DISCIPLINE,
-        [o["text_ms"] for q in D.quiz_items() if q["question_id"] == "T04-QZ-Q5"
-         for o in q["options"]], d["options_in_frozen_model"], 6,
-        "T04_FINAL_QUIZ_v2.json")
-    chk("THE_WHATSAPP_OPTIONS_WERE_NOT_ADOPTED", READING_DISCIPLINE,
-        [t for t in d["options_put_to_authority"][4:]
-         if t in [o["text_ms"] for q in D.quiz_items()
-                  if q["question_id"] == "T04-QZ-Q5" for o in q["options"]]], [], 2,
-        "T04_FINAL_QUIZ_v2.json")
-    chk("DIVERGENCE_IS_TRACKED_AS_AN_OPEN_ITEM", READING_DISCIPLINE,
-        sorted(o["open_id"] for o in S.NEW_OPEN_ITEMS), ["E-07", "E-08"],
-        len(S.NEW_OPEN_ITEMS), "T04_AUTHORITY_EXCHANGE_READING_v1.json")
-    chk("DIVERGENCE_DOES_NOT_BLOCK_LAYOUT_BUT_BLOCKS_A_SCORED_QUIZ", READING_DISCIPLINE,
-        (d["blocking_storyboard_layout"], d["blocking_scored_quiz"]), (False, True), 2,
+    chk("E07_QUOTES_THE_SELECTION_VERBATIM", READING_DISCIPLINE,
+        E["authority_quote"], "Set B. Better distractors", 1,
         "T04_AUTHORITY_EXCHANGE_READING_v1.md")
+    chk("THE_SETS_WERE_NOT_COMBINED", READING_DISCIPLINE,
+        (E["sets_combined"], E["both_sets_retained_active"]), (False, False), 2,
+        "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("SET_B_IS_FROZEN_VERBATIM_NOT_PARAPHRASED", READING_DISCIPLINE,
+        [x["position"] for x in S.SET_B_FROZEN if x["paraphrased"]], [],
+        len(S.SET_B_FROZEN), "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("THE_LIVE_MODEL_CARRIES_SET_B_EXACTLY", READING_DISCIPLINE,
+        live_q5[4:], [x["text_ms"] for x in S.SET_B_FROZEN], 6,
+        "T04_FINAL_QUIZ_v2.json")
+    chk("SET_A_IS_NOT_IN_THE_LIVE_MODEL", READING_DISCIPLINE,
+        [x["text_ms"] for x in S.SET_A_REJECTED if x["text_ms"] in live_q5], [],
+        len(S.SET_A_REJECTED), "T04_FINAL_QUIZ_v2.json")
+    chk("SET_A_IS_RECORDED_AS_REJECTED", READING_DISCIPLINE,
+        sorted({x["status"] for x in S.SET_A_REJECTED}), ["REJECTED_NOT_SELECTED"],
+        len(S.SET_A_REJECTED), "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("THE_SUPERSEDED_CAIR_DRAFT_IS_NOT_IN_THE_LIVE_MODEL", READING_DISCIPLINE,
+        [x["superseded_b09_text"] for x in S.SET_B_FROZEN
+         if x["superseded_b09_text"] in live_q5], [], len(S.SET_B_FROZEN),
+        "T04_FINAL_QUIZ_v2.json")
+    chk("THE_SUPERSEDED_CAIR_DRAFT_IS_STILL_RECORDED", READING_DISCIPLINE,
+        [s_["position"] for s_ in D.QUIZ_Q5_OPTION_SUBSTITUTIONS
+         if not s_.get("cair_draft_superseded_by_e07")], [],
+        len(D.QUIZ_Q5_OPTION_SUBSTITUTIONS), "T04_FINAL_QUIZ_v2.json")
+    chk("THE_FIRST_FOUR_OPTIONS_ARE_UNTOUCHED", READING_DISCIPLINE,
+        live_q5[:4], d["options_in_frozen_model"][:4], 4, "T04_FINAL_QUIZ_v2.json")
+    chk("THE_FIRST_FOUR_REMAIN_THE_PROPOSED_KEY", READING_DISCIPLINE,
+        q5["proposed_key_positions"], [1, 2, 3, 4], 6, "T04_FINAL_QUIZ_v2.json")
+    chk("Q5_IS_STILL_MULTIPLE_RESPONSE", READING_DISCIPLINE,
+        q5["question_type"], "MULTIPLE_RESPONSE", 1, "T04_FINAL_QUIZ_v2.json")
+    chk("Q5_OPTIONS_STILL_CARRY_NO_LETTERS", READING_DISCIPLINE,
+        [o["option_id"] for o in q5["options"] if o["letter_label"]], [],
+        len(q5["options"]), "T04_FINAL_QUIZ_v2.json")
+    chk("E07_DOES_NOT_APPROVE_THE_ANSWER_KEYS", READING_DISCIPLINE,
+        [x for x in E["what_this_does_not_approve"] if "answer key" in x] != [], True,
+        len(E["what_this_does_not_approve"]),
+        "T04_AUTHORITY_EXCHANGE_READING_v1.md")
+    chk("THE_ANSWER_KEY_IS_STILL_NOT_FINAL", READING_DISCIPLINE,
+        sorted({q["answer_key_status"] for q in D.quiz_items()}), ["PROPOSED_NOT_FINAL"],
+        len(D.quiz_items()), "T04_FINAL_QUIZ_v2.json")
+    chk("THE_DIVERGENCE_IS_CLOSED", READING_DISCIPLINE,
+        (d["status"], d["blocking_scored_quiz"]), ("CLOSED", False), 2,
+        "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("THE_STEM_PROVENANCE_CHANGE_IS_RECORDED", READING_DISCIPLINE,
+        (S.STEM_PROVENANCE_CHANGE["correction_id"],
+         S.STEM_PROVENANCE_CHANGE["status"]),
+        ("T04-COR-04", "APPLIED_PROVENANCE_DOWNGRADED"), 2,
+        "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("THE_STEM_IN_FORCE_MATCHES_THE_FORCED_CHOICE", READING_DISCIPLINE,
+        q5["stem_ms"], S.STEM_PROVENANCE_CHANGE["final_stem"], 1,
+        "T04_FINAL_QUIZ_v2.json")
+    chk("THE_STEM_IS_NOT_CLAIMED_AS_AUTHORITY_AUTHORED", READING_DISCIPLINE,
+        q5.get("stem_provenance"),
+        "FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY", 1,
+        "T04_FINAL_QUIZ_v2.json")
+    chk("THE_BARIAH_WRITTEN_STEM_IS_STILL_RECORDED", READING_DISCIPLINE,
+        q5.get("superseded_stem_b09"), S.STEM_PROVENANCE_CHANGE["b09_stem"], 1,
+        "T04_FINAL_QUIZ_v2.json")
+    chk("E08_IS_THE_ONLY_ITEM_THIS_RERUN_LEFT_OPEN", READING_DISCIPLINE,
+        sorted(o["open_id"] for o in S.NEW_OPEN_ITEMS), ["E-08"],
+        len(S.NEW_OPEN_ITEMS), "T04_AUTHORITY_EXCHANGE_READING_v1.json")
+    chk("THREE_ITEMS_CLOSED_IN_THE_RERUN", READING_DISCIPLINE,
+        sorted(o["open_id"] for o in S.CLOSED_IN_THE_RERUN),
+        ["E-01", "E-03", "E-07"], len(S.CLOSED_IN_THE_RERUN),
+        "T04_AUTHORITY_EXCHANGE_READING_v1.json")
 
     # ==================== 7. AG REGISTER ====================
     chk("EIGHT_ASSET_GROUPS_AUDITED", AG_REGISTER, len(AG), 8, len(AG),
@@ -442,18 +520,32 @@ def run():
         os.path.join(D.EVIDENCE_DIR, D.PRIMARY_DOCX_NAME))
 
     # ==================== 10. RELEASE GUARD ====================
-    chk("PART_A_RESULT_IS_BLOCKED", RELEASE_GUARD, S.PART_A_RESULT, "BLOCKED", 1,
+    chk("PART_A_RESULT_SEPARATES_CUSTODY_FROM_CONTENT", RELEASE_GUARD,
+        S.PART_A_RESULT, "PARTIAL_CUSTODY_BLOCKED_CONTENT_CLOSED", 1,
         "T04_SUPPLEMENTARY_EVIDENCE_CUSTODY_v1.json")
-    chk("NO_SUPERSEDING_RELEASE_RECORD_WAS_ISSUED", RELEASE_GUARD,
+    chk("THE_FULL_APPROVAL_VERDICT_WAS_NOT_ISSUED", RELEASE_GUARD,
         (S.RELEASE_RECORD_NOT_ISSUED["issued"],
          S.RELEASE_RECORD_NOT_ISSUED["superseding"]), (False, False), 2,
         "T04_SUPPLEMENTARY_EVIDENCE_CUSTODY_v1.json")
+    chk("THE_PARTIAL_VERDICT_WAS_ISSUED_WITH_ALL_THREE_TOKENS", RELEASE_GUARD,
+        S.RELEASE_DECISION["verdict_tokens"],
+        ["T04_ASSESSMENT_DIVERGENCE_CLOSED", "STORYBOARD_LAYOUT_READY",
+         "SUPPLEMENTARY_CNF_MAPPING_PARTIALLY_OPEN"], 3,
+        "T04_SUPPLEMENTARY_EVIDENCE_CUSTODY_v1.json")
+    chk("THE_UNTAKEN_BRANCH_IS_NAMED_WITH_ITS_REASON", RELEASE_GUARD,
+        (S.RELEASE_DECISION["branch_not_taken"],
+         bool(S.RELEASE_DECISION["why_branch_not_taken"])),
+        ("T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD", True), 2,
+        "T04_SUPPLEMENTARY_EVIDENCE_CUSTODY_v1.md")
+    chk("THE_OPEN_MAPPING_BLOCKS_EVIDENCE_CLOSURE_NOT_LAYOUT", RELEASE_GUARD,
+        (S.RELEASE_DECISION["what_the_open_mapping_blocks"],
+         S.RELEASE_DECISION["blocks_storyboard_layout"]),
+        ("CANONICAL_EVIDENCE_CLOSURE_ONLY", False), 2,
+        "T04_SUPPLEMENTARY_EVIDENCE_CUSTODY_v1.md")
     chk("THE_BLOCKER_NAMES_AN_OWNER_AND_A_REMEDY", RELEASE_GUARD,
         bool(S.PART_A_BLOCKER["owner"] and S.PART_A_BLOCKER["what_would_unblock"]), True, 1,
         "T04_SUPPLEMENTARY_EVIDENCE_CUSTODY_v1.md")
-    chk("PART_B_DID_NOT_START", RELEASE_GUARD, S.PART_B_STARTED, 0, 1,
-        "t04_supplementary_evidence_v1.py")
-    chk("NO_PPTX_GENERATED", RELEASE_GUARD, S.PPTX_GENERATED, 0, 1,
+    chk("NO_PPTX_GENERATED_IN_THIS_STAGE", RELEASE_GUARD, S.PPTX_GENERATED, 0, 1,
         "t04_supplementary_evidence_v1.py")
     chk("NO_MMD_REACT_SCORM_OR_LMS_WORK", RELEASE_GUARD,
         (S.MMD_PRODUCTION_STARTED, S.REACT_OR_SCORM_STARTED, S.LMS_WORK_STARTED),

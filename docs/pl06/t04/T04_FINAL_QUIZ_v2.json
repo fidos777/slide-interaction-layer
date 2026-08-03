@@ -68,6 +68,8 @@
     "question_type": "MCQ",
     "stem_ms": "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
     "superseded_stem_ms": "Apakah tiga operasi utama penyelenggaraan landskap lembut yang dinyatakan dalam modul?",
+    "superseded_stem_b09": null,
+    "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_decision_id": "T04-DEC-E01",
     "options": [
@@ -136,6 +138,8 @@
     "question_type": "MCQ",
     "stem_ms": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
     "superseded_stem_ms": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Mengikut modul, sistem manakah yang paling sesuai?",
+    "superseded_stem_b09": null,
+    "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_decision_id": "T04-DEC-E02",
     "options": [
@@ -204,6 +208,8 @@
     "question_type": "MCQ",
     "stem_ms": "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
     "superseded_stem_ms": "Mengikut susunan keutamaan IPM dalam modul, kaedah kawalan manakah yang disenaraikan paling akhir?",
+    "superseded_stem_b09": null,
+    "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_decision_id": "T04-DEC-E03",
     "options": [
@@ -273,6 +279,8 @@
     "question_type": "MCQ",
     "stem_ms": "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
     "superseded_stem_ms": "Modul menyenaraikan empat kumpulan fungsi landskap kejur. Kumpulan manakah yang merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "superseded_stem_b09": null,
+    "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
     "stem_decision_id": "T04-DEC-E04",
     "options": [
@@ -351,9 +359,11 @@
     "question_id": "T04-QZ-Q5",
     "position": 5,
     "question_type": "MULTIPLE_RESPONSE",
-    "stem_ms": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+    "stem_ms": "Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.",
     "superseded_stem_ms": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun, mengikut modul.",
-    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "superseded_stem_b09": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+    "stem_provenance": "FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY",
+    "stem_authorship": "FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY",
     "stem_decision_id": "T04-DEC-E05",
     "options": [
      {
@@ -397,7 +407,7 @@
       "position": 5,
       "display_marker": "checkbox",
       "letter_label": null,
-      "text_ms": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+      "text_ms": "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
       "proposed_key": false,
       "key_status": "PROPOSED_NOT_FINAL"
      },
@@ -406,13 +416,13 @@
       "position": 6,
       "display_marker": "checkbox",
       "letter_label": null,
-      "text_ms": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+      "text_ms": "Semua racun dibeli daripada satu pembekal tunggal",
       "proposed_key": false,
       "key_status": "PROPOSED_NOT_FINAL"
      }
     ],
     "option_count": 6,
-    "options_authorship": "AUTHORITY_INSTRUCTED_CHANGE_EXECUTED_BY_CAIR",
+    "options_authorship": "AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
     "option_marker_style": "CHECKBOX",
     "proposed_key_positions": [
      1,
@@ -453,25 +463,31 @@
    {
     "position": 5,
     "previous_letter": "E",
+    "e07_status": "SELECTED_AS_SET_B",
     "superseded_text": "Baja disimpan di tempat yang kering dan jauh dari sumber air",
-    "replacement_text": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+    "replacement_text": "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+    "cair_draft_superseded_by_e07": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
     "why_superseded": "Bariah: the option is obviously wrong because it is about fertiliser, not about controls during pesticide spraying.",
-    "why_the_replacement_works": "It is about pesticide spraying, so it no longer gives itself away by subject. It is a plausible site practice but is not one of the controls the module states as mandatory, so it remains a correct distractor.",
-    "authorship": "CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
-    "approval_status": "PENDING_BARIAH_CONFIRMATION"
+    "why_the_replacement_works": "It is about pesticide spraying, so it no longer gives itself away by subject, and it is not a control the module states as mandatory. Bariah chose this wording over the Set A alternative and called the pair 'better distractors'.",
+    "authorship": "AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
+    "approval_status": "CLOSED_BY_E07_SET_B_SELECTION"
    },
    {
     "position": 6,
     "previous_letter": "F",
+    "e07_status": "SELECTED_AS_SET_B",
     "superseded_text": "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
-    "replacement_text": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+    "replacement_text": "Semua racun dibeli daripada satu pembekal tunggal",
+    "cair_draft_superseded_by_e07": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
     "why_superseded": "Bariah: same defect — a fertiliser record, obviously outside the scope of pesticide spraying controls.",
-    "why_the_replacement_works": "A procurement condition, phrased about pesticide. It sounds like a contract requirement and is not a spraying control the module states, so a learner has to reason about what the control is for rather than about what the option mentions.",
-    "authorship": "CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
-    "approval_status": "PENDING_BARIAH_CONFIRMATION"
+    "why_the_replacement_works": "A procurement condition, phrased about pesticide. A learner has to reason about what the control is for rather than about what the option mentions. Selected by Bariah as part of Set B.",
+    "authorship": "AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
+    "approval_status": "CLOSED_BY_E07_SET_B_SELECTION"
    }
   ],
   "q5_route_choice": {
+   "resolved_by": "E-07 forced choice — see E07_CLOSURE in t04_supplementary_evidence_v1",
+   "resolution": "The route question is moot. Bariah was later shown two explicit option pairs against a fixed stem and selected one, which settles both the route and the wording.",
    "authority_gave_two_routes": true,
    "authority_quote": "Tukar pilihan 5 dan 6 (E dan F), kerana jelas ia pilihan yang salah. (kerana ia tentang baja) ATAU tukar soalan.",
    "route_taken": "CHANGE_THE_TWO_OPTIONS",

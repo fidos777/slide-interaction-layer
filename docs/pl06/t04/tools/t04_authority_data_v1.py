@@ -560,6 +560,14 @@ _DECISIONS = [
      "the options, keep the question — because Bariah separately supplied replacement wording "
      "for the Q5 stem, which settles the question. The two replacement distractors are "
      "CAIR-drafted and are NOT Bariah-approved."),
+    ("T04-DEC-E09", _A, "Q5 incorrect options: Set B selected from an enumerated forced "
+                        "choice",
+     "Set B. Better distractors",
+     "WHATSAPP", ["T04-QZ-Q5"], _SCOPE_T04,
+     "The two incorrect Q5 options are Set B, verbatim: 'Semburan dijadualkan pada waktu "
+     "petang tanpa mengambil kira keadaan cuaca' and 'Semua racun dibeli daripada satu "
+     "pembekal tunggal'. Set A is REJECTED_NOT_SELECTED. This closes E-07 and supersedes the "
+     "CAIR-drafted wording from Stage 4.2F-B0.9."),
     # ---- Section F: overall verdict -----------------------------------------------------
     ("T04-DEC-F01", _A, "BA-1 to BA-4 all marked complete", "✓",
      "F", ["BA-1", "BA-2", "BA-3", "BA-4"], _SCOPE_T04,
@@ -601,8 +609,14 @@ def _decision_register():
             authority_quote=quote,
             source_artifact=("AUTH-EV-02" if section == "WHATSAPP" else "AUTH-EV-01"),
             source_section=section,
-            evidence_grade=("DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED" if section == "WHATSAPP"
-                            else "VERIFIED_PRIMARY_ARTIFACT"),
+            # Three grades, because three different things happened. The DOCX was opened and
+            # hashed. The E-07 selection was read from a rendered image whose binary could not
+            # be taken into custody. The earliest WhatsApp lines reached Stage 4.2F-B0.9 only
+            # as text transcribed into a brief.
+            evidence_grade=(
+                "READ_FROM_RENDERED_IMAGE_CUSTODY_UNVERIFIED" if did == "T04-DEC-E09"
+                else "DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED" if section == "WHATSAPP"
+                else "VERIFIED_PRIMARY_ARTIFACT"),
             applies_to=list(applies),
             scope=scope,
             effect=effect,
@@ -1106,51 +1120,70 @@ _QUIZ = [
         key=[1], source_rows=_rows(81, 100)),
     dict(
         qid="T04-QZ-Q5", n=5, qtype="MULTIPLE_RESPONSE", decision="T04-DEC-E05",
-        stem=("Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti "
-              "semburan racun."),
+        # Stem provenance downgraded in Stage 4.2F-B0.9.1 — see T04-COR-04. Bariah wrote the
+        # superseded_stem_b09 below in AUTH-EV-01 §E; this wording was put to her as a fixed
+        # premise ("Stem kekal") in the E-07 forced choice and was not contested.
+        stem=("Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan "
+              "racun."),
         superseded_stem=("Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa "
                          "aktiviti semburan racun, mengikut modul."),
+        superseded_stem_b09=("Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa "
+                             "aktiviti semburan racun."),
+        stem_provenance="FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY",
         options=["Pengendali semburan mesti berlesen atau telah menerima latihan",
                  "Pekerja mesti memakai PPE yang lengkap dan bersesuaian",
                  "Semburan hanya dilakukan semasa cuaca tenang",
                  "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
-                 "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
-                 "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek"],
-        options_authorship="AUTHORITY_INSTRUCTED_CHANGE_EXECUTED_BY_CAIR",
+                 # E-07 SET B, selected by Bariah. Verbatim from the enumerated choice.
+                 "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+                 "Semua racun dibeli daripada satu pembekal tunggal"],
+        options_authorship="AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
         key=[0, 1, 2, 3], source_rows=_rows(65, 67) + _rows(68, 74) + _rows(75, 78)),
 ]
 
-# The two options Bariah ordered changed, and what replaced them. Kept as a record so the
-# substitution is auditable without diffing two artifacts.
+# The two options Bariah ordered changed, and what finally replaced them.
+#
+# THREE GENERATIONS, ALL KEPT. `superseded_text` is the original fertiliser distractor she
+# rejected in the DOCX. `cair_draft_superseded_by_e07` is the wording CAIR wrote under her
+# instruction in Stage 4.2F-B0.9 — never approved. `replacement_text` is Set B, which she
+# selected explicitly in the E-07 forced choice, verbatim. Only the last one is in force.
 QUIZ_Q5_OPTION_SUBSTITUTIONS = [
     dict(position=5, previous_letter="E",
+         e07_status="SELECTED_AS_SET_B",
          superseded_text="Baja disimpan di tempat yang kering dan jauh dari sumber air",
-         replacement_text="Semburan dijadualkan pada waktu petang selepas waktu kerja tapak "
-                          "tamat",
+         replacement_text=("Semburan dijadualkan pada waktu petang tanpa mengambil kira "
+                           "keadaan cuaca"),
+         cair_draft_superseded_by_e07=("Semburan dijadualkan pada waktu petang selepas waktu "
+                                       "kerja tapak tamat"),
          why_superseded=("Bariah: the option is obviously wrong because it is about "
                          "fertiliser, not about controls during pesticide spraying."),
          why_the_replacement_works=(
-             "It is about pesticide spraying, so it no longer gives itself away by subject. "
-             "It is a plausible site practice but is not one of the controls the module "
-             "states as mandatory, so it remains a correct distractor."),
-         authorship="CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
-         approval_status="PENDING_BARIAH_CONFIRMATION"),
+             "It is about pesticide spraying, so it no longer gives itself away by subject, "
+             "and it is not a control the module states as mandatory. Bariah chose this "
+             "wording over the Set A alternative and called the pair 'better distractors'."),
+         authorship="AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
+         approval_status="CLOSED_BY_E07_SET_B_SELECTION"),
     dict(position=6, previous_letter="F",
+         e07_status="SELECTED_AS_SET_B",
          superseded_text="Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
-         replacement_text="Semua racun dibeli daripada satu pembekal tunggal yang dilantik "
-                          "projek",
+         replacement_text="Semua racun dibeli daripada satu pembekal tunggal",
+         cair_draft_superseded_by_e07=("Semua racun dibeli daripada satu pembekal tunggal "
+                                       "yang dilantik projek"),
          why_superseded=("Bariah: same defect — a fertiliser record, obviously outside the "
                          "scope of pesticide spraying controls."),
          why_the_replacement_works=(
-             "A procurement condition, phrased about pesticide. It sounds like a contract "
-             "requirement and is not a spraying control the module states, so a learner has "
-             "to reason about what the control is for rather than about what the option "
-             "mentions."),
-         authorship="CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
-         approval_status="PENDING_BARIAH_CONFIRMATION"),
+             "A procurement condition, phrased about pesticide. A learner has to reason about "
+             "what the control is for rather than about what the option mentions. Selected by "
+             "Bariah as part of Set B."),
+         authorship="AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
+         approval_status="CLOSED_BY_E07_SET_B_SELECTION"),
 ]
 
 QUIZ_Q5_ROUTE_CHOICE = dict(
+    resolved_by="E-07 forced choice — see E07_CLOSURE in t04_supplementary_evidence_v1",
+    resolution="The route question is moot. Bariah was later shown two explicit option pairs "
+               "against a fixed stem and selected one, which settles both the route and the "
+               "wording.",
     authority_gave_two_routes=True,
     authority_quote="Tukar pilihan 5 dan 6 (E dan F), kerana jelas ia pilihan yang salah. "
                     "(kerana ia tentang baja) ATAU tukar soalan.",
@@ -1184,7 +1217,9 @@ def _quiz_items():
             question_type=q["qtype"],
             stem_ms=q["stem"],
             superseded_stem_ms=q["superseded_stem"],
-            stem_authorship="AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+            superseded_stem_b09=q.get("superseded_stem_b09"),
+            stem_provenance=q.get("stem_provenance", "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"),
+            stem_authorship=q.get("stem_provenance", "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"),
             stem_decision_id=q["decision"],
             options=opts,
             option_count=len(opts),
@@ -1376,6 +1411,7 @@ FINAL_STATE_VALUES = [
     "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
     "AUTHORITY_ISSUED_COURSE_WIDE",
     "PRESENT_WITH_OPEN_REPRODUCIBILITY_RISK",
+    "AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS_FROZEN",
 ]
 
 _FINAL_STATES = [
@@ -1399,11 +1435,10 @@ _FINAL_STATES = [
     ("FS-06", "FINAL_QUIZ_STEMS", "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN",
      "All five stems replaced with Bariah's wording, carried verbatim.",
      ["T04-DEC-E01", "T04-DEC-E02", "T04-DEC-E03", "T04-DEC-E04", "T04-DEC-E05"], True),
-    ("FS-07", "FINAL_QUIZ_Q5_OPTIONS",
-     "CAIR_EXECUTED_UNDER_AUTHORITY_INSTRUCTION_PENDING_CONFIRMATION",
-     "Options 5 and 6 replaced on Bariah's instruction. The replacement wording is CAIR's and "
-     "is not approved.",
-     ["T04-DEC-E08"], False),
+    ("FS-07", "FINAL_QUIZ_Q5_OPTIONS", "AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS_FROZEN",
+     "Options 5 and 6 are Set B, selected by Bariah from an enumerated forced choice and "
+     "carried verbatim. The CAIR draft that stood here in Stage 4.2F-B0.9 is superseded.",
+     ["T04-DEC-E08", "T04-DEC-E09"], True),
     ("FS-08", "FINAL_QUIZ_ANSWER_KEY", "PROPOSED_NOT_FINAL",
      "No answer key was marked final by the authority. All five remain proposals.",
      ["T04-DEC-X02"], False),
@@ -1546,18 +1581,31 @@ FORBIDDEN_LABEL_DECLARATION = (
 
 # Open items that this stage does NOT close.
 OPEN_AFTER_THIS_STAGE = [
-    dict(open_id="E-01", subject="Q5 replacement options E and F",
-         owner="BARIAH", why_open="CAIR wrote them under instruction; not confirmed."),
     dict(open_id="E-02", subject="Quiz answer key for all five items",
-         owner="BARIAH", why_open="Recorded as 'cadangan jawapan sahaja' in the package."),
-    dict(open_id="E-03", subject="The 'Q3' WhatsApp referent",
-         owner="BARIAH", why_open="Ambiguous referent; the choice was delegated and unmade."),
+         owner="BARIAH", why_open="Recorded as 'cadangan jawapan sahaja' in the package. The "
+                                  "E-07 forced choice explicitly left the four correct "
+                                  "answers untouched and asked only about the two incorrect "
+                                  "options, so it does not close this."),
     dict(open_id="E-04", subject="The pembajaan-to-racun wording correction on T04-S14",
          owner="BARIAH", why_open="Correction applied and recorded; confirmation outstanding."),
     dict(open_id="E-05", subject="Original module DOCX round trip and hash proof",
          owner="FIRDAUS", why_open="Not re-run in this session; non-blocking."),
     dict(open_id="E-06", subject="Individual asset subjects and styles",
          owner="BARIAH", why_open="The set was accepted; no artwork has been approved."),
+]
+
+# Items closed since Stage 4.2F-B0.9, each naming what closed it.
+CLOSED_SINCE_B0_9 = [
+    dict(open_id="E-01", subject="Q5 replacement options E and F",
+         closed_by="E-07 forced choice — Bariah selected Set B",
+         closing_record="T04-DEC-E09"),
+    dict(open_id="E-03", subject="The 'Q3' WhatsApp referent",
+         closed_by="T04-COR-02 — the line is Firdaus's, so there is no authority referent to "
+                   "resolve",
+         closing_record="T04-COR-02"),
+    dict(open_id="E-07", subject="Which Q5 six-option set stands",
+         closed_by="E-07 forced choice — Set B, verbatim",
+         closing_record="T04-DEC-E09"),
 ]
 
 VERDICT = "T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD"

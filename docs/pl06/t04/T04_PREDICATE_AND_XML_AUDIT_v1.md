@@ -5,7 +5,7 @@
 ```
 STAGE      = 4.2F-B0.9.1
 SUITE_ID   = T04_SUPPLEMENTARY_EVIDENCE_QA_v1
-PART_A     = BLOCKED
+PART_A     = PARTIAL_CUSTODY_BLOCKED_CONTENT_CLOSED
 CLOSED_POPULATIONS   = 18
 EXCLUDED_POPULATIONS = 5
 FAILING              = none
@@ -35,11 +35,11 @@ Every gate whose population is selected by a mutable property now carries three 
 | POP-11 | `named_aspect_list is non-empty` | named_aspect_list | 3 | 3 | 0 | 0 | ASPECT_LISTS_ON_THE_THREE_MAIN_EXPLANATION_SCREENS |
 | POP-12 | `decision_class == "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR"` | decision_class | 9 | 9 | 0 | 0 | CAIR_EXECUTED_DECISIONS_ARE_NOT_AUTHORITY_AUTHORED |
 | POP-13 | `decision_class == "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"` | decision_class | 7 | 7 | 0 | 0 | AUTHORITY_SUPPLIED_TEXT_IS_MARKED_AUTHORITY_AUTHORED |
-| POP-14 | `source_artifact == "AUTH-EV-02"  (the WhatsApp evidence)` | source_artifact | 1 | 1 | 0 | 0 | WHATSAPP_DECISIONS_CARRY_THE_DEGRADED_GRADE |
-| POP-15 | `settled is False, among the ten final states` | settled | 2 | 2 | 0 | 0 | TWO_CLASSES_ARE_FROZEN_BUT_NOT_SETTLED, Q5_OPTIONS_STATE_IS_PENDING_CONFIRMATION, ANSWER_KEY_STATE_IS_PROPOSED_NOT_FINAL |
+| POP-14 | `source_artifact == "AUTH-EV-02"  (the WhatsApp evidence)` | source_artifact | 2 | 2 | 0 | 0 | WHATSAPP_RECORDS_ARE_GRADED_BY_HOW_THEY_WERE_READ |
+| POP-15 | `settled is False, among the ten final states` | settled | 1 | 1 | 0 | 0 | ONE_CLASS_IS_FROZEN_BUT_NOT_SETTLED, Q5_OPTIONS_STATE_IS_SELECTED_BY_THE_AUTHORITY, ANSWER_KEY_STATE_IS_PROPOSED_NOT_FINAL |
 | POP-16 | `supplied_in_this_run is False, among the evidence records` | supplied_in_this_run | 1 | 1 | 0 | 0 | SUPPLEMENTARY_EVIDENCE_MARKED_NOT_SUPPLIED, NO_FABRICATED_HASH_FOR_UNSUPPLIED_EVIDENCE |
 | POP-17 | `restriction == "REUSE_NOT_ALLOWED"` | restriction | 3 | 3 | 0 | 0 | THREE_DO_NOT_REUSE_ITEMS, ALL_THREE_BASES_ARE_BOTH_LENSES, RESTRICTIONS_ARE_ITEM_LEVEL_NOT_GROUP_LEVEL |
-| POP-18 | `open items carried past this stage` | membership of OPEN_AFTER_THIS_STAGE | 6 | 6 | 0 | 0 | E01_TO_E04_ARE_NOT_CLOSED, SIX_ITEMS_STAY_OPEN_AFTER_THIS_STAGE |
+| POP-18 | `open items carried past this stage` | membership of OPEN_AFTER_THIS_STAGE | 4 | 4 | 0 | 0 | E02_AND_E04_ARE_NOT_CLOSED, FOUR_ITEMS_STAY_OPEN_AFTER_THIS_STAGE, EVERY_CLOSURE_NAMES_WHAT_CLOSED_IT |
 
 Named members, in full:
 
@@ -56,11 +56,11 @@ Named members, in full:
 - **POP-11** `named_aspect_list is non-empty` → T04-S05, T04-S08, T04-S11  (origin fixture D-15)
 - **POP-12** `decision_class == "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR"` → T04-DEC-A12, T04-DEC-A13, T04-DEC-A16, T04-DEC-A17, T04-DEC-A18, T04-DEC-A22, T04-DEC-B06, T04-DEC-C03, T04-DEC-E08  (origin fixture C-02)
 - **POP-13** `decision_class == "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"` → T04-DEC-C01, T04-DEC-D01, T04-DEC-E01, T04-DEC-E02, T04-DEC-E03, T04-DEC-E04, T04-DEC-E05  (origin fixture C-01)
-- **POP-14** `source_artifact == "AUTH-EV-02"  (the WhatsApp evidence)` → T04-DEC-X01  (origin fixture C-04)
-- **POP-15** `settled is False, among the ten final states` → FS-07, FS-08  (origin fixture K-01 / K-02)
+- **POP-14** `source_artifact == "AUTH-EV-02"  (the WhatsApp evidence)` → T04-DEC-E09, T04-DEC-X01  (origin fixture C-04)
+- **POP-15** `settled is False, among the ten final states` → FS-08  (origin fixture K-01 / K-02)
 - **POP-16** `supplied_in_this_run is False, among the evidence records` → AUTH-EV-02  (origin fixture A-02)
 - **POP-17** `restriction == "REUSE_NOT_ALLOWED"` → T04-VO-025, T04-VO-026, T04-VO-039  (origin fixture H-03 / H-05)
-- **POP-18** `open items carried past this stage` → E-01, E-02, E-03, E-04, E-05, E-06  (origin fixture K-04)
+- **POP-18** `open items carried past this stage` → E-02, E-04, E-05, E-06  (origin fixture K-04)
 
 # 3. Documented exclusions
 

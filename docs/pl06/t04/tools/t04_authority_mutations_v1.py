@@ -215,7 +215,7 @@ FIXTURES = [
          gates=["EVERY_DECISION_CARRIES_ITS_AUTHORITY_QUOTE"],
          patch=_dec(lambda d: _find_row(d, "T04-DEC-C01").__setitem__(3, ""))),
     dict(fid="C-04", title="a WhatsApp decision is upgraded to the verified evidence grade",
-         gates=["WHATSAPP_DECISIONS_CARRY_THE_DEGRADED_GRADE"],
+         gates=["WHATSAPP_RECORDS_ARE_GRADED_BY_HOW_THEY_WERE_READ"],
          patch=_dec(lambda d: _find_row(d, "T04-DEC-X01").__setitem__(4, "A"))),
     dict(fid="C-05", title="the delegated Q3 decision is marked settled",
          gates=["THE_TWO_NAMED_DELEGATIONS_REMAIN_UNSETTLED",
@@ -363,12 +363,12 @@ FIXTURES = [
 
     # ================= assessment integrity =================
     dict(fid="F-01", title="a quiz stem is paraphrased away from Bariah's wording",
-         gates=["EVERY_QUIZ_STEM_APPEARS_VERBATIM_IN_THE_AUTHORITY_DOCX"],
+         gates=["THE_FOUR_DOCX_STEMS_APPEAR_VERBATIM_IN_THE_AUTHORITY_DOCX"],
          patch=_quiz(lambda q: q[0].update(
              stem="Apakah tiga tanggungjawab utama bagi landskap lembut?"))),
     dict(fid="F-02", title="a stem keeps its module attribution after the global rule",
          gates=["NO_MODULE_ATTRIBUTION_IN_ANY_STEM",
-                "EVERY_QUIZ_STEM_APPEARS_VERBATIM_IN_THE_AUTHORITY_DOCX"],
+                "THE_FOUR_DOCX_STEMS_APPEAR_VERBATIM_IN_THE_AUTHORITY_DOCX"],
          patch=_quiz(lambda q: q[2].update(
              stem="Mengikut susunan keutamaan IPM dalam modul, kaedah kawalan yang manakah "
                   "disenaraikan paling akhir?"))),
@@ -383,6 +383,38 @@ FIXTURES = [
              slice(4, 6),
              ["Baja disimpan di tempat yang kering dan jauh dari sumber air",
               "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran"]))),
+    dict(fid="F-17", title="the Set A pair Bariah rejected is restored to the live model",
+         gates=["REPLACEMENT_DISTRACTORS_ARE_IN_THE_LIVE_OPTION_SET"],
+         patch=_quiz(lambda q: q[4]["options"].__setitem__(
+             slice(4, 6),
+             ["Notifikasi kepada penduduk dibuat hanya selepas semburan selesai",
+              "SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak"]))),
+    dict(fid="F-18", title="the Q5 stem is relabelled as authority-authored",
+         gates=["THE_Q5_STEM_CARRIES_THE_WEAKER_PROVENANCE",
+                "EXACTLY_ONE_STEM_IS_NOT_DOCX_SOURCED_AND_IT_IS_NAMED"],
+         patch=_quiz(lambda q: q[4].update(
+             stem_provenance="AUTHORITY_SUPPLIED_REPLACEMENT_TEXT"))),
+    dict(fid="F-19", title="a second stem quietly stops being DOCX-sourced",
+         gates=["EXACTLY_ONE_STEM_IS_NOT_DOCX_SOURCED_AND_IT_IS_NAMED",
+                "THE_FOUR_DOCX_STEMS_ARE_AUTHORITY_AUTHORED"],
+         patch=_quiz(lambda q: q[1].update(stem_provenance="FIRDAUS_DIRECTED"))),
+    dict(fid="F-20", title="the Bariah-written Q5 stem is erased from the record",
+         gates=["THE_BARIAH_WRITTEN_Q5_STEM_IS_STILL_ON_RECORD"],
+         patch=_quiz(lambda q: q[4].update(superseded_stem_b09=None))),
+    dict(fid="F-21", title="the superseded CAIR draft wording is erased",
+         gates=["THE_SUPERSEDED_CAIR_DRAFT_WORDING_IS_RETAINED"],
+         patch=lambda: dict(QUIZ_Q5_OPTION_SUBSTITUTIONS=[
+             {k: v for k, v in s.items() if k != "cair_draft_superseded_by_e07"}
+             for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS])),
+    dict(fid="F-22", title="a closure is recorded with no closing record",
+         gates=["EVERY_CLOSURE_NAMES_WHAT_CLOSED_IT"],
+         patch=lambda: dict(CLOSED_SINCE_B0_9=[
+             dict(c, closed_by="", closing_record="") for c in D.CLOSED_SINCE_B0_9])),
+    dict(fid="F-23", title="a fourth item is claimed closed since B0.9",
+         gates=["THREE_ITEMS_CLOSED_SINCE_B0_9"],
+         patch=lambda: dict(CLOSED_SINCE_B0_9=D.CLOSED_SINCE_B0_9 + [
+             dict(open_id="E-02", subject="answer keys", closed_by="nothing",
+                  closing_record="none")])),
     dict(fid="F-05", title="a replacement distractor is written about baja again",
          gates=["REPLACEMENT_DISTRACTORS_ARE_NOT_ABOUT_BAJA"],
          patch=lambda: dict(QUIZ_Q5_OPTION_SUBSTITUTIONS=[
@@ -390,12 +422,13 @@ FIXTURES = [
                   replacement_text="Baja cecair disimpan berasingan daripada racun"),
              D.QUIZ_Q5_OPTION_SUBSTITUTIONS[1]])),
     dict(fid="F-06", title="the CAIR-written distractors are presented as Bariah's",
-         gates=["REPLACEMENT_DISTRACTORS_ARE_NOT_AUTHORITY_AUTHORED"],
+         gates=["REPLACEMENT_DISTRACTORS_ARE_NEVER_MARKED_AUTHORITY_WRITTEN",
+                "REPLACEMENT_DISTRACTORS_ARE_SELECTED_NOT_AUTHORED"],
          patch=lambda: dict(QUIZ_Q5_OPTION_SUBSTITUTIONS=[
              dict(s, authorship="AUTHORITY_SUPPLIED_REPLACEMENT_TEXT")
              for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS])),
     dict(fid="F-07", title="the CAIR-written distractors are marked approved",
-         gates=["REPLACEMENT_DISTRACTORS_ARE_PENDING_CONFIRMATION"],
+         gates=["REPLACEMENT_DISTRACTORS_ARE_CLOSED_BY_E07"],
          patch=lambda: dict(QUIZ_Q5_OPTION_SUBSTITUTIONS=[
              dict(s, approval_status="BARIAH_APPROVED")
              for s in D.QUIZ_Q5_OPTION_SUBSTITUTIONS])),
@@ -531,15 +564,14 @@ FIXTURES = [
 
     # ================= freeze honesty =================
     dict(fid="K-01", title="the Q5 options are recorded as authority-approved",
-         gates=["Q5_OPTIONS_STATE_IS_PENDING_CONFIRMATION",
-                "TWO_CLASSES_ARE_FROZEN_BUT_NOT_SETTLED",
+         gates=["Q5_OPTIONS_STATE_IS_SELECTED_BY_THE_AUTHORITY",
                 "FINAL_STATES_SNAPSHOT_AGREES_WITH_LIVE"],
          patch=lambda: dict(_FINAL_STATES=[
              (s[0], s[1], "APPROVED_WITH_SPECIFIED_AMENDMENTS", s[3], s[4], True)
              if s[0] == "FS-07" else s for s in D._FINAL_STATES])),
     dict(fid="K-02", title="the answer key state is upgraded to final",
          gates=["ANSWER_KEY_STATE_IS_PROPOSED_NOT_FINAL",
-                "TWO_CLASSES_ARE_FROZEN_BUT_NOT_SETTLED"],
+                "ONE_CLASS_IS_FROZEN_BUT_NOT_SETTLED"],
          patch=lambda: dict(_FINAL_STATES=[
              (s[0], s[1], "APPROVED_WITH_SPECIFIED_AMENDMENTS", s[3], s[4], True)
              if s[0] == "FS-08" else s for s in D._FINAL_STATES])),
@@ -547,10 +579,10 @@ FIXTURES = [
          gates=["TEN_FINAL_STATES"],
          patch=lambda: dict(_FINAL_STATES=D._FINAL_STATES[:-1])),
     dict(fid="K-04", title="E-01 to E-04 are closed without authority",
-         gates=["E01_TO_E04_ARE_NOT_CLOSED", "SIX_ITEMS_STAY_OPEN_AFTER_THIS_STAGE"],
+         gates=["E02_AND_E04_ARE_NOT_CLOSED", "FOUR_ITEMS_STAY_OPEN_AFTER_THIS_STAGE"],
          patch=lambda: dict(OPEN_AFTER_THIS_STAGE=[
              o for o in D.OPEN_AFTER_THIS_STAGE
-             if o["open_id"] not in ("E-01", "E-02", "E-03", "E-04")])),
+             if o["open_id"] not in ("E-02", "E-04")])),
     dict(fid="K-05", title="an open item is left with no owner",
          gates=["EVERY_OPEN_ITEM_NAMES_AN_OWNER"],
          patch=lambda: dict(OPEN_AFTER_THIS_STAGE=[

@@ -45,6 +45,29 @@ GENERATED_BY = "docs/pl06/t04/tools/t04_supplementary_evidence_emit_v1.py"
 # PART A.1 — CUSTODY ATTEMPT
 # ==========================================================================================
 CUSTODY_OUTCOME = "FAILED_NO_BINARY_SUPPLIED"
+CUSTODY_ATTEMPTS = 2
+
+# SECOND INTAKE ATTEMPT — Stage 4.2F-B0.9.1 re-run
+# ------------------------------------------------
+# The follow-up brief supplies an expected identity for the PNG. Those values are recorded as
+# EXPECTED, supplied by Firdaus. They are NOT measurements: there is still no file to measure,
+# so nothing here was read from a binary and nothing here is verified. The distinction is the
+# whole point — a recorded expectation that later turns out to match is evidence; a recorded
+# expectation presented as a measurement is a fabrication.
+EXPECTED_IDENTITY = dict(
+    supplied_by="FIRDAUS_IN_THE_STAGE_BRIEF",
+    verified=False,
+    verification_outcome="CANNOT_VERIFY_NO_BINARY",
+    filename="Screenshot 2026-08-03 at 12.46.32 PM.png",
+    byte_size=804017,
+    sha256="3f992b274decb4ac46b6a2a6193bdadadeffbd99bdd101341cb4dad4f3e90301",
+    image_format="PNG",
+    pixel_width=1150,
+    pixel_height=1536,
+    note=("Fail-closed was requested if byte size, SHA-256, format or dimensions differ. "
+          "None of the four could be compared, because there is no file. The stage fails "
+          "closed on the stronger ground that the comparison was impossible, not that it "
+          "disagreed."))
 
 INTENDED_CUSTODY_PATH = (A.EVIDENCE_DIR
                          + "/T04_BARIAH_WHATSAPP_CONFIRMATION_2026-08-03.png")
@@ -64,6 +87,12 @@ SEARCH_LOCATIONS = [
     dict(location="/root/.claude/projects/<session>/tool-results/",
          result="NO_IMAGE",
          note="Two cached tool-result text files, neither an image."),
+    dict(location="/root/.claude/uploads/… — SECOND ATTEMPT after the follow-up brief",
+         result="DIRECTORY_UNCHANGED",
+         note="Re-checked after the follow-up brief declared the PNG a real binary file. The "
+              "uploads directory is byte-for-byte the same as at the previous attempt: 21 "
+              "files, newest still the 02:28 authority DOCX. A second whole-filesystem sweep "
+              "for images newer than 02:29 also returned nothing."),
 ]
 
 CUSTODY_FIELDS = [
@@ -133,7 +162,7 @@ READING_METHOD = dict(
     ])
 
 # Every message visible in the captured region, in order.
-MESSAGES = [
+_MESSAGES_UNSORTED = [
     dict(msg_id="WA-01", position=1, time_shown="7:17 AM",
          sender="FIRDAUS", direction="OUTGOING",
          bubble="green, right-aligned, sent/read ticks",
@@ -173,6 +202,36 @@ MESSAGES = [
          summary=("Firdaus asks Bariah to confirm the scope of her bundled acceptance — "
                   "whether it covered his first two questions."),
          verbatim_fragments=["Ni for first 2 Q kan"]),
+    dict(msg_id="WA-06", position=6, time_shown="12:38 PM",
+         sender="FIRDAUS", direction="OUTGOING",
+         bubble="green, right-aligned, sent/read ticks, quoted block",
+         summary=("A forced-choice request to close E-07. It fixes the stem, states that the "
+                  "four correct answers are unchanged, and asks Bariah to pick between two "
+                  "enumerated pairs of incorrect options. It closes 'Boleh jawab Set A atau "
+                  "Set B sahaja' — answer Set A or Set B only."),
+         verbatim_fragments=[
+             "Salam Bariah, nak tutup satu perkara kecil untuk Q5 Topik 4.",
+             "Stem kekal:",
+             "\u201cPilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti "
+             "semburan racun.\u201d",
+             "Empat jawapan betul kekal seperti yang telah dicadangkan. Untuk dua pilihan "
+             "salah terakhir, yang mana satu kita patut kekalkan?",
+             "Set A",
+             "Notifikasi kepada penduduk dibuat hanya selepas semburan selesai",
+             "SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak",
+             "Set B",
+             "Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+             "Semua racun dibeli daripada satu pembekal tunggal",
+             "Boleh jawab Set A atau Set B sahaja.",
+         ]),
+    dict(msg_id="WA-07", position=7, time_shown="12:40 PM",
+         sender="BARIAH", direction="INCOMING",
+         bubble="white, left-aligned, below the '1 unread message' separator",
+         summary=("An explicit selection from two enumerated options, with a one-phrase "
+                  "reason. This is the strongest evidence class in the whole exchange: the "
+                  "choice set was closed, the options were written out in full, and the reply "
+                  "names one of them."),
+         verbatim_fragments=["Set B. Better distractors"]),
     dict(msg_id="WA-05", position=5, time_shown="7:21 AM",
          sender="BARIAH", direction="INCOMING",
          bubble="white, left-aligned, quoting her own 'Yes to both'",
@@ -180,6 +239,8 @@ MESSAGES = [
                   "the third question."),
          verbatim_fragments=["Yes to both screenshots. Q5 multiple response - yes, ok"]),
 ]
+
+MESSAGES = sorted(_MESSAGES_UNSORTED, key=lambda m: m["position"])
 
 # The correction this reading forces on the Stage 4.2F-B0.9 record.
 ATTRIBUTION_CORRECTIONS = [
@@ -278,7 +339,7 @@ CONFIRMATION_READINGS = [
         original_wording="Tiga aspek pengurusan pembajaan untuk kontraktor",
         controlled_correction="Tiga aspek pengurusan racun untuk kontraktor",
         would_be_status_if_custody_passed="CONFIRMED_THROUGH_BUNDLED_SCREENSHOT_ACCEPTANCE",
-        actual_status="CONTENT_CONFIRMED_CUSTODY_UNVERIFIED",
+        actual_status="CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE",
         evidence_class=EVIDENCE_CLASS,
         mapping_basis=("Firdaus's proposition in WA-01 item 1 plus Bariah's bundled "
                        "acceptance in WA-02, whose scope she confirmed in WA-05."),
@@ -286,7 +347,13 @@ CONFIRMATION_READINGS = [
             "Bariah did not write the corrected sentence. She answered a yes/no question that "
             "Firdaus phrased. The corrected wording is a CAIR-authored sentence the authority "
             "assented to, and it is not recorded as a standalone Bariah-originated sentence."),
-        upgrade_blocked_by="CUSTODY_FAILED_NO_BINARY"),
+        upgrade_blocked_by="CUSTODY_FAILED_NO_BINARY",
+        unseen_screenshot_limit=(
+            "A visible message reading 'Yes to both screenshots' is not proof of what those "
+            "screenshots contained. The referenced images are not themselves rendered in the "
+            "capture; what is rendered is Firdaus's own quoted request. The mapping from her "
+            "'yes' to this specific proposition is an inference from message order, and it is "
+            "labelled as one.")),
     dict(
         confirmation_id="T04-CNF-02",
         subject="T04-S14 reuses three AG-06 assets; no new unique asset; scope stays 41",
@@ -301,12 +368,14 @@ CONFIRMATION_READINGS = [
         production_consequence="new unique assets = 0",
         final_unique_asset_scope=41,
         would_be_status_if_custody_passed="CONFIRMED_BARIAH_ON_CAIR_PROPOSAL",
-        actual_status="CONTENT_CONFIRMED_CUSTODY_UNVERIFIED",
+        actual_status="CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE",
         evidence_class=EVIDENCE_CLASS,
         origin="CAIR production proposal confirmed by the authority.",
         not_claimed=(
             "41 is not an idea Bariah originated, and the AG-06 reuse is not a "
             "Bariah-authored design. Both are CAIR production proposals she assented to."),
+        unseen_screenshot_limit=(
+            "As for CNF-01: the acceptance is visible, the accepted screenshots are not."),
         mutability=(
             "41 is not immutable. If MMD production later demonstrates a genuine new asset "
             "requirement, the change to 42 must be recorded as a new scope-change decision "
@@ -325,6 +394,9 @@ CONFIRMATION_READINGS = [
         confirms="Q5 item type = MULTIPLE_RESPONSE",
         would_be_status_if_custody_passed="EXPLICITLY_CONFIRMED",
         actual_status="CONTENT_CONFIRMED_CUSTODY_UNVERIFIED",
+        why_this_one_is_stronger=(
+            "Unlike CNF-01 and CNF-02 this does not depend on mapping a bundled 'yes' onto an "
+            "unseen proposition. The words 'Q5 multiple response' name their own subject."),
         evidence_class=EVIDENCE_CLASS,
         does_not_confirm=[
             "all five answer keys",
@@ -381,11 +453,110 @@ Q5_DIVERGENCE = dict(
         "Resolving it would mean either overwriting Bariah's frozen stem with Firdaus's "
         "wording, or asserting that her 'yes, ok' reaches option text she was never shown. "
         "Both are decisions for the authority, not for CAIR, and neither is taken."),
-    frozen_model_unchanged=True,
-    resolution_required_from="Bariah — one line stating which six-option set stands.",
+    # CLOSED in the Stage 4.2F-B0.9.1 re-run. Neither of the two divergent sets survived: the
+    # forced choice offered a THIRD pair (Set B) against a fixed stem, and Bariah picked it.
+    status="CLOSED",
+    closed_by="E-07 forced choice — WA-06 / WA-07",
+    closing_record="T04-DEC-E09",
+    resolution=("Set B, verbatim. Neither the Stage 4.2F-B0.9 CAIR draft nor the earlier "
+                "WhatsApp pair is in force; the selected pair supersedes both."),
+    frozen_model_unchanged=False,
+    frozen_model_now_carries="SET_B",
+    resolution_required_from=None,
     tracked_as="E-07",
     blocking_storyboard_layout=False,
-    blocking_scored_quiz=True)
+    blocking_scored_quiz=False)
+
+# ==========================================================================================
+# PART A.4b — E-07 CLOSURE
+# ==========================================================================================
+# The forced choice is the cleanest authority act in this whole exchange: a closed option set,
+# both alternatives written out in full, an instruction to answer with one of them, and a
+# reply that names one. There is nothing to interpret.
+E07_CLOSURE = dict(
+    open_id="E-07",
+    status="CLOSED",
+    decision_type="DIRECT_SELECTION_FROM_EXPLICIT_OPTIONS",
+    authority="BARIAH_DIRECT_SELECTION",
+    selected_set="SET_B",
+    rejected_set="SET_A",
+    rejected_set_status="REJECTED_NOT_SELECTED",
+    request_msg="WA-06",
+    response_msg="WA-07",
+    authority_quote="Set B. Better distractors",
+    request_quote="Boleh jawab Set A atau Set B sahaja.",
+    sets_were_mutually_exclusive=True,
+    sets_combined=False,
+    both_sets_retained_active=False,
+    # Custody is still unverified. That weakens the ARTIFACT, not the CLARITY of the choice.
+    evidence_class=EVIDENCE_CLASS,
+    custody_status="CUSTODY_UNVERIFIED_NO_BINARY",
+    why_closure_is_still_sound=(
+        "The reply selects from a set the requester enumerated in the same thread. Unlike a "
+        "bundled 'yes to both', there is no scope question: 'Set B' can only mean the two "
+        "options written under the heading Set B. The missing binary means the artifact "
+        "cannot be frozen and re-verified later; it does not make the sentence ambiguous."),
+    what_this_does_not_approve=[
+        "the five quiz answer keys — the request said the four correct answers were unchanged "
+        "and asked only about the two incorrect options",
+        "any other quiz item",
+        "the source-row bindings",
+        "a general delegation to CAIR over assessment content",
+    ],
+    supersedes_finding="T04-DIV-01")
+
+# The exact wording Bariah selected. Copied from the enumerated Set B in WA-06, character for
+# character. Stage 4.2F-B0.9 had frozen two DIFFERENT sentences under the same intent, and the
+# difference is not cosmetic — one of them named a reason ("selepas waktu kerja tapak tamat")
+# that Set B does not.
+SET_B_FROZEN = [
+    dict(position=5,
+         text_ms="Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+         superseded_b09_text=("Semburan dijadualkan pada waktu petang selepas waktu kerja "
+                              "tapak tamat"),
+         wording_source="WA-06 Set B, first option",
+         paraphrased=False),
+    dict(position=6,
+         text_ms="Semua racun dibeli daripada satu pembekal tunggal",
+         superseded_b09_text=("Semua racun dibeli daripada satu pembekal tunggal yang "
+                              "dilantik projek"),
+         wording_source="WA-06 Set B, second option",
+         paraphrased=False),
+]
+
+SET_A_REJECTED = [
+    dict(position=5,
+         text_ms="Notifikasi kepada penduduk dibuat hanya selepas semburan selesai",
+         status="REJECTED_NOT_SELECTED"),
+    dict(position=6,
+         text_ms="SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak",
+         status="REJECTED_NOT_SELECTED"),
+]
+
+# The stem changed provenance, and that has to be visible rather than absorbed.
+STEM_PROVENANCE_CHANGE = dict(
+    correction_id="T04-COR-04",
+    subject="The Q5 stem now in force is not the one Bariah wrote in the authority DOCX",
+    b09_stem=("Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti "
+              "semburan racun."),
+    b09_stem_provenance="AUTHORITY_SUPPLIED_REPLACEMENT_TEXT — Bariah wrote it in AUTH-EV-01 "
+                        "§E",
+    final_stem=("Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan "
+                "racun."),
+    final_stem_provenance="FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY",
+    how_it_was_presented=("WA-06 shows it under the heading 'Stem kekal' — the stem stands. "
+                          "It was put to Bariah as a fixed premise of the forced choice, not "
+                          "as something to decide."),
+    what_bariah_actually_answered="the two incorrect options, not the stem",
+    therefore=(
+        "The stem in force is a Firdaus-directed wording that the authority saw and did not "
+        "contest. That is weaker than the DOCX stem it replaces, which she wrote herself. It "
+        "is recorded at the weaker grade rather than inheriting the stronger one."),
+    status="APPLIED_PROVENANCE_DOWNGRADED",
+    reversible=True,
+    confirmation_would_close="a one-line confirmation from Bariah that the stem wording is "
+                             "hers to keep")
+
 
 # ==========================================================================================
 # PART A.5 — AG-01 … AG-08 REGISTER AUDIT
@@ -474,9 +645,14 @@ def ag_register_audit():
 # ==========================================================================================
 # PART A.6 — RELEASE STATUS
 # ==========================================================================================
-PART_A_RESULT = "BLOCKED"
+PART_A_RESULT = "PARTIAL_CUSTODY_BLOCKED_CONTENT_CLOSED"
 PART_A_BLOCKER = dict(
     blocker_id="B091-BLOCK-01",
+    still_open=True,
+    scope_after_the_rerun=("Narrowed. It no longer blocks content decisions — the E-07 "
+                           "selection is unambiguous on its face. What it still blocks is "
+                           "canonical evidence closure: no artifact can be frozen, hashed or "
+                           "re-verified later."),
     subject="Supplementary screenshot custody",
     required="A PNG binary to hash, measure, validate and freeze.",
     observed="No image file exists in this environment.",
@@ -491,10 +667,41 @@ PART_A_BLOCKER = dict(
 
 # The release record that would be issued if custody passed. Held as a template, explicitly
 # NOT issued, so the difference between "ready to state" and "stated" stays visible.
+# ==========================================================================================
+# RELEASE DECISION
+# ==========================================================================================
+# The brief's own decision tree has two branches. The first requires the CNF-01/CNF-02
+# propositions to be verified FROM A SUPPLIED BINARY. There is no binary, so that branch is
+# unavailable regardless of what the pixels show. The second branch is the one that fits.
+RELEASE_DECISION = dict(
+    verdict_tokens=[
+        "T04_ASSESSMENT_DIVERGENCE_CLOSED",
+        "STORYBOARD_LAYOUT_READY",
+        "SUPPLEMENTARY_CNF_MAPPING_PARTIALLY_OPEN",
+    ],
+    issued=True,
+    branch_taken="E07_CLOSED_CNF_BINARY_MAPPING_INCOMPLETE",
+    branch_not_taken="T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD",
+    why_branch_not_taken=(
+        "That branch requires the CNF-01 and CNF-02 propositions to be verified from a "
+        "supplied binary. No binary was supplied, so the condition is not met — not because "
+        "the propositions are doubtful, but because the verification route does not exist."),
+    what_the_open_mapping_blocks="CANONICAL_EVIDENCE_CLOSURE_ONLY",
+    blocks_storyboard_layout=False,
+    why_layout_is_not_blocked=(
+        "Nothing the storyboard lays out depends on CNF-01 or CNF-02 being image-verified. "
+        "The pembajaan → racun correction is already recorded as T04-COR-01, applied and "
+        "pending confirmation, and the screen it affects is bound to T04-ROW-064 in the "
+        "controlled extract. The S14 AG-06 reuse and the 41-asset total are CAIR production "
+        "proposals held as proposals, and no asset is produced in B1. Both would have to be "
+        "re-opened only if Bariah reversed them, which nothing suggests."),
+    supersedes="STAGE_4_2F_B0_9_RUN_MANIFEST.md §16",
+    prior_release_record_status="SUPERSEDED_BY_THIS_RECORD")
+
 RELEASE_RECORD_NOT_ISSUED = dict(
     would_be_verdict="T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD",
     issued=False,
-    why_not_issued="Custody failed. See B091-BLOCK-01.",
+    why_not_issued="Custody failed for a second time. See B091-BLOCK-01.",
     superseding=False,
     prior_release_record_stands="STAGE_4_2F_B0_9_RUN_MANIFEST.md §16")
 
@@ -507,11 +714,21 @@ AUTHORITY_ARTIFACTS_MODIFIED = 0
 PART_B_STARTED = 0
 
 NEW_OPEN_ITEMS = [
-    dict(open_id="E-07", subject="Which Q5 six-option set stands — the one put to Bariah in "
-                                 "WhatsApp, or the one frozen in the content model",
-         owner="BARIAH", raised_by="T04-DIV-01"),
     dict(open_id="E-08", subject="Supplementary screenshot binary custody",
-         owner="FIRDAUS", raised_by="B091-BLOCK-01"),
+         owner="FIRDAUS", raised_by="B091-BLOCK-01",
+         status="OPEN_SECOND_ATTEMPT_FAILED"),
+]
+
+CLOSED_IN_THE_RERUN = [
+    dict(open_id="E-07", subject="Which Q5 option pair stands",
+         closed_by="Bariah selected Set B from an enumerated forced choice",
+         closing_record="T04-DEC-E09"),
+    dict(open_id="E-01", subject="Q5 replacement options E and F",
+         closed_by="the same selection — the CAIR draft is superseded",
+         closing_record="T04-DEC-E09"),
+    dict(open_id="E-03", subject="The 'Q3' referent",
+         closed_by="T04-COR-02 — the line is Firdaus's, so no authority referent exists",
+         closing_record="T04-COR-02"),
 ]
 
 NEW_ARTIFACTS = [

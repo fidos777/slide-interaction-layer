@@ -1,19 +1,23 @@
 # STAGE_4_2F_B0_9_1_RUN_MANIFEST
 
 ```
-STAGE            = 4.2F-B0.9.1 — SUPPLEMENTARY EVIDENCE CUSTODY CLOSURE AND REGISTER AUDIT
+STAGE            = 4.2F-B0.9.1 — SUPPLEMENTARY EVIDENCE CUSTODY AND REGISTER AUDIT
 SUITE_ID         = T04_SUPPLEMENTARY_EVIDENCE_QA_v1
-PART_A_RESULT    = BLOCKED
-BLOCKER          = B091-BLOCK-01 — no screenshot binary exists in this environment
-PART_B_STARTED   = 0
-RELEASE_RECORD   = NOT_ISSUED
+PART_A_RESULT    = PARTIAL_CUSTODY_BLOCKED_CONTENT_CLOSED
+CUSTODY_ATTEMPTS = 2 — both failed, no binary in either
+VERDICT          = T04_ASSESSMENT_DIVERGENCE_CLOSED
+                 · STORYBOARD_LAYOUT_READY
+                 · SUPPLEMENTARY_CNF_MAPPING_PARTIALLY_OPEN
+E-07             = CLOSED — Bariah selected Set B
 PPTX_GENERATED   = 0 · MMD = 0 · REACT/SCORM = 0 · LMS = 0
 AUTHORITY_ARTIFACTS_MODIFIED = 0
 ```
 
-**Part A did not pass, so Stage 4.2F-B1 was not started.** Everything in Part A that does not
-depend on the missing binary was completed, and one of those findings is a correction to a
-committed Stage 4.2F-B0.9 record.
+> **This manifest was revised after a second intake attempt.** The first run recorded
+> `PART_A_RESULT = BLOCKED` with nothing closed. The re-run still found no binary — so custody
+> is still failed — but the newly rendered capture contains an explicit authority selection
+> that closes E-07. Custody and content are reported separately below, because they now have
+> different answers.
 
 # 1. Pre-flight
 
@@ -28,7 +32,7 @@ committed Stage 4.2F-B0.9 record.
 | **Runtime path of the new PNG** | **none — the file does not exist** |
 | Prior copy of the same screenshot in the repository | none |
 
-# 2. The blocker
+# 2. The blocker — still open after two attempts
 
 ```
 B091-BLOCK-01   supplementary screenshot custody
@@ -43,6 +47,7 @@ upload. Four locations were searched:
 | Location | Result |
 |---|---|
 | `/mnt/data` | does not exist — reconfirmed, as in Stage 4.2F-B0.9 |
+| uploads directory, **second attempt** | byte-for-byte unchanged since the first attempt |
 | `/root/.claude/uploads/12837c42-…/` | 21 files, newest is the 02:28 authority DOCX. No PNG, JPG or WEBP was added. |
 | whole filesystem, one device, modified after 2026-08-03 02:29 | no matching image |
 | session tool-results cache | two text files, no image |
@@ -64,10 +69,28 @@ was **not created**. Writing a placeholder there would put a file in the evidenc
 that is not the evidence. Fixture `A-02b` creates exactly such a placeholder and the suite
 fires.
 
-**Consequence.** The evidence class cannot be upgraded to `AUTHORITY_DIRECT_SCREENSHOT`, the
-`NOT_SUPPLIED` state on `AUTH-EV-02` cannot be cleared, and no superseding release record is
-issued. **What would unblock it:** re-send the screenshot as a file attachment. Everything
-else in this stage is already done and will not need repeating.
+**Consequence.** The evidence class cannot be upgraded to `AUTHORITY_DIRECT_SCREENSHOT` and
+the `NOT_SUPPLIED` state on `AUTH-EV-02` cannot be cleared. What the blocker no longer does is
+stop content decisions: the E-07 selection is unambiguous on its face, and §5A records it.
+The blocker now scopes to **canonical evidence closure only** — no artifact can be frozen,
+hashed or re-verified later.
+
+## 2.2 The expected identity, recorded as an expectation
+
+The follow-up brief supplies an expected identity. It is recorded as **expected**, never as
+measured, because there is nothing to measure:
+
+| Field | Expected | Verified |
+|---|---|---|
+| filename | `Screenshot 2026-08-03 at 12.46.32 PM.png` | no |
+| byte size | 804,017 | no |
+| SHA-256 | `3f992b274decb4ac46b6a2a6193bdadadeffbd99bdd101341cb4dad4f3e90301` | no |
+| format | PNG | no |
+| dimensions | 1150 × 1536 | no |
+
+Fail-closed was requested if any of the four differ. **None could be compared.** The stage
+fails closed on the stronger ground that the comparison was impossible, not that it
+disagreed.
 
 ## 2.1 Three kinds of timestamp, kept apart
 
@@ -95,6 +118,8 @@ left-aligned under the *Bariah eLearning* header.
 | WA-03 | 7:20 | **Firdaus** | *Q3 tu nnt u pilih ya* |
 | WA-04 | 7:20 | **Firdaus** | *Ni for first 2 Q kan* (quoting her *Yes to both*) |
 | WA-05 | 7:21 | **Bariah** | *Yes to both screenshots. Q5 multiple response - yes, ok* |
+| WA-06 | 12:38 | **Firdaus** | the E-07 forced choice: fixed stem, four correct answers unchanged, Set A vs Set B, *"Boleh jawab Set A atau Set B sahaja"* |
+| WA-07 | 12:40 | **Bariah** | ***Set B. Better distractors*** |
 
 ## 3.1 `T04-COR-02` — a material misattribution of authorship
 
@@ -129,8 +154,15 @@ third request explicitly in WA-05.
 # 4. What the exchange confirms, at what precision
 
 None of these carries `AUTHORITY_DIRECT_SCREENSHOT`, because no screenshot artifact was
-verified. All three carry `CONTENT_CONFIRMED_CUSTODY_UNVERIFIED` and name
-`CUSTODY_FAILED_NO_BINARY` as what blocks the upgrade.
+verified. CNF-01 and CNF-02 carry `CONTENT_CONFIRMED_CUSTODY_MAPPING_INCOMPLETE`; CNF-03
+carries `CONTENT_CONFIRMED_CUSTODY_UNVERIFIED`, because unlike the other two it does not
+depend on mapping a bundled *yes* onto an unseen proposition — the words *"Q5 multiple
+response"* name their own subject.
+
+**A visible "Yes to both screenshots" is not proof of what those screenshots contained.** The
+referenced images are not themselves rendered in the capture; what is rendered is Firdaus's
+own quoted request. The mapping from her *yes* to a specific proposition is an inference from
+message order, and it is labelled as one.
 
 | ID | Subject | Mode | Status if custody had passed |
 |---|---|---|---|
@@ -159,9 +191,71 @@ conditional on the custody upgrade, which failed. **Nothing was renumbered.** Th
 published instead, including the fourth row: the old `T04-CNF-03` has no successor, because
 once authorship is corrected the line has no place in a confirmation register at all.
 
-# 5. `T04-DIV-01` — the Q5 the authority saw is not the Q5 in the frozen model
+# 5A. `E-07` — CLOSED by an explicit selection
 
-This is the finding the screenshot makes visible and it is **not resolved here.**
+The forced choice is the cleanest authority act in the whole exchange. A closed option set,
+both alternatives written out in full, an instruction to answer with one of them, and a reply
+that names one:
+
+> Boleh jawab Set A atau Set B sahaja.
+
+> **Set B. Better distractors**
+
+```
+E-07          = CLOSED
+decision type = DIRECT_SELECTION_FROM_EXPLICIT_OPTIONS
+authority     = BARIAH_DIRECT_SELECTION
+selected      = SET_B          rejected = SET_A (REJECTED_NOT_SELECTED)
+sets combined = no             both sets retained = no
+```
+
+Unlike a bundled *"yes to both"*, there is no scope question: **Set B** can only mean the two
+options written under that heading. The missing binary means the artifact cannot be frozen and
+re-verified later; it does not make the sentence ambiguous. That is why custody and content
+get different answers in this stage.
+
+## 5A.1 The frozen wording — three generations, all kept
+
+| # | In force (Set B, verbatim) | Superseded B0.9 CAIR draft |
+|---|---|---|
+| 5 | **Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca** | Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat |
+| 6 | **Semua racun dibeli daripada satu pembekal tunggal** | Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek |
+
+The difference is not cosmetic — the superseded draft named a reason ("selepas waktu kerja
+tapak tamat") that Set B does not. Nothing was paraphrased.
+
+Set A is recorded and **rejected**: *Notifikasi kepada penduduk dibuat hanya selepas semburan
+selesai* and *SDS hanya perlu disimpan di pejabat projek dan tidak perlu berada di tapak*,
+both `REJECTED_NOT_SELECTED`. The sets were not combined and both were not retained active.
+
+## 5A.2 Selecting is not authoring
+
+`AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS`, never `AUTHORITY_SUPPLIED_REPLACEMENT_TEXT`. She
+chose between two pairs CAIR wrote; a gate fires if that is ever promoted to her having
+written them.
+
+**What E-07 does not approve:** the five answer keys — the request said the four correct
+answers were unchanged and asked only about the two incorrect options — any other quiz item,
+the source-row bindings, or any general delegation. All five keys stay `PROPOSED_NOT_FINAL`.
+
+## 5A.3 `T04-COR-04` — the stem changed provenance
+
+| | |
+|---|---|
+| was | *Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.* |
+| was, provenance | `AUTHORITY_SUPPLIED_REPLACEMENT_TEXT` — Bariah wrote it in the DOCX |
+| now | *Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.* |
+| now, provenance | `FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY` |
+
+WA-06 shows it under the heading *Stem kekal* — put to Bariah as a fixed premise, not as
+something to decide. She answered about the options. **The stem in force is therefore weaker
+in provenance than the one it replaces**, and it is recorded at the weaker grade rather than
+inheriting the stronger one. Her original wording stays on record.
+
+# 5B. `T04-DIV-01` — CLOSED
+
+The divergence the first run raised is closed, and not by either of the two sets it compared.
+The forced choice offered a **third** pair against a fixed stem, and Bariah picked it.
 
 Firdaus put a six-option Q5 to Bariah. Options 1–4 are identical to the frozen model.
 **Options 5 and 6 are not.**
@@ -325,13 +419,53 @@ cleared without one; and no prior B0.9 decision is silently altered.
 
 # 11. Open items after this stage
 
+**Closed in this re-run**
+
+| ID | Subject | Closed by |
+|---|---|---|
+| E-01 | Q5 replacement options E and F | the Set B selection — `T04-DEC-E09` |
+| E-03 | The "Q3" referent | `T04-COR-02` — it is Firdaus's line, so there is no authority referent |
+| E-07 | Which Q5 option pair stands | the Set B selection — `T04-DEC-E09` |
+
+**Still open**
+
 | ID | Subject | Owner |
 |---|---|---|
-| E-01 | Q5 replacement options E and F | Bariah |
 | E-02 | Quiz answer keys, all five | Bariah |
-| E-03 | The "Q3" referent | **closed by T04-COR-03 as moot** — it was Firdaus's line |
 | E-04 | The pembajaan → racun correction | Bariah |
 | E-05 | Original module DOCX round trip | Firdaus |
 | E-06 | Individual asset subjects and styles | Bariah |
-| **E-07** | **Which Q5 six-option set stands** | Bariah |
-| **E-08** | **Supplementary screenshot binary custody** | Firdaus |
+| **E-08** | **Supplementary screenshot binary custody** — second attempt failed | Firdaus |
+
+# 12. Release decision
+
+```
+T04_ASSESSMENT_DIVERGENCE_CLOSED
+STORYBOARD_LAYOUT_READY
+SUPPLEMENTARY_CNF_MAPPING_PARTIALLY_OPEN
+```
+
+The branch **not** taken is `T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD`. That branch
+requires the CNF-01 and CNF-02 propositions to be verified *from a supplied binary*. No binary
+was supplied, so the condition is not met — not because the propositions are doubtful, but
+because the verification route does not exist.
+
+**Does the remaining CNF mapping block B1 storyboard layout? No.** It blocks canonical
+evidence closure only. Nothing the storyboard lays out depends on CNF-01 or CNF-02 being
+image-verified: the pembajaan → racun correction is already `T04-COR-01`, applied and pending
+confirmation, and its screen is bound to `T04-ROW-064` in the controlled extract; the S14
+AG-06 reuse and the 41-asset total are CAIR production proposals held as proposals, and B1
+produces no asset. Both would need reopening only if Bariah reversed them, which nothing
+suggests.
+
+# 13. QA totals after the re-run
+
+| Suite | Gates | Fixtures |
+|---|---|---|
+| `T04_SUPPLEMENTARY_EVIDENCE_QA_v1` | **133 / 133**, 0 vacuous | **83 / 83 detected** |
+| `T04_AUTHORITY_DECISION_INGESTION_QA_v1` | **247 / 247**, 0 vacuous | **129 / 129 detected** |
+
+Nine B0.9 and B0.9.1 gates encoded the pre-E-07 state and were re-pointed rather than deleted,
+each onto the fact that replaced it. The filtered-population audit caught three of the
+membership changes itself — POP-14, POP-15 and POP-18 — which is exactly what it was built
+for.

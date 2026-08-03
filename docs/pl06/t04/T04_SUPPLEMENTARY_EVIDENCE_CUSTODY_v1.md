@@ -5,9 +5,10 @@
 ```
 STAGE      = 4.2F-B0.9.1
 SUITE_ID   = T04_SUPPLEMENTARY_EVIDENCE_QA_v1
-PART_A     = BLOCKED
-CUSTODY_OUTCOME = FAILED_NO_BINARY_SUPPLIED
-CUSTODY_PATH    = NOT_CREATED
+PART_A     = PARTIAL_CUSTODY_BLOCKED_CONTENT_CLOSED
+CUSTODY_OUTCOME  = FAILED_NO_BINARY_SUPPLIED
+CUSTODY_ATTEMPTS = 2
+CUSTODY_PATH     = NOT_CREATED
 ```
 
 The screenshot reached this run as a rendered image in the conversation. It is not a file. Every field below that can only be measured from a binary is recorded as unavailable — not estimated, not reconstructed, not inferred from the conversation label.
@@ -20,6 +21,7 @@ The screenshot reached this run as a rendered image in the conversation. It is n
 | /root/.claude/uploads/12837c42-b6ab-597b-8301-85c5b457471b/ | NO_IMAGE_NEWER_THAN_THE_PREVIOUS_STAGE | 21 files. The newest is 698bf575-T04_Pakej_Semakan_Bariah_v3_vBariah.docx at 2026-08-03 02:28. No PNG, JPG or WEBP was added for this stage. |
 | whole filesystem, one device, modified after 2026-08-03 02:29 | NO_MATCHING_IMAGE | find over png/webp/jpg excluding system and vendor trees returned nothing. |
 | /root/.claude/projects/<session>/tool-results/ | NO_IMAGE | Two cached tool-result text files, neither an image. |
+| /root/.claude/uploads/… — SECOND ATTEMPT after the follow-up brief | DIRECTORY_UNCHANGED | Re-checked after the follow-up brief declared the PNG a real binary file. The uploads directory is byte-for-byte the same as at the previous attempt: 21 files, newest still the 02:28 authority DOCX. A second whole-filesystem sweep for images newer than 02:29 also returned nothing. |
 
 # 2. Custody fields
 
@@ -74,11 +76,39 @@ Only one of these exists, and it is the weakest of the three as file evidence.
 
 **What would unblock it.** Re-send the screenshot as a file attachment so it lands in the uploads directory. Everything else in this stage is already done and will not need repeating.
 
-# 5. The release record that was not issued
+# 5. Expected identity, supplied but unverifiable
+
+The follow-up brief supplies an expected identity for the PNG. These are recorded as **expectations**, not measurements — there is still no file to measure, so nothing below was read from a binary and nothing below is verified.
+
+| Field | Expected value | Verified |
+|---|---|---|
+| filename | Screenshot 2026-08-03 at 12.46.32 PM.png | no |
+| byte size | 804017 | no |
+| SHA-256 | 3f992b274decb4ac46b6a2a6193bdadadeffbd99bdd101341cb4dad4f3e90301 | no |
+| format | PNG | no |
+| dimensions | 1150 × 1536 | no |
+
+Fail-closed was requested if byte size, SHA-256, format or dimensions differ. None of the four could be compared, because there is no file. The stage fails closed on the stronger ground that the comparison was impossible, not that it disagreed.
+
+# 6. The release decision
+
+| Field | Value |
+|---|---|
+| verdict | T04_ASSESSMENT_DIVERGENCE_CLOSED · STORYBOARD_LAYOUT_READY · SUPPLEMENTARY_CNF_MAPPING_PARTIALLY_OPEN |
+| branch taken | E07_CLOSED_CNF_BINARY_MAPPING_INCOMPLETE |
+| branch not taken | T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD |
+| open mapping blocks | CANONICAL_EVIDENCE_CLOSURE_ONLY |
+| blocks storyboard layout | no |
+
+**Why the other branch was not taken.** That branch requires the CNF-01 and CNF-02 propositions to be verified from a supplied binary. No binary was supplied, so the condition is not met — not because the propositions are doubtful, but because the verification route does not exist.
+
+**Why layout is not blocked.** Nothing the storyboard lays out depends on CNF-01 or CNF-02 being image-verified. The pembajaan → racun correction is already recorded as T04-COR-01, applied and pending confirmation, and the screen it affects is bound to T04-ROW-064 in the controlled extract. The S14 AG-06 reuse and the 41-asset total are CAIR production proposals held as proposals, and no asset is produced in B1. Both would have to be re-opened only if Bariah reversed them, which nothing suggests.
+
+# 7. The full-approval record that was not issued
 
 | Field | Value |
 |---|---|
 | would-be verdict | T04_CONTENT_APPROVED_READY_FOR_STORYBOARD_BUILD |
 | issued | **no** |
-| why not | Custody failed. See B091-BLOCK-01. |
+| why not | Custody failed for a second time. See B091-BLOCK-01. |
 | prior record still standing | STAGE_4_2F_B0_9_RUN_MANIFEST.md §16 |
