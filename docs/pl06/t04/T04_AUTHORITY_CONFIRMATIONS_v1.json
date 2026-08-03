@@ -1,0 +1,61 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "statuses": [
+  "CONFIRMED_BY_AUTHORITY",
+  "DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION",
+  "AMBIGUOUS_REFERENT_NOT_ACTIONABLE"
+ ],
+ "records": [
+  {
+   "confirmation_id": "T04-CNF-01",
+   "evidence_id": "AUTH-EV-02",
+   "authority_quote": "Yes to both screenshots",
+   "also_recorded_as": "Yes to both",
+   "subject": "Acceptance of both structural screenshot items put to Bariah",
+   "status": "CONFIRMED_BY_AUTHORITY",
+   "evidence_grade": "DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
+   "interpretation": "Bariah accepted both items she was shown. The confirmation is unambiguous in polarity — 'yes' — and its scope is 'both screenshots'.",
+   "what_this_does_not_establish": "Which two screenshots. This run cannot see the WhatsApp thread, so the referents are named by Firdaus's brief and not independently verified. No T04 content is changed on the strength of this record alone; every content change in this stage is carried by the DOCX.",
+   "applied_to_content": false,
+   "blocking": false
+  },
+  {
+   "confirmation_id": "T04-CNF-02",
+   "evidence_id": "AUTH-EV-02",
+   "authority_quote": "Q5 multiple response - yes, ok",
+   "also_recorded_as": null,
+   "subject": "Q5 remains a Multiple Response item",
+   "status": "CONFIRMED_BY_AUTHORITY",
+   "evidence_grade": "DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
+   "interpretation": "Q5 stays a Multiple Response question. This corroborates — it does not replace — the DOCX ruling on Q5, which is the operative authority for the item type, the checkbox presentation and the stem.",
+   "what_this_does_not_establish": "Anything about the Q5 option set or the answer key. Both are governed by the DOCX instruction and remain unconfirmed.",
+   "applied_to_content": true,
+   "applied_to": "QUIZ-Q5 item_type",
+   "blocking": false
+  },
+  {
+   "confirmation_id": "T04-CNF-03",
+   "evidence_id": "AUTH-EV-02",
+   "authority_quote": "Q3 tu nnt u pilih ya",
+   "also_recorded_as": null,
+   "subject": "A deferred choice on an item Bariah referred to as 'Q3'",
+   "status": "AMBIGUOUS_REFERENT_NOT_ACTIONABLE",
+   "secondary_status": "DELEGATED_TO_CAIR_PENDING_BARIAH_CONFIRMATION",
+   "evidence_grade": "DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
+   "ambiguous_label_as_written": "Q3",
+   "label_not_used_as_decision_id": true,
+   "candidate_referents": [
+    "Quiz item Q3 in Section E of the review package (Pendekatan IPM).",
+    "The third question or third item in the WhatsApp exchange itself, which this run cannot see."
+   ],
+   "interpretation": "Bariah deferred a choice and asked CAIR to make it later. That is a delegation, not a rule Bariah issued. It is therefore NOT classified as an authority-originated rule, and it produces no content change in this stage.",
+   "what_this_does_not_establish": "What 'Q3' refers to, and what the choice is between. Quiz Q3 already has a specific, complete PINDA instruction in the DOCX, which makes the quiz-item reading redundant and therefore suspect. The referent stays open.",
+   "applied_to_content": false,
+   "blocking": false,
+   "resolution_required_from": "Bariah — one line naming what Q3 refers to and what the choice is between.",
+   "why_the_raw_label_is_not_an_id": "'Q3' is already the identifier of a quiz item in the same review package. Using it as the identifier of this confirmation would silently assert the quiz reading is correct, which is exactly the thing that is unknown."
+  }
+ ]
+}

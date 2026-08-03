@@ -1,0 +1,975 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "decision_classes": [
+  "ACCEPTED_AS_PROPOSED",
+  "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+  "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+  "STRUCTURAL_INSERTION",
+  "STRUCTURAL_RENUMBERING",
+  "GLOBAL_COURSE_RULE",
+  "DELEGATED_PENDING_AUTHORITY_CONFIRMATION"
+ ],
+ "decision_class_meaning": {
+  "ACCEPTED_AS_PROPOSED": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+  "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+  "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+  "STRUCTURAL_INSERTION": "Bariah added an item that did not exist in the proposal.",
+  "STRUCTURAL_RENUMBERING": "A consequence of an insertion. Carries no content change of its own.",
+  "GLOBAL_COURSE_RULE": "Bariah stated the rule applies beyond T04, to the whole Kursus.",
+  "DELEGATED_PENDING_AUTHORITY_CONFIRMATION": "Bariah handed the choice to CAIR, or the referent is ambiguous. Not settled."
+ },
+ "decisions_by_class": {
+  "ACCEPTED_AS_PROPOSED": [
+   "T04-DEC-A01",
+   "T04-DEC-A02",
+   "T04-DEC-A03",
+   "T04-DEC-A04",
+   "T04-DEC-A05",
+   "T04-DEC-A06",
+   "T04-DEC-A07",
+   "T04-DEC-A08",
+   "T04-DEC-A09",
+   "T04-DEC-A10",
+   "T04-DEC-A11",
+   "T04-DEC-B01",
+   "T04-DEC-B02",
+   "T04-DEC-B03",
+   "T04-DEC-B04",
+   "T04-DEC-B05",
+   "T04-DEC-C02",
+   "T04-DEC-D02",
+   "T04-DEC-F01",
+   "T04-DEC-F02"
+  ],
+  "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT": [
+   "T04-DEC-C01",
+   "T04-DEC-D01",
+   "T04-DEC-E01",
+   "T04-DEC-E02",
+   "T04-DEC-E03",
+   "T04-DEC-E04",
+   "T04-DEC-E05"
+  ],
+  "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR": [
+   "T04-DEC-A12",
+   "T04-DEC-A13",
+   "T04-DEC-A16",
+   "T04-DEC-A17",
+   "T04-DEC-A18",
+   "T04-DEC-A22",
+   "T04-DEC-B06",
+   "T04-DEC-C03",
+   "T04-DEC-E08"
+  ],
+  "STRUCTURAL_INSERTION": [
+   "T04-DEC-A14"
+  ],
+  "STRUCTURAL_RENUMBERING": [
+   "T04-DEC-A15",
+   "T04-DEC-A19",
+   "T04-DEC-A20",
+   "T04-DEC-A21"
+  ],
+  "GLOBAL_COURSE_RULE": [
+   "T04-DEC-E06",
+   "T04-DEC-E07"
+  ],
+  "DELEGATED_PENDING_AUTHORITY_CONFIRMATION": [
+   "T04-DEC-X01",
+   "T04-DEC-X02"
+  ]
+ },
+ "course_wide_decisions": [
+  "T04-DEC-E06",
+  "T04-DEC-E07"
+ ],
+ "unsettled_decisions": [
+  "T04-DEC-X01",
+  "T04-DEC-X02"
+ ],
+ "authority_wording_corrections": [
+  {
+   "correction_id": "T04-COR-01",
+   "decision_id": "T04-DEC-A14",
+   "field": "new screen T04-S14 purpose line",
+   "as_written_by_authority": "Tiga aspek pengurusan pembajaan untuk kontraktor.",
+   "as_applied": "Tiga aspek pengurusan racun untuk kontraktor.",
+   "correction_type": "TERM_SUBSTITUTION",
+   "basis": "The screen Bariah is inserting sits inside the Racun sequence, is titled 'Racun — aspek pengurusan untuk kontraktor', and enumerates three pesticide-specific aspects: Perundangan Dan Pelesenan, Keselamatan Dan Kesihatan (HSE), Pengurusan Risiko. 'Pembajaan' is fertilising. The Baja equivalent screen in the same table reads 'Lima aspek pengurusan pembajaan untuk kontraktor', which is where the word came from. The count also differs — three here, five there.",
+   "confidence": "HIGH",
+   "status": "APPLIED_PENDING_BARIAH_CONFIRMATION",
+   "reversible": true,
+   "what_happens_if_wrong": "If Bariah meant fertilising, the inserted screen belongs in the Baja sequence rather than the Racun sequence and the whole insertion point moves. The original wording is preserved above so the correction can be undone from this record alone.",
+   "confirmation_required_from": "Bariah — one line confirming the screen is about racun."
+  }
+ ],
+ "supersessions": [
+  {
+   "supersession_id": "T04-SUP-01",
+   "superseded_ruling": "D-04 — PPE Lengkap placed on the base state of the HSE screen, not behind a reveal",
+   "superseded_in_stage": "4.2F-B0.6",
+   "superseded_by": "T04-DEC-A16",
+   "new_position": "PPE Lengkap is one of three named click-to-reveal items on T04-S16, alongside Penyimpanan Dan Pelupusan and Helaian Data Keselamatan (SDS).",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Klik untuk paparkan maklumat. [PPE Lengkap, Penyimpanan Dan Pelupusan, Helaian Data Keselamatan (SDS)]",
+   "residual_risk": "A learner who does not interact will not see the PPE list. D-04 had placed PPE on the base state precisely to avoid that. Bariah has now ruled directly on this screen and her later direct ruling governs. The risk is recorded here and in the screen record; it is not re-argued.",
+   "risk_owner": "BARIAH_AHMAD"
+  },
+  {
+   "supersession_id": "T04-SUP-02",
+   "superseded_ruling": "D-04 — spray conditions, notification and reporting classified as reveal-eligible on the risk-management screen",
+   "superseded_in_stage": "4.2F-B0.6",
+   "superseded_by": "T04-DEC-A17",
+   "new_position": "All risk-management content on T04-S17 is base-visible static content.",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Kandungan statik (semua kandungan)",
+   "residual_risk": "None introduced. This change removes a residual risk: the three obligations that a non-interacting learner would previously have missed are now base-visible.",
+   "risk_owner": "NONE_REMOVED_BY_THIS_DECISION"
+  }
+ ],
+ "records": [
+  {
+   "decision_id": "T04-DEC-A01",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S01 accepted, with the Bahagian label removed",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Tiada Bahagian bagi Topik 4. Kesemua subtopik di bawah Topik 4 – Landskap Lembut dan Landskap Kejur – di dalam 1 storyboard.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S01"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Title screen shows Topik 4 with no Bahagian. All T04 subtopics stay in one storyboard.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S02 kept in sequence; its dialogue replaced under Section C",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Rujuk Bahagian C. Perbualan Slide 2",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S02"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The screen is not removed or moved. Its content is replaced by the Section C ruling.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A03",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S03 accepted unchanged",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S03"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Six-step process flow stands as proposed.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A04",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S04 accepted, framing corrected",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Ia bukan kategori landskap lembut, tetapi tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP - Siram, Baja, Racun. Refer module content.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S04"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Siram, Baja and Racun are presented as critical contractor responsibilities during the construction maintenance period and the DLP — not as a taxonomy of soft landscape.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A05",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S05 accepted, aspect list added",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Dan menyenaraikan aspek penyiraman [Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor]",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S05"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The main-explanation screen also lists the two watering aspects that follow it.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A06",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S06 accepted unchanged",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S06"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Watering methods stand as proposed.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A07",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S07 accepted unchanged",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S07"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Watering management aspects stand as proposed.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A08",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S08 accepted, aspect list added",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Dan menyenaraikan aspek pembajaan [Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor]",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S08"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The main-explanation screen also lists the two fertilising aspects that follow it.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A09",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S09 accepted unchanged",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S09"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Fertilising methods stand as proposed.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A10",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S10 accepted unchanged",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S10"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Fertilising management aspects stand as proposed.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A11",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "T04-S11 accepted, aspect list added",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Dan menyenaraikan aspek kawalan racun [Pendekatan IPM, Jenis Racun, Aspek Pengurusan Untuk Kontraktor]",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S11"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The main-explanation screen also lists the three pest-control aspects that follow it.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A12",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "T04-S12 treatment changed to static content",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Kandungan statik.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S12"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "IPM priority order is presented as static content. The four controls are base-visible; no click-to-reveal.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A13",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "T04-S13 treatment changed to static content",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Kandungan statik. Kandungan pendek.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S13"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Pesticide types are presented as short static content. All three types base-visible.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A14",
+   "decision_class": "STRUCTURAL_INSERTION",
+   "decision_class_meaning": "Bariah added an item that did not exist in the proposal.",
+   "subject": "A new screen is inserted as T04-S14",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Klik untuk paparkan maklumat. Tiga aspek pengurusan pembajaan untuk kontraktor. [Perundangan Dan Pelesenan, Keselamatan Dan Kesihatan (HSE), Pengurusan Risiko]",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S14"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "A click-to-reveal hub screen for the three pesticide management aspects, sitting before the three screens that carry them in detail. See T04-COR-01 for the wording normalisation applied to this quote.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A15",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "decision_class_meaning": "A consequence of an insertion. Carries no content change of its own.",
+   "subject": "Former T04-S14 becomes T04-S15",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Urutan Skrin bertukar ke S15",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S15"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Renumbering only. Content and treatment unchanged.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A16",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "Former T04-S15 becomes T04-S16 and gains click-to-reveal",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S16 2. Layanan – Klik untuk paparkan maklumat. [PPE Lengkap, Penyimpanan Dan Pelupusan, Helaian Data Keselamatan (SDS)]",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S16"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Three named reveal items. This supersedes the D-04 placement of PPE Lengkap on the base state — see T04-SUP-01.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A17",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "Former T04-S16 becomes T04-S17 and becomes fully static",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S17 2. Layanan – Kandungan statik (semua kandungan)",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S17"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "All risk-management content is base-visible. This supersedes the D-04 reveal-eligible classification for this screen — see T04-SUP-02.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A18",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "Former T04-S17 becomes T04-S18; the soft/hard contrast is removed",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S18 Nota Bariah: Dan menetapkan empat fungsi utama landskap kejur. Saya tidak rasa ia membezakan antara landskap kejur dan lembut (Refer module)",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S18"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The screen establishes hard landscape and names its four main functions. The framing that contrasts hard with soft landscape is removed — the module does not draw that comparison.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A19",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "decision_class_meaning": "A consequence of an insertion. Carries no content change of its own.",
+   "subject": "Former T04-S18 becomes T04-S19",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S19",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S19"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Renumbering only.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A20",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "decision_class_meaning": "A consequence of an insertion. Carries no content change of its own.",
+   "subject": "Former T04-S19 becomes T04-S20; content replaced under Section D",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S20 2. Rujuk Bahagian D. Rumusan",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S20"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Renumbering, plus the Rumusan content is replaced by the Section D ruling.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A21",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "decision_class_meaning": "A consequence of an insertion. Carries no content change of its own.",
+   "subject": "Former T04-S20 becomes T04-S21; content replaced under Section E",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S21 2. Rujuk Bahagian E. Kuiz",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S21"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Renumbering, plus the quiz content is replaced by the Section E ruling.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-A22",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "Former T04-S21 becomes T04-S22 and closes the Topik, not a Bahagian",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Tamat Topik. Menutup Topik 2. Urutan Skrin bertukar ke S22",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "A",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S22"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The closing screen reads Tamat Topik and closes the Topik. Tamat Bahagian is retired for T04, consistent with T04-DEC-A01.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-B01",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "The 46 to 41 derivation is accepted as production scope",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Kaedah kiraan 46 → 41 diterima sebagai skop produksi.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "B",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-VIS-GOV-01"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "41 proposed unique assets across 8 groups is the accepted production scope for T04.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-B02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Visual coverage is instructionally sufficient",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Sudut instruksional: liputan visual mencukupi; setiap operasi (Siram/Baja/Racun) mempunyai sokongan visual.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "B",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "AG-01",
+    "AG-02",
+    "AG-03",
+    "AG-04",
+    "AG-05",
+    "AG-06",
+    "AG-07",
+    "AG-08"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Every operation has visual support. No coverage gap is raised.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-B03",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Conditional sharing across AG-01 to AG-08 is reasonable",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "cadangan perkongsian bersyarat (AG-01–AG-08) munasabah untuk pengoptimuman produksi",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "B",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "AG-01",
+    "AG-02",
+    "AG-03",
+    "AG-04",
+    "AG-05",
+    "AG-06",
+    "AG-07",
+    "AG-08"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Conditional sharing is accepted as a set. Individual group conditions still apply.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-B04",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "The three do-not-reuse items are confirmed on both grounds",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Saya sahkan item \"tidak boleh dikongsi\" (PPE baja, PPE racun, stok baja vs stok racun) memang memerlukan aset berasingan kerana visualnya berbeza secara ketara.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "B",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-039"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Each of the three keeps a separate asset, confirmed instructionally and for production.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-B05",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Instructional judgement overrides production optimisation",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Di mana dua sudut bertembung (jika ada): keputusan instruksional mengatasi pengoptimuman produksi. Jika sesuatu gabungan aset menjimatkan produksi tetapi mengaburkan perbezaan yang learner perlu faham, aset tersebut TIDAK boleh digabung.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "B",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-VIS-GOV-01"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "A standing precedence rule for T04 asset decisions: where the two lenses conflict, the instructional decision wins and the assets are not merged.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-B06",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "Each do-not-reuse item must carry a decision-basis line",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "tambah satu baris asas keputusan pada setiap \"tidak boleh dikongsi\" — sama ada atas alasan instruksional, produksi, atau kedua-dua — supaya jejak keputusan jelas",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "B",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-039"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Every do-not-reuse item now carries decision_basis. All three are BOTH_INSTRUCTIONAL_AND_PRODUCTION, following T04-DEC-B04.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-C01",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "All five proposed dialogue lines are amended and replaced by four",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Cadangan Pindaan: [four replacement lines supplied verbatim by Bariah]",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "C",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-DLG-F01",
+    "T04-DLG-F02",
+    "T04-DLG-F03",
+    "T04-DLG-F04"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The five-line CAIR draft is replaced by Bariah's four-line dialogue, carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-C02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Alya and Encik Rahman are retained as the Slide 2 characters",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Watak | Alya (Kontraktor Junior); Encik Rahman (Mentor / Kontraktor Senior)",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "C",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S02"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The cast is unchanged. Bariah's critique is of how they were written, not of who they are — her replacement text uses both characters by name.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-C03",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "The soft-versus-hard contrast is banned from the dialogue",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "elak framing \"beza lembut vs kejur\" — modul cuma terangkan dua-dua secara berasingan, tak buat perbandingan",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "C",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-S02",
+    "T04-S18"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "No dialogue line may frame soft and hard landscape as a comparison. The module describes them separately.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-D01",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "The four-point Rumusan is replaced by a three-beat Rumusan",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Cadangan Pindaan: [Kepentingan] … [Skop/Isi Utama] … [Manfaat] …",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "D",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-RUM-F01",
+    "T04-RUM-F02",
+    "T04-RUM-F03"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Three beats — Kepentingan, Skop/Isi Utama, Manfaat — carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-D02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Rumusan point 04 is removed with it",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "☐ TERIMA ✓ PINDA ☐ BUANG",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "D",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-RUM2-04"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "The over-broad contractor-responsibility generalisation does not survive into the three-beat replacement. The open question raised against it is closed.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E01",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "Q1 stem replaced",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q1"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah's stem is carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E02",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "Q2 stem replaced",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q2"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah's stem is carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E03",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "Q3 stem replaced",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q3"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah's stem is carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E04",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "Q4 stem replaced",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q4"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah's stem is carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E05",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "decision_class_meaning": "Bariah ticked PINDA and wrote the replacement wording herself. The wording is hers and is carried verbatim.",
+   "subject": "Q5 stem replaced",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q5"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah's stem is carried verbatim.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E06",
+   "decision_class": "GLOBAL_COURSE_RULE",
+   "decision_class_meaning": "Bariah stated the rule applies beyond T04, to the whole Kursus.",
+   "subject": "Module-attribution phrasing is banned course-wide",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus – buang \"yang dinyatakan dalam modul\"",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "QUIZ-GLOBAL-01"
+   ],
+   "scope": "ALL_PLS_IN_KURSUS",
+   "effect": "No quiz stem in the Kursus may attribute its content to the module. Applied to T04 Q1 to Q5; issued as a standing rule for every PL.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E07",
+   "decision_class": "GLOBAL_COURSE_RULE",
+   "decision_class_meaning": "Bariah stated the rule applies beyond T04, to the whole Kursus.",
+   "subject": "Multiple Response items use checkboxes, never A/B/C letters",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus. Jangan gunakan A B C .. untuk pilihan, kerana ini ialah multiple response question. Cadangan - Gunakan kotak.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "QUIZ-GLOBAL-02"
+   ],
+   "scope": "ALL_PLS_IN_KURSUS",
+   "effect": "Letter labels are reserved for single-answer items. Multiple Response options are presented as checkboxes.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-E08",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "decision_class_meaning": "Bariah ticked PINDA and stated what must change, without writing the replacement. CAIR executed the instruction; the result is NOT Bariah-authored and is marked pending her confirmation.",
+   "subject": "Q5 options E and F must be changed",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Tukar pilihan 5 dan 6 (E dan F), kerana jelas ia pilihan yang salah. (kerana ia tentang baja) ATAU tukar soalan.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q5"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah gave two routes and did not choose between them. CAIR took the first — change the options, keep the question — because Bariah separately supplied replacement wording for the Q5 stem, which settles the question. The two replacement distractors are CAIR-drafted and are NOT Bariah-approved.",
+   "authored_by_authority": false,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-F01",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "BA-1 to BA-4 all marked complete",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "✓",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "F",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "BA-1",
+    "BA-2",
+    "BA-3",
+    "BA-4"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "All four required review actions are recorded as done.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-F02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "decision_class_meaning": "Bariah ticked TERIMA. The proposed item stands unchanged.",
+   "subject": "Overall verdict: approved with the stated amendments",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "✓ LULUS DENGAN PINDAAN DINYATAKAN",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "F",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-VIS-GOV-01"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Conditional approval. The amendments named in each section are part of the approval.",
+   "authored_by_authority": true,
+   "settled": true
+  },
+  {
+   "decision_id": "T04-DEC-X01",
+   "decision_class": "DELEGATED_PENDING_AUTHORITY_CONFIRMATION",
+   "decision_class_meaning": "Bariah handed the choice to CAIR, or the referent is ambiguous. Not settled.",
+   "subject": "The 'Q3' WhatsApp line is deferred to CAIR with an unclear referent",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Q3 tu nnt u pilih ya",
+   "source_artifact": "AUTH-EV-02",
+   "source_section": "WHATSAPP",
+   "evidence_grade": "DEGRADED_TRANSCRIBED_NOT_IMAGE_VERIFIED",
+   "applies_to": [
+    "T04-CNF-03"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "No content change. The referent is ambiguous and the choice is unmade. This is a delegation, not an authority-originated rule.",
+   "authored_by_authority": false,
+   "settled": false
+  },
+  {
+   "decision_id": "T04-DEC-X02",
+   "decision_class": "DELEGATED_PENDING_AUTHORITY_CONFIRMATION",
+   "decision_class_meaning": "Bariah handed the choice to CAIR, or the referent is ambiguous. Not settled.",
+   "subject": "The Q5 answer key remains a proposal",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Jawapan | Cadangan jawapan sahaja — belum muktamad.",
+   "source_artifact": "AUTH-EV-01",
+   "source_section": "E",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "applies_to": [
+    "T04-QZ-Q1",
+    "T04-QZ-Q2",
+    "T04-QZ-Q3",
+    "T04-QZ-Q4",
+    "T04-QZ-Q5"
+   ],
+   "scope": "T04_ONLY",
+   "effect": "Bariah did not mark any answer key final. All five keys stay PROPOSED_NOT_FINAL.",
+   "authored_by_authority": false,
+   "settled": false
+  }
+ ]
+}

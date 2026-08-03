@@ -1,0 +1,21 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "status": {
+  "CONTROLLED_EXTRACT_SOURCE_BINDINGS": "PRESENT",
+  "ORIGINAL_DOCX_ROUND_TRIP_REPRODUCIBILITY": "OPEN",
+  "SOURCE_DOCX_RETRIEVAL_AND_HASH_PROOF": "OPEN"
+ },
+ "risk_token": "SOURCE_REPRODUCIBILITY_OPEN_NONBLOCKING_FOR_T04_STORYBOARD_BUILD",
+ "detail": {
+  "bindings_present_evidence": "Every content screen in the final sequence names the controlled-extract rows it rests on, and every named row resolves in the extract. A gate asserts both.",
+  "what_is_open": "The original module DOCX has not been re-retrieved in this session and its hash has not been re-proven against the extract that was taken from it. So the extract is internally consistent and fully bound, but its fidelity to the original file is asserted from an earlier stage rather than re-demonstrated here.",
+  "why_non_blocking": "The storyboard build consumes the controlled extract, not the original DOCX. Every row it needs is present and bound. If the round trip later shows a discrepancy, the affected rows are identifiable by ID and the screens that use them are listed — so the risk is bounded and repairable rather than open-ended.",
+  "what_would_close_it": "Retrieve the original module DOCX, hash it, re-run the extraction and compare the row set to T04_SOURCE_EXTRACT_v1.json.",
+  "must_not_be_recorded_as": "SOURCE_UNSUPPORTED",
+  "why_not": "The final content is source-bound: the bindings exist, resolve and are checked. SOURCE_UNSUPPORTED would assert the opposite of what the gates observe.",
+  "risk_owner": "FIRDAUS",
+  "blocking": false
+ }
+}

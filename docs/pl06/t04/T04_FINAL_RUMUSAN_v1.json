@@ -1,0 +1,75 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "rumusan": {
+  "rumusan_id": "T04-RUM-FINAL",
+  "screen_id": "T04-S20",
+  "decision_id": "T04-DEC-D01",
+  "authority": "BARIAH_AHMAD",
+  "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+  "source_artifact": "AUTH-EV-01 §D, Cadangan Pindaan",
+  "structure": "THREE_BEAT",
+  "beats": [
+   "Kepentingan",
+   "Skop/Isi Utama",
+   "Manfaat"
+  ],
+  "point_count": 3,
+  "superseded_point_count": 4,
+  "points": [
+   {
+    "point_id": "T04-RUM-F01",
+    "beat": "Kepentingan",
+    "text_ms": "Penjagaan dan penyelenggaraan memastikan landskap yang telah dibina kekal sihat, berfungsi dan selamat dalam jangka masa panjang. Membina dan mengekalkan landskap adalah dua tanggungjawab berbeza.",
+    "position": 1,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "point_id": "T04-RUM-F02",
+    "beat": "Skop/Isi Utama",
+    "text_ms": "Penjagaan dan penyelenggaraan merangkumi landskap lembut dan landskap kejur. Landskap lembut memfokuskan kepada penyiraman, pembajaan dan kawalan racun, manakala landskap kejur memfokuskan kepada memastikan elemen binaan kekal berfungsi dan selamat.",
+    "position": 2,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "point_id": "T04-RUM-F03",
+    "beat": "Manfaat",
+    "text_ms": "Dengan melaksanakan penjagaan dan penyelenggaraan yang berjadual dan terancang, kontraktor dapat memelihara kualiti landskap sepanjang DLP, memenuhi kewajipan kontrak, dan memastikan ruang luaran kekal lestari dan bernilai untuk pengguna.",
+    "position": 3,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   }
+  ],
+  "authority_critique_addressed": [
+   "The draft was a four-item list, not a flowing recap.",
+   "It was too technical and repeated detail the learner had just covered.",
+   "It had no importance beat to open with and no benefit beat to close on."
+  ],
+  "scope_of_the_three_beat_structure": {
+   "applies_to": "T04_ONLY",
+   "why": "Bariah issued this structure while amending the T04 Rumusan and did not mark it 'Global keseluruhan kursus' — the phrase she used twice, in the same document, for the two quiz rules she did mean course-wide. Reading a course-wide Rumusan rule out of a T04 amendment would be an inference, not a decision, so it is not made.",
+   "what_would_be_needed": "An explicit statement from Bariah that the three-beat structure applies beyond T04."
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ },
+ "archived_dependencies": [
+  {
+   "dependency_id": "DEP-RUM04-Q5",
+   "raised_in_stage": "4.2F-B0.8",
+   "original_statement": "If Rumusan point 04 is amended or removed for over-generalisation, the Q5 wording must be re-checked so it stays specific to the pesticide controls the module states.",
+   "status": "ARCHIVED_RESOLVED",
+   "resolved_by": [
+    "T04-DEC-D01",
+    "T04-DEC-D02",
+    "T04-DEC-E05",
+    "T04-DEC-E08"
+   ],
+   "how_resolved": "Both halves of the dependency fired. Rumusan point 04 did not survive into the three-beat replacement, and Q5 was independently amended by Bariah — the stem was rewritten and the two fertiliser-based distractors ordered changed. The condition the dependency was watching for has occurred and been handled.",
+   "residual": "The Q5 answer key is still PROPOSED_NOT_FINAL, which is tracked by T04-DEC-X02 and is not part of this dependency.",
+   "reopens_if": "A future decision restores a general contractor-responsibility statement to the Rumusan."
+  }
+ ]
+}

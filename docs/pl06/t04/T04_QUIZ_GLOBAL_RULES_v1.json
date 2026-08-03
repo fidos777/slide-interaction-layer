@@ -1,0 +1,55 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "rules": [
+  {
+   "rule_id": "QUIZ-GLOBAL-01",
+   "decision_id": "T04-DEC-E06",
+   "title_ms": "Buang atribusi 'yang dinyatakan dalam modul' daripada soalan kuiz",
+   "title_en": "Remove module-attribution phrasing from quiz stems",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus – buang \"yang dinyatakan dalam modul\"",
+   "source_artifact": "AUTH-EV-01 §E, Q1 komen/pindaan",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "rule": "A quiz stem must ask the question directly. It must not attribute its content to the module — no 'yang dinyatakan dalam modul', no 'mengikut modul', no 'Modul menyenaraikan'.",
+   "banned_phrases": [
+    "yang dinyatakan dalam modul",
+    "mengikut modul",
+    "dalam modul",
+    "Modul menyenaraikan"
+   ],
+   "rationale_authority_supplied": true,
+   "applied_to_t04_items": [
+    "T04-QZ-Q1",
+    "T04-QZ-Q2",
+    "T04-QZ-Q3",
+    "T04-QZ-Q4",
+    "T04-QZ-Q5"
+   ],
+   "applies_beyond_t04": true,
+   "enforcement": "Every T04 stem is checked against the banned phrases by a gate. Units outside T04 are out of this stage's scope and are not modified here.",
+   "status": "AUTHORITY_ISSUED_COURSE_WIDE"
+  },
+  {
+   "rule_id": "QUIZ-GLOBAL-02",
+   "decision_id": "T04-DEC-E07",
+   "title_ms": "Gunakan kotak, bukan A B C, bagi soalan Multiple Response",
+   "title_en": "Multiple Response options use checkboxes, not letter labels",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus. Jangan gunakan A B C .. untuk pilihan, kerana ini ialah multiple response question. Cadangan - Gunakan kotak.",
+   "source_artifact": "AUTH-EV-01 §E, Q5 komen/pindaan",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "rule": "A Multiple Response item presents its options as checkboxes. Letter labels A, B, C … are reserved for single-answer items, where they signal that exactly one option is chosen.",
+   "banned_option_marker_pattern": "^[A-Z]\\.\\s",
+   "required_option_marker": "checkbox",
+   "rationale_authority_supplied": true,
+   "applied_to_t04_items": [
+    "T04-QZ-Q5"
+   ],
+   "applies_beyond_t04": true,
+   "enforcement": "A gate asserts no Multiple Response option in T04 carries a letter label, and that all four MCQ items keep theirs.",
+   "status": "AUTHORITY_ISSUED_COURSE_WIDE"
+  }
+ ]
+}

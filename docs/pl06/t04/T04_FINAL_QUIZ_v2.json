@@ -1,0 +1,485 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "global_rules": [
+  {
+   "rule_id": "QUIZ-GLOBAL-01",
+   "decision_id": "T04-DEC-E06",
+   "title_ms": "Buang atribusi 'yang dinyatakan dalam modul' daripada soalan kuiz",
+   "title_en": "Remove module-attribution phrasing from quiz stems",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus – buang \"yang dinyatakan dalam modul\"",
+   "source_artifact": "AUTH-EV-01 §E, Q1 komen/pindaan",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "rule": "A quiz stem must ask the question directly. It must not attribute its content to the module — no 'yang dinyatakan dalam modul', no 'mengikut modul', no 'Modul menyenaraikan'.",
+   "banned_phrases": [
+    "yang dinyatakan dalam modul",
+    "mengikut modul",
+    "dalam modul",
+    "Modul menyenaraikan"
+   ],
+   "rationale_authority_supplied": true,
+   "applied_to_t04_items": [
+    "T04-QZ-Q1",
+    "T04-QZ-Q2",
+    "T04-QZ-Q3",
+    "T04-QZ-Q4",
+    "T04-QZ-Q5"
+   ],
+   "applies_beyond_t04": true,
+   "enforcement": "Every T04 stem is checked against the banned phrases by a gate. Units outside T04 are out of this stage's scope and are not modified here.",
+   "status": "AUTHORITY_ISSUED_COURSE_WIDE"
+  },
+  {
+   "rule_id": "QUIZ-GLOBAL-02",
+   "decision_id": "T04-DEC-E07",
+   "title_ms": "Gunakan kotak, bukan A B C, bagi soalan Multiple Response",
+   "title_en": "Multiple Response options use checkboxes, not letter labels",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus. Jangan gunakan A B C .. untuk pilihan, kerana ini ialah multiple response question. Cadangan - Gunakan kotak.",
+   "source_artifact": "AUTH-EV-01 §E, Q5 komen/pindaan",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "rule": "A Multiple Response item presents its options as checkboxes. Letter labels A, B, C … are reserved for single-answer items, where they signal that exactly one option is chosen.",
+   "banned_option_marker_pattern": "^[A-Z]\\.\\s",
+   "required_option_marker": "checkbox",
+   "rationale_authority_supplied": true,
+   "applied_to_t04_items": [
+    "T04-QZ-Q5"
+   ],
+   "applies_beyond_t04": true,
+   "enforcement": "A gate asserts no Multiple Response option in T04 carries a letter label, and that all four MCQ items keep theirs.",
+   "status": "AUTHORITY_ISSUED_COURSE_WIDE"
+  }
+ ],
+ "quiz": {
+  "quiz_id": "T04-QZ-FINAL",
+  "screen_id": "T04-S21",
+  "version": "v2",
+  "composition": "4 MCQ dan 1 Multiple Response",
+  "pass_mark": "60 peratus",
+  "scope": "ALL_PLS_IN_KURSUS",
+  "answer_key_status": "PROPOSED_NOT_FINAL",
+  "answer_key_status_reason": "Bariah's own review package states 'Cadangan jawapan sahaja — belum muktamad' and she did not mark any key final.",
+  "items": [
+   {
+    "question_id": "T04-QZ-Q1",
+    "position": 1,
+    "question_type": "MCQ",
+    "stem_ms": "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
+    "superseded_stem_ms": "Apakah tiga operasi utama penyelenggaraan landskap lembut yang dinyatakan dalam modul?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E01",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q1-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Siram, baja dan racun",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q1-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Siram, potong dan tanam",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q1-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Baja, racun dan turap",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q1-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Racun, siram dan pembinaan",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     1
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-004",
+     "T04-ROW-005",
+     "T04-ROW-006",
+     "T04-ROW-007",
+     "T04-ROW-026",
+     "T04-ROW-027",
+     "T04-ROW-046",
+     "T04-ROW-047"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q2",
+    "position": 2,
+    "question_type": "MCQ",
+    "stem_ms": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
+    "superseded_stem_ms": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Mengikut modul, sistem manakah yang paling sesuai?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E02",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q2-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Sistem Semburan (Sprinkler System)",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q2-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Sistem Titis (Drip Irrigation System)",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q2-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Penyiraman manual menggunakan hos getah",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q2-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Semburan folia menggunakan baja cecair",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     1
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-008",
+     "T04-ROW-009",
+     "T04-ROW-010",
+     "T04-ROW-011",
+     "T04-ROW-012",
+     "T04-ROW-013",
+     "T04-ROW-014",
+     "T04-ROW-015"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q3",
+    "position": 3,
+    "question_type": "MCQ",
+    "stem_ms": "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
+    "superseded_stem_ms": "Mengikut susunan keutamaan IPM dalam modul, kaedah kawalan manakah yang disenaraikan paling akhir?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E03",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q3-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Kawalan Kultur",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q3-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Kawalan Fizikal",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q3-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Kawalan Biologi",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q3-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Kawalan Kimia",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     4
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-048",
+     "T04-ROW-049",
+     "T04-ROW-050",
+     "T04-ROW-051",
+     "T04-ROW-052",
+     "T04-ROW-053",
+     "T04-ROW-054",
+     "T04-ROW-055",
+     "T04-ROW-056"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q4",
+    "position": 4,
+    "question_type": "MCQ",
+    "stem_ms": "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "superseded_stem_ms": "Modul menyenaraikan empat kumpulan fungsi landskap kejur. Kumpulan manakah yang merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E04",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q4-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Pengurusan Ruang dan Sirkulasi",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q4-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Fungsi Struktur dan Kejuruteraan",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q4-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Kebolehgunaan dan Kemudahan",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q4-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Estetika dan Reka Bentuk",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     2
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-081",
+     "T04-ROW-082",
+     "T04-ROW-083",
+     "T04-ROW-084",
+     "T04-ROW-085",
+     "T04-ROW-086",
+     "T04-ROW-087",
+     "T04-ROW-088",
+     "T04-ROW-089",
+     "T04-ROW-090",
+     "T04-ROW-091",
+     "T04-ROW-092",
+     "T04-ROW-093",
+     "T04-ROW-094",
+     "T04-ROW-095",
+     "T04-ROW-096",
+     "T04-ROW-097",
+     "T04-ROW-098",
+     "T04-ROW-099",
+     "T04-ROW-100"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q5",
+    "position": 5,
+    "question_type": "MULTIPLE_RESPONSE",
+    "stem_ms": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+    "superseded_stem_ms": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun, mengikut modul.",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E05",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q5-OPT-1",
+      "position": 1,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Pengendali semburan mesti berlesen atau telah menerima latihan",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-2",
+      "position": 2,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Pekerja mesti memakai PPE yang lengkap dan bersesuaian",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-3",
+      "position": 3,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Semburan hanya dilakukan semasa cuaca tenang",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-4",
+      "position": 4,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-5",
+      "position": 5,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-6",
+      "position": 6,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 6,
+    "options_authorship": "AUTHORITY_INSTRUCTED_CHANGE_EXECUTED_BY_CAIR",
+    "option_marker_style": "CHECKBOX",
+    "proposed_key_positions": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-065",
+     "T04-ROW-066",
+     "T04-ROW-067",
+     "T04-ROW-068",
+     "T04-ROW-069",
+     "T04-ROW-070",
+     "T04-ROW-071",
+     "T04-ROW-072",
+     "T04-ROW-073",
+     "T04-ROW-074",
+     "T04-ROW-075",
+     "T04-ROW-076",
+     "T04-ROW-077",
+     "T04-ROW-078"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01",
+     "QUIZ-GLOBAL-02"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   }
+  ],
+  "item_count": 5,
+  "global_rules": [
+   "QUIZ-GLOBAL-01",
+   "QUIZ-GLOBAL-02"
+  ],
+  "q5_option_substitutions": [
+   {
+    "position": 5,
+    "previous_letter": "E",
+    "superseded_text": "Baja disimpan di tempat yang kering dan jauh dari sumber air",
+    "replacement_text": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+    "why_superseded": "Bariah: the option is obviously wrong because it is about fertiliser, not about controls during pesticide spraying.",
+    "why_the_replacement_works": "It is about pesticide spraying, so it no longer gives itself away by subject. It is a plausible site practice but is not one of the controls the module states as mandatory, so it remains a correct distractor.",
+    "authorship": "CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
+    "approval_status": "PENDING_BARIAH_CONFIRMATION"
+   },
+   {
+    "position": 6,
+    "previous_letter": "F",
+    "superseded_text": "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
+    "replacement_text": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+    "why_superseded": "Bariah: same defect — a fertiliser record, obviously outside the scope of pesticide spraying controls.",
+    "why_the_replacement_works": "A procurement condition, phrased about pesticide. It sounds like a contract requirement and is not a spraying control the module states, so a learner has to reason about what the control is for rather than about what the option mentions.",
+    "authorship": "CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
+    "approval_status": "PENDING_BARIAH_CONFIRMATION"
+   }
+  ],
+  "q5_route_choice": {
+   "authority_gave_two_routes": true,
+   "authority_quote": "Tukar pilihan 5 dan 6 (E dan F), kerana jelas ia pilihan yang salah. (kerana ia tentang baja) ATAU tukar soalan.",
+   "route_taken": "CHANGE_THE_TWO_OPTIONS",
+   "route_not_taken": "CHANGE_THE_QUESTION",
+   "why": "Bariah supplied a replacement Q5 stem in the same comment field. Changing the question as well would discard wording she wrote herself, so the option route is the only one consistent with the rest of her decision.",
+   "chosen_by": "CAIR",
+   "approval_status": "PENDING_BARIAH_CONFIRMATION"
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ }
+}

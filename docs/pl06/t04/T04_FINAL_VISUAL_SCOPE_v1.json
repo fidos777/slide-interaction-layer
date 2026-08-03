@@ -1,0 +1,229 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "decision_basis_values": [
+  "INSTRUCTIONAL_ONLY",
+  "PRODUCTION_ONLY",
+  "BOTH_INSTRUCTIONAL_AND_PRODUCTION"
+ ],
+ "visual_scope": {
+  "governance_id": "T04-VIS-GOV-01",
+  "status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+  "decision_ids": [
+   "T04-DEC-B01",
+   "T04-DEC-B02",
+   "T04-DEC-B03",
+   "T04-DEC-B04",
+   "T04-DEC-B05",
+   "T04-DEC-B06"
+  ],
+  "authority": "BARIAH_AHMAD",
+  "source_artifact": "AUTH-EV-01 §B, KOMEN KESELURUHAN",
+  "visual_obligation_count": 46,
+  "asset_group_count": 8,
+  "proposed_unique_assets": 41,
+  "accepted_production_scope": 41,
+  "accepted_production_scope_quote": "Kaedah kiraan 46 → 41 diterima sebagai skop produksi.",
+  "obligations_are_not_assets": "46 obligations resolve to 8 asset groups and a PROPOSED 41 unique assets. The numbers differ in both directions: 5 obligations are discharged by a composite another obligation already pays for and 3 grouping headings need no asset at all, while the D-05 diagram redraw and the Slide 2 scenario need 3 assets that belong to no obligation. 46 was never a production figure.",
+  "review_lenses": [
+   "INSTRUCTIONAL",
+   "MULTIMEDIA_PRODUCTION"
+  ],
+  "precedence_rule": {
+   "rule_id": "T04-VIS-PREC-01",
+   "decision_id": "T04-DEC-B05",
+   "rule": "Where the instructional and production lenses conflict, the instructional decision governs and the assets are not merged.",
+   "authority_quote": "Di mana dua sudut bertembung (jika ada): keputusan instruksional mengatasi pengoptimuman produksi.",
+   "binding_on": "every subsequent T04 asset merge or reuse decision"
+  },
+  "do_not_reuse_items": [
+   {
+    "obligation_id": "T04-VO-025",
+    "label": "Pengurusan Stok dan Penyimpanan (Baja)",
+    "asset_group_id": "AG-04",
+    "restriction": "REUSE_NOT_ALLOWED",
+    "restriction_scope": "NAMED_ITEM_NOT_WHOLE_GROUP",
+    "visual_difference": "Penyimpanan baja (kering, selamat, jauh dari air) berbeza daripada penyimpanan racun (berkunci, berlabel, berpengudaraan).",
+    "decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+    "decision_basis_source_decision": "T04-DEC-B04",
+    "decision_basis_requirement_decision": "T04-DEC-B06",
+    "instructional_ground": "Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.",
+    "production_ground": "The two visuals differ substantially in content, so a shared asset would not in fact save production effort.",
+    "confirmed_by_authority": true
+   },
+   {
+    "obligation_id": "T04-VO-026",
+    "label": "Keselamatan Pekerja (Baja)",
+    "asset_group_id": "AG-04",
+    "restriction": "REUSE_NOT_ALLOWED",
+    "restriction_scope": "NAMED_ITEM_NOT_WHOLE_GROUP",
+    "visual_difference": "PPE untuk baja (sarung tangan, topeng muka) berbeza daripada PPE untuk racun (topeng pernafasan, cermin mata, sarung tangan kimia, sut pelindung).",
+    "decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+    "decision_basis_source_decision": "T04-DEC-B04",
+    "decision_basis_requirement_decision": "T04-DEC-B06",
+    "instructional_ground": "Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.",
+    "production_ground": "The two visuals differ substantially in content, so a shared asset would not in fact save production effort.",
+    "confirmed_by_authority": true
+   },
+   {
+    "obligation_id": "T04-VO-039",
+    "label": "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)",
+    "asset_group_id": "AG-06",
+    "restriction": "REUSE_NOT_ALLOWED",
+    "restriction_scope": "NAMED_ITEM_NOT_WHOLE_GROUP",
+    "visual_difference": "Set PPE racun jauh lebih berat dan tidak boleh dikongsi dengan skrin baja.",
+    "decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+    "decision_basis_source_decision": "T04-DEC-B04",
+    "decision_basis_requirement_decision": "T04-DEC-B06",
+    "instructional_ground": "Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.",
+    "production_ground": "The two visuals differ substantially in content, so a shared asset would not in fact save production effort.",
+    "confirmed_by_authority": true
+   }
+  ],
+  "do_not_reuse_count": 3,
+  "asset_groups": [
+   {
+    "asset_group_id": "AG-01",
+    "label": "Aliran proses enam langkah",
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S03"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-02",
+    "label": "Landskap Lembut — kategori",
+    "proposed_unique_assets": 1,
+    "affected_screens": [
+     "T04-S04",
+     "T04-S02"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-03",
+    "label": "Siram — operasi dan sub-topik",
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S05",
+     "T04-S06",
+     "T04-S07"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-04",
+    "label": "Baja — operasi dan sub-topik",
+    "proposed_unique_assets": 9,
+    "affected_screens": [
+     "T04-S08",
+     "T04-S09",
+     "T04-S10"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [
+     "T04-VO-025",
+     "T04-VO-026"
+    ],
+    "item_level_restriction_labels": [
+     "Pengurusan Stok dan Penyimpanan (Baja)",
+     "Keselamatan Pekerja (Baja)"
+    ],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-05",
+    "label": "Racun — IPM, kawalan dan jenis racun",
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S11",
+     "T04-S12",
+     "T04-S13"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-06",
+    "label": "Racun — perundangan, HSE dan risiko",
+    "proposed_unique_assets": 3,
+    "affected_screens": [
+     "T04-S14",
+     "T04-S15",
+     "T04-S16"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [
+     "T04-VO-039"
+    ],
+    "item_level_restriction_labels": [
+     "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)"
+    ],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-07",
+    "label": "Landskap Kejur — kategori dan empat fungsi",
+    "proposed_unique_assets": 5,
+    "affected_screens": [
+     "T04-S17",
+     "T04-S18"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-08",
+    "label": "Slide 2 — senario pengenalan",
+    "proposed_unique_assets": 2,
+    "affected_screens": [
+     "T04-S02"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   }
+  ],
+  "what_is_not_approved": "Individual asset subjects, styles and the MMD production plan. Bariah accepted the grouping, the 46→41 derivation and the three do-not-reuse rulings as a set; she did not approve any specific artwork, and no asset has been produced.",
+  "new_screen_asset_impact": {
+   "screen_id": "T04-S14",
+   "new_unique_assets": 0,
+   "why": "The inserted screen realises T04-VO-038, a grouping heading already closed as NOT_A_SEPARATE_ASSET_WITH_REASON. Bariah asked for a navigation screen listing three aspects, not for a new picture. The accepted production scope stays 41.",
+   "obligation_id": "T04-VO-038",
+   "obligation_closure_outcome_unchanged": true
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ }
+}

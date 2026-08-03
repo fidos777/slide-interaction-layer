@@ -1,0 +1,1715 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "internal_unit_id": "K5-PL06-T04-B01",
+ "learner_display_unit": "Topik 4",
+ "final_state_values": [
+  "APPROVED_WITH_SPECIFIED_AMENDMENTS",
+  "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN",
+  "CAIR_EXECUTED_UNDER_AUTHORITY_INSTRUCTION_PENDING_CONFIRMATION",
+  "PROPOSED_NOT_FINAL",
+  "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+  "AUTHORITY_ISSUED_COURSE_WIDE",
+  "PRESENT_WITH_OPEN_REPRODUCIBILITY_RISK"
+ ],
+ "final_states": [
+  {
+   "state_id": "FS-01",
+   "content_class": "FINAL_SCREEN_SEQUENCE",
+   "final_state": "APPROVED_WITH_SPECIFIED_AMENDMENTS",
+   "note": "22 screens, one inserted and eight renumbered, each carrying its decision IDs.",
+   "decision_ids": [
+    "T04-DEC-A01",
+    "T04-DEC-A14",
+    "T04-DEC-A22"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-02",
+   "content_class": "FINAL_SCREEN_TREATMENTS",
+   "final_state": "APPROVED_WITH_SPECIFIED_AMENDMENTS",
+   "note": "Four treatments changed by direct authority instruction: T04-S12, T04-S13, T04-S16, T04-S17.",
+   "decision_ids": [
+    "T04-DEC-A12",
+    "T04-DEC-A13",
+    "T04-DEC-A16",
+    "T04-DEC-A17"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-03",
+   "content_class": "FINAL_UNIT_LABELLING",
+   "final_state": "APPROVED_WITH_SPECIFIED_AMENDMENTS",
+   "note": "Learner sees Topik 4 with no Bahagian; internal ID K5-PL06-T04-B01 unchanged; the closing screen reads Tamat Topik.",
+   "decision_ids": [
+    "T04-DEC-A01",
+    "T04-DEC-A22"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-04",
+   "content_class": "FINAL_DIALOGUE",
+   "final_state": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN",
+   "note": "Four lines, written by Bariah, carried verbatim. Five became four.",
+   "decision_ids": [
+    "T04-DEC-C01",
+    "T04-DEC-C02",
+    "T04-DEC-C03"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-05",
+   "content_class": "FINAL_RUMUSAN",
+   "final_state": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN",
+   "note": "Three beats, written by Bariah, carried verbatim. Four points became three.",
+   "decision_ids": [
+    "T04-DEC-D01",
+    "T04-DEC-D02"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-06",
+   "content_class": "FINAL_QUIZ_STEMS",
+   "final_state": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT_FROZEN",
+   "note": "All five stems replaced with Bariah's wording, carried verbatim.",
+   "decision_ids": [
+    "T04-DEC-E01",
+    "T04-DEC-E02",
+    "T04-DEC-E03",
+    "T04-DEC-E04",
+    "T04-DEC-E05"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-07",
+   "content_class": "FINAL_QUIZ_Q5_OPTIONS",
+   "final_state": "CAIR_EXECUTED_UNDER_AUTHORITY_INSTRUCTION_PENDING_CONFIRMATION",
+   "note": "Options 5 and 6 replaced on Bariah's instruction. The replacement wording is CAIR's and is not approved.",
+   "decision_ids": [
+    "T04-DEC-E08"
+   ],
+   "settled": false
+  },
+  {
+   "state_id": "FS-08",
+   "content_class": "FINAL_QUIZ_ANSWER_KEY",
+   "final_state": "PROPOSED_NOT_FINAL",
+   "note": "No answer key was marked final by the authority. All five remain proposals.",
+   "decision_ids": [
+    "T04-DEC-X02"
+   ],
+   "settled": false
+  },
+  {
+   "state_id": "FS-09",
+   "content_class": "FINAL_VISUAL_SCOPE",
+   "final_state": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+   "note": "41 proposed unique assets across 8 groups, conditional sharing, three named do-not-reuse items, instructional precedence.",
+   "decision_ids": [
+    "T04-DEC-B01",
+    "T04-DEC-B03",
+    "T04-DEC-B04",
+    "T04-DEC-B05",
+    "T04-DEC-B06"
+   ],
+   "settled": true
+  },
+  {
+   "state_id": "FS-10",
+   "content_class": "FINAL_SOURCE_BINDINGS",
+   "final_state": "PRESENT_WITH_OPEN_REPRODUCIBILITY_RISK",
+   "note": "Bindings present and resolving; original-DOCX round trip and hash proof remain open and non-blocking.",
+   "decision_ids": [],
+   "settled": true
+  }
+ ],
+ "course_wide_state": {
+  "state_id": "FS-11-GLOBAL",
+  "content_class": "COURSE_WIDE_QUIZ_RULES",
+  "final_state": "AUTHORITY_ISSUED_COURSE_WIDE",
+  "note": "QUIZ-GLOBAL-01 and QUIZ-GLOBAL-02 apply to every PL in the Kursus. Only their T04 application is executed in this stage.",
+  "decision_ids": [
+   "T04-DEC-E06",
+   "T04-DEC-E07"
+  ],
+  "settled": true
+ },
+ "screens": [
+  {
+   "screen_id": "T04-S01",
+   "position": 1,
+   "previous_screen_id": "T04-S01",
+   "previous_treatment": "TITLE",
+   "working_title": "Tajuk dan Mula",
+   "treatment": "TITLE",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A01"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Shows Topik 4 and the unit title. No Bahagian label — Bariah ruled T04 has none.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S02",
+   "position": 2,
+   "previous_screen_id": "T04-S02",
+   "previous_treatment": "DIALOGUE_SCENARIO",
+   "working_title": "Pengenalan — perbualan di tapak",
+   "treatment": "DIALOGUE_SCENARIO",
+   "interaction_states": [
+    "BASE — dialogue plays"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003",
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A02",
+    "T04-DEC-C01",
+    "T04-DEC-C02",
+    "T04-DEC-C03"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Carries the four-line replacement dialogue. The soft-versus-hard contrast is banned from the dialogue.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S03",
+   "position": 3,
+   "previous_screen_id": "T04-S03",
+   "previous_treatment": "PROCESS_FLOW_STEPPED",
+   "working_title": "Aliran proses penjagaan dan penyelenggaraan",
+   "treatment": "PROCESS_FLOW_STEPPED",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ST-06",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S04",
+   "position": 4,
+   "previous_screen_id": "T04-S04",
+   "previous_treatment": "CONTENT_STATIC",
+   "working_title": "Landskap Lembut — pengenalan",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A04"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Presents Siram, Baja and Racun as critical contractor responsibilities during the construction maintenance period and the DLP, not as a soft-landscape taxonomy.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S05",
+   "position": 5,
+   "previous_screen_id": "T04-S05",
+   "previous_treatment": "CONTENT_STATIC",
+   "working_title": "Siram — penerangan utama",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [
+    "Kaedah Pelaksanaan",
+    "Aspek Pengurusan Untuk Kontraktor"
+   ],
+   "source_row_ids": [
+    "T04-ROW-006",
+    "T04-ROW-007"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A05"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Also lists the watering aspects: Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S06",
+   "position": 6,
+   "previous_screen_id": "T04-S06",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Siram — kaedah pelaksanaan",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-010",
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A06"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S07",
+   "position": 7,
+   "previous_screen_id": "T04-S07",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Siram — aspek pengurusan untuk kontraktor",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-016",
+    "T04-ROW-017",
+    "T04-ROW-018",
+    "T04-ROW-019",
+    "T04-ROW-020",
+    "T04-ROW-021",
+    "T04-ROW-022",
+    "T04-ROW-023",
+    "T04-ROW-024",
+    "T04-ROW-025"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S08",
+   "position": 8,
+   "previous_screen_id": "T04-S08",
+   "previous_treatment": "CONTENT_STATIC",
+   "working_title": "Baja — penerangan utama",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [
+    "Kaedah Pelaksanaan",
+    "Aspek Pengurusan Untuk Kontraktor"
+   ],
+   "source_row_ids": [
+    "T04-ROW-026",
+    "T04-ROW-027"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A08"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Also lists the fertilising aspects: Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S09",
+   "position": 9,
+   "previous_screen_id": "T04-S09",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Baja — kaedah pelaksanaan",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-028",
+    "T04-ROW-029",
+    "T04-ROW-030",
+    "T04-ROW-031",
+    "T04-ROW-032",
+    "T04-ROW-033",
+    "T04-ROW-034"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S10",
+   "position": 10,
+   "previous_screen_id": "T04-S10",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Baja — aspek pengurusan untuk kontraktor",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-035",
+    "T04-ROW-036",
+    "T04-ROW-037",
+    "T04-ROW-038",
+    "T04-ROW-039",
+    "T04-ROW-040",
+    "T04-ROW-041",
+    "T04-ROW-042",
+    "T04-ROW-043",
+    "T04-ROW-044",
+    "T04-ROW-045"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S11",
+   "position": 11,
+   "previous_screen_id": "T04-S11",
+   "previous_treatment": "CONTENT_STATIC",
+   "working_title": "Racun — penerangan utama",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [
+    "Pendekatan IPM",
+    "Jenis Racun",
+    "Aspek Pengurusan Untuk Kontraktor"
+   ],
+   "source_row_ids": [
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A11"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Also lists the pest-control aspects: Pendekatan IPM, Jenis Racun, Aspek Pengurusan Untuk Kontraktor.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S12",
+   "position": 12,
+   "previous_screen_id": "T04-S12",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Racun — pendekatan IPM",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A12"
+   ],
+   "change_type": "TREATMENT_CHANGED",
+   "authority_note": "Was CLICK_TO_REVEAL. All four IPM controls are now base-visible; the priority order is read, not revealed.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S13",
+   "position": 13,
+   "previous_screen_id": "T04-S13",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Racun — jenis racun",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-057",
+    "T04-ROW-058",
+    "T04-ROW-059",
+    "T04-ROW-060",
+    "T04-ROW-061",
+    "T04-ROW-062",
+    "T04-ROW-063"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A13"
+   ],
+   "change_type": "TREATMENT_CHANGED",
+   "authority_note": "Was CLICK_TO_REVEAL. Short static content — all three pesticide types base-visible.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S14",
+   "position": 14,
+   "previous_screen_id": null,
+   "previous_treatment": null,
+   "working_title": "Racun — aspek pengurusan untuk kontraktor",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [
+    "Perundangan Dan Pelesenan",
+    "Keselamatan Dan Kesihatan (HSE)",
+    "Pengurusan Risiko"
+   ],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "change_type": "INSERTED",
+   "authority_note": "New screen inserted by Bariah. A click-to-reveal hub for the three pesticide management aspects — Perundangan Dan Pelesenan, Keselamatan Dan Kesihatan (HSE), Pengurusan Risiko — each of which is then carried in full on T04-S15, T04-S16 and T04-S17.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S15",
+   "position": 15,
+   "previous_screen_id": "T04-S14",
+   "previous_treatment": "CONTENT_STATIC",
+   "working_title": "Racun — perundangan dan pelesenan",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A15"
+   ],
+   "change_type": "RENUMBERED",
+   "authority_note": "Renumbering only. Legal content stays base-visible and verbatim.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S16",
+   "position": 16,
+   "previous_screen_id": "T04-S15",
+   "previous_treatment": "CONTENT_WITH_CONFIRMED_REVEAL",
+   "working_title": "Racun — keselamatan dan kesihatan (HSE)",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "REVEAL_PPE_LENGKAP",
+    "REVEAL_PENYIMPANAN_DAN_PELUPUSAN",
+    "REVEAL_SDS",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [
+    "PPE Lengkap",
+    "Penyimpanan Dan Pelupusan",
+    "Helaian Data Keselamatan (SDS)"
+   ],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "change_type": "RENUMBERED_AND_TREATMENT_CHANGED",
+   "authority_note": "Three named reveals. Supersedes D-04's base-visible PPE placement — see T04-SUP-01. A non-interacting learner will not see the PPE list; that residual risk sits with the authority who made the ruling.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S17",
+   "position": 17,
+   "previous_screen_id": "T04-S16",
+   "previous_treatment": "CONTENT_WITH_CONFIRMED_REVEAL",
+   "working_title": "Racun — pengurusan risiko",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A17"
+   ],
+   "change_type": "RENUMBERED_AND_TREATMENT_CHANGED",
+   "authority_note": "All content base-visible. Supersedes D-04's reveal-eligible classification — see T04-SUP-02. This removes a residual risk rather than creating one.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S18",
+   "position": 18,
+   "previous_screen_id": "T04-S17",
+   "previous_treatment": "CONTENT_STATIC",
+   "working_title": "Landskap Kejur — pengenalan",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A18"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Establishes hard landscape and names its four main functions. The contrast with soft landscape is removed — the module describes the two separately and draws no comparison.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S19",
+   "position": 19,
+   "previous_screen_id": "T04-S18",
+   "previous_treatment": "CLICK_TO_REVEAL",
+   "working_title": "Landskap Kejur — empat kumpulan fungsi",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085",
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090",
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095",
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "change_type": "RENUMBERED",
+   "authority_note": "Renumbering only.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S20",
+   "position": 20,
+   "previous_screen_id": "T04-S19",
+   "previous_treatment": "RUMUSAN",
+   "working_title": "Rumusan",
+   "treatment": "RUMUSAN",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A20",
+    "T04-DEC-D01",
+    "T04-DEC-D02"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Carries the three-beat Rumusan. Four points became three.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S21",
+   "position": 21,
+   "previous_screen_id": "T04-S20",
+   "previous_treatment": "QUIZ",
+   "working_title": "Kuiz",
+   "treatment": "QUIZ",
+   "interaction_states": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "RESULT"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A21",
+    "T04-DEC-E01",
+    "T04-DEC-E02",
+    "T04-DEC-E03",
+    "T04-DEC-E04",
+    "T04-DEC-E05",
+    "T04-DEC-E06",
+    "T04-DEC-E07",
+    "T04-DEC-E08"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Five items with Bariah's replacement stems. Q5 is Multiple Response with checkbox options.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S22",
+   "position": 22,
+   "previous_screen_id": "T04-S21",
+   "previous_treatment": "CLOSING",
+   "working_title": "Tamat Topik",
+   "treatment": "CLOSING",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "source_row_ids": [],
+   "source_binding_present": true,
+   "decision_ids": [
+    "T04-DEC-A22"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Closes the Topik. 'Tamat Bahagian' is retired for T04.",
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  }
+ ],
+ "dialogue": {
+  "dialogue_id": "T04-DLG-FINAL",
+  "screen_id": "T04-S02",
+  "decision_id": "T04-DEC-C01",
+  "authority": "BARIAH_AHMAD",
+  "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+  "source_artifact": "AUTH-EV-01 §C, Cadangan Pindaan",
+  "characters": [
+   "Alya (Kontraktor Junior)",
+   "Encik Rahman (Mentor / Kontraktor Senior)"
+  ],
+  "cast_decision_id": "T04-DEC-C02",
+  "line_count": 4,
+  "superseded_line_count": 5,
+  "lines": [
+   {
+    "line_id": "T04-DLG-F01",
+    "speaker": "Alya",
+    "text_ms": "Encik Rahman, projek dah siap dibina. Kenapa kita masih perlu jaga taman ni setiap minggu?",
+    "position": 1,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "line_id": "T04-DLG-F02",
+    "speaker": "Encik Rahman",
+    "text_ms": "Sebab membina dan mengekalkan landskap dua benda berbeza, Alya. Tumbuhan kena disiram, dibaja dan dikawal perosak. Guna IPM, dan racun kimia pilihan terakhir. Struktur pula perlu dipantau supaya kekal berfungsi.",
+    "position": 2,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "line_id": "T04-DLG-F03",
+    "speaker": "Alya",
+    "text_ms": "Dan semua kena direkod untuk tempoh DLP?",
+    "position": 3,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "line_id": "T04-DLG-F04",
+    "speaker": "Encik Rahman",
+    "text_ms": "Ya. Penyelenggaraan berjadual dan dokumentasi lengkap, itu yang melindungi kerja pembinaan kita dan mencerminkan kualiti kontraktor.",
+    "position": 4,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   }
+  ],
+  "authority_critique_addressed": [
+   "Alya was too passive — she now opens with a challenge rather than a blank question.",
+   "Encik Rahman was reading a list — he now gives the principle and the reason.",
+   "The core learning was missing — watering, fertilising and IPM with chemical control last are now in the dialogue.",
+   "The close was passive — it now lands on impact: protecting the construction work and reflecting contractor quality."
+  ],
+  "banned_framing": {
+   "rule": "No soft-versus-hard landscape comparison in the dialogue.",
+   "decision_id": "T04-DEC-C03",
+   "authority_quote": "elak framing \"beza lembut vs kejur\" — modul cuma terangkan dua-dua secara berasingan, tak buat perbandingan"
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ },
+ "rumusan": {
+  "rumusan_id": "T04-RUM-FINAL",
+  "screen_id": "T04-S20",
+  "decision_id": "T04-DEC-D01",
+  "authority": "BARIAH_AHMAD",
+  "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+  "source_artifact": "AUTH-EV-01 §D, Cadangan Pindaan",
+  "structure": "THREE_BEAT",
+  "beats": [
+   "Kepentingan",
+   "Skop/Isi Utama",
+   "Manfaat"
+  ],
+  "point_count": 3,
+  "superseded_point_count": 4,
+  "points": [
+   {
+    "point_id": "T04-RUM-F01",
+    "beat": "Kepentingan",
+    "text_ms": "Penjagaan dan penyelenggaraan memastikan landskap yang telah dibina kekal sihat, berfungsi dan selamat dalam jangka masa panjang. Membina dan mengekalkan landskap adalah dua tanggungjawab berbeza.",
+    "position": 1,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "point_id": "T04-RUM-F02",
+    "beat": "Skop/Isi Utama",
+    "text_ms": "Penjagaan dan penyelenggaraan merangkumi landskap lembut dan landskap kejur. Landskap lembut memfokuskan kepada penyiraman, pembajaan dan kawalan racun, manakala landskap kejur memfokuskan kepada memastikan elemen binaan kekal berfungsi dan selamat.",
+    "position": 2,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "point_id": "T04-RUM-F03",
+    "beat": "Manfaat",
+    "text_ms": "Dengan melaksanakan penjagaan dan penyelenggaraan yang berjadual dan terancang, kontraktor dapat memelihara kualiti landskap sepanjang DLP, memenuhi kewajipan kontrak, dan memastikan ruang luaran kekal lestari dan bernilai untuk pengguna.",
+    "position": 3,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   }
+  ],
+  "authority_critique_addressed": [
+   "The draft was a four-item list, not a flowing recap.",
+   "It was too technical and repeated detail the learner had just covered.",
+   "It had no importance beat to open with and no benefit beat to close on."
+  ],
+  "scope_of_the_three_beat_structure": {
+   "applies_to": "T04_ONLY",
+   "why": "Bariah issued this structure while amending the T04 Rumusan and did not mark it 'Global keseluruhan kursus' — the phrase she used twice, in the same document, for the two quiz rules she did mean course-wide. Reading a course-wide Rumusan rule out of a T04 amendment would be an inference, not a decision, so it is not made.",
+   "what_would_be_needed": "An explicit statement from Bariah that the three-beat structure applies beyond T04."
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ },
+ "quiz": {
+  "quiz_id": "T04-QZ-FINAL",
+  "screen_id": "T04-S21",
+  "version": "v2",
+  "composition": "4 MCQ dan 1 Multiple Response",
+  "pass_mark": "60 peratus",
+  "scope": "ALL_PLS_IN_KURSUS",
+  "answer_key_status": "PROPOSED_NOT_FINAL",
+  "answer_key_status_reason": "Bariah's own review package states 'Cadangan jawapan sahaja — belum muktamad' and she did not mark any key final.",
+  "items": [
+   {
+    "question_id": "T04-QZ-Q1",
+    "position": 1,
+    "question_type": "MCQ",
+    "stem_ms": "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
+    "superseded_stem_ms": "Apakah tiga operasi utama penyelenggaraan landskap lembut yang dinyatakan dalam modul?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E01",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q1-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Siram, baja dan racun",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q1-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Siram, potong dan tanam",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q1-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Baja, racun dan turap",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q1-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Racun, siram dan pembinaan",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     1
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-004",
+     "T04-ROW-005",
+     "T04-ROW-006",
+     "T04-ROW-007",
+     "T04-ROW-026",
+     "T04-ROW-027",
+     "T04-ROW-046",
+     "T04-ROW-047"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q2",
+    "position": 2,
+    "question_type": "MCQ",
+    "stem_ms": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
+    "superseded_stem_ms": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Mengikut modul, sistem manakah yang paling sesuai?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E02",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q2-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Sistem Semburan (Sprinkler System)",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q2-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Sistem Titis (Drip Irrigation System)",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q2-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Penyiraman manual menggunakan hos getah",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q2-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Semburan folia menggunakan baja cecair",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     1
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-008",
+     "T04-ROW-009",
+     "T04-ROW-010",
+     "T04-ROW-011",
+     "T04-ROW-012",
+     "T04-ROW-013",
+     "T04-ROW-014",
+     "T04-ROW-015"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q3",
+    "position": 3,
+    "question_type": "MCQ",
+    "stem_ms": "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
+    "superseded_stem_ms": "Mengikut susunan keutamaan IPM dalam modul, kaedah kawalan manakah yang disenaraikan paling akhir?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E03",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q3-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Kawalan Kultur",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q3-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Kawalan Fizikal",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q3-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Kawalan Biologi",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q3-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Kawalan Kimia",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     4
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-048",
+     "T04-ROW-049",
+     "T04-ROW-050",
+     "T04-ROW-051",
+     "T04-ROW-052",
+     "T04-ROW-053",
+     "T04-ROW-054",
+     "T04-ROW-055",
+     "T04-ROW-056"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q4",
+    "position": 4,
+    "question_type": "MCQ",
+    "stem_ms": "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "superseded_stem_ms": "Modul menyenaraikan empat kumpulan fungsi landskap kejur. Kumpulan manakah yang merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E04",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q4-OPT-1",
+      "position": 1,
+      "display_marker": "A",
+      "letter_label": "A",
+      "text_ms": "Pengurusan Ruang dan Sirkulasi",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q4-OPT-2",
+      "position": 2,
+      "display_marker": "B",
+      "letter_label": "B",
+      "text_ms": "Fungsi Struktur dan Kejuruteraan",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q4-OPT-3",
+      "position": 3,
+      "display_marker": "C",
+      "letter_label": "C",
+      "text_ms": "Kebolehgunaan dan Kemudahan",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q4-OPT-4",
+      "position": 4,
+      "display_marker": "D",
+      "letter_label": "D",
+      "text_ms": "Estetika dan Reka Bentuk",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 4,
+    "options_authorship": "CAIR_DRAFT_UNCHANGED_BY_AUTHORITY",
+    "option_marker_style": "LETTER",
+    "proposed_key_positions": [
+     2
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-081",
+     "T04-ROW-082",
+     "T04-ROW-083",
+     "T04-ROW-084",
+     "T04-ROW-085",
+     "T04-ROW-086",
+     "T04-ROW-087",
+     "T04-ROW-088",
+     "T04-ROW-089",
+     "T04-ROW-090",
+     "T04-ROW-091",
+     "T04-ROW-092",
+     "T04-ROW-093",
+     "T04-ROW-094",
+     "T04-ROW-095",
+     "T04-ROW-096",
+     "T04-ROW-097",
+     "T04-ROW-098",
+     "T04-ROW-099",
+     "T04-ROW-100"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "question_id": "T04-QZ-Q5",
+    "position": 5,
+    "question_type": "MULTIPLE_RESPONSE",
+    "stem_ms": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+    "superseded_stem_ms": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun, mengikut modul.",
+    "stem_authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "stem_decision_id": "T04-DEC-E05",
+    "options": [
+     {
+      "option_id": "T04-QZ-Q5-OPT-1",
+      "position": 1,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Pengendali semburan mesti berlesen atau telah menerima latihan",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-2",
+      "position": 2,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Pekerja mesti memakai PPE yang lengkap dan bersesuaian",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-3",
+      "position": 3,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Semburan hanya dilakukan semasa cuaca tenang",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-4",
+      "position": 4,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
+      "proposed_key": true,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-5",
+      "position": 5,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     },
+     {
+      "option_id": "T04-QZ-Q5-OPT-6",
+      "position": 6,
+      "display_marker": "checkbox",
+      "letter_label": null,
+      "text_ms": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+      "proposed_key": false,
+      "key_status": "PROPOSED_NOT_FINAL"
+     }
+    ],
+    "option_count": 6,
+    "options_authorship": "AUTHORITY_INSTRUCTED_CHANGE_EXECUTED_BY_CAIR",
+    "option_marker_style": "CHECKBOX",
+    "proposed_key_positions": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "answer_key_status": "PROPOSED_NOT_FINAL",
+    "source_row_ids": [
+     "T04-ROW-065",
+     "T04-ROW-066",
+     "T04-ROW-067",
+     "T04-ROW-068",
+     "T04-ROW-069",
+     "T04-ROW-070",
+     "T04-ROW-071",
+     "T04-ROW-072",
+     "T04-ROW-073",
+     "T04-ROW-074",
+     "T04-ROW-075",
+     "T04-ROW-076",
+     "T04-ROW-077",
+     "T04-ROW-078"
+    ],
+    "global_rules_applied": [
+     "QUIZ-GLOBAL-01",
+     "QUIZ-GLOBAL-02"
+    ],
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   }
+  ],
+  "item_count": 5,
+  "global_rules": [
+   "QUIZ-GLOBAL-01",
+   "QUIZ-GLOBAL-02"
+  ],
+  "q5_option_substitutions": [
+   {
+    "position": 5,
+    "previous_letter": "E",
+    "superseded_text": "Baja disimpan di tempat yang kering dan jauh dari sumber air",
+    "replacement_text": "Semburan dijadualkan pada waktu petang selepas waktu kerja tapak tamat",
+    "why_superseded": "Bariah: the option is obviously wrong because it is about fertiliser, not about controls during pesticide spraying.",
+    "why_the_replacement_works": "It is about pesticide spraying, so it no longer gives itself away by subject. It is a plausible site practice but is not one of the controls the module states as mandatory, so it remains a correct distractor.",
+    "authorship": "CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
+    "approval_status": "PENDING_BARIAH_CONFIRMATION"
+   },
+   {
+    "position": 6,
+    "previous_letter": "F",
+    "superseded_text": "Rekod pembajaan disimpan sebagai bukti kerja untuk tuntutan bayaran",
+    "replacement_text": "Semua racun dibeli daripada satu pembekal tunggal yang dilantik projek",
+    "why_superseded": "Bariah: same defect — a fertiliser record, obviously outside the scope of pesticide spraying controls.",
+    "why_the_replacement_works": "A procurement condition, phrased about pesticide. It sounds like a contract requirement and is not a spraying control the module states, so a learner has to reason about what the control is for rather than about what the option mentions.",
+    "authorship": "CAIR_DRAFTED_UNDER_AUTHORITY_INSTRUCTION",
+    "approval_status": "PENDING_BARIAH_CONFIRMATION"
+   }
+  ],
+  "q5_route_choice": {
+   "authority_gave_two_routes": true,
+   "authority_quote": "Tukar pilihan 5 dan 6 (E dan F), kerana jelas ia pilihan yang salah. (kerana ia tentang baja) ATAU tukar soalan.",
+   "route_taken": "CHANGE_THE_TWO_OPTIONS",
+   "route_not_taken": "CHANGE_THE_QUESTION",
+   "why": "Bariah supplied a replacement Q5 stem in the same comment field. Changing the question as well would discard wording she wrote herself, so the option route is the only one consistent with the rest of her decision.",
+   "chosen_by": "CAIR",
+   "approval_status": "PENDING_BARIAH_CONFIRMATION"
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ },
+ "quiz_global_rules": [
+  {
+   "rule_id": "QUIZ-GLOBAL-01",
+   "decision_id": "T04-DEC-E06",
+   "title_ms": "Buang atribusi 'yang dinyatakan dalam modul' daripada soalan kuiz",
+   "title_en": "Remove module-attribution phrasing from quiz stems",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus – buang \"yang dinyatakan dalam modul\"",
+   "source_artifact": "AUTH-EV-01 §E, Q1 komen/pindaan",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "rule": "A quiz stem must ask the question directly. It must not attribute its content to the module — no 'yang dinyatakan dalam modul', no 'mengikut modul', no 'Modul menyenaraikan'.",
+   "banned_phrases": [
+    "yang dinyatakan dalam modul",
+    "mengikut modul",
+    "dalam modul",
+    "Modul menyenaraikan"
+   ],
+   "rationale_authority_supplied": true,
+   "applied_to_t04_items": [
+    "T04-QZ-Q1",
+    "T04-QZ-Q2",
+    "T04-QZ-Q3",
+    "T04-QZ-Q4",
+    "T04-QZ-Q5"
+   ],
+   "applies_beyond_t04": true,
+   "enforcement": "Every T04 stem is checked against the banned phrases by a gate. Units outside T04 are out of this stage's scope and are not modified here.",
+   "status": "AUTHORITY_ISSUED_COURSE_WIDE"
+  },
+  {
+   "rule_id": "QUIZ-GLOBAL-02",
+   "decision_id": "T04-DEC-E07",
+   "title_ms": "Gunakan kotak, bukan A B C, bagi soalan Multiple Response",
+   "title_en": "Multiple Response options use checkboxes, not letter labels",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus. Jangan gunakan A B C .. untuk pilihan, kerana ini ialah multiple response question. Cadangan - Gunakan kotak.",
+   "source_artifact": "AUTH-EV-01 §E, Q5 komen/pindaan",
+   "scope": "ALL_PLS_IN_KURSUS",
+   "rule": "A Multiple Response item presents its options as checkboxes. Letter labels A, B, C … are reserved for single-answer items, where they signal that exactly one option is chosen.",
+   "banned_option_marker_pattern": "^[A-Z]\\.\\s",
+   "required_option_marker": "checkbox",
+   "rationale_authority_supplied": true,
+   "applied_to_t04_items": [
+    "T04-QZ-Q5"
+   ],
+   "applies_beyond_t04": true,
+   "enforcement": "A gate asserts no Multiple Response option in T04 carries a letter label, and that all four MCQ items keep theirs.",
+   "status": "AUTHORITY_ISSUED_COURSE_WIDE"
+  }
+ ],
+ "visual_scope": {
+  "governance_id": "T04-VIS-GOV-01",
+  "status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
+  "decision_ids": [
+   "T04-DEC-B01",
+   "T04-DEC-B02",
+   "T04-DEC-B03",
+   "T04-DEC-B04",
+   "T04-DEC-B05",
+   "T04-DEC-B06"
+  ],
+  "authority": "BARIAH_AHMAD",
+  "source_artifact": "AUTH-EV-01 §B, KOMEN KESELURUHAN",
+  "visual_obligation_count": 46,
+  "asset_group_count": 8,
+  "proposed_unique_assets": 41,
+  "accepted_production_scope": 41,
+  "accepted_production_scope_quote": "Kaedah kiraan 46 → 41 diterima sebagai skop produksi.",
+  "obligations_are_not_assets": "46 obligations resolve to 8 asset groups and a PROPOSED 41 unique assets. The numbers differ in both directions: 5 obligations are discharged by a composite another obligation already pays for and 3 grouping headings need no asset at all, while the D-05 diagram redraw and the Slide 2 scenario need 3 assets that belong to no obligation. 46 was never a production figure.",
+  "review_lenses": [
+   "INSTRUCTIONAL",
+   "MULTIMEDIA_PRODUCTION"
+  ],
+  "precedence_rule": {
+   "rule_id": "T04-VIS-PREC-01",
+   "decision_id": "T04-DEC-B05",
+   "rule": "Where the instructional and production lenses conflict, the instructional decision governs and the assets are not merged.",
+   "authority_quote": "Di mana dua sudut bertembung (jika ada): keputusan instruksional mengatasi pengoptimuman produksi.",
+   "binding_on": "every subsequent T04 asset merge or reuse decision"
+  },
+  "do_not_reuse_items": [
+   {
+    "obligation_id": "T04-VO-025",
+    "label": "Pengurusan Stok dan Penyimpanan (Baja)",
+    "asset_group_id": "AG-04",
+    "restriction": "REUSE_NOT_ALLOWED",
+    "restriction_scope": "NAMED_ITEM_NOT_WHOLE_GROUP",
+    "visual_difference": "Penyimpanan baja (kering, selamat, jauh dari air) berbeza daripada penyimpanan racun (berkunci, berlabel, berpengudaraan).",
+    "decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+    "decision_basis_source_decision": "T04-DEC-B04",
+    "decision_basis_requirement_decision": "T04-DEC-B06",
+    "instructional_ground": "Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.",
+    "production_ground": "The two visuals differ substantially in content, so a shared asset would not in fact save production effort.",
+    "confirmed_by_authority": true
+   },
+   {
+    "obligation_id": "T04-VO-026",
+    "label": "Keselamatan Pekerja (Baja)",
+    "asset_group_id": "AG-04",
+    "restriction": "REUSE_NOT_ALLOWED",
+    "restriction_scope": "NAMED_ITEM_NOT_WHOLE_GROUP",
+    "visual_difference": "PPE untuk baja (sarung tangan, topeng muka) berbeza daripada PPE untuk racun (topeng pernafasan, cermin mata, sarung tangan kimia, sut pelindung).",
+    "decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+    "decision_basis_source_decision": "T04-DEC-B04",
+    "decision_basis_requirement_decision": "T04-DEC-B06",
+    "instructional_ground": "Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.",
+    "production_ground": "The two visuals differ substantially in content, so a shared asset would not in fact save production effort.",
+    "confirmed_by_authority": true
+   },
+   {
+    "obligation_id": "T04-VO-039",
+    "label": "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)",
+    "asset_group_id": "AG-06",
+    "restriction": "REUSE_NOT_ALLOWED",
+    "restriction_scope": "NAMED_ITEM_NOT_WHOLE_GROUP",
+    "visual_difference": "Set PPE racun jauh lebih berat dan tidak boleh dikongsi dengan skrin baja.",
+    "decision_basis": "BOTH_INSTRUCTIONAL_AND_PRODUCTION",
+    "decision_basis_source_decision": "T04-DEC-B04",
+    "decision_basis_requirement_decision": "T04-DEC-B06",
+    "instructional_ground": "Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.",
+    "production_ground": "The two visuals differ substantially in content, so a shared asset would not in fact save production effort.",
+    "confirmed_by_authority": true
+   }
+  ],
+  "do_not_reuse_count": 3,
+  "asset_groups": [
+   {
+    "asset_group_id": "AG-01",
+    "label": "Aliran proses enam langkah",
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S03"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-02",
+    "label": "Landskap Lembut — kategori",
+    "proposed_unique_assets": 1,
+    "affected_screens": [
+     "T04-S04",
+     "T04-S02"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-03",
+    "label": "Siram — operasi dan sub-topik",
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S05",
+     "T04-S06",
+     "T04-S07"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-04",
+    "label": "Baja — operasi dan sub-topik",
+    "proposed_unique_assets": 9,
+    "affected_screens": [
+     "T04-S08",
+     "T04-S09",
+     "T04-S10"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [
+     "T04-VO-025",
+     "T04-VO-026"
+    ],
+    "item_level_restriction_labels": [
+     "Pengurusan Stok dan Penyimpanan (Baja)",
+     "Keselamatan Pekerja (Baja)"
+    ],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-05",
+    "label": "Racun — IPM, kawalan dan jenis racun",
+    "proposed_unique_assets": 7,
+    "affected_screens": [
+     "T04-S11",
+     "T04-S12",
+     "T04-S13"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-06",
+    "label": "Racun — perundangan, HSE dan risiko",
+    "proposed_unique_assets": 3,
+    "affected_screens": [
+     "T04-S14",
+     "T04-S15",
+     "T04-S16"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [
+     "T04-VO-039"
+    ],
+    "item_level_restriction_labels": [
+     "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)"
+    ],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-07",
+    "label": "Landskap Kejur — kategori dan empat fungsi",
+    "proposed_unique_assets": 5,
+    "affected_screens": [
+     "T04-S17",
+     "T04-S18"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   },
+   {
+    "asset_group_id": "AG-08",
+    "label": "Slide 2 — senario pengenalan",
+    "proposed_unique_assets": 2,
+    "affected_screens": [
+     "T04-S02"
+    ],
+    "reuse_decision": "REUSE_WITH_CONDITIONS",
+    "reuse_decision_id": "T04-DEC-B03",
+    "item_level_restrictions": [],
+    "item_level_restriction_labels": [],
+    "restriction_applies_to_whole_group": false,
+    "mmd_production_status": "NOT_STARTED"
+   }
+  ],
+  "what_is_not_approved": "Individual asset subjects, styles and the MMD production plan. Bariah accepted the grouping, the 46→41 derivation and the three do-not-reuse rulings as a set; she did not approve any specific artwork, and no asset has been produced.",
+  "new_screen_asset_impact": {
+   "screen_id": "T04-S14",
+   "new_unique_assets": 0,
+   "why": "The inserted screen realises T04-VO-038, a grouping heading already closed as NOT_A_SEPARATE_ASSET_WITH_REASON. Bariah asked for a navigation screen listing three aspects, not for a new picture. The accepted production scope stays 41.",
+   "obligation_id": "T04-VO-038",
+   "obligation_closure_outcome_unchanged": true
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ },
+ "source_status": {
+  "CONTROLLED_EXTRACT_SOURCE_BINDINGS": "PRESENT",
+  "ORIGINAL_DOCX_ROUND_TRIP_REPRODUCIBILITY": "OPEN",
+  "SOURCE_DOCX_RETRIEVAL_AND_HASH_PROOF": "OPEN"
+ },
+ "source_risk_token": "SOURCE_REPRODUCIBILITY_OPEN_NONBLOCKING_FOR_T04_STORYBOARD_BUILD",
+ "open_after_this_stage": [
+  {
+   "open_id": "E-01",
+   "subject": "Q5 replacement options E and F",
+   "owner": "BARIAH",
+   "why_open": "CAIR wrote them under instruction; not confirmed."
+  },
+  {
+   "open_id": "E-02",
+   "subject": "Quiz answer key for all five items",
+   "owner": "BARIAH",
+   "why_open": "Recorded as 'cadangan jawapan sahaja' in the package."
+  },
+  {
+   "open_id": "E-03",
+   "subject": "The 'Q3' WhatsApp referent",
+   "owner": "BARIAH",
+   "why_open": "Ambiguous referent; the choice was delegated and unmade."
+  },
+  {
+   "open_id": "E-04",
+   "subject": "The pembajaan-to-racun wording correction on T04-S14",
+   "owner": "BARIAH",
+   "why_open": "Correction applied and recorded; confirmation outstanding."
+  },
+  {
+   "open_id": "E-05",
+   "subject": "Original module DOCX round trip and hash proof",
+   "owner": "FIRDAUS",
+   "why_open": "Not re-run in this session; non-blocking."
+  },
+  {
+   "open_id": "E-06",
+   "subject": "Individual asset subjects and styles",
+   "owner": "BARIAH",
+   "why_open": "The set was accepted; no artwork has been approved."
+  }
+ ],
+ "production_guards": {
+  "pptx_generated": 0,
+  "generator_touched": 0,
+  "mmd_production_started": 0,
+  "react_or_scorm_started": 0,
+  "authority_artifacts_modified": 0
+ }
+}

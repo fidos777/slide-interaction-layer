@@ -1,0 +1,74 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "boundary_rules": [
+  "Akta obligation",
+  "licensed-operator obligation",
+  "PPE mandate",
+  "SDS instruction",
+  "chemical-storage instruction",
+  "statutory spraying condition"
+ ],
+ "dialogue": {
+  "dialogue_id": "T04-DLG-FINAL",
+  "screen_id": "T04-S02",
+  "decision_id": "T04-DEC-C01",
+  "authority": "BARIAH_AHMAD",
+  "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+  "source_artifact": "AUTH-EV-01 §C, Cadangan Pindaan",
+  "characters": [
+   "Alya (Kontraktor Junior)",
+   "Encik Rahman (Mentor / Kontraktor Senior)"
+  ],
+  "cast_decision_id": "T04-DEC-C02",
+  "line_count": 4,
+  "superseded_line_count": 5,
+  "lines": [
+   {
+    "line_id": "T04-DLG-F01",
+    "speaker": "Alya",
+    "text_ms": "Encik Rahman, projek dah siap dibina. Kenapa kita masih perlu jaga taman ni setiap minggu?",
+    "position": 1,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "line_id": "T04-DLG-F02",
+    "speaker": "Encik Rahman",
+    "text_ms": "Sebab membina dan mengekalkan landskap dua benda berbeza, Alya. Tumbuhan kena disiram, dibaja dan dikawal perosak. Guna IPM, dan racun kimia pilihan terakhir. Struktur pula perlu dipantau supaya kekal berfungsi.",
+    "position": 2,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "line_id": "T04-DLG-F03",
+    "speaker": "Alya",
+    "text_ms": "Dan semua kena direkod untuk tempoh DLP?",
+    "position": 3,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   },
+   {
+    "line_id": "T04-DLG-F04",
+    "speaker": "Encik Rahman",
+    "text_ms": "Ya. Penyelenggaraan berjadual dan dokumentasi lengkap, itu yang melindungi kerja pembinaan kita dan mencerminkan kualiti kontraktor.",
+    "position": 4,
+    "authorship": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+    "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+   }
+  ],
+  "authority_critique_addressed": [
+   "Alya was too passive — she now opens with a challenge rather than a blank question.",
+   "Encik Rahman was reading a list — he now gives the principle and the reason.",
+   "The core learning was missing — watering, fertilising and IPM with chemical control last are now in the dialogue.",
+   "The close was passive — it now lands on impact: protecting the construction work and reflecting contractor quality."
+  ],
+  "banned_framing": {
+   "rule": "No soft-versus-hard landscape comparison in the dialogue.",
+   "decision_id": "T04-DEC-C03",
+   "authority_quote": "elak framing \"beza lembut vs kejur\" — modul cuma terangkan dua-dua secara berasingan, tak buat perbandingan"
+  },
+  "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+ }
+}

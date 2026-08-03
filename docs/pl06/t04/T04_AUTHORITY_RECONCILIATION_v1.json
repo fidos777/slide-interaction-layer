@@ -1,0 +1,170 @@
+{
+ "stage": "4.2F-B0.9",
+ "suite_id": "T04_AUTHORITY_DECISION_INGESTION_QA_v1",
+ "generated_by": "docs/pl06/t04/tools/t04_authority_emit_v1.py",
+ "superseded_facts": [
+  {
+   "fact_id": "SF-01",
+   "stale_claim": "21 screens",
+   "detect": [
+    "21 skrin",
+    "21 screens",
+    "21-screen"
+   ],
+   "now": "22 screens",
+   "decision_id": "T04-DEC-A14"
+  },
+  {
+   "fact_id": "SF-02",
+   "stale_claim": "the closing screen is Tamat Bahagian",
+   "detect": [
+    "Tamat Bahagian"
+   ],
+   "now": "Tamat Topik",
+   "decision_id": "T04-DEC-A22"
+  },
+  {
+   "fact_id": "SF-03",
+   "stale_claim": "five dialogue lines",
+   "detect": [
+    "lima baris perbualan",
+    "five dialogue lines"
+   ],
+   "now": "four dialogue lines",
+   "decision_id": "T04-DEC-C01"
+  },
+  {
+   "fact_id": "SF-04",
+   "stale_claim": "four Rumusan points",
+   "detect": [
+    "empat ayat rumusan",
+    "empat ayat",
+    "four Rumusan points"
+   ],
+   "now": "three Rumusan beats",
+   "decision_id": "T04-DEC-D01"
+  },
+  {
+   "fact_id": "SF-05",
+   "stale_claim": "the old Q5 option set with fertiliser distractors",
+   "detect": [
+    "Baja disimpan di tempat yang kering",
+    "Rekod pembajaan disimpan sebagai bukti kerja"
+   ],
+   "now": "the amended Q5 option set",
+   "decision_id": "T04-DEC-E08"
+  },
+  {
+   "fact_id": "SF-06",
+   "stale_claim": "the inserted screen adds a new unique asset",
+   "detect": [
+    "new S14 asset",
+    "aset baharu untuk S14"
+   ],
+   "now": "the inserted screen adds no unique asset; scope stays 41",
+   "decision_id": "T04-DEC-B01"
+  },
+  {
+   "fact_id": "SF-07",
+   "stale_claim": "the old T04-S14 to T04-S21 numbering",
+   "detect": [
+    "T04-S21 — Tamat Bahagian",
+    "T04-S20 | Kuiz",
+    "T04-S19 | Rumusan"
+   ],
+   "now": "T04-S15 to T04-S22",
+   "decision_id": "T04-DEC-A15"
+  }
+ ],
+ "superseded_artifacts": [
+  {
+   "path": "docs/pl06/t04/T04_PROPOSED_SCREEN_SEQUENCE_v1.json",
+   "superseded_by": "docs/pl06/t04/T04_FINAL_SCREEN_SEQUENCE_v2.json",
+   "stale_facts": [
+    "SF-01",
+    "SF-02",
+    "SF-07"
+   ]
+  },
+  {
+   "path": "docs/pl06/t04/T04_PROPOSED_SCREEN_SEQUENCE_v1.md",
+   "superseded_by": "docs/pl06/t04/T04_FINAL_SCREEN_SEQUENCE_v2.md",
+   "stale_facts": [
+    "SF-01",
+    "SF-02",
+    "SF-07"
+   ]
+  },
+  {
+   "path": "docs/pl06/t04/T04_SLIDE_2_DIALOGUE_CAIR_DRAFT_v1.json",
+   "superseded_by": "docs/pl06/t04/T04_FINAL_DIALOGUE_v1.json",
+   "stale_facts": [
+    "SF-03"
+   ]
+  },
+  {
+   "path": "docs/pl06/t04/T04_RUMUSAN_CAIR_ASSISTED_DRAFT_v3.json",
+   "superseded_by": "docs/pl06/t04/T04_FINAL_RUMUSAN_v1.json",
+   "stale_facts": [
+    "SF-04"
+   ]
+  },
+  {
+   "path": "docs/pl06/t04/T04_QUIZ_CAIR_ASSISTED_DRAFT_v1.json",
+   "superseded_by": "docs/pl06/t04/T04_FINAL_QUIZ_v2.json",
+   "stale_facts": [
+    "SF-05"
+   ]
+  },
+  {
+   "path": "docs/pl06/t04/T04_BARIAH_REVIEW_MODEL_v1.json",
+   "superseded_by": "docs/pl06/t04/T04_AUTHORITY_DECISION_REGISTER_v1.json",
+   "stale_facts": [
+    "SF-01",
+    "SF-02",
+    "SF-03",
+    "SF-04",
+    "SF-05",
+    "SF-07"
+   ]
+  },
+  {
+   "path": "reviews/storyboard-bariah/t04_bariah_review/T04_Pakej_Semakan_Bariah_v2.docx",
+   "superseded_by": "reviews/storyboard-bariah/t04_bariah_review/T04_Pakej_Semakan_Bariah_v3_vBariah.docx",
+   "stale_facts": [
+    "SF-01",
+    "SF-02",
+    "SF-03",
+    "SF-04",
+    "SF-05",
+    "SF-07"
+   ]
+  }
+ ],
+ "new_artifacts": [
+  "T04_AUTHORITY_EVIDENCE_REGISTER_v1.json",
+  "T04_AUTHORITY_EVIDENCE_REGISTER_v1.md",
+  "T04_AUTHORITY_CONFIRMATIONS_v1.json",
+  "T04_AUTHORITY_CONFIRMATIONS_v1.md",
+  "T04_AUTHORITY_DECISION_REGISTER_v1.json",
+  "T04_AUTHORITY_DECISION_REGISTER_v1.md",
+  "T04_FINAL_SCREEN_SEQUENCE_v2.json",
+  "T04_FINAL_SCREEN_SEQUENCE_v2.md",
+  "T04_FINAL_DIALOGUE_v1.json",
+  "T04_FINAL_DIALOGUE_v1.md",
+  "T04_FINAL_RUMUSAN_v1.json",
+  "T04_FINAL_RUMUSAN_v1.md",
+  "T04_QUIZ_GLOBAL_RULES_v1.json",
+  "T04_QUIZ_GLOBAL_RULES_v1.md",
+  "T04_FINAL_QUIZ_v2.json",
+  "T04_FINAL_QUIZ_v2.md",
+  "T04_FINAL_VISUAL_SCOPE_v1.json",
+  "T04_FINAL_VISUAL_SCOPE_v1.md",
+  "T04_SOURCE_STATUS_v1.json",
+  "T04_SOURCE_STATUS_v1.md",
+  "T04_FINAL_CONTENT_MODEL_v1.json",
+  "T04_FINAL_CONTENT_MODEL_v1.md",
+  "T04_AUTHORITY_RECONCILIATION_v1.json",
+  "T04_AUTHORITY_RECONCILIATION_v1.md"
+ ]
+}
