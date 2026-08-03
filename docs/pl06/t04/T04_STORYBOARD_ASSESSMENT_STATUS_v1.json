@@ -1,0 +1,173 @@
+{
+ "stage": "4.2F-B1",
+ "quiz_id": "T04-QZ-FINAL",
+ "screen_id": "T04-S21",
+ "composition": "4 MCQ dan 1 Multiple Response",
+ "pass_mark": "60 peratus",
+ "scope": "ALL_PLS_IN_KURSUS",
+ "item_count": 5,
+ "mcq_count": 4,
+ "multiple_response_count": 1,
+ "answer_key_status": "PROPOSED_NOT_FINAL",
+ "answer_key_is_bariah_direct_approved": false,
+ "items": [
+  {
+   "question_id": "T04-QZ-Q1",
+   "question_type": "MCQ",
+   "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "stem_is_authority_authored": true,
+   "option_marker_style": "LETTER",
+   "option_count": 4,
+   "proposed_key_positions": [
+    1
+   ],
+   "key_status": "PROPOSED_NOT_FINAL",
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-006",
+    "T04-ROW-007",
+    "T04-ROW-026",
+    "T04-ROW-027",
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "global_rules_applied": [
+    "QUIZ-GLOBAL-01"
+   ]
+  },
+  {
+   "question_id": "T04-QZ-Q2",
+   "question_type": "MCQ",
+   "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "stem_is_authority_authored": true,
+   "option_marker_style": "LETTER",
+   "option_count": 4,
+   "proposed_key_positions": [
+    1
+   ],
+   "key_status": "PROPOSED_NOT_FINAL",
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-010",
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "global_rules_applied": [
+    "QUIZ-GLOBAL-01"
+   ]
+  },
+  {
+   "question_id": "T04-QZ-Q3",
+   "question_type": "MCQ",
+   "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "stem_is_authority_authored": true,
+   "option_marker_style": "LETTER",
+   "option_count": 4,
+   "proposed_key_positions": [
+    4
+   ],
+   "key_status": "PROPOSED_NOT_FINAL",
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "global_rules_applied": [
+    "QUIZ-GLOBAL-01"
+   ]
+  },
+  {
+   "question_id": "T04-QZ-Q4",
+   "question_type": "MCQ",
+   "stem_provenance": "AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "stem_is_authority_authored": true,
+   "option_marker_style": "LETTER",
+   "option_count": 4,
+   "proposed_key_positions": [
+    2
+   ],
+   "key_status": "PROPOSED_NOT_FINAL",
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085",
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090",
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095",
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "global_rules_applied": [
+    "QUIZ-GLOBAL-01"
+   ]
+  },
+  {
+   "question_id": "T04-QZ-Q5",
+   "question_type": "MULTIPLE_RESPONSE",
+   "stem_provenance": "FIRDAUS_DIRECTED_PRESENTED_AS_FIXED_NOT_CONTESTED_BY_AUTHORITY",
+   "stem_is_authority_authored": false,
+   "option_marker_style": "CHECKBOX",
+   "option_count": 6,
+   "proposed_key_positions": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "key_status": "PROPOSED_NOT_FINAL",
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067",
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074",
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "global_rules_applied": [
+    "QUIZ-GLOBAL-01",
+    "QUIZ-GLOBAL-02"
+   ]
+  }
+ ],
+ "q5_distractor_provenance": "AUTHORITY_SELECTED_FROM_EXPLICIT_OPTIONS",
+ "q5_distractors_are_bariah_direct_authored": false,
+ "e07_status": "CLOSED",
+ "e07_selected_set": "SET_B",
+ "runtime_packet_generated": false,
+ "runtime_packet_note": "B1 produces a review storyboard, not a runtime assessment packet. No scoring logic, no answer key export, no SCORM interaction descriptors.",
+ "what_is_not_final": [
+  "the five answer keys — PROPOSED_NOT_FINAL, tracked as E-02",
+  "any scoring or remediation behaviour"
+ ]
+}

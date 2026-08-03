@@ -1,0 +1,1385 @@
+{
+ "stage": "4.2F-B1",
+ "rows": [
+  {
+   "screen_id": "T04-S03",
+   "row_id": "T04-ROW-001",
+   "learner_text": "PENJAGAAN DAN PENYELENGGARAAN",
+   "controlled_display_text": "PENJAGAAN DAN PENYELENGGARAAN",
+   "verbatim": true,
+   "module_page": 276,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S03",
+   "row_id": "T04-ROW-002",
+   "learner_text": "Secara umumnya, berikut ialah aliran proses penjagaan dan penyelenggaran yang terlibat di dalam kerja pembinaan landskap luar:",
+   "controlled_display_text": "Secara umumnya, berikut ialah aliran proses penjagaan dan penyelenggaran yang terlibat di dalam kerja pembinaan landskap luar:",
+   "verbatim": true,
+   "module_page": 276,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S04",
+   "row_id": "T04-ROW-004",
+   "learner_text": "Landskap Lembut",
+   "controlled_display_text": "Landskap Lembut",
+   "verbatim": true,
+   "module_page": 276,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S04",
+   "row_id": "T04-ROW-005",
+   "learner_text": "Landskap lembut merujuk kepada semua elemen hortikultur atau hidupan dalam sesebuah projek landskap. Ini termasuk pokok, palma, pokok renek, penutup bumi, dan rumput. Bagi seorang kontraktor, pengurusan landskap lembut bukan sahaja terhad kepada peringkat penanaman, tetapi merangkumi tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan (maintenance during construction) dan tempoh tanggungan kecacatan (Defect Liability Period - DLP).",
+   "controlled_display_text": "Landskap lembut merujuk kepada semua elemen hortikultur atau hidupan dalam sesebuah projek landskap. Ini termasuk pokok, palma, pokok renek, penutup bumi, dan rumput. Bagi seorang kontraktor, pengurusan landskap lembut bukan sahaja terhad kepada peringkat penanaman, tetapi merangkumi tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan (maintenance during construction) dan tempoh tanggungan kecacatan (Defect Liability Period - DLP).",
+   "verbatim": true,
+   "module_page": 276,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S05",
+   "row_id": "T04-ROW-006",
+   "learner_text": "Siram",
+   "controlled_display_text": "Siram",
+   "verbatim": true,
+   "module_page": 276,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Siram"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S05",
+   "row_id": "T04-ROW-007",
+   "learner_text": "Membekalkan kuantiti air yang mencukupi untuk kelangsungan hidup dan proses fisiologi tumbuhan (fotosintesis, penyerapan nutrien), terutamanya bagi tanaman yang baru ditanam dan belum matang.",
+   "controlled_display_text": "Membekalkan kuantiti air yang mencukupi untuk kelangsungan hidup dan proses fisiologi tumbuhan (fotosintesis, penyerapan nutrien), terutamanya bagi tanaman yang baru ditanam dan belum matang.",
+   "verbatim": true,
+   "module_page": 276,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Siram"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-008",
+   "learner_text": "Kaedah Pelaksanaan",
+   "controlled_display_text": "Kaedah Pelaksanaan",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kaedah Pelaksanaan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-009",
+   "learner_text": "Penyiraman Manual",
+   "controlled_display_text": "Penyiraman Manual",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Penyiraman Manual"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-010",
+   "learner_text": "Menggunakan hos getah dengan muncung semburan (nozzle). Kaedah ini fleksibel tetapi memerlukan tenaga kerja yang ramai dan kurang konsisten.",
+   "controlled_display_text": "Menggunakan hos getah dengan muncung semburan (nozzle). Kaedah ini fleksibel tetapi memerlukan tenaga kerja yang ramai dan kurang konsisten.",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Penyiraman Manual"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-011",
+   "learner_text": "Sistem Pengairan Automatik",
+   "controlled_display_text": "Sistem Pengairan Automatik",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Sistem Pengairan Automatik"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-012",
+   "learner_text": "Sistem Semburan (Sprinkler System)",
+   "controlled_display_text": "Sistem Semburan (Sprinkler System)",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Sistem Pengairan Automatik"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-013",
+   "learner_text": "Sesuai untuk kawasan rumput yang luas.",
+   "controlled_display_text": "Sesuai untuk kawasan rumput yang luas.",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Sistem Pengairan Automatik"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-014",
+   "learner_text": "Sistem Titis (Drip Irrigation System)",
+   "controlled_display_text": "Sistem Titis (Drip Irrigation System)",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Sistem Pengairan Automatik"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S06",
+   "row_id": "T04-ROW-015",
+   "learner_text": "Sangat efisien untuk pokok individu atau pokok renek kerana ia membekalkan air terus ke zon akar, mengurangkan pembaziran air melalui penyejatan.",
+   "controlled_display_text": "Sangat efisien untuk pokok individu atau pokok renek kerana ia membekalkan air terus ke zon akar, mengurangkan pembaziran air melalui penyejatan.",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Sistem Pengairan Automatik"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-016",
+   "learner_text": "Aspek Pengurusan untuk Kontraktor:",
+   "controlled_display_text": "Aspek Pengurusan untuk Kontraktor:",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Aspek Pengurusan untuk Kontraktor:"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-017",
+   "learner_text": "Jadual Penyiraman",
+   "controlled_display_text": "Jadual Penyiraman",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Jadual Penyiraman"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-018",
+   "learner_text": "Membangunkan jadual kerja penyiraman yang sistematik. Amalan terbaik adalah menyiram pada awal pagi atau lewat petang untuk meminimumkan kehilangan air akibat penyejatan.",
+   "controlled_display_text": "Membangunkan jadual kerja penyiraman yang sistematik. Amalan terbaik adalah menyiram pada awal pagi atau lewat petang untuk meminimumkan kehilangan air akibat penyejatan.",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Jadual Penyiraman"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-019",
+   "learner_text": "Kekerapan dan kuantiti siraman mesti disesuaikan mengikut jenis tanaman, keadaan cuaca, dan peringkat tumbesaran. Tanaman baru memerlukan siraman lebih kerap.",
+   "controlled_display_text": "Kekerapan dan kuantiti siraman mesti disesuaikan mengikut jenis tanaman, keadaan cuaca, dan peringkat tumbesaran. Tanaman baru memerlukan siraman lebih kerap.",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Jadual Penyiraman"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-020",
+   "learner_text": "Pengurusan Sumber Air",
+   "controlled_display_text": "Pengurusan Sumber Air",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Sumber Air"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-021",
+   "learner_text": "Memastikan sumber air mencukupi dan tekanan air memadai untuk keseluruhan tapak. Sekiranya menggunakan sistem automatik, kontraktor bertanggungjawab untuk memeriksa, menguji, dan membaiki sebarang kerosakan seperti muncung tersumbat atau kebocoran paip.",
+   "controlled_display_text": "Memastikan sumber air mencukupi dan tekanan air memadai untuk keseluruhan tapak. Sekiranya menggunakan sistem automatik, kontraktor bertanggungjawab untuk memeriksa, menguji, dan membaiki sebarang kerosakan seperti muncung tersumbat atau kebocoran paip.",
+   "verbatim": true,
+   "module_page": 277,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Sumber Air"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-022",
+   "learner_text": "Pemantauan & Pelaporan",
+   "controlled_display_text": "Pemantauan & Pelaporan",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pemantauan & Pelaporan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-023",
+   "learner_text": "Pekerja perlu dilatih untuk mengenal pasti tanda-tanda kekurangan air (daun layu, kering) atau terlebih air (daun kuning, akar reput). Aktiviti penyiraman perlu direkodkan dalam laporan harian tapak sebagai bukti pelaksanaan kerja.",
+   "controlled_display_text": "Pekerja perlu dilatih untuk mengenal pasti tanda-tanda kekurangan air (daun layu, kering) atau terlebih air (daun kuning, akar reput). Aktiviti penyiraman perlu direkodkan dalam laporan harian tapak sebagai bukti pelaksanaan kerja.",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pemantauan & Pelaporan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-024",
+   "learner_text": "Kecekapan Kos",
+   "controlled_display_text": "Kecekapan Kos",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kecekapan Kos"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S07",
+   "row_id": "T04-ROW-025",
+   "learner_text": "Mengoptimumkan kaedah penyiraman untuk mengawal kos bil air, terutamanya dalam projek berskala besar.",
+   "controlled_display_text": "Mengoptimumkan kaedah penyiraman untuk mengawal kos bil air, terutamanya dalam projek berskala besar.",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kecekapan Kos"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S08",
+   "row_id": "T04-ROW-026",
+   "learner_text": "Baja",
+   "controlled_display_text": "Baja",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Baja"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S08",
+   "row_id": "T04-ROW-027",
+   "learner_text": "Membekalkan nutrien penting yang mungkin kurang di dalam tanah untuk merangsang pertumbuhan yang sihat, pengeluaran bunga/buah, dan meningkatkan daya tahan tumbuhan terhadap penyakit.",
+   "controlled_display_text": "Membekalkan nutrien penting yang mungkin kurang di dalam tanah untuk merangsang pertumbuhan yang sihat, pengeluaran bunga/buah, dan meningkatkan daya tahan tumbuhan terhadap penyakit.",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Baja"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-028",
+   "learner_text": "Kaedah Pelaksanaan",
+   "controlled_display_text": "Kaedah Pelaksanaan",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kaedah Pelaksanaan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-029",
+   "learner_text": "Pembajaan Tabur (Broadcasting)",
+   "controlled_display_text": "Pembajaan Tabur (Broadcasting)",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pembajaan Tabur (Broadcasting)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-030",
+   "learner_text": "Menabur baja butiran (granular) secara rata di sekeliling zon akar tumbuhan atau di atas permukaan rumput.",
+   "controlled_display_text": "Menabur baja butiran (granular) secara rata di sekeliling zon akar tumbuhan atau di atas permukaan rumput.",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pembajaan Tabur (Broadcasting)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-031",
+   "learner_text": "Pembajaan Poket (Pocketing)",
+   "controlled_display_text": "Pembajaan Poket (Pocketing)",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pembajaan Poket (Pocketing)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-032",
+   "learner_text": "Menggali lubang-lubang kecil di sekeliling zon akar pokok, memasukkan baja, dan menutupnya kembali. Kaedah ini lebih berkesan untuk pokok besar.",
+   "controlled_display_text": "Menggali lubang-lubang kecil di sekeliling zon akar pokok, memasukkan baja, dan menutupnya kembali. Kaedah ini lebih berkesan untuk pokok besar.",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pembajaan Poket (Pocketing)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-033",
+   "learner_text": "Semburan Folia (Foliar Spray)",
+   "controlled_display_text": "Semburan Folia (Foliar Spray)",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Semburan Folia (Foliar Spray)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S09",
+   "row_id": "T04-ROW-034",
+   "learner_text": "Menyembur baja cecair terus ke daun untuk penyerapan nutrien yang pantas.",
+   "controlled_display_text": "Menyembur baja cecair terus ke daun untuk penyerapan nutrien yang pantas.",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Semburan Folia (Foliar Spray)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-035",
+   "learner_text": "Aspek Pengurusan untuk Kontraktor",
+   "controlled_display_text": "Aspek Pengurusan untuk Kontraktor",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Aspek Pengurusan untuk Kontraktor"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-036",
+   "learner_text": "Program Pembajaan",
+   "controlled_display_text": "Program Pembajaan",
+   "verbatim": true,
+   "module_page": 278,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Program Pembajaan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-037",
+   "learner_text": "Merancang program pembajaan yang mematuhi spesifikasi kontrak. Program ini perlu menyatakan jenis baja (organik atau kimia), kadar NPK, kuantiti, dan kekerapan aplikasi untuk setiap jenis tanaman.",
+   "controlled_display_text": "Merancang program pembajaan yang mematuhi spesifikasi kontrak. Program ini perlu menyatakan jenis baja (organik atau kimia), kadar NPK, kuantiti, dan kekerapan aplikasi untuk setiap jenis tanaman.",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Program Pembajaan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-038",
+   "learner_text": "Pematuhan Spesifikasi",
+   "controlled_display_text": "Pematuhan Spesifikasi",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pematuhan Spesifikasi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-039",
+   "learner_text": "Memastikan baja yang digunakan adalah seperti yang ditetapkan dalam dokumen kontrak atau diluluskan oleh Pegawai Penguasa (S.O.). Penggunaan baja yang salah boleh merosakkan tanaman atau tidak memberi kesan.",
+   "controlled_display_text": "Memastikan baja yang digunakan adalah seperti yang ditetapkan dalam dokumen kontrak atau diluluskan oleh Pegawai Penguasa (S.O.). Penggunaan baja yang salah boleh merosakkan tanaman atau tidak memberi kesan.",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pematuhan Spesifikasi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-040",
+   "learner_text": "Pengurusan Stok dan Penyimpanan",
+   "controlled_display_text": "Pengurusan Stok dan Penyimpanan",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Stok dan Penyimpanan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-041",
+   "learner_text": "Baja mesti disimpan di tempat yang kering, selamat, dan jauh dari sumber air untuk mengelakkan pencemaran.",
+   "controlled_display_text": "Baja mesti disimpan di tempat yang kering, selamat, dan jauh dari sumber air untuk mengelakkan pencemaran.",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Stok dan Penyimpanan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-042",
+   "learner_text": "Keselamatan Pekerja",
+   "controlled_display_text": "Keselamatan Pekerja",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan Pekerja"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-043",
+   "learner_text": "Memastikan pekerja menggunakan Peralatan Pelindung Diri (PPE) yang sesuai seperti sarung tangan dan topeng muka semasa mengendalikan baja kimia.",
+   "controlled_display_text": "Memastikan pekerja menggunakan Peralatan Pelindung Diri (PPE) yang sesuai seperti sarung tangan dan topeng muka semasa mengendalikan baja kimia.",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan Pekerja"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-044",
+   "learner_text": "Dokumentasi",
+   "controlled_display_text": "Dokumentasi",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Dokumentasi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S10",
+   "row_id": "T04-ROW-045",
+   "learner_text": "Merekodkan tarikh, jenis baja, kuantiti yang digunakan, dan kawasan yang telah dibaja. Ini penting sebagai bukti kerja untuk tuntutan bayaran dan rujukan semasa tempoh DLP.",
+   "controlled_display_text": "Merekodkan tarikh, jenis baja, kuantiti yang digunakan, dan kawasan yang telah dibaja. Ini penting sebagai bukti kerja untuk tuntutan bayaran dan rujukan semasa tempoh DLP.",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Dokumentasi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S11",
+   "row_id": "T04-ROW-046",
+   "learner_text": "Racun",
+   "controlled_display_text": "Racun",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S11",
+   "row_id": "T04-ROW-047",
+   "learner_text": "Mengawal dan mengurus serangan perosak (serangga), penyakit (kulat), dan pertumbuhan rumpai yang boleh menjejaskan kesihatan dan estetika landskap lembut. Konsep utama yang diamalkan ialah Pengurusan Perosak Bersepadu (Integrated Pest Management – IPM). Sebagai kontraktor profesional, adalah penting untuk melaksanakan konsep IPM, di mana penggunaan racun kimia hanya dijadikan pilihan terakhir.",
+   "controlled_display_text": "Mengawal dan mengurus serangan perosak (serangga), penyakit (kulat), dan pertumbuhan rumpai yang boleh menjejaskan kesihatan dan estetika landskap lembut. Konsep utama yang diamalkan ialah Pengurusan Perosak Bersepadu (Integrated Pest Management – IPM). Sebagai kontraktor profesional, adalah penting untuk melaksanakan konsep IPM, di mana penggunaan racun kimia hanya dijadikan pilihan terakhir.",
+   "verbatim": true,
+   "module_page": 279,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-048",
+   "learner_text": "IPM memberi keutamaan kepada:",
+   "controlled_display_text": "IPM memberi keutamaan kepada:",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "IPM memberi keutamaan kepada:"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-049",
+   "learner_text": "Kawalan Kultur",
+   "controlled_display_text": "Kawalan Kultur",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Kultur"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-050",
+   "learner_text": "Amalan penyelenggaraan yang baik (penyiraman, pembajaan seimbang).",
+   "controlled_display_text": "Amalan penyelenggaraan yang baik (penyiraman, pembajaan seimbang).",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Kultur"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-051",
+   "learner_text": "Kawalan Fizikal",
+   "controlled_display_text": "Kawalan Fizikal",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Fizikal"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-052",
+   "learner_text": "Membuang bahagian berpenyakit secara manual, mencabut rumpai.",
+   "controlled_display_text": "Membuang bahagian berpenyakit secara manual, mencabut rumpai.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Fizikal"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-053",
+   "learner_text": "Kawalan Biologi",
+   "controlled_display_text": "Kawalan Biologi",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Biologi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-054",
+   "learner_text": "Menggunakan musuh semula jadi kepada perosak.",
+   "controlled_display_text": "Menggunakan musuh semula jadi kepada perosak.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Biologi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-055",
+   "learner_text": "Kawalan Kimia",
+   "controlled_display_text": "Kawalan Kimia",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Kimia"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S12",
+   "row_id": "T04-ROW-056",
+   "learner_text": "Penggunaan racun secara terkawal dan bersasar.",
+   "controlled_display_text": "Penggunaan racun secara terkawal dan bersasar.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Kawalan Kimia"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-057",
+   "learner_text": "Jenis Racun",
+   "controlled_display_text": "Jenis Racun",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Jenis Racun"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-058",
+   "learner_text": "Racun Serangga (Insecticide)",
+   "controlled_display_text": "Racun Serangga (Insecticide)",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun Serangga (Insecticide)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-059",
+   "learner_text": "Untuk mengawal serangga perosak.",
+   "controlled_display_text": "Untuk mengawal serangga perosak.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun Serangga (Insecticide)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-060",
+   "learner_text": "Racun Kulat (Fungicide)",
+   "controlled_display_text": "Racun Kulat (Fungicide)",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun Kulat (Fungicide)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-061",
+   "learner_text": "Untuk mengawal penyakit disebabkan kulat.",
+   "controlled_display_text": "Untuk mengawal penyakit disebabkan kulat.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun Kulat (Fungicide)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-062",
+   "learner_text": "Racun Rumpai (Herbicide)",
+   "controlled_display_text": "Racun Rumpai (Herbicide)",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun Rumpai (Herbicide)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S13",
+   "row_id": "T04-ROW-063",
+   "learner_text": "Untuk mengawal pertumbuhan rumpai.",
+   "controlled_display_text": "Untuk mengawal pertumbuhan rumpai.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Racun Rumpai (Herbicide)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S14",
+   "row_id": "T04-ROW-064",
+   "learner_text": "Aspek Pengurusan untuk Kontraktor:",
+   "controlled_display_text": "Aspek Pengurusan untuk Kontraktor:",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Aspek Pengurusan untuk Kontraktor:"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S15",
+   "row_id": "T04-ROW-065",
+   "learner_text": "Perundangan dan Pelesenan",
+   "controlled_display_text": "Perundangan dan Pelesenan",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Perundangan dan Pelesenan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S15",
+   "row_id": "T04-ROW-066",
+   "learner_text": "Penggunaan racun kimia dikawal oleh Akta Racun Makhluk Perosak 1974.",
+   "controlled_display_text": "Penggunaan racun kimia dikawal oleh Akta Racun Makhluk Perosak 1974.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Perundangan dan Pelesenan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S15",
+   "row_id": "T04-ROW-067",
+   "learner_text": "Kontraktor mesti memastikan pekerja yang menjalankan semburan racun adalah pengendali racun berlesen atau sekurang-kurangnya telah menerima latihan dan di bawah seliaan pemegang lesen. Ini adalah satu kewajipan undang-undang.",
+   "controlled_display_text": "Kontraktor mesti memastikan pekerja yang menjalankan semburan racun adalah pengendali racun berlesen atau sekurang-kurangnya telah menerima latihan dan di bawah seliaan pemegang lesen. Ini adalah satu kewajipan undang-undang.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Perundangan dan Pelesenan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-068",
+   "learner_text": "Keselamatan dan Kesihatan (HSE)",
+   "controlled_display_text": "Keselamatan dan Kesihatan (HSE)",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-069",
+   "learner_text": "PPE Lengkap",
+   "controlled_display_text": "PPE Lengkap",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-070",
+   "learner_text": "Memastikan pekerja memakai PPE yang lengkap dan bersesuaian (topeng pernafasan, cermin mata keselamatan, sarung tangan kimia, sut pelindung).",
+   "controlled_display_text": "Memastikan pekerja memakai PPE yang lengkap dan bersesuaian (topeng pernafasan, cermin mata keselamatan, sarung tangan kimia, sut pelindung).",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-071",
+   "learner_text": "Penyimpanan & Pelupusan",
+   "controlled_display_text": "Penyimpanan & Pelupusan",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-072",
+   "learner_text": "Racun mesti disimpan di dalam stor berkunci, berlabel, dan mempunyai pengudaraan yang baik. Bekas racun kosong tidak boleh digunakan semula dan mesti dilupuskan mengikut peraturan Jabatan Alam Sekitar (JAS).",
+   "controlled_display_text": "Racun mesti disimpan di dalam stor berkunci, berlabel, dan mempunyai pengudaraan yang baik. Bekas racun kosong tidak boleh digunakan semula dan mesti dilupuskan mengikut peraturan Jabatan Alam Sekitar (JAS).",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-073",
+   "learner_text": "Helaian Data Keselamatan (SDS)",
+   "controlled_display_text": "Helaian Data Keselamatan (SDS)",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S16",
+   "row_id": "T04-ROW-074",
+   "learner_text": "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun yang digunakan di tapak dan memastikan pekerja memahaminya.",
+   "controlled_display_text": "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun yang digunakan di tapak dan memastikan pekerja memahaminya.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Keselamatan dan Kesihatan (HSE)"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S17",
+   "row_id": "T04-ROW-075",
+   "learner_text": "Pengurusan Risiko",
+   "controlled_display_text": "Pengurusan Risiko",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Risiko"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S17",
+   "row_id": "T04-ROW-076",
+   "learner_text": "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak berangin) untuk mengelakkan spray drift.",
+   "controlled_display_text": "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak berangin) untuk mengelakkan spray drift.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Risiko"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S17",
+   "row_id": "T04-ROW-077",
+   "learner_text": "Maklumkan kepada pihak pengurusan bangunan atau penduduk sekitar sebelum aktiviti semburan dijalankan. Letakkan papan tanda amaran di kawasan kerja.",
+   "controlled_display_text": "Maklumkan kepada pihak pengurusan bangunan atau penduduk sekitar sebelum aktiviti semburan dijalankan. Letakkan papan tanda amaran di kawasan kerja.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Risiko"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S17",
+   "row_id": "T04-ROW-078",
+   "learner_text": "Pelaporan: Menyimpan rekod lengkap bagi setiap aktiviti semburan, termasuk: tarikh, lokasi, jenis racun, kadar bancuhan, nama pengendali, dan keadaan cuaca. Rekod ini amat penting untuk tujuan audit keselamatan dan liabiliti.",
+   "controlled_display_text": "Pelaporan: Menyimpan rekod lengkap bagi setiap aktiviti semburan, termasuk: tarikh, lokasi, jenis racun, kadar bancuhan, nama pengendali, dan keadaan cuaca. Rekod ini amat penting untuk tujuan audit keselamatan dan liabiliti.",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Lembut",
+    "Pengurusan Risiko"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S18",
+   "row_id": "T04-ROW-079",
+   "learner_text": "Landskap Kejur",
+   "controlled_display_text": "Landskap Kejur",
+   "verbatim": true,
+   "module_page": 280,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S18",
+   "row_id": "T04-ROW-080",
+   "learner_text": "Landskap Kejur merujuk kepada semua elemen binaan yang bukan hidup dan bersifat kekal dalam reka bentuk landskap. Ia membentuk struktur, rangka, dan 'tulang belakang' bagi sesuatu ruang luaran, serta menyediakan fungsi, bentuk, dan ketahanan. Elemen landskap kejur dibina untuk memenuhi empat fungsi utama:",
+   "controlled_display_text": "Landskap Kejur merujuk kepada semua elemen binaan yang bukan hidup dan bersifat kekal dalam reka bentuk landskap. Ia membentuk struktur, rangka, dan 'tulang belakang' bagi sesuatu ruang luaran, serta menyediakan fungsi, bentuk, dan ketahanan. Elemen landskap kejur dibina untuk memenuhi empat fungsi utama:",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-081",
+   "learner_text": "Pengurusan Ruang dan Sirkulasi",
+   "controlled_display_text": "Pengurusan Ruang dan Sirkulasi",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Pengurusan Ruang dan Sirkulasi"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-082",
+   "learner_text": "Membentuk Ruang",
+   "controlled_display_text": "Membentuk Ruang",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Membentuk Ruang"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-083",
+   "learner_text": "Dinding, pagar, dan perubahan aras lantai digunakan untuk membahagikan ruang luaran kepada \"bilik\" yang berbeza (cth., kawasan rehat, kawasan permainan).",
+   "controlled_display_text": "Dinding, pagar, dan perubahan aras lantai digunakan untuk membahagikan ruang luaran kepada \"bilik\" yang berbeza (cth., kawasan rehat, kawasan permainan).",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Membentuk Ruang"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-084",
+   "learner_text": "Laluan Pergerakan",
+   "controlled_display_text": "Laluan Pergerakan",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Laluan Pergerakan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-085",
+   "learner_text": "Lorong pejalan kaki (pathways), jalan masuk (driveways), dan tangga menyediakan laluan yang selamat dan jelas untuk pergerakan manusia dan kenderaan.",
+   "controlled_display_text": "Lorong pejalan kaki (pathways), jalan masuk (driveways), dan tangga menyediakan laluan yang selamat dan jelas untuk pergerakan manusia dan kenderaan.",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Laluan Pergerakan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-086",
+   "learner_text": "Fungsi Struktur dan Kejuruteraan",
+   "controlled_display_text": "Fungsi Struktur dan Kejuruteraan",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Fungsi Struktur dan Kejuruteraan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-087",
+   "learner_text": "Menstabilkan Tanah",
+   "controlled_display_text": "Menstabilkan Tanah",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menstabilkan Tanah"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-088",
+   "learner_text": "Dinding penahan (retaining walls) dibina untuk menahan tanah di kawasan bercerun, mengelakkan hakisan dan tanah runtuh.",
+   "controlled_display_text": "Dinding penahan (retaining walls) dibina untuk menahan tanah di kawasan bercerun, mengelakkan hakisan dan tanah runtuh.",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menstabilkan Tanah"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-089",
+   "learner_text": "Pengurusan Air",
+   "controlled_display_text": "Pengurusan Air",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Pengurusan Air"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-090",
+   "learner_text": "Parit, longkang, dan permukaan yang dicerunkan dengan betul (properly graded surfaces) adalah penting untuk menguruskan aliran air larian permukaan.",
+   "controlled_display_text": "Parit, longkang, dan permukaan yang dicerunkan dengan betul (properly graded surfaces) adalah penting untuk menguruskan aliran air larian permukaan.",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Pengurusan Air"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-091",
+   "learner_text": "Kebolehgunaan dan Kemudahan",
+   "controlled_display_text": "Kebolehgunaan dan Kemudahan",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Kebolehgunaan dan Kemudahan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-092",
+   "learner_text": "Menyediakan Permukaan Rata",
+   "controlled_display_text": "Menyediakan Permukaan Rata",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menyediakan Permukaan Rata"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-093",
+   "learner_text": "Laman (patios), dek (decks), dan dataran (plazas) menyediakan permukaan yang stabil dan selesa untuk aktiviti seperti meletakkan perabot luar, barbeku, atau sebagai ruang perhimpunan.",
+   "controlled_display_text": "Laman (patios), dek (decks), dan dataran (plazas) menyediakan permukaan yang stabil dan selesa untuk aktiviti seperti meletakkan perabot luar, barbeku, atau sebagai ruang perhimpunan.",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menyediakan Permukaan Rata"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-094",
+   "learner_text": "Menyediakan Kemudahan",
+   "controlled_display_text": "Menyediakan Kemudahan",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menyediakan Kemudahan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-095",
+   "learner_text": "Struktur seperti wakaf, gazebo, pergola, bangku, dan lampu landskap meningkatkan keselesaan dan kebolehgunaan ruang pada waktu yang berbeza.",
+   "controlled_display_text": "Struktur seperti wakaf, gazebo, pergola, bangku, dan lampu landskap meningkatkan keselesaan dan kebolehgunaan ruang pada waktu yang berbeza.",
+   "verbatim": true,
+   "module_page": 281,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menyediakan Kemudahan"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-096",
+   "learner_text": "Estetika dan Reka Bentuk",
+   "controlled_display_text": "Estetika dan Reka Bentuk",
+   "verbatim": true,
+   "module_page": 282,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Estetika dan Reka Bentuk"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-097",
+   "learner_text": "Menambah Tekstur, Warna, dan Corak",
+   "controlled_display_text": "Menambah Tekstur, Warna, dan Corak",
+   "verbatim": true,
+   "module_page": 282,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menambah Tekstur, Warna, dan Corak"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-098",
+   "learner_text": "Penggunaan bahan seperti batu, kayu, dan konkrit menambah dimensi visual kepada landskap.",
+   "controlled_display_text": "Penggunaan bahan seperti batu, kayu, dan konkrit menambah dimensi visual kepada landskap.",
+   "verbatim": true,
+   "module_page": 282,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Menambah Tekstur, Warna, dan Corak"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-099",
+   "learner_text": "Mencipta Kontras",
+   "controlled_display_text": "Mencipta Kontras",
+   "verbatim": true,
+   "module_page": 282,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Mencipta Kontras"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  },
+  {
+   "screen_id": "T04-S19",
+   "row_id": "T04-ROW-100",
+   "learner_text": "Elemen kejur memberikan kontras yang menarik kepada kelembutan elemen tumbuhan.",
+   "controlled_display_text": "Elemen kejur memberikan kontras yang menarik kepada kelembutan elemen tumbuhan.",
+   "verbatim": true,
+   "module_page": 282,
+   "heading_path": [
+    "PENJAAGAAN DAN PENYELENGGARAAN",
+    "Landskap Kejur",
+    "Mencipta Kontras"
+   ],
+   "authority_class": "MODULE_SOURCE_ATTESTED"
+  }
+ ],
+ "row_count": 99,
+ "non_verbatim": []
+}

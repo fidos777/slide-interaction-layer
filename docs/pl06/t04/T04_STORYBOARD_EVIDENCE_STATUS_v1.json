@@ -1,0 +1,70 @@
+{
+ "stage": "4.2F-B1",
+ "primary_authority_evidence": {
+  "evidence_id": "AUTH-EV-01",
+  "filename": "T04_Pakej_Semakan_Bariah_v3_vBariah.docx",
+  "sha256": "2eea2101e8976b17137e3607aa3817aefd56b09bc2f2c397ca0fffef9bb4bd59",
+  "byte_size": 36105,
+  "custody": "FROZEN_IN_REPOSITORY",
+  "verified": true
+ },
+ "supplementary_authority_evidence": {
+  "evidence_id": "AUTH-EV-02",
+  "filename": "WhatsApp screenshot",
+  "sha256": "NOT_SUPPLIED",
+  "byte_size": "NOT_SUPPLIED",
+  "custody": "FAILED_NO_BINARY_SUPPLIED",
+  "verified": false,
+  "attempts": 2
+ },
+ "e07_closure": {
+  "status": "CLOSED",
+  "authority": "BARIAH_DIRECT_SELECTION",
+  "evidence_class": "AUTHORITY_EXCHANGE_READ_FROM_RENDERED_IMAGE_WITHOUT_BINARY_CUSTODY",
+  "custody_status": "CUSTODY_UNVERIFIED_NO_BINARY"
+ },
+ "release_decision": [
+  "T04_ASSESSMENT_DIVERGENCE_CLOSED",
+  "STORYBOARD_LAYOUT_READY",
+  "SUPPLEMENTARY_CNF_MAPPING_PARTIALLY_OPEN"
+ ],
+ "open_items": [
+  {
+   "open_id": "E-02",
+   "subject": "Quiz answer key for all five items",
+   "owner": "BARIAH",
+   "why_open": "Recorded as 'cadangan jawapan sahaja' in the package. The E-07 forced choice explicitly left the four correct answers untouched and asked only about the two incorrect options, so it does not close this."
+  },
+  {
+   "open_id": "E-04",
+   "subject": "The pembajaan-to-racun wording correction on T04-S14",
+   "owner": "BARIAH",
+   "why_open": "Correction applied and recorded; confirmation outstanding."
+  },
+  {
+   "open_id": "E-05",
+   "subject": "Original module DOCX round trip and hash proof",
+   "owner": "FIRDAUS",
+   "why_open": "Not re-run in this session; non-blocking."
+  },
+  {
+   "open_id": "E-06",
+   "subject": "Individual asset subjects and styles",
+   "owner": "BARIAH",
+   "why_open": "The set was accepted; no artwork has been approved."
+  },
+  {
+   "open_id": "E-08",
+   "subject": "Supplementary screenshot binary custody",
+   "owner": "FIRDAUS",
+   "raised_by": "B091-BLOCK-01",
+   "status": "OPEN_SECOND_ATTEMPT_FAILED"
+  }
+ ],
+ "source_status": {
+  "CONTROLLED_EXTRACT_SOURCE_BINDINGS": "PRESENT",
+  "ORIGINAL_DOCX_ROUND_TRIP_REPRODUCIBILITY": "OPEN",
+  "SOURCE_DOCX_RETRIEVAL_AND_HASH_PROOF": "OPEN"
+ },
+ "source_risk_token": "SOURCE_REPRODUCIBILITY_OPEN_NONBLOCKING_FOR_T04_STORYBOARD_BUILD"
+}

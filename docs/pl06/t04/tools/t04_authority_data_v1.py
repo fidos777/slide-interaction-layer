@@ -480,7 +480,7 @@ _DECISIONS = [
     ("T04-DEC-B04", _A, "The three do-not-reuse items are confirmed on both grounds",
      "Saya sahkan item \"tidak boleh dikongsi\" (PPE baja, PPE racun, stok baja vs stok "
      "racun) memang memerlukan aset berasingan kerana visualnya berbeza secara ketara.",
-     "B", ["T04-VO-025", "T04-VO-026", "T04-VO-039"], _SCOPE_T04,
+     "B", ["T04-VO-025", "T04-VO-026", "T04-VO-040"], _SCOPE_T04,
      "Each of the three keeps a separate asset, confirmed instructionally and for "
      "production."),
     ("T04-DEC-B05", _A, "Instructional judgement overrides production optimisation",
@@ -493,7 +493,7 @@ _DECISIONS = [
     ("T04-DEC-B06", _IX, "Each do-not-reuse item must carry a decision-basis line",
      "tambah satu baris asas keputusan pada setiap \"tidak boleh dikongsi\" — sama ada atas "
      "alasan instruksional, produksi, atau kedua-dua — supaya jejak keputusan jelas",
-     "B", ["T04-VO-025", "T04-VO-026", "T04-VO-039"], _SCOPE_T04,
+     "B", ["T04-VO-025", "T04-VO-026", "T04-VO-040"], _SCOPE_T04,
      "Every do-not-reuse item now carries decision_basis. All three are "
      "BOTH_INSTRUCTIONAL_AND_PRODUCTION, following T04-DEC-B04."),
     # ---- Section C: dialogue ------------------------------------------------------------
@@ -648,6 +648,37 @@ def unsettled_decisions():
 # ==========================================================================================
 # AUTHORITY WORDING CORRECTIONS — applied, never silent
 # ==========================================================================================
+# A typed-identifier correction, distinct from the wording corrections below: nothing the
+# authority wrote was changed, only an internal ID that pointed at the wrong obligation.
+IDENTIFIER_CORRECTIONS = [
+    dict(
+        correction_id="T04-COR-05",
+        field="do-not-reuse register, HSE item obligation ID",
+        as_recorded="T04-VO-039",
+        as_corrected="T04-VO-040",
+        found_in_stage="4.2F-B1",
+        introduced_in_stage="4.2F-B0.9",
+        basis=(
+            "T04-VO-039 is the Perundangan dan Pelesenan obligation (rows 65-67). The "
+            "obligation whose subject is the pesticide PPE set is T04-VO-040 (rows 68-74), "
+            "and the Stage 4.2F-B0.8 closure already carries reuse_policy = DO_NOT_REUSE on "
+            "it. The register had a hand-typed ID that was never cross-checked."),
+        authority_wording_changed=False,
+        what_it_would_have_broken=(
+            "The storyboard would have shown the do-not-reuse restriction on the legal screen "
+            "and not on the PPE screen — the exact confusion Bariah's ruling exists to "
+            "prevent."),
+        detection="Cross-checking the typed list against the closure's own reuse_policy while "
+                  "building the B1 visual mapping.",
+        status="APPLIED",
+        recurrence_note=(
+            "Second occurrence of this defect class. Stage 4.2F-B0.6 had five hand-typed "
+            "obligation IDs in the legal sheet, fixed then by deriving from an index. The "
+            "lesson did not carry across to this register. It does now: a gate derives the "
+            "do-not-reuse ID set from the closure and compares."),
+    ),
+]
+
 AUTHORITY_WORDING_CORRECTIONS = [
     dict(
         correction_id="T04-COR-01",
@@ -1268,6 +1299,10 @@ VISUAL_SCOPE_STATUS = "ACCEPTED_AS_A_SET_WITH_CONDITIONS"
 DECISION_BASIS_VALUES = ["INSTRUCTIONAL_ONLY", "PRODUCTION_ONLY",
                          "BOTH_INSTRUCTIONAL_AND_PRODUCTION"]
 
+# CORRECTED IN STAGE 4.2F-B1 (T04-COR-05). The HSE item was typed here as T04-VO-039, which
+# is actually "Perundangan dan Pelesenan". The obligation whose subject is the pesticide PPE
+# set — and which the closure itself already marks DO_NOT_REUSE — is T04-VO-040. The IDs are
+# now cross-checked against the closure by a gate rather than trusted as typed.
 _DO_NOT_REUSE = [
     ("T04-VO-025", "Pengurusan Stok dan Penyimpanan (Baja)", "AG-04",
      "Penyimpanan baja (kering, selamat, jauh dari air) berbeza daripada penyimpanan racun "
@@ -1275,7 +1310,7 @@ _DO_NOT_REUSE = [
     ("T04-VO-026", "Keselamatan Pekerja (Baja)", "AG-04",
      "PPE untuk baja (sarung tangan, topeng muka) berbeza daripada PPE untuk racun (topeng "
      "pernafasan, cermin mata, sarung tangan kimia, sut pelindung)."),
-    ("T04-VO-039", "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)", "AG-06",
+    ("T04-VO-040", "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)", "AG-06",
      "Set PPE racun jauh lebih berat dan tidak boleh dikongsi dengan skrin baja."),
 ]
 

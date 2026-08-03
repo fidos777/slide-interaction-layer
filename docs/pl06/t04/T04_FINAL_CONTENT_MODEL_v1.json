@@ -1520,7 +1520,7 @@
     "confirmed_by_authority": true
    },
    {
-    "obligation_id": "T04-VO-039",
+    "obligation_id": "T04-VO-040",
     "label": "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)",
     "asset_group_id": "AG-06",
     "restriction": "REUSE_NOT_ALLOWED",
@@ -1631,7 +1631,7 @@
     "reuse_decision": "REUSE_WITH_CONDITIONS",
     "reuse_decision_id": "T04-DEC-B03",
     "item_level_restrictions": [
-     "T04-VO-039"
+     "T04-VO-040"
     ],
     "item_level_restriction_labels": [
      "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)"

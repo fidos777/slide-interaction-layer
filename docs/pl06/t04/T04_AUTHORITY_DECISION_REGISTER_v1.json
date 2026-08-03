@@ -608,7 +608,7 @@
    "applies_to": [
     "T04-VO-025",
     "T04-VO-026",
-    "T04-VO-039"
+    "T04-VO-040"
    ],
    "scope": "T04_ONLY",
    "effect": "Each of the three keeps a separate asset, confirmed instructionally and for production.",
@@ -646,7 +646,7 @@
    "applies_to": [
     "T04-VO-025",
     "T04-VO-026",
-    "T04-VO-039"
+    "T04-VO-040"
    ],
    "scope": "T04_ONLY",
    "effect": "Every do-not-reuse item now carries decision_basis. All three are BOTH_INSTRUCTIONAL_AND_PRODUCTION, following T04-DEC-B04.",

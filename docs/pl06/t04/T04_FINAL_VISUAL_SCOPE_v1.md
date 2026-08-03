@@ -57,7 +57,7 @@ Bariah confirmed all three and asked that each carry a decision-basis line. All 
 - *Production ground.* The two visuals differ substantially in content, so a shared asset would not in fact save production effort.
 - *Basis recorded as.* BOTH_INSTRUCTIONAL_AND_PRODUCTION (required by T04-DEC-B06, confirmed by T04-DEC-B04)
 
-**Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)** (T04-VO-039, AG-06) — `REUSE_NOT_ALLOWED`, scope `NAMED_ITEM_NOT_WHOLE_GROUP`
+**Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)** (T04-VO-040, AG-06) — `REUSE_NOT_ALLOWED`, scope `NAMED_ITEM_NOT_WHOLE_GROUP`
 
 - *Instructional ground.* Learners must not confuse the two PPE sets or the two storage regimes; a shared visual would blur a distinction the learner is expected to make.
 - *Production ground.* The two visuals differ substantially in content, so a shared asset would not in fact save production effort.
@@ -92,3 +92,24 @@ The inserted screen realises T04-VO-038, a grouping heading already closed as NO
 # 6. What is not approved
 
 Individual asset subjects, styles and the MMD production plan. Bariah accepted the grouping, the 46→41 derivation and the three do-not-reuse rulings as a set; she did not approve any specific artwork, and no asset has been produced.
+
+# 7. Identifier corrections
+
+## T04-COR-05 — do-not-reuse register, HSE item obligation ID
+
+| Field | Value |
+|---|---|
+| as recorded | T04-VO-039 |
+| as corrected | T04-VO-040 |
+| introduced in | 4.2F-B0.9 |
+| found in | 4.2F-B1 |
+| authority wording changed | no |
+| status | APPLIED |
+
+**Basis.** T04-VO-039 is the Perundangan dan Pelesenan obligation (rows 65-67). The obligation whose subject is the pesticide PPE set is T04-VO-040 (rows 68-74), and the Stage 4.2F-B0.8 closure already carries reuse_policy = DO_NOT_REUSE on it. The register had a hand-typed ID that was never cross-checked.
+
+**What it would have broken.** The storyboard would have shown the do-not-reuse restriction on the legal screen and not on the PPE screen — the exact confusion Bariah's ruling exists to prevent.
+
+**How it was found.** Cross-checking the typed list against the closure's own reuse_policy while building the B1 visual mapping.
+
+**Recurrence.** Second occurrence of this defect class. Stage 4.2F-B0.6 had five hand-typed obligation IDs in the legal sheet, fixed then by deriving from an index. The lesson did not carry across to this register. It does now: a gate derives the do-not-reuse ID set from the closure and compares.

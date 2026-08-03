@@ -1,0 +1,452 @@
+{
+ "stage": "4.2F-B1",
+ "screens": [
+  {
+   "screen_id": "T04-S01",
+   "treatment": "TITLE",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S02",
+   "treatment": "DIALOGUE_SCENARIO",
+   "state_count": 1,
+   "states": [
+    "BASE — dialogue plays"
+   ],
+   "base_state": "BASE — dialogue plays",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S03",
+   "treatment": "PROCESS_FLOW_STEPPED",
+   "state_count": 8,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ST-06",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S04",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S05",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S06",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 4,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S07",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 6,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S08",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S09",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 5,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S10",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 7,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S11",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S12",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S13",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S14",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 5,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [
+    "Perundangan Dan Pelesenan",
+    "Keselamatan Dan Kesihatan (HSE)",
+    "Pengurusan Risiko"
+   ],
+   "reveal_count": 3,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": "A learner who does not interact will not see the named reveal items.",
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S15",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S16",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 5,
+   "states": [
+    "BASE",
+    "REVEAL_PPE_LENGKAP",
+    "REVEAL_PENYIMPANAN_DAN_PELUPUSAN",
+    "REVEAL_SDS",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [
+    "PPE Lengkap",
+    "Penyimpanan Dan Pelupusan",
+    "Helaian Data Keselamatan (SDS)"
+   ],
+   "reveal_count": 3,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": "A learner who does not interact will not see the named reveal items.",
+   "risk_owner": "BARIAH_AHMAD"
+  },
+  {
+   "screen_id": "T04-S17",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S18",
+   "treatment": "CONTENT_STATIC",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": true,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S19",
+   "treatment": "CLICK_TO_REVEAL",
+   "state_count": 6,
+   "states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "base_state": "BASE",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S20",
+   "treatment": "RUMUSAN",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S21",
+   "treatment": "QUIZ",
+   "state_count": 6,
+   "states": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "RESULT"
+   ],
+   "base_state": "Q1",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "all states viewed",
+   "keyboard_reachable": true,
+   "state_announced": true,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  },
+  {
+   "screen_id": "T04-S22",
+   "treatment": "CLOSING",
+   "state_count": 1,
+   "states": [
+    "BASE only"
+   ],
+   "base_state": "BASE only",
+   "named_reveal_items": [],
+   "reveal_count": 0,
+   "every_reveal_has_a_state": true,
+   "completion_condition": "screen viewed",
+   "keyboard_reachable": true,
+   "state_announced": false,
+   "base_visible_content_only": false,
+   "residual_risk": null,
+   "risk_owner": null
+  }
+ ]
+}

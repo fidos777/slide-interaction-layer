@@ -786,6 +786,29 @@ def run():
         "T04_VISUAL_ASSET_GROUPING_PLAN_v2.json")
     chk("THREE_DO_NOT_REUSE_ITEMS", VISUAL_SCOPE, len(DNR), 3, len(DNR),
         "T04_FINAL_VISUAL_SCOPE_v1.json")
+    # The typed ID list is compared against the closure's own reuse_policy. One of the three
+    # was wrong for two stages (T04-COR-05) and no gate could see it, because every gate read
+    # the same typed list. This one reads the other side.
+    chk("DO_NOT_REUSE_IDS_AGREE_WITH_THE_CLOSURE", VISUAL_SCOPE,
+        sorted(x["obligation_id"] for x in DNR),
+        sorted(r["obligation_id"] for r in C._obligation_closure()
+               if r["reuse_policy"] == "DO_NOT_REUSE"),
+        len(C._obligation_closure()), "T04_VISUAL_OBLIGATION_CLOSURE_v1.json")
+    chk("EVERY_DO_NOT_REUSE_LABEL_MATCHES_ITS_CLOSURE_HEADING", VISUAL_SCOPE,
+        [x["obligation_id"] for x in DNR
+         if not any(r["obligation_id"] == x["obligation_id"]
+                    and r["source_heading"].split(" (")[0] in x["label"]
+                    for r in C._obligation_closure())], [], len(DNR),
+        "T04_VISUAL_OBLIGATION_CLOSURE_v1.json")
+    chk("THE_IDENTIFIER_CORRECTION_IS_RECORDED", VISUAL_SCOPE,
+        [c["correction_id"] for c in D.IDENTIFIER_CORRECTIONS
+         if c["as_recorded"] == "T04-VO-039" and c["as_corrected"] == "T04-VO-040"],
+        ["T04-COR-05"], len(D.IDENTIFIER_CORRECTIONS),
+        "T04_FINAL_VISUAL_SCOPE_v1.json")
+    chk("THE_IDENTIFIER_CORRECTION_CHANGED_NO_AUTHORITY_WORDING", VISUAL_SCOPE,
+        [c["correction_id"] for c in D.IDENTIFIER_CORRECTIONS
+         if c["authority_wording_changed"]], [], len(D.IDENTIFIER_CORRECTIONS),
+        "T04_FINAL_VISUAL_SCOPE_v1.json")
     chk("EVERY_DO_NOT_REUSE_ITEM_CARRIES_A_DECISION_BASIS", VISUAL_SCOPE,
         [x["obligation_id"] for x in DNR
          if x["decision_basis"] not in D.DECISION_BASIS_VALUES], [], len(DNR),

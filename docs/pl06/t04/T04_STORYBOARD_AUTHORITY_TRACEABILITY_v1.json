@@ -1,0 +1,356 @@
+{
+ "stage": "4.2F-B1",
+ "rows": [
+  {
+   "screen_id": "T04-S01",
+   "decision_id": "T04-DEC-A01",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Tiada Bahagian bagi Topik 4. Kesemua subtopik di bawah Topik 4 – Landskap Lembut dan Landskap Kejur – di dalam 1 storyboard.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Title screen shows Topik 4 with no Bahagian. All T04 subtopics stay in one storyboard."
+  },
+  {
+   "screen_id": "T04-S02",
+   "decision_id": "T04-DEC-A02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Rujuk Bahagian C. Perbualan Slide 2",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The screen is not removed or moved. Its content is replaced by the Section C ruling."
+  },
+  {
+   "screen_id": "T04-S02",
+   "decision_id": "T04-DEC-C01",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Cadangan Pindaan: [four replacement lines supplied verbatim by Bariah]",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The five-line CAIR draft is replaced by Bariah's four-line dialogue, carried verbatim."
+  },
+  {
+   "screen_id": "T04-S02",
+   "decision_id": "T04-DEC-C02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Watak | Alya (Kontraktor Junior); Encik Rahman (Mentor / Kontraktor Senior)",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The cast is unchanged. Bariah's critique is of how they were written, not of who they are — her replacement text uses both characters by name."
+  },
+  {
+   "screen_id": "T04-S02",
+   "decision_id": "T04-DEC-C03",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "elak framing \"beza lembut vs kejur\" — modul cuma terangkan dua-dua secara berasingan, tak buat perbandingan",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "No dialogue line may frame soft and hard landscape as a comparison. The module describes them separately."
+  },
+  {
+   "screen_id": "T04-S03",
+   "decision_id": "T04-DEC-A03",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Six-step process flow stands as proposed."
+  },
+  {
+   "screen_id": "T04-S04",
+   "decision_id": "T04-DEC-A04",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Ia bukan kategori landskap lembut, tetapi tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP - Siram, Baja, Racun. Refer module content.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Siram, Baja and Racun are presented as critical contractor responsibilities during the construction maintenance period and the DLP — not as a taxonomy of soft landscape."
+  },
+  {
+   "screen_id": "T04-S05",
+   "decision_id": "T04-DEC-A05",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Dan menyenaraikan aspek penyiraman [Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor]",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The main-explanation screen also lists the two watering aspects that follow it."
+  },
+  {
+   "screen_id": "T04-S06",
+   "decision_id": "T04-DEC-A06",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Watering methods stand as proposed."
+  },
+  {
+   "screen_id": "T04-S07",
+   "decision_id": "T04-DEC-A07",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Watering management aspects stand as proposed."
+  },
+  {
+   "screen_id": "T04-S08",
+   "decision_id": "T04-DEC-A08",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Dan menyenaraikan aspek pembajaan [Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor]",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The main-explanation screen also lists the two fertilising aspects that follow it."
+  },
+  {
+   "screen_id": "T04-S09",
+   "decision_id": "T04-DEC-A09",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Fertilising methods stand as proposed."
+  },
+  {
+   "screen_id": "T04-S10",
+   "decision_id": "T04-DEC-A10",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "TERIMA",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Fertilising management aspects stand as proposed."
+  },
+  {
+   "screen_id": "T04-S11",
+   "decision_id": "T04-DEC-A11",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Dan menyenaraikan aspek kawalan racun [Pendekatan IPM, Jenis Racun, Aspek Pengurusan Untuk Kontraktor]",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The main-explanation screen also lists the three pest-control aspects that follow it."
+  },
+  {
+   "screen_id": "T04-S12",
+   "decision_id": "T04-DEC-A12",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Kandungan statik.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "IPM priority order is presented as static content. The four controls are base-visible; no click-to-reveal."
+  },
+  {
+   "screen_id": "T04-S13",
+   "decision_id": "T04-DEC-A13",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Kandungan statik. Kandungan pendek.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Pesticide types are presented as short static content. All three types base-visible."
+  },
+  {
+   "screen_id": "T04-S14",
+   "decision_id": "T04-DEC-A14",
+   "decision_class": "STRUCTURAL_INSERTION",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Layanan – Klik untuk paparkan maklumat. Tiga aspek pengurusan pembajaan untuk kontraktor. [Perundangan Dan Pelesenan, Keselamatan Dan Kesihatan (HSE), Pengurusan Risiko]",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "A click-to-reveal hub screen for the three pesticide management aspects, sitting before the three screens that carry them in detail. See T04-COR-01 for the wording normalisation applied to this quote."
+  },
+  {
+   "screen_id": "T04-S15",
+   "decision_id": "T04-DEC-A15",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Urutan Skrin bertukar ke S15",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Renumbering only. Content and treatment unchanged."
+  },
+  {
+   "screen_id": "T04-S16",
+   "decision_id": "T04-DEC-A16",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S16 2. Layanan – Klik untuk paparkan maklumat. [PPE Lengkap, Penyimpanan Dan Pelupusan, Helaian Data Keselamatan (SDS)]",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Three named reveal items. This supersedes the D-04 placement of PPE Lengkap on the base state — see T04-SUP-01."
+  },
+  {
+   "screen_id": "T04-S17",
+   "decision_id": "T04-DEC-A17",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S17 2. Layanan – Kandungan statik (semua kandungan)",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "All risk-management content is base-visible. This supersedes the D-04 reveal-eligible classification for this screen — see T04-SUP-02."
+  },
+  {
+   "screen_id": "T04-S18",
+   "decision_id": "T04-DEC-A18",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S18 Nota Bariah: Dan menetapkan empat fungsi utama landskap kejur. Saya tidak rasa ia membezakan antara landskap kejur dan lembut (Refer module)",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The screen establishes hard landscape and names its four main functions. The framing that contrasts hard with soft landscape is removed — the module does not draw that comparison."
+  },
+  {
+   "screen_id": "T04-S19",
+   "decision_id": "T04-DEC-A19",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S19",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Renumbering only."
+  },
+  {
+   "screen_id": "T04-S20",
+   "decision_id": "T04-DEC-A20",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S20 2. Rujuk Bahagian D. Rumusan",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Renumbering, plus the Rumusan content is replaced by the Section D ruling."
+  },
+  {
+   "screen_id": "T04-S20",
+   "decision_id": "T04-DEC-D01",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Cadangan Pindaan: [Kepentingan] … [Skop/Isi Utama] … [Manfaat] …",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Three beats — Kepentingan, Skop/Isi Utama, Manfaat — carried verbatim."
+  },
+  {
+   "screen_id": "T04-S20",
+   "decision_id": "T04-DEC-D02",
+   "decision_class": "ACCEPTED_AS_PROPOSED",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "☐ TERIMA ✓ PINDA ☐ BUANG",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The over-broad contractor-responsibility generalisation does not survive into the three-beat replacement. The open question raised against it is closed."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-A21",
+   "decision_class": "STRUCTURAL_RENUMBERING",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Urutan Skrin bertukar ke S21 2. Rujuk Bahagian E. Kuiz",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Renumbering, plus the quiz content is replaced by the Section E ruling."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E01",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Bariah's stem is carried verbatim."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E02",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Bariah's stem is carried verbatim."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E03",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Bariah's stem is carried verbatim."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E04",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Bariah's stem is carried verbatim."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E05",
+   "decision_class": "AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Pilih SEMUA kawalan yang mesti dipatuhi oleh kontraktor semasa aktiviti semburan racun.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Bariah's stem is carried verbatim."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E06",
+   "decision_class": "GLOBAL_COURSE_RULE",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus – buang \"yang dinyatakan dalam modul\"",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "No quiz stem in the Kursus may attribute its content to the module. Applied to T04 Q1 to Q5; issued as a standing rule for every PL."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E07",
+   "decision_class": "GLOBAL_COURSE_RULE",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Global keseluruhan kursus. Jangan gunakan A B C .. untuk pilihan, kerana ini ialah multiple response question. Cadangan - Gunakan kotak.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Letter labels are reserved for single-answer items. Multiple Response options are presented as checkboxes."
+  },
+  {
+   "screen_id": "T04-S21",
+   "decision_id": "T04-DEC-E08",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "Tukar pilihan 5 dan 6 (E dan F), kerana jelas ia pilihan yang salah. (kerana ia tentang baja) ATAU tukar soalan.",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "Bariah gave two routes and did not choose between them. CAIR took the first — change the options, keep the question — because Bariah separately supplied replacement wording for the Q5 stem, which settles the question. The two replacement distractors are CAIR-drafted and are NOT Bariah-approved."
+  },
+  {
+   "screen_id": "T04-S22",
+   "decision_id": "T04-DEC-A22",
+   "decision_class": "AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR",
+   "authority": "BARIAH_AHMAD",
+   "authority_quote": "1. Tamat Topik. Menutup Topik 2. Urutan Skrin bertukar ke S22",
+   "source_artifact": "AUTH-EV-01",
+   "evidence_grade": "VERIFIED_PRIMARY_ARTIFACT",
+   "effect": "The closing screen reads Tamat Topik and closes the Topik. Tamat Bahagian is retired for T04, consistent with T04-DEC-A01."
+  }
+ ],
+ "row_count": 35
+}

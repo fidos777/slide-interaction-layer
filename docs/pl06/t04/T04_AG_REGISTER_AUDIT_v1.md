@@ -54,7 +54,7 @@ Each of those three is a different way of losing information. *Eight individual 
 | AG-03 | Siram — operasi dan sub-topik | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | none | no |
 | AG-04 | Baja — operasi dan sub-topik | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | T04-VO-025, T04-VO-026 | no |
 | AG-05 | Racun — IPM, kawalan dan jenis racun | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | none | no |
-| AG-06 | Racun — perundangan, HSE dan risiko | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | T04-VO-039 | no |
+| AG-06 | Racun — perundangan, HSE dan risiko | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | T04-VO-040 | no |
 | AG-07 | Landskap Kejur — kategori dan empat fungsi | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | none | no |
 | AG-08 | Slide 2 — senario pengenalan | ACCEPTED_AS_A_SET_WITH_CONDITIONS | NOT_INDIVIDUALLY_MARKED | REUSE_WITH_CONDITIONS | none | no |
 

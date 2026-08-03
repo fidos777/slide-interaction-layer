@@ -1,0 +1,488 @@
+{
+ "stage": "4.2F-B1",
+ "totals": {
+  "visual_obligations": 46,
+  "asset_groups": 8,
+  "proposed_unique_assets": 41,
+  "do_not_reuse_items": 3,
+  "artwork_produced": 0,
+  "screens_with_a_visual": 18,
+  "s14_adds_unique_assets": 0
+ },
+ "screens": [
+  {
+   "screen_id": "T04-S01",
+   "asset_group_ids": [],
+   "asset_group_labels": [],
+   "visual_obligations_served": [],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "NO_VISUAL",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S02",
+   "asset_group_ids": [
+    "AG-02",
+    "AG-08"
+   ],
+   "asset_group_labels": [
+    "Landskap Lembut — kategori",
+    "Slide 2 — senario pengenalan"
+   ],
+   "visual_obligations_served": [],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S03",
+   "asset_group_ids": [
+    "AG-01"
+   ],
+   "asset_group_labels": [
+    "Aliran proses enam langkah"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-001",
+    "T04-VO-002",
+    "T04-VO-003",
+    "T04-VO-004",
+    "T04-VO-005",
+    "T04-VO-006"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S04",
+   "asset_group_ids": [
+    "AG-02"
+   ],
+   "asset_group_labels": [
+    "Landskap Lembut — kategori"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-007"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S05",
+   "asset_group_ids": [
+    "AG-03"
+   ],
+   "asset_group_labels": [
+    "Siram — operasi dan sub-topik"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-008"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S06",
+   "asset_group_ids": [
+    "AG-03"
+   ],
+   "asset_group_labels": [
+    "Siram — operasi dan sub-topik"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-009",
+    "T04-VO-010",
+    "T04-VO-011"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S07",
+   "asset_group_ids": [
+    "AG-03"
+   ],
+   "asset_group_labels": [
+    "Siram — operasi dan sub-topik"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-013",
+    "T04-VO-014",
+    "T04-VO-015",
+    "T04-VO-016"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S08",
+   "asset_group_ids": [
+    "AG-04"
+   ],
+   "asset_group_labels": [
+    "Baja — operasi dan sub-topik"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-017"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S09",
+   "asset_group_ids": [
+    "AG-04"
+   ],
+   "asset_group_labels": [
+    "Baja — operasi dan sub-topik"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-018",
+    "T04-VO-019",
+    "T04-VO-020",
+    "T04-VO-021"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S10",
+   "asset_group_ids": [
+    "AG-04"
+   ],
+   "asset_group_labels": [
+    "Baja — operasi dan sub-topik"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-023",
+    "T04-VO-024",
+    "T04-VO-025",
+    "T04-VO-026",
+    "T04-VO-027"
+   ],
+   "do_not_reuse_obligations": [
+    "T04-VO-025",
+    "T04-VO-026"
+   ],
+   "reuse_policy": "REUSE_NOT_ALLOWED_FOR_NAMED_ITEMS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S11",
+   "asset_group_ids": [
+    "AG-05"
+   ],
+   "asset_group_labels": [
+    "Racun — IPM, kawalan dan jenis racun"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-028"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S12",
+   "asset_group_ids": [
+    "AG-05"
+   ],
+   "asset_group_labels": [
+    "Racun — IPM, kawalan dan jenis racun"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-029",
+    "T04-VO-030",
+    "T04-VO-031",
+    "T04-VO-032",
+    "T04-VO-033"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S13",
+   "asset_group_ids": [
+    "AG-05"
+   ],
+   "asset_group_labels": [
+    "Racun — IPM, kawalan dan jenis racun"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-034",
+    "T04-VO-035",
+    "T04-VO-036",
+    "T04-VO-037"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S14",
+   "asset_group_ids": [
+    "AG-06"
+   ],
+   "asset_group_labels": [
+    "Racun — perundangan, HSE dan risiko"
+   ],
+   "visual_obligations_served": [],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [],
+   "reuses_existing_group": true,
+   "adds_unique_assets": 0
+  },
+  {
+   "screen_id": "T04-S15",
+   "asset_group_ids": [
+    "AG-06"
+   ],
+   "asset_group_labels": [
+    "Racun — perundangan, HSE dan risiko"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-039"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S16",
+   "asset_group_ids": [
+    "AG-06"
+   ],
+   "asset_group_labels": [
+    "Racun — perundangan, HSE dan risiko"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-040"
+   ],
+   "do_not_reuse_obligations": [
+    "T04-VO-040"
+   ],
+   "reuse_policy": "REUSE_NOT_ALLOWED_FOR_NAMED_ITEMS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S17",
+   "asset_group_ids": [
+    "AG-06"
+   ],
+   "asset_group_labels": [
+    "Racun — perundangan, HSE dan risiko"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-041"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S18",
+   "asset_group_ids": [
+    "AG-07"
+   ],
+   "asset_group_labels": [
+    "Landskap Kejur — kategori dan empat fungsi"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-042"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S19",
+   "asset_group_ids": [
+    "AG-07"
+   ],
+   "asset_group_labels": [
+    "Landskap Kejur — kategori dan empat fungsi"
+   ],
+   "visual_obligations_served": [
+    "T04-VO-043",
+    "T04-VO-044",
+    "T04-VO-045",
+    "T04-VO-046"
+   ],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "REUSE_WITH_CONDITIONS",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [
+    "ASSET_GROUP_PLAN",
+    "OBLIGATION_MAPPING"
+   ],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S20",
+   "asset_group_ids": [],
+   "asset_group_labels": [],
+   "visual_obligations_served": [],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "NO_VISUAL",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S21",
+   "asset_group_ids": [],
+   "asset_group_labels": [],
+   "visual_obligations_served": [],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "NO_VISUAL",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  },
+  {
+   "screen_id": "T04-S22",
+   "asset_group_ids": [],
+   "asset_group_labels": [],
+   "visual_obligations_served": [],
+   "do_not_reuse_obligations": [],
+   "reuse_policy": "NO_VISUAL",
+   "artwork_status": "NOT_PRODUCED",
+   "placeholder_only": true,
+   "group_route": [],
+   "reuses_existing_group": false,
+   "adds_unique_assets": null
+  }
+ ]
+}

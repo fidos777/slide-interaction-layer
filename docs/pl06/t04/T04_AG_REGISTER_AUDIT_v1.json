@@ -146,7 +146,7 @@
    "individual_card_status": "NOT_INDIVIDUALLY_MARKED",
    "reuse_decision_in_register": "REUSE_WITH_CONDITIONS",
    "item_level_restrictions": [
-    "T04-VO-039"
+    "T04-VO-040"
    ],
    "restriction_applies_to_whole_group": false,
    "represented_as_individual_acceptance": false,

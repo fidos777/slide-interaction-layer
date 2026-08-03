@@ -439,12 +439,12 @@
     "expected_members": [
      "T04-VO-025",
      "T04-VO-026",
-     "T04-VO-039"
+     "T04-VO-040"
     ],
     "observed_members": [
      "T04-VO-025",
      "T04-VO-026",
-     "T04-VO-039"
+     "T04-VO-040"
     ],
     "unexpected_additions": [],
     "unexpected_removals": [],
@@ -454,7 +454,8 @@
     "guarded_by": [
      "THREE_DO_NOT_REUSE_ITEMS",
      "ALL_THREE_BASES_ARE_BOTH_LENSES",
-     "RESTRICTIONS_ARE_ITEM_LEVEL_NOT_GROUP_LEVEL"
+     "RESTRICTIONS_ARE_ITEM_LEVEL_NOT_GROUP_LEVEL",
+     "DO_NOT_REUSE_IDS_AGREE_WITH_THE_CLOSURE"
     ],
     "origin_fixture": "H-03 / H-05",
     "ok": true

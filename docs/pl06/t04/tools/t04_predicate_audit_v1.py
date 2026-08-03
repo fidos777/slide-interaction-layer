@@ -204,9 +204,12 @@ CLOSED_POPULATIONS = [
          mutable_property="restriction",
          members=lambda: sorted(x["obligation_id"] for x in D._do_not_reuse_items()
                                 if x["restriction"] == "REUSE_NOT_ALLOWED"),
-         expected=["T04-VO-025", "T04-VO-026", "T04-VO-039"],
+         # Corrected in Stage 4.2F-B1: the HSE item is T04-VO-040, not T04-VO-039. See
+         # T04-COR-05. The audit flagged the membership change, which is its job.
+         expected=["T04-VO-025", "T04-VO-026", "T04-VO-040"],
          guarded_by=["THREE_DO_NOT_REUSE_ITEMS", "ALL_THREE_BASES_ARE_BOTH_LENSES",
-                     "RESTRICTIONS_ARE_ITEM_LEVEL_NOT_GROUP_LEVEL"],
+                     "RESTRICTIONS_ARE_ITEM_LEVEL_NOT_GROUP_LEVEL",
+                     "DO_NOT_REUSE_IDS_AGREE_WITH_THE_CLOSURE"],
          origin_fixture="H-03 / H-05"),
     dict(population_id="POP-18",
          selector="open items carried past this stage",

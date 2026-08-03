@@ -57,9 +57,9 @@ Every decision is typed. A single `ACCEPTED` bucket would erase the difference b
 | T04-DEC-B01 | ACCEPTED_AS_PROPOSED | The 46 to 41 derivation is accepted as production scope | T04-VIS-GOV-01 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-B02 | ACCEPTED_AS_PROPOSED | Visual coverage is instructionally sufficient | AG-01, AG-02, AG-03, AG-04, AG-05, AG-06, AG-07, AG-08 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-B03 | ACCEPTED_AS_PROPOSED | Conditional sharing across AG-01 to AG-08 is reasonable | AG-01, AG-02, AG-03, AG-04, AG-05, AG-06, AG-07, AG-08 | T04_ONLY | AUTH-EV-01 |
-| T04-DEC-B04 | ACCEPTED_AS_PROPOSED | The three do-not-reuse items are confirmed on both grounds | T04-VO-025, T04-VO-026, T04-VO-039 | T04_ONLY | AUTH-EV-01 |
+| T04-DEC-B04 | ACCEPTED_AS_PROPOSED | The three do-not-reuse items are confirmed on both grounds | T04-VO-025, T04-VO-026, T04-VO-040 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-B05 | ACCEPTED_AS_PROPOSED | Instructional judgement overrides production optimisation | T04-VIS-GOV-01 | T04_ONLY | AUTH-EV-01 |
-| T04-DEC-B06 | AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR | Each do-not-reuse item must carry a decision-basis line | T04-VO-025, T04-VO-026, T04-VO-039 | T04_ONLY | AUTH-EV-01 |
+| T04-DEC-B06 | AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR | Each do-not-reuse item must carry a decision-basis line | T04-VO-025, T04-VO-026, T04-VO-040 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-C01 | AMENDED_WITH_AUTHORITY_SUPPLIED_REPLACEMENT_TEXT | All five proposed dialogue lines are amended and replaced by four | T04-DLG-F01, T04-DLG-F02, T04-DLG-F03, T04-DLG-F04 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-C02 | ACCEPTED_AS_PROPOSED | Alya and Encik Rahman are retained as the Slide 2 characters | T04-S02 | T04_ONLY | AUTH-EV-01 |
 | T04-DEC-C03 | AMENDED_WITH_AUTHORITY_INSTRUCTION_EXECUTED_BY_CAIR | The soft-versus-hard contrast is banned from the dialogue | T04-S02, T04-S18 | T04_ONLY | AUTH-EV-01 |

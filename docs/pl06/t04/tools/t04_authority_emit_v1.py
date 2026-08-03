@@ -566,6 +566,7 @@ def emit_visual_scope():
     a = _j("T04_FINAL_VISUAL_SCOPE_v1.json",
            dict(stage=D.STAGE, suite_id=D.SUITE_ID, generated_by=D.GENERATED_BY,
                 decision_basis_values=D.DECISION_BASIS_VALUES,
+                identifier_corrections=D.IDENTIFIER_CORRECTIONS,
                 visual_scope=D.FINAL_VISUAL_SCOPE))
 
     v = D.FINAL_VISUAL_SCOPE
@@ -622,7 +623,22 @@ def emit_visual_scope():
               ("closure outcome changed",
                "no" if n["obligation_closure_outcome_unchanged"] else "yes"),
           ]), "", n["why"], "",
-          "# 6. What is not approved", "", v["what_is_not_approved"], ""]
+          "# 6. What is not approved", "", v["what_is_not_approved"], "",
+          "# 7. Identifier corrections", ""]
+    for c in D.IDENTIFIER_CORRECTIONS:
+        p += [f"## {c['correction_id']} — {c['field']}", "",
+              _tbl(["Field", "Value"], [
+                  ("as recorded", c["as_recorded"]),
+                  ("as corrected", c["as_corrected"]),
+                  ("introduced in", c["introduced_in_stage"]),
+                  ("found in", c["found_in_stage"]),
+                  ("authority wording changed", "no"),
+                  ("status", c["status"]),
+              ]), "",
+              f"**Basis.** {c['basis']}", "",
+              f"**What it would have broken.** {c['what_it_would_have_broken']}", "",
+              f"**How it was found.** {c['detection']}", "",
+              f"**Recurrence.** {c['recurrence_note']}", ""]
 
     b = _w("T04_FINAL_VISUAL_SCOPE_v1.md", "\n".join(p))
     return [a, b]

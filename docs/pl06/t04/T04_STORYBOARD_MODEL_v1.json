@@ -1,0 +1,2789 @@
+{
+ "stage": "4.2F-B1",
+ "generated_by": "docs/pl06/t04/tools/t04_storyboard_build_v1.py",
+ "internal_unit_id": "K5-PL06-T04-B01",
+ "learner_display_unit": "Topik 4",
+ "pptx": {
+  "name": "K5PL06T04B01_STORYBOARD_FOR_BARIAH_REVIEW_v1_0.pptx",
+  "dir": "../../reviews/storyboard-bariah/t04_storyboard"
+ },
+ "provenance_vocabulary": [
+  "SOURCE_CONTROLLED",
+  "AUTHORITY_SUPPLIED",
+  "AUTHORITY_SELECTED",
+  "CAIR_DRAFTED_ASSESSMENT_OPTION",
+  "CAIR_STRUCTURAL"
+ ],
+ "forbidden_provenance": "CAIR_INSTRUCTIONAL_CONTENT",
+ "screen_count": 22,
+ "renumbering_applied": {
+  "map": {
+   "T04-S14": "T04-S15",
+   "T04-S15": "T04-S16",
+   "T04-S16": "T04-S17",
+   "T04-S17": "T04-S18",
+   "T04-S18": "T04-S19",
+   "T04-S19": "T04-S20",
+   "T04-S20": "T04-S21",
+   "T04-S21": "T04-S22"
+  },
+  "obligations_translated": 8,
+  "obligations_unchanged": 35,
+  "obligation_rows": [
+   {
+    "obligation_id": "T04-VO-039",
+    "b08_screen": "T04-S14",
+    "current_screen": "T04-S15"
+   },
+   {
+    "obligation_id": "T04-VO-040",
+    "b08_screen": "T04-S15",
+    "current_screen": "T04-S16"
+   },
+   {
+    "obligation_id": "T04-VO-041",
+    "b08_screen": "T04-S16",
+    "current_screen": "T04-S17"
+   },
+   {
+    "obligation_id": "T04-VO-042",
+    "b08_screen": "T04-S17",
+    "current_screen": "T04-S18"
+   },
+   {
+    "obligation_id": "T04-VO-043",
+    "b08_screen": "T04-S18",
+    "current_screen": "T04-S19"
+   },
+   {
+    "obligation_id": "T04-VO-044",
+    "b08_screen": "T04-S18",
+    "current_screen": "T04-S19"
+   },
+   {
+    "obligation_id": "T04-VO-045",
+    "b08_screen": "T04-S18",
+    "current_screen": "T04-S19"
+   },
+   {
+    "obligation_id": "T04-VO-046",
+    "b08_screen": "T04-S18",
+    "current_screen": "T04-S19"
+   }
+  ],
+  "asset_groups_translated": 2,
+  "asset_group_rows": [
+   {
+    "asset_group_id": "AG-06",
+    "b08_screens": [
+     "T04-S14",
+     "T04-S15",
+     "T04-S16"
+    ],
+    "current_screens": [
+     "T04-S15",
+     "T04-S16",
+     "T04-S17"
+    ]
+   },
+   {
+    "asset_group_id": "AG-07",
+    "b08_screens": [
+     "T04-S17",
+     "T04-S18"
+    ],
+    "current_screens": [
+     "T04-S18",
+     "T04-S19"
+    ]
+   }
+  ]
+ },
+ "screens": [
+  {
+   "screen_id": "T04-S01",
+   "position": 1,
+   "title_ms": "Tajuk dan Mula",
+   "treatment": "TITLE",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": null,
+     "text": "Topik 4",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Penjagaan dan Penyelenggaraan",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "MULA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 4,
+   "source_row_ids": [],
+   "decision_ids": [
+    "T04-DEC-A01"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Shows Topik 4 and the unit title. No Bahagian label — Bariah ruled T04 has none.",
+   "visual": {
+    "asset_group_ids": [],
+    "asset_group_labels": [],
+    "visual_obligations_served": [],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "NO_VISUAL",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S02",
+   "position": 2,
+   "title_ms": "Pengenalan — perbualan di tapak",
+   "treatment": "DIALOGUE_SCENARIO",
+   "interaction_states": [
+    "BASE — dialogue plays"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": null,
+     "text": "Alya: Encik Rahman, projek dah siap dibina. Kenapa kita masih perlu jaga taman ni setiap minggu?",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "DIALOGUE_LINE",
+     "authority_ref": "T04-DLG-F01",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Encik Rahman: Sebab membina dan mengekalkan landskap dua benda berbeza, Alya. Tumbuhan kena disiram, dibaja dan dikawal perosak. Guna IPM, dan racun kimia pilihan terakhir. Struktur pula perlu dipantau supaya kekal berfungsi.",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "DIALOGUE_LINE",
+     "authority_ref": "T04-DLG-F02",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Alya: Dan semua kena direkod untuk tempoh DLP?",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "DIALOGUE_LINE",
+     "authority_ref": "T04-DLG-F03",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Encik Rahman: Ya. Penyelenggaraan berjadual dan dokumentasi lengkap, itu yang melindungi kerja pembinaan kita dan mencerminkan kualiti kontraktor.",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "DIALOGUE_LINE",
+     "authority_ref": "T04-DLG-F04",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 5,
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003",
+    "T04-ROW-004",
+    "T04-ROW-005",
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "decision_ids": [
+    "T04-DEC-A02",
+    "T04-DEC-C01",
+    "T04-DEC-C02",
+    "T04-DEC-C03"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Carries the four-line replacement dialogue. The soft-versus-hard contrast is banned from the dialogue.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-02",
+     "AG-08"
+    ],
+    "asset_group_labels": [
+     "Landskap Lembut — kategori",
+     "Slide 2 — senario pengenalan"
+    ],
+    "visual_obligations_served": [],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S03",
+   "position": 3,
+   "title_ms": "Aliran proses penjagaan dan penyelenggaraan",
+   "treatment": "PROCESS_FLOW_STEPPED",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ST-06",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-001",
+     "text": "PENJAGAAN DAN PENYELENGGARAAN",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_1",
+     "module_page": 276,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-002",
+     "text": "Secara umumnya, berikut ialah aliran proses penjagaan dan penyelenggaran yang terlibat di dalam kerja pembinaan landskap luar:",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 276,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Klik setiap langkah mengikut turutan.",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 4,
+   "source_row_ids": [
+    "T04-ROW-001",
+    "T04-ROW-002",
+    "T04-ROW-003"
+   ],
+   "decision_ids": [
+    "T04-DEC-A03"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-01"
+    ],
+    "asset_group_labels": [
+     "Aliran proses enam langkah"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-001",
+     "T04-VO-002",
+     "T04-VO-003",
+     "T04-VO-004",
+     "T04-VO-005",
+     "T04-VO-006"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S04",
+   "position": 4,
+   "title_ms": "Landskap Lembut — pengenalan",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-004",
+     "text": "Landskap Lembut",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_2",
+     "module_page": 276,
+     "list_level": 1
+    },
+    {
+     "row_id": "T04-ROW-005",
+     "text": "Landskap lembut merujuk kepada semua elemen hortikultur atau hidupan dalam sesebuah projek landskap. Ini termasuk pokok, palma, pokok renek, penutup bumi, dan rumput. Bagi seorang kontraktor, pengurusan landskap lembut bukan sahaja terhad kepada peringkat penanaman, tetapi merangkumi tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan (maintenance during construction) dan tempoh tanggungan kecacatan (Defect Liability Period - DLP).",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 276,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 3,
+   "source_row_ids": [
+    "T04-ROW-004",
+    "T04-ROW-005"
+   ],
+   "decision_ids": [
+    "T04-DEC-A04"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Presents Siram, Baja and Racun as critical contractor responsibilities during the construction maintenance period and the DLP, not as a soft-landscape taxonomy.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-02"
+    ],
+    "asset_group_labels": [
+     "Landskap Lembut — kategori"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-007"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S05",
+   "position": 5,
+   "title_ms": "Siram — penerangan utama",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [
+    "Kaedah Pelaksanaan",
+    "Aspek Pengurusan Untuk Kontraktor"
+   ],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-006",
+     "text": "Siram",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 276,
+     "list_level": 2
+    },
+    {
+     "row_id": "T04-ROW-007",
+     "text": "Membekalkan kuantiti air yang mencukupi untuk kelangsungan hidup dan proses fisiologi tumbuhan (fotosintesis, penyerapan nutrien), terutamanya bagi tanaman yang baru ditanam dan belum matang.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 276,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Aspek yang dibincangkan:",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Kaedah Pelaksanaan",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Aspek Pengurusan Untuk Kontraktor",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 6,
+   "source_row_ids": [
+    "T04-ROW-006",
+    "T04-ROW-007"
+   ],
+   "decision_ids": [
+    "T04-DEC-A05"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Also lists the watering aspects: Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-03"
+    ],
+    "asset_group_labels": [
+     "Siram — operasi dan sub-topik"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-008"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S06",
+   "position": 6,
+   "title_ms": "Siram — kaedah pelaksanaan",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-008",
+     "text": "Kaedah Pelaksanaan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-009",
+     "text": "Penyiraman Manual",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-010",
+     "text": "Menggunakan hos getah dengan muncung semburan (nozzle). Kaedah ini fleksibel tetapi memerlukan tenaga kerja yang ramai dan kurang konsisten.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-011",
+     "text": "Sistem Pengairan Automatik",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-012",
+     "text": "Sistem Semburan (Sprinkler System)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-013",
+     "text": "Sesuai untuk kawasan rumput yang luas.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-014",
+     "text": "Sistem Titis (Drip Irrigation System)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-015",
+     "text": "Sangat efisien untuk pokok individu atau pokok renek kerana ia membekalkan air terus ke zon akar, mengurangkan pembaziran air melalui penyejatan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 9,
+   "source_row_ids": [
+    "T04-ROW-008",
+    "T04-ROW-009",
+    "T04-ROW-010",
+    "T04-ROW-011",
+    "T04-ROW-012",
+    "T04-ROW-013",
+    "T04-ROW-014",
+    "T04-ROW-015"
+   ],
+   "decision_ids": [
+    "T04-DEC-A06"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-03"
+    ],
+    "asset_group_labels": [
+     "Siram — operasi dan sub-topik"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-009",
+     "T04-VO-010",
+     "T04-VO-011"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S07",
+   "position": 7,
+   "title_ms": "Siram — aspek pengurusan untuk kontraktor",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-016",
+     "text": "Aspek Pengurusan untuk Kontraktor:",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-017",
+     "text": "Jadual Penyiraman",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-018",
+     "text": "Membangunkan jadual kerja penyiraman yang sistematik. Amalan terbaik adalah menyiram pada awal pagi atau lewat petang untuk meminimumkan kehilangan air akibat penyejatan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-019",
+     "text": "Kekerapan dan kuantiti siraman mesti disesuaikan mengikut jenis tanaman, keadaan cuaca, dan peringkat tumbesaran. Tanaman baru memerlukan siraman lebih kerap.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-020",
+     "text": "Pengurusan Sumber Air",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-021",
+     "text": "Memastikan sumber air mencukupi dan tekanan air memadai untuk keseluruhan tapak. Sekiranya menggunakan sistem automatik, kontraktor bertanggungjawab untuk memeriksa, menguji, dan membaiki sebarang kerosakan seperti muncung tersumbat atau kebocoran paip.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 277,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-022",
+     "text": "Pemantauan & Pelaporan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-023",
+     "text": "Pekerja perlu dilatih untuk mengenal pasti tanda-tanda kekurangan air (daun layu, kering) atau terlebih air (daun kuning, akar reput). Aktiviti penyiraman perlu direkodkan dalam laporan harian tapak sebagai bukti pelaksanaan kerja.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-024",
+     "text": "Kecekapan Kos",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-025",
+     "text": "Mengoptimumkan kaedah penyiraman untuk mengawal kos bil air, terutamanya dalam projek berskala besar.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 11,
+   "source_row_ids": [
+    "T04-ROW-016",
+    "T04-ROW-017",
+    "T04-ROW-018",
+    "T04-ROW-019",
+    "T04-ROW-020",
+    "T04-ROW-021",
+    "T04-ROW-022",
+    "T04-ROW-023",
+    "T04-ROW-024",
+    "T04-ROW-025"
+   ],
+   "decision_ids": [
+    "T04-DEC-A07"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-03"
+    ],
+    "asset_group_labels": [
+     "Siram — operasi dan sub-topik"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-013",
+     "T04-VO-014",
+     "T04-VO-015",
+     "T04-VO-016"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S08",
+   "position": 8,
+   "title_ms": "Baja — penerangan utama",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [
+    "Kaedah Pelaksanaan",
+    "Aspek Pengurusan Untuk Kontraktor"
+   ],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-026",
+     "text": "Baja",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 2
+    },
+    {
+     "row_id": "T04-ROW-027",
+     "text": "Membekalkan nutrien penting yang mungkin kurang di dalam tanah untuk merangsang pertumbuhan yang sihat, pengeluaran bunga/buah, dan meningkatkan daya tahan tumbuhan terhadap penyakit.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Aspek yang dibincangkan:",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Kaedah Pelaksanaan",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Aspek Pengurusan Untuk Kontraktor",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 6,
+   "source_row_ids": [
+    "T04-ROW-026",
+    "T04-ROW-027"
+   ],
+   "decision_ids": [
+    "T04-DEC-A08"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Also lists the fertilising aspects: Kaedah Pelaksanaan, Aspek Pengurusan Untuk Kontraktor.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-04"
+    ],
+    "asset_group_labels": [
+     "Baja — operasi dan sub-topik"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-017"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S09",
+   "position": 9,
+   "title_ms": "Baja — kaedah pelaksanaan",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-028",
+     "text": "Kaedah Pelaksanaan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-029",
+     "text": "Pembajaan Tabur (Broadcasting)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-030",
+     "text": "Menabur baja butiran (granular) secara rata di sekeliling zon akar tumbuhan atau di atas permukaan rumput.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-031",
+     "text": "Pembajaan Poket (Pocketing)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-032",
+     "text": "Menggali lubang-lubang kecil di sekeliling zon akar pokok, memasukkan baja, dan menutupnya kembali. Kaedah ini lebih berkesan untuk pokok besar.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-033",
+     "text": "Semburan Folia (Foliar Spray)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-034",
+     "text": "Menyembur baja cecair terus ke daun untuk penyerapan nutrien yang pantas.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 8,
+   "source_row_ids": [
+    "T04-ROW-028",
+    "T04-ROW-029",
+    "T04-ROW-030",
+    "T04-ROW-031",
+    "T04-ROW-032",
+    "T04-ROW-033",
+    "T04-ROW-034"
+   ],
+   "decision_ids": [
+    "T04-DEC-A09"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-04"
+    ],
+    "asset_group_labels": [
+     "Baja — operasi dan sub-topik"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-018",
+     "T04-VO-019",
+     "T04-VO-020",
+     "T04-VO-021"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S10",
+   "position": 10,
+   "title_ms": "Baja — aspek pengurusan untuk kontraktor",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ST-05",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-035",
+     "text": "Aspek Pengurusan untuk Kontraktor",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-036",
+     "text": "Program Pembajaan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 278,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-037",
+     "text": "Merancang program pembajaan yang mematuhi spesifikasi kontrak. Program ini perlu menyatakan jenis baja (organik atau kimia), kadar NPK, kuantiti, dan kekerapan aplikasi untuk setiap jenis tanaman.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-038",
+     "text": "Pematuhan Spesifikasi",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-039",
+     "text": "Memastikan baja yang digunakan adalah seperti yang ditetapkan dalam dokumen kontrak atau diluluskan oleh Pegawai Penguasa (S.O.). Penggunaan baja yang salah boleh merosakkan tanaman atau tidak memberi kesan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-040",
+     "text": "Pengurusan Stok dan Penyimpanan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-041",
+     "text": "Baja mesti disimpan di tempat yang kering, selamat, dan jauh dari sumber air untuk mengelakkan pencemaran.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-042",
+     "text": "Keselamatan Pekerja",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-043",
+     "text": "Memastikan pekerja menggunakan Peralatan Pelindung Diri (PPE) yang sesuai seperti sarung tangan dan topeng muka semasa mengendalikan baja kimia.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-044",
+     "text": "Dokumentasi",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-045",
+     "text": "Merekodkan tarikh, jenis baja, kuantiti yang digunakan, dan kawasan yang telah dibaja. Ini penting sebagai bukti kerja untuk tuntutan bayaran dan rujukan semasa tempoh DLP.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 12,
+   "source_row_ids": [
+    "T04-ROW-035",
+    "T04-ROW-036",
+    "T04-ROW-037",
+    "T04-ROW-038",
+    "T04-ROW-039",
+    "T04-ROW-040",
+    "T04-ROW-041",
+    "T04-ROW-042",
+    "T04-ROW-043",
+    "T04-ROW-044",
+    "T04-ROW-045"
+   ],
+   "decision_ids": [
+    "T04-DEC-A10"
+   ],
+   "change_type": "UNCHANGED",
+   "authority_note": "Accepted as proposed.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-04"
+    ],
+    "asset_group_labels": [
+     "Baja — operasi dan sub-topik"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-023",
+     "T04-VO-024",
+     "T04-VO-025",
+     "T04-VO-026",
+     "T04-VO-027"
+    ],
+    "do_not_reuse_obligations": [
+     "T04-VO-025",
+     "T04-VO-026"
+    ],
+    "reuse_policy": "REUSE_NOT_ALLOWED_FOR_NAMED_ITEMS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S11",
+   "position": 11,
+   "title_ms": "Racun — penerangan utama",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [
+    "Pendekatan IPM",
+    "Jenis Racun",
+    "Aspek Pengurusan Untuk Kontraktor"
+   ],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-046",
+     "text": "Racun",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 279,
+     "list_level": 2
+    },
+    {
+     "row_id": "T04-ROW-047",
+     "text": "Mengawal dan mengurus serangan perosak (serangga), penyakit (kulat), dan pertumbuhan rumpai yang boleh menjejaskan kesihatan dan estetika landskap lembut. Konsep utama yang diamalkan ialah Pengurusan Perosak Bersepadu (Integrated Pest Management – IPM). Sebagai kontraktor profesional, adalah penting untuk melaksanakan konsep IPM, di mana penggunaan racun kimia hanya dijadikan pilihan terakhir.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 279,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Aspek yang dibincangkan:",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Pendekatan IPM",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Jenis Racun",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Aspek Pengurusan Untuk Kontraktor",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 7,
+   "source_row_ids": [
+    "T04-ROW-046",
+    "T04-ROW-047"
+   ],
+   "decision_ids": [
+    "T04-DEC-A11"
+   ],
+   "change_type": "AMENDED",
+   "authority_note": "Also lists the pest-control aspects: Pendekatan IPM, Jenis Racun, Aspek Pengurusan Untuk Kontraktor.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-05"
+    ],
+    "asset_group_labels": [
+     "Racun — IPM, kawalan dan jenis racun"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-028"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S12",
+   "position": 12,
+   "title_ms": "Racun — pendekatan IPM",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-048",
+     "text": "IPM memberi keutamaan kepada:",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-049",
+     "text": "Kawalan Kultur",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-050",
+     "text": "Amalan penyelenggaraan yang baik (penyiraman, pembajaan seimbang).",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-051",
+     "text": "Kawalan Fizikal",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-052",
+     "text": "Membuang bahagian berpenyakit secara manual, mencabut rumpai.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-053",
+     "text": "Kawalan Biologi",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-054",
+     "text": "Menggunakan musuh semula jadi kepada perosak.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-055",
+     "text": "Kawalan Kimia",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-056",
+     "text": "Penggunaan racun secara terkawal dan bersasar.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 10,
+   "source_row_ids": [
+    "T04-ROW-048",
+    "T04-ROW-049",
+    "T04-ROW-050",
+    "T04-ROW-051",
+    "T04-ROW-052",
+    "T04-ROW-053",
+    "T04-ROW-054",
+    "T04-ROW-055",
+    "T04-ROW-056"
+   ],
+   "decision_ids": [
+    "T04-DEC-A12"
+   ],
+   "change_type": "TREATMENT_CHANGED",
+   "authority_note": "Was CLICK_TO_REVEAL. All four IPM controls are now base-visible; the priority order is read, not revealed.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-05"
+    ],
+    "asset_group_labels": [
+     "Racun — IPM, kawalan dan jenis racun"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-029",
+     "T04-VO-030",
+     "T04-VO-031",
+     "T04-VO-032",
+     "T04-VO-033"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S13",
+   "position": 13,
+   "title_ms": "Racun — jenis racun",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-057",
+     "text": "Jenis Racun",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-058",
+     "text": "Racun Serangga (Insecticide)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-059",
+     "text": "Untuk mengawal serangga perosak.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-060",
+     "text": "Racun Kulat (Fungicide)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-061",
+     "text": "Untuk mengawal penyakit disebabkan kulat.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-062",
+     "text": "Racun Rumpai (Herbicide)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-063",
+     "text": "Untuk mengawal pertumbuhan rumpai.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 8,
+   "source_row_ids": [
+    "T04-ROW-057",
+    "T04-ROW-058",
+    "T04-ROW-059",
+    "T04-ROW-060",
+    "T04-ROW-061",
+    "T04-ROW-062",
+    "T04-ROW-063"
+   ],
+   "decision_ids": [
+    "T04-DEC-A13"
+   ],
+   "change_type": "TREATMENT_CHANGED",
+   "authority_note": "Was CLICK_TO_REVEAL. Short static content — all three pesticide types base-visible.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-05"
+    ],
+    "asset_group_labels": [
+     "Racun — IPM, kawalan dan jenis racun"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-034",
+     "T04-VO-035",
+     "T04-VO-036",
+     "T04-VO-037"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S14",
+   "position": 14,
+   "title_ms": "Racun — aspek pengurusan untuk kontraktor",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [
+    "Perundangan Dan Pelesenan",
+    "Keselamatan Dan Kesihatan (HSE)",
+    "Pengurusan Risiko"
+   ],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-064",
+     "text": "Aspek Pengurusan untuk Kontraktor:",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Klik setiap tajuk untuk memaparkan maklumat.",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Perundangan Dan Pelesenan",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Keselamatan Dan Kesihatan (HSE)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Pengurusan Risiko",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 6,
+   "source_row_ids": [
+    "T04-ROW-064"
+   ],
+   "decision_ids": [
+    "T04-DEC-A14"
+   ],
+   "change_type": "INSERTED",
+   "authority_note": "New screen inserted by Bariah. A click-to-reveal hub for the three pesticide management aspects — Perundangan Dan Pelesenan, Keselamatan Dan Kesihatan (HSE), Pengurusan Risiko — each of which is then carried in full on T04-S15, T04-S16 and T04-S17.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-06"
+    ],
+    "asset_group_labels": [
+     "Racun — perundangan, HSE dan risiko"
+    ],
+    "visual_obligations_served": [],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [],
+    "reuses_existing_group": true,
+    "adds_unique_assets": 0
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S15",
+   "position": 15,
+   "title_ms": "Racun — perundangan dan pelesenan",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-065",
+     "text": "Perundangan dan Pelesenan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-066",
+     "text": "Penggunaan racun kimia dikawal oleh Akta Racun Makhluk Perosak 1974.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-067",
+     "text": "Kontraktor mesti memastikan pekerja yang menjalankan semburan racun adalah pengendali racun berlesen atau sekurang-kurangnya telah menerima latihan dan di bawah seliaan pemegang lesen. Ini adalah satu kewajipan undang-undang.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 4,
+   "source_row_ids": [
+    "T04-ROW-065",
+    "T04-ROW-066",
+    "T04-ROW-067"
+   ],
+   "decision_ids": [
+    "T04-DEC-A15"
+   ],
+   "change_type": "RENUMBERED",
+   "authority_note": "Renumbering only. Legal content stays base-visible and verbatim.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-06"
+    ],
+    "asset_group_labels": [
+     "Racun — perundangan, HSE dan risiko"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-039"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S16",
+   "position": 16,
+   "title_ms": "Racun — keselamatan dan kesihatan (HSE)",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "REVEAL_PPE_LENGKAP",
+    "REVEAL_PENYIMPANAN_DAN_PELUPUSAN",
+    "REVEAL_SDS",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [
+    "PPE Lengkap",
+    "Penyimpanan Dan Pelupusan",
+    "Helaian Data Keselamatan (SDS)"
+   ],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-068",
+     "text": "Keselamatan dan Kesihatan (HSE)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-069",
+     "text": "PPE Lengkap",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-070",
+     "text": "Memastikan pekerja memakai PPE yang lengkap dan bersesuaian (topeng pernafasan, cermin mata keselamatan, sarung tangan kimia, sut pelindung).",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-071",
+     "text": "Penyimpanan & Pelupusan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-072",
+     "text": "Racun mesti disimpan di dalam stor berkunci, berlabel, dan mempunyai pengudaraan yang baik. Bekas racun kosong tidak boleh digunakan semula dan mesti dilupuskan mengikut peraturan Jabatan Alam Sekitar (JAS).",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-073",
+     "text": "Helaian Data Keselamatan (SDS)",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-074",
+     "text": "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun yang digunakan di tapak dan memastikan pekerja memahaminya.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Klik setiap tajuk untuk memaparkan maklumat.",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "PPE Lengkap",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Penyimpanan Dan Pelupusan",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Helaian Data Keselamatan (SDS)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 12,
+   "source_row_ids": [
+    "T04-ROW-068",
+    "T04-ROW-069",
+    "T04-ROW-070",
+    "T04-ROW-071",
+    "T04-ROW-072",
+    "T04-ROW-073",
+    "T04-ROW-074"
+   ],
+   "decision_ids": [
+    "T04-DEC-A16"
+   ],
+   "change_type": "RENUMBERED_AND_TREATMENT_CHANGED",
+   "authority_note": "Three named reveals. Supersedes D-04's base-visible PPE placement — see T04-SUP-01. A non-interacting learner will not see the PPE list; that residual risk sits with the authority who made the ruling.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-06"
+    ],
+    "asset_group_labels": [
+     "Racun — perundangan, HSE dan risiko"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-040"
+    ],
+    "do_not_reuse_obligations": [
+     "T04-VO-040"
+    ],
+    "reuse_policy": "REUSE_NOT_ALLOWED_FOR_NAMED_ITEMS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S17",
+   "position": 17,
+   "title_ms": "Racun — pengurusan risiko",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-075",
+     "text": "Pengurusan Risiko",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-076",
+     "text": "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak berangin) untuk mengelakkan spray drift.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-077",
+     "text": "Maklumkan kepada pihak pengurusan bangunan atau penduduk sekitar sebelum aktiviti semburan dijalankan. Letakkan papan tanda amaran di kawasan kerja.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-078",
+     "text": "Pelaporan: Menyimpan rekod lengkap bagi setiap aktiviti semburan, termasuk: tarikh, lokasi, jenis racun, kadar bancuhan, nama pengendali, dan keadaan cuaca. Rekod ini amat penting untuk tujuan audit keselamatan dan liabiliti.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "LIST_ITEM",
+     "module_page": 280,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 5,
+   "source_row_ids": [
+    "T04-ROW-075",
+    "T04-ROW-076",
+    "T04-ROW-077",
+    "T04-ROW-078"
+   ],
+   "decision_ids": [
+    "T04-DEC-A17"
+   ],
+   "change_type": "RENUMBERED_AND_TREATMENT_CHANGED",
+   "authority_note": "All content base-visible. Supersedes D-04's reveal-eligible classification — see T04-SUP-02. This removes a residual risk rather than creating one.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-06"
+    ],
+    "asset_group_labels": [
+     "Racun — perundangan, HSE dan risiko"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-041"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S18",
+   "position": 18,
+   "title_ms": "Landskap Kejur — pengenalan",
+   "treatment": "CONTENT_STATIC",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-079",
+     "text": "Landskap Kejur",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_2",
+     "module_page": 280,
+     "list_level": 1
+    },
+    {
+     "row_id": "T04-ROW-080",
+     "text": "Landskap Kejur merujuk kepada semua elemen binaan yang bukan hidup dan bersifat kekal dalam reka bentuk landskap. Ia membentuk struktur, rangka, dan 'tulang belakang' bagi sesuatu ruang luaran, serta menyediakan fungsi, bentuk, dan ketahanan. Elemen landskap kejur dibina untuk memenuhi empat fungsi utama:",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 3,
+   "source_row_ids": [
+    "T04-ROW-079",
+    "T04-ROW-080"
+   ],
+   "decision_ids": [
+    "T04-DEC-A18"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Establishes hard landscape and names its four main functions. The contrast with soft landscape is removed — the module describes the two separately and draws no comparison.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-07"
+    ],
+    "asset_group_labels": [
+     "Landskap Kejur — kategori dan empat fungsi"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-042"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S19",
+   "position": 19,
+   "title_ms": "Landskap Kejur — empat kumpulan fungsi",
+   "treatment": "CLICK_TO_REVEAL",
+   "interaction_states": [
+    "BASE",
+    "ST-01",
+    "ST-02",
+    "ST-03",
+    "ST-04",
+    "ALL_VIEWED"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": "T04-ROW-081",
+     "text": "Pengurusan Ruang dan Sirkulasi",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-082",
+     "text": "Membentuk Ruang",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-083",
+     "text": "Dinding, pagar, dan perubahan aras lantai digunakan untuk membahagikan ruang luaran kepada \"bilik\" yang berbeza (cth., kawasan rehat, kawasan permainan).",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-084",
+     "text": "Laluan Pergerakan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-085",
+     "text": "Lorong pejalan kaki (pathways), jalan masuk (driveways), dan tangga menyediakan laluan yang selamat dan jelas untuk pergerakan manusia dan kenderaan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-086",
+     "text": "Fungsi Struktur dan Kejuruteraan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-087",
+     "text": "Menstabilkan Tanah",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-088",
+     "text": "Dinding penahan (retaining walls) dibina untuk menahan tanah di kawasan bercerun, mengelakkan hakisan dan tanah runtuh.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-089",
+     "text": "Pengurusan Air",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-090",
+     "text": "Parit, longkang, dan permukaan yang dicerunkan dengan betul (properly graded surfaces) adalah penting untuk menguruskan aliran air larian permukaan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-091",
+     "text": "Kebolehgunaan dan Kemudahan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-092",
+     "text": "Menyediakan Permukaan Rata",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-093",
+     "text": "Laman (patios), dek (decks), dan dataran (plazas) menyediakan permukaan yang stabil dan selesa untuk aktiviti seperti meletakkan perabot luar, barbeku, atau sebagai ruang perhimpunan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-094",
+     "text": "Menyediakan Kemudahan",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-095",
+     "text": "Struktur seperti wakaf, gazebo, pergola, bangku, dan lampu landskap meningkatkan keselesaan dan kebolehgunaan ruang pada waktu yang berbeza.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 281,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-096",
+     "text": "Estetika dan Reka Bentuk",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 282,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-097",
+     "text": "Menambah Tekstur, Warna, dan Corak",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 282,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-098",
+     "text": "Penggunaan bahan seperti batu, kayu, dan konkrit menambah dimensi visual kepada landskap.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 282,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-099",
+     "text": "Mencipta Kontras",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "HEADING_3",
+     "module_page": 282,
+     "list_level": 0
+    },
+    {
+     "row_id": "T04-ROW-100",
+     "text": "Elemen kejur memberikan kontras yang menarik kepada kelembutan elemen tumbuhan.",
+     "provenance": "SOURCE_CONTROLLED",
+     "content_type": "PARAGRAPH",
+     "module_page": 282,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 21,
+   "source_row_ids": [
+    "T04-ROW-081",
+    "T04-ROW-082",
+    "T04-ROW-083",
+    "T04-ROW-084",
+    "T04-ROW-085",
+    "T04-ROW-086",
+    "T04-ROW-087",
+    "T04-ROW-088",
+    "T04-ROW-089",
+    "T04-ROW-090",
+    "T04-ROW-091",
+    "T04-ROW-092",
+    "T04-ROW-093",
+    "T04-ROW-094",
+    "T04-ROW-095",
+    "T04-ROW-096",
+    "T04-ROW-097",
+    "T04-ROW-098",
+    "T04-ROW-099",
+    "T04-ROW-100"
+   ],
+   "decision_ids": [
+    "T04-DEC-A19"
+   ],
+   "change_type": "RENUMBERED",
+   "authority_note": "Renumbering only.",
+   "visual": {
+    "asset_group_ids": [
+     "AG-07"
+    ],
+    "asset_group_labels": [
+     "Landskap Kejur — kategori dan empat fungsi"
+    ],
+    "visual_obligations_served": [
+     "T04-VO-043",
+     "T04-VO-044",
+     "T04-VO-045",
+     "T04-VO-046"
+    ],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "REUSE_WITH_CONDITIONS",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [
+     "ASSET_GROUP_PLAN",
+     "OBLIGATION_MAPPING"
+    ],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S20",
+   "position": 20,
+   "title_ms": "Rumusan",
+   "treatment": "RUMUSAN",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": null,
+     "text": "[Kepentingan] Penjagaan dan penyelenggaraan memastikan landskap yang telah dibina kekal sihat, berfungsi dan selamat dalam jangka masa panjang. Membina dan mengekalkan landskap adalah dua tanggungjawab berbeza.",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "RUMUSAN_BEAT",
+     "authority_ref": "T04-RUM-F01",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "[Skop/Isi Utama] Penjagaan dan penyelenggaraan merangkumi landskap lembut dan landskap kejur. Landskap lembut memfokuskan kepada penyiraman, pembajaan dan kawalan racun, manakala landskap kejur memfokuskan kepada memastikan elemen binaan kekal berfungsi dan selamat.",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "RUMUSAN_BEAT",
+     "authority_ref": "T04-RUM-F02",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "[Manfaat] Dengan melaksanakan penjagaan dan penyelenggaraan yang berjadual dan terancang, kontraktor dapat memelihara kualiti landskap sepanjang DLP, memenuhi kewajipan kontrak, dan memastikan ruang luaran kekal lestari dan bernilai untuk pengguna.",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "RUMUSAN_BEAT",
+     "authority_ref": "T04-RUM-F03",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 4,
+   "source_row_ids": [],
+   "decision_ids": [
+    "T04-DEC-A20",
+    "T04-DEC-D01",
+    "T04-DEC-D02"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Carries the three-beat Rumusan. Four points became three.",
+   "visual": {
+    "asset_group_ids": [],
+    "asset_group_labels": [],
+    "visual_obligations_served": [],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "NO_VISUAL",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S21",
+   "position": 21,
+   "title_ms": "Kuiz",
+   "treatment": "QUIZ",
+   "interaction_states": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "RESULT"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": null,
+     "text": "Jawab kelima-lima soalan. Markah lulus 60 peratus.",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "T04-QZ-Q1  (MCQ)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "QUIZ_LABEL",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Apakah tiga tanggungjawab kritikal dalam tempoh penyelenggaraan semasa pembinaan dan DLP bagi landskap lembut?",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "QUIZ_STEM",
+     "authority_ref": "T04-QZ-Q1",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "A. Siram, baja dan racun",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q1-OPT-1",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "B. Siram, potong dan tanam",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q1-OPT-2",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "C. Baja, racun dan turap",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q1-OPT-3",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "D. Racun, siram dan pembinaan",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q1-OPT-4",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "T04-QZ-Q2  (MCQ)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "QUIZ_LABEL",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Sebuah projek memerlukan pengairan automatik bagi kawasan rumput yang luas. Antara sistem berikut, yang manakah paling sesuai?",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "QUIZ_STEM",
+     "authority_ref": "T04-QZ-Q2",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "A. Sistem Semburan (Sprinkler System)",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q2-OPT-1",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "B. Sistem Titis (Drip Irrigation System)",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q2-OPT-2",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "C. Penyiraman manual menggunakan hos getah",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q2-OPT-3",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "D. Semburan folia menggunakan baja cecair",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q2-OPT-4",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "T04-QZ-Q3  (MCQ)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "QUIZ_LABEL",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Mengikut susunan keutamaan IPM, kaedah kawalan yang manakah disenaraikan paling akhir?",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "QUIZ_STEM",
+     "authority_ref": "T04-QZ-Q3",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "A. Kawalan Kultur",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q3-OPT-1",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "B. Kawalan Fizikal",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q3-OPT-2",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "C. Kawalan Biologi",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q3-OPT-3",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "D. Kawalan Kimia",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q3-OPT-4",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "T04-QZ-Q4  (MCQ)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "QUIZ_LABEL",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Antara fungsi berikut, yang manakah merangkumi kerja menstabilkan tanah dan menguruskan aliran air?",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "QUIZ_STEM",
+     "authority_ref": "T04-QZ-Q4",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "A. Pengurusan Ruang dan Sirkulasi",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q4-OPT-1",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "B. Fungsi Struktur dan Kejuruteraan",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q4-OPT-2",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "C. Kebolehgunaan dan Kemudahan",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q4-OPT-3",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "D. Estetika dan Reka Bentuk",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q4-OPT-4",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "T04-QZ-Q5  (MULTIPLE_RESPONSE)",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "QUIZ_LABEL",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Pilih SEMUA pernyataan yang tepat tentang kawalan semasa aktiviti semburan racun.",
+     "provenance": "AUTHORITY_SUPPLIED",
+     "content_type": "QUIZ_STEM",
+     "authority_ref": "T04-QZ-Q5",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "☐ Pengendali semburan mesti berlesen atau telah menerima latihan",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q5-OPT-1",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "☐ Pekerja mesti memakai PPE yang lengkap dan bersesuaian",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q5-OPT-2",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "☐ Semburan hanya dilakukan semasa cuaca tenang",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q5-OPT-3",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "☐ Salinan Helaian Data Keselamatan (SDS) disimpan di tapak",
+     "provenance": "CAIR_DRAFTED_ASSESSMENT_OPTION",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q5-OPT-4",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "☐ Semburan dijadualkan pada waktu petang tanpa mengambil kira keadaan cuaca",
+     "provenance": "AUTHORITY_SELECTED",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q5-OPT-5",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "☐ Semua racun dibeli daripada satu pembekal tunggal",
+     "provenance": "AUTHORITY_SELECTED",
+     "content_type": "QUIZ_OPTION",
+     "authority_ref": "T04-QZ-Q5-OPT-6",
+     "module_page": null,
+     "list_level": 1
+    },
+    {
+     "row_id": null,
+     "text": "SETERUSNYA",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 34,
+   "source_row_ids": [],
+   "decision_ids": [
+    "T04-DEC-A21",
+    "T04-DEC-E01",
+    "T04-DEC-E02",
+    "T04-DEC-E03",
+    "T04-DEC-E04",
+    "T04-DEC-E05",
+    "T04-DEC-E06",
+    "T04-DEC-E07",
+    "T04-DEC-E08"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Five items with Bariah's replacement stems. Q5 is Multiple Response with checkbox options.",
+   "visual": {
+    "asset_group_ids": [],
+    "asset_group_labels": [],
+    "visual_obligations_served": [],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "NO_VISUAL",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  },
+  {
+   "screen_id": "T04-S22",
+   "position": 22,
+   "title_ms": "Tamat Topik",
+   "treatment": "CLOSING",
+   "interaction_states": [
+    "BASE only"
+   ],
+   "named_reveal_items": [],
+   "named_aspect_list": [],
+   "content_blocks": [
+    {
+     "row_id": null,
+     "text": "Tamat Topik",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    },
+    {
+     "row_id": null,
+     "text": "Penjagaan dan Penyelenggaraan",
+     "provenance": "CAIR_STRUCTURAL",
+     "content_type": "UI",
+     "module_page": null,
+     "list_level": 0
+    }
+   ],
+   "learner_text_count": 2,
+   "source_row_ids": [],
+   "decision_ids": [
+    "T04-DEC-A22"
+   ],
+   "change_type": "RENUMBERED_AND_AMENDED",
+   "authority_note": "Closes the Topik. 'Tamat Bahagian' is retired for T04.",
+   "visual": {
+    "asset_group_ids": [],
+    "asset_group_labels": [],
+    "visual_obligations_served": [],
+    "do_not_reuse_obligations": [],
+    "reuse_policy": "NO_VISUAL",
+    "artwork_status": "NOT_PRODUCED",
+    "placeholder_only": true,
+    "group_route": [],
+    "reuses_existing_group": false,
+    "adds_unique_assets": null
+   },
+   "internal_unit_id": "K5-PL06-T04-B01",
+   "learner_display_unit": "Topik 4",
+   "displays_bahagian": false,
+   "content_status": "FROZEN_UNDER_AUTHORITY_DECISION"
+  }
+ ]
+}

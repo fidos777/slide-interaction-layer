@@ -7,6 +7,22 @@
   "PRODUCTION_ONLY",
   "BOTH_INSTRUCTIONAL_AND_PRODUCTION"
  ],
+ "identifier_corrections": [
+  {
+   "correction_id": "T04-COR-05",
+   "field": "do-not-reuse register, HSE item obligation ID",
+   "as_recorded": "T04-VO-039",
+   "as_corrected": "T04-VO-040",
+   "found_in_stage": "4.2F-B1",
+   "introduced_in_stage": "4.2F-B0.9",
+   "basis": "T04-VO-039 is the Perundangan dan Pelesenan obligation (rows 65-67). The obligation whose subject is the pesticide PPE set is T04-VO-040 (rows 68-74), and the Stage 4.2F-B0.8 closure already carries reuse_policy = DO_NOT_REUSE on it. The register had a hand-typed ID that was never cross-checked.",
+   "authority_wording_changed": false,
+   "what_it_would_have_broken": "The storyboard would have shown the do-not-reuse restriction on the legal screen and not on the PPE screen — the exact confusion Bariah's ruling exists to prevent.",
+   "detection": "Cross-checking the typed list against the closure's own reuse_policy while building the B1 visual mapping.",
+   "status": "APPLIED",
+   "recurrence_note": "Second occurrence of this defect class. Stage 4.2F-B0.6 had five hand-typed obligation IDs in the legal sheet, fixed then by deriving from an index. The lesson did not carry across to this register. It does now: a gate derives the do-not-reuse ID set from the closure and compares."
+  }
+ ],
  "visual_scope": {
   "governance_id": "T04-VIS-GOV-01",
   "status": "ACCEPTED_AS_A_SET_WITH_CONDITIONS",
@@ -67,7 +83,7 @@
     "confirmed_by_authority": true
    },
    {
-    "obligation_id": "T04-VO-039",
+    "obligation_id": "T04-VO-040",
     "label": "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)",
     "asset_group_id": "AG-06",
     "restriction": "REUSE_NOT_ALLOWED",
@@ -178,7 +194,7 @@
     "reuse_decision": "REUSE_WITH_CONDITIONS",
     "reuse_decision_id": "T04-DEC-B03",
     "item_level_restrictions": [
-     "T04-VO-039"
+     "T04-VO-040"
     ],
     "item_level_restriction_labels": [
      "Keselamatan dan Kesihatan (HSE) (Racun — pematuhan)"
