@@ -29,6 +29,7 @@ import pl06_extract_v1 as EX       # noqa: E402
 import pl06_extract_rest_v1 as R   # noqa: E402
 import pl06_batch1_data_v1 as B    # noqa: E402
 import src_k3_v1 as K3             # noqa: E402
+import src_k2_v1 as K2             # noqa: E402
 
 STAGE = "4.2F-D"
 AUTHORITY = "SRC-AUTH-01"
@@ -491,20 +492,18 @@ def queue_rows():
                                     else "read the PDF through the connector")))
 
     # ---- K2 ----
-    rows.append(_row(
-        course="K2", pl="MONOLITH", unit_or_candidate_id="K2-MONOLITH-UNRESOLVED",
-        record_type="UNRESOLVED_SOURCE",
-        source_located=True, binary_local=False, binary_readable=False,
-        content_read=False, boundary_confirmed=False,
-        extraction_status="SOURCE_LOCATED_BY_CONNECTOR",
-        model_status="NOT_STARTED",
-        authority_dependency="none — this is a source-access blocker, not an authority one",
-        immediately_executable=False, ready_to_emit_pptx=False,
-        blocker_owner="FIRDAUS",
-        exact_blocker=f"binary not local: Drive {A.K2_MONOLITH['drive_id']}, "
-                      f"{A.K2_MONOLITH['bytes']:,} bytes, searched in every local location "
-                      f"and not found",
-        next_executable_action="place the PDF on local disk; PyMuPDF is already available"))
+    # Nine candidate structures, one per PL, replacing the single K2-MONOLITH-UNRESOLVED
+    # row. That row said one true thing — the binary is missing — and hid nine structures
+    # the source's own tables and teaching plans now evidence. The binary is still
+    # missing; that fact travels on every row as its exact blocker instead of standing in
+    # for the whole course.
+    #
+    # These are CANDIDATE_STRUCTURE, not CONFIRMED_UNIT. A PL code with a module and a
+    # teaching plan is a structure; nothing about its page span or internal boundaries is
+    # known. Unit IDs are built from the teaching-plan headers, never from the silibus
+    # KOD column, which prefixes all nine packages M01- (see K2-SOURCE-OBS-01).
+    for r in K2.queue_rows():
+        rows.append(_row(**r))
     return rows
 
 
@@ -541,7 +540,30 @@ def queue_summary():
                                           "not an authority one")]),
             ready_to_emit_units=len([r for r in rows if r["ready_to_emit_pptx"]]),
             total_rows=len(rows)),
+        # Both member lists are published by name. A count alone lets a reader assume
+        # membership; the list makes the claim checkable, and a QA gate compares it
+        # against a hand-typed roll.
         immediately_executable_ids=[r["unit_or_candidate_id"] for r in imm],
+        ready_to_emit_pptx_unit_ids=[r["unit_or_candidate_id"] for r in rows
+                                     if r["ready_to_emit_pptx"]],
+        # K2 is reported separately as well as inside the global totals, so that a course
+        # whose binary is still missing cannot quietly inflate a project-wide figure.
+        k2=dict(
+            confirmed_production_units=len([r for r in rows if r["course"] == "K2"
+                                            and r["record_type"]
+                                            == "CONFIRMED_PRODUCTION_UNIT"]),
+            candidate_structures=len([r for r in rows if r["course"] == "K2"
+                                      and r["record_type"] == "CANDIDATE_STRUCTURE"]),
+            unmapped_source_regions=K2.hierarchy()["unmapped_source_regions"],
+            immediately_executable_units=len([r for r in rows if r["course"] == "K2"
+                                              and r["immediately_executable"]]),
+            extracted_units=len([r for r in rows if r["course"] == "K2"
+                                 and r["extraction_status"] == "EXTRACTED"]),
+            model_ready_units=len([r for r in rows if r["course"] == "K2"
+                                   and r["model_status"] in ("MODEL_READY", "PACKAGED")]),
+            authority_dependencies=sorted({r["authority_dependency"] for r in rows
+                                           if r["course"] == "K2"}),
+            ids=[r["unit_or_candidate_id"] for r in rows if r["course"] == "K2"]),
         blockers_by_owner={o: dict(
             count=len([r for r in rows if r["blocker_owner"] == o]),
             ids=[r["unit_or_candidate_id"] for r in rows if r["blocker_owner"] == o])

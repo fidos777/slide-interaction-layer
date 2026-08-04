@@ -1,0 +1,41 @@
+{
+ "record_id": "QUEUE-RETIREMENT-01",
+ "stage": "4.2F-E",
+ "live_queue": "PRODUCTION_QUEUE_v4",
+ "retired": [
+  {
+   "artifact": "PRODUCTION_QUEUE_v1",
+   "status": "REMOVED_FROM_LIVE_TREE_AS_SUPERSEDED",
+   "superseded_by": "PRODUCTION_QUEUE_v4"
+  },
+  {
+   "artifact": "PRODUCTION_QUEUE_v2",
+   "status": "REMOVED_FROM_LIVE_TREE_AS_SUPERSEDED",
+   "superseded_by": "PRODUCTION_QUEUE_v4"
+  },
+  {
+   "artifact": "PRODUCTION_QUEUE_v3",
+   "status": "REMOVED_FROM_LIVE_TREE_AS_SUPERSEDED",
+   "superseded_by": "PRODUCTION_QUEUE_v4"
+  }
+ ],
+ "files_removed": [
+  "PRODUCTION_QUEUE_v1.json",
+  "PRODUCTION_QUEUE_v1.md",
+  "PRODUCTION_QUEUE_v1.csv",
+  "PRODUCTION_QUEUE_v2.json",
+  "PRODUCTION_QUEUE_v2.md",
+  "PRODUCTION_QUEUE_v2.csv",
+  "PRODUCTION_QUEUE_v3.json",
+  "PRODUCTION_QUEUE_v3.md",
+  "PRODUCTION_QUEUE_v3.csv"
+ ],
+ "files_already_absent": [],
+ "git_history": "PRESERVED — the files remain in every commit that contained them; only the working tree is cleaned.",
+ "scope_note": "The brief named v2. v1 and v3 are retired with it because the same instruction requires automation and human-facing indexes to point at one live queue only, and leaving two other superseded queues on disk would contradict that. The widening is recorded here rather than done quietly.",
+ "single_live_queue_check": [
+  "PRODUCTION_QUEUE_v4.csv",
+  "PRODUCTION_QUEUE_v4.json",
+  "PRODUCTION_QUEUE_v4.md"
+ ]
+}

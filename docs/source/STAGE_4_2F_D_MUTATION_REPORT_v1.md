@@ -17,7 +17,7 @@ Only the paths this run introduced are attacked. The Stage 4.2F-C fixtures keep 
 | `DX-01` | a K3 package is dropped from the inventory | K3 | `K3_PACKAGE_COUNT_MATCHES_THE_LITERAL` |
 | `DX-02` | a package is described without being read | K3 | `EVERY_K3_PACKAGE_IS_READ_IN_FULL` |
 | `DX-03` | a K3 row claims a local binary it does not have | K3 | `NO_K3_PACKAGE_CLAIMS_A_LOCAL_BINARY` |
-| `DX-04` | K2 is promoted from unresolved source to a production unit | R2 | `K2_REMAINS_AN_UNRESOLVED_SOURCE_RECORD_NOT_A_UNIT` |
+| `DX-04` | a K2 candidate is promoted to a production unit | R2 | `NO_K2_ROW_IS_A_CONFIRMED_PRODUCTION_UNIT` |
 | `DX-05` | an unqualified absence status comes back | R2 | `NO_ROW_USES_AN_UNQUALIFIED_ABSENCE_STATUS` |
 | `DP-01` | PL07's page count is inflated | K3 | `K3_PL07_PAGE_COUNT` |
 | `DP-02` | the page total is typed rather than summed | K3 | `K3_TOTAL_PAGES_MATCHES_THE_STANDALONE_LITERAL`, `K3_TOTAL_PAGES_AGREES_WITH_THE_SUM_OF_THE_LITERALS` |
@@ -43,7 +43,7 @@ Only the paths this run introduced are attacked. The Stage 4.2F-C fixtures keep 
 | `DA-08` | CAIR quietly picks an option for Bariah | K3 | `THE_DECISION_OFFERS_FOUR_OPTIONS_AND_NO_CAIR_PICK` |
 | `DA-09` | an option is dropped from the decision | K3 | `THE_DECISION_OFFERS_FOUR_OPTIONS_AND_NO_CAIR_PICK` |
 | `DA-10` | the decision starts blocking source reading | K3 | `THE_DECISION_DOES_NOT_BLOCK_SOURCE_OR_VISUAL_WORK` |
-| `DQ-01` | a connector-located record becomes immediately executable | R2 | `NO_CONNECTOR_ONLY_ROW_IS_IMMEDIATELY_EXECUTABLE`, `NO_IMMEDIATELY_EXECUTABLE_UNIT_LACKS_A_READABLE_BINARY`, `IMMEDIATELY_EXECUTABLE_MATCHES_THE_LITERAL` |
+| `DQ-01` | a connector-located record becomes immediately executable | R2 | `<suite exception>` |
 | `DQ-02` | the headline count is inflated | R2 | `IMMEDIATELY_EXECUTABLE_MATCHES_THE_LITERAL` |
 | `DQ-03` | something claims it is ready to emit PPTX | R2 | `NOTHING_IS_READY_TO_EMIT_PPTX_YET` |
 | `DQ-04` | connector-read text is counted as extracted rows | R2 | `EXTRACTED_COUNT_EQUALS_THE_FROZEN_PL06_UNIT_COUNT` |

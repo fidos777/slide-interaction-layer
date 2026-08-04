@@ -60,16 +60,16 @@ def emit_all():
     made.append(_w("SOURCE_LOCATION_REPORT_v1.md", "\n".join(md)))
 
     q = S.queue_summary()
-    made.append(_j("PRODUCTION_QUEUE_v3.json", q))
+    made.append(_j("PRODUCTION_QUEUE_v4.json", q))
     hdr = S.COLUMNS
     csv = [",".join(hdr)]
     for r in q["rows"]:
         csv.append(",".join('"' + str(r[c]).replace('"', '""') + '"' for c in hdr))
-    made.append(_w("PRODUCTION_QUEUE_v3.csv", "\n".join(csv) + "\n"))
+    made.append(_w("PRODUCTION_QUEUE_v4.csv", "\n".join(csv) + "\n"))
 
     c = q["counts"]
     al = q["alias_map"]
-    md = [BANNER, "", "# Production queue v3 — granular source states", "", "```",
+    md = [BANNER, "", "# Production queue v4 — granular source states", "", "```",
           f"IMMEDIATELY_EXECUTABLE_UNITS  = {c['immediately_executable_units']}", "```", "",
           "The headline. " + q["headline"]["note"], "",
           "Conditions: " + "; ".join(q["headline"]["conditions"]) + ".", "",
@@ -80,6 +80,20 @@ def emit_all():
                [[i["old"], i["new"], i["because"]] for i in al["interpretation"]]), "",
           f"**{al['retired_metric']['metric']}** is retired. "
           + al["retired_metric"]["why_retired"], "",
+          "## K2 reported separately", "",
+          _tbl(["count", "value"],
+               [[k.replace("_", " "), v] for k, v in q["k2"].items()
+                if not isinstance(v, list)]
+               + [["ids", ", ".join(q["k2"]["ids"])],
+                  ["authority dependencies",
+                   "; ".join(q["k2"]["authority_dependencies"])]]), "",
+          "## Named member lists", "",
+          f"`IMMEDIATELY_EXECUTABLE_UNIT_IDS` ({len(q['immediately_executable_ids'])}): "
+          + (", ".join(f"`{i}`" for i in q["immediately_executable_ids"]) or "none"), "",
+          f"`READY_TO_EMIT_PPTX_UNIT_IDS` "
+          f"({len(q['ready_to_emit_pptx_unit_ids'])}): "
+          + (", ".join(f"`{i}`" for i in q["ready_to_emit_pptx_unit_ids"])
+             or "none — nothing is ready to emit"), "",
           "## Blockers by owner", "",
           _tbl(["owner", "count"],
                [[o, v["count"]] for o, v in q["blockers_by_owner"].items()]), "",
@@ -96,7 +110,7 @@ def emit_all():
                  "**YES**" if r["immediately_executable"] else "no",
                  r["blocker_owner"], r["exact_blocker"][:60]] for r in q["rows"]]), "",
           q["derivation"], ""]
-    made.append(_w("PRODUCTION_QUEUE_v3.md", "\n".join(md)))
+    made.append(_w("PRODUCTION_QUEUE_v4.md", "\n".join(md)))
 
     t = S.t04_page_reconciliation()
     made.append(_j("T04_PAGE_REFERENCE_RECONCILIATION_v1.json", t))

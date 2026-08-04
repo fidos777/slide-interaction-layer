@@ -133,10 +133,19 @@ def run():
     chk("NO_K3_PACKAGE_CLAIMS_A_LOCAL_BINARY", EXISTENCE,
         sorted({r["binary_local"] for r in inv["rows"]}), [False], len(inv["rows"]),
         "K3_SOURCE_INVENTORY_v2.json", LITERAL)
-    chk("K2_REMAINS_AN_UNRESOLVED_SOURCE_RECORD_NOT_A_UNIT", EXISTENCE,
-        [r["record_type"] for r in rows if r["course"] == "K2"], ["UNRESOLVED_SOURCE"],
+    # Supersedes K2_REMAINS_AN_UNRESOLVED_SOURCE_RECORD_NOT_A_UNIT, which asserted that
+    # every K2 row carried record_type UNRESOLVED_SOURCE. That was true when written and
+    # Stage 4.2F-E was explicitly required to change it: once the source's own tables
+    # evidenced nine packages, one unresolved row was hiding nine structures.
+    #
+    # The gate's INTENT was never "K2 must stay unresolved" — it was "K2 must not be
+    # promoted to a production unit on the strength of a missing binary". That intent is
+    # unchanged and is what this gate now enforces. The fact moved; the protection did not.
+    chk("NO_K2_ROW_IS_A_CONFIRMED_PRODUCTION_UNIT", EXISTENCE,
+        sorted({r["record_type"] for r in rows if r["course"] == "K2"}),
+        ["CANDIDATE_STRUCTURE"],
         len([r for r in rows if r["course"] == "K2"]),
-        "PRODUCTION_QUEUE_v3.json", LITERAL)
+        "PRODUCTION_QUEUE_v4.json", LITERAL)
     chk("NO_ROW_USES_AN_UNQUALIFIED_ABSENCE_STATUS", EXISTENCE,
         [r["unit_or_candidate_id"] for r in rows
          if r["extraction_status"] in ("NOT_IN_CUSTODY", "SOURCE_MISSING")], [],

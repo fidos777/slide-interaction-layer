@@ -88,13 +88,13 @@ FIXTURES = [
     dict(fid="DX-03", title="a K3 row claims a local binary it does not have",
          target="K3", gates=["NO_K3_PACKAGE_CLAIMS_A_LOCAL_BINARY"],
          patch=_inv(lambda d: d["rows"][0].update(binary_local=True))),
-    dict(fid="DX-04", title="K2 is promoted from unresolved source to a production unit",
-         target="R2", gates=["K2_REMAINS_AN_UNRESOLVED_SOURCE_RECORD_NOT_A_UNIT"],
-         patch=_queue(lambda q: _row(q, "K2-MONOLITH-UNRESOLVED").update(
+    dict(fid="DX-04", title="a K2 candidate is promoted to a production unit",
+         target="R2", gates=["NO_K2_ROW_IS_A_CONFIRMED_PRODUCTION_UNIT"],
+         patch=_queue(lambda q: next(r for r in q["rows"] if r["course"] == "K2").update(
              record_type="CONFIRMED_PRODUCTION_UNIT"))),
     dict(fid="DX-05", title="an unqualified absence status comes back", target="R2",
          gates=["NO_ROW_USES_AN_UNQUALIFIED_ABSENCE_STATUS"],
-         patch=_queue(lambda q: _row(q, "K2-MONOLITH-UNRESOLVED").update(
+         patch=_queue(lambda q: next(r for r in q["rows"] if r["course"] == "K2").update(
              extraction_status="SOURCE_MISSING"))),
 
     # ---------------- page references ----------------
