@@ -1,0 +1,369 @@
+{
+ "ran": true,
+ "record_id": "T04_PAGE_REFERENCE_RECONCILIATION",
+ "unit_id": "K5-PL06-T04-B01",
+ "oracle": "rendered PDF, hash-verified, footer-numbered; searched inside the unit's own page window, forward-only",
+ "rows_total": 100,
+ "rows_resolved": 93,
+ "rows_unresolved": 7,
+ "unresolved_row_ids": [
+  "T04-ROW-003",
+  "T04-ROW-006",
+  "T04-ROW-026",
+  "T04-ROW-044",
+  "T04-ROW-046",
+  "T04-ROW-057",
+  "T04-ROW-069"
+ ],
+ "mismatches": 32,
+ "corrections": [
+  {
+   "row_id": "T04-ROW-037",
+   "old_module_page": 279,
+   "old_rendered_pdf_page": 297,
+   "pdf_oracle_module_page": 278,
+   "pdf_oracle_rendered_page": 296,
+   "delta": -1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Merancang program pembajaan yang mematuhi spesifikasi kontra"
+  },
+  {
+   "row_id": "T04-ROW-068",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Keselamatan dan Kesihatan (HSE)"
+  },
+  {
+   "row_id": "T04-ROW-070",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Memastikan pekerja memakai PPE yang lengkap dan bersesuaian "
+  },
+  {
+   "row_id": "T04-ROW-071",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Penyimpanan & Pelupusan"
+  },
+  {
+   "row_id": "T04-ROW-072",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Racun mesti disimpan di dalam stor berkunci, berlabel, dan m"
+  },
+  {
+   "row_id": "T04-ROW-073",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Helaian Data Keselamatan (SDS)"
+  },
+  {
+   "row_id": "T04-ROW-074",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Kontraktor wajib menyimpan Salinan SDS untuk setiap racun ya"
+  },
+  {
+   "row_id": "T04-ROW-075",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Pengurusan Risiko"
+  },
+  {
+   "row_id": "T04-ROW-076",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Semburan hanya boleh dilakukan semasa cuaca tenang (tidak be"
+  },
+  {
+   "row_id": "T04-ROW-077",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Maklumkan kepada pihak pengurusan bangunan atau penduduk sek"
+  },
+  {
+   "row_id": "T04-ROW-078",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Pelaporan: Menyimpan rekod lengkap bagi setiap aktiviti semb"
+  },
+  {
+   "row_id": "T04-ROW-079",
+   "old_module_page": 280,
+   "old_rendered_pdf_page": 298,
+   "pdf_oracle_module_page": 281,
+   "pdf_oracle_rendered_page": 299,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Landskap Kejur"
+  },
+  {
+   "row_id": "T04-ROW-081",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Pengurusan Ruang dan Sirkulasi"
+  },
+  {
+   "row_id": "T04-ROW-082",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Membentuk Ruang"
+  },
+  {
+   "row_id": "T04-ROW-083",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Dinding, pagar, dan perubahan aras lantai digunakan untuk me"
+  },
+  {
+   "row_id": "T04-ROW-084",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Laluan Pergerakan"
+  },
+  {
+   "row_id": "T04-ROW-085",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Lorong pejalan kaki (pathways), jalan masuk (driveways), dan"
+  },
+  {
+   "row_id": "T04-ROW-086",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Fungsi Struktur dan Kejuruteraan"
+  },
+  {
+   "row_id": "T04-ROW-087",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Menstabilkan Tanah"
+  },
+  {
+   "row_id": "T04-ROW-088",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Dinding penahan (retaining walls) dibina untuk menahan tanah"
+  },
+  {
+   "row_id": "T04-ROW-089",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Pengurusan Air"
+  },
+  {
+   "row_id": "T04-ROW-090",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Parit, longkang, dan permukaan yang dicerunkan dengan betul "
+  },
+  {
+   "row_id": "T04-ROW-091",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Kebolehgunaan dan Kemudahan"
+  },
+  {
+   "row_id": "T04-ROW-092",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Menyediakan Permukaan Rata"
+  },
+  {
+   "row_id": "T04-ROW-093",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Laman (patios), dek (decks), dan dataran (plazas) menyediaka"
+  },
+  {
+   "row_id": "T04-ROW-094",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Menyediakan Kemudahan"
+  },
+  {
+   "row_id": "T04-ROW-095",
+   "old_module_page": 281,
+   "old_rendered_pdf_page": 299,
+   "pdf_oracle_module_page": 282,
+   "pdf_oracle_rendered_page": 300,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Struktur seperti wakaf, gazebo, pergola, bangku, dan lampu l"
+  },
+  {
+   "row_id": "T04-ROW-096",
+   "old_module_page": 282,
+   "old_rendered_pdf_page": 300,
+   "pdf_oracle_module_page": 283,
+   "pdf_oracle_rendered_page": 301,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Estetika dan Reka Bentuk"
+  },
+  {
+   "row_id": "T04-ROW-097",
+   "old_module_page": 282,
+   "old_rendered_pdf_page": 300,
+   "pdf_oracle_module_page": 283,
+   "pdf_oracle_rendered_page": 301,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Menambah Tekstur, Warna, dan Corak"
+  },
+  {
+   "row_id": "T04-ROW-098",
+   "old_module_page": 282,
+   "old_rendered_pdf_page": 300,
+   "pdf_oracle_module_page": 283,
+   "pdf_oracle_rendered_page": 301,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Penggunaan bahan seperti batu, kayu, dan konkrit menambah di"
+  },
+  {
+   "row_id": "T04-ROW-099",
+   "old_module_page": 282,
+   "old_rendered_pdf_page": 300,
+   "pdf_oracle_module_page": 283,
+   "pdf_oracle_rendered_page": 301,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Mencipta Kontras"
+  },
+  {
+   "row_id": "T04-ROW-100",
+   "old_module_page": 282,
+   "old_rendered_pdf_page": 300,
+   "pdf_oracle_module_page": 283,
+   "pdf_oracle_rendered_page": 301,
+   "delta": 1,
+   "status": "CORRECTED_IN_THIS_RECORD",
+   "text": "Elemen kejur memberikan kontras yang menarik kepada kelembut"
+  }
+ ],
+ "old_span": [
+  276,
+  282
+ ],
+ "frozen_map_span": [
+  276,
+  283
+ ],
+ "oracle_span": [
+  276,
+  283
+ ],
+ "cause": "The committed T04 extract attributed pages by counting Word's cached <w:lastRenderedPageBreak>. That method drifts, and here it drifts by one from module page 281 onward, ending the unit on 282 while the frozen map says 283. It is the same defect Stage 4.2F-C found in the batch 1 units, present in T04's own extract.",
+ "learner_or_reviewer_facing": {
+  "module_page_appears_in_storyboard_pptx": false,
+  "module_page_appears_in_state_appendix_pptx": false,
+  "method": "both decks re-opened from disk, slide text extracted, searched for page phrases and for bare numbers 276-283",
+  "finding": "no module page number reaches either deck"
+ },
+ "regeneration_decision": {
+  "regenerate": false,
+  "reason": "The brief regenerates only when a page-reference error is embedded in a learner-facing or reviewer-facing artifact. It is not: the drift lives in internal JSON registers. Regenerating the storyboard to fix a number nobody can see would churn a reviewed artifact for nothing."
+ },
+ "affected_artifacts": [
+  "docs/pl06/t04/T04_SOURCE_EXTRACT_v1.json",
+  "any register projected from its module_page field"
+ ],
+ "scope_note": "This record reconciles page references only. No T04 content, interaction or authority decision is reopened."
+}

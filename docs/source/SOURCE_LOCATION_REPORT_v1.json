@@ -1,0 +1,150 @@
+{
+ "stage": "4.2F-D",
+ "scoped_statuses": [
+  "NOT_FOUND_IN_REPOSITORY",
+  "FOUND_IN_UPLOADED_ARCHIVE",
+  "LOCATED_BY_CONNECTOR_BINARY_NOT_LOCAL",
+  "NOT_FOUND_IN_LOCATIONS_SEARCHED"
+ ],
+ "locations_searched": [
+  {
+   "location": "the repository working tree",
+   "method": "find over every .pdf and .zip",
+   "result": "no PDF or ZIP of any kind"
+  },
+  {
+   "location": "/root/.claude/uploads/<session>",
+   "method": "directory listing",
+   "result": "4 ZIPs and 1 PDF; sizes read"
+  },
+  {
+   "location": "every ZIP on the filesystem",
+   "method": "enumerated each archive's members for .pdf",
+   "result": "one PDF — the K5 module render, inside the PL06 freeze package"
+  },
+  {
+   "location": "/mnt/attach, /mnt/user-data, /media",
+   "method": "directory listing",
+   "result": "/mnt/attach empty; /mnt/user-data/working empty; /media empty"
+  },
+  {
+   "location": "whole filesystem by name",
+   "method": "find -iname '*LANDASAN*'",
+   "result": "no match"
+  },
+  {
+   "location": "whole filesystem by exact size",
+   "method": "find for a file of exactly 25,043,306 bytes",
+   "result": "no match"
+  },
+  {
+   "location": "the Hermes connector",
+   "method": "list_dir on ~/Hermes, ~/Hermes/00_inbox and ~/Hermes/inbox",
+   "result": "reachable; scoped to ~/Hermes; inbox empty, 00_inbox holds one 0-byte markdown file. No course source in it."
+  },
+  {
+   "location": "Google Drive",
+   "method": "connector search under the official source root",
+   "result": "K2 monolith located: metadata and byte size returned, binary not transferable through a text channel"
+  }
+ ],
+ "locations_not_searched": [
+  {
+   "location": "the wider Google Drive outside the official source root",
+   "reason": "SRC-AUTH-01 scopes processing to the official project source packages; searching a user's whole Drive is outside it."
+  },
+  {
+   "location": "Hermes paths above ~/Hermes",
+   "reason": "the connector is scoped to ~/Hermes and refuses paths above it."
+  },
+  {
+   "location": "any location requiring credentials this session does not hold",
+   "reason": "none were attempted, so none is reported as empty."
+  }
+ ],
+ "connector_status": [
+  {
+   "connector": "Google Drive",
+   "reachable": true,
+   "capability": "metadata, folder listing, whole-file text extraction",
+   "cannot": "return a binary to local disk, or return a bounded page range"
+  },
+  {
+   "connector": "Hermes (ngrok)",
+   "reachable": true,
+   "capability": "list, stat and read files under ~/Hermes",
+   "cannot": "reach anything outside ~/Hermes"
+  }
+ ],
+ "packages": [
+  {
+   "package": "K5 module DOCX",
+   "course": "K5",
+   "status": "FOUND_IN_UPLOADED_ARCHIVE",
+   "detail": "inside 0ded4af4-PL06_SOURCE_BOUNDARY_EVIDENCE_FREEZE_v1.zip",
+   "binary_or_metadata": "BINARY",
+   "sha256": "5a9142cdfa1a8090c2075e78caf45609438844daeac88e331bed3069a6a78df7",
+   "bytes": 16832861
+  },
+  {
+   "package": "K5 module rendered PDF",
+   "course": "K5",
+   "status": "FOUND_IN_UPLOADED_ARCHIVE",
+   "detail": "same archive, derived/ folder",
+   "binary_or_metadata": "BINARY",
+   "sha256": "295a1749cf3fce16d9dfd8c3b45b2e3b5c64c1c9a6073ccc26235f81ec6fbb4b",
+   "bytes": 9039981
+  },
+  {
+   "package": "K3 nine PL PDFs",
+   "course": "K3",
+   "status": "LOCATED_BY_CONNECTOR_BINARY_NOT_LOCAL",
+   "detail": "Drive folder 10QLkopBVCp4TwaYbofAiStmqGsNTHvQe; text readable through the connector, binaries not on local disk",
+   "binary_or_metadata": "METADATA_PLUS_TEXT",
+   "sha256": "SHA256_NOT_COMPUTED_NO_LOCAL_BINARY",
+   "bytes": 9357121
+  },
+  {
+   "package": "K2 monolith PDF",
+   "course": "K2",
+   "status": "LOCATED_BY_CONNECTOR_BINARY_NOT_LOCAL",
+   "also": "NOT_FOUND_IN_REPOSITORY, NOT_FOUND_IN_LOCATIONS_SEARCHED",
+   "detail": "Drive file 1BW-OibYv3sDyordi0YIQkb5vXeAdOtMn; every local location above was searched and none holds it",
+   "binary_or_metadata": "METADATA_ONLY",
+   "sha256": "SHA256_NOT_COMPUTED_NO_LOCAL_BINARY",
+   "bytes": 25043306
+  }
+ ],
+ "uploaded_archives": [
+  {
+   "name": "0ded4af4-PL06_SOURCE_BOUNDARY_EVIDENCE_FREEZE_v1.zip",
+   "bytes": 25142903,
+   "contains_source": true,
+   "note": "the K5 module DOCX and its rendered PDF, both hash-verified"
+  },
+  {
+   "name": "f28cd846-B02_BARIAH_DECISIONS_20260801_1906.zip",
+   "bytes": 960602,
+   "contains_source": false,
+   "note": "B02 decision evidence, no PDF members"
+  },
+  {
+   "name": "07818d39-B02_BARIAH_EVIDENCE_20260801.zip",
+   "bytes": 772667,
+   "contains_source": false,
+   "note": "no PDF members"
+  },
+  {
+   "name": "b9e81ee5-B02_OVERVIEW_CARDINALITY_EVIDENCE_20260802.zip",
+   "bytes": 744564,
+   "contains_source": false,
+   "note": "no PDF members"
+  },
+  {
+   "name": "6a5c03ec-K5_PL06_T03_B02_pages_256269.pdf",
+   "bytes": 429918,
+   "contains_source": true,
+   "note": "B02's own source page slice, already delivered"
+  }
+ ]
+}

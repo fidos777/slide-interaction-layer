@@ -1,0 +1,165 @@
+{
+ "units": [
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "source_verified": true,
+   "source_verification": "module DOCX hash-verified; anchors resolved in the binary",
+   "extraction_complete": true,
+   "extraction_rows": 76,
+   "provisional_model_complete": true,
+   "unresolved_pattern_decisions": [
+    "pattern family — PENDING_BARIAH_PATTERN_DECISION",
+    "screen count ceiling — UNKNOWN_PENDING_PATTERN_DECISION",
+    "Rumusan beat count — proposed, not approved",
+    "dialogue verdict — proposed, not approved"
+   ],
+   "unresolved_unit_exceptions": [
+    "The heading 'Fokus Utama Kontraktor' appears once per component but twice with a trailing colon and once without, so a naive equality match on the marker misses one component.",
+    "Sub soil drainage carries an installation sequence introduced by 'Proses pemasangan yang betul adalah kunci kejayaan sistem ini:' but the steps that follow are styled as headings, so their count is a reading rather than a fact."
+   ],
+   "assessment_readiness": {
+    "items_drafted": 5,
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "blocker": "no approved answer key"
+   },
+   "visual_obligation_readiness": {
+    "subjects": 4,
+    "source_attested": 0,
+    "blocker": "no source figure behind the proposed subjects"
+   },
+   "cast_blocker": "STOP-006 open — no character may be named",
+   "emit_entry_point": {
+    "command": "python3 docs/pl06/tools/pl06_storyboard_emit_v1.py --unit K5-PL06-T03-B03",
+    "exists_yet": false,
+    "note": "The emitter is not written and deliberately so — its inputs are the pattern decisions that have not arrived. What exists is the model it will read: docs/pl06/batch1_extract/K5_PL06_T03_B03_PROVISIONAL_MODEL_v1.json"
+   },
+   "ready_to_emit": false,
+   "what_would_make_it_ready": "BARIAH_K5_PATTERN_PACKAGE_INGESTED AND UNIT_EXCEPTION_BLOCKERS_RESOLVED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "source_verified": true,
+   "source_verification": "module DOCX hash-verified; anchors resolved in the binary",
+   "extraction_complete": true,
+   "extraction_rows": 92,
+   "provisional_model_complete": true,
+   "unresolved_pattern_decisions": [
+    "pattern family — PENDING_BARIAH_PATTERN_DECISION",
+    "screen count ceiling — UNKNOWN_PENDING_PATTERN_DECISION",
+    "Rumusan beat count — proposed, not approved",
+    "dialogue verdict — proposed, not approved"
+   ],
+   "unresolved_unit_exceptions": [
+    "'Sistem Pelapisan (Lining System)' appears twice as a structural heading, once under Alur Air and once under Sungai, with different content beneath each.",
+    "The pump description is repeated almost verbatim for Alur Air and for Sungai. Whether that is one teaching point or two is an instructional judgement."
+   ],
+   "assessment_readiness": {
+    "items_drafted": 5,
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "blocker": "no approved answer key"
+   },
+   "visual_obligation_readiness": {
+    "subjects": 3,
+    "source_attested": 0,
+    "blocker": "no source figure behind the proposed subjects"
+   },
+   "cast_blocker": "STOP-006 open — no character may be named",
+   "emit_entry_point": {
+    "command": "python3 docs/pl06/tools/pl06_storyboard_emit_v1.py --unit K5-PL06-T03-B04",
+    "exists_yet": false,
+    "note": "The emitter is not written and deliberately so — its inputs are the pattern decisions that have not arrived. What exists is the model it will read: docs/pl06/batch1_extract/K5_PL06_T03_B04_PROVISIONAL_MODEL_v1.json"
+   },
+   "ready_to_emit": false,
+   "what_would_make_it_ready": "BARIAH_K5_PATTERN_PACKAGE_INGESTED AND UNIT_EXCEPTION_BLOCKERS_RESOLVED"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "source_verified": true,
+   "source_verification": "module DOCX hash-verified; anchors resolved in the binary",
+   "extraction_complete": true,
+   "extraction_rows": 132,
+   "provisional_model_complete": true,
+   "unresolved_pattern_decisions": [
+    "pattern family — PENDING_BARIAH_PATTERN_DECISION",
+    "screen count ceiling — UNKNOWN_PENDING_PATTERN_DECISION",
+    "Rumusan beat count — proposed, not approved",
+    "dialogue verdict — proposed, not approved"
+   ],
+   "unresolved_unit_exceptions": [
+    "'Contoh dalam Landskap:' appears twice as a structural heading under PQP with different examples beneath each.",
+    "The ITP example table for tree planting is described in prose ('Contoh ITP untuk Kerja Penanaman Pokok Teduhan:') but the extract found no table object in this unit, so the example is text only."
+   ],
+   "assessment_readiness": {
+    "items_drafted": 5,
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "blocker": "no approved answer key"
+   },
+   "visual_obligation_readiness": {
+    "subjects": 3,
+    "source_attested": 0,
+    "blocker": "no source figure behind the proposed subjects"
+   },
+   "cast_blocker": "STOP-006 open — no character may be named",
+   "emit_entry_point": {
+    "command": "python3 docs/pl06/tools/pl06_storyboard_emit_v1.py --unit K5-PL06-T05-B01",
+    "exists_yet": false,
+    "note": "The emitter is not written and deliberately so — its inputs are the pattern decisions that have not arrived. What exists is the model it will read: docs/pl06/batch1_extract/K5_PL06_T05_B01_PROVISIONAL_MODEL_v1.json"
+   },
+   "ready_to_emit": false,
+   "what_would_make_it_ready": "BARIAH_K5_PATTERN_PACKAGE_INGESTED AND UNIT_EXCEPTION_BLOCKERS_RESOLVED"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "source_verified": true,
+   "source_verification": "module DOCX hash-verified; anchors resolved in the binary",
+   "extraction_complete": true,
+   "extraction_rows": 118,
+   "provisional_model_complete": true,
+   "unresolved_pattern_decisions": [
+    "pattern family — PENDING_BARIAH_PATTERN_DECISION",
+    "screen count ceiling — UNKNOWN_PENDING_PATTERN_DECISION",
+    "Rumusan beat count — proposed, not approved",
+    "dialogue verdict — proposed, not approved"
+   ],
+   "unresolved_unit_exceptions": [
+    "'Contoh' appears as a bare structural heading six times, once per environmental aspect, with different examples beneath each.",
+    "'Perlindungan Poko Sedia Ada:' is misspelled in the source — 'Poko' for 'Pokok'."
+   ],
+   "assessment_readiness": {
+    "items_drafted": 5,
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "blocker": "no approved answer key"
+   },
+   "visual_obligation_readiness": {
+    "subjects": 3,
+    "source_attested": 1,
+    "blocker": "one subject is source-attested; the rest are text readings"
+   },
+   "cast_blocker": "STOP-006 open — no character may be named",
+   "emit_entry_point": {
+    "command": "python3 docs/pl06/tools/pl06_storyboard_emit_v1.py --unit K5-PL06-T06-B01",
+    "exists_yet": false,
+    "note": "The emitter is not written and deliberately so — its inputs are the pattern decisions that have not arrived. What exists is the model it will read: docs/pl06/batch1_extract/K5_PL06_T06_B01_PROVISIONAL_MODEL_v1.json"
+   },
+   "ready_to_emit": false,
+   "what_would_make_it_ready": "BARIAH_K5_PATTERN_PACKAGE_INGESTED AND UNIT_EXCEPTION_BLOCKERS_RESOLVED"
+  }
+ ],
+ "trigger": {
+  "trigger": "BARIAH_K5_PATTERN_PACKAGE_INGESTED AND UNIT_EXCEPTION_BLOCKERS_RESOLVED",
+  "steps": [
+   "ingest Bariah v1.2",
+   "apply approved defaults",
+   "mark exceptions",
+   "generate four storyboard decks",
+   "read back PPTX",
+   "render and inspect",
+   "submit one-touch review",
+   "measure cycle time and correction rate"
+  ]
+ },
+ "all_source_verified": true,
+ "all_extracted": true,
+ "all_modelled": true,
+ "any_ready_to_emit": false
+}
