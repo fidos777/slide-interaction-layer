@@ -5,9 +5,9 @@ Branch `claude/verify-powerpoint-file-vpfzkg`, continued from the Stage 4.2F-E H
 unchanged; the only file removed from the live tree is the superseded
 `PRODUCTION_QUEUE_v4`, and git history keeps it.
 
-**On amending.** The unpublished Stage 4.2F-F working commit was amended before its first
-push. No published commit, historical completed-stage commit, or Stage-E evidence was
-amended. The protected record is the mainline of completed stages — `2de274b` (Stage 4.2F-E)
+**On amending.** The Stage 4.2F-F feature-branch tip was amended and force-updated during
+pre-PR review. No completed-stage commit, historical Stage-E evidence, or mainline history
+was amended. The protected record is the mainline of completed stages — `2de274b` (Stage 4.2F-E)
 and every earlier finished-stage commit — which is untouched, with the Stage-E reports
 preserved byte-for-byte. This single Stage 4.2F-F commit is the in-review working commit on
 the `claude/verify-powerpoint-file-vpfzkg` feature branch; when review iterations amend it,
