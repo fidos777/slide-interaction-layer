@@ -60,16 +60,16 @@ def emit_all():
     made.append(_w("SOURCE_LOCATION_REPORT_v1.md", "\n".join(md)))
 
     q = S.queue_summary()
-    made.append(_j("PRODUCTION_QUEUE_v2.json", q))
+    made.append(_j("PRODUCTION_QUEUE_v3.json", q))
     hdr = S.COLUMNS
     csv = [",".join(hdr)]
     for r in q["rows"]:
         csv.append(",".join('"' + str(r[c]).replace('"', '""') + '"' for c in hdr))
-    made.append(_w("PRODUCTION_QUEUE_v2.csv", "\n".join(csv) + "\n"))
+    made.append(_w("PRODUCTION_QUEUE_v3.csv", "\n".join(csv) + "\n"))
 
     c = q["counts"]
     al = q["alias_map"]
-    md = [BANNER, "", "# Production queue v2 — granular source states", "", "```",
+    md = [BANNER, "", "# Production queue v3 — granular source states", "", "```",
           f"IMMEDIATELY_EXECUTABLE_UNITS  = {c['immediately_executable_units']}", "```", "",
           "The headline. " + q["headline"]["note"], "",
           "Conditions: " + "; ".join(q["headline"]["conditions"]) + ".", "",
@@ -96,7 +96,7 @@ def emit_all():
                  "**YES**" if r["immediately_executable"] else "no",
                  r["blocker_owner"], r["exact_blocker"][:60]] for r in q["rows"]]), "",
           q["derivation"], ""]
-    made.append(_w("PRODUCTION_QUEUE_v2.md", "\n".join(md)))
+    made.append(_w("PRODUCTION_QUEUE_v3.md", "\n".join(md)))
 
     t = S.t04_page_reconciliation()
     made.append(_j("T04_PAGE_REFERENCE_RECONCILIATION_v1.json", t))

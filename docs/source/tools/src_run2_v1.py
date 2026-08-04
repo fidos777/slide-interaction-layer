@@ -28,6 +28,7 @@ import src_inventory_v1 as INV     # noqa: E402
 import pl06_extract_v1 as EX       # noqa: E402
 import pl06_extract_rest_v1 as R   # noqa: E402
 import pl06_batch1_data_v1 as B    # noqa: E402
+import src_k3_v1 as K3             # noqa: E402
 
 STAGE = "4.2F-D"
 AUTHORITY = "SRC-AUTH-01"
@@ -458,13 +459,22 @@ def queue_rows():
                                    "fourteen were mapped"))
 
     # ---- K3 ----
-    read_pls = {r["pl"] for r in inv["k3"]["rows"]
-                if r["read_status"] == "CONNECTOR_TEXT_READ_IN_FULL"}
-    modelled_pls = {m["pl"] for m in inv["k3_models"]}
-    for r in inv["k3"]["rows"]:
-        read = r["pl"] in read_pls
+    # Sourced from the Stage 4.2F-D K3 model, not the Stage 4.2F-C inventory. Two things
+    # were wrong while the older source was in use and both are corrected here:
+    #
+    #   * every K3 row was stamped K3-M01-<PL>, because M01 was the only module code known
+    #     when two of nine packages had been read. Seven of the nine are not M01. The queue
+    #     and the K3 model were therefore naming the same unit two different ways.
+    #   * rows were split BARIAH / CAIR on read-versus-unread. All nine are now read, so
+    #     that split has no members on the CAIR side and the real blocker is the same for
+    #     every K3 row: K3-COURSE-01.
+    k3 = K3.k3_inventory()
+    modelled_pls = {m["pl"] for m in K3.k3_models()}
+    for r in k3["rows"]:
+        read = r["read_status"] == "CONNECTOR_TEXT_READ_IN_FULL"
         rows.append(_row(
-            course="K3", pl=r["pl"], unit_or_candidate_id=f"K3-M01-{r['pl']}",
+            course="K3", pl=r["pl"],
+            unit_or_candidate_id=f"K3-{r['module_code']}-{r['pl']}",
             record_type=("CONFIRMED_PRODUCTION_UNIT" if read else "CANDIDATE_STRUCTURE"),
             source_located=True, binary_local=False, binary_readable=False,
             content_read=read, boundary_confirmed=read,
@@ -514,8 +524,15 @@ def queue_summary():
             unresolved_source_records=len([r for r in rows
                                            if r["record_type"] == "UNRESOLVED_SOURCE"]),
             immediately_executable_units=len(imm),
-            extracted_units=len([r for r in rows if r["extraction_status"]
-                                 in ("EXTRACTED", "SOURCE_CONTENT_READ")]),
+            # Kept apart on purpose. EXTRACTED means rows were cut from a frozen boundary
+            # in a local binary; SOURCE_CONTENT_READ means text came back through a
+            # connector and nothing has been cut yet. Counting them together made the
+            # figure jump from 16 to 23 the moment nine K3 packages became "read", which
+            # would have read as seven more units ready to work on when none were.
+            extracted_units=len([r for r in rows
+                                 if r["extraction_status"] == "EXTRACTED"]),
+            source_content_read_units=len([r for r in rows if r["extraction_status"]
+                                           == "SOURCE_CONTENT_READ"]),
             model_ready_units=len([r for r in rows if r["model_status"]
                                    in ("MODEL_READY", "PACKAGED")]),
             waiting_authority_units=len([r for r in rows
