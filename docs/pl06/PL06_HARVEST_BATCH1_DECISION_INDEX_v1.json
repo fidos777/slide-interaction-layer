@@ -1,0 +1,550 @@
+{
+ "stage": "4.2F-B2",
+ "batch_id": "PL06-HARVEST-BATCH-1",
+ "total": 29,
+ "by_scope": {
+  "BATCH": 5,
+  "UNIT": 24
+ },
+ "by_unit": {
+  "K5-PL06-T03-B03": 6,
+  "K5-PL06-T03-B04": 6,
+  "K5-PL06-T05-B01": 6,
+  "K5-PL06-T06-B01": 6
+ },
+ "gabung_decisions": [
+  "PL06-B1-D-02",
+  "PL06-B1-D-08",
+  "PL06-B1-D-14",
+  "PL06-B1-D-20",
+  "PL06-B1-D-26"
+ ],
+ "decisions": [
+  {
+   "decision_id": "PL06-B1-D-01",
+   "unit_id": "K5-PL06-T03-B03",
+   "unit_display": "Topik 3 · Infrastruktur",
+   "scope": "UNIT",
+   "point_key": "boundary",
+   "provenance": "SRC",
+   "question": "Terima sempadan beku unit ini seperti dinyatakan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-01",
+   "card_reference": "C.boundary",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-02",
+   "unit_id": "K5-PL06-T03-B03",
+   "unit_display": "Topik 3 · Infrastruktur",
+   "scope": "UNIT",
+   "point_key": "grouping",
+   "provenance": "CAIR",
+   "question": "Terima satu kumpulan skrin bagi setiap subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "GABUNG",
+    "ESCALATE"
+   ],
+   "requires_target_id": true,
+   "response_location": "H · PL06-B1-D-02",
+   "card_reference": "C.grouping",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-03",
+   "unit_id": "K5-PL06-T03-B03",
+   "unit_display": "Topik 3 · Infrastruktur",
+   "scope": "UNIT",
+   "point_key": "dialogue",
+   "provenance": "CAIR",
+   "question": "Terima cadangan dialog bagi unit ini?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "BUANG",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-03",
+   "card_reference": "C.dialogue",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-04",
+   "unit_id": "K5-PL06-T03-B03",
+   "unit_display": "Topik 3 · Infrastruktur",
+   "scope": "UNIT",
+   "point_key": "treatment",
+   "provenance": "CAIR",
+   "question": "Terima rawatan yang dicadangkan bagi kumpulan kandungan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-04",
+   "card_reference": "C.treatment",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-05",
+   "unit_id": "K5-PL06-T03-B03",
+   "unit_display": "Topik 3 · Infrastruktur",
+   "scope": "UNIT",
+   "point_key": "rumusan",
+   "provenance": "BARIAH",
+   "question": "Berapa bilangan beat Rumusan bagi unit ini?",
+   "options": [
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-05",
+   "card_reference": "C.rumusan",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-06",
+   "unit_id": "K5-PL06-T03-B03",
+   "unit_display": "Topik 3 · Infrastruktur",
+   "scope": "UNIT",
+   "point_key": "quiz_slots",
+   "provenance": "CAIR",
+   "question": "Terima pengikatan lima slot kuiz kepada subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-06",
+   "card_reference": "C.quiz_slots",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-07",
+   "unit_id": "K5-PL06-T03-B04",
+   "unit_display": "Topik 3 · Badan Air (Water Body)",
+   "scope": "UNIT",
+   "point_key": "boundary",
+   "provenance": "SRC",
+   "question": "Terima sempadan beku unit ini seperti dinyatakan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-07",
+   "card_reference": "D.boundary",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-08",
+   "unit_id": "K5-PL06-T03-B04",
+   "unit_display": "Topik 3 · Badan Air (Water Body)",
+   "scope": "UNIT",
+   "point_key": "grouping",
+   "provenance": "CAIR",
+   "question": "Terima satu kumpulan skrin bagi setiap subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "GABUNG",
+    "ESCALATE"
+   ],
+   "requires_target_id": true,
+   "response_location": "H · PL06-B1-D-08",
+   "card_reference": "D.grouping",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-09",
+   "unit_id": "K5-PL06-T03-B04",
+   "unit_display": "Topik 3 · Badan Air (Water Body)",
+   "scope": "UNIT",
+   "point_key": "dialogue",
+   "provenance": "CAIR",
+   "question": "Terima cadangan dialog bagi unit ini?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "BUANG",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-09",
+   "card_reference": "D.dialogue",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-10",
+   "unit_id": "K5-PL06-T03-B04",
+   "unit_display": "Topik 3 · Badan Air (Water Body)",
+   "scope": "UNIT",
+   "point_key": "treatment",
+   "provenance": "CAIR",
+   "question": "Terima rawatan yang dicadangkan bagi kumpulan kandungan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-10",
+   "card_reference": "D.treatment",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-11",
+   "unit_id": "K5-PL06-T03-B04",
+   "unit_display": "Topik 3 · Badan Air (Water Body)",
+   "scope": "UNIT",
+   "point_key": "rumusan",
+   "provenance": "BARIAH",
+   "question": "Berapa bilangan beat Rumusan bagi unit ini?",
+   "options": [
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-11",
+   "card_reference": "D.rumusan",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-12",
+   "unit_id": "K5-PL06-T03-B04",
+   "unit_display": "Topik 3 · Badan Air (Water Body)",
+   "scope": "UNIT",
+   "point_key": "quiz_slots",
+   "provenance": "CAIR",
+   "question": "Terima pengikatan lima slot kuiz kepada subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-12",
+   "card_reference": "D.quiz_slots",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-13",
+   "unit_id": "K5-PL06-T05-B01",
+   "unit_display": "Topik 5 · Pengurusan Kualiti Projek",
+   "scope": "UNIT",
+   "point_key": "boundary",
+   "provenance": "SRC",
+   "question": "Terima sempadan beku unit ini seperti dinyatakan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-13",
+   "card_reference": "E.boundary",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-14",
+   "unit_id": "K5-PL06-T05-B01",
+   "unit_display": "Topik 5 · Pengurusan Kualiti Projek",
+   "scope": "UNIT",
+   "point_key": "grouping",
+   "provenance": "CAIR",
+   "question": "Terima satu kumpulan skrin bagi setiap subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "GABUNG",
+    "ESCALATE"
+   ],
+   "requires_target_id": true,
+   "response_location": "H · PL06-B1-D-14",
+   "card_reference": "E.grouping",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-15",
+   "unit_id": "K5-PL06-T05-B01",
+   "unit_display": "Topik 5 · Pengurusan Kualiti Projek",
+   "scope": "UNIT",
+   "point_key": "dialogue",
+   "provenance": "CAIR",
+   "question": "Terima cadangan dialog bagi unit ini?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "BUANG",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-15",
+   "card_reference": "E.dialogue",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-16",
+   "unit_id": "K5-PL06-T05-B01",
+   "unit_display": "Topik 5 · Pengurusan Kualiti Projek",
+   "scope": "UNIT",
+   "point_key": "treatment",
+   "provenance": "CAIR",
+   "question": "Terima rawatan yang dicadangkan bagi kumpulan kandungan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-16",
+   "card_reference": "E.treatment",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-17",
+   "unit_id": "K5-PL06-T05-B01",
+   "unit_display": "Topik 5 · Pengurusan Kualiti Projek",
+   "scope": "UNIT",
+   "point_key": "rumusan",
+   "provenance": "BARIAH",
+   "question": "Berapa bilangan beat Rumusan bagi unit ini?",
+   "options": [
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-17",
+   "card_reference": "E.rumusan",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-18",
+   "unit_id": "K5-PL06-T05-B01",
+   "unit_display": "Topik 5 · Pengurusan Kualiti Projek",
+   "scope": "UNIT",
+   "point_key": "quiz_slots",
+   "provenance": "CAIR",
+   "question": "Terima pengikatan lima slot kuiz kepada subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-18",
+   "card_reference": "E.quiz_slots",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-19",
+   "unit_id": "K5-PL06-T06-B01",
+   "unit_display": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "scope": "UNIT",
+   "point_key": "boundary",
+   "provenance": "SRC",
+   "question": "Terima sempadan beku unit ini seperti dinyatakan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-19",
+   "card_reference": "F.boundary",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-20",
+   "unit_id": "K5-PL06-T06-B01",
+   "unit_display": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "scope": "UNIT",
+   "point_key": "grouping",
+   "provenance": "CAIR",
+   "question": "Terima satu kumpulan skrin bagi setiap subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "GABUNG",
+    "ESCALATE"
+   ],
+   "requires_target_id": true,
+   "response_location": "H · PL06-B1-D-20",
+   "card_reference": "F.grouping",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-21",
+   "unit_id": "K5-PL06-T06-B01",
+   "unit_display": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "scope": "UNIT",
+   "point_key": "dialogue",
+   "provenance": "CAIR",
+   "question": "Terima cadangan dialog bagi unit ini?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "BUANG",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-21",
+   "card_reference": "F.dialogue",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-22",
+   "unit_id": "K5-PL06-T06-B01",
+   "unit_display": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "scope": "UNIT",
+   "point_key": "treatment",
+   "provenance": "CAIR",
+   "question": "Terima rawatan yang dicadangkan bagi kumpulan kandungan?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-22",
+   "card_reference": "F.treatment",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-23",
+   "unit_id": "K5-PL06-T06-B01",
+   "unit_display": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "scope": "UNIT",
+   "point_key": "rumusan",
+   "provenance": "BARIAH",
+   "question": "Berapa bilangan beat Rumusan bagi unit ini?",
+   "options": [
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-23",
+   "card_reference": "F.rumusan",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-24",
+   "unit_id": "K5-PL06-T06-B01",
+   "unit_display": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "scope": "UNIT",
+   "point_key": "quiz_slots",
+   "provenance": "CAIR",
+   "question": "Terima pengikatan lima slot kuiz kepada subtopik bernama?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-24",
+   "card_reference": "F.quiz_slots",
+   "why": null
+  },
+  {
+   "decision_id": "PL06-B1-D-25",
+   "unit_id": null,
+   "unit_display": "SEMUA UNIT",
+   "scope": "BATCH",
+   "point_key": "extraction",
+   "provenance": "OPEN",
+   "question": "Beri kebenaran mengekstrak kandungan terkawal bagi keempat-empat unit ini daripada DOCX modul beku?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-25",
+   "card_reference": "G",
+   "why": "STOP-003, STOP-004 and STOP-005 block all four units. Nothing below heading level in this package can be settled until extraction runs. This is the one decision that unblocks the other twenty-four."
+  },
+  {
+   "decision_id": "PL06-B1-D-26",
+   "unit_id": null,
+   "unit_display": "SEMUA UNIT",
+   "scope": "BATCH",
+   "point_key": "merge_t03",
+   "provenance": "BARIAH",
+   "question": "Gabungkan K5-PL06-T03-B03 dengan K5-PL06-T03-B04 menjadi satu unit?",
+   "options": [
+    "TERIMA",
+    "BUANG",
+    "GABUNG",
+    "ESCALATE"
+   ],
+   "requires_target_id": true,
+   "response_location": "H · PL06-B1-D-26",
+   "card_reference": "G",
+   "why": "Both are single-subtopic lessons in the same Topik, 6 and 7 module pages, sharing module page 255. Deciding before extraction avoids extracting twice."
+  },
+  {
+   "decision_id": "PL06-B1-D-27",
+   "unit_id": null,
+   "unit_display": "SEMUA UNIT",
+   "scope": "BATCH",
+   "point_key": "cast",
+   "provenance": "BARIAH",
+   "question": "Pasangan watak mana yang digunakan apabila sesebuah unit memerlukan dialog?",
+   "options": [
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-27",
+   "card_reference": "G",
+   "why": "A restatement of the existing STOP-006 / SRC-ANOM-003, not a new register entry. No unit in this batch can carry a dialogue until it is answered, which is why T05-B01's dialogue proposal is blocked behind it."
+  },
+  {
+   "decision_id": "PL06-B1-D-28",
+   "unit_id": null,
+   "unit_display": "SEMUA UNIT",
+   "scope": "BATCH",
+   "point_key": "quiz_rules_verify",
+   "provenance": "BARIAH",
+   "question": "Sahkan bahawa 4 MCQ + 1 MR dan ambang 60 peratus ialah peraturan seluruh kursus, bukan hanya amalan B02?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-28",
+   "card_reference": "G",
+   "why": "AR-01 and AR-02 are auto-applied as instructed, but RP-009 and RP-010 carry human_authority_required = VERIFY. They are applied and flagged, not applied and forgotten."
+  },
+  {
+   "decision_id": "PL06-B1-D-29",
+   "unit_id": null,
+   "unit_display": "SEMUA UNIT",
+   "scope": "BATCH",
+   "point_key": "language",
+   "provenance": "BARIAH",
+   "question": "Adakah lapisan rasional Bahasa Inggeris boleh diterima, atau perlu diterjemahkan ke Bahasa Melayu sepenuhnya?",
+   "options": [
+    "TERIMA",
+    "PINDA",
+    "ESCALATE"
+   ],
+   "requires_target_id": false,
+   "response_location": "H · PL06-B1-D-29",
+   "card_reference": "G",
+   "why": "The decision surface is already Malay. The rationale layer is English because every governance record here is. T04's state appendix went out in English before anyone noticed who was reading it; this asks instead of assuming."
+  }
+ ]
+}

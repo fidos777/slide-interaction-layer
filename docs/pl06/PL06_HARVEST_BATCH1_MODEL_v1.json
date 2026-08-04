@@ -1,0 +1,1280 @@
+{
+ "stage": "4.2F-B2",
+ "lane": "LANE_B_PL06_AUTHORITY_HARVEST_BATCH_1",
+ "batch_id": "PL06-HARVEST-BATCH-1",
+ "suite_id": "PL06_AUTHORITY_HARVEST_BATCH1_QA_v1",
+ "status": "CAIR_PREFILLED_AWAITING_BARIAH_DECISIONS",
+ "forbidden_status_claims": [
+  "BATCH_APPROVED",
+  "UNITS_READY_FOR_STORYBOARD_BUILD",
+  "CONTENT_EXTRACTED",
+  "ANSWER_KEYS_APPROVED"
+ ],
+ "units": [
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "display_title": "Topik 3 · Infrastruktur",
+   "topik": 3,
+   "bahagian": 3,
+   "topik_title": "Komponen Landskap",
+   "lesson_title": "Infrastruktur",
+   "points": {
+    "boundary": {
+     "provenance": "SRC",
+     "module_page_range": "250-255",
+     "module_pages": 6,
+     "pdf_page_range": "268-273",
+     "start_anchor": "3.5 Infrastruktur",
+     "end_before": "3.6 Badan Air (Water Body)",
+     "docx_para_start": 4704,
+     "docx_para_end_before": 4815,
+     "paragraph_span": 111,
+     "map_status": "SOURCE_BOUNDARY_CONFIRMED_PENDING_BUILD",
+     "boundary_image": "p268",
+     "boundary_image_custody": "NAMED_IN_THE_FREEZE_PACKAGE_BY_IDENTITY_ONLY"
+    },
+    "shared_page_risk": {
+     "provenance": "SRC",
+     "shared_start": true,
+     "shared_end": true,
+     "note": "start page 250 is shared with preceding lesson; start at named heading; end page 255 is shared with next lesson; stop before named end anchor",
+     "risk": "A shared page must be split by heading anchor, never by page extraction. Extracting page-wise would pull the neighbouring lesson's text into this unit."
+    },
+    "controlled_rows": {
+     "provenance": "OPEN",
+     "status": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED",
+     "row_count": "UNKNOWN_PENDING_EXTRACTION",
+     "paragraph_span": 111,
+     "blocking_stop": "STOP-004",
+     "note": "111 DOCX body paragraphs lie between the anchors. That is a controlled magnitude, not a row count — extraction turns paragraphs into typed content records and the ratio is not fixed."
+    },
+    "mandatory_content": {
+     "provenance": "SRC",
+     "named_subtopics": [
+      "3.5 Infrastruktur"
+     ],
+     "status": "HEADING_LEVEL_ONLY",
+     "note": "The named subtopics are mandatory because the module names them. What is mandatory BELOW heading level cannot be known before extraction, and no learning outcome is written here for a unit whose text nobody has read."
+    },
+    "grouping": {
+     "provenance": "CAIR",
+     "proposal": [
+      {
+       "group_id": "G1",
+       "covers": "3.5 Infrastruktur"
+      }
+     ],
+     "rule": "One screen group per named subtopic.",
+     "note": "A floor, not a ceiling. Extraction may show a subtopic that needs two groups; it will not show one that needs none."
+    },
+    "screen_sequence": {
+     "provenance": "CAIR",
+     "sequence": [
+      "S01 Topik entry (AUTO — RP-002)",
+      "S0x Orientasi (AUTO — RP-002)",
+      "Kumpulan 1: 3.5 Infrastruktur",
+      "Rumusan (AUTO treatment RP-007, length BARIAH)",
+      "Kuiz (AUTO — AR-01, AR-02)",
+      "Tamat (AUTO — RP-012 behaviour; destination per unit)"
+     ],
+     "arithmetic": {
+      "unit_id": "K5-PL06-T03-B03",
+      "named_subtopics": 1,
+      "shell_screens": 2,
+      "shell_includes_dialogue": false,
+      "shell_basis": "RP-002 screen grammar and RP-007 / RP-008 / RP-012 closing grammar",
+      "content_screens_floor": 1,
+      "content_screens_ceiling": "UNKNOWN_PENDING_EXTRACTION",
+      "closing_screens": 3,
+      "minimum_total_screens": 6,
+      "maximum_total_screens": "UNKNOWN_PENDING_EXTRACTION",
+      "floor_basis": "one content screen per NAMED subtopic — the fewest that can carry the headings the boundary map lists",
+      "why_no_single_number": "A screen count is a function of how many records each subtopic holds. None of these units is extracted, so the ceiling is not knowable and is not guessed."
+     }
+    },
+    "treatment": {
+     "provenance": "CAIR",
+     "proposal": "click-to-reveal",
+     "reason": "A single named subtopic covering infrastructure components is the shape click-to-reveal fits — but this is a guess from the heading, and the extraction may show a process, in which case progressive process is correct instead.",
+     "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+     ],
+     "confidence": "LOW — read from a heading, not from content"
+    },
+    "runtime_states": {
+     "unit_id": "K5-PL06-T03-B03",
+     "provenance": "OPEN",
+     "method": "base states = learner screens; triggered states = one per reveal, step or quiz item; completion flags = one per screen that gates SETERUSNYA",
+     "method_source": "Lane A T04 state model, released for reuse as a METHOD by T04_INTERACTION_STATE_REVIEW_COVERAGE_PROVEN",
+     "base_states_floor": 6,
+     "triggered_states": "UNKNOWN_PENDING_EXTRACTION",
+     "total_runtime_states": "UNKNOWN_PENDING_EXTRACTION",
+     "why": "Triggered states depend on how many records each screen reveals, which is exactly what extraction produces. Reusing T04's 65 would be reusing T04's content, which NR-04 and NR-07 forbid."
+    },
+    "dialogue": {
+     "provenance": "CAIR",
+     "proposal": "UNCERTAIN",
+     "reason": "Infrastruktur is a component section inside the same Topik as B02. Whether it opens with a scenario or goes straight to the component content depends on whether the section is written as a catalogue or as a decision the contractor makes. That cannot be read from a heading.",
+     "constraint": "The T04 four-line pattern is NOT carried over (NR-03), and no character name is proposed while STOP-006 is open (NR-02)."
+    },
+    "rumusan": {
+     "provenance": "AUTO",
+     "treatment": "Summarises THIS Bahagian only, contractor and site perspective, no Kepentingan / Isi Utama / Manfaat labels (RP-007).",
+     "beat_count": "BARIAH",
+     "note": "T04's three beats are NOT reused (NR-01). No course-wide Rumusan length rule exists and Stage 4.2F-B0.9 was forbidden to infer one."
+    },
+    "quiz_stems": {
+     "provenance": "OPEN",
+     "composition": "4 Multiple Choice + 1 Multiple Response (AUTO — AR-01)",
+     "slots": [
+      {
+       "slot": "Q1",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.5 Infrastruktur",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q2",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.5 Infrastruktur",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q3",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.5 Infrastruktur",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q4",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.5 Infrastruktur",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q5",
+       "kind": "MULTIPLE_RESPONSE",
+       "draws_from": "3.5 Infrastruktur",
+       "stem": "PENDING_EXTRACTION"
+      }
+     ],
+     "blocking_stop": "STOP-005",
+     "note": "Five slots with their composition and their subtopic binding are prefilled. The stems are not. Writing five questions about pages nobody has read would be inventing assessment content, and the slot-to-subtopic binding shown here is itself provisional until the content behind each heading is known."
+    },
+    "answer_keys": {
+     "provenance": "OPEN",
+     "status": "NOT_DRAFTED",
+     "authority": "NONE — no key exists, so none is approved",
+     "source_support": "NONE_YET",
+     "blocking_stop": "STOP-005",
+     "note": "RP-108 requires every option to map to a source row and the key to be derived from controlled content. Neither is possible yet. This field says NOT_DRAFTED rather than PENDING_APPROVAL, because there is nothing to approve."
+    },
+    "visual_obligations": {
+     "provenance": "OPEN",
+     "count": "UNKNOWN_PENDING_EXTRACTION",
+     "status": "NOT_EXTRACTED",
+     "blocking_stop": "STOP-003",
+     "rule": "RP-104 — a visual direction is read from the source row's own figure or table photograph, never composed from a component name.",
+     "note": "UNKNOWN, not zero. A unit with no extracted assets cannot satisfy RP-104 and must not be given placeholder subjects to pass."
+    },
+    "reuse": {
+     "provenance": "AUTO",
+     "candidates": [
+      "RP-001 review storyboard shell",
+      "RP-002 S01 / S02 / S03 screen grammar (structure only)",
+      "RP-003 off-canvas production panel",
+      "RP-004 Speaker Notes typed-block schema",
+      "RP-005 English-term italics MECHANISM (not the B02 term list)",
+      "RP-006 completion-state treatment",
+      "RP-007 Rumusan treatment (not the beat count)",
+      "RP-008 quiz review structure",
+      "RP-011 correct / incorrect feedback wording",
+      "RP-013 off-canvas geometry registry",
+      "RP-014 artifact identity and exact release-token validation",
+      "RP-015 screen / state / page three-way separation",
+      "RP-016 oracle contract",
+      "RP-017 population pinning",
+      "Lane A state-appendix FORMAT (mechanism only — NR-07)"
+     ]
+    },
+    "no_reuse": {
+     "provenance": "BARIAH",
+     "exceptions": [
+      "NR-01",
+      "NR-02",
+      "NR-03",
+      "NR-04",
+      "NR-05",
+      "NR-06",
+      "NR-07"
+     ],
+     "unit_specific": "RP-201 to RP-208 — the B02 execution families, component names and cardinalities — are B02's and do not travel, including into T03-B03 and T03-B04, which sit in B02's own Topik and are the likeliest place for them to be assumed."
+    },
+    "open_questions": {
+     "provenance": "OPEN",
+     "items": [
+      "STOP-003 VISUAL_INVENTORY_NOT_EXTRACTED",
+      "STOP-004 CONTROLLED_CONTENT_NOT_EXTRACTED",
+      "STOP-005 NO_QUIZ_SOURCE",
+      "STOP-006 CAST_BINDING_UNRESOLVED",
+      "Merge with K5-PL06-T03-B04? — T03-B03 (6 pages, 1 subtopic) and T03-B04 (7 pages, 1 subtopic) are adjacent single-subtopic lessons in the same Topik and share module page 255. Two short units or one ordinary one is a real choice, and it is cheaper to make it now than after both are extracted."
+     ]
+    }
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "display_title": "Topik 3 · Badan Air (Water Body)",
+   "topik": 3,
+   "bahagian": 4,
+   "topik_title": "Komponen Landskap",
+   "lesson_title": "Badan Air (Water Body)",
+   "points": {
+    "boundary": {
+     "provenance": "SRC",
+     "module_page_range": "255-261",
+     "module_pages": 7,
+     "pdf_page_range": "273-279",
+     "start_anchor": "3.6 Badan Air (Water Body)",
+     "end_before": "3.7 Pencahayaan / Lighting",
+     "docx_para_start": 4815,
+     "docx_para_end_before": 4951,
+     "paragraph_span": 136,
+     "map_status": "SOURCE_BOUNDARY_CONFIRMED_PENDING_BUILD",
+     "boundary_image": "p273",
+     "boundary_image_custody": "NO_IMAGE_FOR_THIS_START_PAGE"
+    },
+    "shared_page_risk": {
+     "provenance": "SRC",
+     "shared_start": true,
+     "shared_end": false,
+     "note": "start page 255 is shared with preceding lesson; start at named heading",
+     "risk": "A shared page must be split by heading anchor, never by page extraction. Extracting page-wise would pull the neighbouring lesson's text into this unit."
+    },
+    "controlled_rows": {
+     "provenance": "OPEN",
+     "status": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED",
+     "row_count": "UNKNOWN_PENDING_EXTRACTION",
+     "paragraph_span": 136,
+     "blocking_stop": "STOP-004",
+     "note": "136 DOCX body paragraphs lie between the anchors. That is a controlled magnitude, not a row count — extraction turns paragraphs into typed content records and the ratio is not fixed."
+    },
+    "mandatory_content": {
+     "provenance": "SRC",
+     "named_subtopics": [
+      "3.6 Badan Air (Water Body)"
+     ],
+     "status": "HEADING_LEVEL_ONLY",
+     "note": "The named subtopics are mandatory because the module names them. What is mandatory BELOW heading level cannot be known before extraction, and no learning outcome is written here for a unit whose text nobody has read."
+    },
+    "grouping": {
+     "provenance": "CAIR",
+     "proposal": [
+      {
+       "group_id": "G1",
+       "covers": "3.6 Badan Air (Water Body)"
+      }
+     ],
+     "rule": "One screen group per named subtopic.",
+     "note": "A floor, not a ceiling. Extraction may show a subtopic that needs two groups; it will not show one that needs none."
+    },
+    "screen_sequence": {
+     "provenance": "CAIR",
+     "sequence": [
+      "S01 Topik entry (AUTO — RP-002)",
+      "S0x Orientasi (AUTO — RP-002)",
+      "Kumpulan 1: 3.6 Badan Air (Water Body)",
+      "Rumusan (AUTO treatment RP-007, length BARIAH)",
+      "Kuiz (AUTO — AR-01, AR-02)",
+      "Tamat (AUTO — RP-012 behaviour; destination per unit)"
+     ],
+     "arithmetic": {
+      "unit_id": "K5-PL06-T03-B04",
+      "named_subtopics": 1,
+      "shell_screens": 2,
+      "shell_includes_dialogue": false,
+      "shell_basis": "RP-002 screen grammar and RP-007 / RP-008 / RP-012 closing grammar",
+      "content_screens_floor": 1,
+      "content_screens_ceiling": "UNKNOWN_PENDING_EXTRACTION",
+      "closing_screens": 3,
+      "minimum_total_screens": 6,
+      "maximum_total_screens": "UNKNOWN_PENDING_EXTRACTION",
+      "floor_basis": "one content screen per NAMED subtopic — the fewest that can carry the headings the boundary map lists",
+      "why_no_single_number": "A screen count is a function of how many records each subtopic holds. None of these units is extracted, so the ceiling is not knowable and is not guessed."
+     }
+    },
+    "treatment": {
+     "provenance": "CAIR",
+     "proposal": "click-to-reveal",
+     "reason": "Same reasoning and the same caveat as T03-B03.",
+     "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+     ],
+     "confidence": "LOW — read from a heading, not from content"
+    },
+    "runtime_states": {
+     "unit_id": "K5-PL06-T03-B04",
+     "provenance": "OPEN",
+     "method": "base states = learner screens; triggered states = one per reveal, step or quiz item; completion flags = one per screen that gates SETERUSNYA",
+     "method_source": "Lane A T04 state model, released for reuse as a METHOD by T04_INTERACTION_STATE_REVIEW_COVERAGE_PROVEN",
+     "base_states_floor": 6,
+     "triggered_states": "UNKNOWN_PENDING_EXTRACTION",
+     "total_runtime_states": "UNKNOWN_PENDING_EXTRACTION",
+     "why": "Triggered states depend on how many records each screen reveals, which is exactly what extraction produces. Reusing T04's 65 would be reusing T04's content, which NR-04 and NR-07 forbid."
+    },
+    "dialogue": {
+     "provenance": "CAIR",
+     "proposal": "NOT_REQUIRED",
+     "reason": "A water-body section is component description. Nothing in the boundary suggests a decision scenario. Proposed as no dialogue, which is the cheaper and quieter default — overturn it freely if the content says otherwise.",
+     "constraint": "The T04 four-line pattern is NOT carried over (NR-03), and no character name is proposed while STOP-006 is open (NR-02)."
+    },
+    "rumusan": {
+     "provenance": "AUTO",
+     "treatment": "Summarises THIS Bahagian only, contractor and site perspective, no Kepentingan / Isi Utama / Manfaat labels (RP-007).",
+     "beat_count": "BARIAH",
+     "note": "T04's three beats are NOT reused (NR-01). No course-wide Rumusan length rule exists and Stage 4.2F-B0.9 was forbidden to infer one."
+    },
+    "quiz_stems": {
+     "provenance": "OPEN",
+     "composition": "4 Multiple Choice + 1 Multiple Response (AUTO — AR-01)",
+     "slots": [
+      {
+       "slot": "Q1",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.6 Badan Air (Water Body)",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q2",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.6 Badan Air (Water Body)",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q3",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.6 Badan Air (Water Body)",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q4",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "3.6 Badan Air (Water Body)",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q5",
+       "kind": "MULTIPLE_RESPONSE",
+       "draws_from": "3.6 Badan Air (Water Body)",
+       "stem": "PENDING_EXTRACTION"
+      }
+     ],
+     "blocking_stop": "STOP-005",
+     "note": "Five slots with their composition and their subtopic binding are prefilled. The stems are not. Writing five questions about pages nobody has read would be inventing assessment content, and the slot-to-subtopic binding shown here is itself provisional until the content behind each heading is known."
+    },
+    "answer_keys": {
+     "provenance": "OPEN",
+     "status": "NOT_DRAFTED",
+     "authority": "NONE — no key exists, so none is approved",
+     "source_support": "NONE_YET",
+     "blocking_stop": "STOP-005",
+     "note": "RP-108 requires every option to map to a source row and the key to be derived from controlled content. Neither is possible yet. This field says NOT_DRAFTED rather than PENDING_APPROVAL, because there is nothing to approve."
+    },
+    "visual_obligations": {
+     "provenance": "OPEN",
+     "count": "UNKNOWN_PENDING_EXTRACTION",
+     "status": "NOT_EXTRACTED",
+     "blocking_stop": "STOP-003",
+     "rule": "RP-104 — a visual direction is read from the source row's own figure or table photograph, never composed from a component name.",
+     "note": "UNKNOWN, not zero. A unit with no extracted assets cannot satisfy RP-104 and must not be given placeholder subjects to pass."
+    },
+    "reuse": {
+     "provenance": "AUTO",
+     "candidates": [
+      "RP-001 review storyboard shell",
+      "RP-002 S01 / S02 / S03 screen grammar (structure only)",
+      "RP-003 off-canvas production panel",
+      "RP-004 Speaker Notes typed-block schema",
+      "RP-005 English-term italics MECHANISM (not the B02 term list)",
+      "RP-006 completion-state treatment",
+      "RP-007 Rumusan treatment (not the beat count)",
+      "RP-008 quiz review structure",
+      "RP-011 correct / incorrect feedback wording",
+      "RP-013 off-canvas geometry registry",
+      "RP-014 artifact identity and exact release-token validation",
+      "RP-015 screen / state / page three-way separation",
+      "RP-016 oracle contract",
+      "RP-017 population pinning",
+      "Lane A state-appendix FORMAT (mechanism only — NR-07)"
+     ]
+    },
+    "no_reuse": {
+     "provenance": "BARIAH",
+     "exceptions": [
+      "NR-01",
+      "NR-02",
+      "NR-03",
+      "NR-04",
+      "NR-05",
+      "NR-06",
+      "NR-07"
+     ],
+     "unit_specific": "RP-201 to RP-208 — the B02 execution families, component names and cardinalities — are B02's and do not travel, including into T03-B03 and T03-B04, which sit in B02's own Topik and are the likeliest place for them to be assumed."
+    },
+    "open_questions": {
+     "provenance": "OPEN",
+     "items": [
+      "STOP-003 VISUAL_INVENTORY_NOT_EXTRACTED",
+      "STOP-004 CONTROLLED_CONTENT_NOT_EXTRACTED",
+      "STOP-005 NO_QUIZ_SOURCE",
+      "STOP-006 CAST_BINDING_UNRESOLVED",
+      "Merge with K5-PL06-T03-B03? — The other half of the same merge question."
+     ]
+    }
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "display_title": "Topik 5 · Pengurusan Kualiti Projek",
+   "topik": 5,
+   "bahagian": 1,
+   "topik_title": "Pengurusan Kualiti Projek",
+   "lesson_title": "Pengurusan Kualiti Projek",
+   "points": {
+    "boundary": {
+     "provenance": "SRC",
+     "module_page_range": "284-293",
+     "module_pages": 10,
+     "pdf_page_range": "302-311",
+     "start_anchor": "5.0 PENGURUSAN KUALITI PROJEK",
+     "end_before": "6.0 PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "docx_para_start": 5360,
+     "docx_para_end_before": 5543,
+     "paragraph_span": 183,
+     "map_status": "SOURCE_BOUNDARY_CONFIRMED_PENDING_BUILD",
+     "boundary_image": "p302",
+     "boundary_image_custody": "INGESTED_IN_THIS_REPOSITORY"
+    },
+    "shared_page_risk": {
+     "provenance": "SRC",
+     "shared_start": false,
+     "shared_end": false,
+     "note": "page boundary is clean",
+     "risk": "None. Both boundaries fall on unshared pages."
+    },
+    "controlled_rows": {
+     "provenance": "OPEN",
+     "status": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED",
+     "row_count": "UNKNOWN_PENDING_EXTRACTION",
+     "paragraph_span": 183,
+     "blocking_stop": "STOP-004",
+     "note": "183 DOCX body paragraphs lie between the anchors. That is a controlled magnitude, not a row count — extraction turns paragraphs into typed content records and the ratio is not fixed."
+    },
+    "mandatory_content": {
+     "provenance": "SRC",
+     "named_subtopics": [
+      "5.1 Project Quality Plan (PQP)",
+      "5.2 Jaminan Kualiti",
+      "5.3 Inspection and Testing for Quality Control",
+      "5.4 Penyata Kaedah Kerja"
+     ],
+     "status": "HEADING_LEVEL_ONLY",
+     "note": "The named subtopics are mandatory because the module names them. What is mandatory BELOW heading level cannot be known before extraction, and no learning outcome is written here for a unit whose text nobody has read."
+    },
+    "grouping": {
+     "provenance": "CAIR",
+     "proposal": [
+      {
+       "group_id": "G1",
+       "covers": "5.1 Project Quality Plan (PQP)"
+      },
+      {
+       "group_id": "G2",
+       "covers": "5.2 Jaminan Kualiti"
+      },
+      {
+       "group_id": "G3",
+       "covers": "5.3 Inspection and Testing for Quality Control"
+      },
+      {
+       "group_id": "G4",
+       "covers": "5.4 Penyata Kaedah Kerja"
+      }
+     ],
+     "rule": "One screen group per named subtopic.",
+     "note": "A floor, not a ceiling. Extraction may show a subtopic that needs two groups; it will not show one that needs none."
+    },
+    "screen_sequence": {
+     "provenance": "CAIR",
+     "sequence": [
+      "S01 Topik entry (AUTO — RP-002)",
+      "S02 Dialog (CAIR — see point 9)",
+      "S0x Orientasi (AUTO — RP-002)",
+      "Kumpulan 1: 5.1 Project Quality Plan (PQP)",
+      "Kumpulan 2: 5.2 Jaminan Kualiti",
+      "Kumpulan 3: 5.3 Inspection and Testing for Quality Control",
+      "Kumpulan 4: 5.4 Penyata Kaedah Kerja",
+      "Rumusan (AUTO treatment RP-007, length BARIAH)",
+      "Kuiz (AUTO — AR-01, AR-02)",
+      "Tamat (AUTO — RP-012 behaviour; destination per unit)"
+     ],
+     "arithmetic": {
+      "unit_id": "K5-PL06-T05-B01",
+      "named_subtopics": 4,
+      "shell_screens": 3,
+      "shell_includes_dialogue": true,
+      "shell_basis": "RP-002 screen grammar and RP-007 / RP-008 / RP-012 closing grammar",
+      "content_screens_floor": 4,
+      "content_screens_ceiling": "UNKNOWN_PENDING_EXTRACTION",
+      "closing_screens": 3,
+      "minimum_total_screens": 10,
+      "maximum_total_screens": "UNKNOWN_PENDING_EXTRACTION",
+      "floor_basis": "one content screen per NAMED subtopic — the fewest that can carry the headings the boundary map lists",
+      "why_no_single_number": "A screen count is a function of how many records each subtopic holds. None of these units is extracted, so the ceiling is not knowable and is not guessed."
+     }
+    },
+    "treatment": {
+     "provenance": "CAIR",
+     "proposal": "progressive process",
+     "reason": "Four named subtopics that read as a sequence — plan, assure, inspect and test, method statement. If extraction confirms that ordering, progressive process fits; if the four are independent, comparison or click-to-reveal is better.",
+     "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+     ],
+     "confidence": "LOW — read from a heading, not from content"
+    },
+    "runtime_states": {
+     "unit_id": "K5-PL06-T05-B01",
+     "provenance": "OPEN",
+     "method": "base states = learner screens; triggered states = one per reveal, step or quiz item; completion flags = one per screen that gates SETERUSNYA",
+     "method_source": "Lane A T04 state model, released for reuse as a METHOD by T04_INTERACTION_STATE_REVIEW_COVERAGE_PROVEN",
+     "base_states_floor": 10,
+     "triggered_states": "UNKNOWN_PENDING_EXTRACTION",
+     "total_runtime_states": "UNKNOWN_PENDING_EXTRACTION",
+     "why": "Triggered states depend on how many records each screen reveals, which is exactly what extraction produces. Reusing T04's 65 would be reusing T04's content, which NR-04 and NR-07 forbid."
+    },
+    "dialogue": {
+     "provenance": "CAIR",
+     "proposal": "REQUIRED",
+     "reason": "Quality management is where a contractor's habits and the specification collide, and the frozen boundary image for this unit shows the section opening on measurable quality objectives with worked landscape examples. A short opening scenario has something concrete to be about. This is the one unit in the batch where a dialogue is proposed rather than questioned.",
+     "constraint": "The T04 four-line pattern is NOT carried over (NR-03), and no character name is proposed while STOP-006 is open (NR-02)."
+    },
+    "rumusan": {
+     "provenance": "AUTO",
+     "treatment": "Summarises THIS Bahagian only, contractor and site perspective, no Kepentingan / Isi Utama / Manfaat labels (RP-007).",
+     "beat_count": "BARIAH",
+     "note": "T04's three beats are NOT reused (NR-01). No course-wide Rumusan length rule exists and Stage 4.2F-B0.9 was forbidden to infer one."
+    },
+    "quiz_stems": {
+     "provenance": "OPEN",
+     "composition": "4 Multiple Choice + 1 Multiple Response (AUTO — AR-01)",
+     "slots": [
+      {
+       "slot": "Q1",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "5.1 Project Quality Plan (PQP)",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q2",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "5.2 Jaminan Kualiti",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q3",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "5.3 Inspection and Testing for Quality Control",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q4",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "5.4 Penyata Kaedah Kerja",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q5",
+       "kind": "MULTIPLE_RESPONSE",
+       "draws_from": "5.1 Project Quality Plan (PQP)",
+       "stem": "PENDING_EXTRACTION"
+      }
+     ],
+     "blocking_stop": "STOP-005",
+     "note": "Five slots with their composition and their subtopic binding are prefilled. The stems are not. Writing five questions about pages nobody has read would be inventing assessment content, and the slot-to-subtopic binding shown here is itself provisional until the content behind each heading is known."
+    },
+    "answer_keys": {
+     "provenance": "OPEN",
+     "status": "NOT_DRAFTED",
+     "authority": "NONE — no key exists, so none is approved",
+     "source_support": "NONE_YET",
+     "blocking_stop": "STOP-005",
+     "note": "RP-108 requires every option to map to a source row and the key to be derived from controlled content. Neither is possible yet. This field says NOT_DRAFTED rather than PENDING_APPROVAL, because there is nothing to approve."
+    },
+    "visual_obligations": {
+     "provenance": "OPEN",
+     "count": "UNKNOWN_PENDING_EXTRACTION",
+     "status": "NOT_EXTRACTED",
+     "blocking_stop": "STOP-003",
+     "rule": "RP-104 — a visual direction is read from the source row's own figure or table photograph, never composed from a component name.",
+     "note": "UNKNOWN, not zero. A unit with no extracted assets cannot satisfy RP-104 and must not be given placeholder subjects to pass."
+    },
+    "reuse": {
+     "provenance": "AUTO",
+     "candidates": [
+      "RP-001 review storyboard shell",
+      "RP-002 S01 / S02 / S03 screen grammar (structure only)",
+      "RP-003 off-canvas production panel",
+      "RP-004 Speaker Notes typed-block schema",
+      "RP-005 English-term italics MECHANISM (not the B02 term list)",
+      "RP-006 completion-state treatment",
+      "RP-007 Rumusan treatment (not the beat count)",
+      "RP-008 quiz review structure",
+      "RP-011 correct / incorrect feedback wording",
+      "RP-013 off-canvas geometry registry",
+      "RP-014 artifact identity and exact release-token validation",
+      "RP-015 screen / state / page three-way separation",
+      "RP-016 oracle contract",
+      "RP-017 population pinning",
+      "Lane A state-appendix FORMAT (mechanism only — NR-07)"
+     ]
+    },
+    "no_reuse": {
+     "provenance": "BARIAH",
+     "exceptions": [
+      "NR-01",
+      "NR-02",
+      "NR-03",
+      "NR-04",
+      "NR-05",
+      "NR-06",
+      "NR-07"
+     ],
+     "unit_specific": "RP-201 to RP-208 do not apply; this unit is in a different Topik from B02."
+    },
+    "open_questions": {
+     "provenance": "OPEN",
+     "items": [
+      "STOP-003 VISUAL_INVENTORY_NOT_EXTRACTED",
+      "STOP-004 CONTROLLED_CONTENT_NOT_EXTRACTED",
+      "STOP-005 NO_QUIZ_SOURCE",
+      "STOP-006 CAST_BINDING_UNRESOLVED"
+     ]
+    }
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "display_title": "Topik 6 · Perlindungan dan Penambahbaikan Alam Sekitar",
+   "topik": 6,
+   "bahagian": 1,
+   "topik_title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+   "lesson_title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+   "points": {
+    "boundary": {
+     "provenance": "SRC",
+     "module_page_range": "294-302",
+     "module_pages": 9,
+     "pdf_page_range": "312-320",
+     "start_anchor": "6.0 PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "end_before": "7.0 DEMOBILISASI",
+     "docx_para_start": 5543,
+     "docx_para_end_before": 5705,
+     "paragraph_span": 162,
+     "map_status": "SOURCE_BOUNDARY_CONFIRMED_PENDING_BUILD",
+     "boundary_image": "p312",
+     "boundary_image_custody": "NAMED_IN_THE_FREEZE_PACKAGE_BY_IDENTITY_ONLY"
+    },
+    "shared_page_risk": {
+     "provenance": "SRC",
+     "shared_start": false,
+     "shared_end": false,
+     "note": "page boundary is clean",
+     "risk": "None. Both boundaries fall on unshared pages."
+    },
+    "controlled_rows": {
+     "provenance": "OPEN",
+     "status": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED",
+     "row_count": "UNKNOWN_PENDING_EXTRACTION",
+     "paragraph_span": 162,
+     "blocking_stop": "STOP-004",
+     "note": "162 DOCX body paragraphs lie between the anchors. That is a controlled magnitude, not a row count — extraction turns paragraphs into typed content records and the ratio is not fixed."
+    },
+    "mandatory_content": {
+     "provenance": "SRC",
+     "named_subtopics": [
+      "6.1 Environmental Management Plan",
+      "6.2 Contoh Aplikasi dalam Landskap",
+      "6.3 Pengurusan Alam Sekitar"
+     ],
+     "status": "HEADING_LEVEL_ONLY",
+     "note": "The named subtopics are mandatory because the module names them. What is mandatory BELOW heading level cannot be known before extraction, and no learning outcome is written here for a unit whose text nobody has read."
+    },
+    "grouping": {
+     "provenance": "CAIR",
+     "proposal": [
+      {
+       "group_id": "G1",
+       "covers": "6.1 Environmental Management Plan"
+      },
+      {
+       "group_id": "G2",
+       "covers": "6.2 Contoh Aplikasi dalam Landskap"
+      },
+      {
+       "group_id": "G3",
+       "covers": "6.3 Pengurusan Alam Sekitar"
+      }
+     ],
+     "rule": "One screen group per named subtopic.",
+     "note": "A floor, not a ceiling. Extraction may show a subtopic that needs two groups; it will not show one that needs none."
+    },
+    "screen_sequence": {
+     "provenance": "CAIR",
+     "sequence": [
+      "S01 Topik entry (AUTO — RP-002)",
+      "S0x Orientasi (AUTO — RP-002)",
+      "Kumpulan 1: 6.1 Environmental Management Plan",
+      "Kumpulan 2: 6.2 Contoh Aplikasi dalam Landskap",
+      "Kumpulan 3: 6.3 Pengurusan Alam Sekitar",
+      "Rumusan (AUTO treatment RP-007, length BARIAH)",
+      "Kuiz (AUTO — AR-01, AR-02)",
+      "Tamat (AUTO — RP-012 behaviour; destination per unit)"
+     ],
+     "arithmetic": {
+      "unit_id": "K5-PL06-T06-B01",
+      "named_subtopics": 3,
+      "shell_screens": 2,
+      "shell_includes_dialogue": false,
+      "shell_basis": "RP-002 screen grammar and RP-007 / RP-008 / RP-012 closing grammar",
+      "content_screens_floor": 3,
+      "content_screens_ceiling": "UNKNOWN_PENDING_EXTRACTION",
+      "closing_screens": 3,
+      "minimum_total_screens": 8,
+      "maximum_total_screens": "UNKNOWN_PENDING_EXTRACTION",
+      "floor_basis": "one content screen per NAMED subtopic — the fewest that can carry the headings the boundary map lists",
+      "why_no_single_number": "A screen count is a function of how many records each subtopic holds. None of these units is extracted, so the ceiling is not knowable and is not guessed."
+     }
+    },
+    "treatment": {
+     "provenance": "CAIR",
+     "proposal": "comparison",
+     "reason": "A management plan, then applications, then management practice reads like a before-and-after or plan-versus-practice comparison. Weakly held.",
+     "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+     ],
+     "confidence": "LOW — read from a heading, not from content"
+    },
+    "runtime_states": {
+     "unit_id": "K5-PL06-T06-B01",
+     "provenance": "OPEN",
+     "method": "base states = learner screens; triggered states = one per reveal, step or quiz item; completion flags = one per screen that gates SETERUSNYA",
+     "method_source": "Lane A T04 state model, released for reuse as a METHOD by T04_INTERACTION_STATE_REVIEW_COVERAGE_PROVEN",
+     "base_states_floor": 8,
+     "triggered_states": "UNKNOWN_PENDING_EXTRACTION",
+     "total_runtime_states": "UNKNOWN_PENDING_EXTRACTION",
+     "why": "Triggered states depend on how many records each screen reveals, which is exactly what extraction produces. Reusing T04's 65 would be reusing T04's content, which NR-04 and NR-07 forbid."
+    },
+    "dialogue": {
+     "provenance": "CAIR",
+     "proposal": "UNCERTAIN",
+     "reason": "6.2 is named 'Contoh Aplikasi dalam Landskap' — worked examples, which sometimes carry a scenario and sometimes are a gallery. The heading does not say which.",
+     "constraint": "The T04 four-line pattern is NOT carried over (NR-03), and no character name is proposed while STOP-006 is open (NR-02)."
+    },
+    "rumusan": {
+     "provenance": "AUTO",
+     "treatment": "Summarises THIS Bahagian only, contractor and site perspective, no Kepentingan / Isi Utama / Manfaat labels (RP-007).",
+     "beat_count": "BARIAH",
+     "note": "T04's three beats are NOT reused (NR-01). No course-wide Rumusan length rule exists and Stage 4.2F-B0.9 was forbidden to infer one."
+    },
+    "quiz_stems": {
+     "provenance": "OPEN",
+     "composition": "4 Multiple Choice + 1 Multiple Response (AUTO — AR-01)",
+     "slots": [
+      {
+       "slot": "Q1",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "6.1 Environmental Management Plan",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q2",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "6.2 Contoh Aplikasi dalam Landskap",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q3",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "6.3 Pengurusan Alam Sekitar",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q4",
+       "kind": "MULTIPLE_CHOICE",
+       "draws_from": "6.1 Environmental Management Plan",
+       "stem": "PENDING_EXTRACTION"
+      },
+      {
+       "slot": "Q5",
+       "kind": "MULTIPLE_RESPONSE",
+       "draws_from": "6.2 Contoh Aplikasi dalam Landskap",
+       "stem": "PENDING_EXTRACTION"
+      }
+     ],
+     "blocking_stop": "STOP-005",
+     "note": "Five slots with their composition and their subtopic binding are prefilled. The stems are not. Writing five questions about pages nobody has read would be inventing assessment content, and the slot-to-subtopic binding shown here is itself provisional until the content behind each heading is known."
+    },
+    "answer_keys": {
+     "provenance": "OPEN",
+     "status": "NOT_DRAFTED",
+     "authority": "NONE — no key exists, so none is approved",
+     "source_support": "NONE_YET",
+     "blocking_stop": "STOP-005",
+     "note": "RP-108 requires every option to map to a source row and the key to be derived from controlled content. Neither is possible yet. This field says NOT_DRAFTED rather than PENDING_APPROVAL, because there is nothing to approve."
+    },
+    "visual_obligations": {
+     "provenance": "OPEN",
+     "count": "UNKNOWN_PENDING_EXTRACTION",
+     "status": "NOT_EXTRACTED",
+     "blocking_stop": "STOP-003",
+     "rule": "RP-104 — a visual direction is read from the source row's own figure or table photograph, never composed from a component name.",
+     "note": "UNKNOWN, not zero. A unit with no extracted assets cannot satisfy RP-104 and must not be given placeholder subjects to pass."
+    },
+    "reuse": {
+     "provenance": "AUTO",
+     "candidates": [
+      "RP-001 review storyboard shell",
+      "RP-002 S01 / S02 / S03 screen grammar (structure only)",
+      "RP-003 off-canvas production panel",
+      "RP-004 Speaker Notes typed-block schema",
+      "RP-005 English-term italics MECHANISM (not the B02 term list)",
+      "RP-006 completion-state treatment",
+      "RP-007 Rumusan treatment (not the beat count)",
+      "RP-008 quiz review structure",
+      "RP-011 correct / incorrect feedback wording",
+      "RP-013 off-canvas geometry registry",
+      "RP-014 artifact identity and exact release-token validation",
+      "RP-015 screen / state / page three-way separation",
+      "RP-016 oracle contract",
+      "RP-017 population pinning",
+      "Lane A state-appendix FORMAT (mechanism only — NR-07)"
+     ]
+    },
+    "no_reuse": {
+     "provenance": "BARIAH",
+     "exceptions": [
+      "NR-01",
+      "NR-02",
+      "NR-03",
+      "NR-04",
+      "NR-05",
+      "NR-06",
+      "NR-07"
+     ],
+     "unit_specific": "RP-201 to RP-208 do not apply; this unit is in a different Topik from B02."
+    },
+    "open_questions": {
+     "provenance": "OPEN",
+     "items": [
+      "STOP-003 VISUAL_INVENTORY_NOT_EXTRACTED",
+      "STOP-004 CONTROLLED_CONTENT_NOT_EXTRACTED",
+      "STOP-005 NO_QUIZ_SOURCE",
+      "STOP-006 CAST_BINDING_UNRESOLVED"
+     ]
+    }
+   }
+  }
+ ],
+ "sections": [
+  {
+   "letter": "A",
+   "title": "Gambaran keseluruhan kelompok",
+   "key": "overview"
+  },
+  {
+   "letter": "B",
+   "title": "Peraturan seluruh kursus yang boleh diguna semula",
+   "key": "rules"
+  },
+  {
+   "letter": "C",
+   "title": "Kad keputusan — K5-PL06-T03-B03",
+   "key": "K5-PL06-T03-B03"
+  },
+  {
+   "letter": "D",
+   "title": "Kad keputusan — K5-PL06-T03-B04",
+   "key": "K5-PL06-T03-B04"
+  },
+  {
+   "letter": "E",
+   "title": "Kad keputusan — K5-PL06-T05-B01",
+   "key": "K5-PL06-T05-B01"
+  },
+  {
+   "letter": "F",
+   "title": "Kad keputusan — K5-PL06-T06-B01",
+   "key": "K5-PL06-T06-B01"
+  },
+  {
+   "letter": "G",
+   "title": "Pengecualian merentas unit",
+   "key": "exceptions"
+  },
+  {
+   "letter": "H",
+   "title": "Helaian keputusan Bariah",
+   "key": "decision_sheet"
+  }
+ ],
+ "auto_applied_rules": [
+  {
+   "rule_id": "AR-01",
+   "rule": "Quiz composition: 4 Multiple Choice + 1 Multiple Response.",
+   "scope": "ALL_PL06_UNITS",
+   "evidence": "Course-wide rule carried forward from the B02 Style and Guidelines (RP-009) and applied in T04.",
+   "caveat": "RP-009 classifies this GLOBAL on the strength of a Style and Guidelines document that is itself the B02 slice, and flags it human_authority_required = VERIFY. It is applied here as instructed and the flag is reported, not quietly dropped."
+  },
+  {
+   "rule_id": "AR-02",
+   "rule": "Pass threshold: 60 percent.",
+   "scope": "ALL_PL06_UNITS",
+   "evidence": "RP-010, same Style and Guidelines source as AR-01.",
+   "caveat": "Same VERIFY flag as AR-01."
+  },
+  {
+   "rule_id": "AR-03",
+   "rule": "No learner-facing 'dalam modul', 'mengikut modul' or 'modul menyenaraikan'.",
+   "scope": "ALL_PL06_UNITS",
+   "evidence": "Generic learner-language rule. A learner is reading the course, not being told about a document.",
+   "caveat": "None. This is a phrasing rule, not an instructional decision."
+  },
+  {
+   "rule_id": "AR-04",
+   "rule": "Multiple Response items use checkboxes with no A/B/C option labels.",
+   "scope": "ALL_PL06_UNITS",
+   "evidence": "Generic assessment-mechanics rule; applied to T04 Q5.",
+   "caveat": "None."
+  },
+  {
+   "rule_id": "AR-05",
+   "rule": "Instructional clarity overrides production optimisation.",
+   "scope": "ALL_PL06_UNITS",
+   "evidence": "Standing principle. Where a cheaper treatment would obscure the instruction, the clearer treatment wins.",
+   "caveat": "None."
+  },
+  {
+   "rule_id": "AR-06",
+   "rule": "Supported treatment vocabulary: static content, click-to-reveal, progressive process, comparison, scenario/dialogue only where justified.",
+   "scope": "ALL_PL06_UNITS",
+   "evidence": "The vocabulary these units may be described in. A treatment outside it is an escalation, not a proposal.",
+   "caveat": "'Only where justified' is doing real work in the last item: a dialogue needs a reason, not a habit."
+  }
+ ],
+ "no_reuse": [
+  {
+   "item_id": "NR-01",
+   "item": "T04 three-beat Rumusan",
+   "reason": "Bariah ruled the beat count for T04's content. No course-wide Rumusan length rule was ever stated, and Stage 4.2F-B0.9 was explicitly forbidden to infer one.",
+   "what_is_portable": "RP-007 — the Rumusan TREATMENT: this Bahagian only, contractor perspective, no Kepentingan / Isi Utama / Manfaat labels."
+  },
+  {
+   "item_id": "NR-02",
+   "item": "Alya and Encik Rahman",
+   "reason": "The ratified K5 character bank marks Haziq and Encik Roslan CANONICAL while B02 ships Alya and Encik Rahman. Bariah's PL06-wide instruction names neither pair and is conditional on 'kesesuaian'.",
+   "what_is_portable": "Nothing until STOP-006 / SRC-ANOM-003 is resolved. RP-106 is the one rule in the portability matrix with oracle = no."
+  },
+  {
+   "item_id": "NR-03",
+   "item": "The T04 four-line dialogue pattern",
+   "reason": "Four lines was a shape chosen for T04's opening, not a course grammar.",
+   "what_is_portable": "Whether a unit opens with a dialogue at all is a per-unit question — point 9 on every card."
+  },
+  {
+   "item_id": "NR-04",
+   "item": "The T04 screen count (22)",
+   "reason": "A screen count is a function of the unit's own content. Reusing it would make four different units the same length by coincidence.",
+   "what_is_portable": "The screen-count ARITHMETIC, exposed per unit in section C-F."
+  },
+  {
+   "item_id": "NR-05",
+   "item": "T04 asset groups (8)",
+   "reason": "Asset groups were derived from T04's own visual obligations.",
+   "what_is_portable": "RP-104 — the binding RULE: a visual direction is read from the source row's own figure or table, never composed from a name."
+  },
+  {
+   "item_id": "NR-06",
+   "item": "T04 visual totals (46 obligations, 41 proposed assets)",
+   "reason": "Derived from T04's heading hierarchy and Bariah's three ruled groups. These four units have no extracted visual inventory at all (STOP-003).",
+   "what_is_portable": "The three-field authority split: requirement authority, population derivation, subject authority."
+  },
+  {
+   "item_id": "NR-07",
+   "item": "The T04 runtime-state page format",
+   "reason": "Held back until Lane A resolved whether that format proves review coverage.",
+   "status": "RELEASED_BY_LANE_A",
+   "what_is_portable": "Lane A closed at T04_INTERACTION_STATE_REVIEW_COVERAGE_PROVEN, so the two-panel state-appendix FORMAT is now available as a mechanism. The per-unit state COUNTS are not — they need content. See point 8 on every card."
+  }
+ ],
+ "provenance_classes": [
+  {
+   "code": "AUTO",
+   "label": "AUTO-APPLIED COURSE RULE",
+   "meaning": "Applied without asking, because the rule is course-wide or generic."
+  },
+  {
+   "code": "SRC",
+   "label": "SOURCE-DERIVED FACT",
+   "meaning": "Read from a frozen, hash-verified artifact. Not a proposal."
+  },
+  {
+   "code": "CAIR",
+   "label": "CAIR PROPOSAL",
+   "meaning": "Ours. Reject it freely — nothing downstream depends on it yet."
+  },
+  {
+   "code": "BARIAH",
+   "label": "BARIAH DECISION REQUIRED",
+   "meaning": "Cannot be settled by evidence in this repository."
+  },
+  {
+   "code": "OPEN",
+   "label": "OPEN SOURCE ISSUE",
+   "meaning": "The source itself is missing, ambiguous or contradictory."
+  }
+ ],
+ "response_options": [
+  {
+   "option": "TERIMA",
+   "meaning": "Accept as prefilled.",
+   "requires_target_id": false
+  },
+  {
+   "option": "PINDA",
+   "meaning": "Accept with the amendment written in the response box.",
+   "requires_target_id": false
+  },
+  {
+   "option": "BUANG",
+   "meaning": "Remove this item entirely.",
+   "requires_target_id": false
+  },
+  {
+   "option": "GABUNG",
+   "meaning": "Merge into another unit or screen group.",
+   "requires_target_id": true
+  },
+  {
+   "option": "ESCALATE",
+   "meaning": "Source or instructional ambiguity — do not proceed.",
+   "requires_target_id": false
+  }
+ ],
+ "card_points": [
+  {
+   "no": 1,
+   "key": "boundary",
+   "title": "Sempadan sumber dan julat muka surat"
+  },
+  {
+   "no": 2,
+   "key": "shared_page_risk",
+   "title": "Risiko sempadan muka surat dikongsi"
+  },
+  {
+   "no": 3,
+   "key": "controlled_rows",
+   "title": "Baris sumber terkawal"
+  },
+  {
+   "no": 4,
+   "key": "mandatory_content",
+   "title": "Kandungan instruksi yang wajib"
+  },
+  {
+   "no": 5,
+   "key": "grouping",
+   "title": "Cadangan pengumpulan"
+  },
+  {
+   "no": 6,
+   "key": "screen_sequence",
+   "title": "Cadangan urutan skrin pelajar"
+  },
+  {
+   "no": 7,
+   "key": "treatment",
+   "title": "Rawatan bagi setiap kumpulan skrin"
+  },
+  {
+   "no": 8,
+   "key": "runtime_states",
+   "title": "Jangkaan bilangan keadaan runtime"
+  },
+  {
+   "no": 9,
+   "key": "dialogue",
+   "title": "Dialog: perlu / tidak perlu / belum pasti"
+  },
+  {
+   "no": 10,
+   "key": "rumusan",
+   "title": "Cadangan struktur Rumusan"
+  },
+  {
+   "no": 11,
+   "key": "quiz_stems",
+   "title": "Lima batang soalan kuiz"
+  },
+  {
+   "no": 12,
+   "key": "answer_keys",
+   "title": "Status kunci jawapan dan sokongan sumber"
+  },
+  {
+   "no": 13,
+   "key": "visual_obligations",
+   "title": "Obligasi visual"
+  },
+  {
+   "no": 14,
+   "key": "reuse",
+   "title": "Calon guna semula"
+  },
+  {
+   "no": 15,
+   "key": "no_reuse",
+   "title": "Pengecualian tidak boleh guna semula"
+  },
+  {
+   "no": 16,
+   "key": "open_questions",
+   "title": "Soalan kuasa yang belum selesai"
+  }
+ ],
+ "exposures": [
+  {
+   "exposure_id": "EX-01",
+   "subject": "Screen-count arithmetic",
+   "statement": "Every unit's screen count is given as a floor with its terms shown, never as a single number. Floors: K5-PL06-T03-B03 ≥ 6; K5-PL06-T03-B04 ≥ 6; K5-PL06-T05-B01 ≥ 10; K5-PL06-T06-B01 ≥ 8. Ceilings are UNKNOWN_PENDING_EXTRACTION."
+  },
+  {
+   "exposure_id": "EX-02",
+   "subject": "Proposal origin",
+   "statement": "Every line carries one of five visible provenance labels. Nothing marked CAIR PROPOSAL has any evidence behind it beyond a heading."
+  },
+  {
+   "exposure_id": "EX-03",
+   "subject": "Source limitations",
+   "statement": "The module DOCX is held externally by identity and is not in this repository. No unit in this batch has extracted content, visuals or quiz source. STOP-003, STOP-004 and STOP-005 are open on all four."
+  },
+  {
+   "exposure_id": "EX-04",
+   "subject": "Shared-boundary uncertainty",
+   "statement": "T03-B03 shares both its start and end pages; T03-B04 shares its start. Those boundaries must be split by heading anchor. T05-B01 and T06-B01 have clean boundaries on both sides."
+  },
+  {
+   "exposure_id": "EX-05",
+   "subject": "Visual reuse restrictions",
+   "statement": "No visual subject is proposed for any unit. T04's 46 obligations and 8 asset groups do not travel (NR-05, NR-06), and RP-104 forbids composing a subject from a component name."
+  },
+  {
+   "exposure_id": "EX-06",
+   "subject": "Answer keys not authority-approved",
+   "statement": "No answer key exists for any unit in this batch. The status is NOT_DRAFTED, which is weaker than PENDING_APPROVAL: there is nothing to approve."
+  },
+  {
+   "exposure_id": "EX-07",
+   "subject": "Anticipated interaction-state complexity",
+   "statement": "Base states follow the screen floor. Triggered and total runtime states are UNKNOWN_PENDING_EXTRACTION for every unit. T04's 65 states are not carried over."
+  }
+ ],
+ "cross_unit_exceptions": [
+  {
+   "exception_id": "XU-01",
+   "subject": "B02 execution families",
+   "applies_to": [
+    "K5-PL06-T03-B03",
+    "K5-PL06-T03-B04"
+   ],
+   "statement": "Both units sit in Topik 3, B02's own Topik. RP-201 to RP-203 are readings of B02's table structure, not a PL06 taxonomy, and proximity is the reason they are most likely to be assumed here."
+  },
+  {
+   "exception_id": "XU-02",
+   "subject": "Shared module page 255",
+   "applies_to": [
+    "K5-PL06-T03-B03",
+    "K5-PL06-T03-B04"
+   ],
+   "statement": "Module page 255 carries the end of T03-B03 and the start of T03-B04. Whichever unit is extracted first must stop at the named heading, not at the page break."
+  },
+  {
+   "exception_id": "XU-03",
+   "subject": "Character cast",
+   "applies_to": [
+    "K5-PL06-T03-B03",
+    "K5-PL06-T03-B04",
+    "K5-PL06-T05-B01",
+    "K5-PL06-T06-B01"
+   ],
+   "statement": "STOP-006 is open. T05-B01 is the only unit proposing a dialogue, so it is the only one this immediately blocks — but any PINDA that adds a dialogue elsewhere inherits the same block."
+  },
+  {
+   "exception_id": "XU-04",
+   "subject": "Boundary image custody",
+   "applies_to": [
+    "K5-PL06-T03-B03",
+    "K5-PL06-T03-B04",
+    "K5-PL06-T05-B01",
+    "K5-PL06-T06-B01"
+   ],
+   "statement": "Only T05-B01's start page image (p302) is ingested in this repository and was visually checked. T03-B03 (p268) and T06-B01 (p312) are named in the freeze package by identity only. T03-B04's start PDF page 273 has no image of its own in the package at all."
+  },
+  {
+   "exception_id": "XU-05",
+   "subject": "Stale unit lists on the open-items register",
+   "applies_to": [
+    "K5-PL06-T04-B01"
+   ],
+   "statement": "STOP-003, STOP-004 and STOP-005 still list K5-PL06-T04-B01, which has since been extracted. The register is a historical run artifact and is not rewritten here; the divergence is recorded instead."
+  }
+ ],
+ "blocking_stops": [
+  {
+   "stop_id": "STOP-003",
+   "condition": "VISUAL_INVENTORY_NOT_EXTRACTED",
+   "register": "PL06_OPEN_AUTHORITY_ITEMS_v1"
+  },
+  {
+   "stop_id": "STOP-004",
+   "condition": "CONTROLLED_CONTENT_NOT_EXTRACTED",
+   "register": "PL06_OPEN_AUTHORITY_ITEMS_v1"
+  },
+  {
+   "stop_id": "STOP-005",
+   "condition": "NO_QUIZ_SOURCE",
+   "register": "PL06_OPEN_AUTHORITY_ITEMS_v1"
+  },
+  {
+   "stop_id": "STOP-006",
+   "condition": "CAST_BINDING_UNRESOLVED",
+   "register": "PL06_OPEN_AUTHORITY_ITEMS_v1"
+  }
+ ]
+}

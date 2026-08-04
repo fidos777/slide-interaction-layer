@@ -1,0 +1,346 @@
+{
+ "stage": "4.2F-B2",
+ "batch_id": "PL06-HARVEST-BATCH-1",
+ "rows": [
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "source boundary and page range",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "250-255 · 3.5 Infrastruktur → 3.6 Badan Air (Water Body)"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "boundary page image",
+   "evidence": "source-freeze/boundary_pages/p268.png",
+   "evidence_sha256": null,
+   "evidence_class": "NAMED_IN_THE_FREEZE_PACKAGE_BY_IDENTITY_ONLY",
+   "value": "p268"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "named subtopics",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json · subtopics field",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "3.5 Infrastruktur"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "controlled source rows",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-004",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "quiz stems",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "answer keys",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "claim": "visual obligations",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-003",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "source boundary and page range",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "255-261 · 3.6 Badan Air (Water Body) → 3.7 Pencahayaan / Lighting"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "boundary page image",
+   "evidence": "source-freeze/boundary_pages/p273.png",
+   "evidence_sha256": null,
+   "evidence_class": "NO_IMAGE_FOR_THIS_START_PAGE",
+   "value": "p273"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "named subtopics",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json · subtopics field",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "3.6 Badan Air (Water Body)"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "controlled source rows",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-004",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "quiz stems",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "answer keys",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "claim": "visual obligations",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-003",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "source boundary and page range",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "284-293 · 5.0 PENGURUSAN KUALITI PROJEK → 6.0 PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "boundary page image",
+   "evidence": "source-freeze/boundary_pages/p302.png",
+   "evidence_sha256": "243d11590b86c6d1c411a3334b7f88ebc59a92fd19fc8b10ee2bb5c625fb913b",
+   "evidence_class": "INGESTED_IN_THIS_REPOSITORY",
+   "value": "p302"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "named subtopics",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json · subtopics field",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "5.1 Project Quality Plan (PQP); 5.2 Jaminan Kualiti; 5.3 Inspection and Testing for Quality Control; 5.4 Penyata Kaedah Kerja"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "controlled source rows",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-004",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "quiz stems",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "answer keys",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "claim": "visual obligations",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-003",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "source boundary and page range",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "294-302 · 6.0 PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR → 7.0 DEMOBILISASI"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "boundary page image",
+   "evidence": "source-freeze/boundary_pages/p312.png",
+   "evidence_sha256": null,
+   "evidence_class": "NAMED_IN_THE_FREEZE_PACKAGE_BY_IDENTITY_ONLY",
+   "value": "p312"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "named subtopics",
+   "evidence": "PL06_LESSON_BOUNDARY_MAP_v1.json · subtopics field",
+   "evidence_sha256": "aa02cd3c784113b00c056280fb236f6ae56a48b013fb388bb47011ba6e31c073",
+   "evidence_class": "FROZEN_HASH_VERIFIED",
+   "value": "6.1 Environmental Management Plan; 6.2 Contoh Aplikasi dalam Landskap; 6.3 Pengurusan Alam Sekitar"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "controlled source rows",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-004",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "quiz stems",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "answer keys",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-005",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "claim": "visual obligations",
+   "evidence": "PL06_OPEN_AUTHORITY_ITEMS_v1 · STOP-003",
+   "evidence_sha256": null,
+   "evidence_class": "BLOCKED_NOT_EXTRACTED",
+   "value": "SOURCE_PRESENT_CONTENT_NOT_EXTRACTED"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "auto-applied rule AR-01",
+   "evidence": "Course-wide rule carried forward from the B02 Style and Guidelines (RP-009) and applied in T04.",
+   "evidence_sha256": null,
+   "evidence_class": "COURSE_WIDE_RULE",
+   "value": "Quiz composition: 4 Multiple Choice + 1 Multiple Response."
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "auto-applied rule AR-02",
+   "evidence": "RP-010, same Style and Guidelines source as AR-01.",
+   "evidence_sha256": null,
+   "evidence_class": "COURSE_WIDE_RULE",
+   "value": "Pass threshold: 60 percent."
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "auto-applied rule AR-03",
+   "evidence": "Generic learner-language rule. A learner is reading the course, not being told about a document.",
+   "evidence_sha256": null,
+   "evidence_class": "COURSE_WIDE_RULE",
+   "value": "No learner-facing 'dalam modul', 'mengikut modul' or 'modul menyenaraikan'."
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "auto-applied rule AR-04",
+   "evidence": "Generic assessment-mechanics rule; applied to T04 Q5.",
+   "evidence_sha256": null,
+   "evidence_class": "COURSE_WIDE_RULE",
+   "value": "Multiple Response items use checkboxes with no A/B/C option labels."
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "auto-applied rule AR-05",
+   "evidence": "Standing principle. Where a cheaper treatment would obscure the instruction, the clearer treatment wins.",
+   "evidence_sha256": null,
+   "evidence_class": "COURSE_WIDE_RULE",
+   "value": "Instructional clarity overrides production optimisation."
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "auto-applied rule AR-06",
+   "evidence": "The vocabulary these units may be described in. A treatment outside it is an escalation, not a proposal.",
+   "evidence_sha256": null,
+   "evidence_class": "COURSE_WIDE_RULE",
+   "value": "Supported treatment vocabulary: static content, click-to-reveal, progressive process, comparison, scenario/dialogue only where justified."
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-01",
+   "evidence": "Bariah ruled the beat count for T04's content. No course-wide Rumusan length rule was ever stated, and Stage 4.2F-B0.9 was explicitly forbidden to infer one.",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "T04 three-beat Rumusan"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-02",
+   "evidence": "The ratified K5 character bank marks Haziq and Encik Roslan CANONICAL while B02 ships Alya and Encik Rahman. Bariah's PL06-wide instruction names neither pair and is conditional on 'kesesuaian'.",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "Alya and Encik Rahman"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-03",
+   "evidence": "Four lines was a shape chosen for T04's opening, not a course grammar.",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "The T04 four-line dialogue pattern"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-04",
+   "evidence": "A screen count is a function of the unit's own content. Reusing it would make four different units the same length by coincidence.",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "The T04 screen count (22)"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-05",
+   "evidence": "Asset groups were derived from T04's own visual obligations.",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "T04 asset groups (8)"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-06",
+   "evidence": "Derived from T04's heading hierarchy and Bariah's three ruled groups. These four units have no extracted visual inventory at all (STOP-003).",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "T04 visual totals (46 obligations, 41 proposed assets)"
+  },
+  {
+   "unit_id": "ALL",
+   "claim": "no-reuse NR-07",
+   "evidence": "Held back until Lane A resolved whether that format proves review coverage.",
+   "evidence_sha256": null,
+   "evidence_class": "EXPLICIT_NO_REUSE",
+   "value": "The T04 runtime-state page format"
+  }
+ ],
+ "module_docx": {
+  "name": "[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+  "bytes": 16832861,
+  "sha256": "5a9142cdfa1a8090c2075e78caf45609438844daeac88e331bed3069a6a78df7",
+  "custody": "EXTERNAL_DURABLE_SOURCE_BY_IDENTITY",
+  "in_this_repository": false
+ },
+ "totals": {
+  "rows": 41,
+  "frozen_hash_verified": 8,
+  "blocked_not_extracted": 16
+ }
+}
