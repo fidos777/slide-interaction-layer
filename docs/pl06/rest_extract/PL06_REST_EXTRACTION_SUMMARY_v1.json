@@ -1,0 +1,563 @@
+{
+ "stage": "4.2F-D",
+ "authority": "SRC-AUTH-01",
+ "derived_from": "frozen PL06 boundary map",
+ "total_mapped_units": 14,
+ "already_represented": {
+  "K5-PL06-T03-B02": "delivered B02 proof",
+  "K5-PL06-T04-B01": "T04, storyboard built and state-review proven",
+  "K5-PL06-T03-B03": "PL06 batch 1",
+  "K5-PL06-T03-B04": "PL06 batch 1",
+  "K5-PL06-T05-B01": "PL06 batch 1",
+  "K5-PL06-T06-B01": "PL06 batch 1"
+ },
+ "remaining_count": 8,
+ "remaining_unit_ids": [
+  "K5-PL06-T01-B01",
+  "K5-PL06-T01-B02",
+  "K5-PL06-T01-B03",
+  "K5-PL06-T02-B01",
+  "K5-PL06-T02-B02",
+  "K5-PL06-T03-B01",
+  "K5-PL06-T03-B05",
+  "K5-PL06-T07-B01"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "units": [
+  {
+   "unit_id": "K5-PL06-T01-B01",
+   "lesson_title": "Proses Memula Kerja - Penyediaan Tapak",
+   "module_pages": [
+    162,
+    181
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": false,
+   "shared_end": true,
+   "rows": 258,
+   "tables": 0,
+   "images": 0,
+   "diagrams": 0,
+   "groups": 4,
+   "grouping_basis": "LEVEL_3_HEADING_FALLBACK",
+   "minimum_screens": 9,
+   "obligations": 35,
+   "definitions": 21,
+   "visual_subjects": 0,
+   "source_attested": 0,
+   "terminology": 3,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T01-B01",
+    "rows": 258,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     162,
+     181
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 225,
+    "carried_forward_rows": 33,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T01-B02",
+   "lesson_title": "Jadual Kerja dan Perlaksanaan Pembinaan Landskap",
+   "module_pages": [
+    181,
+    188
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": true,
+   "shared_end": true,
+   "rows": 100,
+   "tables": 0,
+   "images": 0,
+   "diagrams": 0,
+   "groups": 2,
+   "grouping_basis": "LEVEL_2_HEADING",
+   "minimum_screens": 7,
+   "obligations": 17,
+   "definitions": 9,
+   "visual_subjects": 0,
+   "source_attested": 0,
+   "terminology": 1,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T01-B02",
+    "rows": 100,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     181,
+     188
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 96,
+    "carried_forward_rows": 4,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T01-B03",
+   "lesson_title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+   "module_pages": [
+    188,
+    200
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": true,
+   "shared_end": false,
+   "rows": 146,
+   "tables": 0,
+   "images": 6,
+   "diagrams": 0,
+   "groups": 7,
+   "grouping_basis": "LEVEL_3_HEADING_FALLBACK",
+   "minimum_screens": 12,
+   "obligations": 6,
+   "definitions": 13,
+   "visual_subjects": 12,
+   "source_attested": 12,
+   "terminology": 1,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T01-B03",
+    "rows": 146,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     188,
+     200
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 135,
+    "carried_forward_rows": 11,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T02-B01",
+   "lesson_title": "Elemen Landskap Kejur dan Elemen Landskap Lembut/Penanaman",
+   "module_pages": [
+    201,
+    215
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": false,
+   "shared_end": true,
+   "rows": 180,
+   "tables": 4,
+   "images": 0,
+   "diagrams": 0,
+   "groups": 2,
+   "grouping_basis": "LEVEL_2_HEADING",
+   "minimum_screens": 7,
+   "obligations": 13,
+   "definitions": 30,
+   "visual_subjects": 4,
+   "source_attested": 4,
+   "terminology": 3,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T02-B01",
+    "rows": 180,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     201,
+     215
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 179,
+    "carried_forward_rows": 1,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T02-B02",
+   "lesson_title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+   "module_pages": [
+    215,
+    225
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": true,
+   "shared_end": false,
+   "rows": 90,
+   "tables": 10,
+   "images": 4,
+   "diagrams": 0,
+   "groups": 11,
+   "grouping_basis": "LEVEL_3_HEADING_FALLBACK",
+   "minimum_screens": 16,
+   "obligations": 0,
+   "definitions": 7,
+   "visual_subjects": 18,
+   "source_attested": 18,
+   "terminology": 7,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T02-B02",
+    "rows": 90,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     215,
+     225
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 64,
+    "carried_forward_rows": 26,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T03-B01",
+   "lesson_title": "Kawasan Berturap dan Gelanggang Sukan & Permainan",
+   "module_pages": [
+    226,
+    237
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": false,
+   "shared_end": true,
+   "rows": 121,
+   "tables": 4,
+   "images": 3,
+   "diagrams": 0,
+   "groups": 2,
+   "grouping_basis": "LEVEL_2_HEADING",
+   "minimum_screens": 7,
+   "obligations": 18,
+   "definitions": 9,
+   "visual_subjects": 9,
+   "source_attested": 9,
+   "terminology": 5,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T03-B01",
+    "rows": 121,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     226,
+     237
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 112,
+    "carried_forward_rows": 9,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T03-B05",
+   "lesson_title": "Pencahayaan dan Pengairan",
+   "module_pages": [
+    262,
+    275
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": false,
+   "shared_end": false,
+   "rows": 189,
+   "tables": 0,
+   "images": 0,
+   "diagrams": 0,
+   "groups": 2,
+   "grouping_basis": "LEVEL_2_HEADING",
+   "minimum_screens": 7,
+   "obligations": 22,
+   "definitions": 23,
+   "visual_subjects": 0,
+   "source_attested": 0,
+   "terminology": 32,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T03-B05",
+    "rows": 189,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     262,
+     275
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 177,
+    "carried_forward_rows": 12,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T07-B01",
+   "lesson_title": "Demobilisasi",
+   "module_pages": [
+    303,
+    309
+   ],
+   "page_range_matches_frozen": true,
+   "shared_start": false,
+   "shared_end": false,
+   "rows": 66,
+   "tables": 0,
+   "images": 0,
+   "diagrams": 0,
+   "groups": 3,
+   "grouping_basis": "LEVEL_2_HEADING",
+   "minimum_screens": 8,
+   "obligations": 9,
+   "definitions": 3,
+   "visual_subjects": 0,
+   "source_attested": 0,
+   "terminology": 2,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T07-B01",
+    "rows": 66,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     303,
+     309
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 53,
+    "carried_forward_rows": 13,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  }
+ ],
+ "totals": {
+  "units": 8,
+  "rows": 1150,
+  "tables": 18,
+  "images": 13,
+  "obligations": 120,
+  "definitions": 115,
+  "visual_subjects": 43
+ },
+ "leak_report": {
+  "units": [
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "shared_start": false,
+    "shared_end": true,
+    "span": [
+     3375,
+     3742
+    ],
+    "rows_with_paragraph_index": 258,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "Pakej Latihan ini bertujuan memberikan maklumat dan pengetahuan kepada kontraktor berkaitan pengurusan operasi pembinaan landskap.",
+    "first_excluded_after": "Jadual Kerja",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "shared_start": true,
+    "shared_end": true,
+    "span": [
+     3743,
+     3886
+    ],
+    "rows_with_paragraph_index": 100,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T01-B03",
+    "shared_start": true,
+    "shared_end": false,
+    "span": [
+     3887,
+     4084
+    ],
+    "rows_with_paragraph_index": 146,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "ELEMEN PEMBINAAN LANDSKAP",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T02-B01",
+    "shared_start": false,
+    "shared_end": true,
+    "span": [
+     4085,
+     4339
+    ],
+    "rows_with_paragraph_index": 176,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T02-B02",
+    "shared_start": true,
+    "shared_end": false,
+    "span": [
+     4340,
+     4462
+    ],
+    "rows_with_paragraph_index": 80,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "KOMPONEN LANDSKAP",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T03-B01",
+    "shared_start": false,
+    "shared_end": true,
+    "span": [
+     4463,
+     4630
+    ],
+    "rows_with_paragraph_index": 117,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "Struktur Taman",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T03-B05",
+    "shared_start": false,
+    "shared_end": false,
+    "span": [
+     4951,
+     5219
+    ],
+    "rows_with_paragraph_index": 189,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "PENJAAGAAN DAN PENYELENGGARAAN",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T07-B01",
+    "shared_start": false,
+    "shared_end": false,
+    "span": [
+     5705,
+     5803
+    ],
+    "rows_with_paragraph_index": 66,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "PL07: PENYERAHAN PROJEK",
+    "clean": true
+   }
+  ],
+  "adjacency": {
+   "pairs": [
+    {
+     "pair": "K5-PL06-T01-B01 → K5-PL06-T01-B02",
+     "first_last_included": 3742,
+     "second_first_included": 3743,
+     "contiguous": true,
+     "gap": 0
+    },
+    {
+     "pair": "K5-PL06-T01-B02 → K5-PL06-T01-B03",
+     "first_last_included": 3886,
+     "second_first_included": 3887,
+     "contiguous": true,
+     "gap": 0
+    },
+    {
+     "pair": "K5-PL06-T01-B03 → K5-PL06-T02-B01",
+     "first_last_included": 4084,
+     "second_first_included": 4085,
+     "contiguous": true,
+     "gap": 0
+    },
+    {
+     "pair": "K5-PL06-T02-B01 → K5-PL06-T02-B02",
+     "first_last_included": 4339,
+     "second_first_included": 4340,
+     "contiguous": true,
+     "gap": 0
+    },
+    {
+     "pair": "K5-PL06-T02-B02 → K5-PL06-T03-B01",
+     "first_last_included": 4462,
+     "second_first_included": 4463,
+     "contiguous": true,
+     "gap": 0
+    },
+    {
+     "pair": "K5-PL06-T03-B01 → K5-PL06-T03-B05",
+     "first_last_included": 4630,
+     "second_first_included": 4951,
+     "contiguous": false,
+     "gap": 320
+    },
+    {
+     "pair": "K5-PL06-T03-B05 → K5-PL06-T07-B01",
+     "first_last_included": 5219,
+     "second_first_included": 5705,
+     "contiguous": false,
+     "gap": 485
+    }
+   ],
+   "all_contiguous": false,
+   "pairs_checked": 7,
+   "note": "Adjacent units that share a module page would, under a page-wise slice, each carry some of the other's paragraphs. Contiguous with a gap of zero means the heading anchor split exactly. A non-zero gap between units that are NOT adjacent in the frozen map is expected and is reported rather than hidden."
+  },
+  "all_clean": true
+ },
+ "t04_equivalence_still_holds": true
+}

@@ -1,0 +1,1077 @@
+{
+ "unit_id": "K5-PL06-T01-B01",
+ "lesson_title": "Proses Memula Kerja - Penyediaan Tapak",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 6,
+  "tree": [
+   {
+    "row_id": "T01B01-ROW-001",
+    "level": 1,
+    "text": "PROSES MEMULA KERJA",
+    "module_page": 162,
+    "heading_path": [
+     "PROSES MEMULA KERJA"
+    ]
+   },
+   {
+    "row_id": "T01B01-ROW-003",
+    "level": 2,
+    "text": "Penyediaan Tapak",
+    "module_page": 162,
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak"
+    ]
+   },
+   {
+    "row_id": "T01B01-ROW-005",
+    "level": 3,
+    "text": "Mobilisasi Tapak (Site Mobilisation)",
+    "module_page": 162,
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Mobilisasi Tapak (Site Mobilisation)"
+    ]
+   },
+   {
+    "row_id": "T01B01-ROW-015",
+    "level": 3,
+    "text": "Penyediaan Tapak (Site Preparation)",
+    "module_page": 163,
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penyediaan Tapak (Site Preparation)"
+    ]
+   },
+   {
+    "row_id": "T01B01-ROW-172",
+    "level": 3,
+    "text": "Penandaan Tapak (Setting out / Site Pegging)",
+    "module_page": 174,
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penandaan Tapak (Setting out / Site Pegging)"
+    ]
+   },
+   {
+    "row_id": "T01B01-ROW-188",
+    "level": 3,
+    "text": "Pemeriksaan Tapak & Pengesahan Kerja Mengukur",
+    "module_page": 176,
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_3_HEADING_FALLBACK",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Mobilisasi Tapak (Site Mobilisation)",
+    "row_id": "T01B01-ROW-005",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Penyediaan Tapak (Site Preparation)",
+    "row_id": "T01B01-ROW-015",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Penandaan Tapak (Setting out / Site Pegging)",
+    "row_id": "T01B01-ROW-172",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Pemeriksaan Tapak & Pengesahan Kerja Mengukur",
+    "row_id": "T01B01-ROW-188",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Mobilisasi Tapak (Site Mobilisation)",
+   "G2: Penyediaan Tapak (Site Preparation)",
+   "G3: Penandaan Tapak (Setting out / Site Pegging)",
+   "G4: Pemeriksaan Tapak & Pengesahan Kerja Mengukur",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 4,
+   "closing_screens": 3,
+   "minimum_total_screens": 9,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Mobilisasi Tapak (Site Mobilisation)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Penyediaan Tapak (Site Preparation)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Penandaan Tapak (Setting out / Site Pegging)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Pemeriksaan Tapak & Pengesahan Kerja Mengukur",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 9,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 35,
+  "propositions": [
+   {
+    "row_id": "T01B01-ROW-006",
+    "module_page": 162,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula. Ia menandakan permulaan rasmi operasi di tapak dan kesediaan kontraktor untuk melaksanakan projek. Aktiviti-aktiviti utama dalam mobilisasi tapak termasuk:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Mobilisasi Tapak (Site Mobilisation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-012",
+    "module_page": 163,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Memastikan pasukan kerja yang diperlukan, termasuk penyelia tapak, operator jentera, dan pekerja am, berada di tapak dan telah diberi taklimat keselamatan serta penerangan skop kerja.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Mobilisasi Tapak (Site Mobilisation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-018",
+    "module_page": 163,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Aktiviti ini melibatkan pembuangan semua elemen yang tidak dikehendaki dari kawasan pembinaan. Ini termasuk penebangan pokok dan pokok renek (kecuali yang perlu dipelihara), pembuangan sampah sarap, sisa binaan lama, dan lapisan rumput sedia ada.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penyediaan Tapak (Site Preparation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-022",
+    "module_page": 163,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Untuk kawasan yang memerlukan struktur seperti dek, gazebo, atau kawasan berturap, pelantar atau tapak asas yang stabil perlu dibina. Ini mungkin melibatkan kerja-kerja penggalian, pemadatan tanah, dan penyediaan lapisan asas batu.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penyediaan Tapak (Site Preparation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-026",
+    "module_page": 164,
+    "markers": [
+     "mesti",
+     "perlu"
+    ],
+    "text": "Pokok-pokok matang atau elemen semula jadi lain yang bernilai estetik atau ekologi mesti dilindungi sepenuhnya. Ini dilakukan dengan mendirikan zon perlindungan yang jelas menggunakan pagar sementara di sekeliling zon akar pokok (Root Protection Zone - RPZ). Batang pokok juga perlu dibalut (tree guard) untuk melindunginya daripada kerosakan fizikal akibat hentaman jentera.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeliharaan dan Perlindungan (Preservation and Protection)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-028",
+    "module_page": 164,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Melindungi struktur, longkang, atau laluan sedia ada yang bersebelahan dengan kawasan kerja daripada sebarang kerosakan. Utiliti bawah tanah seperti kabel elektrik atau paip air perlu dikenal pasti melalui pelan utiliti dan ditanda dengan jelas di permukaan tanah untuk mengelakkan insiden penggalian yang berbahaya dan merugikan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeliharaan dan Perlindungan (Preservation and Protection)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-048",
+    "module_page": 166,
+    "markers": [
+     "mesti",
+     "wajib"
+    ],
+    "text": "Kawasan ini wajib dipagar dengan jelas menggunakan pagar hoarding atau orange netting. Papan tanda amaran seperti \"KAWASAN LARANGAN\" atau \"ZON PERLINDUNGAN POKOK\" mesti diletakkan. Tiada sebarang aktiviti pembinaan, penyimpanan bahan, atau laluan jentera dibenarkan di dalam zon ini.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-056",
+    "module_page": 166,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kerja penggalian di zon ini perlu dilakukan dengan pengawasan rapi dan kaedah penggalian tangan jika perlu.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-067",
+    "module_page": 167,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Laluan ini ditanda dengan jelas dan permukaannya perlu diselenggara agar selamat untuk dilalui. Papan tanda arah pergerakan dan had laju (jika perlu) perlu dipasang. Laluan jentera perlu diasingkan daripada laluan pekerja untuk meminimumkan risiko kemalangan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-074",
+    "module_page": 167,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Zon ini perlu berada di kawasan yang rata, tidak menghalang laluan utama, dan selamat daripada risiko banjir. Bahan-bahan yang sensitif kepada cuaca seperti simen perlu disimpan di dalam kontena atau di bawah kanvas kalis air. Kawasan ini perlu sentiasa kemas untuk mengelakkan pembaziran dan kemalangan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-081",
+    "module_page": 168,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Zon ini sebaik-baiknya diletakkan di kawasan yang mempunyai sedikit teduhan dan akses mudah kepada sumber air. Tanaman perlu disusun dengan teratur mengikut jenis dan saiz. Penjagaan rapi seperti siraman dan kawalan perosak perlu dijalankan secara berkala sementara tanaman menunggu untuk ditanam.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-084",
+    "module_page": 168,
+    "markers": [
+     "wajib"
+    ],
+    "text": "Sebelum sebarang kerja penandaan dimulakan, kontraktor wajib menyediakan satu Kaedah Pernyataan Kerja (KPK) yang komprehensif. Dokumen formal ini menggariskan bagaimana aktiviti penandaan akan dilaksanakan dengan selamat, teratur, dan mengikut spesifikasi.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-108",
+    "module_page": 170,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Lebih tahan lasak dan digunakan untuk penandaan yang perlu kekal untuk jangka masa lama.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-153",
+    "module_page": 173,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Reka bentuk landskap kejur seperti dinding penahan atau siar kaki mungkin perlu direka bentuk semula. Kos tambahan mungkin terlibat untuk kerja-kerja meroboh dan membuang struktur tersebut.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-162",
+    "module_page": 173,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Perubahan besar mungkin diperlukan pada reka bentuk sistem saliran landskap yang baharu untuk memastikan ia dapat disambungkan dengan berkesan dan berfungsi dengan baik.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-171",
+    "module_page": 174,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Reka bentuk elemen berhampiran air seperti dek, siar kaki, atau zon penampan (buffer zone) mungkin perlu diselaraskan untuk disesuaikan dengan keadaan sebenar dan mengelakkan masalah di masa hadapan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-190",
+    "module_page": 176,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Setiap kontraktor bertanggungjawab sepenuhnya untuk memastikan semua aktiviti tinjauan dijalankan dengan mematuhi empat tonggak utama pematuhan: Kesihatan & Keselamatan (HSE), standard peralatan, keperluan Pihak Berkuasa Tempatan (PBT), dan peraturan Badan Pengawal Selia.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-191",
+    "module_page": 176,
+    "markers": [
+     "wajib",
+     "tidak boleh"
+    ],
+    "text": "Aspek HSE adalah keutamaan yang tidak boleh dikompromi. Persekitaran tapak bina yang dinamik mendedahkan personel tinjauan kepada pelbagai bahaya. Oleh itu, langkah-langkah berikut adalah wajib:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-193",
+    "module_page": 176,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Semua individu yang berada di tapak untuk kerja tinjauan mesti dilengkapi dengan PPE yang lengkap dan bersesuaian dengan keadaan tapak. Standard minimum termasuk:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-197",
+    "module_page": 176,
+    "markers": [
+     "perlu"
+    ],
+    "text": "PPE tambahan seperti sarung tangan, pelindung mata, atau topeng pernafasan mungkin diperlukan bergantung pada penilaian risiko tapak.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-199",
+    "module_page": 176,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kerja ukur dan tinjauan mesti dilaksanakan oleh individu yang mempunyai kompetensi, iaitu Juruukur Bertauliah atau personel teknikal yang telah menerima latihan secukupnya dan diiktiraf. Individu kompeten bertanggungjawab untuk memahami metodologi tinjauan yang betul, mengendalikan peralatan dengan tepat, dan mengenal pasti potensi risiko yang berkaitan dengan kerja tersebut.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-201",
+    "module_page": 177,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Papan tanda yang memaparkan maklumat hubungan kecemasan (contoh: Ambulans, Bomba, Polis, Pejabat Tapak) dan nama serta nombor telefon Person-in-Charge (PIC) atau Penyelia Tapak adalah mandatori. Maklumat ini mesti diletakkan di lokasi yang strategik dan mudah dilihat (cth: pintu masuk tapak atau pejabat tapak) bagi membolehkan tindakan pantas sekiranya berlaku sebarang kecemasan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-204",
+    "module_page": 177,
+    "markers": [
+     "mesti",
+     "wajib"
+    ],
+    "text": "Penyelenggaraan dan Kalibrasi. Semua peralatan ukur jitu seperti Total Station, GPS/GNSS, dan Digital Level mesti diselenggara secara berkala. Lebih penting lagi, setiap peralatan wajib mempunyai sijil kalibrasi yang sah dan belum tamat tempoh.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-205",
+    "module_page": 177,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Pihak kontraktor mesti menyimpan rekod sijil-sijil ini untuk tujuan audit dan pengesahan. Penggunaan peralatan yang tidak dikalibrasi boleh menyebabkan data ukur yang salah, seterusnya membawa kepada kesilapan pembinaan yang serius.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-206",
+    "module_page": 177,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Keperluan pihak berkuasa tempatan",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-208",
+    "module_page": 177,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Sebelum memulakan kerja, kontraktor mesti memastikan semua permit dan kelulusan yang relevan telah diperolehi. Ini termasuk, tetapi tidak terhad kepada:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-212",
+    "module_page": 178,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kontraktor juga perlu mematuhi peraturan PBT berkaitan had masa bekerja, kawalan bunyi bising, dan pengurusan sisa pepejal di tapak.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-213",
+    "module_page": 178,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Keperluan badan pengawal selia",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-215",
+    "module_page": 178,
+    "markers": [
+     "hendaklah"
+    ],
+    "text": "Sebagai badan berautoriti dalam bidang ukur dan pemetaan di Malaysia, semua amalan, metodologi, dan format data tinjauan hendaklah sejajar dengan piawaian dan garis panduan yang dikeluarkan oleh JUPEM.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-219",
+    "module_page": 178,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Bandingkan tahap tinjauan di tapak dengan pelan sedia ada. Proses perbandingan ini mesti dijalankan secara terperinci dan direkodkan dalam laporan yang formal. Laporan ini menjadi rujukan utama untuk mesyuarat projek, perancangan kerja, dan sebarang tuntutan perubahan kerja (variation order).",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-223",
+    "module_page": 179,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kontraktor atau juruukur yang dilantik mesti menyemak dan mengesahkan perkara berikut bagi setiap elemen:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-231",
+    "module_page": 179,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Setiap percanggahan, walau sekecil mana pun, mesti direkodkan dengan jelas. Contohnya:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-235",
+    "module_page": 180,
+    "markers": [
+     "tidak boleh"
+    ],
+    "text": "Gambar adalah bukti visual yang tidak boleh disangkal dan merupakan komponen mandatori dalam laporan tinjauan yang profesional. Ia memberikan konteks yang tidak dapat disampaikan oleh data dan teks semata-mata.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-242",
+    "module_page": 180,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Berlabel dan Rujukan Silang: Setiap foto mesti disertakan dengan maklumat berikut:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-255",
+    "module_page": 181,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Penemuan unsur baharu mempunyai implikasi besar terhadap reka bentuk, kos, dan jadual kerja. Kontraktor mesti:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 21,
+  "statements": [
+   {
+    "row_id": "T01B01-ROW-002",
+    "module_page": 162,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk memastikan tapak binaan bersedia untuk aktiviti pembinaan landskap yang akan dijalankan. Proses ini memerlukan koordinasi yang rapi antara pengurus projek, juruukur, pekerja tapak, dan pihak berkepentingan lain.",
+    "heading_path": [
+     "PROSES MEMULA KERJA"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-004",
+    "module_page": 162,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk memastikan tapak binaan bersedia untuk aktiviti pembinaan landskap yang akan dijalankan. Proses ini memerlukan koordinasi yang rapi antara pengurus projek, juruukur, pekerja tapak, dan pihak berkepentingan lain.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-006",
+    "module_page": 162,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula. Ia menandakan permulaan rasmi operasi di tapak dan kesediaan kontraktor untuk melaksanakan projek. Aktiviti-aktiviti utama dalam mobilisasi tapak termasuk:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Mobilisasi Tapak (Site Mobilisation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-016",
+    "module_page": 163,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Setelah mobilisasi selesai, kerja penyediaan fizikal tapak dimulakan. Tujuannya adalah untuk membersihkan tapak daripada sebarang halangan dan membentuk permukaan tanah mengikut reka bentuk yang telah diluluskan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penyediaan Tapak (Site Preparation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-024",
+    "module_page": 164,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Selari dengan kerja-kerja penyediaan tapak, adalah menjadi tanggungjawab utama kontraktor untuk memelihara dan melindungi aset sedia ada di tapak yang telah dikenal pasti untuk dikekalkan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeliharaan dan Perlindungan (Preservation and Protection)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-030",
+    "module_page": 164,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pemasangan langkah-langkah kawalan proaktif seperti pagar kelodak (silt fence), gabion, atau check dam di perimeter tapak, terutamanya di kawasan cerun. Tujuannya adalah untuk menghalang larian air permukaan yang membawa tanah daripada mencemari sistem perparitan awam atau kawasan sekitar.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeliharaan dan Perlindungan (Preservation and Protection)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-032",
+    "module_page": 164,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Fasa ukur tapak dan penandaan adalah proses teknikal kritikal yang menterjemahkan pelan reka bentuk daripada lukisan 2D ke persekitaran tapak sebenar dalam 3D. Ia memastikan setiap elemen dibina pada lokasi, jajaran, dan aras ketinggian yang tepat. Sejurus selepas ukur penandaan (setting out) untuk elemen reka bentuk diselesaikan, langkah pengurusan tapak yang seterusnya dan sama pentingnya adalah melaksanakan kerja pengzonan tapak.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-101",
+    "module_page": 169,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Garisan Offset (Offset Lines): Penanda diletakkan pada jarak tertentu (cth: 1 atau 2 meter) dari garisan binaan sebenar. Ini adalah amalan terbaik kerana penanda asal tidak akan termusnah atau beralih semasa kerja-kerja penggalian.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-124",
+    "module_page": 171,
+    "markers": [
+     "ialah",
+     "bermaksud"
+    ],
+    "text": "Menulis maklumat penting pada pancang. Contoh: O/S 1.5m, FFL 30.50 bermaksud penanda ini berada 1.5 meter dari garisan sebenar dan aras lantai siap di lokasi tersebut ialah 30.50 meter.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-126",
+    "module_page": 171,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Menggunakan warna cat yang berbeza untuk fungsi berbeza, terutamanya untuk penandaan utiliti bawah tanah bagi tujuan keselamatan. Kod warna yang biasa diguna pakai ialah:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-132",
+    "module_page": 171,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sekiranya wujud unsur tidak sepadan dan unsur baharu. Proses \"memberi tanda merah\" atau red mark-up adalah satu amalan pengurusan tapak yang amat penting.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-133",
+    "module_page": 171,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Ia merujuk kepada tindakan mendokumentasikan sebarang percanggahan antara pelan reka bentuk dengan keadaan sebenar di tapak, serta merekodkan penemuan sebarang unsur baharu yang tidak ditunjukkan dalam lukisan asal.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Tinjauan Tapak & Penandaan Sempadan (Site Survey & Demarcation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-173",
+    "module_page": 174,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Penandaan Tapak, juga dikenali sebagai setting out atau pemancangan (pegging), adalah proses teknikal yang kritikal untuk memindahkan butiran-butiran daripada pelan reka bentuk ke lokasi sebenar di atas tanah. Ia merupakan jambatan antara lukisan dan realiti fizikal. Proses ini memastikan setiap elemen landskap daripada laluan pejalan kaki, dinding, sehinggalah ke titik penanaman pokok diletakkan pada kedudukan, jajaran (alignment), dan aras ketinggian yang tepat.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penandaan Tapak (Setting out / Site Pegging)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-183",
+    "module_page": 175,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Kerja dimulakan dengan merujuk kepada Titik Rujukan Utama (Benchmark atau TBM) yang telah disahkan. Dari sini, juruukur akan mewujudkan garisan asas (baseline) dan titik-titik kawalan lain di seluruh tapak.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Penandaan Tapak (Setting out / Site Pegging)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-191",
+    "module_page": 176,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Aspek HSE adalah keutamaan yang tidak boleh dikompromi. Persekitaran tapak bina yang dinamik mendedahkan personel tinjauan kepada pelbagai bahaya. Oleh itu, langkah-langkah berikut adalah wajib:",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-201",
+    "module_page": 177,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Papan tanda yang memaparkan maklumat hubungan kecemasan (contoh: Ambulans, Bomba, Polis, Pejabat Tapak) dan nama serta nombor telefon Person-in-Charge (PIC) atau Penyelia Tapak adalah mandatori. Maklumat ini mesti diletakkan di lokasi yang strategik dan mudah dilihat (cth: pintu masuk tapak atau pejabat tapak) bagi membolehkan tindakan pantas sekiranya berlaku sebarang kecemasan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-203",
+    "module_page": 177,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ketepatan data yang dikumpul adalah bergantung sepenuhnya kepada keadaan peralatan yang digunakan.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-207",
+    "module_page": 177,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Setiap projek adalah tertakluk kepada bidang kuasa dan undang-undang kecil yang ditetapkan oleh PBT (contoh: Majlis Bandaraya, Majlis Perbandaran, atau Majlis Daerah) di lokasi projek tersebut.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-217",
+    "module_page": 178,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Aktiviti di tapak bina adalah tertakluk di bawah Akta Keselamatan dan Kesihatan Pekerjaan 1994 (Akta 514). Kontraktor mempunyai tanggungjawab di sisi undang-undang untuk memastikan persekitaran kerja yang selamat. Ini termasuk menjalankan penilaian risiko (risk assessment), menyediakan kaedah kerja selamat (safe work method statement), dan melaporkan sebarang kemalangan kepada JKKP.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-221",
+    "module_page": 179,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tugas pertama dalam tinjauan perbandingan adalah untuk mengesahkan setiap elemen yang ditunjukkan pada pelan reka bentuk. Ini adalah proses semakan untuk memastikan \"apa yang dilukis adalah apa yang wujud.\"",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-235",
+    "module_page": 180,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Gambar adalah bukti visual yang tidak boleh disangkal dan merupakan komponen mandatori dalam laporan tinjauan yang profesional. Ia memberikan konteks yang tidak dapat disampaikan oleh data dan teks semata-mata.",
+    "heading_path": [
+     "PROSES MEMULA KERJA",
+     "Penyediaan Tapak",
+     "Pemeriksaan Tapak & Pengesahan Kerja Mengukur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 56,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "source_attested": 0,
+  "subjects": [],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 3,
+  "terms": [
+   {
+    "row_id": "T01B01-ROW-005",
+    "term": "Mobilisasi Tapak (Site Mobilisation)",
+    "module_page": 162,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-015",
+    "term": "Penyediaan Tapak (Site Preparation)",
+    "module_page": 163,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B01-ROW-172",
+    "term": "Penandaan Tapak (Setting out / Site Pegging)",
+    "module_page": 174,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T01-B01",
+  "rows": 258,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   162,
+   181
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 225,
+  "carried_forward_rows": 33,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

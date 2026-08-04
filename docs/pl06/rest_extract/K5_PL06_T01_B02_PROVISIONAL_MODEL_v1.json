@@ -1,0 +1,575 @@
+{
+ "unit_id": "K5-PL06-T01-B02",
+ "lesson_title": "Jadual Kerja dan Perlaksanaan Pembinaan Landskap",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 6,
+  "tree": [
+   {
+    "row_id": "T01B02-ROW-001",
+    "level": 2,
+    "text": "Jadual Kerja",
+    "module_page": 181,
+    "heading_path": [
+     "Jadual Kerja"
+    ]
+   },
+   {
+    "row_id": "T01B02-ROW-035",
+    "level": 2,
+    "text": "Perlaksanaan Pembinaan Landskap",
+    "module_page": 184,
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap"
+    ]
+   },
+   {
+    "row_id": "T01B02-ROW-036",
+    "level": 3,
+    "text": "Penyerahan dan kelulusan bahan landskap",
+    "module_page": 184,
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Penyerahan dan kelulusan bahan landskap"
+    ]
+   },
+   {
+    "row_id": "T01B02-ROW-046",
+    "level": 3,
+    "text": "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur",
+    "module_page": 185,
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur"
+    ]
+   },
+   {
+    "row_id": "T01B02-ROW-068",
+    "level": 3,
+    "text": "Kerja-Kerja Penanaman (Planting Works)",
+    "module_page": 186,
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Kerja-Kerja Penanaman (Planting Works)"
+    ]
+   },
+   {
+    "row_id": "T01B02-ROW-086",
+    "level": 3,
+    "text": "Pemeriksaan Tapak dan Pengesahan",
+    "module_page": 187,
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pemeriksaan Tapak dan Pengesahan"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Jadual Kerja",
+    "row_id": "T01B02-ROW-001",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Perlaksanaan Pembinaan Landskap",
+    "row_id": "T01B02-ROW-035",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Jadual Kerja",
+   "G2: Perlaksanaan Pembinaan Landskap",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 2,
+   "closing_screens": 3,
+   "minimum_total_screens": 7,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Jadual Kerja",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Perlaksanaan Pembinaan Landskap",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 7,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 17,
+  "propositions": [
+   {
+    "row_id": "T01B02-ROW-009",
+    "module_page": 181,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Membincangkan skop, keperluan, dan saluran komunikasi.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-011",
+    "module_page": 182,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Klien dan kontraktor memeriksa keadaan semasa tapak bersama-sama. Sebarang kecacatan atau keadaan sedia ada yang luar biasa mesti direkodkan dalam borang serahan tapak.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-015",
+    "module_page": 182,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Tarikh Siap adalah tarikh akhir yang ditetapkan di dalam dokumen kontrak di mana semua skop kerja mesti disiapkan sepenuhnya dan tapak sedia untuk diserahkan kembali kepada Klien.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-017",
+    "module_page": 182,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Semua perancangan, penjadualan, dan mobilisasi sumber mesti menjurus ke arah mencapai sasaran tarikh ini.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-024",
+    "module_page": 183,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Ini merujuk kepada semua unsur fizikal sedia ada di permukaan tanah yang perlu diuruskan, seperti pokok matang untuk dipelihara, bangunan sedia ada, longkang, batu sempadan, atau struktur lain.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-025",
+    "module_page": 183,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Implikasi kepada Jadual: Jadual kerja mesti memperuntukkan masa dan aktiviti khusus untuk elemen ini pada peringkat awal projek. Contohnya:",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-031",
+    "module_page": 183,
+    "markers": [
+     "wajib"
+    ],
+    "text": "Implikasi kepada Jadual: Jadual kerja yang profesional wajib mempunyai satu fasa khusus untuk \"Pengesahan Utiliti Bawah Tanah\" sejurus selepas pengambilan tapak. Fasa ini termasuk:",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-034",
+    "module_page": 183,
+    "markers": [
+     "tidak boleh"
+    ],
+    "text": "Kerja-kerja pengorekan besar-besaran untuk tapak semaian, sistem pengairan, atau struktur binaan landskap tidak boleh dimulakan sehinggalah fasa pengesahan ini selesai dan semua lokasi utiliti telah ditanda dengan jelas di tapak. Melanggar prinsip ini boleh mengakibatkan kemalangan, kerosakan utiliti awam, dan pemberhentian kerja yang memakan masa berminggu-minggu.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-040",
+    "module_page": 184,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kontraktor perlu mengemukakan Borang Penyerahan Bahan yang lengkap dengan sampel fizikal katalog teknikal, atau sijil ujian. Contoh bahan termasuk:",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Penyerahan dan kelulusan bahan landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-044",
+    "module_page": 184,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kelulusan atau Penolakan: Kelulusan akan diberikan secara bertulis. Jika ditolak, sebab penolakan akan dinyatakan dan kontraktor perlu mengemukakan semula bahan alternatif.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Penyerahan dan kelulusan bahan landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-061",
+    "module_page": 186,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Sebelum sebarang kerja penggalian, lokasi, jajaran (alignment), dan aras ketinggian bagi setiap elemen mesti ditanda dengan tepat di tapak oleh Juruukur Bertauliah berdasarkan Lukisan Pembinaan (Construction Drawings) yang telah diluluskan.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-063",
+    "module_page": 186,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Semua bahan yang digunakan dan kaedah pembinaan mestilah mematuhi spesifikasi teknikal yang ditetapkan dalam kontrak.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-065",
+    "module_page": 186,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Hasil kerja mestilah kemas, teliti, dan mengikut amalan kejuruteraan terbaik, terutamanya dari segi kemasan permukaan, sambungan, dan kekukuhan struktur.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-067",
+    "module_page": 186,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kontraktor mesti memaklumkan Pegawai Penguasa (S.O.) untuk menjalankan pemeriksaan pada peringkat-peringkat kritikal (contoh: sebelum kerja penutupan formwork atau tuangan konkrit) untuk mendapatkan kelulusan sebelum meneruskan kerja.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-080",
+    "module_page": 187,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Saiz lubang penanaman mestilah mengikut spesifikasi (biasanya 2 kali ganda saiz bebola akar) untuk memastikan perkembangan akar yang sihat.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Kerja-Kerja Penanaman (Planting Works)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-092",
+    "module_page": 188,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Setelah satu bahagian kerja disiapkan, kontraktor perlu menghantar borang permohonan pemeriksaan secara rasmi kepada pihak S.O.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pemeriksaan Tapak dan Pengesahan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-096",
+    "module_page": 188,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Jika terdapat kerja yang tidak memuaskan, pihak S.O. akan mengeluarkan satu senarai kecacatan rasmi. Senarai ini memperincikan lokasi, jenis kecacatan, dan tindakan pembetulan yang diperlukan.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pemeriksaan Tapak dan Pengesahan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 9,
+  "statements": [
+   {
+    "row_id": "T01B02-ROW-002",
+    "module_page": 181,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Perancangan jadual kerja adalah seperti berikut:",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-004",
+    "module_page": 181,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor. Ia menandakan titik permulaan bagi semua aktiviti pembinaan dan tempoh kontrak.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-015",
+    "module_page": 182,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tarikh Siap adalah tarikh akhir yang ditetapkan di dalam dokumen kontrak di mana semua skop kerja mesti disiapkan sepenuhnya dan tapak sedia untuk diserahkan kembali kepada Klien.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-019",
+    "module_page": 182,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Kegagalan untuk menyiapkan projek menjelang Tarikh Siap akan membolehkan Klien mengenakan Denda Lewat Siap dan Ganti Rugi (LAD - Liquidated Ascertained Damages). LAD adalah kos penalti harian yang telah dipersetujui di dalam kontrak.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-024",
+    "module_page": 183,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Ini merujuk kepada semua unsur fizikal sedia ada di permukaan tanah yang perlu diuruskan, seperti pokok matang untuk dipelihara, bangunan sedia ada, longkang, batu sempadan, atau struktur lain.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-030",
+    "module_page": 183,
+    "markers": [
+     "adalah",
+     "merujuk kepada"
+    ],
+    "text": "Ini adalah risiko terbesar dan paling kerap menyebabkan kelewatan besar. Ia merujuk kepada utiliti tersembunyi seperti kabel elektrik, paip air, saluran pembetungan, atau kabel gentian optik.",
+    "heading_path": [
+     "Jadual Kerja"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-038",
+    "module_page": 184,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Proses ini bertujuan untuk memastikan semua bahan yang akan digunakan sama ada elemen landskap kejur atau lembut mematuhi kualiti, jenama, saiz, dan spesifikasi yang ditetapkan di dalam Dokumen Kontrak dan Bill of Quantities (BQ). Proses kerja adalah seperti berikut:",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Penyerahan dan kelulusan bahan landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-047",
+    "module_page": 185,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Landskap kejur adalah elemen-elemen bukan hidup yang membentuk struktur, fungsi, dan tulang belakang kepada keseluruhan reka bentuk landskap. Kualiti pembinaan pada peringkat ini adalah kritikal kerana ia merupakan elemen kekal yang sukar diubah atau dibaiki pada masa hadapan.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Pembinaan / Pemasangan Infrastruktur & Landskap Kejur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B02-ROW-069",
+    "module_page": 186,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Kerja-kerja penanaman atau landskap lembut adalah proses memasukkan elemen-elemen hortikultur yang memberikan nilai estetik, ekologi, dan kehidupan kepada landskap. Kesihatan dan kesuburan tumbuhan dalam jangka masa panjang amat bergantung pada teknik penanaman yang betul.",
+    "heading_path": [
+     "Perlaksanaan Pembinaan Landskap",
+     "Kerja-Kerja Penanaman (Planting Works)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 26,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "source_attested": 0,
+  "subjects": [],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 1,
+  "terms": [
+   {
+    "row_id": "T01B02-ROW-068",
+    "term": "Kerja-Kerja Penanaman (Planting Works)",
+    "module_page": 186,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T01-B02",
+  "rows": 100,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   181,
+   188
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 96,
+  "carried_forward_rows": 4,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

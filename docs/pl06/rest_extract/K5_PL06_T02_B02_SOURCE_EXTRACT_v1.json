@@ -1,0 +1,3429 @@
+{
+ "extract": "T02B02_SOURCE_EXTRACT",
+ "version": "v1",
+ "stage": "4.2F-C",
+ "unit_id": "K5-PL06-T02-B02",
+ "lesson_title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+ "topik": 2,
+ "bahagian": 2,
+ "authority_inherited": "SRC-AUTH-01",
+ "boundary": {
+  "raw_start_anchor": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+  "raw_stop_anchor": "KOMPONEN LANDSKAP",
+  "frozen_start_paragraph": 4340,
+  "frozen_stop_paragraph": 4463,
+  "module_pages": [
+   215,
+   225
+  ],
+  "subtopics": "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+  "shared_start": true,
+  "shared_end": false,
+  "preceding_unit": "K5-PL06-T02-B01",
+  "following_unit": "K5-PL06-T03-B01",
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE",
+  "anchor_search": {
+   "start_anchor": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+   "start_hits": [
+    4340
+   ],
+   "stop_anchor": "KOMPONEN LANDSKAP",
+   "stop_hits": [
+    4463
+   ],
+   "frozen_start": 4340,
+   "frozen_stop": 4463,
+   "frozen_start_is_a_hit": true,
+   "frozen_stop_is_a_hit": true,
+   "start_hit_count": 1,
+   "stop_hit_count": 1,
+   "note": "A heading string can appear in the table of contents as well as the body. The frozen index selects which occurrence is the section start, and every occurrence is listed so a second body match cannot pass unnoticed."
+  },
+  "paragraph_enumeration": {
+   "body_child_paragraph_count": 6167,
+   "all_paragraph_count": 7481,
+   "enumeration_used": "DIRECT_W_P_CHILDREN_OF_W_BODY (python-docx Document.paragraphs)",
+   "start_index": 4340,
+   "stop_index": 4463,
+   "span": 123,
+   "alternate_enumeration": {
+    "name": "EVERY_W_P_IN_BODY_INCLUDING_TABLE_CELLS",
+    "start_index": 5334,
+    "note": "Recorded because the two enumerations differ and mixing them silently would move every boundary in the project."
+   }
+  }
+ },
+ "docx_probe": {
+  "filename": "[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+  "bytes": 16832861,
+  "sha256": "5a9142cdfa1a8090c2075e78caf45609438844daeac88e331bed3069a6a78df7",
+  "identity_matches_expected": true,
+  "retrieval": "FREEZE_PACKAGE_ZIP_MEMBER"
+ },
+ "page_attribution": {
+  "available": true,
+  "method": "typeset PDF page whose footer names the module page",
+  "authority": "TYPESET_ARTIFACT_HASH_VERIFIED",
+  "resolved_rows": 64,
+  "carried_forward_rows": 26,
+  "carried_forward_row_ids": [
+   "T02B02-ROW-005",
+   "T02B02-ROW-009",
+   "T02B02-ROW-011",
+   "T02B02-ROW-013",
+   "T02B02-ROW-016",
+   "T02B02-ROW-020",
+   "T02B02-ROW-024",
+   "T02B02-ROW-027",
+   "T02B02-ROW-028",
+   "T02B02-ROW-036",
+   "T02B02-ROW-040",
+   "T02B02-ROW-044"
+  ],
+  "first_page": 215,
+  "last_page": 225,
+  "distinct_pages": [
+   215,
+   216,
+   217,
+   218,
+   219,
+   220,
+   221,
+   222,
+   223,
+   224,
+   225
+  ],
+  "expected": [
+   215,
+   225
+  ],
+  "matches_frozen_map": true,
+  "note": "Rows whose text could not be located — headings that Word numbers, captionless figures, empty table rows — carry the previous row's page and say so, rather than being silently assigned one."
+ },
+ "page_attribution_primary": "TYPESET_PDF",
+ "page_attribution_secondary": {
+  "method": "w:lastRenderedPageBreak plus explicit w:br type=page",
+  "authority": "ADVISORY_CACHED_LAYOUT",
+  "page_break_markers": 12,
+  "first_page": 214,
+  "last_page": 226,
+  "distinct_pages": [
+   214,
+   215,
+   216,
+   218,
+   219,
+   220,
+   221,
+   222,
+   223,
+   224,
+   225,
+   226
+  ],
+  "expected": [
+   215,
+   225
+  ],
+  "matches_frozen_map": false,
+  "caveat": "Word's cached layout, not a typeset guarantee. Corroboration, not authority."
+ },
+ "page_attribution_divergence": {
+  "cached_layout_range": [
+   214,
+   226
+  ],
+  "typeset_range": [
+   215,
+   225
+  ],
+  "frozen_map_range": [
+   215,
+   225
+  ],
+  "cached_layout_agrees_with_frozen": false,
+  "typeset_agrees_with_frozen": true,
+  "note": "Two independent readings are kept. Where they disagree the typeset PDF governs, because it is what a reader actually holds; Word's cached layout is advisory and was wrong on every unit in this batch."
+ },
+ "boundary_proof": {
+  "neighbour_window": 6,
+  "excluded_before": [
+   {
+    "body_paragraph_index": 4334,
+    "segment_kind": "PARAGRAPH",
+    "style": "ListParagraph",
+    "text": "Heliconia (Heliconia sp.)",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4335,
+    "segment_kind": "PARAGRAPH",
+    "style": "ListParagraph",
+    "text": "Canna Lily (Canna indica)",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4336,
+    "segment_kind": "PARAGRAPH",
+    "style": "ListParagraph",
+    "text": "Spider Lily (Hymenocallis littoralis)",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4337,
+    "segment_kind": "PARAGRAPH",
+    "style": "ListParagraph",
+    "text": "Turnera / Bunga Pukul Lapan (Turnera ulmifolia)",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4338,
+    "segment_kind": "PARAGRAPH",
+    "style": "ListParagraph",
+    "text": "Mexican Petunia (Ruellia simplex)",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4339,
+    "segment_kind": "PARAGRAPH",
+    "style": null,
+    "text": "",
+    "module_page": null
+   }
+  ],
+  "excluded_after": [
+   {
+    "body_paragraph_index": 4463,
+    "segment_kind": "PARAGRAPH",
+    "style": "Heading1",
+    "text": "KOMPONEN LANDSKAP",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4464,
+    "segment_kind": "PARAGRAPH",
+    "style": "Heading2",
+    "text": "Kawasan Berturap / Paved Areas",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4465,
+    "segment_kind": "PARAGRAPH",
+    "style": null,
+    "text": "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan. Ini termasuk laluan, da",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4466,
+    "segment_kind": "PARAGRAPH",
+    "style": null,
+    "text": "",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4467,
+    "segment_kind": "PARAGRAPH",
+    "style": null,
+    "text": "Kepentingan Kawasan Berturap dalam Landskap",
+    "module_page": null
+   },
+   {
+    "body_paragraph_index": 4468,
+    "segment_kind": "PARAGRAPH",
+    "style": "ListParagraph",
+    "text": "Meningkatkan aksesibiliti dan aliran pergerakan",
+    "module_page": null
+   }
+  ],
+  "included_first": {
+   "body_paragraph_index": 4340,
+   "segment_kind": "PARAGRAPH",
+   "style": "Heading2",
+   "text": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+   "module_page": 214
+  },
+  "body_children_in_span": 133,
+  "first_included_paragraph_index": 4340,
+  "last_included_paragraph_index": 4462,
+  "span_bound_basis": "body PARAGRAPH indices — the slice is over body children, which include tables, so len(seg) is not a paragraph count",
+  "excluded_before_indices": [
+   4334,
+   4335,
+   4336,
+   4337,
+   4338,
+   4339
+  ],
+  "excluded_after_indices": [
+   4463,
+   4464,
+   4465,
+   4466,
+   4467,
+   4468
+  ]
+ },
+ "totals": {
+  "body_elements_in_span": 133,
+  "empty_spacing_paragraphs": 43,
+  "content_rows": 90,
+  "headings": 12,
+  "paragraphs": 50,
+  "numbered_paragraphs": 14,
+  "list_item_rows": 14,
+  "tables": 10,
+  "diagrams": 0,
+  "raster_images": 4,
+  "assets": 4
+ },
+ "rows": [
+  {
+   "row_id": "T02B02-ROW-001",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 1,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+   ],
+   "content_type": "HEADING_2",
+   "raw_source_text": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+   "controlled_display_text": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+   "source_paragraph_start": 4340,
+   "source_paragraph_end": 4340,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 0,
+   "list_level": null,
+   "paragraph_style": "Heading2",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-002",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 2,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi. Ini termasuk perancangan dan pelaksanaan sistem yang cekap dan selamat.",
+   "controlled_display_text": "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi. Ini termasuk perancangan dan pelaksanaan sistem yang cekap dan selamat.",
+   "source_paragraph_start": 4341,
+   "source_paragraph_end": 4341,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 1,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-003",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 3,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Pencahayaan (Lighting)",
+   "controlled_display_text": "Pencahayaan (Lighting)",
+   "source_paragraph_start": 4343,
+   "source_paragraph_end": 4343,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 3,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-004",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 4,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang. Mempelajari jenis-jenis lampu luaran (contohnya, lampu sorot, lampu laluan, lampu aksen, lampu bawah air), teknik pendawaian yang betul, pengiraan beban elektrik, dan penempatan strategik untuk mencapai kesan yang dikehendaki. Aspek keselamatan seperti kalis air (IP rating) dan perlindungan litar pintas juga akan ditekankan.",
+   "controlled_display_text": "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang. Mempelajari jenis-jenis lampu luaran (contohnya, lampu sorot, lampu laluan, lampu aksen, lampu bawah air), teknik pendawaian yang betul, pengiraan beban elektrik, dan penempatan strategik untuk mencapai kesan yang dikehendaki. Aspek keselamatan seperti kalis air (IP rating) dan perlindungan litar pintas juga akan ditekankan.",
+   "source_paragraph_start": 4344,
+   "source_paragraph_end": 4344,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 4,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-005",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 5,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4346,
+   "source_paragraph_end": 4346,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 6,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-006",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 6,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Memberi pencahayaan waktu malam",
+   "controlled_display_text": "Memberi pencahayaan waktu malam",
+   "source_paragraph_start": 4347,
+   "source_paragraph_end": 4347,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 7,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-007",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 7,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Meningkatkan keselamatan dan navigasi",
+   "controlled_display_text": "Meningkatkan keselamatan dan navigasi",
+   "source_paragraph_start": 4348,
+   "source_paragraph_end": 4348,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 8,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-008",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 8,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menonjolkan elemen landskap seperti pokok atau air pancut",
+   "controlled_display_text": "Menonjolkan elemen landskap seperti pokok atau air pancut",
+   "source_paragraph_start": 4349,
+   "source_paragraph_end": 4349,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 9,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-009",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 9,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4351,
+   "source_paragraph_end": 4351,
+   "module_page": 215,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 11,
+   "list_level": null,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-010",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 10,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 216,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-01",
+   "external_claim_status": "NONE",
+   "segment_index": 12,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-011",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 11,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Pengairan",
+   "controlled_display_text": "Pengairan",
+   "source_paragraph_start": 4353,
+   "source_paragraph_end": 4353,
+   "module_page": 216,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 14,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-012",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 12,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering. Meneroka pelbagai jenis sistem pengairan (contohnya, sistem semburan, titisan), pemilihan pam air yang sesuai, reka bentuk paip, zon pengairan, dan pemasangan pengawal (controller) atau pemasa. Penekanan diberikan kepada kecekapan penggunaan air dan mengurangkan pembaziran.",
+   "controlled_display_text": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering. Meneroka pelbagai jenis sistem pengairan (contohnya, sistem semburan, titisan), pemilihan pam air yang sesuai, reka bentuk paip, zon pengairan, dan pemasangan pengawal (controller) atau pemasa. Penekanan diberikan kepada kecekapan penggunaan air dan mengurangkan pembaziran.",
+   "source_paragraph_start": 4354,
+   "source_paragraph_end": 4354,
+   "module_page": 217,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 15,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-013",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 13,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4356,
+   "source_paragraph_end": 4356,
+   "module_page": 217,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 17,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-014",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 14,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menyiram tumbuhan secara automatik dan cekap",
+   "controlled_display_text": "Menyiram tumbuhan secara automatik dan cekap",
+   "source_paragraph_start": 4357,
+   "source_paragraph_end": 4357,
+   "module_page": 217,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 18,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-015",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 15,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menjimatkan air dan masa",
+   "controlled_display_text": "Menjimatkan air dan masa",
+   "source_paragraph_start": 4358,
+   "source_paragraph_end": 4358,
+   "module_page": 217,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 19,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-016",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 16,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4360,
+   "source_paragraph_end": 4360,
+   "module_page": 217,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 21,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-017",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 17,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 217,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-02",
+   "external_claim_status": "NONE",
+   "segment_index": 22,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-018",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 18,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Kolam (Fountain)",
+   "controlled_display_text": "Kolam (Fountain)",
+   "source_paragraph_start": 4361,
+   "source_paragraph_end": 4361,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 23,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-019",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 19,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut. Pengetahuan tentang kualiti air, penyelenggaraan, dan isu-isu berkaitan alga juga akan dibincangkan.",
+   "controlled_display_text": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut. Pengetahuan tentang kualiti air, penyelenggaraan, dan isu-isu berkaitan alga juga akan dibincangkan.",
+   "source_paragraph_start": 4362,
+   "source_paragraph_end": 4362,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 24,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-020",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 20,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4364,
+   "source_paragraph_end": 4364,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 26,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-021",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 21,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Elemen tarikan utama (focal point)",
+   "controlled_display_text": "Elemen tarikan utama (focal point)",
+   "source_paragraph_start": 4365,
+   "source_paragraph_end": 4365,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 27,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-022",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 22,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menyejukkan mikroklimat",
+   "controlled_display_text": "Menyejukkan mikroklimat",
+   "source_paragraph_start": 4366,
+   "source_paragraph_end": 4366,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 28,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-023",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 23,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Elemen relaksasi bunyi air",
+   "controlled_display_text": "Elemen relaksasi bunyi air",
+   "source_paragraph_start": 4367,
+   "source_paragraph_end": 4367,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 29,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-024",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 24,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4369,
+   "source_paragraph_end": 4369,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 31,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-025",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 25,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-03",
+   "external_claim_status": "NONE",
+   "segment_index": 32,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-026",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 26,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Sistem sokongan:",
+   "controlled_display_text": "Sistem sokongan:",
+   "source_paragraph_start": 4371,
+   "source_paragraph_end": 4371,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 34,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-027",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 27,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Pam air",
+   "controlled_display_text": "Pam air",
+   "source_paragraph_start": 4372,
+   "source_paragraph_end": 4372,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 35,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-028",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 28,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Penapis",
+   "controlled_display_text": "Penapis",
+   "source_paragraph_start": 4373,
+   "source_paragraph_end": 4373,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 36,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-029",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 29,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Tangki simpanan air",
+   "controlled_display_text": "Tangki simpanan air",
+   "source_paragraph_start": 4374,
+   "source_paragraph_end": 4374,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 37,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-030",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 30,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Saluran masuk dan keluar air",
+   "controlled_display_text": "Saluran masuk dan keluar air",
+   "source_paragraph_start": 4375,
+   "source_paragraph_end": 4375,
+   "module_page": 218,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 38,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-031",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 31,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kerja-kerja berkaitan dengan Infrastuktur"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Kerja-kerja berkaitan dengan Infrastuktur",
+   "controlled_display_text": "Kerja-kerja berkaitan dengan Infrastuktur",
+   "source_paragraph_start": 4377,
+   "source_paragraph_end": 4377,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 40,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-032",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 32,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kerja-kerja berkaitan dengan Infrastuktur"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Kerja-kerja infrastruktur melibatkan pembentukan struktur asas dan elemen bukan hidup dalam landskap untuk menyokong fungsi dan estetika keseluruhan.",
+   "controlled_display_text": "Kerja-kerja infrastruktur melibatkan pembentukan struktur asas dan elemen bukan hidup dalam landskap untuk menyokong fungsi dan estetika keseluruhan.",
+   "source_paragraph_start": 4378,
+   "source_paragraph_end": 4378,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 41,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-033",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 33,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Landform (Earthmound)",
+   "controlled_display_text": "Landform (Earthmound)",
+   "source_paragraph_start": 4380,
+   "source_paragraph_end": 4380,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 43,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-034",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 34,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang. Teknik pembentukan bukit-bukit kecil (earthmound) atau perubahan kontur tanah untuk tujuan estetik, kawalan saliran air, atau penciptaan ruang yang berbeza. Ini melibatkan pengiraan isipadu tanah, teknik pemadatan, dan penggredan yang betul.",
+   "controlled_display_text": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang. Teknik pembentukan bukit-bukit kecil (earthmound) atau perubahan kontur tanah untuk tujuan estetik, kawalan saliran air, atau penciptaan ruang yang berbeza. Ini melibatkan pengiraan isipadu tanah, teknik pemadatan, dan penggredan yang betul.",
+   "source_paragraph_start": 4381,
+   "source_paragraph_end": 4381,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 44,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-035",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 35,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "IMAGE",
+   "raw_source_text": "Rajah 17: Contoh Landform dalam Landskap",
+   "controlled_display_text": "Rajah 17: Contoh Landform dalam Landskap",
+   "source_paragraph_start": 4383,
+   "source_paragraph_end": 4383,
+   "module_page": 219,
+   "docx_relationship_id": "rId36",
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": "T02B02-IMG-01",
+   "table_relationship": null,
+   "external_claim_status": "NONE",
+   "segment_index": 46,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-036",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 36,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4385,
+   "source_paragraph_end": 4385,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 48,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-037",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 37,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Membentuk kontur tanah",
+   "controlled_display_text": "Membentuk kontur tanah",
+   "source_paragraph_start": 4386,
+   "source_paragraph_end": 4386,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 49,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-038",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 38,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menambah variasi visual & akustik",
+   "controlled_display_text": "Menambah variasi visual & akustik",
+   "source_paragraph_start": 4387,
+   "source_paragraph_end": 4387,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 50,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-039",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 39,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Bertindak sebagai penampan bunyi dan pandangan",
+   "controlled_display_text": "Bertindak sebagai penampan bunyi dan pandangan",
+   "source_paragraph_start": 4388,
+   "source_paragraph_end": 4388,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 51,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-040",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 40,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4390,
+   "source_paragraph_end": 4390,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 53,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-041",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 41,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 219,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-04",
+   "external_claim_status": "NONE",
+   "segment_index": 54,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-042",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 42,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Swale/dry river bed",
+   "controlled_display_text": "Swale/dry river bed",
+   "source_paragraph_start": 4392,
+   "source_paragraph_end": 4392,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 56,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-043",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 43,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Pembinaan saliran cetek (swale) atau aliran sungai kering (dry river bed) adalah penting untuk pengurusan air hujan dan saliran.",
+   "controlled_display_text": "Pembinaan saliran cetek (swale) atau aliran sungai kering (dry river bed) adalah penting untuk pengurusan air hujan dan saliran.",
+   "source_paragraph_start": 4393,
+   "source_paragraph_end": 4393,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 57,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-044",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 44,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4395,
+   "source_paragraph_end": 4395,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 59,
+   "list_level": null,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-045",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 45,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Mengalirkan air hujan secara semulajadi",
+   "controlled_display_text": "Mengalirkan air hujan secara semulajadi",
+   "source_paragraph_start": 4396,
+   "source_paragraph_end": 4396,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 60,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-046",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 46,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Kawalan hakisan & banjir",
+   "controlled_display_text": "Kawalan hakisan & banjir",
+   "source_paragraph_start": 4397,
+   "source_paragraph_end": 4397,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 61,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-047",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 47,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Elemen estetika berunsur semula jadi",
+   "controlled_display_text": "Elemen estetika berunsur semula jadi",
+   "source_paragraph_start": 4398,
+   "source_paragraph_end": 4398,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 62,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-048",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 48,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4405,
+   "source_paragraph_end": 4405,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 69,
+   "list_level": null,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-049",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 49,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-05",
+   "external_claim_status": "NONE",
+   "segment_index": 70,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-050",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 50,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Sub-soil drainage",
+   "controlled_display_text": "Sub-soil drainage",
+   "source_paragraph_start": 4407,
+   "source_paragraph_end": 4407,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 72,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-051",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 51,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
+   "controlled_display_text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
+   "source_paragraph_start": 4408,
+   "source_paragraph_end": 4408,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 73,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-052",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 52,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4410,
+   "source_paragraph_end": 4410,
+   "module_page": 220,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 75,
+   "list_level": null,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-053",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 53,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Mengelakkan takungan air bawah tanah",
+   "controlled_display_text": "Mengelakkan takungan air bawah tanah",
+   "source_paragraph_start": 4411,
+   "source_paragraph_end": 4411,
+   "module_page": 221,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 76,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-054",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 54,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Memastikan akar tumbuhan tidak reput",
+   "controlled_display_text": "Memastikan akar tumbuhan tidak reput",
+   "source_paragraph_start": 4412,
+   "source_paragraph_end": 4412,
+   "module_page": 221,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 77,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-055",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 55,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4414,
+   "source_paragraph_end": 4414,
+   "module_page": 221,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 79,
+   "list_level": null,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-056",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 56,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 221,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-06",
+   "external_claim_status": "NONE",
+   "segment_index": 80,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-057",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 57,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Retaining Wall",
+   "controlled_display_text": "Retaining Wall",
+   "source_paragraph_start": 4416,
+   "source_paragraph_end": 4416,
+   "module_page": 221,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 82,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-058",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 58,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah. Pembinaan tembok untuk menahan tanah dan mencegah hakisan di kawasan yang mempunyai perbezaan aras tanah. Jenis bahan yang digunakan (batu, konkrit, kayu), asas yang betul, dan sistem saliran di belakang tembok adalah aspek penting yang akan dipelajari.",
+   "controlled_display_text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah. Pembinaan tembok untuk menahan tanah dan mencegah hakisan di kawasan yang mempunyai perbezaan aras tanah. Jenis bahan yang digunakan (batu, konkrit, kayu), asas yang betul, dan sistem saliran di belakang tembok adalah aspek penting yang akan dipelajari.",
+   "source_paragraph_start": 4417,
+   "source_paragraph_end": 4417,
+   "module_page": 221,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 83,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-059",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 59,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "IMAGE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": 4418,
+   "source_paragraph_end": 4418,
+   "module_page": 221,
+   "docx_relationship_id": "rId37",
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": "T02B02-IMG-02",
+   "table_relationship": null,
+   "external_claim_status": "NONE",
+   "segment_index": 84,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-060",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 60,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Rajah 18: Contoh Tembok Penahanan Hiasan",
+   "controlled_display_text": "Rajah 18: Contoh Tembok Penahanan Hiasan",
+   "source_paragraph_start": 4419,
+   "source_paragraph_end": 4419,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 85,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-061",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 61,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4420,
+   "source_paragraph_end": 4420,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 86,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-062",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 62,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menahan cerun atau tebing",
+   "controlled_display_text": "Menahan cerun atau tebing",
+   "source_paragraph_start": 4421,
+   "source_paragraph_end": 4421,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 87,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-063",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 63,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Mengelakkan hakisan atau runtuhan",
+   "controlled_display_text": "Mengelakkan hakisan atau runtuhan",
+   "source_paragraph_start": 4422,
+   "source_paragraph_end": 4422,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 88,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-064",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 64,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4424,
+   "source_paragraph_end": 4424,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 90,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-065",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 65,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-07",
+   "external_claim_status": "NONE",
+   "segment_index": 91,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-066",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 66,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Pagar (Fencing)",
+   "controlled_display_text": "Pagar (Fencing)",
+   "source_paragraph_start": 4426,
+   "source_paragraph_end": 4426,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 93,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-067",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 67,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Pagar berfungsi untuk menyediakan keselamatan, privasi, dan menetapkan sempadan. Ia merangkumi pelbagai jenis seperti pagar kayu, dawai, logam, dan pagar hidup. Perbincangan juga meliputi teknik pemasangan tiang, pintu pagar, serta aspek penyelenggaraan",
+   "controlled_display_text": "Pagar berfungsi untuk menyediakan keselamatan, privasi, dan menetapkan sempadan. Ia merangkumi pelbagai jenis seperti pagar kayu, dawai, logam, dan pagar hidup. Perbincangan juga meliputi teknik pemasangan tiang, pintu pagar, serta aspek penyelenggaraan",
+   "source_paragraph_start": 4427,
+   "source_paragraph_end": 4427,
+   "module_page": 222,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 94,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-068",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 68,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "IMAGE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": 4428,
+   "source_paragraph_end": 4428,
+   "module_page": 222,
+   "docx_relationship_id": "rId38",
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": "T02B02-IMG-03",
+   "table_relationship": null,
+   "external_claim_status": "NONE",
+   "segment_index": 95,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-069",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 69,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Rajah 19: Contoh Pagar Kayu",
+   "controlled_display_text": "Rajah 19: Contoh Pagar Kayu",
+   "source_paragraph_start": 4429,
+   "source_paragraph_end": 4429,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 96,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-070",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 70,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4432,
+   "source_paragraph_end": 4432,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 99,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-071",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 71,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Kawalan keselamatan dan sempadan",
+   "controlled_display_text": "Kawalan keselamatan dan sempadan",
+   "source_paragraph_start": 4433,
+   "source_paragraph_end": 4433,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 100,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-072",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 72,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Unsur hiasan & privasi",
+   "controlled_display_text": "Unsur hiasan & privasi",
+   "source_paragraph_start": 4434,
+   "source_paragraph_end": 4434,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 101,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-073",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 73,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4436,
+   "source_paragraph_end": 4436,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 103,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-074",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 74,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-08",
+   "external_claim_status": "NONE",
+   "segment_index": 104,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-075",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 75,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Pintu gerbang (Gateway/Arch Entrance)",
+   "controlled_display_text": "Pintu gerbang (Gateway/Arch Entrance)",
+   "source_paragraph_start": 4438,
+   "source_paragraph_end": 4438,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 106,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-076",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 76,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Pintu gerbang adalah titik masuk utama dan boleh menjadi ciri reka bentuk yang menonjol. Pemilihan jenis pintu gerbang (manual, automatik), bahan (logam, kayu), dan pemasangan engsel, kunci, atau sistem automasi. Keseimbangan antara fungsi, keselamatan, dan reka bentuk adalah penting.",
+   "controlled_display_text": "Pintu gerbang adalah titik masuk utama dan boleh menjadi ciri reka bentuk yang menonjol. Pemilihan jenis pintu gerbang (manual, automatik), bahan (logam, kayu), dan pemasangan engsel, kunci, atau sistem automasi. Keseimbangan antara fungsi, keselamatan, dan reka bentuk adalah penting.",
+   "source_paragraph_start": 4439,
+   "source_paragraph_end": 4439,
+   "module_page": 223,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 107,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-077",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 77,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "IMAGE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": 4441,
+   "source_paragraph_end": 4441,
+   "module_page": 223,
+   "docx_relationship_id": "rId39",
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": "T02B02-IMG-04",
+   "table_relationship": null,
+   "external_claim_status": "NONE",
+   "segment_index": 109,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-078",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 78,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Rajah 20: Contoh Pintu Gerbang",
+   "controlled_display_text": "Rajah 20: Contoh Pintu Gerbang",
+   "source_paragraph_start": 4442,
+   "source_paragraph_end": 4442,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 110,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-079",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 79,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Fungsi",
+   "controlled_display_text": "Fungsi",
+   "source_paragraph_start": 4444,
+   "source_paragraph_end": 4444,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 112,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-080",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 80,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Elemen simbolik atau mercu masuk taman",
+   "controlled_display_text": "Elemen simbolik atau mercu masuk taman",
+   "source_paragraph_start": 4445,
+   "source_paragraph_end": 4445,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 113,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-081",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 81,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Menarik perhatian dan menandakan permulaan ruang",
+   "controlled_display_text": "Menarik perhatian dan menandakan permulaan ruang",
+   "source_paragraph_start": 4446,
+   "source_paragraph_end": 4446,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 114,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-082",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 82,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "LIST_ITEM",
+   "raw_source_text": "Contoh",
+   "controlled_display_text": "Contoh",
+   "source_paragraph_start": 4449,
+   "source_paragraph_end": 4449,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 117,
+   "list_level": 3,
+   "paragraph_style": "Heading4",
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-083",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 83,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-09",
+   "external_claim_status": "NONE",
+   "segment_index": 118,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-084",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 84,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "HEADING_3",
+   "raw_source_text": "Papan Tanda (Signage)",
+   "controlled_display_text": "Papan Tanda (Signage)",
+   "source_paragraph_start": 4451,
+   "source_paragraph_end": 4451,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 120,
+   "list_level": null,
+   "paragraph_style": "Heading3",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-085",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 85,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Papan tanda membantu navigasi dan menyampaikan maklumat. Perancangan, reka bentuk, dan pemasangan papan tanda dalam landskap, termasuk papan tanda arah, maklumat, atau penjenamaan. Bahan yang tahan cuaca dan peletakan yang strategik adalah penting.",
+   "controlled_display_text": "Papan tanda membantu navigasi dan menyampaikan maklumat. Perancangan, reka bentuk, dan pemasangan papan tanda dalam landskap, termasuk papan tanda arah, maklumat, atau penjenamaan. Bahan yang tahan cuaca dan peletakan yang strategik adalah penting.",
+   "source_paragraph_start": 4452,
+   "source_paragraph_end": 4452,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 121,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-086",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 86,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "a)Fungsi",
+   "controlled_display_text": "a)Fungsi",
+   "source_paragraph_start": 4454,
+   "source_paragraph_end": 4454,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 123,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-087",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 87,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Memberi arah, maklumat lokasi & nama tapak",
+   "controlled_display_text": "Memberi arah, maklumat lokasi & nama tapak",
+   "source_paragraph_start": 4455,
+   "source_paragraph_end": 4455,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 124,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-088",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 88,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "Unsur pendidikan & interpretatif (seperti nama pokok)",
+   "controlled_display_text": "Unsur pendidikan & interpretatif (seperti nama pokok)",
+   "source_paragraph_start": 4456,
+   "source_paragraph_end": 4456,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 125,
+   "list_level": null,
+   "paragraph_style": "ListParagraph1",
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  },
+  {
+   "row_id": "T02B02-ROW-089",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 89,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "PARAGRAPH",
+   "raw_source_text": "b)Contoh",
+   "controlled_display_text": "b)Contoh",
+   "source_paragraph_start": 4460,
+   "source_paragraph_end": 4460,
+   "module_page": 224,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": null,
+   "external_claim_status": "PENDING_CLASSIFICATION",
+   "segment_index": 129,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "CARRIED_FORWARD_FROM_PREVIOUS_ROW"
+  },
+  {
+   "row_id": "T02B02-ROW-090",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 90,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "content_type": "TABLE",
+   "raw_source_text": "",
+   "controlled_display_text": "",
+   "source_paragraph_start": null,
+   "source_paragraph_end": null,
+   "module_page": 225,
+   "docx_relationship_id": null,
+   "authority_class": "MODULE_SOURCE_ATTESTED",
+   "normalisation_status": "NOT_NORMALISED",
+   "visual_relationship": null,
+   "table_relationship": "T02B02-TBL-10",
+   "external_claim_status": "NONE",
+   "segment_index": 130,
+   "list_level": null,
+   "paragraph_style": null,
+   "module_page_basis": "TYPESET_PDF_FOOTER"
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "T02B02-IMG-01",
+   "unit_id": "K5-PL06-T02-B02",
+   "relationship_id": "rId36",
+   "embedded_filename": "word/media/image24.jpeg",
+   "mime_type": "image/jpeg",
+   "dimensions_in": "5.47 x 1.95",
+   "sha256": "e53f7009f7ff0f2e59c63ae5bcce7bba1af7bfdbab478525c39d0a648920cbfa",
+   "bytes": 241394,
+   "nearest_heading": "Landform (Earthmound)",
+   "source_paragraph": 4383,
+   "module_page": 219,
+   "caption": null,
+   "source_subject_nodes": [],
+   "node_count": 0,
+   "proposed_storyboard_role": "SOURCE_FIGURE_SUBJECT_NOT_YET_RULED",
+   "source_bound_status": "SOURCE_BOUND_CAPTIONLESS",
+   "asset_kind": "RASTER_IMAGE"
+  },
+  {
+   "asset_id": "T02B02-IMG-02",
+   "unit_id": "K5-PL06-T02-B02",
+   "relationship_id": "rId37",
+   "embedded_filename": "word/media/image25.jpeg",
+   "mime_type": "image/jpeg",
+   "dimensions_in": "4.43 x 3.32",
+   "sha256": "98dc1b91188dad242212cd320a8174ebc932b674f15e688d17768e144830d15a",
+   "bytes": 300188,
+   "nearest_heading": "Retaining Wall",
+   "source_paragraph": 4418,
+   "module_page": 222,
+   "caption": null,
+   "source_subject_nodes": [],
+   "node_count": 0,
+   "proposed_storyboard_role": "SOURCE_FIGURE_SUBJECT_NOT_YET_RULED",
+   "source_bound_status": "SOURCE_BOUND_CAPTIONLESS",
+   "asset_kind": "RASTER_IMAGE"
+  },
+  {
+   "asset_id": "T02B02-IMG-03",
+   "unit_id": "K5-PL06-T02-B02",
+   "relationship_id": "rId38",
+   "embedded_filename": "word/media/image26.png",
+   "mime_type": "image/png",
+   "dimensions_in": "2.46 x 3.58",
+   "sha256": "3318f20f1ba3c30be4d67e2182c710a7e6b1c0bc26a0c97d31961d578ceeb3b8",
+   "bytes": 601457,
+   "nearest_heading": "Pagar (Fencing)",
+   "source_paragraph": 4428,
+   "module_page": 223,
+   "caption": null,
+   "source_subject_nodes": [],
+   "node_count": 0,
+   "proposed_storyboard_role": "SOURCE_FIGURE_SUBJECT_NOT_YET_RULED",
+   "source_bound_status": "SOURCE_BOUND_CAPTIONLESS",
+   "asset_kind": "RASTER_IMAGE"
+  },
+  {
+   "asset_id": "T02B02-IMG-04",
+   "unit_id": "K5-PL06-T02-B02",
+   "relationship_id": "rId39",
+   "embedded_filename": "word/media/image27.png",
+   "mime_type": "image/png",
+   "dimensions_in": "4.43 x 2.04",
+   "sha256": "04c48d8e76f4e4f4e128c07af5022b54d6868053fc89f62b8490ee0ee7ba93e0",
+   "bytes": 583531,
+   "nearest_heading": "Pintu gerbang (Gateway/Arch Entrance)",
+   "source_paragraph": 4441,
+   "module_page": 224,
+   "caption": null,
+   "source_subject_nodes": [],
+   "node_count": 0,
+   "proposed_storyboard_role": "SOURCE_FIGURE_SUBJECT_NOT_YET_RULED",
+   "source_bound_status": "SOURCE_BOUND_CAPTIONLESS",
+   "asset_kind": "RASTER_IMAGE"
+  }
+ ],
+ "lists": [
+  {
+   "list_item_id": "T02B02-LI-001",
+   "row_id": "T02B02-ROW-005",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 5,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "module_page": 215,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-002",
+   "row_id": "T02B02-ROW-013",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 13,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "module_page": 216,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-003",
+   "row_id": "T02B02-ROW-016",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 16,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "module_page": 216,
+   "raw_wording": "Contoh"
+  },
+  {
+   "list_item_id": "T02B02-LI-004",
+   "row_id": "T02B02-ROW-020",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 20,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "module_page": 218,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-005",
+   "row_id": "T02B02-ROW-024",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 24,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "module_page": 218,
+   "raw_wording": "Contoh"
+  },
+  {
+   "list_item_id": "T02B02-LI-006",
+   "row_id": "T02B02-ROW-026",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 26,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "module_page": 219,
+   "raw_wording": "Sistem sokongan:"
+  },
+  {
+   "list_item_id": "T02B02-LI-007",
+   "row_id": "T02B02-ROW-036",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 36,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "module_page": 220,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-008",
+   "row_id": "T02B02-ROW-040",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 40,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "module_page": 220,
+   "raw_wording": "Contoh"
+  },
+  {
+   "list_item_id": "T02B02-LI-009",
+   "row_id": "T02B02-ROW-061",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 61,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "module_page": 222,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-010",
+   "row_id": "T02B02-ROW-064",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 64,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "module_page": 222,
+   "raw_wording": "Contoh"
+  },
+  {
+   "list_item_id": "T02B02-LI-011",
+   "row_id": "T02B02-ROW-070",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 70,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "module_page": 223,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-012",
+   "row_id": "T02B02-ROW-073",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 73,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "module_page": 223,
+   "raw_wording": "Contoh"
+  },
+  {
+   "list_item_id": "T02B02-LI-013",
+   "row_id": "T02B02-ROW-079",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 79,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "module_page": 224,
+   "raw_wording": "Fungsi"
+  },
+  {
+   "list_item_id": "T02B02-LI-014",
+   "row_id": "T02B02-ROW-082",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 82,
+   "num_id": 236,
+   "level": 3,
+   "marker_type": "ORDERED_OR_BULLET_PER_numbering.xml",
+   "style": "Heading4",
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "module_page": 224,
+   "raw_wording": "Contoh"
+  }
+ ],
+ "tables": [
+  {
+   "table_id": "T02B02-TBL-01",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 10,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pencahayaan (Lighting)"
+   ],
+   "rows": 6,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 216,
+   "segment_index": 12,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Lampu Sorot (Spotlights)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Digunakan untuk menonjolkan ciri-ciri landskap seperti pokok besar, arca, atau dinding tekstur.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Lampu Laluan (Path Lights)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Dipasang di sepanjang laluan pejalan kaki untuk keselamatan dan panduan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Lampu Bawah Air (Underwater Lights)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Digunakan dalam kolam atau ciri air untuk kesan dramatik.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Sistem Kawalan",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pemasangan pemasa, penderia cahaya (light sensor), atau sistem automasi pintar untuk mengawal hidup/ mati lampu secara automatik",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Lampu solar",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Jimat tenaga untuk kawasan kurang kritikal",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-02",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 17,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pengairan"
+   ],
+   "rows": 4,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 218,
+   "segment_index": 22,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Sistem Semburan (Sprinkler System)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Sesuai untuk kawasan rumput yang luas, dengan kepala penyembur yang timbul dan tenggelam secara automatik.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Sistem Titisan (Drip Irrigation)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Ideal untuk katil bunga, pokok renek, atau sayur-sayuran, menghantar air terus ke zon akar tumbuhan untuk mengurangkan penyejatan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Sensor Kelembapan Tanah",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pemasangan sensor yang mengesan kelembapan tanah dan mengaktifkan sistem pengairan hanya apabila diperlukan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-03",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 25,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Kolam (Fountain)"
+   ],
+   "rows": 4,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 219,
+   "segment_index": 32,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Air Pancut (Fountain)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pemasangan pam yang sesuai untuk menghasilkan aliran air yang diingini, dengan sistem peredaran air tertutup.Air pancut statikAir pancut interaktif (jumping jet fountain)",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Kolam Hiasan",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Reka bentuk sistem penapisan biologi atau mekanikal untuk mengekalkan kejelasan air, bersama-sama dengan pemasangan pam untuk air terjun kecil jika ada.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Kolam refleksi (reflection pond)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Dataran Putra, Putrajaya. Kawasan kolam cetek yang direka untuk memantulkan Masjid Putra dan bangunan-bangunan kerajaan di sekelilingnya, terutamanya pada waktu senja. Permukaan air yang luas dan tenang ini memberikan kesan visual yang menakjubkan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-04",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 41,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Landform (Earthmound)"
+   ],
+   "rows": 4,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 220,
+   "segment_index": 54,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Bukit Hiasan (Ornamental Mound)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pembentukan bukit kecil di tengah taman untuk menanam pokok atau tumbuhan yang menarik perhatian, atau untuk mencipta halangan visual.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Pembentukan Cerun",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Reka bentuk sistem penapisan biologi atau mekanikal untuk mengekalkan kejelasan air, bersama-sama dengan pemasangan pam untuk air terjun kecil jika ada.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Kolam refleksi (reflection pond)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Dataran Putra, Putrajaya. Kawasan kolam cetek yang direka untuk memantulkan Masjid Putra dan bangunan-bangunan kerajaan di sekelilingnya, terutamanya pada waktu senja. Permukaan air yang luas dan tenang ini memberikan kesan visual yang menakjubkan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-05",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 49,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Swale/dry river bed"
+   ],
+   "rows": 3,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 221,
+   "segment_index": 70,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Swale",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Saliran cetek yang ditanam dengan rumput atau tumbuhan tahan air untuk mengalirkan air hujan dari satu kawasan ke kawasan lain, mengelakkan genangan air.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Dry River Bed",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pembinaan aliran batu-batuan atau kerikil yang kelihatan seperti dasar sungai kering, berfungsi mengalirkan air hujan deras dan menambah ciri estetik.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-06",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 56,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Sub-soil drainage"
+   ],
+   "rows": 3,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 221,
+   "segment_index": 80,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Saliran Padang Rumput",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Saliran cetek yang ditanam dengan rumput atau tumbuhan tahan air untuk mengalirkan air hujan dari satu kawasan ke kawasan lain, mengelakkan genangan air.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Saliran di Belakang Tembok Penahan",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pembinaan aliran batu-batuan atau kerikil yang kelihatan seperti dasar sungai kering, berfungsi mengalirkan air hujan deras dan menambah ciri estetik.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-07",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 65,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Retaining Wall"
+   ],
+   "rows": 3,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 222,
+   "segment_index": 91,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Tembok Penahan Hiasan",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Tembok batu yang dibina untuk menampung kawasan bertingkat di taman, sambil menambah nilai estetik.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Tembok Penahan Konkrit",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Tembok yang lebih besar dan kuat untuk menahan jisim tanah yang lebih besar di cerun curam.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-08",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 74,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pagar (Fencing)"
+   ],
+   "rows": 3,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 223,
+   "segment_index": 104,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Pagar Privasi Kayu",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pagar tinggi yang dibina menggunakan panel kayu untuk privasi.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Pagar Dawai Berangkai (Chain-link Fence)",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pagar ekonomi untuk membatasi sempadan atau melindungi kawasan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-09",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 83,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Pintu gerbang (Gateway/Arch Entrance)"
+   ],
+   "rows": 3,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 224,
+   "segment_index": 118,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Pintu Gerbang Besi Tempa",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pintu gerbang hiasan yang besar di pintu masuk utama ke sebuah hartanah.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Pintu Gerbang Gelongsor Automatik",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Pintu gerbang yang digerakkan secara automatik untuk kemudahan akses kenderaan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  },
+  {
+   "table_id": "T02B02-TBL-10",
+   "unit_id": "K5-PL06-T02-B02",
+   "sequence": 90,
+   "heading_path": [
+    "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "Papan Tanda (Signage)"
+   ],
+   "rows": 3,
+   "columns": 2,
+   "merged_cells": 0,
+   "module_page": 225,
+   "segment_index": 130,
+   "grid": [
+    [
+     {
+      "text": "CONTOH",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "PENERANGAN",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Papan Tanda Arah",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Papan tanda yang menunjukkan arah ke pelbagai bahagian taman atau kemudahan.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ],
+    [
+     {
+      "text": "Papan Tanda Interpretif",
+      "grid_span": 1,
+      "v_merge": null
+     },
+     {
+      "text": "Papan tanda yang memberikan maklumat tentang tumbuhan, sejarah tempat, atau ciri-ciri ekologi.",
+      "grid_span": 1,
+      "v_merge": null
+     }
+    ]
+   ]
+  }
+ ]
+}

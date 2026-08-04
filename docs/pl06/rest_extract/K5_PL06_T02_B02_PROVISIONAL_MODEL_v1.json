@@ -1,0 +1,690 @@
+{
+ "unit_id": "K5-PL06-T02-B02",
+ "lesson_title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 12,
+  "tree": [
+   {
+    "row_id": "T02B02-ROW-001",
+    "level": 2,
+    "text": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "module_page": 215,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-003",
+    "level": 3,
+    "text": "Pencahayaan (Lighting)",
+    "module_page": 215,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Pencahayaan (Lighting)"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-011",
+    "level": 3,
+    "text": "Pengairan",
+    "module_page": 216,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Pengairan"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-018",
+    "level": 3,
+    "text": "Kolam (Fountain)",
+    "module_page": 218,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Kolam (Fountain)"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-031",
+    "level": 3,
+    "text": "Kerja-kerja berkaitan dengan Infrastuktur",
+    "module_page": 219,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Kerja-kerja berkaitan dengan Infrastuktur"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-033",
+    "level": 3,
+    "text": "Landform (Earthmound)",
+    "module_page": 219,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Landform (Earthmound)"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-042",
+    "level": 3,
+    "text": "Swale/dry river bed",
+    "module_page": 220,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Swale/dry river bed"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-050",
+    "level": 3,
+    "text": "Sub-soil drainage",
+    "module_page": 220,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Sub-soil drainage"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-057",
+    "level": 3,
+    "text": "Retaining Wall",
+    "module_page": 221,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Retaining Wall"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-066",
+    "level": 3,
+    "text": "Pagar (Fencing)",
+    "module_page": 222,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Pagar (Fencing)"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-075",
+    "level": 3,
+    "text": "Pintu gerbang (Gateway/Arch Entrance)",
+    "module_page": 223,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Pintu gerbang (Gateway/Arch Entrance)"
+    ]
+   },
+   {
+    "row_id": "T02B02-ROW-084",
+    "level": 3,
+    "text": "Papan Tanda (Signage)",
+    "module_page": 224,
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Papan Tanda (Signage)"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_3_HEADING_FALLBACK",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Pencahayaan (Lighting)",
+    "row_id": "T02B02-ROW-003",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Pengairan",
+    "row_id": "T02B02-ROW-011",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Kolam (Fountain)",
+    "row_id": "T02B02-ROW-018",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Kerja-kerja berkaitan dengan Infrastuktur",
+    "row_id": "T02B02-ROW-031",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Landform (Earthmound)",
+    "row_id": "T02B02-ROW-033",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G6",
+    "covers": "Swale/dry river bed",
+    "row_id": "T02B02-ROW-042",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G7",
+    "covers": "Sub-soil drainage",
+    "row_id": "T02B02-ROW-050",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G8",
+    "covers": "Retaining Wall",
+    "row_id": "T02B02-ROW-057",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G9",
+    "covers": "Pagar (Fencing)",
+    "row_id": "T02B02-ROW-066",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G10",
+    "covers": "Pintu gerbang (Gateway/Arch Entrance)",
+    "row_id": "T02B02-ROW-075",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G11",
+    "covers": "Papan Tanda (Signage)",
+    "row_id": "T02B02-ROW-084",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Pencahayaan (Lighting)",
+   "G2: Pengairan",
+   "G3: Kolam (Fountain)",
+   "G4: Kerja-kerja berkaitan dengan Infrastuktur",
+   "G5: Landform (Earthmound)",
+   "G6: Swale/dry river bed",
+   "G7: Sub-soil drainage",
+   "G8: Retaining Wall",
+   "G9: Pagar (Fencing)",
+   "G10: Pintu gerbang (Gateway/Arch Entrance)",
+   "G11: Papan Tanda (Signage)",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 11,
+   "closing_screens": 3,
+   "minimum_total_screens": 16,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Pencahayaan (Lighting)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Pengairan",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Kolam (Fountain)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Kerja-kerja berkaitan dengan Infrastuktur",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Landform (Earthmound)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G6",
+    "covers": "Swale/dry river bed",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G7",
+    "covers": "Sub-soil drainage",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G8",
+    "covers": "Retaining Wall",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G9",
+    "covers": "Pagar (Fencing)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G10",
+    "covers": "Pintu gerbang (Gateway/Arch Entrance)",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G11",
+    "covers": "Papan Tanda (Signage)",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 16,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 0,
+  "propositions": []
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 7,
+  "statements": [
+   {
+    "row_id": "T02B02-ROW-012",
+    "module_page": 217,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering. Meneroka pelbagai jenis sistem pengairan (contohnya, sistem semburan, titisan), pemilihan pam air yang sesuai, reka bentuk paip, zon pengairan, dan pemasangan pengawal (controller) atau pemasa. Penekanan diberikan kepada kecekapan penggunaan air dan mengurangkan pembaziran.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Pengairan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-034",
+    "module_page": 219,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang. Teknik pembentukan bukit-bukit kecil (earthmound) atau perubahan kontur tanah untuk tujuan estetik, kawalan saliran air, atau penciptaan ruang yang berbeza. Ini melibatkan pengiraan isipadu tanah, teknik pemadatan, dan penggredan yang betul.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Landform (Earthmound)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-043",
+    "module_page": 220,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pembinaan saliran cetek (swale) atau aliran sungai kering (dry river bed) adalah penting untuk pengurusan air hujan dan saliran.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Swale/dry river bed"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-051",
+    "module_page": 220,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Sub-soil drainage"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-058",
+    "module_page": 221,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah. Pembinaan tembok untuk menahan tanah dan mencegah hakisan di kawasan yang mempunyai perbezaan aras tanah. Jenis bahan yang digunakan (batu, konkrit, kayu), asas yang betul, dan sistem saliran di belakang tembok adalah aspek penting yang akan dipelajari.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Retaining Wall"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-076",
+    "module_page": 223,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pintu gerbang adalah titik masuk utama dan boleh menjadi ciri reka bentuk yang menonjol. Pemilihan jenis pintu gerbang (manual, automatik), bahan (logam, kayu), dan pemasangan engsel, kunci, atau sistem automasi. Keseimbangan antara fungsi, keselamatan, dan reka bentuk adalah penting.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Pintu gerbang (Gateway/Arch Entrance)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-085",
+    "module_page": 224,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Papan tanda membantu navigasi dan menyampaikan maklumat. Perancangan, reka bentuk, dan pemasangan papan tanda dalam landskap, termasuk papan tanda arah, maklumat, atau penjenamaan. Bahan yang tahan cuaca dan peletakan yang strategik adalah penting.",
+    "heading_path": [
+     "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+     "Papan Tanda (Signage)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 7,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 18,
+  "source_attested": 18,
+  "subjects": [
+   {
+    "subject": "RASTER_IMAGE at Landform (Earthmound)",
+    "asset_id": "T02B02-IMG-01",
+    "kind": "RASTER_IMAGE",
+    "module_page": 219,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Retaining Wall",
+    "asset_id": "T02B02-IMG-02",
+    "kind": "RASTER_IMAGE",
+    "module_page": 222,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Pagar (Fencing)",
+    "asset_id": "T02B02-IMG-03",
+    "kind": "RASTER_IMAGE",
+    "module_page": 223,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Pintu gerbang (Gateway/Arch Entrance)",
+    "asset_id": "T02B02-IMG-04",
+    "kind": "RASTER_IMAGE",
+    "module_page": 224,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Pencahayaan (Lighting) — 6x2",
+    "asset_id": "T02B02-TBL-01",
+    "kind": "SOURCE_TABLE",
+    "module_page": 216,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Pengairan — 4x2",
+    "asset_id": "T02B02-TBL-02",
+    "kind": "SOURCE_TABLE",
+    "module_page": 218,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Kolam (Fountain) — 4x2",
+    "asset_id": "T02B02-TBL-03",
+    "kind": "SOURCE_TABLE",
+    "module_page": 219,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Landform (Earthmound) — 4x2",
+    "asset_id": "T02B02-TBL-04",
+    "kind": "SOURCE_TABLE",
+    "module_page": 220,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Swale/dry river bed — 3x2",
+    "asset_id": "T02B02-TBL-05",
+    "kind": "SOURCE_TABLE",
+    "module_page": 221,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Sub-soil drainage — 3x2",
+    "asset_id": "T02B02-TBL-06",
+    "kind": "SOURCE_TABLE",
+    "module_page": 221,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Retaining Wall — 3x2",
+    "asset_id": "T02B02-TBL-07",
+    "kind": "SOURCE_TABLE",
+    "module_page": 222,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Pagar (Fencing) — 3x2",
+    "asset_id": "T02B02-TBL-08",
+    "kind": "SOURCE_TABLE",
+    "module_page": 223,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Pintu gerbang (Gateway/Arch Entrance) — 3x2",
+    "asset_id": "T02B02-TBL-09",
+    "kind": "SOURCE_TABLE",
+    "module_page": 224,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E) / Papan Tanda (Signage) — 3x2",
+    "asset_id": "T02B02-TBL-10",
+    "kind": "SOURCE_TABLE",
+    "module_page": 225,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 17: Contoh Landform dalam Landskap",
+    "asset_id": "T02B02-ROW-035",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 219,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 18: Contoh Tembok Penahanan Hiasan",
+    "asset_id": "T02B02-ROW-060",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 222,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 19: Contoh Pagar Kayu",
+    "asset_id": "T02B02-ROW-069",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 223,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 20: Contoh Pintu Gerbang",
+    "asset_id": "T02B02-ROW-078",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 224,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 7,
+  "terms": [
+   {
+    "row_id": "T02B02-ROW-001",
+    "term": "Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "module_page": 215,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-003",
+    "term": "Pencahayaan (Lighting)",
+    "module_page": 215,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-018",
+    "term": "Kolam (Fountain)",
+    "module_page": 218,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-033",
+    "term": "Landform (Earthmound)",
+    "module_page": 219,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-066",
+    "term": "Pagar (Fencing)",
+    "module_page": 222,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-075",
+    "term": "Pintu gerbang (Gateway/Arch Entrance)",
+    "module_page": 223,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B02-ROW-084",
+    "term": "Papan Tanda (Signage)",
+    "module_page": 224,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T02-B02",
+  "rows": 90,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   215,
+   225
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 64,
+  "carried_forward_rows": 26,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

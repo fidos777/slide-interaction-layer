@@ -1,0 +1,977 @@
+{
+ "unit_id": "K5-PL06-T02-B01",
+ "lesson_title": "Elemen Landskap Kejur dan Elemen Landskap Lembut/Penanaman",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 13,
+  "tree": [
+   {
+    "row_id": "T02B01-ROW-001",
+    "level": 1,
+    "text": "ELEMEN PEMBINAAN LANDSKAP",
+    "module_page": 201,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-002",
+    "level": 2,
+    "text": "Elemen Landskap Kejur",
+    "module_page": 201,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-004",
+    "level": 3,
+    "text": "Kemudahan Rekreasi",
+    "module_page": 201,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Kemudahan Rekreasi"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-007",
+    "level": 3,
+    "text": "Sirkulasi & Kawan Berturap",
+    "module_page": 201,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Sirkulasi & Kawan Berturap"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-010",
+    "level": 3,
+    "text": "Struktur Landskap",
+    "module_page": 202,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Struktur Landskap"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-013",
+    "level": 3,
+    "text": "Perabot Landskap (Street Furniture)",
+    "module_page": 202,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Perabot Landskap (Street Furniture)"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-017",
+    "level": 2,
+    "text": "Elemen Landskap Lembut/ Penanaman",
+    "module_page": 203,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-020",
+    "level": 3,
+    "text": "Pokok & Palma",
+    "module_page": 203,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-058",
+    "level": 3,
+    "text": "Tanaman Renek & Penutupan Bumi",
+    "module_page": 206,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-100",
+    "level": 3,
+    "text": "Tumbuhan Memanjat",
+    "module_page": 209,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tumbuhan Memanjat"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-124",
+    "level": 3,
+    "text": "Rumput (Turfing)",
+    "module_page": 211,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Rumput (Turfing)"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-145",
+    "level": 3,
+    "text": "Tanaman Akuatik",
+    "module_page": 212,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Akuatik"
+    ]
+   },
+   {
+    "row_id": "T02B01-ROW-160",
+    "level": 3,
+    "text": "Tanaman Semusim (Annuals dan Perennials)",
+    "module_page": 214,
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Semusim (Annuals dan Perennials)"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Elemen Landskap Kejur",
+    "row_id": "T02B01-ROW-002",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Elemen Landskap Lembut/ Penanaman",
+    "row_id": "T02B01-ROW-017",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Elemen Landskap Kejur",
+   "G2: Elemen Landskap Lembut/ Penanaman",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 2,
+   "closing_screens": 3,
+   "minimum_total_screens": 7,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Elemen Landskap Kejur",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Elemen Landskap Lembut/ Penanaman",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 7,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 13,
+  "propositions": [
+   {
+    "row_id": "T02B01-ROW-005",
+    "module_page": 201,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti. Perlu dibina mengikut spesifikasi teknikal agar tahan lasak, selamat, dan sesuai digunakan oleh pelbagai golongan umur.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Kemudahan Rekreasi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-034",
+    "module_page": 204,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman pokok:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-040",
+    "module_page": 205,
+    "markers": [
+     "wajib"
+    ],
+    "text": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-051",
+    "module_page": 205,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman palma:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-057",
+    "module_page": 206,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Palma secara semula jadi akan meluruhkan pelepah daun yang tua dan kering. Ini perlu diambil kira dalam perancangan penyelenggaraan jangka panjang untuk membersihkan luruhannya, terutamanya di kawasan awam.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-072",
+    "module_page": 207,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-074",
+    "module_page": 207,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Fahami saiz matang tanaman renek tersebut. Untuk pagaran, jarak tanaman perlu lebih rapat. Untuk tanaman berkelompok, berikan ruang yang cukup untuk ia membesar tanpa bersesak.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-093",
+    "module_page": 208,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-112",
+    "module_page": 210,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Bunga Kertas (Bougainvillea sp.): Pelbagai warna, tahan panas dan kemarau, perlu diikat pada struktur sokongan. Sesuai untuk menghasilkan impak warna yang kuat.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tumbuhan Memanjat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-115",
+    "module_page": 210,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tumbuhan Memanjat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-144",
+    "module_page": 212,
+    "markers": [
+     "tidak boleh"
+    ],
+    "text": "Keburukan: Memerlukan peralatan khas. Tempoh percambahan memerlukan penyiraman yang sangat konsisten dan kawasan tersebut tidak boleh digunakan untuk seketika.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Rumput (Turfing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-153",
+    "module_page": 213,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Akuatik"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-163",
+    "module_page": 214,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Di Malaysia, disebabkan iklim yang tiada musim sejuk, kitaran hayatnya mungkin lebih pendek, lazimnya sekitar beberapa bulan sahaja. Ia perlu ditanam semula jika ingin terus dinikmati.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Semusim (Annuals dan Perennials)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 30,
+  "statements": [
+   {
+    "row_id": "T02B01-ROW-003",
+    "module_page": 201,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Landskap kejur merujuk kepada semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap. Ini termasuk bahan binaan seperti batu, konkrit, kayu, logam, dan lain-lain yang membentuk struktur, laluan, dan ciri-ciri fungsian serta estetik.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-008",
+    "module_page": 201,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan. Merangkumi reka bentuk dan pembinaan laluan, jalan masuk, dataran, dan tempat letak kereta. Ini memerlukan pengetahuan tentang bahan turapan (contohnya, paver, konkrit, tar, kerikil), teknik penggredan tanah dan saliran, serta pemadatan sub-base yang betul untuk memastikan ketahanan dan kestabilan permukaan",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Sirkulasi & Kawan Berturap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-011",
+    "module_page": 202,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Struktur landskap adalah binaan berfungsi estetik dan fungsi tambahan yang memperkayakan ruang landskap secara menegak dan mendatar.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Struktur Landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-014",
+    "module_page": 202,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Perabot landskap adalah elemen bergerak atau tetap yang ditempatkan di dalam ruang landskap untuk meningkatkan keselesaan, fungsi, dan estetika. Melibatkan pemilihan, perolehan, dan pemasangan perabot luaran seperti bangku, meja piknik, tong sampah, lampu hiasan, dan pasu bunga besar. Aspek ketahanan terhadap cuaca, ergonomi, dan gaya reka bentuk adalah penting.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Kejur",
+     "Perabot Landskap (Street Furniture)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-018",
+    "module_page": 203,
+    "markers": [
+     "adalah",
+     "merujuk kepada"
+    ],
+    "text": "Landskap Lembut atau softscape merujuk kepada semua elemen hidup dan semula jadi yang digunakan dalam reka bentuk landskap. Ia adalah komponen 'lembut' yang memberikan nyawa, warna, tekstur, dan suasana kepada sesuatu ruang luaran. Penanaman pula adalah proses atau kerja-kerja untuk melaksanakan reka bentuk landskap lembut ini.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-019",
+    "module_page": 203,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Berbeza dengan landskap kejur yang merangkumi elemen buatan manusia seperti laluan pejalan kaki, tembok, atau struktur binaan, landskap lembut adalah berkenaan dengan tumbuh-tumbuhan.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-021",
+    "module_page": 203,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pokok dan palma merupakan elemen terpenting dan paling dominan dalam kebanyakan reka bentuk landskap. Ia sering dianggap sebagai 'tulang belakang' atau struktur utama bagi sesuatu skema penanaman. Sebagai kontraktor, pemahaman mendalam tentang fungsi, ciri, dan pemilihan kedua-dua elemen ini adalah kritikal untuk memastikan kejayaan sesuatu projek landskap.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-023",
+    "module_page": 204,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Pokok merujuk kepada tumbuhan berkayu yang mempunyai satu batang utama (trunk) yang tumbuh tegak dan dahan-dahan yang merimbun membentuk kanopi atau silara.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-024",
+    "module_page": 204,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Fungsi Utama Pokok dalam Landskap ialah:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-034",
+    "module_page": 204,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman pokok:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-038",
+    "module_page": 205,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Teknik penyediaan lubang, campuran tanah, dan pemasangan sokongan (staking) adalah kritikal untuk memastikan pokok dapat hidup dan tumbuh dengan subur.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-040",
+    "module_page": 205,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-042",
+    "module_page": 205,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Palma ialah sejenis tumbuhan dalam famili Arecaceae yang mempunyai batang tunggal atau berumpun yang tidak berdahan, dengan pelepah daun yang tumbuh di bahagian atas. Ia memberikan penampilan tropika yang eksotik dan sering digunakan untuk mencipta suasana seperti di resort.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-051",
+    "module_page": 205,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman palma:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-055",
+    "module_page": 206,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Akar palma adalah jenis serabut dan sensitif. Berhati-hati semasa proses pemindahan dan penanaman semula untuk mengelakkan kerosakan bebola akar (root ball).",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Pokok & Palma"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-061",
+    "module_page": 206,
+    "markers": [
+     "ialah",
+     "adalah"
+    ],
+    "text": "Tanaman renek ialah tumbuhan berkayu yang mempunyai banyak cabang dan ranting yang tumbuh dari pangkalnya, menjadikannya kelihatan rimbun. Ketinggiannya adalah sederhana, lazimnya di antara satu hingga tiga meter, dan ia tidak mempunyai satu batang utama yang jelas seperti pokok.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-072",
+    "module_page": 207,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-076",
+    "module_page": 207,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pemangkasan adalah kunci penyelenggaraan tanaman renek. Ia dilakukan untuk membentuk (pagaran), menggalakkan pengeluaran bunga, membuang dahan mati, dan mengawal saiz.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-080",
+    "module_page": 208,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tanaman penutup bumi adalah tumbuhan rendah yang tumbuh merayap atau menjalar secara meluas di atas permukaan tanah, membentuk lapisan permaidani semula jadi yang padat. Ketinggiannya lazimnya tidak melebihi 30 cm.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-093",
+    "module_page": 208,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Renek & Penutupan Bumi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-101",
+    "module_page": 209,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tumbuhan memanjat atau menjalar adalah elemen landskap lembut yang sering diabaikan tetapi mempunyai potensi besar untuk mengubah sesuatu ruang secara dramatik. Tumbuhan ini secara semula jadi akan tumbuh secara menegak atau melintang dengan berpaut, melilit, atau menjalar pada apa-apa jenis sokongan.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tumbuhan Memanjat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-115",
+    "module_page": 210,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tumbuhan Memanjat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-125",
+    "module_page": 211,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Rumput turf merupakan salah satu elemen landskap lembut yang paling lazim digunakan dan memberikan impak visual yang tinggi. Ia berfungsi sebagai hamparan hijau yang menyatukan semua elemen landskap lain seperti pokok, tanaman renek, dan laluan pejalan kaki. Bagi kontraktor, kerja-penanaman rumput (turfing) adalah satu kemahiran teknikal yang penting dan memerlukan pemahaman tentang jenis, kaedah pemasangan, dan penyelenggaraan yang betul.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Rumput (Turfing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-132",
+    "module_page": 211,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah antara kaedah pemasangan rumput (Turfing Methods):",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Rumput (Turfing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-136",
+    "module_page": 212,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Keburukan: Kos bahan (rumput) dan kos buruh adalah yang paling tinggi.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Rumput (Turfing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-146",
+    "module_page": 212,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Tanaman akuatik merujuk kepada semua jenis tumbuhan yang telah beradaptasi untuk hidup di dalam atau di atas permukaan air. Elemen ini mampu mengubah sebuah kolam, tasik, atau sebarang ciri air (water feature) daripada sebuah struktur mati kepada sebuah ekosistem yang hidup, dinamik, dan cantik.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Akuatik"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-153",
+    "module_page": 213,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor terhadap penanaman:",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Akuatik"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-159",
+    "module_page": 214,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Kebanyakan tanaman akuatik tumbuh dengan cepat. Penyelenggaraan berkala seperti membuang daun yang mati dan menjarangkan tanaman yang terlalu padat adalah penting untuk memastikan kolam kelihatan kemas dan ekosistemnya seimbang.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Akuatik"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-162",
+    "module_page": 214,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Tanaman semusim ialah tumbuhan yang melengkapkan kitaran hidupnya dalam satu musim atau setahun atau kurang. Ia akan bercambah dari biji benih, membesar, berbunga, menghasilkan biji benih baharu, dan kemudiannya akan mati.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Semusim (Annuals dan Perennials)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-171",
+    "module_page": 214,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Tanaman Perennials ialah tumbuhan yang hidup lebih daripada dua tahun. Walaupun bahagian atasnya (bunga dan daun) mungkin akan layu atau kelihatan kurang subur selepas musim berbunganya, sistem akarnya akan terus hidup dan ia akan tumbuh semula pada musim berikutnya.",
+    "heading_path": [
+     "ELEMEN PEMBINAAN LANDSKAP",
+     "Elemen Landskap Lembut/ Penanaman",
+     "Tanaman Semusim (Annuals dan Perennials)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 43,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 4,
+  "source_attested": 4,
+  "subjects": [
+   {
+    "subject": "Table under ELEMEN PEMBINAAN LANDSKAP / Elemen Landskap Kejur / Kemudahan Rekreasi — 6x2",
+    "asset_id": "T02B01-TBL-01",
+    "kind": "SOURCE_TABLE",
+    "module_page": 201,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under ELEMEN PEMBINAAN LANDSKAP / Elemen Landskap Kejur / Sirkulasi & Kawan Berturap — 6x2",
+    "asset_id": "T02B01-TBL-02",
+    "kind": "SOURCE_TABLE",
+    "module_page": 202,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under ELEMEN PEMBINAAN LANDSKAP / Elemen Landskap Kejur / Struktur Landskap — 7x2",
+    "asset_id": "T02B01-TBL-03",
+    "kind": "SOURCE_TABLE",
+    "module_page": 202,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under ELEMEN PEMBINAAN LANDSKAP / Elemen Landskap Kejur / Perabot Landskap (Street Furniture) — 7x2",
+    "asset_id": "T02B01-TBL-04",
+    "kind": "SOURCE_TABLE",
+    "module_page": 203,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 3,
+  "terms": [
+   {
+    "row_id": "T02B01-ROW-013",
+    "term": "Perabot Landskap (Street Furniture)",
+    "module_page": 202,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-124",
+    "term": "Rumput (Turfing)",
+    "module_page": 211,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T02B01-ROW-160",
+    "term": "Tanaman Semusim (Annuals dan Perennials)",
+    "module_page": 214,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T02-B01",
+  "rows": 180,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   201,
+   215
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 179,
+  "carried_forward_rows": 1,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

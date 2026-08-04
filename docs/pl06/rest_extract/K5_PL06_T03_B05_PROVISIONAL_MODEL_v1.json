@@ -1,0 +1,1841 @@
+{
+ "unit_id": "K5-PL06-T03-B05",
+ "lesson_title": "Pencahayaan dan Pengairan",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 88,
+  "tree": [
+   {
+    "row_id": "T03B05-ROW-001",
+    "level": 2,
+    "text": "Pencahayaan / Lighting",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-003",
+    "level": 3,
+    "text": "Pole Light",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pole Light"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-005",
+    "level": 3,
+    "text": "Fungsi Utama",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Fungsi Utama"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-006",
+    "level": 3,
+    "text": "Keselamatan & Sekuriti",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Keselamatan & Sekuriti"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-008",
+    "level": 3,
+    "text": "Pencahayaan Umum",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pencahayaan Umum"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-010",
+    "level": 3,
+    "text": "Navigasi",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Navigasi"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-013",
+    "level": 3,
+    "text": "Pembinaan Tapak Konkrit (Concrete Footing)",
+    "module_page": 262,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pembinaan Tapak Konkrit (Concrete Footing)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-015",
+    "level": 3,
+    "text": "Pendawaian Elektrikal",
+    "module_page": 263,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pendawaian Elektrikal"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-017",
+    "level": 3,
+    "text": "Pemasangan Tiang",
+    "module_page": 263,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan Tiang"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-019",
+    "level": 3,
+    "text": "Penyelenggaraan",
+    "module_page": 263,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penyelenggaraan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-021",
+    "level": 3,
+    "text": "Bollard Light",
+    "module_page": 263,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Bollard Light"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-023",
+    "level": 3,
+    "text": "Fungsi Utama",
+    "module_page": 263,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Fungsi Utama"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-024",
+    "level": 3,
+    "text": "Pencahayaan Pandu Arah",
+    "module_page": 263,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pencahayaan Pandu Arah"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-026",
+    "level": 3,
+    "text": "Menandakan Sempadan",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Menandakan Sempadan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-028",
+    "level": 3,
+    "text": "Estetika Aras Rendah",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Estetika Aras Rendah"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-031",
+    "level": 3,
+    "text": "Jarak Pemasangan (Spacing)",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Jarak Pemasangan (Spacing)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-033",
+    "level": 3,
+    "text": "Penjajaran (Alignment)",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penjajaran (Alignment)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-035",
+    "level": 3,
+    "text": "Pemasangan Tapak",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan Tapak"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-037",
+    "level": 3,
+    "text": "Ketahanan Bahan",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Ketahanan Bahan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-039",
+    "level": 3,
+    "text": "Uplight",
+    "module_page": 264,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Uplight"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-041",
+    "level": 3,
+    "text": "Fungsi Utama",
+    "module_page": 265,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Fungsi Utama"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-042",
+    "level": 3,
+    "text": "Pencahayaan Aksen (Accent Lighting)",
+    "module_page": 265,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pencahayaan Aksen (Accent Lighting)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-044",
+    "level": 3,
+    "text": "Mencipta Drama & Kedalaman",
+    "module_page": 265,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Mencipta Drama & Kedalaman"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-046",
+    "level": 3,
+    "text": "Mencipta Latar Belakang",
+    "module_page": 265,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Mencipta Latar Belakang"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-049",
+    "level": 3,
+    "text": "Kalis Air (Waterproofing)",
+    "module_page": 265,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air (Waterproofing)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-051",
+    "level": 3,
+    "text": "Penempatan dan Sudut Pancaran",
+    "module_page": 265,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penempatan dan Sudut Pancaran"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-057",
+    "level": 3,
+    "text": "Kawalan Silau (Glare Control)",
+    "module_page": 266,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kawalan Silau (Glare Control)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-059",
+    "level": 3,
+    "text": "Pemasangan",
+    "module_page": 266,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-061",
+    "level": 3,
+    "text": "Pencahayaan Khas (Special Lighting)",
+    "module_page": 266,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pencahayaan Khas (Special Lighting)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-063",
+    "level": 3,
+    "text": "Contoh dan Aplikasi",
+    "module_page": 266,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Contoh dan Aplikasi"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-064",
+    "level": 3,
+    "text": "Lampu Bawah Air (Underwater Lighting)",
+    "module_page": 266,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lampu Bawah Air (Underwater Lighting)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-066",
+    "level": 3,
+    "text": "Gentian Optik (Fibre Optic Lighting)",
+    "module_page": 266,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Gentian Optik (Fibre Optic Lighting)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-068",
+    "level": 3,
+    "text": "Jalur LED (LED Strips)",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Jalur LED (LED Strips)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-070",
+    "level": 3,
+    "text": "Projektor Gobo (Gobo Projector)",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Projektor Gobo (Gobo Projector)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-072",
+    "level": 3,
+    "text": "Aspek Pemasangan & Pengurusan untuk Kontraktor",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Aspek Pemasangan & Pengurusan untuk Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-073",
+    "level": 3,
+    "text": "Kepakaran Khusus",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kepakaran Khusus"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-075",
+    "level": 3,
+    "text": "Kalis Air (Waterproofing)",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air (Waterproofing)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-077",
+    "level": 3,
+    "text": "Akses Penyelenggaraan",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Akses Penyelenggaraan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-079",
+    "level": 3,
+    "text": "Pematuhan Spesifikasi",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pematuhan Spesifikasi"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-081",
+    "level": 3,
+    "text": "Flood Light / Spot Light",
+    "module_page": 267,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Flood Light / Spot Light"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-083",
+    "level": 3,
+    "text": "Lampu Limpah (Flood Light)",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lampu Limpah (Flood Light)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-085",
+    "level": 3,
+    "text": "Lampu Tumpu (Spot Light)",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lampu Tumpu (Spot Light)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-087",
+    "level": 3,
+    "text": "Aspek Pemasangan & Pengurusan untuk Kontraktor",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Aspek Pemasangan & Pengurusan untuk Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-088",
+    "level": 3,
+    "text": "Penyasaran dan Penjajaran (Aiming & Alignment)",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penyasaran dan Penjajaran (Aiming & Alignment)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-090",
+    "level": 3,
+    "text": "Lokasi Pemasangan",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lokasi Pemasangan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-092",
+    "level": 3,
+    "text": "Penyembunyian Lekapan",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penyembunyian Lekapan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-094",
+    "level": 3,
+    "text": "Aksesori",
+    "module_page": 268,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Aksesori"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-096",
+    "level": 3,
+    "text": "Embedded Floor Lighting",
+    "module_page": 269,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Embedded Floor Lighting"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-098",
+    "level": 3,
+    "text": "Aspek Pemasangan & Pengurusan untuk Kontraktor:",
+    "module_page": 269,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Aspek Pemasangan & Pengurusan untuk Kontraktor:"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-099",
+    "level": 3,
+    "text": "Kalis Air dan Saliran (Waterproofing & Drainage)",
+    "module_page": 269,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air dan Saliran (Waterproofing & Drainage)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-103",
+    "level": 3,
+    "text": "Ketahanan Beban (Load Rating)",
+    "module_page": 269,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Ketahanan Beban (Load Rating)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-105",
+    "level": 3,
+    "text": "Pemasangan Rata",
+    "module_page": 269,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan Rata"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-107",
+    "level": 3,
+    "text": "Penebukan Teras (Coring)",
+    "module_page": 269,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penebukan Teras (Coring)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-109",
+    "level": 3,
+    "text": "Sangga dan Konduit",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Sangga dan Konduit"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-111",
+    "level": 3,
+    "text": "Lampu Suar (Beacon Light)",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lampu Suar (Beacon Light)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-113",
+    "level": 3,
+    "text": "Aspek Pemasangan & Pengurusan untuk Kontraktor:",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Aspek Pemasangan & Pengurusan untuk Kontraktor:"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-114",
+    "level": 3,
+    "text": "Penyediaan Tapak (Foundation)",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penyediaan Tapak (Foundation)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-116",
+    "level": 3,
+    "text": "Jarak Seragam (Consistent Spacing)",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Jarak Seragam (Consistent Spacing)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-118",
+    "level": 3,
+    "text": "Perlindungan Kabel",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Perlindungan Kabel"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-120",
+    "level": 3,
+    "text": "Penjajaran Menegak (Vertical Alignment)",
+    "module_page": 270,
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penjajaran Menegak (Vertical Alignment)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-122",
+    "level": 2,
+    "text": "Pengairan (Irrigation)",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-123",
+    "level": 3,
+    "text": "Manual – Tap Points",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Manual – Tap Points"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-125",
+    "level": 3,
+    "text": "Komponen Utama",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Komponen Utama"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-126",
+    "level": 3,
+    "text": "Pili Air (Tap Point/Hose Bib)",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pili Air (Tap Point/Hose Bib)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-128",
+    "level": 3,
+    "text": "Paip Sambungan (Connection Pipe)",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Paip Sambungan (Connection Pipe)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-130",
+    "level": 3,
+    "text": "Injap Henti (Stopcock)",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Injap Henti (Stopcock)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-132",
+    "level": 3,
+    "text": "Aplikasi dan Kesesuaian",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Aplikasi dan Kesesuaian"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-137",
+    "level": 3,
+    "text": "Peranan dan Tanggungjawab Kontraktor",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Peranan dan Tanggungjawab Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-138",
+    "level": 3,
+    "text": "Penempatan",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Penempatan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-140",
+    "level": 3,
+    "text": "Pemasangan",
+    "module_page": 271,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pemasangan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-142",
+    "level": 3,
+    "text": "Sambungan Paip",
+    "module_page": 272,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Sambungan Paip"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-144",
+    "level": 3,
+    "text": "Tekanan Air",
+    "module_page": 272,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Tekanan Air"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-146",
+    "level": 3,
+    "text": "Sistem Pengairan Automatik",
+    "module_page": 272,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Sistem Pengairan Automatik"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-148",
+    "level": 3,
+    "text": "Komponen Utama Sistem Automatik",
+    "module_page": 272,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Komponen Utama Sistem Automatik"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-149",
+    "level": 3,
+    "text": "Alat Kawalan (Controller/Timer)",
+    "module_page": 272,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Alat Kawalan (Controller/Timer)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-151",
+    "level": 3,
+    "text": "Injap Solenoid (Solenoid Valves)",
+    "module_page": 272,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Injap Solenoid (Solenoid Valves)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-153",
+    "level": 3,
+    "text": "Rangkaian Paip",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Rangkaian Paip"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-155",
+    "level": 3,
+    "text": "Pengeluar Air (Emitters)",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pengeluar Air (Emitters)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-157",
+    "level": 3,
+    "text": "Jenis-jenis Pengeluar Air (Emitters)",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Jenis-jenis Pengeluar Air (Emitters)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-158",
+    "level": 3,
+    "text": "Sistem Semburan (Sprinkler System)",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Sistem Semburan (Sprinkler System)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-160",
+    "level": 3,
+    "text": "Pop-up Spray Heads",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pop-up Spray Heads"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-162",
+    "level": 3,
+    "text": "Rotors",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Rotors"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-164",
+    "level": 3,
+    "text": "Prinsip Pemasangan Kritikal",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Prinsip Pemasangan Kritikal"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-166",
+    "level": 3,
+    "text": "Sistem Titisan (Drip Irrigation System)",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Sistem Titisan (Drip Irrigation System)"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-168",
+    "level": 3,
+    "text": "Jenis",
+    "module_page": 273,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Jenis"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-175",
+    "level": 3,
+    "text": "Peranan dan Tanggungjawab Kontraktor",
+    "module_page": 274,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Peranan dan Tanggungjawab Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-176",
+    "level": 3,
+    "text": "Perancangan & Pemasangan",
+    "module_page": 274,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Perancangan & Pemasangan"
+    ]
+   },
+   {
+    "row_id": "T03B05-ROW-178",
+    "level": 3,
+    "text": "Pentauliahan Sistem (System Commissioning)",
+    "module_page": 274,
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pentauliahan Sistem (System Commissioning)"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 8
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Pencahayaan / Lighting",
+    "row_id": "T03B05-ROW-001",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Pengairan (Irrigation)",
+    "row_id": "T03B05-ROW-122",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Pencahayaan / Lighting",
+   "G2: Pengairan (Irrigation)",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 2,
+   "closing_screens": 3,
+   "minimum_total_screens": 7,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Pencahayaan / Lighting",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Pengairan (Irrigation)",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 7,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 22,
+  "propositions": [
+   {
+    "row_id": "T03B05-ROW-014",
+    "module_page": 262,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Ini adalah peringkat paling kritikal. Tapak konkrit mesti dibina mengikut spesifikasi jurutera (saiz, kedalaman, dan saiz tetulang). Anchor bolt mesti dipasang dengan tepat dan dibiarkan curing secukupnya sebelum tiang dipasang.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pembinaan Tapak Konkrit (Concrete Footing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-016",
+    "module_page": 263,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Lazimnya menggunakan voltan 240V. Semua kabel bawah tanah mesti dilindungi menggunakan paip konduit (cth: paip GI atau uPVC) pada kedalaman yang betul untuk mengelakkan kerosakan. Sambungan elektrik di dasar tiang mesti dibuat di dalam petak yang kalis air.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pendawaian Elektrikal"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-018",
+    "module_page": 263,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Pemasangan tiang yang tinggi dan berat memerlukan penggunaan jentera seperti kren. Kontraktor mesti memastikan tiang dipasang dengan tegak (perfectly vertical) dan semua nat diikat dengan kemas.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan Tiang"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-032",
+    "module_page": 264,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Jarak antara setiap bollard adalah sangat penting. Ia mesti dipasang mengikut pelan lampu untuk memastikan pencahayaan yang sekata dan mengelakkan wujudnya \"titik panas\" (hot spots) atau kawasan gelap di antara lampu.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Jarak Pemasangan (Spacing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-034",
+    "module_page": 264,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Semua bollard dalam satu barisan mesti dipasang dengan penjajaran yang sempurna, sama ada dari segi garisan lurus mahupun ketinggian. Gunakan tali penanda (string line) semasa pemasangan untuk memastikan ketepatan.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penjajaran (Alignment)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-036",
+    "module_page": 264,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Setiap bollard mesti dipasang dengan kukuh pada tapak konkrit kecil atau permukaan keras sedia ada untuk mengelakkannya daripada longgar, condong, atau mudah dirosakkan.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan Tapak"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-050",
+    "module_page": 265,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Ini adalah aspek paling kritikal bagi uplight. Lekapan lampu mesti mempunyai IP Rating yang tinggi (IP67 atau IP68) kerana ia terdedah secara langsung kepada air hujan, air siraman, dan kelembapan tanah. Sambungan wayar juga mesti menggunakan penyambung kalis air yang berkualiti.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air (Waterproofing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-052",
+    "module_page": 265,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Lokasi pemasangan dan cara lampu dihalakan adalah kunci kepada kesan akhir. Kontraktor mesti merujuk kepada pelan reka bentuk untuk mengetahui:",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penempatan dan Sudut Pancaran"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-060",
+    "module_page": 266,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Lekapan mesti dipasang dengan stabil di dalam tanah. Pastikan ia tidak mudah beralih kedudukan dan kanta lampu tidak mudah tertimbus oleh tanah atau sungkupan (mulch).",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-076",
+    "module_page": 267,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Bagi lampu bawah air, penarafan IP (Ingress Protection) yang betul (biasanya IP68) adalah mandatori. Semua sambungan kabel mesti kedap air sepenuhnya untuk mengelakkan litar pintas dan bahaya elektrik.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air (Waterproofing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-080",
+    "module_page": 267,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Ikut arahan pemasangan pengeluar dengan teliti kerana produk ini selalunya sensitif dan mempunyai keperluan pemasangan yang unik.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pematuhan Spesifikasi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-089",
+    "module_page": 268,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Tugas paling kritikal adalah menyasarkan lampu dengan tepat. Pemasangan perlu dilakukan pada waktu malam untuk melihat kesan sebenar dan membuat pelarasan bagi mengelakkan silau (glare) atau tumpahan cahaya yang tidak diingini.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penyasaran dan Penjajaran (Aiming & Alignment)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-104",
+    "module_page": 269,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Pilih lampu dengan ketahanan beban yang sesuai. Jika ia dipasang di kawasan laluan kenderaan, ia mesti mempunyai spesifikasi drive-over.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Ketahanan Beban (Load Rating)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-106",
+    "module_page": 269,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Bahagian atas lampu mesti dipasang rata sepenuhnya dengan permukaan sekeliling untuk mengelakkannya daripada menjadi bahaya tersadung (tripping hazard).",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pemasangan Rata"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-108",
+    "module_page": 269,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Untuk pemasangan pada konkrit atau jubin sedia ada, kerja-kerja penebukan teras yang kemas dan tepat adalah diperlukan.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penebukan Teras (Coring)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-110",
+    "module_page": 270,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Semua kabel bawah tanah mesti dilindungi oleh konduit yang sesuai.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Sangga dan Konduit"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-117",
+    "module_page": 270,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Pemasangan mesti mengikut jarak yang ditetapkan dalam pelan reka bentuk untuk memastikan pencahayaan yang sekata dan penampilan yang kemas serta beritma.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Jarak Seragam (Consistent Spacing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-119",
+    "module_page": 270,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kabel elektrik mesti disalurkan melalui konduit bawah tanah dari satu tiang ke tiang yang lain untuk perlindungan daripada kerosakan mekanikal dan kelembapan.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Perlindungan Kabel"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-139",
+    "module_page": 271,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Memasang pili air mengikut lokasi yang ditunjukkan dalam pelan landskap. Lokasi mesti strategik agar panjang hos yang munasabah boleh mencapai semua kawasan tanaman.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Penempatan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-143",
+    "module_page": 272,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Melakukan kerja-kerja penyambungan paip dari sumber air utama ke pili dengan kemas dan tanpa kebocoran. Semua sambungan bawah tanah mesti diuji tekanannya (pressure test) sebelum ditimbus.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Sambungan Paip"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-165",
+    "module_page": 273,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kontraktor mesti memastikan liputan kepala-ke-kepala (head-to-head coverage), di mana semburan dari satu kepala sprinkler sampai ke kepala sprinkler yang seterusnya. Ini menjamin agihan air yang sekata tanpa tompok kering.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Prinsip Pemasangan Kritikal"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-189",
+    "module_page": 275,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Memberi penerangan dan latihan asas kepada klien atau pasukan penyelenggaraan tentang cara mengendalikan controller, mengenal pasti zon, dan menjalankan sistem secara manual jika perlu. Menyediakan lukisan siap bina (as-built drawing) yang menunjukkan lokasi sebenar semua paip dan komponen utama.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pentauliahan Sistem (System Commissioning)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 23,
+  "statements": [
+   {
+    "row_id": "T03B05-ROW-002",
+    "module_page": 262,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja. Bagi seorang kontraktor, pemasangan sistem pencahayaan bukan sekadar memasang lampu, tetapi ia melibatkan pemahaman tentang sistem elektrikal, pematuhan kepada piawaian keselamatan, dan pelaksanaan yang teliti untuk mencapai kesan visual yang dikehendaki oleh pereka bentuk.",
+    "heading_path": [
+     "Pencahayaan / Lighting"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-004",
+    "module_page": 262,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter. Ia direka untuk memberikan pencahayaan umum (general illumination) pada skala yang luas.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pole Light"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-014",
+    "module_page": 262,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ini adalah peringkat paling kritikal. Tapak konkrit mesti dibina mengikut spesifikasi jurutera (saiz, kedalaman, dan saiz tetulang). Anchor bolt mesti dipasang dengan tepat dan dibiarkan curing secukupnya sebelum tiang dipasang.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pembinaan Tapak Konkrit (Concrete Footing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-022",
+    "module_page": 263,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Bollard Light ialah lampu tiang aras rendah, dengan ketinggian lazimnya antara 0.6 hingga 1.2 meter. Ia berbentuk seperti tiang pendek atau tonggak.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Bollard Light ialah lampu tiang aras rendah, dengan ketinggian lazimnya antara 0.6 hingga 1.2 meter. Ia berbentuk seperti tiang pendek atau tonggak."
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-032",
+    "module_page": 264,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Jarak antara setiap bollard adalah sangat penting. Ia mesti dipasang mengikut pelan lampu untuk memastikan pencahayaan yang sekata dan mengelakkan wujudnya \"titik panas\" (hot spots) atau kawasan gelap di antara lampu.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Jarak Pemasangan (Spacing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-038",
+    "module_page": 264,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pastikan bahan bollard yang dibekalkan adalah tahan lasak (cth: aluminium die-cast, keluli tahan karat) kerana ia terdedah kepada risiko hentaman dan vandalisme.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Ketahanan Bahan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-040",
+    "module_page": 265,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Uplight adalah lekapan lampu kompak yang dipasang pada aras tanah atau ditanam separa di dalam tanah (recessed). Fungsinya adalah untuk menyorotkan cahaya ke arah atas.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Uplight"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-043",
+    "module_page": 265,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Fungsi utamanya adalah untuk menyerlahkan ciri-ciri landskap yang menarik seperti pokok dengan bentuk unik, arca, tekstur dinding, atau elemen seni bina.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pencahayaan Aksen (Accent Lighting)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-050",
+    "module_page": 265,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ini adalah aspek paling kritikal bagi uplight. Lekapan lampu mesti mempunyai IP Rating yang tinggi (IP67 atau IP68) kerana ia terdedah secara langsung kepada air hujan, air siraman, dan kelembapan tanah. Sambungan wayar juga mesti menggunakan penyambung kalis air yang berkualiti.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air (Waterproofing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-052",
+    "module_page": 265,
+    "markers": [
+     "adalah",
+     "merujuk kepada"
+    ],
+    "text": "Lokasi pemasangan dan cara lampu dihalakan adalah kunci kepada kesan akhir. Kontraktor mesti merujuk kepada pelan reka bentuk untuk mengetahui:",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penempatan dan Sudut Pancaran"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-062",
+    "module_page": 266,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Pencahayaan Khas merujuk kepada kategori lampu yang digunakan untuk tujuan spesifik atau untuk mencipta impak visual yang unik dan artistik, di luar fungsi pencahayaan umum. Ia selalunya menjadi elemen reka bentuk utama yang memerlukan pemasangan yang sangat teliti.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Pencahayaan Khas (Special Lighting)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-076",
+    "module_page": 267,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Bagi lampu bawah air, penarafan IP (Ingress Protection) yang betul (biasanya IP68) adalah mandatori. Semua sambungan kabel mesti kedap air sepenuhnya untuk mengelakkan litar pintas dan bahaya elektrik.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air (Waterproofing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-082",
+    "module_page": 267,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ini adalah dua jenis lampu yang paling biasa digunakan dalam landskap, dibezakan oleh sudut pancaran cahayanya.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Flood Light / Spot Light"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-089",
+    "module_page": 268,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tugas paling kritikal adalah menyasarkan lampu dengan tepat. Pemasangan perlu dilakukan pada waktu malam untuk melihat kesan sebenar dan membuat pelarasan bagi mengelakkan silau (glare) atau tumpahan cahaya yang tidak diingini.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penyasaran dan Penjajaran (Aiming & Alignment)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-091",
+    "module_page": 268,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pastikan lokasi tapak lampu adalah stabil. Jika dipasang di atas tanah, gunakan pancang (stake) yang kukuh. Jika di dinding atau struktur, gunakan pendakap (bracket) yang sesuai.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lokasi Pemasangan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-100",
+    "module_page": 269,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ini adalah faktor kegagalan utama.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Kalis Air dan Saliran (Waterproofing & Drainage)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-108",
+    "module_page": 269,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Untuk pemasangan pada konkrit atau jubin sedia ada, kerja-kerja penebukan teras yang kemas dan tepat adalah diperlukan.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Penebukan Teras (Coring)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-112",
+    "module_page": 270,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Lampu Suar adalah lekapan lampu berbentuk tiang menegak, biasanya berketinggian rendah hingga sederhana. Fungsi utamanya adalah sebagai penanda visual untuk membimbing pergerakan dan mengenal pasti sempadan. Ia sering digunakan untuk menandakan laluan pejalan kaki, jalan masuk, sempadan kawasan, atau perubahan aras seperti tangga. Cahaya yang dihasilkan selalunya lembut dan diarahkan ke bawah atau sisi untuk mengelakkan silau.",
+    "heading_path": [
+     "Pencahayaan / Lighting",
+     "Lampu Suar (Beacon Light)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-124",
+    "module_page": 271,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sistem manual adalah kaedah pengairan paling asas yang bergantung sepenuhnya pada intervensi manusia. Ia terdiri daripada pili-pili air (tap points atau hose bibs) yang ditempatkan secara strategik di seluruh kawasan landskap. Air disalurkan kepada tanaman menggunakan hos getah yang disambungkan secara manual ke pili-pili ini.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Manual – Tap Points"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-150",
+    "module_page": 272,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Alat kawalan adalah \"Otak\" kepada sistem. Ia adalah peranti elektronik yang memprogramkan zon, masa, dan kekerapan penyiraman.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Alat Kawalan (Controller/Timer)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-167",
+    "module_page": 273,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Menghantar air secara perlahan-lahan dan terus ke zon akar tanaman. Ia adalah sistem paling efisien kerana mengurangkan kehilangan air melalui penyejatan dan air larian.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Sistem Titisan (Drip Irrigation System)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-174",
+    "module_page": 274,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sistem ini beroperasi pada tekanan air rendah, jadi pemasangan penapis (filter) dan pengatur tekanan (pressure regulator) adalah mandatori untuk mengelakkan kerosakan dan penyumbatan.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Jenis"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-179",
+    "module_page": 274,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ini adalah fasa kritikal selepas pemasangan fizikal.",
+    "heading_path": [
+     "Pengairan (Irrigation)",
+     "Pentauliahan Sistem (System Commissioning)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 45,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "source_attested": 0,
+  "subjects": [],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 32,
+  "terms": [
+   {
+    "row_id": "T03B05-ROW-013",
+    "term": "Pembinaan Tapak Konkrit (Concrete Footing)",
+    "module_page": 262,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-031",
+    "term": "Jarak Pemasangan (Spacing)",
+    "module_page": 264,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-033",
+    "term": "Penjajaran (Alignment)",
+    "module_page": 264,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-042",
+    "term": "Pencahayaan Aksen (Accent Lighting)",
+    "module_page": 265,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-049",
+    "term": "Kalis Air (Waterproofing)",
+    "module_page": 265,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-057",
+    "term": "Kawalan Silau (Glare Control)",
+    "module_page": 266,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-061",
+    "term": "Pencahayaan Khas (Special Lighting)",
+    "module_page": 266,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-064",
+    "term": "Lampu Bawah Air (Underwater Lighting)",
+    "module_page": 266,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-066",
+    "term": "Gentian Optik (Fibre Optic Lighting)",
+    "module_page": 266,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-068",
+    "term": "Jalur LED (LED Strips)",
+    "module_page": 267,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-070",
+    "term": "Projektor Gobo (Gobo Projector)",
+    "module_page": 267,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-083",
+    "term": "Lampu Limpah (Flood Light)",
+    "module_page": 268,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-085",
+    "term": "Lampu Tumpu (Spot Light)",
+    "module_page": 268,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-088",
+    "term": "Penyasaran dan Penjajaran (Aiming & Alignment)",
+    "module_page": 268,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-099",
+    "term": "Kalis Air dan Saliran (Waterproofing & Drainage)",
+    "module_page": 269,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-103",
+    "term": "Ketahanan Beban (Load Rating)",
+    "module_page": 269,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-107",
+    "term": "Penebukan Teras (Coring)",
+    "module_page": 269,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-111",
+    "term": "Lampu Suar (Beacon Light)",
+    "module_page": 270,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-114",
+    "term": "Penyediaan Tapak (Foundation)",
+    "module_page": 270,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-116",
+    "term": "Jarak Seragam (Consistent Spacing)",
+    "module_page": 270,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-120",
+    "term": "Penjajaran Menegak (Vertical Alignment)",
+    "module_page": 270,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-122",
+    "term": "Pengairan (Irrigation)",
+    "module_page": 271,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-126",
+    "term": "Pili Air (Tap Point/Hose Bib)",
+    "module_page": 271,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-128",
+    "term": "Paip Sambungan (Connection Pipe)",
+    "module_page": 271,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-130",
+    "term": "Injap Henti (Stopcock)",
+    "module_page": 271,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-149",
+    "term": "Alat Kawalan (Controller/Timer)",
+    "module_page": 272,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-151",
+    "term": "Injap Solenoid (Solenoid Valves)",
+    "module_page": 272,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-155",
+    "term": "Pengeluar Air (Emitters)",
+    "module_page": 273,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-157",
+    "term": "Jenis-jenis Pengeluar Air (Emitters)",
+    "module_page": 273,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-158",
+    "term": "Sistem Semburan (Sprinkler System)",
+    "module_page": 273,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-166",
+    "term": "Sistem Titisan (Drip Irrigation System)",
+    "module_page": 273,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B05-ROW-178",
+    "term": "Pentauliahan Sistem (System Commissioning)",
+    "module_page": 274,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T03-B05",
+  "rows": 189,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   262,
+   275
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 177,
+  "carried_forward_rows": 12,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

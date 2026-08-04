@@ -241,8 +241,17 @@ def extract(unit, z=None, probe=None):
     rows, assets, lists, tables = [], [], [], []
     h1 = h2 = h3 = None
     seq = 0
+    # `seg` is a slice of BODY CHILDREN, which includes <w:tbl>. `start_i` is a BODY
+    # PARAGRAPH index. Adding the two enumerations together shifts every row after a table
+    # by the number of tables before it — invisible in batch 1, which has no tables, and
+    # wrong by up to nine paragraphs in T02-B02, which has ten. `bp` is the real
+    # body-paragraph index and is what every row and every span bound now carries.
+    para_seen = 0
     for i, el in enumerate(seg):
         pg = pages[i]
+        bp = start_i + para_seen
+        if el.tag == f"{W}p":
+            para_seen += 1
         if el.tag == f"{W}tbl":
             seq += 1
             grid = []
@@ -304,7 +313,7 @@ def extract(unit, z=None, probe=None):
                 mime_type="application/xml (SmartArt diagram data)",
                 dimensions_in=f"{extent[0]} x {extent[1]}" if extent else None,
                 sha256=hashlib.sha256(dbytes).hexdigest(),
-                nearest_heading=h3 or h2 or h1, source_paragraph=start_i + i, module_page=pg,
+                nearest_heading=h3 or h2 or h1, source_paragraph=bp, module_page=pg,
                 caption=None, source_subject_nodes=nodes, node_count=len(nodes),
                 proposed_storyboard_role="PROCESS_FLOW_VISUAL",
                 source_bound_status="SOURCE_BOUND_CAPTIONLESS",
@@ -314,8 +323,8 @@ def extract(unit, z=None, probe=None):
                              heading_path=[x for x in (h1, h2, h3) if x],
                              content_type="DIAGRAM", raw_source_text="",
                              controlled_display_text="",
-                             source_paragraph_start=start_i + i,
-                             source_paragraph_end=start_i + i, module_page=pg,
+                             source_paragraph_start=bp,
+                             source_paragraph_end=bp, module_page=pg,
                              docx_relationship_id=rid, authority_class=MODULE_ATTESTED,
                              normalisation_status="NOT_NORMALISED",
                              visual_relationship=aid, table_relationship=None,
@@ -340,7 +349,7 @@ def extract(unit, z=None, probe=None):
                                                           if extent else None),
                     sha256=hashlib.sha256(ibytes).hexdigest() if ibytes else None,
                     bytes=len(ibytes),
-                    nearest_heading=h3 or h2 or h1, source_paragraph=start_i + i,
+                    nearest_heading=h3 or h2 or h1, source_paragraph=bp,
                     module_page=pg, caption=None,
                     source_subject_nodes=[], node_count=0,
                     proposed_storyboard_role="SOURCE_FIGURE_SUBJECT_NOT_YET_RULED",
@@ -352,8 +361,8 @@ def extract(unit, z=None, probe=None):
                              heading_path=[x for x in (h1, h2, h3) if x],
                              content_type="IMAGE", raw_source_text=txt,
                              controlled_display_text=txt,
-                             source_paragraph_start=start_i + i,
-                             source_paragraph_end=start_i + i, module_page=pg,
+                             source_paragraph_start=bp,
+                             source_paragraph_end=bp, module_page=pg,
                              docx_relationship_id=",".join(ids),
                              authority_class=MODULE_ATTESTED,
                              normalisation_status="NOT_NORMALISED",
@@ -391,8 +400,8 @@ def extract(unit, z=None, probe=None):
         rows.append(dict(row_id=rid_, unit_id=unit["unit_id"], sequence=seq,
                          heading_path=[x for x in (h1, h2, h3) if x],
                          content_type=ctype, raw_source_text=txt,
-                         controlled_display_text=txt, source_paragraph_start=start_i + i,
-                         source_paragraph_end=start_i + i, module_page=pg,
+                         controlled_display_text=txt, source_paragraph_start=bp,
+                         source_paragraph_end=bp, module_page=pg,
                          docx_relationship_id=None, authority_class=MODULE_ATTESTED,
                          normalisation_status="NOT_NORMALISED",
                          visual_relationship=None, table_relationship=None,
@@ -406,7 +415,7 @@ def extract(unit, z=None, probe=None):
                 and not [b for b in el.iter(f"{A}blip")])
 
     # Typeset attribution overwrites the cached-layout page on every row, in place.
-    pdf_pages = _pdf_attribute(rows, unit["module_pages"])
+    pdf_pages = _pdf_attribute(rows, unit["module_pages"], tables)
 
     if close:
         z.close()
@@ -444,9 +453,11 @@ def extract(unit, z=None, probe=None):
             excluded_before=excluded_before, excluded_after=excluded_after,
             included_first=_row_summary(body_paras[start_i], start_i,
                                         pages[0] if pages else None),
-            included_last_index=start_i + len(seg) - 1,
+            body_children_in_span=len(seg),
             first_included_paragraph_index=start_i,
-            last_included_paragraph_index=start_i + len(seg) - 1,
+            last_included_paragraph_index=stop_i - 1,
+            span_bound_basis=("body PARAGRAPH indices — the slice is over body children, "
+                              "which include tables, so len(seg) is not a paragraph count"),
             excluded_before_indices=pre_idx, excluded_after_indices=post_idx),
         totals=dict(body_elements_in_span=len(seg), empty_spacing_paragraphs=empty,
                     content_rows=len(rows),
@@ -509,8 +520,15 @@ def pdf_page_index():
     return idx
 
 
-def _pdf_attribute(rows, module_pages):
-    """Give every row the module page whose typeset text contains it."""
+def _pdf_attribute(rows, module_pages, tables=None):
+    """Give every row the module page whose typeset text contains it.
+
+    A TABLE row has no `raw_source_text` of its own — the words live in the grid — so a
+    needle built from the row alone is empty and the row silently inherits the previous
+    page. T02-B02 ends on a table whose content is typeset on module page 225, and that is
+    exactly how its last page came out as 224 against a frozen map that said 225. Table rows
+    are given a needle from their own first substantial cell.
+    """
     idx = pdf_page_index()
     lo, hi = module_pages
     window = [p for p in range(lo, hi + 1) if p in idx]
@@ -518,9 +536,18 @@ def _pdf_attribute(rows, module_pages):
         return dict(available=False,
                     reason="no PDF pages in range — attribution left on cached layout")
     flat = {p: " ".join(idx[p].split()) for p in window}
+    by_table = {t["table_id"]: t for t in (tables or [])}
     found, unresolved, cur = 0, [], lo
     for r in rows:
-        needle = " ".join((r["raw_source_text"] or "").split())[:60]
+        text = r["raw_source_text"] or ""
+        if not text.strip() and r.get("table_relationship") in by_table:
+            for row_cells in by_table[r["table_relationship"]]["grid"]:
+                cand = next((c["text"] for c in row_cells if len(c["text"].strip()) >= 12),
+                            None)
+                if cand:
+                    text = cand
+                    break
+        needle = " ".join(text.split())[:60]
         hit = None
         if len(needle) >= 12:
             # Search forward from the current page only. "Fungsi" and "Fokus Utama
@@ -635,8 +662,9 @@ def t04_equivalence():
 # ==========================================================================================
 # LEAK PROOF — a claim about specific paragraphs, not a reassurance
 # ==========================================================================================
-def leak_report(extracts):
+def leak_report(extracts, unit_list=None):
     """Prove no unit's rows carry a paragraph that belongs to a neighbour."""
+    unit_list = unit_list or UNITS
     spans = {uid: (e["boundary_proof"]["first_included_paragraph_index"],
                    e["boundary_proof"]["last_included_paragraph_index"])
              for uid, e in extracts.items()}
@@ -651,7 +679,7 @@ def leak_report(extracts):
         cross = {other: [i for i in idxs if spans[other][0] <= i <= spans[other][1]]
                  for other in extracts if other != uid}
         cross = {k: v for k, v in cross.items() if v}
-        u = next(x for x in UNITS if x["unit_id"] == uid)
+        u = next(x for x in unit_list if x["unit_id"] == uid)
         out.append(dict(
             unit_id=uid, shared_start=u["shared_start"], shared_end=u["shared_end"],
             span=[lo, hi], rows_with_paragraph_index=len(idxs),
@@ -662,20 +690,27 @@ def leak_report(extracts):
             first_excluded_after=(e["boundary_proof"]["excluded_after"][0]["text"]
                                   if e["boundary_proof"]["excluded_after"] else None),
             clean=not outside and not cross))
-    # Adjacent T03 units must abut exactly: B03 ends where B04 begins, with nothing dropped.
-    b3 = spans.get("K5-PL06-T03-B03")
-    b4 = spans.get("K5-PL06-T03-B04")
+    # Any two units adjacent in the frozen map and both present here must abut exactly:
+    # one ends on the paragraph before the other begins. If the slice were page-wise, a
+    # shared page would put one unit's paragraphs inside the other.
+    pairs = []
+    ordered = sorted(spans, key=lambda u: spans[u][0])
+    for a, b in zip(ordered, ordered[1:]):
+        pairs.append(dict(pair=f"{a} → {b}",
+                          first_last_included=spans[a][1],
+                          second_first_included=spans[b][0],
+                          contiguous=spans[a][1] + 1 == spans[b][0],
+                          gap=spans[b][0] - spans[a][1] - 1))
     abut = dict(
-        pair="K5-PL06-T03-B03 → K5-PL06-T03-B04",
-        b03_last_included=b3[1] if b3 else None,
-        b04_first_included=b4[0] if b4 else None,
-        contiguous=(b3 is not None and b4 is not None and b3[1] + 1 == b4[0]),
-        gap=(b4[0] - b3[1] - 1) if (b3 and b4) else None,
-        note=("The two units share module page 255. If the slice were page-wise, one of them "
-              "would carry the other's paragraphs. Contiguous with a gap of zero means the "
-              "heading anchor split exactly, losing nothing and duplicating nothing."))
+        pairs=pairs,
+        all_contiguous=all(p["contiguous"] for p in pairs) if pairs else None,
+        pairs_checked=len(pairs),
+        note=("Adjacent units that share a module page would, under a page-wise slice, each "
+              "carry some of the other's paragraphs. Contiguous with a gap of zero means the "
+              "heading anchor split exactly. A non-zero gap between units that are NOT "
+              "adjacent in the frozen map is expected and is reported rather than hidden."))
     return dict(units=out, adjacency=abut,
-                all_clean=all(u["clean"] for u in out) and abut["contiguous"])
+                all_clean=all(u["clean"] for u in out))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,584 @@
+{
+ "unit_id": "K5-PL06-T07-B01",
+ "lesson_title": "Demobilisasi",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 19,
+  "tree": [
+   {
+    "row_id": "T07B01-ROW-001",
+    "level": 1,
+    "text": "DEMOBILISASI",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-002",
+    "level": 2,
+    "text": "Tujuan Demobilisasi",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-003",
+    "level": 3,
+    "text": "Keselamatan Tapak",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi",
+     "Keselamatan Tapak"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-005",
+    "level": 3,
+    "text": "Kepatuhan Kontrak",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi",
+     "Kepatuhan Kontrak"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-007",
+    "level": 3,
+    "text": "Pengurangan Kos",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi",
+     "Pengurangan Kos"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-009",
+    "level": 3,
+    "text": "Pemulihan Alam Sekitar",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi",
+     "Pemulihan Alam Sekitar"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-011",
+    "level": 3,
+    "text": "Pengurusan Logistik",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi",
+     "Pengurusan Logistik"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-013",
+    "level": 2,
+    "text": "Proses Demoblisasi",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-014",
+    "level": 3,
+    "text": "Pengeluaran Peralatan dan Jentera",
+    "module_page": 303,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pengeluaran Peralatan dan Jentera"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-022",
+    "level": 3,
+    "text": "Pembuangan Bahan Berlebihan dan Sisa Binaan",
+    "module_page": 304,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pembuangan Bahan Berlebihan dan Sisa Binaan"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-029",
+    "level": 3,
+    "text": "Pembersihan Tapak Akhir",
+    "module_page": 305,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pembersihan Tapak Akhir"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-037",
+    "level": 3,
+    "text": "Penyingkiran Kemudahan Sementara",
+    "module_page": 306,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Penyingkiran Kemudahan Sementara"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-046",
+    "level": 3,
+    "text": "Pemulihan Tapak (Jika Diperlukan)",
+    "module_page": 306,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pemulihan Tapak (Jika Diperlukan)"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-054",
+    "level": 3,
+    "text": "Penyerahan dan Dokumentasi",
+    "module_page": 307,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Penyerahan dan Dokumentasi"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-056",
+    "level": 3,
+    "text": "Pemeriksaan Tapak Akhir (Final Site Inspection)",
+    "module_page": 307,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pemeriksaan Tapak Akhir (Final Site Inspection)"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-058",
+    "level": 3,
+    "text": "Dokumentasi",
+    "module_page": 307,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Dokumentasi"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-060",
+    "level": 3,
+    "text": "Penyelesaian Pembayaran",
+    "module_page": 307,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Penyelesaian Pembayaran"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-062",
+    "level": 3,
+    "text": "Spesifikasi",
+    "module_page": 307,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Spesifikasi"
+    ]
+   },
+   {
+    "row_id": "T07B01-ROW-064",
+    "level": 2,
+    "text": "Kepentingan Perancangan  Demobilisasi",
+    "module_page": 308,
+    "heading_path": [
+     "DEMOBILISASI",
+     "Kepentingan Perancangan  Demobilisasi"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Tujuan Demobilisasi",
+    "row_id": "T07B01-ROW-002",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Proses Demoblisasi",
+    "row_id": "T07B01-ROW-013",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Kepentingan Perancangan  Demobilisasi",
+    "row_id": "T07B01-ROW-064",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Tujuan Demobilisasi",
+   "G2: Proses Demoblisasi",
+   "G3: Kepentingan Perancangan  Demobilisasi",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 3,
+   "closing_screens": 3,
+   "minimum_total_screens": 8,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Tujuan Demobilisasi",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Proses Demoblisasi",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Kepentingan Perancangan  Demobilisasi",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 8,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 9,
+  "propositions": [
+   {
+    "row_id": "T07B01-ROW-015",
+    "module_page": 303,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Ini adalah langkah pertama dan paling jelas dalam demobilisasi. Semua peralatan dan jentera berat yang digunakan sepanjang projek perlu dikeluarkan dari tapak. Melibatkan penyenaraian dan pemeriksaan semua peralatan yang dimiliki atau disewa. Peralatan yang disewa akan dikembalikan kepada pembekal, manakala peralatan syarikat akan dipindahkan ke depoh atau tapak projek seterusnya.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pengeluaran Peralatan dan Jentera"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-021",
+    "module_page": 304,
+    "markers": [
+     "mesti",
+     "perlu"
+    ],
+    "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan. Jadual pengangkutan perlu diselaraskan untuk mengelakkan kelewatan. Peralatan sewa perlu diperiksa bersama pembekal untuk mengelakkan pertikaian kerosakan.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pengeluaran Peralatan dan Jentera"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-028",
+    "module_page": 305,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kontraktor perlu mematuhi Peraturan Kualiti Alam Sekeliling (Buangan Terjadual) jika ada sisa berbahaya, dan peraturan pengurusan sisa pepejal perbandaran. Kontraktor perlu menyediakan tong sampah industri (skip bins) yang mencukupi dan menguruskan pengangkutan sisa oleh syarikat yang berlesen.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pembuangan Bahan Berlebihan dan Sisa Binaan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-036",
+    "module_page": 306,
+    "markers": [
+     "mesti",
+     "perlu"
+    ],
+    "text": "Piawaian kebersihan mesti ditetapkan dalam kontrak. Tapak perlu bebas dari semua sisa pembinaan, kesan kotoran, dan debu.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pembersihan Tapak Akhir"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-038",
+    "module_page": 306,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kemudahan yang didirikan untuk menyokong projek perlu dibongkar dan dikeluarkan ini termasuk pejabat tapak, stor bahan sementara, tandas mudah alih, pagar keselamatan sementara, dan papan tanda projek.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Penyingkiran Kemudahan Sementara"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-045",
+    "module_page": 306,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kawasan di mana kemudahan sementara ini didirikan perlu dipulihkan (contohnya, menanam semula rumput jika tanah rosak).",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Penyingkiran Kemudahan Sementara"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-046",
+    "module_page": 306,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Pemulihan Tapak (Jika Diperlukan)",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pemulihan Tapak (Jika Diperlukan)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-053",
+    "module_page": 307,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kawasan yang dipulihkan perlu sepadan dengan landskap sekitarnya dan mematuhi piawaian pemulihan alam sekitar.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pemulihan Tapak (Jika Diperlukan)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-063",
+    "module_page": 307,
+    "markers": [
+     "mesti",
+     "perlu"
+    ],
+    "text": "Semua senarai semak demobilisasi mesti diisi dan ditandatangani. Dokumentasi yang lengkap dan tepat perlu disediakan.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Spesifikasi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 3,
+  "statements": [
+   {
+    "row_id": "T07B01-ROW-004",
+    "module_page": 303,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Tujuan Demobilisasi",
+     "Keselamatan Tapak"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-015",
+    "module_page": 303,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ini adalah langkah pertama dan paling jelas dalam demobilisasi. Semua peralatan dan jentera berat yang digunakan sepanjang projek perlu dikeluarkan dari tapak. Melibatkan penyenaraian dan pemeriksaan semua peralatan yang dimiliki atau disewa. Peralatan yang disewa akan dikembalikan kepada pembekal, manakala peralatan syarikat akan dipindahkan ke depoh atau tapak projek seterusnya.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Proses Demoblisasi",
+     "Pengeluaran Peralatan dan Jentera"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-065",
+    "module_page": 308,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Perancangan demobilisasi yang awal dan teliti akan mengelakkan kos yang tidak dijangka, menjamin kelancaran penutupan projek, dan memastikan reputasi baik kontraktor terjaga. Ia adalah komponen penting dalam kitaran hayat projek pembinaan landskap yang berjaya.",
+    "heading_path": [
+     "DEMOBILISASI",
+     "Kepentingan Perancangan  Demobilisasi"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 12,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "source_attested": 0,
+  "subjects": [],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "terms": [
+   {
+    "row_id": "T07B01-ROW-046",
+    "term": "Pemulihan Tapak (Jika Diperlukan)",
+    "module_page": 306,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T07B01-ROW-056",
+    "term": "Pemeriksaan Tapak Akhir (Final Site Inspection)",
+    "module_page": 307,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T07-B01",
+  "rows": 66,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   303,
+   309
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 53,
+  "carried_forward_rows": 13,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

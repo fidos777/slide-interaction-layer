@@ -1,0 +1,1235 @@
+{
+ "unit_id": "K5-PL06-T03-B01",
+ "lesson_title": "Kawasan Berturap dan Gelanggang Sukan & Permainan",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 48,
+  "tree": [
+   {
+    "row_id": "T03B01-ROW-001",
+    "level": 1,
+    "text": "KOMPONEN LANDSKAP",
+    "module_page": 226,
+    "heading_path": [
+     "KOMPONEN LANDSKAP"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-002",
+    "level": 2,
+    "text": "Kawasan Berturap / Paved Areas",
+    "module_page": 226,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-009",
+    "level": 3,
+    "text": "Trek Pejalan Kaki, Jogging & Berbasikal",
+    "module_page": 226,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas",
+     "Trek Pejalan Kaki, Jogging & Berbasikal"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-026",
+    "level": 3,
+    "text": "Tempat Letak Kereta (Parking)",
+    "module_page": 229,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas",
+     "Tempat Letak Kereta (Parking)"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-038",
+    "level": 2,
+    "text": "Gelanggang Sukan & Permainan",
+    "module_page": 231,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-042",
+    "level": 3,
+    "text": "Rajah 22: Contoh Alat Permainan Kanak-Kanak",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Rajah 22: Contoh Alat Permainan Kanak-Kanak"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-043",
+    "level": 3,
+    "text": "Contoh Komponen",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Contoh Komponen"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-045",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor:",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Fokus Utama Kontraktor:"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-046",
+    "level": 3,
+    "text": "Pematuhan Piawaian",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pematuhan Piawaian"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-048",
+    "level": 3,
+    "text": "Bahan",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Bahan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-050",
+    "level": 3,
+    "text": "Pemasangan Tapak Asas (Foundation)",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Tapak Asas (Foundation)"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-052",
+    "level": 3,
+    "text": "Permukaan Keselamatan (Safety Surfacing)",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Permukaan Keselamatan (Safety Surfacing)"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-054",
+    "level": 3,
+    "text": "Zon Selamat",
+    "module_page": 232,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Zon Selamat"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-056",
+    "level": 3,
+    "text": "Padang permainan",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Padang permainan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-058",
+    "level": 3,
+    "text": "Contoh Komponen",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Contoh Komponen"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-060",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-061",
+    "level": 3,
+    "text": "Penyediaan Sub-Gred",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penyediaan Sub-Gred"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-063",
+    "level": 3,
+    "text": "Sistem Saliran Bawah Tanah",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Sistem Saliran Bawah Tanah"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-065",
+    "level": 3,
+    "text": "Lapisan Asas",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Lapisan Asas"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-067",
+    "level": 3,
+    "text": "Penanaman Rumput",
+    "module_page": 233,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penanaman Rumput"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-069",
+    "level": 3,
+    "text": "Pemasangan Aksesori",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Aksesori"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-073",
+    "level": 3,
+    "text": "Contoh Komponen",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Contoh Komponen"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-075",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-076",
+    "level": 3,
+    "text": "Tapak Konkrit atau Asphalt",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Tapak Konkrit atau Asphalt"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-078",
+    "level": 3,
+    "text": "Kerataan Permukaan",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Kerataan Permukaan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-080",
+    "level": 3,
+    "text": "Lapisan Permukaan Akrilik/Poliuretana (PU)",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Lapisan Permukaan Akrilik/Poliuretana (PU)"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-082",
+    "level": 3,
+    "text": "Penandaan Garisan",
+    "module_page": 234,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penandaan Garisan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-084",
+    "level": 3,
+    "text": "Pemasangan Tiang dan Jaring",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Tiang dan Jaring"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-086",
+    "level": 3,
+    "text": "Litar permainan",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Litar permainan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-088",
+    "level": 3,
+    "text": "Contoh Komponen",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Contoh Komponen"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-090",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-091",
+    "level": 3,
+    "text": "Reka Letak Jajaran (Alignment Layout)",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Reka Letak Jajaran (Alignment Layout)"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-093",
+    "level": 3,
+    "text": "Bahan Permukaan",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Bahan Permukaan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-095",
+    "level": 3,
+    "text": "Penghadang Keselamatan",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penghadang Keselamatan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-097",
+    "level": 3,
+    "text": "Saliran Litar",
+    "module_page": 235,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Saliran Litar"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-099",
+    "level": 3,
+    "text": "Permainan lasak /extreme",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Permainan lasak /extreme"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-100",
+    "level": 3,
+    "text": "Contoh Komponen",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Contoh Komponen"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-102",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-103",
+    "level": 3,
+    "text": "Penglibatan Pakar",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penglibatan Pakar"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-105",
+    "level": 3,
+    "text": "Kelulusan Jurutera",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Kelulusan Jurutera"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-107",
+    "level": 3,
+    "text": "Bahan Berpiawaian",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Bahan Berpiawaian"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-109",
+    "level": 3,
+    "text": "Pengujian dan Pentauliahan",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pengujian dan Pentauliahan"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-111",
+    "level": 3,
+    "text": "Outdoor gym & fitnesss stations",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Outdoor gym & fitnesss stations"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-113",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-114",
+    "level": 3,
+    "text": "Bahan Tahan Karat",
+    "module_page": 236,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Bahan Tahan Karat"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-116",
+    "level": 3,
+    "text": "Pemasangan Kukuh",
+    "module_page": 237,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Kukuh"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-118",
+    "level": 3,
+    "text": "Susun Atur Selamat",
+    "module_page": 237,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Susun Atur Selamat"
+    ]
+   },
+   {
+    "row_id": "T03B01-ROW-120",
+    "level": 3,
+    "text": "Papan Arahan",
+    "module_page": 237,
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Papan Arahan"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 3
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 6,
+  "components": [
+   {
+    "name": "Contoh Komponen",
+    "row_id": "T03B01-ROW-043",
+    "module_page": 232,
+    "marker": "Fokus Utama Kontraktor:"
+   },
+   {
+    "name": "Contoh Komponen",
+    "row_id": "T03B01-ROW-058",
+    "module_page": 233,
+    "marker": "Fokus Utama Kontraktor"
+   },
+   {
+    "name": "Contoh Komponen",
+    "row_id": "T03B01-ROW-073",
+    "module_page": 234,
+    "marker": "Fokus Utama Kontraktor"
+   },
+   {
+    "name": "Contoh Komponen",
+    "row_id": "T03B01-ROW-088",
+    "module_page": 235,
+    "marker": "Fokus Utama Kontraktor"
+   },
+   {
+    "name": "Contoh Komponen",
+    "row_id": "T03B01-ROW-100",
+    "module_page": 236,
+    "marker": "Fokus Utama Kontraktor"
+   },
+   {
+    "name": "Outdoor gym & fitnesss stations",
+    "row_id": "T03B01-ROW-111",
+    "module_page": 236,
+    "marker": "Fokus Utama Kontraktor"
+   }
+  ]
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Kawasan Berturap / Paved Areas",
+    "row_id": "T03B01-ROW-002",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Gelanggang Sukan & Permainan",
+    "row_id": "T03B01-ROW-038",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [
+   "Contoh Komponen",
+   "Contoh Komponen",
+   "Contoh Komponen",
+   "Contoh Komponen",
+   "Contoh Komponen",
+   "Outdoor gym & fitnesss stations"
+  ],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Kawasan Berturap / Paved Areas",
+   "G2: Gelanggang Sukan & Permainan",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 2,
+   "closing_screens": 3,
+   "minimum_total_screens": 7,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "click-to-reveal",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "repeated component blocks",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Kawasan Berturap / Paved Areas",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Gelanggang Sukan & Permainan",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 7,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 18,
+  "propositions": [
+   {
+    "row_id": "T03B01-ROW-047",
+    "module_page": 232,
+    "markers": [
+     "mesti",
+     "wajib"
+    ],
+    "text": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing. Kontraktor mesti memastikan pembekal mengemukakan sijil pematuhan bagi produk mereka.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pematuhan Piawaian"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-049",
+    "module_page": 232,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Peralatan mestilah diperbuat daripada bahan yang tahan cuaca, tidak toksik, dan selamat (cth: High-Density Polyethylene - HDPE, keluli tergalvani panas).",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Bahan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-051",
+    "module_page": 232,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Setiap tiang struktur mesti dipasang dengan tapak konkrit yang kukuh di bawah tanah mengikut spesifikasi pengeluar untuk mengelakkan sebarang pergerakan atau ketidakstabilan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Tapak Asas (Foundation)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-055",
+    "module_page": 233,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kawasan di sekeliling setiap peralatan mesti bebas daripada sebarang halangan untuk mengelakkan perlanggaran semasa bermain.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Zon Selamat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-062",
+    "module_page": 233,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Aras tanah asal mesti dipadatkan dengan sempurna dan dibentuk untuk mempunyai kecerunan (gradient) yang minimum (biasanya 1-2%) bagi membantu aliran air permukaan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penyediaan Sub-Gred"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-068",
+    "module_page": 233,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Pemilihan jenis rumput yang tahan lasak (cth: Axonopus compressus, Zoysia) dan kaedah penanaman (kepingan rumput atau semaian) mestilah mengikut spesifikasi.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penanaman Rumput"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-077",
+    "module_page": 234,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Asas gelanggang mestilah sebuah papak konkrit bertetulang atau lapisan asphalt yang dibina di atas tapak yang telah dipadatkan dengan baik untuk mengelakkan keretakan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Tapak Konkrit atau Asphalt"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-079",
+    "module_page": 234,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Permukaan gelanggang mesti benar-benar rata dan licin, tanpa sebarang lekukan yang boleh menakung air. Ia mesti mempunyai kecerunan minimum untuk aliran air.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Kerataan Permukaan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-081",
+    "module_page": 234,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Kebanyakan gelanggang moden disiapkan dengan beberapa lapisan cat akrilik atau PU yang anti-gelincir dan tahan lasak. Kontraktor mesti mengikut arahan aplikasi pengeluar dengan teliti.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Lapisan Permukaan Akrilik/Poliuretana (PU)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-083",
+    "module_page": 234,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Garisan permainan mesti ditanda menggunakan cat khusus dengan ukuran yang tepat mengikut peraturan rasmi sukan tersebut.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penandaan Garisan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-085",
+    "module_page": 235,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Pemasangan tiang (cth: tiang jaring tenis, tiang gol bola keranjang) mesti kukuh, berada pada ketinggian yang betul, dan selari dengan spesifikasi.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Tiang dan Jaring"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-092",
+    "module_page": 235,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Penandaan jajaran litar, termasuk selekoh dan laluan lurus, mesti dibuat dengan jitu mengikut lukisan reka bentuk.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Reka Letak Jajaran (Alignment Layout)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-096",
+    "module_page": 235,
+    "markers": [
+     "wajib"
+    ],
+    "text": "Pemasangan penghadang seperti dinding tayar, blok plastik berisi air, atau rel keluli di selekoh-selekoh tajam adalah wajib untuk keselamatan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penghadang Keselamatan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-106",
+    "module_page": 236,
+    "markers": [
+     "wajib"
+    ],
+    "text": "Semua lukisan struktur bagi komponen ini wajib disemak dan diluluskan oleh Jurutera Profesional (Ir.) yang bertauliah.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Kelulusan Jurutera"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-110",
+    "module_page": 236,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Sebelum serahan, komponen ini mesti melalui proses pengujian beban dan pemeriksaan keselamatan oleh badan bebas yang bertauliah.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pengujian dan Pentauliahan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-115",
+    "module_page": 236,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Peralatan mesti diperbuat daripada keluli tergalvani panas (hot-dip galvanized) atau keluli tahan karat dan disaluti dengan cat epoksi atau powder coating untuk perlindungan maksimum daripada karat.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Bahan Tahan Karat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-117",
+    "module_page": 237,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Sama seperti alat permainan kanak-kanak, setiap unit mesti dipasang dengan tapak konkrit yang tertanam di dalam tanah untuk menjamin kestabilan semasa penggunaan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Pemasangan Kukuh"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-119",
+    "module_page": 237,
+    "markers": [
+     "mesti"
+    ],
+    "text": "Peralatan mesti disusun dengan jarak yang mencukupi antara satu sama lain untuk membolehkan pengguna bergerak dengan selesa dan selamat.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Susun Atur Selamat"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 9,
+  "statements": [
+   {
+    "row_id": "T03B01-ROW-003",
+    "module_page": 226,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan. Ini termasuk laluan, dataran, dan tempat letak kereta. Pembinaan kawasan berturap yang betul memerlukan pengetahuan tentang pemilihan bahan, teknik pembinaan asas (sub-base), saliran, dan penggredan untuk memastikan ketahanan, keselamatan, dan kefungsian jangka panjang.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-010",
+    "module_page": 226,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Trek atau laluan ini adalah tulang belakang kepada sirkulasi pejalan kaki dan aktiviti riadah dalam sesebuah landskap",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas",
+     "Trek Pejalan Kaki, Jogging & Berbasikal"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-013",
+    "module_page": 227,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Memerlukan penggredan tanah yang tepat untuk saliran air yang berkesan. Pemilihan bahan sub-base (lapisan asas) yang sesuai (contohnya, batu pecah padat) adalah kritikal untuk menyokong lapisan permukaan. Lapisan permukaan boleh terdiri daripada pelbagai bahan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas",
+     "Trek Pejalan Kaki, Jogging & Berbasikal"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-027",
+    "module_page": 229,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Tempat letak kereta adalah kawasan berturap yang penting untuk fasiliti dan kemudahan akses.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas",
+     "Tempat Letak Kereta (Parking)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-031",
+    "module_page": 229,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sistem saliran yang cekap (contohnya, catch basins, longkang) adalah kritikal untuk mengelakkan genangan air dan kerosakan permukaan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Kawasan Berturap / Paved Areas",
+     "Tempat Letak Kereta (Parking)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-053",
+    "module_page": 232,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pemasangan permukaan penyerap hentakan seperti getah EPDM, pasir, atau serpihan kayu adalah mandatori di bawah dan sekeliling peralatan. Ketebalan permukaan ini bergantung pada \"ketinggian jatuh kritikal\" (critical fall height) peralatan tersebut.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Permukaan Keselamatan (Safety Surfacing)"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-064",
+    "module_page": 233,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pemasangan paip saliran berlubang (subsoil perforated pipes) yang dibaluti dengan geotekstil dan ditimbus dengan batu kelikir adalah kritikal untuk mengelakkan padang daripada bertakung air.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Sistem Saliran Bawah Tanah"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-096",
+    "module_page": 235,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pemasangan penghadang seperti dinding tayar, blok plastik berisi air, atau rel keluli di selekoh-selekoh tajam adalah wajib untuk keselamatan.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Penghadang Keselamatan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-121",
+    "module_page": 237,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pemasangan papan tanda yang jelas menunjukkan cara penggunaan setiap alat senaman adalah sebahagian daripada skop kerja.",
+    "heading_path": [
+     "KOMPONEN LANDSKAP",
+     "Gelanggang Sukan & Permainan",
+     "Papan Arahan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 27,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 9,
+  "source_attested": 9,
+  "subjects": [
+   {
+    "subject": "RASTER_IMAGE at Tempat Letak Kereta (Parking)",
+    "asset_id": "T03B01-IMG-01",
+    "kind": "RASTER_IMAGE",
+    "module_page": 231,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Alat pemainan kanan-kanak (Integrated playground, Swings, Seesaw)",
+    "asset_id": "T03B01-IMG-02",
+    "kind": "RASTER_IMAGE",
+    "module_page": 231,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Alat pemainan kanan-kanak (Integrated playground, Swings, Seesaw)",
+    "asset_id": "T03B01-IMG-03",
+    "kind": "RASTER_IMAGE",
+    "module_page": 232,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under KOMPONEN LANDSKAP / Kawasan Berturap / Paved Areas / Trek Pejalan Kaki, Jogging & Berbasikal — 4x2",
+    "asset_id": "T03B01-TBL-01",
+    "kind": "SOURCE_TABLE",
+    "module_page": 227,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under KOMPONEN LANDSKAP / Kawasan Berturap / Paved Areas / Trek Pejalan Kaki, Jogging & Berbasikal — 6x2",
+    "asset_id": "T03B01-TBL-02",
+    "kind": "SOURCE_TABLE",
+    "module_page": 228,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under KOMPONEN LANDSKAP / Kawasan Berturap / Paved Areas / Plaza/Court (Taichi Court, Multipurpose Court, Amphitheatre) — 5x2",
+    "asset_id": "T03B01-TBL-03",
+    "kind": "SOURCE_TABLE",
+    "module_page": 229,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Table under KOMPONEN LANDSKAP / Kawasan Berturap / Paved Areas / Tempat Letak Kereta (Parking) — 5x2",
+    "asset_id": "T03B01-TBL-04",
+    "kind": "SOURCE_TABLE",
+    "module_page": 230,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 21: Contoh Parkir Menggunakan Paver Grib",
+    "asset_id": "T03B01-ROW-036",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 230,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 22: Contoh Alat Permainan Kanak-Kanak",
+    "asset_id": "T03B01-ROW-042",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 232,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 5,
+  "terms": [
+   {
+    "row_id": "T03B01-ROW-026",
+    "term": "Tempat Letak Kereta (Parking)",
+    "module_page": 229,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-050",
+    "term": "Pemasangan Tapak Asas (Foundation)",
+    "module_page": 232,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-052",
+    "term": "Permukaan Keselamatan (Safety Surfacing)",
+    "module_page": 232,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-080",
+    "term": "Lapisan Permukaan Akrilik/Poliuretana (PU)",
+    "module_page": 234,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T03B01-ROW-091",
+    "term": "Reka Letak Jajaran (Alignment Layout)",
+    "module_page": 235,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T03-B01",
+  "rows": 121,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   226,
+   237
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 112,
+  "carried_forward_rows": 9,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

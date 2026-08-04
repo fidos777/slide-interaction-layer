@@ -1,0 +1,672 @@
+{
+ "unit_id": "K5-PL06-T01-B03",
+ "lesson_title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+ "stage": "4.2F-D",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "derivation_rule": "A mandatory proposition is a controlled row whose text contains one of ['mesti', 'wajib', 'perlu', 'hendaklah', 'tidak boleh', 'dilarang']. A definitional statement is a row containing one of ['ialah', 'adalah', 'merujuk kepada', 'bermaksud']. Both are quoted verbatim with the row ID that carries them. Neither is an assessment item — an item needs a stem, a key and distractors, and those are left PENDING_UNIT_EXCEPTION_REVIEW rather than guessed.",
+ "model_depth": {
+  "level": "STRUCTURAL_AND_MECHANICALLY_DERIVED",
+  "differs_from_batch_1": "Batch 1's propositions and stems were hand-authored after reading every unit. These eight are derived by a published rule from the rows themselves. The rows are the same quality; the analysis over them is shallower, and saying so is the point.",
+  "hand_authored_elements": []
+ },
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 8,
+  "tree": [
+   {
+    "row_id": "T01B03-ROW-001",
+    "level": 2,
+    "text": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+    "module_page": 188,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-003",
+    "level": 3,
+    "text": "Sumber Manusia",
+    "module_page": 189,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Sumber Manusia"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-029",
+    "level": 3,
+    "text": "Bahan Binaan",
+    "module_page": 190,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Bahan Binaan"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-037",
+    "level": 3,
+    "text": "Bahan Penanaman",
+    "module_page": 190,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Bahan Penanaman"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-045",
+    "level": 3,
+    "text": "Dokumentasi & Kelulusan",
+    "module_page": 191,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Dokumentasi & Kelulusan"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-083",
+    "level": 3,
+    "text": "Perisian & Alat Komunikasi",
+    "module_page": 196,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Perisian & Alat Komunikasi"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-089",
+    "level": 3,
+    "text": "Pengurusan Aliran Tunai bagi Operasi Pembinaan",
+    "module_page": 196,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengurusan Aliran Tunai bagi Operasi Pembinaan"
+    ]
+   },
+   {
+    "row_id": "T01B03-ROW-112",
+    "level": 3,
+    "text": "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti",
+    "module_page": 197,
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 1
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_3_HEADING_FALLBACK",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Sumber Manusia",
+    "row_id": "T01B03-ROW-003",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Bahan Binaan",
+    "row_id": "T01B03-ROW-029",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Bahan Penanaman",
+    "row_id": "T01B03-ROW-037",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Dokumentasi & Kelulusan",
+    "row_id": "T01B03-ROW-045",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Perisian & Alat Komunikasi",
+    "row_id": "T01B03-ROW-083",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G6",
+    "covers": "Pengurusan Aliran Tunai bagi Operasi Pembinaan",
+    "row_id": "T01B03-ROW-089",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   },
+   {
+    "group_id": "G7",
+    "covers": "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti",
+    "row_id": "T01B03-ROW-112",
+    "basis": "LEVEL_3_HEADING_FALLBACK"
+   }
+  ],
+  "automatic_component_detection": [],
+  "note": "A floor, not a ceiling."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Sumber Manusia",
+   "G2: Bahan Binaan",
+   "G3: Bahan Penanaman",
+   "G4: Dokumentasi & Kelulusan",
+   "G5: Perisian & Alat Komunikasi",
+   "G6: Pengurusan Aliran Tunai bagi Operasi Pembinaan",
+   "G7: Pengujian dan Pentauliahan (T&C) Sambungan Utiliti",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 7,
+   "closing_screens": 3,
+   "minimum_total_screens": 12,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "static content",
+  "secondary_candidate": "comparison",
+  "candidate_basis": "no repeated component structure found",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "A candidate read off structure, not off content. The pattern package that would settle it is with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Sumber Manusia",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Bahan Binaan",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Bahan Penanaman",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Dokumentasi & Kelulusan",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Perisian & Alat Komunikasi",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G6",
+    "covers": "Pengurusan Aliran Tunai bagi Operasi Pembinaan",
+    "candidate": "reveal per group detail"
+   },
+   {
+    "group_id": "G7",
+    "covers": "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti",
+    "candidate": "reveal per group detail"
+   }
+  ]
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 12,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+ },
+ "rumusan": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "beat_count": "UNKNOWN_NOT_AUTHORED",
+  "treatment": "RP-007 — this Bahagian only, contractor perspective",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Beats are not drafted for these eight. Drafting them needs the unit read end to end, which this layer did not do."
+ },
+ "dialogue": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "verdict": "NOT_ASSESSED",
+  "reason": "Whether a dialogue is justified is a content judgement and this layer is structural. Not guessed.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "OBLIGATION_MARKER",
+  "count": 6,
+  "propositions": [
+   {
+    "row_id": "T01B03-ROW-001",
+    "module_page": 188,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-002",
+    "module_page": 188,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan. Tujuannya adalah untuk memastikan semua sumber projek seiring dengan program kerja. Sebagai contoh, item ‘special features’ yang memerlukan tempahan awal dapat diuruskan mengikut jadual dan tempoh kontrak. Dengan cara ini, penyerahan projek siap dapat dilakukan tepat pada masa seperti yang ditetapkan dalam kontrak.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-004",
+    "module_page": 189,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Sumber Manusia"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-066",
+    "module_page": 193,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Keperluan pematuhan kualiti lukisan:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Dokumentasi & Kelulusan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-075",
+    "module_page": 193,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Permit pihak berkuasa tempatan (jika diperlukan)",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Dokumentasi & Kelulusan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-102",
+    "module_page": 197,
+    "markers": [
+     "perlu"
+    ],
+    "text": "Aliran keluar merujuk kepada perbelanjaan yang perlu anda bayar untuk memastikan projek berjalan lancar. Contoh khusus untuk landskap luar:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengurusan Aliran Tunai bagi Operasi Pembinaan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "definitional_statements": {
+  "cls": "SOURCE_DERIVED",
+  "derivation": "DEFINITION_MARKER",
+  "count": 13,
+  "statements": [
+   {
+    "row_id": "T01B03-ROW-002",
+    "module_page": 188,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan. Tujuannya adalah untuk memastikan semua sumber projek seiring dengan program kerja. Sebagai contoh, item ‘special features’ yang memerlukan tempahan awal dapat diuruskan mengikut jadual dan tempoh kontrak. Dengan cara ini, penyerahan projek siap dapat dilakukan tepat pada masa seperti yang ditetapkan dalam kontrak.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-090",
+    "module_page": 196,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pengurusan Aliran Tunai adalah proses memantau, menganalisis, dan mengoptimumkan pergerakan wang masuk dan wang keluar dalam perniagaan anda sepanjang tempoh projek. Ia bukan tentang mengira untung rugi, tetapi tentang memastikan anda sentiasa mempunyai wang tunai yang cukup di tangan untuk membayar semua perbelanjaan operasi tepat pada masanya. Aliran tunai dalam projek landskap terbahagi kepada dua bahagian utama:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengurusan Aliran Tunai bagi Operasi Pembinaan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-092",
+    "module_page": 196,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Aliran masuk merujuk kepada sumber pendapatan yang diterima oleh syarikat. Dalam projek landskap, ia biasanya merangkumi:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengurusan Aliran Tunai bagi Operasi Pembinaan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-102",
+    "module_page": 197,
+    "markers": [
+     "merujuk kepada"
+    ],
+    "text": "Aliran keluar merujuk kepada perbelanjaan yang perlu anda bayar untuk memastikan projek berjalan lancar. Contoh khusus untuk landskap luar:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengurusan Aliran Tunai bagi Operasi Pembinaan"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-113",
+    "module_page": 197,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Pengujian dan Pentauliahan (T&C) bagi sambungan utiliti adalah fasa kritikal dalam pengurusan operasi projek landskap luar. Proses ini memastikan semua sistem utiliti seperti bekalan air, elektrik, dan saliran bukan sahaja dipasang dengan betul mengikut pelan dan spesifikasi, tetapi juga berfungsi dengan selamat, cekap, dan boleh dipercayai sebelum projek diserahkan kepada klien.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-115",
+    "module_page": 198,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Proses T&C untuk sistem bekalan air adalah penting bagi memastikan tanaman mendapat air yang secukupnya dan mengelakkan pembaziran. Langkah-langkah utamanya termasuk:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-117",
+    "module_page": 198,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Paip air akan diberi tekanan (biasanya lebih tinggi daripada tekanan operasi biasa) untuk satu tempoh masa yang ditetapkan. Tujuannya adalah untuk mengesan sebarang kebocoran pada paip atau sambungan (joints).",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-131",
+    "module_page": 199,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Sistem saliran yang efisien adalah kunci untuk mengelakkan air bertakung yang boleh merosakkan tanaman dan struktur landskap. T&C bagi saliran melibatkan:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-135",
+    "module_page": 199,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Mengesahkan semula bahawa kecerunan paip atau longkang adalah betul mengikut pelan untuk membolehkan aliran air yang cekap.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-138",
+    "module_page": 200,
+    "markers": [
+     "ialah"
+    ],
+    "text": "Kepentingan T&C sebelum memulakan projek ialah seperti berikut:",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-140",
+    "module_page": 200,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Ia adalah bukti fizikal bahawa kerja pemasangan telah dilaksanakan mengikut standard kualiti yang ditetapkan.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-142",
+    "module_page": 200,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "row_id": "T01B03-ROW-144",
+    "module_page": 200,
+    "markers": [
+     "adalah"
+    ],
+    "text": "Mengesan masalah pada peringkat awal adalah jauh lebih murah berbanding membaikinya selepas kerja-kerja landskap lain (seperti penanaman atau pemasangan landskap kejur) telah siap sepenuhnya.",
+    "heading_path": [
+     "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+     "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "NOT_DRAFTED",
+  "key_authority": "NONE — no item exists, so none is approved",
+  "source_supported_propositions": 19,
+  "items": [],
+  "note": "The propositions an item could be built on are extracted and cited. The items themselves are not drafted."
+ },
+ "visual_obligations": {
+  "cls": "SOURCE_DERIVED",
+  "count": 12,
+  "source_attested": 12,
+  "subjects": [
+   {
+    "subject": "RASTER_IMAGE at Dokumentasi & Kelulusan",
+    "asset_id": "T01B03-IMG-01",
+    "kind": "RASTER_IMAGE",
+    "module_page": 189,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Dokumentasi & Kelulusan",
+    "asset_id": "T01B03-IMG-02",
+    "kind": "RASTER_IMAGE",
+    "module_page": 190,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Dokumentasi & Kelulusan",
+    "asset_id": "T01B03-IMG-03",
+    "kind": "RASTER_IMAGE",
+    "module_page": 190,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Dokumentasi & Kelulusan",
+    "asset_id": "T01B03-IMG-04",
+    "kind": "RASTER_IMAGE",
+    "module_page": 192,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Dokumentasi & Kelulusan",
+    "asset_id": "T01B03-IMG-05",
+    "kind": "RASTER_IMAGE",
+    "module_page": 193,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "RASTER_IMAGE at Dokumentasi & Kelulusan",
+    "asset_id": "T01B03-IMG-06",
+    "kind": "RASTER_IMAGE",
+    "module_page": 193,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 11: Contoh Pelan Tapak Landskap Pengcahayaan Dan Pengairan",
+    "asset_id": "T01B03-ROW-056",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 191,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 12: Contoh Pelan Dan Jadual Landskap Lembut Pokok Dan Palma",
+    "asset_id": "T01B03-ROW-058",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 192,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 13: Contoh Pelan Terperinci Pintu Masuk Taman, Plaza Dan Bangku Taman",
+    "asset_id": "T01B03-ROW-060",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 192,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 14: Contoh Sebahagian Spesfikasi Landskap Lembut",
+    "asset_id": "T01B03-ROW-078",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 194,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 15: Contoh Sebahagian Spesfikasi Turfing",
+    "asset_id": "T01B03-ROW-080",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 195,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "subject": "Rajah 16: Contoh Jadual Penyelenggaraan",
+    "asset_id": "T01B03-ROW-082",
+    "kind": "SOURCE_CAPTION",
+    "module_page": 195,
+    "has_source_figure": true,
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "rule": "RP-104 — read from the source's own figure or table",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "Only figures, diagrams, tables and captions actually present in the span. Nothing composed from a name."
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 1,
+  "terms": [
+   {
+    "row_id": "T01B03-ROW-112",
+    "term": "Pengujian dan Pentauliahan (T&C) Sambungan Utiliti",
+    "module_page": 197,
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T01-B03",
+  "rows": 146,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   188,
+   200
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 135,
+  "carried_forward_rows": 11,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}
