@@ -1,0 +1,162 @@
+[
+ {
+  "observation_id": "K3-SRC-OBS-01",
+  "subject": "the footer on the last page of K3 PL08",
+  "exact_value_observed": "KOD PL PL08 Muka Surat: 1/13",
+  "expected_by_the_document_s_own_scheme": "KOD PL PL08 Muka Surat: 13/13",
+  "where": "the final page, the one carrying SKEMA JAWAPAN (UNTUK PENGAJAR)",
+  "evidence": "Pages 1 through 12 run 1/13 to 12/13 without a gap. The thirteenth and last page repeats 1/13. No page in the file is labelled 13/13.",
+  "classification": "TYPOGRAPHICAL",
+  "requires_instructional_decision": false,
+  "routed_to": "FIRDAUS",
+  "route_type": "CUSTODY_OR_METADATA_CORRECTION",
+  "in_bariah_addendum": false,
+  "production_impact": "None on content. It does mean a page-reference oracle keyed on the PL08 footer cannot resolve its last page, so PL08 page attribution must use ordinal position, not the printed marker."
+ },
+ {
+  "observation_id": "K3-SRC-OBS-02",
+  "subject": "the shape of SKEMA JAWAPAN across the nine packages",
+  "evidence": "Each package's own SKEMA JAWAPAN (UNTUK PENGAJAR) section, read in full.",
+  "uniform": {
+   "every_package_has_latihan": true,
+   "every_package_has_skema": true,
+   "format": "soalan esei pendek, 15 minit",
+   "heading": "SKEMA JAWAPAN (UNTUK PENGAJAR)"
+  },
+  "not_uniform": {
+   "question_count": {
+    "five": [
+     "PL02",
+     "PL04",
+     "PL05",
+     "PL06",
+     "PL07",
+     "PL08",
+     "PL09"
+    ],
+    "three": [
+     "PL01",
+     "PL03"
+    ],
+    "total": 41
+   },
+   "structural_families": {
+    "BULLETED_PER_QUESTION": [
+     "PL05",
+     "PL08"
+    ],
+    "PROSE_PER_QUESTION": [
+     "PL04",
+     "PL07",
+     "PL09"
+    ],
+    "RUBRIC_WITH_MARK_ALLOCATION": [
+     "PL03"
+    ],
+    "TABLE_QUESTION_RESTATED": [
+     "PL01",
+     "PL02",
+     "PL06"
+    ]
+   },
+   "distinct_labels": 6,
+   "packages_carrying_marks": [
+    "PL03"
+   ]
+  },
+  "sharpest_point": "PL03 is the outlier that matters. Its SKEMA is a marking rubric — lettered criteria with mark allocations totalling ten per question — not a model answer. The other eight supply answers a learner could be shown; PL03 supplies instructions to a human marker. No automated scoring can consume it as-is, and no learner can be shown it.",
+  "why_it_matters": "Whichever way K3-COURSE-01 is decided, one pipeline has to cope with four answer-key structures, six labels, two question counts and one rubric. Under option A the spread reaches the learner and the inconsistency becomes visible; under option B it is discarded anyway and PL03's marks are the only thing worth salvaging. The variance is a cost input to the decision, not a defect to normalise quietly.",
+  "requires_instructional_decision": false,
+  "feeds_decision": "K3-COURSE-01"
+ },
+ {
+  "observation_id": "K3-SRC-OBS-03",
+  "subject": "the footer convention across the nine packages",
+  "values": [
+   {
+    "style": "KOD PL <PL> Page: n/m",
+    "packages": [
+     "PL01",
+     "PL02"
+    ]
+   },
+   {
+    "style": "KOD PL <PL> Muka Surat: n/m",
+    "packages": [
+     "PL03",
+     "PL04",
+     "PL05",
+     "PL06",
+     "PL07",
+     "PL08",
+     "PL09"
+    ]
+   }
+  ],
+  "finding": "Seven packages use the Malay 'Muka Surat'; PL01 and PL02 use the English 'Page'. Both are the same field in the same position.",
+  "classification": "TYPOGRAPHICAL",
+  "requires_instructional_decision": false,
+  "routed_to": "FIRDAUS",
+  "route_type": "CUSTODY_OR_METADATA_CORRECTION",
+  "in_bariah_addendum": false,
+  "production_impact": "A page-attribution oracle over K3 must accept both spellings. A regex anchored on 'Muka Surat' alone silently returns zero pages for PL01 and PL02 — the same class of failure as matching a boolean against the string 'True'."
+ },
+ {
+  "conflict_id": "K3-SRC-CONFLICT-01",
+  "subject": "the title of K3 PL02",
+  "values": [
+   {
+    "source": "filename",
+    "exact_value": "PAKEJ LATIHAN_PL02.pdf",
+    "carries_a_title": false,
+    "note": "The filename carries the PL number and no title, so it cannot arbitrate."
+   },
+   {
+    "source": "PL02's own package header (front matter, page 1)",
+    "exact_value": "PL02 Pengurusan Pematuhan Kerja Penstabilan Tanah",
+    "carries_a_title": true
+   },
+   {
+    "source": "PL02's own body heading (TAJUK, page 1)",
+    "exact_value": "PENGURUSAN PEMATUHAN KERJA PENSTABILAN TANAH",
+    "carries_a_title": true
+   },
+   {
+    "source": "PL03's package header (front matter)",
+    "exact_value": "PL02 Pengurusan Pematuhan Kerja penstabilan Tanah",
+    "carries_a_title": true,
+    "note": "Agrees on the words; differs only in the lower-case 'p' in 'penstabilan'."
+   },
+   {
+    "source": "PL01's package header (front matter)",
+    "exact_value": "PL02 Pengenalan Pengurusan Kerja Penstabilan Tanah",
+    "carries_a_title": true,
+    "note": "The outlier, and the error is bigger than one row — see shift_diagnosis below."
+   }
+  ],
+  "shift_diagnosis": {
+   "established_by": "reading PL03 in full, which fixed PL03's true title",
+   "pl01_front_matter_as_printed": [
+    "PL01 Pengenalan Pengurusan Kerja Penstabilan Tanah",
+    "PL02 Pengenalan Pengurusan Kerja Penstabilan Tanah",
+    "PL03 Pengurusan Pematuhan Kerja Penstabilan Tanah"
+   ],
+   "correct_titles": [
+    "PL01 Pengenalan Pengurusan Kerja Penstabilan Tanah",
+    "PL02 Pengurusan Pematuhan Kerja Penstabilan Tanah",
+    "PL03 Inovasi Teknologi Digital dan Automasi Dalam Penstabilan Tanah"
+   ],
+   "finding": "Two rows are wrong, not one. PL01's row is right; PL02's row duplicates PL01's title; PL03's row carries PL02's title. The list is shifted one row down from the second entry, and PL03's real title does not appear anywhere in it. The previous record described only the PL02 row because PL03 had not yet been read.",
+   "corroboration": "PL02's own front matter and PL03's own front matter both list all three correctly, so the shift is confined to PL01's copy."
+  },
+  "finding": "Three independent sources agree that PL02 is 'Pengurusan Pematuhan Kerja Penstabilan Tanah' — PL02's own front matter, PL02's own body TAJUK heading, and PL03's front matter. One source disagrees: PL01's front matter, whose second and third rows are shifted one place down. A package's own body heading outranks another package's front-matter list, and two further sources agree with it.",
+  "classification": "TYPOGRAPHICAL",
+  "classification_reasoning": "Not METADATA_ONLY, because a front-matter list is content a learner could read. Not SOURCE_AUTHORITY_CONFLICT, because the sources are not of equal weight — a package's own body heading is the stronger authority and it is corroborated twice. Not INSTRUCTIONAL_TITLE_DECISION_REQUIRED, because nobody has to choose a title: the correct one is evidenced three times over. It is a copy-paste error in PL01's front matter.",
+  "requires_instructional_decision": false,
+  "routed_to": "FIRDAUS",
+  "route_type": "CUSTODY_OR_METADATA_CORRECTION",
+  "in_bariah_addendum": false,
+  "action": "Report to Firdaus as a source-metadata correction against PL01's front matter. It does not go into the Bariah addendum, because putting a copy-paste error in front of the Instructional Designer as a decision would waste her attention.",
+  "secondary_note": "PL03's lower-case 'penstabilan' is a separate, smaller typographical inconsistency in the same family. Recorded here, not raised separately."
+ }
+]

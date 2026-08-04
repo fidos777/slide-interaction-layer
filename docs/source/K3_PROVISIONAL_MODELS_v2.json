@@ -1,0 +1,2125 @@
+[
+ {
+  "course": "K3",
+  "pl": "PL01",
+  "unit_id": "K3-M01-PL01",
+  "title": "Pengenalan Pengurusan Kerja Penstabilan Tanah",
+  "authority_inherited": "SRC-AUTH-01",
+  "stage": "4.2F-C",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 17,
+   "top_sections": 7,
+   "tables": 2,
+   "figures": 7,
+   "drive_id": "1jVNJhmX-MEkHGfjOJ6b2IrfkjXICuijd",
+   "module_code": "M01",
+   "module_title": "BUSINESS OPERATION MANAGEMENT"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "Asas konsep penyiasatan dan penstabilan tanah"
+    },
+    {
+     "group_id": "G2",
+     "covers": "Kepentingan penyiasatan tanah"
+    },
+    {
+     "group_id": "G3",
+     "covers": "Kepentingan penstabilan tanah"
+    },
+    {
+     "group_id": "G4",
+     "covers": "Kaedah penyiasatan tanah"
+    },
+    {
+     "group_id": "G5",
+     "covers": "Kaedah penstabilan tanah"
+    },
+    {
+     "group_id": "G6",
+     "covers": "Faktor pemilihan kaedah penyiasatan"
+    },
+    {
+     "group_id": "G7",
+     "covers": "Faktor pemilihan kaedah penstabilan"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "shell_includes_dialogue": false,
+    "content_groups": 7,
+    "closing_screens": 3,
+    "minimum_total_screens": 12,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "comparison",
+   "reason": "Two eight-row importance tables and two five-method lists sit in parallel — penyiasatan against penstabilan — which is a comparison; the method lists themselves are reveals."
+  },
+  "dialogue": {
+   "cls": "CAIR_PROPOSAL",
+   "verdict": "NOT_JUSTIFIED",
+   "reason": "A concepts-and-methods package with no decision scenario in the source.",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 12,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "rumusan": {
+   "cls": "CAIR_PROPOSAL",
+   "beat_count": 3,
+   "beats": [
+    "Penyiasatan tanah dan penstabilan tanah sebagai dua proses yang saling melengkapi.",
+    "Lima kaedah penyiasatan dan lima kaedah penstabilan.",
+    "Faktor yang menentukan pemilihan kaedah di tapak."
+   ],
+   "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+  },
+  "source_assessment": {
+   "questions": [
+    "Jelaskan kepentingan penyiasatan tanah dalam pembinaan.",
+    "Huraikan dua kaedah penstabilan tanah dan situasi penggunaannya.",
+    "Apakah faktor yang mempengaruhi pemilihan kaedah penyiasatan tanah?"
+   ],
+   "model_answers": [
+    [
+     "Menentukan sifat dan keadaan tanah tapak",
+     "Mengurangkan risiko kegagalan struktur",
+     "Menyediakan data teknikal untuk reka bentuk asas"
+    ],
+    [
+     "Penstabilan mekanikal",
+     "Penstabilan kimia",
+     "Penstabilan melalui penggantian tanah (soil replacement)"
+    ],
+    [
+     "Jenis tanah (liat, pasir, gambut)",
+     "Akses dan keadaan tapak",
+     "Tujuan projek dan jenis struktur"
+    ]
+   ],
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "visual_obligations": {
+   "cls": "CAIR_PROPOSAL",
+   "count": 7,
+   "source_attested": 7,
+   "subjects": [
+    {
+     "subject": "Rajah 1: Surface Reconnaissance",
+     "has_source_figure": true
+    },
+    {
+     "subject": "Rajah 2: Dynamic Cone Penetrometer",
+     "has_source_figure": true
+    },
+    {
+     "subject": "Rajah 3: Boring",
+     "has_source_figure": true
+    },
+    {
+     "subject": "Rajah 4: Standard Penetration Test – SPT",
+     "has_source_figure": true
+    },
+    {
+     "subject": "Rajah 5: Soil Laboratory Testing",
+     "has_source_figure": true
+    },
+    {
+     "subject": "Rajah 6: Pemilihan Kaedah Penyiasatan Tanah",
+     "has_source_figure": true
+    },
+    {
+     "subject": "Rajah 7: Faktor-Faktor Pemilihan Kaedah Penstabilan Tanah",
+     "has_source_figure": true
+    }
+   ],
+   "note": "Unlike every K5 unit in this run, PL01's visual subjects are named and captioned in the source itself. RP-104 is satisfiable here in a way it is not for K5 batch 1."
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ],
+  "skema_shape": {
+   "family": "TABLE_QUESTION_RESTATED",
+   "label": "No. Soalan / Jawapan",
+   "questions": 3,
+   "carries_marks": false,
+   "note": "Two-column table; the answer cell lists numbered alternatives."
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  }
+ },
+ {
+  "course": "K3",
+  "pl": "PL02",
+  "unit_id": "K3-M01-PL02",
+  "title": "PENGURUSAN PEMATUHAN KERJA PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 28,
+   "module_code": "M01",
+   "module_title": "BUSINESS OPERATION MANAGEMENT",
+   "top_sections": 3,
+   "sub_sections": 12,
+   "tables": 0,
+   "figures": 10,
+   "drive_id": "1DLoHFFv4hxR8Cm_-gq1nC6F2NNy6otMq"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/28 to 28/28",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "PENGURUSAN PEMATUHAN UNDANG-UNDANG DAN PERATURAN TEMPATAN",
+    "PENGURUSAN SUMBER MANUSIA",
+    "PENGURUSAN ASET SYARIKAT"
+   ],
+   "sub": [
+    "1.1 Kelulusan Pihak Berkuasa Tempatan (PBT)",
+    "1.2 Keperluan Undang-Undang Kontrak – Akta 520 (CIDB)",
+    "1.3 Permit Alam Sekitar berkaitan Disposal – DOE",
+    "2.1 Keperluan Pekerja Pakar",
+    "2.2 Rekod Kehadiran dan Gaji",
+    "2.3 Permit Pekerja Asing",
+    "2.4 Latihan Keselamatan",
+    "2.5 Pengurusan Keselamatan di Tapak",
+    "2.6 Dokumentasi Pengurusan Sumber",
+    "3.1 Mesin dan Peralatan",
+    "3.2 Penyelenggaraan Mesin",
+    "3.3 Pengurusan Inventori Bahan"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "1.1 fans into a) JPS, b) JKR, c) JMG, d) JKKP — four named agencies"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "PENGURUSAN PEMATUHAN UNDANG-UNDANG DAN PERATURAN TEMPATAN"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENGURUSAN SUMBER MANUSIA"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN ASET SYARIKAT"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 3,
+    "closing_screens": 3,
+    "minimum_total_screens": 8,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "PENGURUSAN PEMATUHAN UNDANG-UNDANG DAN PERATURAN TEMPATAN",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENGURUSAN SUMBER MANUSIA",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN ASET SYARIKAT",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 8,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "PBT",
+    "JPS",
+    "JKR",
+    "JMG",
+    "JKKP",
+    "CIDB (Akta 520)",
+    "DOE/JAS",
+    "LHDN",
+    "Jabatan Imigresen",
+    "Jabatan Tenaga Kerja"
+   ],
+   "compliance_heavy": true
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 10,
+   "source_attested": 10,
+   "note": "Rajah 1 to Rajah 13 are referenced but the numbering skips — no Rajah 4 or 9, and Rajah 6 is used twice for different subjects. Recorded, not corrected.",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "TABLE_QUESTION_RESTATED",
+   "label": "Soalan / Jawapan",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "Two-column table; answers offer alternatives, one marked '(pilih satu)'."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "TABLE_QUESTION_RESTATED",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ },
+ {
+  "course": "K3",
+  "pl": "PL03",
+  "unit_id": "K3-M01-PL03",
+  "title": "Inovasi Teknologi Digital dan Automasi dalam Penstabilan Tanah",
+  "authority_inherited": "SRC-AUTH-01",
+  "stage": "4.2F-C",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 9,
+   "top_sections": 3,
+   "tables": 1,
+   "figures": 0,
+   "drive_id": "1yRqREUFlu2jDmPCgwh3XywLiFooej6sW",
+   "module_code": "M01",
+   "module_title": "BUSINESS OPERATION MANAGEMENT"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "Pengenalan kepada digital dan inovasi"
+    },
+    {
+     "group_id": "G2",
+     "covers": "Teknologi digital: peralatan, bahan, mesin"
+    },
+    {
+     "group_id": "G3",
+     "covers": "Cabaran dan strategi pelaksanaan"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "shell_includes_dialogue": false,
+    "content_groups": 3,
+    "closing_screens": 3,
+    "minimum_total_screens": 8,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "comparison",
+   "reason": "Section 2 fans into three categories of four lettered items each — twelve reveals in a three-way structure. Section 3 is a challenge-against-strategy table, which is a comparison."
+  },
+  "dialogue": {
+   "cls": "CAIR_PROPOSAL",
+   "verdict": "NOT_JUSTIFIED",
+   "reason": "A technology catalogue. No scenario in the source.",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 8,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "rumusan": {
+   "cls": "CAIR_PROPOSAL",
+   "beat_count": 3,
+   "beats": [
+    "Teknologi digital sebagai pengganti dan pelengkap kaedah tradisional.",
+    "Tiga kategori inovasi: peralatan, bahan dan mesin.",
+    "Tiga cabaran pelaksanaan dan strategi mengatasinya."
+   ],
+   "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+  },
+  "source_assessment": {
+   "questions": [
+    "Terangkan dua contoh teknologi peralatan digital yang digunakan dalam kerja penyiasatan tanah serta huraikan bagaimana ia membantu kontraktor mengesahkan reka bentuk yang diberi oleh perunding.",
+    "Jelaskan peranan bahan teknologi baharu seperti Smart Polymer, Nano-Silika atau MICP dalam meningkatkan keberkesanan kerja penstabilan tanah oleh kontraktor.",
+    "Huraikan 2 contoh mesin yang digunakan dalam kerja penstabilan tanah dan jelaskan bagaimana teknologi automasi membantu meningkatkan kawalan kualiti di tapak pembinaan."
+   ],
+   "model_answers": [
+    [
+     "GPR AI-Enhanced",
+     "UAV LiDAR Hybrid",
+     "IoT Geotechnical Sensors",
+     "Cloud-based GIS & Automated Data Logger"
+    ],
+    [
+     "Smart Polymer Soil Stabiliser",
+     "Nano-Silika dan Geopolimer",
+     "Biopolimer dan Enzim Stabiliser",
+     "MICP Industri"
+    ],
+    [
+     "Automated Drilling Rig & Digital CPTu",
+     "Jet Grouting Machine Digital dengan Flow Control",
+     "Deep Soil Mixing GPS Integrated",
+     "Vibro-Compaction 4.0 & Dynamic Compaction AI-Controlled"
+    ]
+   ],
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED",
+   "marks_note": "The SKEMA allocates marks per part — 2 + 4 + 4 for each question."
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "visual_obligations": {
+   "cls": "CAIR_PROPOSAL",
+   "count": 2,
+   "source_attested": 0,
+   "subjects": [
+    {
+     "subject": "Twelve digital technologies across peralatan, bahan and mesin",
+     "has_source_figure": false
+    },
+    {
+     "subject": "Jadual: cabaran against strategi mengatasi",
+     "has_source_figure": false
+    }
+   ],
+   "note": "Unlike every K5 unit in this run, PL01's visual subjects are named and captioned in the source itself. RP-104 is satisfiable here in a way it is not for K5 batch 1."
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ],
+  "skema_shape": {
+   "family": "RUBRIC_WITH_MARK_ALLOCATION",
+   "label": "SOALAN N",
+   "questions": 3,
+   "carries_marks": true,
+   "note": "Not a model answer. Lettered marking criteria a), b), c) with explicit allocations — 2 markah + 4 markah + 4 markah, ten marks per question, thirty for the package. The only one of the nine that states marks anywhere."
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  }
+ },
+ {
+  "course": "K3",
+  "pl": "PL04",
+  "unit_id": "K3-M02-PL04",
+  "title": "PENGURUSAN TENDER PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 27,
+   "module_code": "M02",
+   "module_title": "TENDERING MANAGEMENT",
+   "top_sections": 5,
+   "sub_sections": 28,
+   "tables": 5,
+   "figures": 4,
+   "drive_id": "1rle0iga-VMg_LSOKLhYtLV0PG7_iPET1"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/27 to 27/27",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "JENIS PROJEK BERKAITAN KERJA PENSTABILAN TANAH",
+    "SKOP PROJEK PENSTABILAN TANAH",
+    "PENYEDIAAN DATA KOS, PENGANGGARAN DAN PENENTUAN HARGA PROJEK PENSTABILAN TANAH",
+    "BAJET PROJEK SOIL STABILISATION",
+    "PROSES TENDER PROJEK SOIL STABILISATION"
+   ],
+   "sub": [
+    "1.1 Projek Membina Bangunan",
+    "1.2 Projek Pembinaan Jambatan di bahagian Tembok Landas atau Abutment, Embankment atau Approach Fill dan Asas Struktur",
+    "1.3 Projek Infrastruktur",
+    "2.1 Komponen Skop Kerja Penstabilan Tanah",
+    "2.2 Komponen Skop Kerja Penyiasatan Tapak",
+    "2.3 Site Investigation (SI) untuk Projek Soil Stabilisation",
+    "2.4 Keperluan Spesifikasi Projek (JKR, MS Standards)",
+    "2.5 Keperluan Regulatory Projek Soil Stabilisation",
+    "2.6 Penyediaan Ringkasan Skop Kerja untuk Dokumen Tender",
+    "2.7 Risiko Skop Projek: Air Table Tinggi, Jenis Tanah, Lokasi Tapak",
+    "3.1 Komponen Kos Projek Penstabilan Tanah",
+    "3.2 Pengiraan Kos: Lime/Cement Stabilisation vs Chemical Grouting",
+    "3.3 Penyediaan Bill of Quantities (BQ) Kerja Soil Stabilisation",
+    "3.4 Analisis Harga Unit (Unit Rate Analysis)",
+    "3.5 Penggunaan Data Harga Semasa (Jadual Kadar Harga)",
+    "3.6 Pengiraan Margin Untung dan Risiko Projek",
+    "4.1 Komponen Kos",
+    "4.2 Pengiraan Kos Mengikut Kaedah",
+    "4.3 Penyediaan Laporan Kewangan",
+    "4.4 Risiko Kewangan",
+    "4.5 Penilaian Kewangan Tender",
+    "5.1 Proses Tender (Kerajaan & Swasta)",
+    "5.2 Penyediaan Dokumen Tender",
+    "5.3 Jadual Tender",
+    "5.4 Lawatan Tapak",
+    "5.5 Penilaian Tender",
+    "5.6 Rundingan Harga",
+    "5.7 Dokumen Penyerahan"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "3.1 fans into a) Bahan Kimia, b) Mesin, c) Buruh, d) Logistik; 3.6 carries a) to d) as a four-line worked margin calculation"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "JENIS PROJEK BERKAITAN KERJA PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G2",
+     "covers": "SKOP PROJEK PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENYEDIAAN DATA KOS, PENGANGGARAN DAN PENENTUAN HARGA PROJEK PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G4",
+     "covers": "BAJET PROJEK SOIL STABILISATION"
+    },
+    {
+     "group_id": "G5",
+     "covers": "PROSES TENDER PROJEK SOIL STABILISATION"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 5,
+    "closing_screens": 3,
+    "minimum_total_screens": 10,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "JENIS PROJEK BERKAITAN KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "SKOP PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENYEDIAAN DATA KOS, PENGANGGARAN DAN PENENTUAN HARGA PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G4",
+     "covers": "BAJET PROJEK SOIL STABILISATION",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G5",
+     "covers": "PROSES TENDER PROJEK SOIL STABILISATION",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 10,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "JKR",
+    "MOF",
+    "CIDB",
+    "DOE",
+    "PBT",
+    "SPAN",
+    "JKKP",
+    "SIRIM",
+    "Jabatan Perangkaan Malaysia"
+   ],
+   "compliance_heavy": true
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 4,
+   "source_attested": 4,
+   "note": "Labels read Rajah 1, Rajah 3, Rajah 4 (infografik) and Rajah 4 (Standard Specification JKR). There is no Rajah 2, and Rajah 4 is used twice for different subjects. Recorded, not corrected.",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "PROSE_PER_QUESTION",
+   "label": "1. to 5.",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "Flowing prose, one numbered paragraph block per question."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "PROSE_PER_QUESTION",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ },
+ {
+  "course": "K3",
+  "pl": "PL05",
+  "unit_id": "K3-M03-PL05",
+  "title": "PERLAKSANAAN DAN PENGURUSAN KONTRAK PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 18,
+   "module_code": "M03",
+   "module_title": "CONTRACT IMPLEMENTATION & MANAGEMENT",
+   "top_sections": 5,
+   "sub_sections": 22,
+   "tables": 0,
+   "figures": 1,
+   "drive_id": "1A2Llekdb9WlHW2e58JAMy4gUnlWV3IA4"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/18 to 18/18",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "PENGURUSAN ANUGERAH KONTRAK PROJEK PENSTABILAN TANAH",
+    "KEPERLUAN KONTRAK BERKENAAN KERJA PENSTABILAN TANAH",
+    "PENGURUSAN PENSIJILAN DAN PEMBAYARAN KONTRAK",
+    "PENGURUSAN PENAMATAN KONTRAK PROJEK PENSTABILAN TANAH",
+    "PENGURUSAN PENYELESAIAN PERTIKAIAN DALAM PROJEK PENSTABILAN TANAH"
+   ],
+   "sub": [
+    "1.1 Perkaitan dengan Main Contract",
+    "1.2 Penyediaan Dokumen Kontrak",
+    "1.3 Pengurusan Lampiran Teknikal",
+    "2.1 Method of Statement",
+    "2.2 Garis Panduan",
+    "2.3 Unsuitable Material",
+    "2.4 Justifikasi melalui Pengesahan Tapak",
+    "3.1 Pensijilan Interim",
+    "3.2 Laporan Progress Kerja",
+    "3.3 Tuntutan Interim Payment (IPC)",
+    "3.4 Pengurusan Tuntutan Variation Order",
+    "3.5 Dokumentasi Sokongan",
+    "4.1 Lawful Termination",
+    "4.2 Sebab Penamatan",
+    "4.3 Impak kepada Kos",
+    "4.4 Re-mobilisation",
+    "4.5 Pengurusan Dokumen",
+    "5.1 ADR, Arbitration, Litigation",
+    "5.2 Dokumen Pertikaian",
+    "5.3 Rundingan Kos",
+    "5.4 Without Prejudice Communication",
+    "5.5 Langkah Elak Pertikaian"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "2.1 carries a) to d) — a four-step worked method statement"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "PENGURUSAN ANUGERAH KONTRAK PROJEK PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G2",
+     "covers": "KEPERLUAN KONTRAK BERKENAAN KERJA PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN PENSIJILAN DAN PEMBAYARAN KONTRAK"
+    },
+    {
+     "group_id": "G4",
+     "covers": "PENGURUSAN PENAMATAN KONTRAK PROJEK PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G5",
+     "covers": "PENGURUSAN PENYELESAIAN PERTIKAIAN DALAM PROJEK PENSTABILAN TANAH"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 5,
+    "closing_screens": 3,
+    "minimum_total_screens": 10,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "PENGURUSAN ANUGERAH KONTRAK PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "KEPERLUAN KONTRAK BERKENAAN KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN PENSIJILAN DAN PEMBAYARAN KONTRAK",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G4",
+     "covers": "PENGURUSAN PENAMATAN KONTRAK PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G5",
+     "covers": "PENGURUSAN PENYELESAIAN PERTIKAIAN DALAM PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 10,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "JKR",
+    "DOE",
+    "FIDIC",
+    "P.W.D. 203A",
+    "CIDB",
+    "BCA"
+   ],
+   "compliance_heavy": true
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 1,
+   "source_attested": 1,
+   "note": "Rajah 1: Contoh Method Statement JKR",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "BULLETED_PER_QUESTION",
+   "label": "Skema Jawapan N:",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "Bulleted points; question 2 adds a parenthetical acceptance rule ('mana-mana 3 dokumen ... diterima')."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "BULLETED_PER_QUESTION",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ },
+ {
+  "course": "K3",
+  "pl": "PL06",
+  "unit_id": "K3-M04-PL06",
+  "title": "PERANCANGAN DAN PENJADUALAN PROJEK PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 33,
+   "module_code": "M04",
+   "module_title": "PROJECT PLANNING AND SCHEDULING",
+   "top_sections": 3,
+   "sub_sections": 15,
+   "tables": 5,
+   "figures": 7,
+   "drive_id": "1wEBuT19S1SxzpNxpjRG_VL-hsQYRdOsT"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/33 to 33/33",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "PENYEDIAAN WORK BREAKDOWN STRUCTURE (WBS)",
+    "PENYEDIAAN JADUAL KERJA PROJEK PENSTABILAN TANAH",
+    "PENGURUSAN RISIKO PENJADUALAN BAGI KERJA PENSTABILAN TANAH"
+   ],
+   "sub": [
+    "1.1 Konsep Asas WBS dalam Projek Kerja Penstabilan Tanah",
+    "1.2 Penyusunan Skop Kerja Penstabilan Tanah",
+    "1.3 Contoh Template WBS Untuk Projek Penstabilan Tanah",
+    "1.4 Integrasi WBS dengan Dokumen Tender",
+    "1.5 Elemen Utama dalam Integrasi",
+    "1.6 Kesan Ketiadaan Integrasi WBS dengan Dokumen Tender",
+    "2.1 Kepentingan Jadual Kerja dalam Projek Penstabilan Tanah",
+    "2.2 Kaedah Penyediaan Jadual Kerja",
+    "2.3 Penentuan Aktiviti Kritikal",
+    "3.1 Risiko Kelewatan Projek",
+    "3.2 Strategi Pemulihan Projek (Catch-Up Plan)",
+    "3.3 Senarai Semak Risiko Penjadualan",
+    "3.4 Penyediaan Delay Notification",
+    "3.5 Penyelarasan Jadual Kerja dengan Aktiviti Pihak Ketiga",
+    "3.6 Pengurusan Konflik Zon Kerja Antara Tred Berbeza"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "37 lettered items; 1.2 fans into a) to e) as the five project phases, and 2.3 carries a roman-numbered penalty sub-list"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "PENYEDIAAN WORK BREAKDOWN STRUCTURE (WBS)"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENYEDIAAN JADUAL KERJA PROJEK PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN RISIKO PENJADUALAN BAGI KERJA PENSTABILAN TANAH"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 3,
+    "closing_screens": 3,
+    "minimum_total_screens": 8,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "PENYEDIAAN WORK BREAKDOWN STRUCTURE (WBS)",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENYEDIAAN JADUAL KERJA PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN RISIKO PENJADUALAN BAGI KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 8,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "JKR"
+   ],
+   "compliance_heavy": false
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 7,
+   "source_attested": 7,
+   "note": "Rajah 1 to Rajah 7 and Jadual 1 to Jadual 5, numbered without gaps.",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "TABLE_QUESTION_RESTATED",
+   "label": "(no per-answer label)",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "Two-column table; the question is restated in the left cell."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "TABLE_QUESTION_RESTATED",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ },
+ {
+  "course": "K3",
+  "pl": "PL07",
+  "unit_id": "K3-M05-PL07",
+  "title": "PENGURUSAN OPERASI PEMBINAAN BAGI KERJA PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 43,
+   "module_code": "M05",
+   "module_title": "CONSTRUCTION OPERATION MANAGEMENT",
+   "top_sections": 7,
+   "sub_sections": 42,
+   "tables": 3,
+   "figures": 6,
+   "drive_id": "1ert7OB9e2QFBTBJMxETN04lqy0qqzl0L"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/43 to 43/43",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "PENGURUSAN KUALITI PROJEK KERJA PENSTABILAN TANAH",
+    "PENGURUSAN KESELAMATAN DAN KESIHATAN (OSH) TAPAK PENSTABILAN",
+    "PENGURUSAN PERLINDUNGAN ALAM SEKITAR DALAM PROJEK KERJA-KERJA PENSTABILAN TANAH",
+    "PENGURUSAN TRAFIK TAPAK DALAM PROJEK KERJA-KERJA PENYIASATAN DAN PENSTABILAN TANAH",
+    "PENGURUSAN MOBILISASI FIZIKAL TAPAK PROJEK BAGI KERJA-KERJA PENSTABILAN TANAH",
+    "PELAKSANAAN DAN PEMANTAUAN KERJA BAGI KERJA-KERJA PENYIASATAN DAN PENSTABILAN TANAH",
+    "PENGURUSAN PENAMATAN TAPAK PROJEK (DEMOBILISATION) BAGI KERJA PENSTABILAN TANAH"
+   ],
+   "sub": [
+    "1.1 Kepentingan Pengurusan Kualiti",
+    "1.2 Penyediaan Inspection Test Plan (ITP)",
+    "1.3 Kawalan Kualiti Bahan Binaan",
+    "1.4 Kawalan Kualiti Kaedah Kerja",
+    "1.5 Pengurusan Rekod Kualiti",
+    "1.6 Penyediaan Mock-Up atau Trial Section",
+    "2.1 Pengenalan OSH",
+    "2.2 Risiko Keselamatan Lime Stabilisation",
+    "2.3 Risiko Keselamatan Grouting",
+    "2.4 Penyediaan HIRARC",
+    "2.5 Penyediaan Emergency Response Plan (ERP)",
+    "2.6 Kawalan Kebersihan dan Kekemasan Tapak (Housekeeping)",
+    "3.1 Pematuhan Undang-Undang dan Peraturan Alam Sekitar",
+    "3.2 Kawalan Hakisan dan Sedimentasi",
+    "3.3 Kawalan Air Larian Permukaan",
+    "3.4 Kawalan Debu",
+    "3.5 Pengurusan Sisa Terjadual",
+    "3.6 Pemantauan dan Audit Alam Sekitar oleh Pihak Berkuasa (DOE, PBT)",
+    "4.1 Pelan Pengurusan Trafik (TMP)",
+    "4.2 Laluan Kenderaan Berat",
+    "4.3 Penyelarasan Waktu Penghantaran",
+    "4.4 Kawalan Trafik Tapak oleh Flagmen",
+    "4.5 Pengurusan Haul Road",
+    "4.6 Komunikasi dengan Pihak Berkuasa Tempatan",
+    "5.1 Penyediaan Pelan Mobilisasi Tapak",
+    "5.2 Penyediaan Kawasan Penyimpanan Bahan",
+    "5.3 Penubuhan Pejabat Tapak dan Stor Bahan Kimia",
+    "5.4 Penyediaan Kemudahan Utiliti Sementara",
+    "5.5 Penandaan Zon Kerja",
+    "5.6 Penyediaan Laluan Kerja dan Signage",
+    "6.1 Penyelarasan Aktiviti Tapak",
+    "6.2 Pemantauan Kemajuan Kerja",
+    "6.3 Penyediaan Laporan Tapak",
+    "6.4 Pelaksanaan Pemeriksaan Kerja dan Permintaan Pemeriksaan",
+    "6.5 Pengurusan Isu Teknikal Semasa Pelaksanaan Kerja",
+    "6.6 Penyediaan dan Kelulusan Method Statement",
+    "7.1 Penyediaan Pelan Penamatan Tapak",
+    "7.2 Kerja Pembersihan Tapak Mengikut Spesifikasi Pihak Berkuasa",
+    "7.3 Pengurusan Pengeluaran Mesin, Peralatan dan Baki Bahan Kimia",
+    "7.4 Penyediaan Tapak untuk Penyerahan kepada Pemilik Projek",
+    "7.5 Penyediaan Laporan Penamatan Tapak",
+    "7.6 Penyediaan Rekod As-Built berkaitan Penstabilan Tanah"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "174 lettered items, by far the most of the nine; many fan again into roman-numbered sub-lists"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "PENGURUSAN KUALITI PROJEK KERJA PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENGURUSAN KESELAMATAN DAN KESIHATAN (OSH) TAPAK PENSTABILAN"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN PERLINDUNGAN ALAM SEKITAR DALAM PROJEK KERJA-KERJA PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G4",
+     "covers": "PENGURUSAN TRAFIK TAPAK DALAM PROJEK KERJA-KERJA PENYIASATAN DAN PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G5",
+     "covers": "PENGURUSAN MOBILISASI FIZIKAL TAPAK PROJEK BAGI KERJA-KERJA PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G6",
+     "covers": "PELAKSANAAN DAN PEMANTAUAN KERJA BAGI KERJA-KERJA PENYIASATAN DAN PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G7",
+     "covers": "PENGURUSAN PENAMATAN TAPAK PROJEK (DEMOBILISATION) BAGI KERJA PENSTABILAN TANAH"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 7,
+    "closing_screens": 3,
+    "minimum_total_screens": 12,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "PENGURUSAN KUALITI PROJEK KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENGURUSAN KESELAMATAN DAN KESIHATAN (OSH) TAPAK PENSTABILAN",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN PERLINDUNGAN ALAM SEKITAR DALAM PROJEK KERJA-KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G4",
+     "covers": "PENGURUSAN TRAFIK TAPAK DALAM PROJEK KERJA-KERJA PENYIASATAN DAN PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G5",
+     "covers": "PENGURUSAN MOBILISASI FIZIKAL TAPAK PROJEK BAGI KERJA-KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G6",
+     "covers": "PELAKSANAAN DAN PEMANTAUAN KERJA BAGI KERJA-KERJA PENYIASATAN DAN PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G7",
+     "covers": "PENGURUSAN PENAMATAN TAPAK PROJEK (DEMOBILISATION) BAGI KERJA PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 12,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "DOE",
+    "PBT",
+    "JKKP",
+    "DOSH",
+    "JKR",
+    "CIDB"
+   ],
+   "compliance_heavy": true
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 6,
+   "source_attested": 6,
+   "note": "Labels read Rajah 1, 2, 3, 4, then Rajah 3 and Rajah 4 again for different subjects. The numbering restarts mid-document. Recorded, not corrected.",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "PROSE_PER_QUESTION",
+   "label": "Soalan N:",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "One prose paragraph per question."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "PROSE_PER_QUESTION",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ },
+ {
+  "course": "K3",
+  "pl": "PL08",
+  "unit_id": "K3-M05-PL08",
+  "title": "PENGURUSAN TEKNIKAL DAN DOKUMENTASI UJIAN PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 13,
+   "module_code": "M05",
+   "module_title": "CONSTRUCTION OPERATION MANAGEMENT",
+   "top_sections": 3,
+   "sub_sections": 13,
+   "tables": 2,
+   "figures": 4,
+   "drive_id": "1T-ugQfO38zPjgolOmpe6jA-BJdej4CAp"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/13 to 13/13",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "PENGENALAN UJIAN TAPAK PENSTABILAN TANAH DAN PROSES VERIFIKASI",
+    "DOKUMENTASI DAN REKOD UJIAN TAPAK",
+    "PENGURUSAN ISU TEKNIKAL BERKAITAN UJIAN PENSTABILAN TANAH"
+   ],
+   "sub": [
+    "1.1 Jenis Ujian Tapak Penstabilan Tanah",
+    "1.2 Peranan Confirmatory Site Investigation (SI)",
+    "1.3 Mackintosh Probe (MP) dan JKR Probe",
+    "1.4 Ujian Lanjutan Selepas MP",
+    "1.5 Rawatan Tanah Untuk Asas Cetek",
+    "2.1 Penyediaan Borang Rekod Ujian Tapak (Daily Test Report)",
+    "2.2 Penyimpanan Data Ujian untuk Tujuan Tuntutan Projek",
+    "2.3 Keperluan Consultant / Client untuk Dokumen Ujian",
+    "2.4 Pengurusan Isu Data Hilang atau Tidak Lengkap",
+    "3.1 Tindakan Remedial Work",
+    "3.2 Pengurusan Kos Kerja Ulangan (Rework Cost)",
+    "3.3 Komunikasi dengan Konsultan jika Ujian Tidak Memenuhi Spesifikasi",
+    "3.4 Hubungan Data Ujian dengan Pembayaran Interim Certificate"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "1.3 fans into a) to g) — seven distinct Mackintosh Probe propositions; 1.4 into a) to g) as seven named tests"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "PENGENALAN UJIAN TAPAK PENSTABILAN TANAH DAN PROSES VERIFIKASI"
+    },
+    {
+     "group_id": "G2",
+     "covers": "DOKUMENTASI DAN REKOD UJIAN TAPAK"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN ISU TEKNIKAL BERKAITAN UJIAN PENSTABILAN TANAH"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 3,
+    "closing_screens": 3,
+    "minimum_total_screens": 8,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "PENGENALAN UJIAN TAPAK PENSTABILAN TANAH DAN PROSES VERIFIKASI",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "DOKUMENTASI DAN REKOD UJIAN TAPAK",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENGURUSAN ISU TEKNIKAL BERKAITAN UJIAN PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 8,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "JKR",
+    "CIDB",
+    "BSI",
+    "ASTM"
+   ],
+   "compliance_heavy": false
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 4,
+   "source_attested": 4,
+   "note": "Rajah 1 to Rajah 4 and Jadual 1 to Jadual 2, numbered without gaps.",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "BULLETED_PER_QUESTION",
+   "label": "Skema N:",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "Bulleted points; question 5 is a bare list of test names."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "BULLETED_PER_QUESTION",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ },
+ {
+  "course": "K3",
+  "pl": "PL09",
+  "unit_id": "K3-M06-PL09",
+  "title": "PENYERAHAN PROJEK PENSTABILAN TANAH",
+  "stage": "4.2F-D",
+  "authority_inherited": "SRC-AUTH-01",
+  "source": {
+   "cls": "SOURCE_DERIVED",
+   "pages": 28,
+   "module_code": "M06",
+   "module_title": "PROJECT HANDOVER",
+   "top_sections": 3,
+   "sub_sections": 19,
+   "tables": 0,
+   "figures": 4,
+   "drive_id": "1ViArDP7Mf2JbronIBjFDwYhvzppabHjy"
+  },
+  "body_content_boundary": {
+   "cls": "SOURCE_DERIVED",
+   "starts_at": "TAJUK",
+   "ends_at": "SKEMA JAWAPAN",
+   "page_anchors": "1/28 to 28/28",
+   "contiguous": true
+  },
+  "heading_hierarchy": {
+   "cls": "SOURCE_DERIVED",
+   "top": [
+    "PENYERAHAN PROJEK PENSTABILAN TANAH",
+    "PENGURUSAN LIABILITI KECACATAN DAN CMGD",
+    "PENYEDIAAN DOKUMEN AKAUN AKHIR PROJEK"
+   ],
+   "sub": [
+    "1.1 Jenis Dokumen Penyerahan Projek (As-Built, Test Reports, O&M)",
+    "1.2 Penyediaan Dokumen Handover Mengikut Spesifikasi Kontrak",
+    "1.3 Senarai Semak Dokumen Penyerahan (Handover Checklist)",
+    "1.4 Penyediaan Laporan Ujian (Test Result Reports)",
+    "1.5 Proses Serahan Tapak kepada Pemilik Projek",
+    "2.1 Definisi Liabiliti Kecacatan (Defect Liability)",
+    "2.2 Proses Pemeriksaan Pra-Penyerahan",
+    "2.3 Penyediaan Senarai Defect (Defect List)",
+    "2.4 Pengurusan Membetulkan Kecacatan (Making Good Defects)",
+    "2.5 Proses Mendapatkan Certificate of Making Good Defects (CMGD)",
+    "2.6 Tempoh Defect Liability Period (DLP) Mengikut Kontrak",
+    "2.7 Dokumentasi dan Pengesahan Pembaikan Defect",
+    "3.1 Komponen Akaun Akhir Projek (Final Account Components)",
+    "3.2 Penyediaan Laporan Final Account Mengikut Format Kontrak",
+    "3.3 Pengurusan Variation Orders (VO) dalam Final Account",
+    "3.4 Penyediaan Supporting Documents untuk Final Account",
+    "3.5 Rundingan Kos Akhir dengan Client atau Konsultan Projek",
+    "3.6 Penyediaan Final Statement of Account",
+    "3.7 Penyerahan Final Account kepada Pihak Berkuasa atau Client"
+   ],
+   "lettered_descendants": true,
+   "lettered_note": "1.1 d) fans again into i) Kontraktor Utama, ii) Jurutera Perunding, iii) Pemilik Projek — a three-role responsibility split"
+  },
+  "grouping": {
+   "cls": "CAIR_PROPOSAL",
+   "basis": "TOP_LEVEL_NUMBERED_SECTION",
+   "groups": [
+    {
+     "group_id": "G1",
+     "covers": "PENYERAHAN PROJEK PENSTABILAN TANAH"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENGURUSAN LIABILITI KECACATAN DAN CMGD"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENYEDIAAN DOKUMEN AKAUN AKHIR PROJEK"
+    }
+   ]
+  },
+  "screen_sequence": {
+   "cls": "CAIR_PROPOSAL",
+   "arithmetic": {
+    "shell_screens": 2,
+    "content_groups": 3,
+    "closing_screens": 3,
+    "minimum_total_screens": 8,
+    "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+   }
+  },
+  "pattern_family": {
+   "cls": "PENDING_BARIAH_PATTERN_DECISION",
+   "primary_candidate": "click-to-reveal",
+   "secondary_candidate": "progressive process",
+   "reason": "Numbered sections each fanning into sub-sections; PL05's contract lifecycle and PL02's approval chain both also read as sequences."
+  },
+  "interaction_candidates": {
+   "cls": "CAIR_PROPOSAL",
+   "candidates": [
+    {
+     "group_id": "G1",
+     "covers": "PENYERAHAN PROJEK PENSTABILAN TANAH",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G2",
+     "covers": "PENGURUSAN LIABILITI KECACATAN DAN CMGD",
+     "candidate": "reveal per sub-section"
+    },
+    {
+     "group_id": "G3",
+     "covers": "PENYEDIAAN DOKUMEN AKAUN AKHIR PROJEK",
+     "candidate": "reveal per sub-section"
+    }
+   ]
+  },
+  "dialogue": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "verdict": "NOT_ASSESSED",
+   "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+  },
+  "runtime_state_estimate": {
+   "cls": "CAIR_PROPOSAL",
+   "base_states_floor": 8,
+   "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+  },
+  "mandatory_content": {
+   "cls": "SOURCE_DERIVED",
+   "named_authorities": [
+    "JKR",
+    "DOE",
+    "BSI",
+    "NRECC"
+   ],
+   "compliance_heavy": true
+  },
+  "visual_subjects": {
+   "cls": "SOURCE_DERIVED",
+   "count": 4,
+   "source_attested": 4,
+   "note": "Rajah 1 to Rajah 4, all four the same subject: contoh Borang Penyerahan Projek JKR, occupying pages 5 to 8 one per page.",
+   "rule": "RP-104 — read from the source's own figure"
+  },
+  "skema_shape": {
+   "family": "PROSE_PER_QUESTION",
+   "label": "Jawapan N:",
+   "questions": 5,
+   "carries_marks": false,
+   "note": "Prose, except question 2 which is bulleted."
+  },
+  "source_assessment": {
+   "cls": "PENDING_K3_COURSE_ASSESSMENT_RULE",
+   "questions": 5,
+   "model_answers": 5,
+   "format": "soalan esei pendek, 15 minit",
+   "shape": "PROSE_PER_QUESTION",
+   "carries_marks": false,
+   "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+  },
+  "assessment_format_conflict": {
+   "decision_id": "K3-COURSE-01",
+   "subject_ms": "Rawatan penilaian bagi kursus K3",
+   "subject_en": "assessment treatment for the K3 course",
+   "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+   "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+   "options": [
+    {
+     "key": "A",
+     "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+     "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+     "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+    },
+    {
+     "key": "B",
+     "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+     "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+     "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+    },
+    {
+     "key": "C",
+     "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+     "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+     "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+    },
+    {
+     "key": "D",
+     "label_ms": "Tentukan mengikut setiap PL.",
+     "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+     "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+    }
+   ],
+   "cair_recommendation": null,
+   "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+   "blocks": [
+    "K3 assessment modelling"
+   ],
+   "blocks_ms": [
+    "pemodelan penilaian K3"
+   ],
+   "does_not_block": [
+    "source reading",
+    "content extraction",
+    "visual modelling",
+    "screen modelling"
+   ],
+   "does_not_block_ms": [
+    "pembacaan sumber",
+    "pengekstrakan kandungan",
+    "pemodelan visual",
+    "pemodelan skrin"
+   ]
+  },
+  "k5_rule_not_applied": {
+   "rule": "4 Multiple Choice + 1 Multiple Response, 60 percent threshold",
+   "applies_to": "K5",
+   "applied_to_k3": false,
+   "why": "K3 packages ship their own LATIHAN and SKEMA JAWAPAN. Imposing K5's composition would discard a source-authored assessment with model answers and mark allocations. Every K3 model classifies assessment as PENDING_K3_COURSE_ASSESSMENT_RULE."
+  },
+  "rumusan": {
+   "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+   "beat_count": "UNKNOWN_NOT_AUTHORED"
+  },
+  "frozen_nothing": [
+   "screen count",
+   "sequence",
+   "dialogue",
+   "Rumusan form",
+   "pattern family",
+   "assessment key",
+   "visual reuse"
+  ]
+ }
+]

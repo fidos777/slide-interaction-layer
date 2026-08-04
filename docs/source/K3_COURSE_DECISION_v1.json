@@ -1,0 +1,53 @@
+{
+ "decision_id": "K3-COURSE-01",
+ "subject_ms": "Rawatan penilaian bagi kursus K3",
+ "subject_en": "assessment treatment for the K3 course",
+ "context_ms": "Kesembilan-sembilan pakej K3 telah dibaca sepenuhnya. Setiap satu membawa LATIHAN dan SKEMA JAWAPAN tersendiri, semuanya soalan esei pendek, 15 minit. Tetapi kandungannya tidak seragam:\n• Bilangan soalan: tujuh pakej ada 5 soalan; PL01 dan PL03 ada 3. Jumlah keseluruhan 41 soalan.\n• Bentuk skema: empat struktur berbeza — jadual dua lajur (PL01, PL02, PL06), prosa (PL04, PL07, PL09), senarai berbutir (PL05, PL08), dan rubrik pemarkahan (PL03) — di bawah enam label berbeza.\n• PL03 bukan jawapan model. Ia rubrik dengan peruntukan markah (2 + 4 + 4 = 10 markah setiap soalan). Ia arahan kepada pemeriksa, bukan jawapan yang boleh ditunjukkan kepada pelajar.\nKursus K5 pula menggunakan 4 MCQ + 1 Multiple Response dengan ambang 60 peratus. Format-format ini tidak sama.",
+ "evidence_note_ms": "Semua angka di atas dikira daripada kesembilan-sembilan fail sumber yang telah dibaca, bukan dianggarkan.",
+ "options": [
+  {
+   "key": "A",
+   "label_ms": "Kekalkan format LATIHAN dan SKEMA JAWAPAN asal.",
+   "consequence_ms": "Tiada penulisan item baharu; skema sumber digunakan terus. Tetapi esei tidak boleh dinilai automatik dalam LMS, jadi setiap jawapan perlu disemak manusia dan tiada skor automatik atau ambang lulus. Ketidakseragaman sumber turut sampai kepada pelajar: sesetengah unit 5 soalan, dua unit 3 soalan, dan PL03 tiada jawapan model langsung — hanya rubrik pemeriksa yang tidak boleh dipaparkan.",
+   "production_cost_ms": "RENDAH untuk pengarangan, TINGGI untuk penyemakan"
+  },
+  {
+   "key": "B",
+   "label_ms": "Transform latihan asal kepada 4 MCQ + 1 Multiple Response.",
+   "consequence_ms": "Boleh dinilai automatik dan sejajar dengan K5, dan menyeragamkan kesemua sembilan unit kepada satu bentuk. Tetapi 41 soalan esei perlu ditulis semula menjadi 45 item objektif, dan pengganggu (distractor) perlu dikarang kerana tiada satu pun sumber membekalkannya. Skema asal menjadi bahan kunci, bukan item siap.",
+   "production_cost_ms": "TINGGI untuk pengarangan, RENDAH untuk penyemakan"
+  },
+  {
+   "key": "C",
+   "label_ms": "Kekalkan latihan asal dan tambah kuiz modul.",
+   "consequence_ms": "Pelajar menghadapi dua penilaian. Latihan esei kekal sebagai refleksi; kuiz baharu memberi skor. Kos pengarangan sama seperti B, ditambah masa pelajar yang lebih panjang, dan ketidakseragaman sumber tetap kelihatan dalam bahagian esei.",
+   "production_cost_ms": "TINGGI — kedua-dua kos digabungkan"
+  },
+  {
+   "key": "D",
+   "label_ms": "Tentukan mengikut setiap PL.",
+   "consequence_ms": "Fleksibel, dan mengiktiraf bahawa sumber memang sudah berbeza — PL03 khususnya membawa rubrik bermarkah yang tiada pada lapan yang lain. Tetapi setiap PL memerlukan keputusan berasingan dan kursus K3 tidak lagi mempunyai satu bentuk penilaian yang seragam. Sembilan keputusan menggantikan satu.",
+   "production_cost_ms": "BERUBAH-UBAH — bergantung kepada campuran"
+  }
+ ],
+ "cair_recommendation": null,
+ "cair_note_ms": "Tiada cadangan CAIR. Lapan pakej membekalkan jawapan model yang boleh terus digunakan; PL03 hanya rubrik bermarkah. Memilih tanpa keputusan Bariah akan membazirkan lapan skema itu atau menyembunyikan jurang PL03.",
+ "blocks": [
+  "K3 assessment modelling"
+ ],
+ "blocks_ms": [
+  "pemodelan penilaian K3"
+ ],
+ "does_not_block": [
+  "source reading",
+  "content extraction",
+  "visual modelling",
+  "screen modelling"
+ ],
+ "does_not_block_ms": [
+  "pembacaan sumber",
+  "pengekstrakan kandungan",
+  "pemodelan visual",
+  "pemodelan skrin"
+ ]
+}

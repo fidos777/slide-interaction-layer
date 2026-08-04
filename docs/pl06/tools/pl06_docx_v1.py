@@ -382,13 +382,28 @@ def render_preview(blocks, out_dir, prefix="P"):
             state["y"] += lh
         state["y"] += after
 
-    def emit_table(headers, rows):
+    def emit_table(headers, rows, widths=None):
+        """Draw a table using the SAME column geometry the DOCX will use.
+
+        _table_xml honours `widths`; this preview used to divide the content width evenly
+        regardless. A caller that narrowed a column to make a page fit therefore saw a
+        pessimistic preview, and a caller that widened one saw an optimistic preview —
+        either way the picture was of a table the reader would never receive. The column
+        arithmetic below is deliberately the same expression as _table_xml's.
+        """
         n = len(headers)
-        cw = (W - 2 * Mg) // n
+        avail = W - 2 * Mg
+        if widths:
+            cols = [int(avail * w / sum(widths)) for w in widths]
+            cols[-1] = avail - sum(cols[:-1])
+        else:
+            cols = [avail // n] * n
+            cols[-1] = avail - sum(cols[:-1])
+        xs = [Mg + sum(cols[:i]) for i in range(n)]
         fh, fb = font(11, True), font(11)
         for row, fnt, bg in ([(headers, fh, (232, 234, 237))]
                              + [(r, fb, None) for r in rows]):
-            cells = [wrap(c, fnt, cw - 10) for c in row]
+            cells = [wrap(c, fnt, cols[i] - 10) for i, c in enumerate(row)]
             rh = max(len(c) for c in cells) * (fnt.size + 4) + 6
             if state["y"] + rh > H - Mg:
                 new_page()
@@ -397,13 +412,13 @@ def render_preview(blocks, out_dir, prefix="P"):
             for i, cell in enumerate(cells):
                 yy = state["y"] + 3
                 for ln in cell:
-                    state["d"].text((Mg + i * cw + 5, yy), ln, font=fnt, fill=(26, 26, 26))
+                    state["d"].text((xs[i] + 5, yy), ln, font=fnt, fill=(26, 26, 26))
                     yy += fnt.size + 4
             state["d"].rectangle([Mg, state["y"], W - Mg, state["y"] + rh],
                                  outline=(154, 160, 166))
             for i in range(1, n):
-                state["d"].line([(Mg + i * cw, state["y"]),
-                                 (Mg + i * cw, state["y"] + rh)], fill=(154, 160, 166))
+                state["d"].line([(xs[i], state["y"]), (xs[i], state["y"] + rh)],
+                                fill=(154, 160, 166))
             state["y"] += rh
         state["y"] += 8
 
@@ -437,7 +452,7 @@ def render_preview(blocks, out_dir, prefix="P"):
         elif k == "field":
             emit(b["text"], font(13), after=10, fill=(60, 60, 60))
         elif k == "table":
-            emit_table(b["headers"], b["rows"])
+            emit_table(b["headers"], b["rows"], b.get("widths"))
 
     made = []
     for i, img in enumerate(pages, 1):
