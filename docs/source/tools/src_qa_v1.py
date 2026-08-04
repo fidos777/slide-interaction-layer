@@ -103,10 +103,38 @@ def run():
         len(d25.get("decisions", [])) or 1, "PL06_HARVEST_BATCH1_DECISION_INDEX_v1.json")
 
     # ==================== 2. PENDING v1.2 CANNOT BECOME A RULE ====================
-    chk("THE_PATTERN_PACKAGE_IS_PENDING_NOT_AUTHORITY", PENDING,
-        [A.PENDING_PATTERN_PACKAGE["status"], A.PENDING_PATTERN_PACKAGE["is_authority"],
-         A.PENDING_PATTERN_PACKAGE["may_be_auto_applied"]],
-        ["PENDING_BARIAH_REVIEW", False, False], 1, "SRC_AUTH_01_v1.json")
+    # Supersedes THE_PATTERN_PACKAGE_IS_PENDING_NOT_AUTHORITY, which asserted the WHOLE
+    # v1.2 package was still pending with is_authority False and may_be_auto_applied
+    # False. Bariah returned it on 4/8/2026 and Sections A, C and D are now live K5
+    # policy, so that assertion is simply false — it would fail on a true fact.
+    #
+    # The intent has not changed: nothing may be auto-applied that Bariah has not
+    # approved. What changed is that "not approved" is now a per-section question rather
+    # than a whole-package one. Section B is the part that must never default, so the
+    # replacement proves all three of the things that matter.
+    pp = A.PENDING_PATTERN_PACKAGE
+    chk("AUTHORITY_IS_PARTITIONED_BY_SECTION_NOT_A_SINGLE_FLAG", PENDING,
+        [pp["status"], pp["is_authority"]],
+        ["RETURNED_BY_BARIAH_AND_INGESTED", None], 1, "SRC_AUTH_01_v1.json")
+    chk("SECTIONS_A_C_D_ARE_INGESTED_AUTHORITY", PENDING,
+        [pp["authority_by_section"][s] for s in ("A", "C", "D")],
+        ["APPROVED_WITH_AMENDMENTS", "APPROVED", "APPROVED_WITH_AMENDMENTS"], 3,
+        "SRC_AUTH_01_v1.json")
+    # Section B closed on 4/8/2026 in a second Bariah return, so the earlier
+    # "B is pending" assertions would now fail on a true fact. The intent survives intact:
+    # the thing that may not be auto-applied is B2, which is TEST_REQUIRED, not approved.
+    chk("SECTION_B_IS_CLOSED", PENDING,
+        pp["authority_by_section"]["B"], "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION", 1,
+        "SRC_AUTH_01_v1.json")
+    chk("B2_MAY_NOT_BE_AUTO_APPLIED", PENDING,
+        pp["section_b_items"]["B2"]["may_be_auto_applied"], False, 4,
+        "SRC_AUTH_01_v1.json")
+    chk("B2_IS_THE_ONLY_SECTION_B_ITEM_BLOCKED", PENDING,
+        sorted(k for k, v in pp["section_b_items"].items()
+               if not v["may_be_auto_applied"]), ["B2"], 4, "SRC_AUTH_01_v1.json")
+    chk("CALIBRATION_AUTHORIZED_MASS_GENERATION_NOT", PENDING,
+        [pp["calibration_generation_authorized"], pp["mass_generation_authorized"]],
+        [True, False], 1, "SRC_AUTH_01_v1.json")
     chk("NO_MODEL_TREATS_THE_PATTERN_PACKAGE_AS_A_RULE", PENDING,
         [uid for uid, m in models.items()
          if m["pattern_family"]["cls"] != "PENDING_BARIAH_PATTERN_DECISION"], [],

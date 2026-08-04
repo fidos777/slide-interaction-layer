@@ -1,0 +1,1405 @@
+{
+ "suite_id": "K5_BARIAH_POLICY_QA_v1",
+ "total": 91,
+ "passed": 91,
+ "failed": [],
+ "by_type": {
+  "ACCOUNTING": 4,
+  "AUTHORITY": 10,
+  "BAHAGIAN": 5,
+  "CLOSING": 5,
+  "COMPARISON": 4,
+  "FORECAST": 9,
+  "INGESTION": 10,
+  "NARRATOR": 4,
+  "SCENARIO": 5,
+  "SECTION_B": 20,
+  "STRUCTURES": 10,
+  "SUMMARY": 5
+ },
+ "by_oracle_basis": {
+  "DOC_LITERAL": 77,
+  "INDEPENDENT_MEASURE": 14
+ },
+ "oracle_separation_structural": "DEFERRED_BY_DELIVERY_DEADLINE",
+ "not_checked": [
+  "whether any scenario's CONTENT is instructionally sound — that is Bariah's, per unit",
+  "any answer key — A7 authorises composition, not keys",
+  "the B2 density outcome — the test has not been shown to Bariah, and no gate asserts a winning density",
+  "Bariah's actual availability — a rule was given, a calendar was not",
+  "the Rumusan visual SUBJECT — the obligation is gated, the subject is not invented",
+  "segmentation outside PL06 — no frozen boundary map exists for it"
+ ],
+ "gates": [
+  {
+   "gate_id": "SCENARIO_IS_REQUIRED_BY_POLICY",
+   "gate_type": "SCENARIO",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_CALIBRATION_UNIT_REQUIRES_A_SCENARIO",
+   "gate_type": "SCENARIO",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SCENARIO_SURVIVES_A_NOT_JUSTIFIED_CAIR_VERDICT",
+   "gate_type": "SCENARIO",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 3,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "A5_AND_D3_BOTH_CITED_AS_THE_BASIS",
+   "gate_type": "SCENARIO",
+   "value": [
+    "A5",
+    "D3"
+   ],
+   "expected": [
+    "A5",
+    "D3"
+   ],
+   "population": 2,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_SHELL_GREW_FOR_UNITS_THAT_HAD_NO_SCENARIO",
+   "gate_type": "SCENARIO",
+   "value": [
+    1
+   ],
+   "expected": [
+    1
+   ],
+   "population": 3,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SUMMARY_VISUAL_IS_REQUIRED_BY_POLICY",
+   "gate_type": "SUMMARY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_CALIBRATION_UNIT_REQUIRES_A_SUMMARY_VISUAL",
+   "gate_type": "SUMMARY",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SUMMARY_STRUCTURE_IS_THE_THREE_BEAT",
+   "gate_type": "SUMMARY",
+   "value": [
+    "Kepentingan",
+    "Skop dan Isi Utama",
+    "Manfaat"
+   ],
+   "expected": [
+    "Kepentingan",
+    "Skop dan Isi Utama",
+    "Manfaat"
+   ],
+   "population": 3,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_UNIT_TARGETS_THREE_BEATS",
+   "gate_type": "SUMMARY",
+   "value": [
+    3
+   ],
+   "expected": [
+    3
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_SUMMARY_VISUAL_SUBJECT_IS_INVENTED",
+   "gate_type": "SUMMARY",
+   "value": [
+    "PENDING_UNIT_EXCEPTION_REVIEW — the obligation is set, the subject is not invented here"
+   ],
+   "expected": [
+    "PENDING_UNIT_EXCEPTION_REVIEW — the obligation is set, the subject is not invented here"
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "COMPARISON_REQUIRES_EXPLICIT_SOURCE_COMPARISON",
+   "gate_type": "COMPARISON",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "A4_IS_SOURCE_CONDITIONAL_NOT_GLOBAL",
+   "gate_type": "COMPARISON",
+   "value": "SOURCE_CONDITIONAL",
+   "expected": "SOURCE_CONDITIONAL",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_UNIT_PROPOSING_COMPARISON_IS_FLAGGED_FOR_RETEST",
+   "gate_type": "COMPARISON",
+   "value": [
+    "RE_TEST_REQUIRED"
+   ],
+   "expected": [
+    "RE_TEST_REQUIRED"
+   ],
+   "population": 2,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_UNIT_IS_SILENTLY_CLEARED_FOR_COMPARISON",
+   "gate_type": "COMPARISON",
+   "value": [],
+   "expected": [],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "K5_NARRATOR_IS_HILMI",
+   "gate_type": "NARRATOR",
+   "value": "Hilmi",
+   "expected": "Hilmi",
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_CALIBRATION_UNIT_NAMES_HILMI",
+   "gate_type": "NARRATOR",
+   "value": [
+    "Hilmi"
+   ],
+   "expected": [
+    "Hilmi"
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_CROSS_COURSE_NARRATOR_NOTE_IS_INGESTED_NOT_APPLIED",
+   "gate_type": "NARRATOR",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_K5_WIDE_CAST_IS_CLAIMED",
+   "gate_type": "NARRATOR",
+   "value": "PER_UNIT_AT_REVIEW",
+   "expected": "PER_UNIT_AT_REVIEW",
+   "population": 4,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "PER_BAHAGIAN_STORYBOARD_SUMMARY_QUIZ_IS_POLICY",
+   "gate_type": "BAHAGIAN",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_MULTI_BAHAGIAN_UNIT_OWNS_ITS_SUMMARY_AND_QUIZ",
+   "gate_type": "BAHAGIAN",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 2,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SINGLE_BAHAGIAN_TOPICS_SHOW_NO_BAHAGIAN_LABEL",
+   "gate_type": "BAHAGIAN",
+   "value": [
+    false
+   ],
+   "expected": [
+    false
+   ],
+   "population": 2,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "INTERMEDIATE_CLOSING_TEXT_IS_BARIAHS_WORDING",
+   "gate_type": "CLOSING",
+   "value": "Tamat Bahagian X. Teruskan pembelajaran ke bahagian seterusnya",
+   "expected": "Tamat Bahagian X. Teruskan pembelajaran ke bahagian seterusnya",
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "FINAL_CLOSING_TEXT_IS_BARIAHS_WORDING",
+   "gate_type": "CLOSING",
+   "value": "Tamat Topik",
+   "expected": "Tamat Topik",
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_INTERMEDIATE_BAHAGIAN_CLOSES_WITH_TAMAT_TOPIK",
+   "gate_type": "CLOSING",
+   "value": [],
+   "expected": [],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "INTERMEDIATE_CLOSINGS_CARRY_THEIR_OWN_BAHAGIAN_NUMBER",
+   "gate_type": "CLOSING",
+   "value": [
+    "Tamat Bahagian 3. Teruskan pembelajaran ke bahagian seterusnya",
+    "Tamat Bahagian 4. Teruskan pembelajaran ke bahagian seterusnya"
+   ],
+   "expected": [
+    "Tamat Bahagian 3. Teruskan pembelajaran ke bahagian seterusnya",
+    "Tamat Bahagian 4. Teruskan pembelajaran ke bahagian seterusnya"
+   ],
+   "population": 2,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SINGLE_BAHAGIAN_TOPICS_CLOSE_WITH_TAMAT_TOPIK",
+   "gate_type": "CLOSING",
+   "value": [
+    "Tamat Topik"
+   ],
+   "expected": [
+    "Tamat Topik"
+   ],
+   "population": 2,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SECTION_B_IS_CLOSED",
+   "gate_type": "SECTION_B",
+   "value": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+   "expected": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+   "population": 4,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NOTHING_REMAINS_PENDING",
+   "gate_type": "SECTION_B",
+   "value": [],
+   "expected": [],
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_FOUR_BUCKETS_PARTITION_ALL_SEVENTEEN",
+   "gate_type": "SECTION_B",
+   "value": 17,
+   "expected": 17,
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SECTION_B_SOURCE_HASH_RECORDED",
+   "gate_type": "SECTION_B",
+   "value": "c3cd395d35b9f763cb849f3b5162517a30d029330f1b654fe944f3e6f4fc3012",
+   "expected": "c3cd395d35b9f763cb849f3b5162517a30d029330f1b654fe944f3e6f4fc3012",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "TWO_FILES_PER_UNIT",
+   "gate_type": "SECTION_B",
+   "value": [
+    2,
+    [
+     "Storyboard",
+     "Lampiran Keadaan"
+    ]
+   ],
+   "expected": [
+    2,
+    [
+     "Storyboard",
+     "Lampiran Keadaan"
+    ]
+   ],
+   "population": 4,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B1_IS_APPROVED",
+   "gate_type": "SECTION_B",
+   "value": "APPROVED_AS_K5_DEFAULT",
+   "expected": "APPROVED_AS_K5_DEFAULT",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B2_IS_TEST_REQUIRED_NOT_APPROVED",
+   "gate_type": "SECTION_B",
+   "value": "TEST_REQUIRED_BEFORE_FINAL_FREEZE",
+   "expected": "TEST_REQUIRED_BEFORE_FINAL_FREEZE",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B2_IS_NOT_IN_THE_APPROVED_LIST",
+   "gate_type": "SECTION_B",
+   "value": false,
+   "expected": false,
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_PANEL_DENSITY_IS_APPROVED",
+   "gate_type": "SECTION_B",
+   "value": "NOT_APPROVED_TEST_REQUIRED",
+   "expected": "NOT_APPROVED_TEST_REQUIRED",
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "BOTH_DENSITIES_MUST_BE_PRODUCED_FOR_THE_TEST",
+   "gate_type": "SECTION_B",
+   "value": [
+    2,
+    3
+   ],
+   "expected": [
+    2,
+    3
+   ],
+   "population": 2,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_DENSITY_TEST_HOLDS_UNIT_AND_STATES_CONSTANT",
+   "gate_type": "SECTION_B",
+   "value": [
+    true,
+    true
+   ],
+   "expected": [
+    true,
+    true
+   ],
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ONE_UNIT_PER_NINETY_MINUTE_SLOT",
+   "gate_type": "SECTION_B",
+   "value": [
+    90,
+    1
+   ],
+   "expected": [
+    90,
+    1
+   ],
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "AVAILABILITY_DATES_ARE_NOT_INVENTED",
+   "gate_type": "SECTION_B",
+   "value": "REQUIRES_FIRDAUS_CONFIRMATION",
+   "expected": "REQUIRES_FIRDAUS_CONFIRMATION",
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SLOTS_PER_DAY_ARE_NOT_INVENTED",
+   "gate_type": "SECTION_B",
+   "value": "REQUIRES_FIRDAUS_CONFIRMATION",
+   "expected": "REQUIRES_FIRDAUS_CONFIRMATION",
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B4_AVAILABILITY_IS_MARKED_CONDITIONAL",
+   "gate_type": "SECTION_B",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "CALIBRATION_GENERATION_IS_AUTHORIZED",
+   "gate_type": "SECTION_B",
+   "value": true,
+   "expected": true,
+   "population": 4,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "MASS_GENERATION_IS_NOT_AUTHORIZED",
+   "gate_type": "SECTION_B",
+   "value": false,
+   "expected": false,
+   "population": 14,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ONLY_THE_FOUR_CALIBRATION_UNITS_ARE_AUTHORIZED",
+   "gate_type": "SECTION_B",
+   "value": [
+    "K5-PL06-T03-B03",
+    "K5-PL06-T03-B04",
+    "K5-PL06-T05-B01",
+    "K5-PL06-T06-B01"
+   ],
+   "expected": [
+    "K5-PL06-T03-B03",
+    "K5-PL06-T03-B04",
+    "K5-PL06-T05-B01",
+    "K5-PL06-T06-B01"
+   ],
+   "population": 4,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_LAMPIRAN_DEFINITION_IS_RECORDED",
+   "gate_type": "SECTION_B",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "LAMPIRAN_IS_NOT_A_SECOND_LEARNER_DECK",
+   "gate_type": "SECTION_B",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "DOCUMENT_HASH_RECORDED",
+   "gate_type": "INGESTION",
+   "value": "d22f6315a9bdec2c00d376aee710aacb301d97b2587ca82ee2ce0adcb8d964ce",
+   "expected": "d22f6315a9bdec2c00d376aee710aacb301d97b2587ca82ee2ce0adcb8d964ce",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "MODELLED_TOTAL_EQUALS_THE_DECLARED_TOTAL",
+   "gate_type": "INGESTION",
+   "value": 17,
+   "expected": 17,
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SECTION_COUNTS_MATCH_THE_DOCUMENTS_OWN_TABLE",
+   "gate_type": "INGESTION",
+   "value": {
+    "A": 7,
+    "B": 4,
+    "C": 2,
+    "D": 4
+   },
+   "expected": {
+    "A": 7,
+    "B": 4,
+    "C": 2,
+    "D": 4
+   },
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_BUCKET_TOGETHER_ACCOUNTS_FOR_ALL_SEVENTEEN",
+   "gate_type": "INGESTION",
+   "value": 17,
+   "expected": 17,
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "A5_IS_RECORDED_AS_A_PROSE_OVERRIDE",
+   "gate_type": "INGESTION",
+   "value": [
+    "A5"
+   ],
+   "expected": [
+    "A5"
+   ],
+   "population": 17,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "A5_IS_NOT_RECORDED_AS_PLAIN_ACCEPTANCE",
+   "gate_type": "INGESTION",
+   "value": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "expected": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "QUIZ_IS_FOUR_MCQ_ONE_MR_AT_SIXTY_PERCENT",
+   "gate_type": "INGESTION",
+   "value": [
+    4,
+    1,
+    60
+   ],
+   "expected": [
+    4,
+    1,
+    60
+   ],
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_ANSWER_KEY_IS_APPROVED",
+   "gate_type": "INGESTION",
+   "value": [
+    "SOURCE_AUTHORED_NOT_BARIAH_APPROVED"
+   ],
+   "expected": [
+    "SOURCE_AUTHORED_NOT_BARIAH_APPROVED"
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "UNANSWERED_CAIR_SUBPOINTS_ARE_NAMED_NOT_ASSUMED",
+   "gate_type": "INGESTION",
+   "value": [
+    "NOT_ADDRESSED_BY_BARIAH"
+   ],
+   "expected": [
+    "NOT_ADDRESSED_BY_BARIAH"
+   ],
+   "population": 2,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NOTHING_IS_READY_TO_EMIT_PPTX",
+   "gate_type": "INGESTION",
+   "value": [
+    false
+   ],
+   "expected": [
+    false
+   ],
+   "population": 4,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "AUTHORITY_RECORD_SHOWS_THE_PACKAGE_RETURNED",
+   "gate_type": "AUTHORITY",
+   "value": "RETURNED_BY_BARIAH_AND_INGESTED",
+   "expected": "RETURNED_BY_BARIAH_AND_INGESTED",
+   "population": 1,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "AUTHORITY_IS_NOT_A_SINGLE_BOOLEAN",
+   "gate_type": "AUTHORITY",
+   "value": null,
+   "expected": null,
+   "population": 1,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SECTIONS_A_C_D_ARE_INGESTED_AUTHORITY",
+   "gate_type": "AUTHORITY",
+   "value": [
+    "APPROVED_WITH_AMENDMENTS",
+    "APPROVED",
+    "APPROVED_WITH_AMENDMENTS"
+   ],
+   "expected": [
+    "APPROVED_WITH_AMENDMENTS",
+    "APPROVED",
+    "APPROVED_WITH_AMENDMENTS"
+   ],
+   "population": 3,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SECTION_B_IS_CLOSED_IN_THE_AUTHORITY_RECORD",
+   "gate_type": "AUTHORITY",
+   "value": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+   "expected": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+   "population": 1,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B2_MAY_NOT_BE_AUTO_APPLIED",
+   "gate_type": "AUTHORITY",
+   "value": false,
+   "expected": false,
+   "population": 4,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B2_IS_THE_ONLY_SECTION_B_ITEM_BLOCKED",
+   "gate_type": "AUTHORITY",
+   "value": [
+    "B2"
+   ],
+   "expected": [
+    "B2"
+   ],
+   "population": 4,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_AUTHORITY_RECORD_AND_THE_INGESTION_AGREE_ON_B2",
+   "gate_type": "AUTHORITY",
+   "value": "TEST_REQUIRED_BEFORE_FINAL_FREEZE",
+   "expected": "TEST_REQUIRED_BEFORE_FINAL_FREEZE",
+   "population": 1,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_AUTHORITY_RECORD_AGREES_NOTHING_IS_PENDING",
+   "gate_type": "AUTHORITY",
+   "value": [],
+   "expected": [],
+   "population": 4,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": true,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_AUTHORITY_RECORD_AUTHORIZES_CALIBRATION_NOT_MASS",
+   "gate_type": "AUTHORITY",
+   "value": [
+    true,
+    false
+   ],
+   "expected": [
+    true,
+    false
+   ],
+   "population": 1,
+   "source_artifact": "SRC_AUTH_01_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_GENERIC_SUITE_CRASH_IS_RECORDED_AS_PRE_EXISTING",
+   "gate_type": "AUTHORITY",
+   "value": [
+    true,
+    false,
+    false
+   ],
+   "expected": [
+    true,
+    false,
+    false
+   ],
+   "population": 1,
+   "source_artifact": "this file",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_CONFIRMED_PRODUCTION_UNIT_IS_CLAIMED_OUTSIDE_PL06",
+   "gate_type": "STRUCTURES",
+   "value": 0,
+   "expected": 0,
+   "population": 22,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_OUTSIDE_PL06_POPULATION_EXCLUDES_PL06",
+   "gate_type": "STRUCTURES",
+   "value": [
+    "PL01",
+    "PL02",
+    "PL03",
+    "PL04",
+    "PL05",
+    "PL07",
+    "PL08"
+   ],
+   "expected": [
+    "PL01",
+    "PL02",
+    "PL03",
+    "PL04",
+    "PL05",
+    "PL07",
+    "PL08"
+   ],
+   "population": 22,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "CANDIDATE_ROLL_LENGTH_MATCHES_ITS_COUNT",
+   "gate_type": "STRUCTURES",
+   "value": 22,
+   "expected": 22,
+   "population": 22,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "CLEAN_PLUS_AMBER_ACCOUNTS_FOR_EVERY_CANDIDATE",
+   "gate_type": "STRUCTURES",
+   "value": 22,
+   "expected": 22,
+   "population": 22,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ESTABLISHED_FACTS_PRESERVED",
+   "gate_type": "STRUCTURES",
+   "value": [
+    22,
+    20,
+    2,
+    7
+   ],
+   "expected": [
+    22,
+    20,
+    2,
+    7
+   ],
+   "population": 22,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_HEADLINE_COUNT_HAS_A_NAMED_ROLL",
+   "gate_type": "STRUCTURES",
+   "value": [
+    "amber_candidates_roll",
+    "candidate_structures_roll",
+    "clean_candidates_roll",
+    "confirmed_storyboard_production_units_outside_pl06_roll",
+    "pl06_storyboard_production_units_roll",
+    "pl06_topik_roll",
+    "unmapped_source_regions_roll"
+   ],
+   "expected": [
+    "amber_candidates_roll",
+    "candidate_structures_roll",
+    "clean_candidates_roll",
+    "confirmed_storyboard_production_units_outside_pl06_roll",
+    "pl06_storyboard_production_units_roll",
+    "pl06_topik_roll",
+    "unmapped_source_regions_roll"
+   ],
+   "population": 7,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_SEVEN_PL06_TOPIK_ARE_NOT_COUNTED_AS_PRODUCTION_UNITS",
+   "gate_type": "STRUCTURES",
+   "value": [
+    false
+   ],
+   "expected": [
+    false
+   ],
+   "population": 7,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "PL06_TOPIK_ROLL_IS_SEVEN_NAMED_MEMBERS",
+   "gate_type": "STRUCTURES",
+   "value": [
+    "K5-PL06-T01",
+    "K5-PL06-T02",
+    "K5-PL06-T03",
+    "K5-PL06-T04",
+    "K5-PL06-T05",
+    "K5-PL06-T06",
+    "K5-PL06-T07"
+   ],
+   "expected": [
+    "K5-PL06-T01",
+    "K5-PL06-T02",
+    "K5-PL06-T03",
+    "K5-PL06-T04",
+    "K5-PL06-T05",
+    "K5-PL06-T06",
+    "K5-PL06-T07"
+   ],
+   "population": 7,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "PL06_PRODUCTION_UNITS_ARE_THE_FOURTEEN_BAHAGIAN",
+   "gate_type": "STRUCTURES",
+   "value": 14,
+   "expected": 14,
+   "population": 7,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_RENAME_IS_RECORDED_NOT_SILENT",
+   "gate_type": "STRUCTURES",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K5_STRUCTURES_OUTSIDE_PL06_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "FORECAST_IS_LABELLED_NOT_A_COMMITMENT",
+   "gate_type": "FORECAST",
+   "value": "FORECAST_NOT_COMMITMENT",
+   "expected": "FORECAST_NOT_COMMITMENT",
+   "population": 1,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THREE_SCENARIOS_ARE_PRESENT",
+   "gate_type": "FORECAST",
+   "value": [
+    "A",
+    "B",
+    "C"
+   ],
+   "expected": [
+    "A",
+    "B",
+    "C"
+   ],
+   "population": 3,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_SCENARIO_REPORTS_ALL_SIX_RANGES",
+   "gate_type": "FORECAST",
+   "value": [
+    [
+     "bariah_review_freeze_completion_range",
+     "batch_generation_start_range",
+     "calibration_completion_range",
+     "engineering_generation_completion_range",
+     "full_k5_package_completion_range",
+     "section_b_decision_date"
+    ]
+   ],
+   "expected": [
+    [
+     "bariah_review_freeze_completion_range",
+     "batch_generation_start_range",
+     "calibration_completion_range",
+     "engineering_generation_completion_range",
+     "full_k5_package_completion_range",
+     "section_b_decision_date"
+    ]
+   ],
+   "population": 3,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_SCENARIO_NAMES_ASSUMPTIONS_AND_BLOCKERS",
+   "gate_type": "FORECAST",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 3,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "AVAILABILITY_IS_NEVER_GIVEN_A_VALUE_IN_THE_FORECAST",
+   "gate_type": "FORECAST",
+   "value": [
+    true,
+    true
+   ],
+   "expected": [
+    true,
+    true
+   ],
+   "population": 2,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_FORECAST_USES_THE_REAL_REVIEW_CONSTRAINT",
+   "gate_type": "FORECAST",
+   "value": [
+    90,
+    1,
+    4
+   ],
+   "expected": [
+    90,
+    1,
+    4
+   ],
+   "population": 4,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SECTION_B_IS_RECORDED_AS_RESOLVED_IN_THE_FORECAST",
+   "gate_type": "FORECAST",
+   "value": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+   "expected": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+   "population": 1,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_SCENARIO_MARKS_ITS_SLOT_ASSUMPTION_CONDITIONAL",
+   "gate_type": "FORECAST",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 3,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_FULL_K5_DATE_IS_COMPUTED",
+   "gate_type": "FORECAST",
+   "value": [
+    true
+   ],
+   "expected": [
+    true
+   ],
+   "population": 3,
+   "source_artifact": "K5_COMPLETION_FORECAST_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "D4_SINGLE_BAHAGIAN_RULE_CITES_BOTH_INPUTS",
+   "gate_type": "BAHAGIAN",
+   "value": "BARIAH_WORKED_EXAMPLE + FROZEN_SEGMENTATION_MAP",
+   "expected": "BARIAH_WORKED_EXAMPLE + FROZEN_SEGMENTATION_MAP",
+   "population": 1,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "D4_DERIVATION_NAMES_WHAT_IT_IS_NOT",
+   "gate_type": "BAHAGIAN",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K5_CALIBRATION_REEVALUATION_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SUITE_ID_DECLARED",
+   "gate_type": "ACCOUNTING",
+   "value": "K5_BARIAH_POLICY_QA_v1",
+   "expected": "K5_BARIAH_POLICY_QA_v1",
+   "population": 1,
+   "source_artifact": "this file",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SUITE_ID_IS_NOT_ANY_SIBLING_SUITE",
+   "gate_type": "ACCOUNTING",
+   "value": false,
+   "expected": false,
+   "population": 6,
+   "source_artifact": "this file",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ORACLE_SEPARATION_STILL_DEFERRED",
+   "gate_type": "ACCOUNTING",
+   "value": "DEFERRED_BY_DELIVERY_DEADLINE",
+   "expected": "DEFERRED_BY_DELIVERY_DEADLINE",
+   "population": 1,
+   "source_artifact": "this file",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_GATE_IS_VACUOUS",
+   "gate_type": "ACCOUNTING",
+   "value": [],
+   "expected": [],
+   "population": 90,
+   "source_artifact": "this file",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "ok": true
+  }
+ ]
+}

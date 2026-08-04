@@ -1,0 +1,608 @@
+{
+ "stage": "4.2F-G",
+ "population": "K5 Pakej Latihan other than PL06",
+ "pakej_latihan_in_module": 8,
+ "pakej_latihan_outside_pl06": 7,
+ "confirmed_storyboard_production_units_outside_pl06": 0,
+ "confirmed_storyboard_production_units_outside_pl06_roll": [],
+ "confirmed_storyboard_production_units_outside_pl06_note": "ZERO, and it stays open. No structure outside PL06 has a frozen boundary map, so none can be confirmed as a storyboard production unit. This is not a claim that the final count IS zero — it is a statement that none is proven.",
+ "candidate_structures": 22,
+ "candidate_structures_roll": [
+  "PL01-CAND-01",
+  "PL01-CAND-02",
+  "PL01-CAND-03",
+  "PL01-CAND-04",
+  "PL02-CAND-01",
+  "PL02-CAND-02",
+  "PL02-CAND-03",
+  "PL03-CAND-01",
+  "PL03-CAND-02",
+  "PL03-CAND-03",
+  "PL03-CAND-04",
+  "PL03-CAND-05",
+  "PL03-CAND-06",
+  "PL03-CAND-07",
+  "PL03-CAND-08",
+  "PL04-CAND-01",
+  "PL04-CAND-02",
+  "PL05-CAND-01",
+  "PL05-CAND-02",
+  "PL07-CAND-01",
+  "PL07-CAND-02",
+  "PL08-CAND-01"
+ ],
+ "clean_candidates": 20,
+ "clean_candidates_roll": [
+  "PL01-CAND-01",
+  "PL01-CAND-02",
+  "PL01-CAND-03",
+  "PL01-CAND-04",
+  "PL02-CAND-01",
+  "PL02-CAND-02",
+  "PL02-CAND-03",
+  "PL03-CAND-01",
+  "PL03-CAND-04",
+  "PL03-CAND-05",
+  "PL03-CAND-06",
+  "PL03-CAND-07",
+  "PL03-CAND-08",
+  "PL04-CAND-01",
+  "PL04-CAND-02",
+  "PL05-CAND-01",
+  "PL05-CAND-02",
+  "PL07-CAND-01",
+  "PL07-CAND-02",
+  "PL08-CAND-01"
+ ],
+ "amber_candidates": 2,
+ "amber_candidates_roll": [
+  "PL03-CAND-02",
+  "PL03-CAND-03"
+ ],
+ "unmapped_source_regions": 7,
+ "unmapped_source_regions_roll": [
+  "PL01",
+  "PL02",
+  "PL03",
+  "PL04",
+  "PL05",
+  "PL07",
+  "PL08"
+ ],
+ "unmapped_source_regions_definition": "One region per Pakej Latihan outside PL06 that carries no frozen unit boundary map. The count is the number of such Pakej Latihan, not a count of arbitrary page ranges.",
+ "unmapped_pages": 184,
+ "pl06_topik_with_frozen_boundary_map": 7,
+ "pl06_topik_roll": [
+  "K5-PL06-T01",
+  "K5-PL06-T02",
+  "K5-PL06-T03",
+  "K5-PL06-T04",
+  "K5-PL06-T05",
+  "K5-PL06-T06",
+  "K5-PL06-T07"
+ ],
+ "pl06_topik": [
+  {
+   "ordinal": 1,
+   "topik_id": "K5-PL06-T01",
+   "sub_modul_heading": "PROSES MEMULA KERJA",
+   "source_page_span": [
+    162,
+    200
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 3,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  },
+  {
+   "ordinal": 2,
+   "topik_id": "K5-PL06-T02",
+   "sub_modul_heading": "ELEMEN PEMBINAAN LANDSKAP",
+   "source_page_span": [
+    201,
+    225
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 2,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  },
+  {
+   "ordinal": 3,
+   "topik_id": "K5-PL06-T03",
+   "sub_modul_heading": "KOMPONEN LANDSKAP",
+   "source_page_span": [
+    226,
+    275
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 5,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  },
+  {
+   "ordinal": 4,
+   "topik_id": "K5-PL06-T04",
+   "sub_modul_heading": "PENJAAGAAN DAN PENYELENGGARAAN",
+   "source_page_span": [
+    276,
+    283
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 1,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  },
+  {
+   "ordinal": 5,
+   "topik_id": "K5-PL06-T05",
+   "sub_modul_heading": "PENGURUSAN KUALITI PROJEK",
+   "source_page_span": [
+    284,
+    293
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 1,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  },
+  {
+   "ordinal": 6,
+   "topik_id": "K5-PL06-T06",
+   "sub_modul_heading": "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+   "source_page_span": [
+    294,
+    302
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 1,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  },
+  {
+   "ordinal": 7,
+   "topik_id": "K5-PL06-T07",
+   "sub_modul_heading": "DEMOBILISASI",
+   "source_page_span": [
+    303,
+    309
+   ],
+   "source_page_span_basis": "rendered PDF footer",
+   "granularity": "frozen unit boundary map",
+   "record_type": "PL06_TOPIK_WITH_FROZEN_BOUNDARY_MAP",
+   "bahagian_in_this_topik": 1,
+   "is_storyboard_production_unit": false,
+   "why_not": "A Topik is a source structure. PL06's storyboard production units are the Bahagian entries beneath it — fourteen in total across the seven Topik."
+  }
+ ],
+ "pl06_topik_note": "These seven were previously counted as 'confirmed units' in an outside-PL06 artifact. They are inside PL06 and they are Topik, not production units. Renamed and separated.",
+ "pl06_storyboard_production_units": 14,
+ "pl06_storyboard_production_units_roll": [
+  "K5-PL06-T01-B01",
+  "K5-PL06-T01-B02",
+  "K5-PL06-T01-B03",
+  "K5-PL06-T02-B01",
+  "K5-PL06-T02-B02",
+  "K5-PL06-T03-B01",
+  "K5-PL06-T03-B02",
+  "K5-PL06-T03-B03",
+  "K5-PL06-T03-B04",
+  "K5-PL06-T03-B05",
+  "K5-PL06-T04-B01",
+  "K5-PL06-T05-B01",
+  "K5-PL06-T06-B01",
+  "K5-PL06-T07-B01"
+ ],
+ "renamed_counts": [
+  {
+   "was": "confirmed_units = 7",
+   "was_read_as": "seven confirmed storyboard production units outside PL06",
+   "actually": "PL06's seven sub-modul (Topik 1-7), inside PL06, carrying a frozen boundary map",
+   "now": "pl06_topik_with_frozen_boundary_map = 7, reported separately",
+   "outside_pl06_equivalent": "confirmed_storyboard_production_units_outside_pl06 = 0"
+  }
+ ],
+ "confirmed_segmentation": {
+  "source": "the frozen PL06 boundary map — the ONLY K5 segmentation that is confirmed",
+  "pl": "PL06",
+  "topics": {
+   "T01": {
+    "bahagian": 3,
+    "segmentation": "TOPIK_WITH_MULTIPLE_BAHAGIAN",
+    "units": [
+     "K5-PL06-T01-B01",
+     "K5-PL06-T01-B02",
+     "K5-PL06-T01-B03"
+    ]
+   },
+   "T02": {
+    "bahagian": 2,
+    "segmentation": "TOPIK_WITH_MULTIPLE_BAHAGIAN",
+    "units": [
+     "K5-PL06-T02-B01",
+     "K5-PL06-T02-B02"
+    ]
+   },
+   "T03": {
+    "bahagian": 5,
+    "segmentation": "TOPIK_WITH_MULTIPLE_BAHAGIAN",
+    "units": [
+     "K5-PL06-T03-B01",
+     "K5-PL06-T03-B02",
+     "K5-PL06-T03-B03",
+     "K5-PL06-T03-B04",
+     "K5-PL06-T03-B05"
+    ]
+   },
+   "T04": {
+    "bahagian": 1,
+    "segmentation": "TOPIK_WITHOUT_BAHAGIAN",
+    "units": [
+     "K5-PL06-T04-B01"
+    ]
+   },
+   "T05": {
+    "bahagian": 1,
+    "segmentation": "TOPIK_WITHOUT_BAHAGIAN",
+    "units": [
+     "K5-PL06-T05-B01"
+    ]
+   },
+   "T06": {
+    "bahagian": 1,
+    "segmentation": "TOPIK_WITHOUT_BAHAGIAN",
+    "units": [
+     "K5-PL06-T06-B01"
+    ]
+   },
+   "T07": {
+    "bahagian": 1,
+    "segmentation": "TOPIK_WITHOUT_BAHAGIAN",
+    "units": [
+     "K5-PL06-T07-B01"
+    ]
+   }
+  }
+ },
+ "structures_affected_by_d4": {
+  "resolved": [
+   "T01",
+   "T02",
+   "T03",
+   "T04",
+   "T05",
+   "T06",
+   "T07"
+  ],
+  "resolved_scope": "PL06 only",
+  "unresolved_count": 22,
+  "unresolved_roll": [
+   "PL01-CAND-01",
+   "PL01-CAND-02",
+   "PL01-CAND-03",
+   "PL01-CAND-04",
+   "PL02-CAND-01",
+   "PL02-CAND-02",
+   "PL02-CAND-03",
+   "PL03-CAND-01",
+   "PL03-CAND-02",
+   "PL03-CAND-03",
+   "PL03-CAND-04",
+   "PL03-CAND-05",
+   "PL03-CAND-06",
+   "PL03-CAND-07",
+   "PL03-CAND-08",
+   "PL04-CAND-01",
+   "PL04-CAND-02",
+   "PL05-CAND-01",
+   "PL05-CAND-02",
+   "PL07-CAND-01",
+   "PL07-CAND-02",
+   "PL08-CAND-01"
+  ],
+  "unresolved_note": "Every structure outside PL06 is affected by D4 in principle and resolvable for none of them: D4 keys on Topik/Bahagian segmentation, and no segmentation is confirmed outside PL06."
+ },
+ "still_not_confirmed_production_units": [
+  "PL01-CAND-01",
+  "PL01-CAND-02",
+  "PL01-CAND-03",
+  "PL01-CAND-04",
+  "PL02-CAND-01",
+  "PL02-CAND-02",
+  "PL02-CAND-03",
+  "PL03-CAND-01",
+  "PL03-CAND-02",
+  "PL03-CAND-03",
+  "PL03-CAND-04",
+  "PL03-CAND-05",
+  "PL03-CAND-06",
+  "PL03-CAND-07",
+  "PL03-CAND-08",
+  "PL04-CAND-01",
+  "PL04-CAND-02",
+  "PL05-CAND-01",
+  "PL05-CAND-02",
+  "PL07-CAND-01",
+  "PL07-CAND-02",
+  "PL08-CAND-01"
+ ],
+ "rows": [
+  {
+   "candidate_id": "PL01-CAND-01",
+   "pl": "PL01",
+   "topic": "Pengenalan Dan Latar Belakang Industri Landskap Luar",
+   "subtopic": "PENGENALAN DAN LATAR BELAKANG INDUSTRI LANDSKAP LUAR",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL01-CAND-02",
+   "pl": "PL01",
+   "topic": "Pengenalan Dan Latar Belakang Industri Landskap Luar",
+   "subtopic": "KONSEP SENI BINA LANDSKAP",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL01-CAND-03",
+   "pl": "PL01",
+   "topic": "Pengenalan Dan Latar Belakang Industri Landskap Luar",
+   "subtopic": "KATEGORI LANDSKAP LUAR",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL01-CAND-04",
+   "pl": "PL01",
+   "topic": "Pengenalan Dan Latar Belakang Industri Landskap Luar",
+   "subtopic": "SKOP KERJA UTAMA LANDSKAP LUAR BANGUNAN",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL02-CAND-01",
+   "pl": "PL02",
+   "topic": "Pengurusan Operasi Perniagaan",
+   "subtopic": "PASUKAN PELAKSANA PROJEK PEMBINAAN LANDSKAP LUAR",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL02-CAND-02",
+   "pl": "PL02",
+   "topic": "Pengurusan Operasi Perniagaan",
+   "subtopic": "PASUKAN PERUNDING TEKNIKAL DAN PAKAR",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL02-CAND-03",
+   "pl": "PL02",
+   "topic": "Pengurusan Operasi Perniagaan",
+   "subtopic": "ORGANISASI PROJEK LANDSKAP LUAR",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-01",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "TENDER",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-02",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "SEBUT HARGA",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "AMBER",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-03",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "LUKISAN TENDER",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "AMBER",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-04",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "KOMPONEN SENARAI KUANTITI LANDSKAP / BILLS OF QUANTITIES",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-05",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "SPESIFIKASI",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-06",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "PENYEDIAAN DATA KOS, ANGGARAN DAN TENDER LANDSKAP",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-07",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "PENYEDIAAN DOKUMENTASI TENDER",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL03-CAND-08",
+   "pl": "PL03",
+   "topic": "Pengurusan Tender",
+   "subtopic": "STRUKTUR PELAPORAN TEKNIKAL DAN DOKUMENTASI PROJEK",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL04-CAND-01",
+   "pl": "PL04",
+   "topic": "Pelaksanaan Dan Pengurusan Kontrak",
+   "subtopic": "PENGURUSAN KEPERLUAN DAN DOKUMENTASI KONTRAK",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL04-CAND-02",
+   "pl": "PL04",
+   "topic": "Pelaksanaan Dan Pengurusan Kontrak",
+   "subtopic": "PENGURUSAN PENENTUAN ATAU PENAMATAN KONTRAK",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL05-CAND-01",
+   "pl": "PL05",
+   "topic": "Perancangan Dan Penjadualan Projek",
+   "subtopic": "PENYEDIAAN WORK BREAKDOWN STRUCTRUE (WBS) UNTUK LANDSKAP KEJUR DAN LEMBUT",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL05-CAND-02",
+   "pl": "PL05",
+   "topic": "Perancangan Dan Penjadualan Projek",
+   "subtopic": "PENYEDIAAN PROGRAM KERJA (WORK PROGRAM) DAN PENJADUALAN PEMBINAAN LANDSKAP",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL07-CAND-01",
+   "pl": "PL07",
+   "topic": "Penyerahan Projek",
+   "subtopic": "PENYEDIAAN DOKUMEN SERAHAN",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL07-CAND-02",
+   "pl": "PL07",
+   "topic": "Penyerahan Projek",
+   "subtopic": "MENGURUS LIABILITI KECACATAN DAN CMGD",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  },
+  {
+   "candidate_id": "PL08-CAND-01",
+   "pl": "PL08",
+   "topic": "Inovasi & Teknologi Landskap",
+   "subtopic": "APLIKASI TEKNOLOGI DAN INOVASI DALAM PEMBINAAN",
+   "record_type": "CANDIDATE_STRUCTURE",
+   "status": "CLEAN",
+   "granularity": "one sub-modul heading — granularity NOT decided",
+   "d4_applies": "UNKNOWN_SEGMENTATION_NOT_ASSESSED",
+   "d4_note": "No frozen boundary map exists for this Pakej Latihan, so its Topik/Bahagian segmentation is not known and D4 cannot be resolved for it.",
+   "still_not_a_confirmed_production_unit": true
+  }
+ ]
+}

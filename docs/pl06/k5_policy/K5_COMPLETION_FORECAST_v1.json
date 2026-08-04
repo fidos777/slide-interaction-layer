@@ -1,0 +1,145 @@
+{
+ "stage": "4.2F-G",
+ "status": "FORECAST_NOT_COMMITMENT",
+ "status_note": "Forecasts under stated conditions, not commitments. Section B is resolved, so the remaining variance is availability — which is Firdaus's to confirm and is never assumed here.",
+ "basis": "Recomputed against the real review constraint Bariah gave: one unit per 90-minute slot, several slots possible on an available day, availability conditional. No slot count and no date is invented.",
+ "section_b_resolved": {
+  "date": "4 Ogos 2026",
+  "deadline": "5 Ogos 2026",
+  "met_deadline": true,
+  "status": "APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+  "what_it_unblocked": [
+   "two-file packaging (B1)",
+   "calibration generation of four units",
+   "a known review rate (B3)"
+  ],
+  "what_it_did_not_unblock": [
+   "B2 panel density — test required first",
+   "actual review dates and slot counts — Firdaus to confirm",
+   "mass generation of the remaining K5 units"
+  ]
+ },
+ "review_constraint": {
+  "slot_minutes": 90,
+  "units_per_slot": 1,
+  "basis": "B3",
+  "calibration_units": 4,
+  "total_review_minutes_required": 360,
+  "total_review_hours_required": 6.0,
+  "slots_required": 4,
+  "slots_per_day": "NOT_CONFIRMED — Bariah allows several on an available day; the actual count is Firdaus's to confirm",
+  "available_days": "NOT_CONFIRMED — working days except Cyberjaya meeting days; weekends optional and not fixed",
+  "note": "Four calibration units need four full slots — six hours of Bariah's attention — and they cannot be compressed. That is a floor set by the ruling, not an estimate."
+ },
+ "open_variables": {
+  "slots_per_available_day": "UNCONFIRMED — requires Firdaus",
+  "available_dates": "UNCONFIRMED — working days minus Cyberjaya meeting days",
+  "b2_density_outcome": "UNKNOWN until Bariah sees the 2-panel and 3-panel examples",
+  "consequence": "Every review-completion range below is expressed in SLOTS, which is knowable, and converted to days only as a conditional band."
+ },
+ "assumptions": [
+  "A1 — engineering generation of a deck from an approved model is machine work in minutes; it is not the constraint.",
+  "A2 — the constraint is Bariah's review throughput, now bounded below by B3 at one unit per 90-minute slot.",
+  "A3 — a correction cycle is one pass of feedback plus regeneration; a cycle changing a GLOBAL pattern costs materially more than one changing a unit exception.",
+  "A4 — B2's density test rides along with the calibration package; it does not add a review slot of its own, because the alternate-density file shows the same unit and the same states.",
+  "A5 — no availability date or slot count is assumed anywhere below.",
+  "A6 — PL06 carries 14 storyboard production units; outside PL06 no production-unit count is proven, so no full-K5 date can be computed at all."
+ ],
+ "fixed_inputs": {
+  "section_b_decision_date": "4 Ogos 2026",
+  "bariah_feedback_deadline": "5 Ogos 2026 — met",
+  "internal_storyboard_target": "9 Ogos 2026",
+  "calibration_units": 4,
+  "review_slots_required_for_calibration": 4,
+  "review_hours_required_for_calibration": 6.0,
+  "pl06_storyboard_production_units": 14,
+  "outside_pl06_production_units": "NOT_PROVEN — 22 candidate structures, 0 confirmed"
+ },
+ "scenarios": [
+  {
+   "id": "A",
+   "name": "Two or more review slots per available day",
+   "section_b_decision_date": "4 Ogos 2026",
+   "slots_per_day_assumed": "2 or more — CONDITIONAL, requires Firdaus confirmation",
+   "calibration_completion_range": "generation and internal QA: same day as authorisation; calibration package ready for review immediately",
+   "batch_generation_start_range": "after the single calibration review round closes — 2 available days at 2 slots/day",
+   "engineering_generation_completion_range": "PL06's remaining 10 units: machine work, hours not days, once the calibration pattern is frozen",
+   "bariah_review_freeze_completion_range": "4 slots over 2 available days, PLUS one correction cycle. If both available days fall on 5-6 Ogos, freeze lands 6-7 Ogos.",
+   "full_k5_package_completion_range": "NOT_COMPUTABLE — PL06 could complete inside the window; full K5 requires the 22 outside-PL06 candidates resolved into production units first, and that count is not proven.",
+   "assumptions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6"
+   ],
+   "principal_blockers": [
+    "Firdaus to confirm available days and slot counts",
+    "B2 density outcome",
+    "22 outside-PL06 candidates unresolved"
+   ],
+   "target_9_aug": "ACHIEVABLE_FOR_PL06",
+   "confidence": "MODERATE"
+  },
+  {
+   "id": "B",
+   "name": "One review slot per available day",
+   "section_b_decision_date": "4 Ogos 2026",
+   "slots_per_day_assumed": "1 — CONDITIONAL, requires Firdaus confirmation",
+   "calibration_completion_range": "generation and internal QA: same day; package ready immediately",
+   "batch_generation_start_range": "after 4 available days of review",
+   "engineering_generation_completion_range": "PL06's remaining 10 units: hours once the pattern is frozen",
+   "bariah_review_freeze_completion_range": "4 slots over 4 available days, plus a correction cycle. On consecutive working days from 5 Ogos that lands 8-9 Ogos — with no slack.",
+   "full_k5_package_completion_range": "NOT_COMPUTABLE — same reason",
+   "assumptions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6"
+   ],
+   "principal_blockers": [
+    "review throughput is the critical path at this rate",
+    "any Cyberjaya meeting day removes a slot outright",
+    "a global-pattern correction would push past 9 Ogos",
+    "22 outside-PL06 candidates unresolved"
+   ],
+   "target_9_aug": "AT_RISK_FOR_PL06",
+   "confidence": "LOW_TO_MODERATE"
+  },
+  {
+   "id": "C",
+   "name": "Availability interrupted — Cyberjaya meetings or unconfirmed days",
+   "section_b_decision_date": "4 Ogos 2026",
+   "slots_per_day_assumed": "fewer than 1 per working day on average — CONDITIONAL",
+   "calibration_completion_range": "generation and internal QA still complete immediately; only review is delayed",
+   "batch_generation_start_range": "OPEN — gated on calibration review closing",
+   "engineering_generation_completion_range": "OPEN as a reviewed package. Modelling and generation are NOT blocked: the pattern policy is approved, so work continues.",
+   "bariah_review_freeze_completion_range": "OPEN — unbounded without confirmed days",
+   "full_k5_package_completion_range": "NOT_COMPUTABLE",
+   "assumptions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6"
+   ],
+   "principal_blockers": [
+    "Bariah availability is the sole critical path",
+    "22 outside-PL06 candidates unresolved"
+   ],
+   "target_9_aug": "NOT_ACHIEVABLE_WITHOUT_CONFIRMED_SLOTS",
+   "confidence": "HIGH that 9 Ogos fails if fewer than 4 slots land before 8 Ogos",
+   "mitigation": "The bottleneck is review, not production. Confirming which days are Cyberjaya-free is the single highest-value action available, and it costs nothing to produce the calibration package first so no slot is ever spent waiting on generation."
+  }
+ ],
+ "what_is_not_forecast": [
+  "actual available dates — Bariah gave a rule, not a calendar; Firdaus confirms",
+  "slots per day — several are possible on an available day, the number is not fixed",
+  "the B2 density outcome — the test has not been shown to Bariah yet",
+  "any full-K5 completion date — the outside-PL06 production-unit count is not proven, so the denominator does not exist"
+ ]
+}

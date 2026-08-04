@@ -1,0 +1,482 @@
+{
+ "stage": "4.2F-G",
+ "units": [
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "lesson_title": "Infrastruktur",
+   "controlled_source_rows": {
+    "cls": "SOURCE_DERIVED",
+    "status": "COMMITTED_UNCHANGED",
+    "note": "Extraction is unaffected by the pattern ruling; the committed rows stand and were not re-extracted."
+   },
+   "screen_pattern_plan": {
+    "cls": "CAIR_PROPOSAL_UNDER_APPROVED_POLICY",
+    "primary": "click-to-reveal",
+    "secondary": "comparison",
+    "shell_screens_before": 2,
+    "shell_screens_after": 3,
+    "content_groups": 6,
+    "closing_screens": 3,
+    "minimum_total_before": 11,
+    "minimum_total_after": 12,
+    "maximum_total": "UNKNOWN_STILL_NOT_FROZEN",
+    "a3_applies": false,
+    "a3_rule": "steps one at a time with their visuals; click a step for detail where the source carries it"
+   },
+   "scenario_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D3",
+     "A5"
+    ],
+    "required": true,
+    "previous_cair_verdict": "NOT_JUSTIFIED",
+    "change": "SCENARIO_SCREEN_ADDED",
+    "note": "The previous verdict was a CAIR proposal. D3 makes the screen mandatory regardless, so a NOT_JUSTIFIED or UNCERTAIN verdict no longer removes the screen — it only means the scenario's content must still be sourced."
+   },
+   "summary_visual_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A6"
+    ],
+    "structure": [
+     "Kepentingan",
+     "Skop dan Isi Utama",
+     "Manfaat"
+    ],
+    "beats_before": 3,
+    "beats_required": 3,
+    "change": "ALREADY_THREE_BEAT",
+    "visual_required": true,
+    "visual_before": "ABSENT",
+    "visual_change": "SUMMARY_VISUAL_ADDED",
+    "visual_subject": "PENDING_UNIT_EXCEPTION_REVIEW — the obligation is set, the subject is not invented here"
+   },
+   "quiz_structure": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A7"
+    ],
+    "mcq": 4,
+    "multiple_response": 1,
+    "pass_percent": 60,
+    "key_status": "SOURCE_AUTHORED_NOT_BARIAH_APPROVED",
+    "note": "Composition and threshold are authorised; no answer key is approved."
+   },
+   "narrator": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D2"
+    ],
+    "name": "Hilmi"
+   },
+   "characters": {
+    "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+    "basis": [
+     "D1"
+    ],
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+    "note": "D1 rules characters are chosen per unit, so the open cast is now the correct state, not a gap."
+   },
+   "closing_screen": {
+    "unit_id": "K5-PL06-T03-B03",
+    "topik": 3,
+    "bahagian_in_topik": 5,
+    "segmentation": "TOPIK_WITH_MULTIPLE_BAHAGIAN",
+    "bahagian_label_shown": true,
+    "is_final_bahagian": false,
+    "closing_text": "Tamat Bahagian 3. Teruskan pembelajaran ke bahagian seterusnya",
+    "own_storyboard_summary_quiz": true,
+    "basis": "D4 — each Bahagian carries its own storyboard, Rumusan and Kuiz; only the final Bahagian closes with 'Tamat Topik'."
+   },
+   "comparison_retest": {
+    "cls": "SOURCE_CONDITIONAL",
+    "basis": [
+     "A4"
+    ],
+    "currently_proposes_comparison": true,
+    "required_action": "re-test against explicit source comparison before use",
+    "status": "RE_TEST_REQUIRED"
+   },
+   "state_model_implications": {
+    "added_states": "one scenario screen and its runtime state",
+    "summary_visual_state": "the Rumusan screen gains a visual element; whether it adds a runtime state depends on the pattern, which is not frozen",
+    "total_runtime_states": "UNKNOWN_STILL_NOT_FROZEN"
+   },
+   "ambiguities_and_exceptions": [
+    "A3 sub-points 2 and 3 were not answered by Bariah, so source order and the overview diagram remain CAIR proposals.",
+    "Comparison is proposed and must be re-tested against A4.",
+    "The Rumusan visual subject is not chosen here; inventing one would breach the no-invented-visual-subject rule.",
+    "Section B is undecided, so this unit's review packaging and panel density are not settled."
+   ],
+   "readiness": {
+    "policy_applied": true,
+    "source_extraction": "COMPLETE",
+    "blocked_on_section_b_for_packaging": true,
+    "ready_to_emit_pptx": false,
+    "ready_reason": "Section B undecided; unit exceptions and the Rumusan visual subject still require Bariah review."
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "lesson_title": "Badan Air (Water Body)",
+   "controlled_source_rows": {
+    "cls": "SOURCE_DERIVED",
+    "status": "COMMITTED_UNCHANGED",
+    "note": "Extraction is unaffected by the pattern ruling; the committed rows stand and were not re-extracted."
+   },
+   "screen_pattern_plan": {
+    "cls": "CAIR_PROPOSAL_UNDER_APPROVED_POLICY",
+    "primary": "progressive process",
+    "secondary": "click-to-reveal",
+    "shell_screens_before": 2,
+    "shell_screens_after": 3,
+    "content_groups": 5,
+    "closing_screens": 3,
+    "minimum_total_before": 10,
+    "minimum_total_after": 11,
+    "maximum_total": "UNKNOWN_STILL_NOT_FROZEN",
+    "a3_applies": true,
+    "a3_rule": "steps one at a time with their visuals; click a step for detail where the source carries it"
+   },
+   "scenario_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D3",
+     "A5"
+    ],
+    "required": true,
+    "previous_cair_verdict": "NOT_JUSTIFIED",
+    "change": "SCENARIO_SCREEN_ADDED",
+    "note": "The previous verdict was a CAIR proposal. D3 makes the screen mandatory regardless, so a NOT_JUSTIFIED or UNCERTAIN verdict no longer removes the screen — it only means the scenario's content must still be sourced."
+   },
+   "summary_visual_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A6"
+    ],
+    "structure": [
+     "Kepentingan",
+     "Skop dan Isi Utama",
+     "Manfaat"
+    ],
+    "beats_before": 3,
+    "beats_required": 3,
+    "change": "ALREADY_THREE_BEAT",
+    "visual_required": true,
+    "visual_before": "ABSENT",
+    "visual_change": "SUMMARY_VISUAL_ADDED",
+    "visual_subject": "PENDING_UNIT_EXCEPTION_REVIEW — the obligation is set, the subject is not invented here"
+   },
+   "quiz_structure": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A7"
+    ],
+    "mcq": 4,
+    "multiple_response": 1,
+    "pass_percent": 60,
+    "key_status": "SOURCE_AUTHORED_NOT_BARIAH_APPROVED",
+    "note": "Composition and threshold are authorised; no answer key is approved."
+   },
+   "narrator": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D2"
+    ],
+    "name": "Hilmi"
+   },
+   "characters": {
+    "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+    "basis": [
+     "D1"
+    ],
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+    "note": "D1 rules characters are chosen per unit, so the open cast is now the correct state, not a gap."
+   },
+   "closing_screen": {
+    "unit_id": "K5-PL06-T03-B04",
+    "topik": 3,
+    "bahagian_in_topik": 5,
+    "segmentation": "TOPIK_WITH_MULTIPLE_BAHAGIAN",
+    "bahagian_label_shown": true,
+    "is_final_bahagian": false,
+    "closing_text": "Tamat Bahagian 4. Teruskan pembelajaran ke bahagian seterusnya",
+    "own_storyboard_summary_quiz": true,
+    "basis": "D4 — each Bahagian carries its own storyboard, Rumusan and Kuiz; only the final Bahagian closes with 'Tamat Topik'."
+   },
+   "comparison_retest": {
+    "cls": "SOURCE_CONDITIONAL",
+    "basis": [
+     "A4"
+    ],
+    "currently_proposes_comparison": false,
+    "required_action": "none — no Comparison proposed",
+    "status": "NOT_APPLICABLE"
+   },
+   "state_model_implications": {
+    "added_states": "one scenario screen and its runtime state",
+    "summary_visual_state": "the Rumusan screen gains a visual element; whether it adds a runtime state depends on the pattern, which is not frozen",
+    "total_runtime_states": "UNKNOWN_STILL_NOT_FROZEN"
+   },
+   "ambiguities_and_exceptions": [
+    "A3 sub-points 2 and 3 were not answered by Bariah, so source order and the overview diagram remain CAIR proposals.",
+    "The Rumusan visual subject is not chosen here; inventing one would breach the no-invented-visual-subject rule.",
+    "Section B is undecided, so this unit's review packaging and panel density are not settled."
+   ],
+   "readiness": {
+    "policy_applied": true,
+    "source_extraction": "COMPLETE",
+    "blocked_on_section_b_for_packaging": true,
+    "ready_to_emit_pptx": false,
+    "ready_reason": "Section B undecided; unit exceptions and the Rumusan visual subject still require Bariah review."
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "lesson_title": "Pengurusan Kualiti Projek",
+   "controlled_source_rows": {
+    "cls": "SOURCE_DERIVED",
+    "status": "COMMITTED_UNCHANGED",
+    "note": "Extraction is unaffected by the pattern ruling; the committed rows stand and were not re-extracted."
+   },
+   "screen_pattern_plan": {
+    "cls": "CAIR_PROPOSAL_UNDER_APPROVED_POLICY",
+    "primary": "progressive process",
+    "secondary": "comparison",
+    "shell_screens_before": 3,
+    "shell_screens_after": 3,
+    "content_groups": 4,
+    "closing_screens": 3,
+    "minimum_total_before": 10,
+    "minimum_total_after": 10,
+    "maximum_total": "UNKNOWN_STILL_NOT_FROZEN",
+    "a3_applies": true,
+    "a3_rule": "steps one at a time with their visuals; click a step for detail where the source carries it"
+   },
+   "scenario_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D3",
+     "A5"
+    ],
+    "required": true,
+    "previous_cair_verdict": "JUSTIFIED",
+    "change": "ALREADY_PRESENT",
+    "note": "The previous verdict was a CAIR proposal. D3 makes the screen mandatory regardless, so a NOT_JUSTIFIED or UNCERTAIN verdict no longer removes the screen — it only means the scenario's content must still be sourced."
+   },
+   "summary_visual_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A6"
+    ],
+    "structure": [
+     "Kepentingan",
+     "Skop dan Isi Utama",
+     "Manfaat"
+    ],
+    "beats_before": 5,
+    "beats_required": 3,
+    "change": "RESTRUCTURE_5_BEATS_TO_3",
+    "visual_required": true,
+    "visual_before": "ABSENT",
+    "visual_change": "SUMMARY_VISUAL_ADDED",
+    "visual_subject": "PENDING_UNIT_EXCEPTION_REVIEW — the obligation is set, the subject is not invented here"
+   },
+   "quiz_structure": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A7"
+    ],
+    "mcq": 4,
+    "multiple_response": 1,
+    "pass_percent": 60,
+    "key_status": "SOURCE_AUTHORED_NOT_BARIAH_APPROVED",
+    "note": "Composition and threshold are authorised; no answer key is approved."
+   },
+   "narrator": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D2"
+    ],
+    "name": "Hilmi"
+   },
+   "characters": {
+    "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+    "basis": [
+     "D1"
+    ],
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+    "note": "D1 rules characters are chosen per unit, so the open cast is now the correct state, not a gap."
+   },
+   "closing_screen": {
+    "unit_id": "K5-PL06-T05-B01",
+    "topik": 5,
+    "bahagian_in_topik": 1,
+    "segmentation": "TOPIK_WITHOUT_BAHAGIAN",
+    "bahagian_label_shown": false,
+    "closing_text": "Tamat Topik",
+    "basis": "D4, resolved by BARIAH_WORKED_EXAMPLE + FROZEN_SEGMENTATION_MAP",
+    "derivation": {
+     "rule": "A Topik with exactly one Bahagian is treated as 'Topik tiada Bahagian'.",
+     "derivation": "BARIAH_WORKED_EXAMPLE + FROZEN_SEGMENTATION_MAP",
+     "input_1_bariah": "D4's comment names T04 explicitly as the no-Bahagian case: 'Default ini (tiada label Bahagian + penutup \"Tamat Topik\") hanya terpakai untuk Topik tiada Bahagian, seperti T04.' That fixes T04's treatment but says nothing about how many Bahagian T04 has.",
+     "input_2_map": "The frozen PL06 boundary map shows T04 carrying exactly one Bahagian, K5-PL06-T04-B01. That is what supplies the arithmetic Bariah's sentence does not.",
+     "conclusion": "Together they establish that a Topik of exactly one Bahagian is the no-Bahagian case. T05, T06 and T07 each carry exactly one Bahagian in the same map, so they take the same treatment as T04.",
+     "what_this_is_not": "Not an inference from the map alone — the map cannot say which treatment applies. Not an inference from Bariah alone — her sentence names one Topik, not a rule about counts. The rule exists only where the two meet, and is labelled accordingly.",
+     "evidence_class": "BARIAH_WORKED_EXAMPLE_PLUS_FROZEN_MAP"
+    }
+   },
+   "comparison_retest": {
+    "cls": "SOURCE_CONDITIONAL",
+    "basis": [
+     "A4"
+    ],
+    "currently_proposes_comparison": true,
+    "required_action": "re-test against explicit source comparison before use",
+    "status": "RE_TEST_REQUIRED"
+   },
+   "state_model_implications": {
+    "added_states": "none",
+    "summary_visual_state": "the Rumusan screen gains a visual element; whether it adds a runtime state depends on the pattern, which is not frozen",
+    "total_runtime_states": "UNKNOWN_STILL_NOT_FROZEN"
+   },
+   "ambiguities_and_exceptions": [
+    "A3 sub-points 2 and 3 were not answered by Bariah, so source order and the overview diagram remain CAIR proposals.",
+    "Comparison is proposed and must be re-tested against A4.",
+    "The Rumusan visual subject is not chosen here; inventing one would breach the no-invented-visual-subject rule.",
+    "Section B is undecided, so this unit's review packaging and panel density are not settled."
+   ],
+   "readiness": {
+    "policy_applied": true,
+    "source_extraction": "COMPLETE",
+    "blocked_on_section_b_for_packaging": true,
+    "ready_to_emit_pptx": false,
+    "ready_reason": "Section B undecided; unit exceptions and the Rumusan visual subject still require Bariah review."
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "lesson_title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+   "controlled_source_rows": {
+    "cls": "SOURCE_DERIVED",
+    "status": "COMMITTED_UNCHANGED",
+    "note": "Extraction is unaffected by the pattern ruling; the committed rows stand and were not re-extracted."
+   },
+   "screen_pattern_plan": {
+    "cls": "CAIR_PROPOSAL_UNDER_APPROVED_POLICY",
+    "primary": "click-to-reveal",
+    "secondary": "progressive process",
+    "shell_screens_before": 2,
+    "shell_screens_after": 3,
+    "content_groups": 3,
+    "closing_screens": 3,
+    "minimum_total_before": 8,
+    "minimum_total_after": 9,
+    "maximum_total": "UNKNOWN_STILL_NOT_FROZEN",
+    "a3_applies": true,
+    "a3_rule": "steps one at a time with their visuals; click a step for detail where the source carries it"
+   },
+   "scenario_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D3",
+     "A5"
+    ],
+    "required": true,
+    "previous_cair_verdict": "UNCERTAIN",
+    "change": "SCENARIO_SCREEN_ADDED",
+    "note": "The previous verdict was a CAIR proposal. D3 makes the screen mandatory regardless, so a NOT_JUSTIFIED or UNCERTAIN verdict no longer removes the screen — it only means the scenario's content must still be sourced."
+   },
+   "summary_visual_obligation": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A6"
+    ],
+    "structure": [
+     "Kepentingan",
+     "Skop dan Isi Utama",
+     "Manfaat"
+    ],
+    "beats_before": 4,
+    "beats_required": 3,
+    "change": "RESTRUCTURE_4_BEATS_TO_3",
+    "visual_required": true,
+    "visual_before": "ABSENT",
+    "visual_change": "SUMMARY_VISUAL_ADDED",
+    "visual_subject": "PENDING_UNIT_EXCEPTION_REVIEW — the obligation is set, the subject is not invented here"
+   },
+   "quiz_structure": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "A7"
+    ],
+    "mcq": 4,
+    "multiple_response": 1,
+    "pass_percent": 60,
+    "key_status": "SOURCE_AUTHORED_NOT_BARIAH_APPROVED",
+    "note": "Composition and threshold are authorised; no answer key is approved."
+   },
+   "narrator": {
+    "cls": "COURSE_RULE_ALREADY_APPROVED",
+    "basis": [
+     "D2"
+    ],
+    "name": "Hilmi"
+   },
+   "characters": {
+    "cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+    "basis": [
+     "D1"
+    ],
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+    "note": "D1 rules characters are chosen per unit, so the open cast is now the correct state, not a gap."
+   },
+   "closing_screen": {
+    "unit_id": "K5-PL06-T06-B01",
+    "topik": 6,
+    "bahagian_in_topik": 1,
+    "segmentation": "TOPIK_WITHOUT_BAHAGIAN",
+    "bahagian_label_shown": false,
+    "closing_text": "Tamat Topik",
+    "basis": "D4, resolved by BARIAH_WORKED_EXAMPLE + FROZEN_SEGMENTATION_MAP",
+    "derivation": {
+     "rule": "A Topik with exactly one Bahagian is treated as 'Topik tiada Bahagian'.",
+     "derivation": "BARIAH_WORKED_EXAMPLE + FROZEN_SEGMENTATION_MAP",
+     "input_1_bariah": "D4's comment names T04 explicitly as the no-Bahagian case: 'Default ini (tiada label Bahagian + penutup \"Tamat Topik\") hanya terpakai untuk Topik tiada Bahagian, seperti T04.' That fixes T04's treatment but says nothing about how many Bahagian T04 has.",
+     "input_2_map": "The frozen PL06 boundary map shows T04 carrying exactly one Bahagian, K5-PL06-T04-B01. That is what supplies the arithmetic Bariah's sentence does not.",
+     "conclusion": "Together they establish that a Topik of exactly one Bahagian is the no-Bahagian case. T05, T06 and T07 each carry exactly one Bahagian in the same map, so they take the same treatment as T04.",
+     "what_this_is_not": "Not an inference from the map alone — the map cannot say which treatment applies. Not an inference from Bariah alone — her sentence names one Topik, not a rule about counts. The rule exists only where the two meet, and is labelled accordingly.",
+     "evidence_class": "BARIAH_WORKED_EXAMPLE_PLUS_FROZEN_MAP"
+    }
+   },
+   "comparison_retest": {
+    "cls": "SOURCE_CONDITIONAL",
+    "basis": [
+     "A4"
+    ],
+    "currently_proposes_comparison": false,
+    "required_action": "none — no Comparison proposed",
+    "status": "NOT_APPLICABLE"
+   },
+   "state_model_implications": {
+    "added_states": "one scenario screen and its runtime state",
+    "summary_visual_state": "the Rumusan screen gains a visual element; whether it adds a runtime state depends on the pattern, which is not frozen",
+    "total_runtime_states": "UNKNOWN_STILL_NOT_FROZEN"
+   },
+   "ambiguities_and_exceptions": [
+    "A3 sub-points 2 and 3 were not answered by Bariah, so source order and the overview diagram remain CAIR proposals.",
+    "The Rumusan visual subject is not chosen here; inventing one would breach the no-invented-visual-subject rule.",
+    "Section B is undecided, so this unit's review packaging and panel density are not settled."
+   ],
+   "readiness": {
+    "policy_applied": true,
+    "source_extraction": "COMPLETE",
+    "blocked_on_section_b_for_packaging": true,
+    "ready_to_emit_pptx": false,
+    "ready_reason": "Section B undecided; unit exceptions and the Rumusan visual subject still require Bariah review."
+   }
+  }
+ ],
+ "count": 4
+}

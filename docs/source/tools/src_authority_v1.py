@@ -92,13 +92,48 @@ STILL_BLOCKED_BY_OTHERS = [
 
 PENDING_PATTERN_PACKAGE = dict(
     filename="K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
-    status="PENDING_BARIAH_REVIEW",
-    is_authority=False,
-    may_be_auto_applied=False,
+    status="RETURNED_BY_BARIAH_AND_INGESTED",
+    superseded_by="K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2_vBariah.docx",
+    returned_sha256="d22f6315a9bdec2c00d376aee710aacb301d97b2587ca82ee2ce0adcb8d964ce",
+    ingested_at_stage="4.2F-G",
+    ingested_by="docs/pl06/tools/k5_pattern_policy_v1.py",
+    # Partial authority, and the partition matters more than the label. Sections A, C and D
+    # are approved as K5 defaults subject to Bariah's stated amendments; Section B is not
+    # decided at all. `is_authority` is deliberately left as a per-section question rather
+    # than one boolean, because a single True here would let a Section B default through.
+    is_authority=None,
+    authority_by_section=dict(A="APPROVED_WITH_AMENDMENTS",
+                              B="APPROVED_WITH_AMENDMENTS_FOR_CALIBRATION",
+                              C="APPROVED", D="APPROVED_WITH_AMENDMENTS"),
+    # Section B is closed, so it may be applied — except B2, which is not an approval at
+    # all but a ruling that a test must happen first. The per-item map exists so B2's
+    # status cannot be lost inside a section-level True.
+    may_be_auto_applied=dict(A=True, B=True, C=True, D=True),
+    section_b_items=dict(
+        B1=dict(status="APPROVED_AS_K5_DEFAULT", may_be_auto_applied=True),
+        B2=dict(status="TEST_REQUIRED_BEFORE_FINAL_FREEZE", may_be_auto_applied=False,
+                why="no panel density is approved; a 2-panel and a 3-panel example of the "
+                    "same Lampiran Keadaan must be shown to Bariah first"),
+        B3=dict(status="APPROVED_WITH_BARIAH_AMENDMENT", may_be_auto_applied=True,
+                rule="one 90-minute slot = one unit (1 Storyboard + 1 Lampiran Keadaan)"),
+        B4=dict(status="APPROVED_WITH_CONDITIONAL_AVAILABILITY", may_be_auto_applied=True,
+                rule="working days except Cyberjaya meeting days; weekends optional",
+                requires_firdaus_confirmation=["actual dates", "slot count per day"])),
+    section_b_source=dict(
+        filename="K5_Pengesahan_Seksyen_B_Bariah_v0_1_vBariah.docx",
+        sha256="c3cd395d35b9f763cb849f3b5162517a30d029330f1b654fe944f3e6f4fc3012",
+        bytes=36913, date="4 Ogos 2026"),
+    calibration_generation_authorized=True,
+    mass_generation_authorized=False,
     in_this_repository=False,
-    note=("Bariah is reviewing it now. Nothing in this run reads it, cites it as a rule, or "
-          "applies a default from it. Every element that would depend on it is classified "
-          "PENDING_BARIAH_PATTERN_DECISION and left unfrozen."),
+    note=("Bariah returned the Kelompok 0 package on 4/8/2026 (LULUS DENGAN PINDAAN "
+          "DINYATAKAN) closing A, C and D, then returned a second form the same day "
+          "closing Section B (LULUS DENGAN PINDAAN). All four sections are now live K5 "
+          "policy, applied through k5_pattern_policy_v1. The one thing still not frozen "
+          "is B2's panel density: Bariah ruled that a 2-panel and a 3-panel example must "
+          "be shown before any density is approved, so B2 is TEST_REQUIRED, not approved. "
+          "Generation of the FOUR calibration units is authorised; mass generation of the "
+          "remaining K5 units is not."),
 )
 
 # ==========================================================================================

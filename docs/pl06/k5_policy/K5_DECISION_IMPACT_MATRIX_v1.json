@@ -1,0 +1,194 @@
+{
+ "stage": "4.2F-G",
+ "rows": [
+  {
+   "decision": "A1",
+   "title": "Kandungan statik",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 component rendering; storyboard generator screen build",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "POLICY_RECORDED_GENERATOR_NOT_YET_BUILT",
+   "section_b_affects_it": false,
+   "note": "Enforceable as a screen-visibility rule once the storyboard generator exists."
+  },
+  {
+   "decision": "A2",
+   "title": "Klik untuk paparkan maklumat",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 interaction_candidates (click-to-reveal)",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "ALREADY_CONSISTENT",
+   "section_b_affects_it": false,
+   "note": "Accepted unamended; the existing model already proposes this pattern."
+  },
+  {
+   "decision": "A3",
+   "title": "Aliran proses berperingkat",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 screen_sequence + interaction_candidates",
+   "affected_units": "UNITS_WITH_STEPWISE_PROCESS",
+   "scope": "GLOBAL",
+   "implementation_status": "POLICY_RECORDED_MODEL_UPDATED",
+   "section_b_affects_it": false,
+   "note": "One step at a time with its visual; click a step for further detail where the source carries it. Two CAIR sub-points remain unanswered."
+  },
+  {
+   "decision": "A4",
+   "title": "Perbandingan",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 pattern_family secondary candidates",
+   "affected_units": "UNITS_PROPOSING_COMPARISON",
+   "scope": "SOURCE_CONDITIONAL",
+   "implementation_status": "RE_TEST_REQUIRED_PER_UNIT",
+   "section_b_affects_it": false,
+   "note": "Every unit currently proposing Comparison must be re-tested against whether its source explicitly compares."
+  },
+  {
+   "decision": "A5",
+   "title": "Senario / dialog",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 dialogue; screen_sequence shell",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "MODEL_UPDATED_SHELL_RECOMPUTED",
+   "section_b_affects_it": false,
+   "note": "Prose overrides the tick. Every unit gains a scenario screen; three of the four calibration units previously had none."
+  },
+  {
+   "decision": "A6",
+   "title": "Rumusan",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 rumusan (beats + visual obligation)",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "MODEL_UPDATED",
+   "section_b_affects_it": false,
+   "note": "Three beats and a supporting visual. Two calibration units carried a different beat count and all four carried no Rumusan visual."
+  },
+  {
+   "decision": "A7",
+   "title": "Kuiz",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 assessment; PL06 rule-portability RP-009 / RP-010",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "CONFIRMED_PREVIOUSLY_FLAGGED_AS_VERIFY",
+   "section_b_affects_it": false,
+   "note": "Resolves the RP-009 and RP-010 VERIFY flags at K5 scope; answer keys stay unapproved."
+  },
+  {
+   "decision": "B1",
+   "title": "Bilangan fail bagi setiap unit",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "calibration package emitter — file split per unit",
+   "affected_units": "CALIBRATION_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "APPROVED_TWO_FILES_PER_UNIT",
+   "section_b_affects_it": false,
+   "note": "One Storyboard file plus one Lampiran Keadaan file per unit. The definition of Lampiran Keadaan that B1 was blocked on is now supplied."
+  },
+  {
+   "decision": "B2",
+   "title": "Kepadatan Lampiran Keadaan",
+   "status_of_ruling": "TEST_REQUIRED_BEFORE_FINAL_FREEZE",
+   "affected_rule_or_generator": "Lampiran Keadaan renderer — panels per page",
+   "affected_units": "CALIBRATION_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "TEST_REQUIRED_NO_DENSITY_APPROVED",
+   "section_b_affects_it": false,
+   "note": "The ONE Section B item not approved. A 2-panel and a 3-panel example of the same unit and the same state set must be shown before any density is frozen."
+  },
+  {
+   "decision": "B3",
+   "title": "Kapasiti semakan bagi satu sesi",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "review scheduling — no generator",
+   "affected_units": "REVIEW_PROCESS",
+   "scope": "GLOBAL",
+   "implementation_status": "APPROVED_ONE_UNIT_PER_90_MINUTE_SLOT",
+   "section_b_affects_it": false,
+   "note": "One slot = one unit = one Storyboard + one Lampiran Keadaan. Never compressed."
+  },
+  {
+   "decision": "B4",
+   "title": "Slot semakan harian",
+   "status_of_ruling": "APPROVED_WITH_CONDITIONAL_AVAILABILITY",
+   "affected_rule_or_generator": "review scheduling — no generator",
+   "affected_units": "REVIEW_PROCESS",
+   "scope": "GLOBAL",
+   "implementation_status": "APPROVED_AVAILABILITY_CONDITIONAL",
+   "section_b_affects_it": false,
+   "note": "Working days except Cyberjaya meeting days; weekends optional. Actual dates and slot counts require Firdaus confirmation and are never invented."
+  },
+  {
+   "decision": "C1",
+   "title": "Lapan kumpulan visual AG-01 hingga AG-08",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "T04 visual-group record AG-01..AG-08",
+   "affected_units": "T04_ONLY",
+   "scope": "GLOBAL",
+   "implementation_status": "RECORD_CONFIRMED_NO_CHANGE",
+   "section_b_affects_it": false,
+   "note": "Must not reopen T04 decisions."
+  },
+  {
+   "decision": "C2",
+   "title": "Asas tiga item yang tidak boleh dikongsi",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "T04 three non-shareable items",
+   "affected_units": "T04_ONLY",
+   "scope": "GLOBAL",
+   "implementation_status": "RECORD_CONFIRMED_NO_CHANGE",
+   "section_b_affects_it": false,
+   "note": "Must not reopen T04 decisions."
+  },
+  {
+   "decision": "D1",
+   "title": "Watak",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 dialogue.cast",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "UNIT_SPECIFIC",
+   "implementation_status": "POLICY_RECORDED_CAST_STAYS_OPEN",
+   "section_b_affects_it": false,
+   "note": "No K5-wide cast. STOP-006 stays open legitimately, now as a per-unit choice."
+  },
+  {
+   "decision": "D2",
+   "title": "Narator",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "storyboard generator narrator field",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "MODEL_UPDATED",
+   "section_b_affects_it": false,
+   "note": "Hilmi for K5. The cross-course K1/K2/K3/K4 assignment is ingested but not applied here."
+  },
+  {
+   "decision": "D3",
+   "title": "Skrin senario / dialog",
+   "status_of_ruling": "APPROVED_AS_K5_DEFAULT",
+   "affected_rule_or_generator": "pl06_unit_model_v1 dialogue obligation",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "GLOBAL",
+   "implementation_status": "MODEL_UPDATED",
+   "section_b_affects_it": false,
+   "note": "The ruling A5's prose defers to."
+  },
+  {
+   "decision": "D4",
+   "title": "Struktur Bahagian dan skrin penutup",
+   "status_of_ruling": "APPROVED_WITH_BARIAH_AMENDMENT",
+   "affected_rule_or_generator": "closing-screen rule; per-Bahagian Rumusan and Kuiz",
+   "affected_units": "ALL_K5_UNITS",
+   "scope": "SOURCE_CONDITIONAL",
+   "implementation_status": "MODEL_UPDATED",
+   "section_b_affects_it": false,
+   "note": "Segmentation-dependent; resolved per unit from the frozen map."
+  }
+ ],
+ "total": 17,
+ "affected_by_section_b": []
+}

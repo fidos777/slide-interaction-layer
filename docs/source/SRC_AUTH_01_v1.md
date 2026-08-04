@@ -58,8 +58,8 @@ D-25 asked Bariah for permission to extract. SRC-AUTH-01 records that the permis
 
 ```
 FILE      = K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx
-STATUS    = PENDING_BARIAH_REVIEW
-AUTHORITY = false
+STATUS    = RETURNED_BY_BARIAH_AND_INGESTED
+AUTHORITY = none
 ```
 
-Bariah is reviewing it now. Nothing in this run reads it, cites it as a rule, or applies a default from it. Every element that would depend on it is classified PENDING_BARIAH_PATTERN_DECISION and left unfrozen.
+Bariah returned the Kelompok 0 package on 4/8/2026 (LULUS DENGAN PINDAAN DINYATAKAN) closing A, C and D, then returned a second form the same day closing Section B (LULUS DENGAN PINDAAN). All four sections are now live K5 policy, applied through k5_pattern_policy_v1. The one thing still not frozen is B2's panel density: Bariah ruled that a 2-panel and a 3-panel example must be shown before any density is approved, so B2 is TEST_REQUIRED, not approved. Generation of the FOUR calibration units is authorised; mass generation of the remaining K5 units is not.
