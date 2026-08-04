@@ -46,10 +46,11 @@ Measured renderer capacity is **5 panels/page**, so both tested densities sit in
 
 | Measure | Value |
 | --- | --- |
-| Gates passed | 68 / 68 |
-| Mutation fixtures detected | 39 / 39 |
+| Gates passed | 70 / 70 |
+| Mutation fixtures detected | 40 / 40 |
 | Storyboard pages overflowing | 0 |
 | Off-canvas shapes | 0 |
+| Preview coverage | 50 previews from 50 PPTX slides (every slide, covers included) |
 
 Every gate re-opens the `.pptx` from disk. No gate asks the builder what it believes it wrote.
 

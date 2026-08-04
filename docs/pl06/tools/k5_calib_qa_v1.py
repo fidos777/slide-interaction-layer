@@ -428,6 +428,21 @@ def gates():
                 (cap >= 3, cap), (True, cap), 2,
                 "t04_state_emit_v1._panel_wrapped_height on K5 states",
                 INDEPENDENT_MEASURE))
+    # Preview coverage. The count on the left comes from the file on disk, the count on the
+    # right from the renderer's own returned records — neither is the renderer's belief about
+    # the other. Two Lampiran covers were silently unrendered before this gate existed.
+    cover = [(sb["slide_count"], len(sbp)), (lp2["slide_count"], len(lp2p)),
+             (lp3["slide_count"], len(lp3p))]
+    G.append(_g("EVERY_PPTX_SLIDE_HAS_A_RENDERED_PREVIEW", "LAYOUT",
+                [(a, b) for a, b in cover if a != b], [],
+                sum(a for a, _ in cover), "readback vs render records",
+                INDEPENDENT_MEASURE))
+    on_disk = [x["path"] for x in sbp + lp2p + lp3p if not os.path.exists(x["path"])]
+    G.append(_g("EVERY_RENDERED_PREVIEW_WAS_WRITTEN_TO_DISK", "LAYOUT",
+                on_disk if B.WRITE_PREVIEW_IMAGES else [], [],
+                len(sbp + lp2p + lp3p) if B.WRITE_PREVIEW_IMAGES else 0,
+                "preview directories", RAW_FILE,
+                empty_by_design=not B.WRITE_PREVIEW_IMAGES))
     G.append(_g("THE_RENDER_STATUS_IS_REPORTED_HONESTLY", "LAYOUT",
                 B.RENDER_STATUS, "NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE", 1,
                 "k5_calib_build_v1", DOC_LITERAL))
@@ -801,6 +816,12 @@ def _l2():
                          state_ids=[s["state_id"] for s in merged])] + pages[4:]
         return pages
     return _patch(M, "_lampiran_pages_uncached", broken)
+
+
+@fixture("KL-04", "EVERY_PPTX_SLIDE_HAS_A_RENDERED_PREVIEW")
+def _l4():
+    orig = B.render_lampiran_previews
+    return _patch(B, "render_lampiran_previews", lambda n: orig(n)[1:])
 
 
 @fixture("KL-03", "THE_RENDER_STATUS_IS_REPORTED_HONESTLY")

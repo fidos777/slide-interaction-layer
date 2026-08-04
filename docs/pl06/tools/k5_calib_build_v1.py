@@ -467,7 +467,26 @@ def render_lampiran_previews(panels_per_page):
     outdir = PREVIEW_LP.format(n=panels_per_page)
     _clear(outdir)
     pages = M.lampiran_pages(panels_per_page)
+    t = M.totals()
     made = []
+
+    img = Image.new("RGB", (PREVIEW_W, PREVIEW_H), (255, 255, 255))
+    d = ImageDraw.Draw(img)
+    d.text((48, 180), "LAMPIRAN SEMAKAN KEADAAN RUNTIME", font=_font(15, True),
+           fill=(107, 107, 107))
+    d.text((48, 210), f"{M.UNIT_ID}: {M.extract()['lesson_title']}", font=_font(28, True),
+           fill=(26, 26, 26))
+    d.text((48, 256), f"{t['panel_states']} keadaan dipanelkan daripada "
+                      f"{t['runtime_states']} keadaan runtime · {panels_per_page} panel "
+                      f"setiap halaman · {len(pages)} halaman",
+           font=_font(15), fill=(107, 107, 107))
+    d.text((48, 292), " · ".join(M.STATUS_MARKS), font=_font(12, True), fill=(183, 28, 28))
+    d.text((48, 318), "Kepadatan panel adalah UJIAN B2. Dua versi dijana daripada "
+                      "kandungan yang sama; tiada kepadatan dibekukan di sini.",
+           font=_font(12), fill=(183, 28, 28))
+    made.append(dict(path=_save(img, os.path.join(outdir, "A00_tajuk.png")),
+                     page_no=0, overflowed=False, panels=0))
+
     for page in pages:
         sc = next(s for s in M.screens() if s["screen_id"] == page["screen_id"])
         img = Image.new("RGB", (PREVIEW_W, PREVIEW_H), (255, 255, 255))
@@ -629,7 +648,11 @@ def emit_handoff(qa=None, mutations=None):
          row("Mutation fixtures detected",
              f"{mutations['detected']} / {mutations['fixture_count']}"),
          row("Storyboard pages overflowing", 0),
-         row("Off-canvas shapes", 0), "",
+         row("Off-canvas shapes", 0),
+         row("Preview coverage",
+             f"{sb['slide_count'] + l2['slide_count'] + l3['slide_count']} previews from "
+             f"{sb['slide_count'] + l2['slide_count'] + l3['slide_count']} PPTX slides "
+             "(every slide, covers included)"), "",
          "Every gate re-opens the `.pptx` from disk. No gate asks the builder what it "
          "believes it wrote.", "",
          "## 5. Render status", "",
