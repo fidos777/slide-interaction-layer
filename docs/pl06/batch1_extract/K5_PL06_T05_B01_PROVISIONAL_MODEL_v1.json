@@ -1,0 +1,1143 @@
+{
+ "unit_id": "K5-PL06-T05-B01",
+ "lesson_title": "Pengurusan Kualiti Projek",
+ "stage": "4.2F-C",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 44,
+  "tree": [
+   {
+    "row_id": "T05B01-ROW-001",
+    "level": 1,
+    "text": "PENGURUSAN KUALITI PROJEK",
+    "module_page": 284,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-003",
+    "level": 2,
+    "text": "Project Quality Plan (PQP)",
+    "module_page": 284,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-005",
+    "level": 3,
+    "text": "Objektif Kualiti (Quality Objectives):",
+    "module_page": 284,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)",
+     "Objektif Kualiti (Quality Objectives):"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-007",
+    "level": 3,
+    "text": "Contoh dalam Landskap:",
+    "module_page": 284,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)",
+     "Contoh dalam Landskap:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-011",
+    "level": 3,
+    "text": "Peranan dan Tanggungjawab (Roles & Responsibilities):",
+    "module_page": 284,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)",
+     "Peranan dan Tanggungjawab (Roles & Responsibilities):"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-013",
+    "level": 3,
+    "text": "Contoh dalam Landskap:",
+    "module_page": 284,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)",
+     "Contoh dalam Landskap:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-022",
+    "level": 3,
+    "text": "Contoh ITP untuk Kerja Penanaman Pokok Teduhan:",
+    "module_page": 285,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)",
+     "Contoh ITP untuk Kerja Penanaman Pokok Teduhan:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-034",
+    "level": 3,
+    "text": "Pengurusan Ketidakpatuhan (Non-Conformance Management):",
+    "module_page": 286,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Project Quality Plan (PQP)",
+     "Pengurusan Ketidakpatuhan (Non-Conformance Management):"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-037",
+    "level": 2,
+    "text": "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+    "module_page": 286,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-040",
+    "level": 3,
+    "text": "Dokumen Kontrak (Contract Documents):",
+    "module_page": 286,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+     "Dokumen Kontrak (Contract Documents):"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-044",
+    "level": 3,
+    "text": "Piawaian Industri dan Kebangsaan:",
+    "module_page": 287,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+     "Piawaian Industri dan Kebangsaan:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-048",
+    "level": 3,
+    "text": "Garis Panduan Pihak Berkuasa dan Badan Profesional:",
+    "module_page": 287,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+     "Garis Panduan Pihak Berkuasa dan Badan Profesional:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-052",
+    "level": 3,
+    "text": "Sampel dan Mock-up yang Diluluskan:",
+    "module_page": 287,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+     "Sampel dan Mock-up yang Diluluskan:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-055",
+    "level": 2,
+    "text": "Inspection and Testing for Quality Control",
+    "module_page": 287,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-060",
+    "level": 3,
+    "text": "Tujuan Utama ITP:",
+    "module_page": 288,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Tujuan Utama ITP:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-061",
+    "level": 3,
+    "text": "Memastikan Tiada Peringkat Kritikal Tertinggal",
+    "module_page": 288,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Memastikan Tiada Peringkat Kritikal Tertinggal"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-063",
+    "level": 3,
+    "text": "Mengklarifikasi Tanggungjawab",
+    "module_page": 288,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Mengklarifikasi Tanggungjawab"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-065",
+    "level": 3,
+    "text": "Menjadi Rujukan Standard",
+    "module_page": 288,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Menjadi Rujukan Standard"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-067",
+    "level": 3,
+    "text": "Mewujudkan Rekod Formal",
+    "module_page": 288,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Mewujudkan Rekod Formal"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-069",
+    "level": 3,
+    "text": "Laporan Ketidakpatuhan (Non- Conformance Report (NCR))",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Laporan Ketidakpatuhan (Non- Conformance Report (NCR))"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-071",
+    "level": 3,
+    "text": "Tujuan Utama NCR:",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Tujuan Utama NCR:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-072",
+    "level": 3,
+    "text": "Dokumentasi Rasmi",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Dokumentasi Rasmi"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-074",
+    "level": 3,
+    "text": "Pengurusan Tindakan Pembetulan",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Pengurusan Tindakan Pembetulan"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-076",
+    "level": 3,
+    "text": "Analisis Punca Masalah",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Analisis Punca Masalah"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-078",
+    "level": 3,
+    "text": "Mencegah Masalah Berulang",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Mencegah Masalah Berulang"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-080",
+    "level": 3,
+    "text": "Proses Aliran Kerja NCR",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Proses Aliran Kerja NCR"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-081",
+    "level": 3,
+    "text": "Pengenalpastian",
+    "module_page": 289,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Pengenalpastian"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-083",
+    "level": 3,
+    "text": "Pengeluaran NCR",
+    "module_page": 290,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Pengeluaran NCR"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-085",
+    "level": 3,
+    "text": "Analisis Punca & Cadangan Pembetulan",
+    "module_page": 290,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Analisis Punca & Cadangan Pembetulan"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-087",
+    "level": 3,
+    "text": "Kelulusan",
+    "module_page": 290,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Kelulusan"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-089",
+    "level": 3,
+    "text": "Pelaksanaan",
+    "module_page": 290,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Inspection and Testing for Quality Control",
+     "Pelaksanaan"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-091",
+    "level": 2,
+    "text": "Penyata Kaedah Kerja (Method Statement)",
+    "module_page": 290,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-094",
+    "level": 3,
+    "text": "Tujuan dan Kepentingan Penyata Kaedah Kerja:",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Tujuan dan Kepentingan Penyata Kaedah Kerja:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-095",
+    "level": 3,
+    "text": "Memastikan Keselamatan (Safety)",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Memastikan Keselamatan (Safety)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-097",
+    "level": 3,
+    "text": "Menjamin Kualiti (Quality)",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Menjamin Kualiti (Quality)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-099",
+    "level": 3,
+    "text": "Meningkatkan Kecekapan (Efficiency)",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Meningkatkan Kecekapan (Efficiency)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-101",
+    "level": 3,
+    "text": "Alat Komunikasi",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Alat Komunikasi"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-103",
+    "level": 3,
+    "text": "Keperluan Kontrak",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Keperluan Kontrak"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-105",
+    "level": 3,
+    "text": "Komponen Utama dalam Penyata Kaedah Kerja yang Lengkap:",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Komponen Utama dalam Penyata Kaedah Kerja yang Lengkap:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-106",
+    "level": 3,
+    "text": "Maklumat Asas Projek:",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Maklumat Asas Projek:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-108",
+    "level": 3,
+    "text": "Skop Kerja",
+    "module_page": 291,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Skop Kerja"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-110",
+    "level": 3,
+    "text": "Peruntukan Sumber (Resource Allocation)",
+    "module_page": 292,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Peruntukan Sumber (Resource Allocation)"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-126",
+    "level": 3,
+    "text": "Kawalan Kualiti:",
+    "module_page": 293,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Kawalan Kualiti:"
+    ]
+   },
+   {
+    "row_id": "T05B01-ROW-129",
+    "level": 3,
+    "text": "Dokumen Sokongan:",
+    "module_page": 293,
+    "heading_path": [
+     "PENGURUSAN KUALITI PROJEK",
+     "Penyata Kaedah Kerja (Method Statement)",
+     "Dokumen Sokongan:"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 20,
+  "rows": [
+   {
+    "row_id": "T05B01-ROW-006",
+    "text": "Pernyataan yang jelas, spesifik, dan boleh diukur (measurable) mengenai matlamat kualiti.",
+    "module_page": 284,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-012",
+    "text": "Struktur organisasi yang jelas mendefinisikan siapa yang bertanggungjawab untuk setiap aspek kualiti.",
+    "module_page": 284,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-020",
+    "text": "Pelan Pemeriksaan dan Ujian (Inspection and Test Plan - ITP):",
+    "module_page": 285,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-021",
+    "text": "Ini adalah senarai semak (checklist) terperinci yang menggariskan setiap aktiviti kerja dan peringkat pemeriksaan yang p",
+    "module_page": 285,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-035",
+    "text": "Prosedur yang jelas tentang tindakan yang perlu diambil apabila sesuatu kerja atau bahan gagal memenuhi spesifikasi.",
+    "module_page": 286,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-036",
+    "text": "Ini termasuk proses mengeluarkan Laporan Ketidakpatuhan (Non-Conformance Report - NCR), mengenal pasti punca, dan melaks",
+    "module_page": 286,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-041",
+    "text": "Ini adalah sumber rujukan yang paling utama dan mengatasi semua sumber lain.",
+    "module_page": 286,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-042",
+    "text": "Spesifikasi Teknikal: Dokumen yang menerangkan secara terperinci kualiti bahan, gred, saiz, kaedah pemasangan, dan stand",
+    "module_page": 286,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-043",
+    "text": "Lukisan Kontrak: Menunjukkan dimensi, aras, butiran pembinaan, dan lokasi setiap elemen dengan tepat.",
+    "module_page": 286,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-045",
+    "text": "Rujukan kepada standard yang diterima pakai secara meluas untuk memastikan kualiti bahan dan kerja.",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-046",
+    "text": "Piawaian Malaysia (MS): Piawaian rasmi negara untuk bahan-bahan binaan seperti simen, keluli, dan produk konkrit.",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-047",
+    "text": "Piawaian Jabatan Kerja Raya (JKR): Standard Specification for Road Works sering digunakan, terutamanya untuk kerja-kerja",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-049",
+    "text": "Keperluan spesifik yang ditetapkan oleh agensi berkaitan.",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-050",
+    "text": "Pihak Berkuasa Tempatan (PBT): Mempunyai garis panduan sendiri untuk penanaman pokok di rizab jalan, pembinaan longkang,",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-051",
+    "text": "Institut Arkitek Landskap Malaysia (ILAM): Mengeluarkan garis panduan dan amalan terbaik dalam industri landskap.",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-053",
+    "text": "Sebelum pembelian pukal atau pembinaan skala penuh, kontraktor mesti menyediakan sampel bahan (cth: paver, boulder, pera",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-054",
+    "text": "Sampel dan mock-up yang telah diluluskan ini menjadi piawaian fizikal di tapak dan rujukan utama untuk semua kerja seter",
+    "module_page": 287,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-058",
+    "text": "Pelan Pemeriksaan dan Ujian (ITP) (Inspection and test plan",
+    "module_page": 288,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-117",
+    "text": "Jujukan Kerja Langkah-demi-Langkah (Step-by-Step Work Sequence)",
+    "module_page": 292,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T05B01-ROW-119",
+    "text": "Pelan Keselamatan, Kesihatan & Alam Sekitar (Health, Safety & Environment - HSE):",
+    "module_page": 292,
+    "style": "Heading3"
+   }
+  ]
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Project Quality Plan (PQP)",
+    "row_id": "T05B01-ROW-003",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+    "row_id": "T05B01-ROW-037",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Inspection and Testing for Quality Control",
+    "row_id": "T05B01-ROW-055",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Penyata Kaedah Kerja (Method Statement)",
+    "row_id": "T05B01-ROW-091",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [],
+  "override_declared": false,
+  "override_reason": null,
+  "note": "A floor, not a ceiling. Extraction shows what exists; how many screens each group needs is not settled here. Where a declared override is used, the automatic detector's own answer is kept beside it so the two can be compared."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S02 Dialog",
+   "S0x Orientasi",
+   "G1: Project Quality Plan (PQP)",
+   "G2: Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+   "G3: Inspection and Testing for Quality Control",
+   "G4: Penyata Kaedah Kerja (Method Statement)",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 3,
+   "shell_includes_dialogue": true,
+   "content_groups": 4,
+   "closing_screens": 3,
+   "minimum_total_screens": 10,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "progressive process",
+  "secondary_candidate": "comparison",
+  "reason": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence.",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "Named as candidates only. The pattern package that would settle this is still with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Project Quality Plan (PQP)",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Jaminan Kualiti (QA)/ (Standard for Quality Assurance)",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Inspection and Testing for Quality Control",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Penyata Kaedah Kerja (Method Statement)",
+    "candidate": "reveal per component detail"
+   }
+  ],
+  "note": "Interaction shape follows the pattern family, which is undecided."
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 10,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "method": "base states = learner screens; triggered states depend on the pattern family, which is undecided",
+  "note": "T04's 65 states are not carried over."
+ },
+ "rumusan": {
+  "cls": "CAIR_PROPOSAL",
+  "beat_count": 5,
+  "beats": [
+   "PQP sebagai dokumen induk kualiti dan empat komponennya.",
+   "Hierarki rujukan: dokumen kontrak mengatasi semua sumber lain.",
+   "QA proaktif berbanding QC yang mengesan kecacatan.",
+   "NCR sebagai rekod formal, dan lima peringkat aliran kerjanya.",
+   "Penyata Kaedah Kerja sebagai keperluan kontrak, lengkap dengan pelan HSE."
+  ],
+  "treatment": "RP-007 — this Bahagian only, contractor perspective, no Kepentingan / Isi Utama / Manfaat labels",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "The beat COUNT is a proposal derived from this unit's own content, not carried from T04's three."
+ },
+ "dialogue": {
+  "cls": "CAIR_PROPOSAL",
+  "verdict": "JUSTIFIED",
+  "reason": "The NCR workflow is a five-party sequence — supervisor finds it, contractor investigates, consultant approves, contractor repairs — and quality management is exactly where a contractor's habits meet the specification. That is a decision with stakes, which is what AR-06 means by justified. The batch 1 package proposed REQUIRED from the heading; the extract supports it.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+  "cast_cls": "PENDING_BARIAH_PATTERN_DECISION"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "count": 8,
+  "propositions": [
+   {
+    "proposition": "Dokumen kontrak adalah sumber rujukan kualiti yang paling utama dan mengatasi semua sumber lain.",
+    "rows": [
+     "T05B01-ROW-041"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "QA ialah proses proaktif untuk memberi keyakinan bahawa kualiti akan dicapai; QC ialah aspek praktikal yang mengesan kecacatan.",
+    "rows": [
+     "T05B01-ROW-038",
+     "T05B01-ROW-056",
+     "T05B01-ROW-057"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "ITP menyenaraikan setiap aktiviti kerja dan peringkat pemeriksaan, dan menetapkan kriteria penerimaan yang jelas.",
+    "rows": [
+     "T05B01-ROW-059",
+     "T05B01-ROW-066"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Aliran kerja NCR mempunyai lima peringkat: pengenalpastian, pengeluaran NCR, analisis punca dan cadangan pembetulan, kelulusan, pelaksanaan.",
+    "rows": [
+     "T05B01-ROW-082",
+     "T05B01-ROW-084",
+     "T05B01-ROW-086",
+     "T05B01-ROW-088",
+     "T05B01-ROW-090"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Objektif kualiti mesti jelas, spesifik dan boleh diukur (measurable).",
+    "rows": [
+     "T05B01-ROW-006"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Sampel dan mock-up yang diluluskan menjadi piawaian fizikal di tapak dan rujukan utama untuk semua kerja seterusnya.",
+    "rows": [
+     "T05B01-ROW-053",
+     "T05B01-ROW-054"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Penyata Kaedah Kerja mesti disertakan dengan pelan HSE yang mengenal pasti bahaya dalam jujukan kerja dan langkah kawalannya.",
+    "rows": [
+     "T05B01-ROW-119",
+     "T05B01-ROW-121"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Penyata Kaedah Kerja adalah keperluan mandatori dalam kebanyakan dokumen kontrak pembinaan.",
+    "rows": [
+     "T05B01-ROW-104"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "DRAFTED_NOT_APPROVED",
+  "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Dalam hierarki rujukan kualiti, dokumen manakah yang mengatasi semua sumber lain?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Dokumen kontrak.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T05B01-ROW-041"
+    ],
+    "distractors": [
+     "Piawaian Malaysia (MS)",
+     "Garis panduan Pihak Berkuasa Tempatan (PBT)",
+     "Garis panduan ILAM"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah perbezaan utama antara Jaminan Kualiti (QA) dan Kawalan Kualiti (QC)?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "QA ialah proses proaktif untuk memberi keyakinan bahawa kualiti akan dicapai; QC ialah aspek praktikal yang mengesan kecacatan.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T05B01-ROW-038",
+     "T05B01-ROW-056",
+     "T05B01-ROW-057"
+    ],
+    "distractors": [
+     "QA dijalankan oleh kontraktor, QC oleh perunding sahaja",
+     "QA hanya untuk bahan, QC hanya untuk kerja tapak",
+     "QA dilakukan selepas siap, QC sebelum kerja bermula"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah langkah PERTAMA dalam proses aliran kerja NCR?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Pengenalpastian ketidakpatuhan oleh penyelia tapak atau perunding semasa pemeriksaan.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T05B01-ROW-082"
+    ],
+    "distractors": [
+     "Kelulusan cadangan pembetulan oleh perunding",
+     "Pelaksanaan kerja pembaikan oleh kontraktor",
+     "Analisis punca masalah oleh kontraktor"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Objektif kualiti dalam PQP mesti mempunyai satu ciri yang membezakannya daripada kenyataan hasrat. Apakah ciri itu?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Ia mesti boleh diukur (measurable).",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T05B01-ROW-006"
+    ],
+    "distractors": [
+     "Ia mesti diluluskan oleh PBT",
+     "Ia mesti ditulis dalam dua bahasa",
+     "Ia mesti disertakan dengan anggaran kos"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA tujuan utama Pelan Pemeriksaan dan Ujian (ITP).",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": [
+     "Memastikan tiada peringkat kritikal tertinggal",
+     "Mengklarifikasi tanggungjawab pemeriksaan dan kelulusan",
+     "Menjadi rujukan standard dengan kriteria penerimaan yang jelas",
+     "Mewujudkan rekod formal bahawa pemeriksaan telah dijalankan"
+    ],
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T05B01-ROW-062",
+     "T05B01-ROW-064",
+     "T05B01-ROW-066",
+     "T05B01-ROW-068"
+    ],
+    "distractors": [
+     "Menetapkan harga kontrak bagi setiap aktiviti kerja",
+     "Menggantikan keperluan Penyata Kaedah Kerja"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   }
+  ],
+  "note": "Every stem and every correct response cites the rows it came from. The distractors are ours and are labelled ours. Nothing here is an approved answer key."
+ },
+ "visual_obligations": {
+  "cls": "CAIR_PROPOSAL",
+  "count": 3,
+  "source_attested": 0,
+  "subjects": [
+   {
+    "subject": "Hierarki rujukan kualiti: dokumen kontrak di atas, kemudian MS/JKR, PBT/ILAM, sampel dan mock-up",
+    "rows": [
+     "T05B01-ROW-041",
+     "T05B01-ROW-046",
+     "T05B01-ROW-050",
+     "T05B01-ROW-053"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Aliran kerja NCR lima peringkat",
+    "rows": [
+     "T05B01-ROW-082",
+     "T05B01-ROW-084",
+     "T05B01-ROW-086",
+     "T05B01-ROW-088",
+     "T05B01-ROW-090"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Kandungan Penyata Kaedah Kerja yang lengkap",
+    "rows": [
+     "T05B01-ROW-112",
+     "T05B01-ROW-114",
+     "T05B01-ROW-116",
+     "T05B01-ROW-119"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "These are candidate SUBJECTS derived from text, not approved visual directions. Only a subject with has_source_figure=true has a figure behind it."
+ },
+ "reuse_candidates": {
+  "cls": "COURSE_RULE_ALREADY_APPROVED",
+  "candidates": [
+   "RP-001 review storyboard shell",
+   "RP-002 screen grammar",
+   "RP-003 production panel",
+   "RP-004 Notes block schema",
+   "RP-006 completion-state treatment",
+   "RP-007 Rumusan treatment",
+   "RP-008 quiz review structure",
+   "RP-011 feedback wording",
+   "RP-013 geometry registry",
+   "RP-014 artifact identity",
+   "RP-015 screen/state/page separation",
+   "RP-016 oracle contract",
+   "RP-017 population pinning"
+  ]
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 8,
+  "terms": [
+   {
+    "term": "PQP — Project Quality Plan / Pelan Kualiti Projek",
+    "rows": [
+     "T05B01-ROW-004"
+    ]
+   },
+   {
+    "term": "ITP — Inspection and Test Plan",
+    "rows": [
+     "T05B01-ROW-020"
+    ]
+   },
+   {
+    "term": "NCR — Non-Conformance Report",
+    "rows": [
+     "T05B01-ROW-036"
+    ]
+   },
+   {
+    "term": "QA — Jaminan Kualiti",
+    "rows": [
+     "T05B01-ROW-038"
+    ]
+   },
+   {
+    "term": "QC — Quality Control / Kawalan Kualiti",
+    "rows": [
+     "T05B01-ROW-056"
+    ]
+   },
+   {
+    "term": "Method Statement / Penyata Kaedah Kerja",
+    "rows": [
+     "T05B01-ROW-092"
+    ]
+   },
+   {
+    "term": "HSE — Health, Safety & Environment",
+    "rows": [
+     "T05B01-ROW-119"
+    ]
+   },
+   {
+    "term": "PPE",
+    "rows": [
+     "T05B01-ROW-123"
+    ]
+   }
+  ]
+ },
+ "compliance_sensitive": {
+  "cls": "SOURCE_DERIVED",
+  "count": 4,
+  "statements": [
+   {
+    "statement": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+    "rows": [
+     "T05B01-ROW-046",
+     "T05B01-ROW-047"
+    ],
+    "why": "NAMED_EXTERNAL_STANDARD"
+   },
+   {
+    "statement": "PBT and ILAM guidelines are named authority bodies.",
+    "rows": [
+     "T05B01-ROW-050",
+     "T05B01-ROW-051"
+    ],
+    "why": "NAMED_AUTHORITY_BODY"
+   },
+   {
+    "statement": "Method Statement as a mandatory contract requirement.",
+    "rows": [
+     "T05B01-ROW-104"
+    ],
+    "why": "CONTRACTUAL_OBLIGATION"
+   },
+   {
+    "statement": "PPE obligations named for all involved workers.",
+    "rows": [
+     "T05B01-ROW-123"
+    ],
+    "why": "STATUTORY_SAFETY_EXPOSURE"
+   }
+  ]
+ },
+ "ambiguity_register": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "items": [
+   {
+    "item": "'Contoh dalam Landskap:' appears twice as a structural heading under PQP with different examples beneath each.",
+    "rows": [
+     "T05B01-ROW-007",
+     "T05B01-ROW-013"
+    ],
+    "resolution": "Both retained; heading_path disambiguates them"
+   },
+   {
+    "item": "The ITP example table for tree planting is described in prose ('Contoh ITP untuk Kerja Penanaman Pokok Teduhan:') but the extract found no table object in this unit, so the example is text only.",
+    "rows": [
+     "T05B01-ROW-026"
+    ],
+    "resolution": "MISSING_SOURCE_REGISTER"
+   }
+  ]
+ },
+ "missing_source_register": {
+  "cls": "SOURCE_DERIVED",
+  "items": [
+   {
+    "item": "No figure or photograph in this unit's source span.",
+    "consequence": "Every visual subject below is a CAIR reading of the text. None is a source-attested figure, and RP-104 forbids composing a subject from a component name.",
+    "severity": "BLOCKS_VISUAL_DIRECTION"
+   },
+   {
+    "item": "No table object in this unit's source span.",
+    "consequence": "Any comparison treatment must be built from prose, not lifted from a source table.",
+    "severity": "AFFECTS_TREATMENT_CHOICE"
+   },
+   {
+    "item": "The ITP example table for tree planting is described in prose ('Contoh ITP untuk Kerja Penanaman Pokok Teduhan:') but the extract found no table object in this unit, so the example is text only.",
+    "consequence": "Recorded, not filled in.",
+    "severity": "RECORDED"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T05-B01",
+  "rows": 132,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   284,
+   293
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 128,
+  "carried_forward_rows": 4,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

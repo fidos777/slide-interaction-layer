@@ -1,0 +1,903 @@
+{
+ "unit_id": "K5-PL06-T03-B04",
+ "lesson_title": "Badan Air (Water Body)",
+ "stage": "4.2F-C",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 36,
+  "tree": [
+   {
+    "row_id": "T03B04-ROW-001",
+    "level": 2,
+    "text": "Badan Air (Water Body)",
+    "module_page": 255,
+    "heading_path": [
+     "Badan Air (Water Body)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-003",
+    "level": 3,
+    "text": "Kolam",
+    "module_page": 255,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Kolam"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-005",
+    "level": 3,
+    "text": "Kolam Ikan Hiasan (Koi Pond)",
+    "module_page": 255,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Kolam Ikan Hiasan (Koi Pond)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-007",
+    "level": 3,
+    "text": "Kolam Reflektif (Reflecting Pool)",
+    "module_page": 255,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Kolam Reflektif (Reflecting Pool)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-009",
+    "level": 3,
+    "text": "Taman Air (Water Garden)",
+    "module_page": 255,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Taman Air (Water Garden)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-011",
+    "level": 3,
+    "text": "Tasik",
+    "module_page": 255,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Tasik"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-013",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 256,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-014",
+    "level": 3,
+    "text": "Fungsi Estetik",
+    "module_page": 256,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi Estetik"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-016",
+    "level": 3,
+    "text": "Fungsi Ekologi",
+    "module_page": 256,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi Ekologi"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-018",
+    "level": 3,
+    "text": "Fungsi Mikroklimat",
+    "module_page": 256,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi Mikroklimat"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-020",
+    "level": 3,
+    "text": "Fungsi Rekreasi",
+    "module_page": 256,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi Rekreasi"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-022",
+    "level": 3,
+    "text": "Tali Air (Canal)",
+    "module_page": 256,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Tali Air (Canal)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-024",
+    "level": 3,
+    "text": "Fungsi dan Peranan Canal dalam Projek Landskap",
+    "module_page": 257,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi dan Peranan Canal dalam Projek Landskap"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-026",
+    "level": 3,
+    "text": "Elemen Arah & Pergerakan (Directional Element)",
+    "module_page": 257,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Elemen Arah & Pergerakan (Directional Element)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-028",
+    "level": 3,
+    "text": "Pemisah Ruang (Space Separator)",
+    "module_page": 257,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Pemisah Ruang (Space Separator)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-030",
+    "level": 3,
+    "text": "Fungsi Saliran & Pengairan",
+    "module_page": 257,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Fungsi Saliran & Pengairan"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-032",
+    "level": 3,
+    "text": "Estetika & Suasana",
+    "module_page": 257,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Estetika & Suasana"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-034",
+    "level": 3,
+    "text": "Alur Air",
+    "module_page": 257,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Alur Air"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-037",
+    "level": 3,
+    "text": "Struktur Alur (Channel Structure)",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Struktur Alur (Channel Structure)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-038",
+    "level": 3,
+    "text": "Laluan & Kecerunan (Path & Gradient)",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Laluan & Kecerunan (Path & Gradient)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-040",
+    "level": 3,
+    "text": "Bentuk Alur",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Bentuk Alur"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-042",
+    "level": 3,
+    "text": "Sistem Pelapisan (Lining System)",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Sistem Pelapisan (Lining System)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-043",
+    "level": 3,
+    "text": "Pelapik Fleksibel (Flexible Liner)",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Pelapik Fleksibel (Flexible Liner)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-045",
+    "level": 3,
+    "text": "Konkrit",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Konkrit"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-047",
+    "level": 3,
+    "text": "Sistem Kitaran Air (Water Circulation System)",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Sistem Kitaran Air (Water Circulation System)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-048",
+    "level": 3,
+    "text": "Punca Air",
+    "module_page": 258,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Punca Air"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-050",
+    "level": 3,
+    "text": "Takungan Bawah (Lower Reservoir/ Sump)",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Takungan Bawah (Lower Reservoir/ Sump)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-052",
+    "level": 3,
+    "text": "Pam Air (Water Pump)",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Pam Air (Water Pump)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-054",
+    "level": 3,
+    "text": "Sistem Perpaipan",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Sistem Perpaipan"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-057",
+    "level": 3,
+    "text": "Susunan Batu (Rock & Boulder Placement)",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Susunan Batu (Rock & Boulder Placement)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-059",
+    "level": 3,
+    "text": "Batu Kerikil & Pasir (Gravel & Sand)",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Batu Kerikil & Pasir (Gravel & Sand)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-061",
+    "level": 3,
+    "text": "Integrasi Tanaman",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Integrasi Tanaman"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-063",
+    "level": 3,
+    "text": "Sungai",
+    "module_page": 259,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Sungai"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-065",
+    "level": 3,
+    "text": "Laluan Aliran (Stream Channel)",
+    "module_page": 260,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Laluan Aliran (Stream Channel)"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-067",
+    "level": 3,
+    "text": "Aspek Kritikal Kontraktor:",
+    "module_page": 260,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Aspek Kritikal Kontraktor:"
+    ]
+   },
+   {
+    "row_id": "T03B04-ROW-072",
+    "level": 3,
+    "text": "Sistem Pelapisan (Lining System)",
+    "module_page": 260,
+    "heading_path": [
+     "Badan Air (Water Body)",
+     "Sistem Pelapisan (Lining System)"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "rows": [
+   {
+    "row_id": "T03B04-ROW-025",
+    "text": "Memahami tujuan reka bentuk canal adalah penting untuk memastikan pelaksanaan di tapak selari dengan visi arkitek landsk",
+    "module_page": 257,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T03B04-ROW-056",
+    "text": "Elemen Estetik & Kemasan (Aesthetic & Finishing Elements)",
+    "module_page": 259,
+    "style": "Heading3"
+   }
+  ]
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "components": [
+   {
+    "name": "Tasik",
+    "row_id": "T03B04-ROW-011",
+    "module_page": 255,
+    "marker": "Fungsi"
+   },
+   {
+    "name": "Laluan Aliran (Stream Channel)",
+    "row_id": "T03B04-ROW-065",
+    "module_page": 260,
+    "marker": "Aspek Kritikal Kontraktor:"
+   }
+  ]
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "DECLARED_OVERRIDE",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Kolam",
+    "row_id": "T03B04-ROW-003",
+    "basis": "DECLARED_OVERRIDE"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Tasik",
+    "row_id": "T03B04-ROW-011",
+    "basis": "DECLARED_OVERRIDE"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Tali Air (Canal)",
+    "row_id": "T03B04-ROW-022",
+    "basis": "DECLARED_OVERRIDE"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Alur Air",
+    "row_id": "T03B04-ROW-034",
+    "basis": "DECLARED_OVERRIDE"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Sungai",
+    "row_id": "T03B04-ROW-063",
+    "basis": "DECLARED_OVERRIDE"
+   }
+  ],
+  "automatic_component_detection": [
+   "Tasik",
+   "Laluan Aliran (Stream Channel)"
+  ],
+  "override_declared": true,
+  "override_reason": "automatic component detection found 2 of 5 water-body types, because this unit does not repeat the Fungsi / Fokus marker under every type",
+  "note": "A floor, not a ceiling. Extraction shows what exists; how many screens each group needs is not settled here. Where a declared override is used, the automatic detector's own answer is kept beside it so the two can be compared."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Kolam",
+   "G2: Tasik",
+   "G3: Tali Air (Canal)",
+   "G4: Alur Air",
+   "G5: Sungai",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 5,
+   "closing_screens": 3,
+   "minimum_total_screens": 10,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "progressive process",
+  "secondary_candidate": "click-to-reveal",
+  "reason": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal.",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "Named as candidates only. The pattern package that would settle this is still with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Kolam",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Tasik",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Tali Air (Canal)",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Alur Air",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Sungai",
+    "candidate": "reveal per component detail"
+   }
+  ],
+  "note": "Interaction shape follows the pattern family, which is undecided."
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 10,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "method": "base states = learner screens; triggered states depend on the pattern family, which is undecided",
+  "note": "T04's 65 states are not carried over."
+ },
+ "rumusan": {
+  "cls": "CAIR_PROPOSAL",
+  "beat_count": 3,
+  "beats": [
+   "Jenis badan air dan fungsi reka bentuk setiap satu.",
+   "Sistem kitaran air tertutup dan peranan pam sebagai jantung sistem.",
+   "Kawalan kecerunan dan pilihan pelapik sebagai dua titik kegagalan utama."
+  ],
+  "treatment": "RP-007 — this Bahagian only, contractor perspective, no Kepentingan / Isi Utama / Manfaat labels",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "The beat COUNT is a proposal derived from this unit's own content, not carried from T04's three."
+ },
+ "dialogue": {
+  "cls": "CAIR_PROPOSAL",
+  "verdict": "NOT_JUSTIFIED",
+  "reason": "Component description again, with a technical system inside it. The batch 1 harvest package proposed NOT_REQUIRED for this unit from the heading alone; the extract confirms it rather than overturning it.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+  "cast_cls": "PENDING_BARIAH_PATTERN_DECISION"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "count": 8,
+  "propositions": [
+   {
+    "proposition": "Kolam ikan hiasan (koi pond) memerlukan sistem penapisan yang efisien.",
+    "rows": [
+     "T03B04-ROW-006"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Kolam reflektif biasanya cetek dengan permukaan air tenang, direka untuk memantulkan imej.",
+    "rows": [
+     "T03B04-ROW-008"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Kecerunan alur air adalah aspek paling kritikal — ia mengawal kelajuan aliran.",
+    "rows": [
+     "T03B04-ROW-039"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Pelapik fleksibel EPDM atau PVC adalah pilihan utama kerana mudah dibentuk mengikut kontur; konkrit kurang fleksibel dan digunakan untuk alur formal.",
+    "rows": [
+     "T03B04-ROW-044",
+     "T03B04-ROW-046"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Sistem kitaran air adalah kitaran tertutup: air yang sama digunakan berterusan.",
+    "rows": [
+     "T03B04-ROW-080"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Pam ialah 'jantung' sistem, dan saiznya mesti sepadan dengan ketinggian (head height) dan kadar aliran.",
+    "rows": [
+     "T03B04-ROW-053",
+     "T03B04-ROW-085"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Bentuk berliku-liku, bukan laluan lurus, adalah kunci rupa bentuk semula jadi sungai buatan.",
+    "rows": [
+     "T03B04-ROW-071"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Kecerunan yang terlalu curam menyebabkan hakisan; terlalu landai menyebabkan air bertakung.",
+    "rows": [
+     "T03B04-ROW-069"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "DRAFTED_NOT_APPROVED",
+  "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah aspek paling kritikal dalam pembinaan alur air?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Kecerunan, kerana ia mengawal kelajuan aliran air.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B04-ROW-039"
+    ],
+    "distractors": [
+     "Warna batu yang digunakan di tebing",
+     "Jenis tumbuhan yang ditanam di sepanjang alur",
+     "Kedalaman takungan bawah"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Mengapakah pelapik fleksibel seperti EPDM atau PVC menjadi pilihan utama bagi alur air?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Kerana ia mudah dibentuk mengikut kontur alur.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B04-ROW-044"
+    ],
+    "distractors": [
+     "Kerana ia lebih murah daripada semua bahan lain",
+     "Kerana ia tidak memerlukan lapisan pelindung",
+     "Kerana ia lebih kukuh daripada konkrit"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Bagaimanakah sistem kitaran air bagi sungai buatan berfungsi?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Sebagai kitaran tertutup — air yang sama digunakan berterusan.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B04-ROW-080"
+    ],
+    "distractors": [
+     "Air baharu dibekalkan berterusan dari sumber bandar",
+     "Air dilepaskan ke longkang selepas setiap kitaran",
+     "Air hanya dipam semasa waktu operasi taman"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah kesan kecerunan yang terlalu landai pada laluan aliran sungai buatan?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Air bertakung.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B04-ROW-069"
+    ],
+    "distractors": [
+     "Hakisan tebing yang berlebihan",
+     "Aliran menjadi terlalu laju",
+     "Pam bekerja pada kadar yang lebih rendah"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA komponen yang membentuk sistem kitaran air.",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": [
+     "Punca air di titik tertinggi",
+     "Takungan bawah (sump) di titik terendah",
+     "Pam air",
+     "Sistem perpaipan"
+    ],
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B04-ROW-049",
+     "T03B04-ROW-051",
+     "T03B04-ROW-053",
+     "T03B04-ROW-055"
+    ],
+    "distractors": [
+     "Bebendul konkrit di tepi alur",
+     "Sistem penapisan wajib untuk semua badan air"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   }
+  ],
+  "note": "Every stem and every correct response cites the rows it came from. The distractors are ours and are labelled ours. Nothing here is an approved answer key."
+ },
+ "visual_obligations": {
+  "cls": "CAIR_PROPOSAL",
+  "count": 3,
+  "source_attested": 0,
+  "subjects": [
+   {
+    "subject": "Empat jenis kolam landskap: koi, reflektif, taman air, tasik",
+    "rows": [
+     "T03B04-ROW-005",
+     "T03B04-ROW-007",
+     "T03B04-ROW-009",
+     "T03B04-ROW-011"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Rajah kitaran air tertutup: punca air, sump, pam, perpaipan",
+    "rows": [
+     "T03B04-ROW-049",
+     "T03B04-ROW-051",
+     "T03B04-ROW-053",
+     "T03B04-ROW-055"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Perbandingan pelapik fleksibel dan pelapik konkrit",
+    "rows": [
+     "T03B04-ROW-044",
+     "T03B04-ROW-046"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "These are candidate SUBJECTS derived from text, not approved visual directions. Only a subject with has_source_figure=true has a figure behind it."
+ },
+ "reuse_candidates": {
+  "cls": "COURSE_RULE_ALREADY_APPROVED",
+  "candidates": [
+   "RP-001 review storyboard shell",
+   "RP-002 screen grammar",
+   "RP-003 production panel",
+   "RP-004 Notes block schema",
+   "RP-006 completion-state treatment",
+   "RP-007 Rumusan treatment",
+   "RP-008 quiz review structure",
+   "RP-011 feedback wording",
+   "RP-013 geometry registry",
+   "RP-014 artifact identity",
+   "RP-015 screen/state/page separation",
+   "RP-016 oracle contract",
+   "RP-017 population pinning"
+  ]
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 7,
+  "terms": [
+   {
+    "term": "Koi Pond / Kolam Ikan Hiasan",
+    "rows": [
+     "T03B04-ROW-005"
+    ]
+   },
+   {
+    "term": "Reflecting Pool / Kolam Reflektif",
+    "rows": [
+     "T03B04-ROW-007"
+    ]
+   },
+   {
+    "term": "Canal / Tali Air",
+    "rows": [
+     "T03B04-ROW-022"
+    ]
+   },
+   {
+    "term": "Lining System / Sistem Pelapisan",
+    "rows": [
+     "T03B04-ROW-042"
+    ]
+   },
+   {
+    "term": "Header pool / takungan tersembunyi",
+    "rows": [
+     "T03B04-ROW-049"
+    ]
+   },
+   {
+    "term": "Sump / Takungan Bawah",
+    "rows": [
+     "T03B04-ROW-050"
+    ]
+   },
+   {
+    "term": "Head height",
+    "rows": [
+     "T03B04-ROW-053"
+    ]
+   }
+  ]
+ },
+ "compliance_sensitive": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "statements": [
+   {
+    "statement": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+    "rows": [
+     "T03B04-ROW-053",
+     "T03B04-ROW-085"
+    ],
+    "why": "MATERIAL_SPECIFICATION"
+   },
+   {
+    "statement": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+    "rows": [
+     "T03B04-ROW-076"
+    ],
+    "why": "MATERIAL_SPECIFICATION"
+   }
+  ]
+ },
+ "ambiguity_register": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "items": [
+   {
+    "item": "'Sistem Pelapisan (Lining System)' appears twice as a structural heading, once under Alur Air and once under Sungai, with different content beneath each.",
+    "rows": [
+     "T03B04-ROW-042"
+    ],
+    "resolution": "Both retained; heading_path disambiguates them"
+   },
+   {
+    "item": "The pump description is repeated almost verbatim for Alur Air and for Sungai. Whether that is one teaching point or two is an instructional judgement.",
+    "rows": [
+     "T03B04-ROW-053",
+     "T03B04-ROW-085"
+    ],
+    "resolution": "PENDING_UNIT_EXCEPTION_REVIEW"
+   }
+  ]
+ },
+ "missing_source_register": {
+  "cls": "SOURCE_DERIVED",
+  "items": [
+   {
+    "item": "No figure or photograph in this unit's source span.",
+    "consequence": "Every visual subject below is a CAIR reading of the text. None is a source-attested figure, and RP-104 forbids composing a subject from a component name.",
+    "severity": "BLOCKS_VISUAL_DIRECTION"
+   },
+   {
+    "item": "No table object in this unit's source span.",
+    "consequence": "Any comparison treatment must be built from prose, not lifted from a source table.",
+    "severity": "AFFECTS_TREATMENT_CHOICE"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T03-B04",
+  "rows": 92,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   255,
+   261
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 83,
+  "carried_forward_rows": 9,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

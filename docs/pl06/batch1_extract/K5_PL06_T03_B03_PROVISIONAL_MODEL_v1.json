@@ -1,0 +1,1008 @@
+{
+ "unit_id": "K5-PL06-T03-B03",
+ "lesson_title": "Infrastruktur",
+ "stage": "4.2F-C",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 39,
+  "tree": [
+   {
+    "row_id": "T03B03-ROW-001",
+    "level": 2,
+    "text": "Infrastruktur",
+    "module_page": 250,
+    "heading_path": [
+     "Infrastruktur"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-002",
+    "level": 3,
+    "text": "Landform / Earthmound",
+    "module_page": 250,
+    "heading_path": [
+     "Infrastruktur",
+     "Landform / Earthmound"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-003",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 250,
+    "heading_path": [
+     "Infrastruktur",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-007",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 250,
+    "heading_path": [
+     "Infrastruktur",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-008",
+    "level": 3,
+    "text": "Penandaan Tapak (Setting Out)",
+    "module_page": 250,
+    "heading_path": [
+     "Infrastruktur",
+     "Penandaan Tapak (Setting Out)"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-010",
+    "level": 3,
+    "text": "Bahan Timbus",
+    "module_page": 250,
+    "heading_path": [
+     "Infrastruktur",
+     "Bahan Timbus"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-012",
+    "level": 3,
+    "text": "Pemadatan Berlapis",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Pemadatan Berlapis"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-014",
+    "level": 3,
+    "text": "Kecerunan Akhir",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Kecerunan Akhir"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-016",
+    "level": 3,
+    "text": "Sub soil drainage",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Sub soil drainage"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-017",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-019",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-020",
+    "level": 3,
+    "text": "Penggalian Peparit",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Penggalian Peparit"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-022",
+    "level": 3,
+    "text": "Pemasangan Sistematik",
+    "module_page": 251,
+    "heading_path": [
+     "Infrastruktur",
+     "Pemasangan Sistematik"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-030",
+    "level": 3,
+    "text": "Sambungan ke Saluran Keluar",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Sambungan ke Saluran Keluar"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-032",
+    "level": 3,
+    "text": "Dinding Penahan (Retaining Wall)",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Dinding Penahan (Retaining Wall)"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-033",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-035",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-036",
+    "level": 3,
+    "text": "Lukisan Jurutera",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Lukisan Jurutera"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-038",
+    "level": 3,
+    "text": "Pembinaan Tapak Asas (Foundation)",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Pembinaan Tapak Asas (Foundation)"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-040",
+    "level": 3,
+    "text": "Sistem Perparitan di Belakang Dinding",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Sistem Perparitan di Belakang Dinding"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-042",
+    "level": 3,
+    "text": "Fencing",
+    "module_page": 252,
+    "heading_path": [
+     "Infrastruktur",
+     "Fencing"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-044",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-046",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-047",
+    "level": 3,
+    "text": "Penjajaran Sempadan",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Penjajaran Sempadan"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-049",
+    "level": 3,
+    "text": "Pemasangan Tiang",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Pemasangan Tiang"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-051",
+    "level": 3,
+    "text": "Ketegangan Pemasangan",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Ketegangan Pemasangan"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-053",
+    "level": 3,
+    "text": "Kemasan Anti-Karat",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Kemasan Anti-Karat"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-055",
+    "level": 3,
+    "text": "Swale/ Natural Drain",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Swale/ Natural Drain"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-057",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 253,
+    "heading_path": [
+     "Infrastruktur",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-059",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor:",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Fokus Utama Kontraktor:"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-060",
+    "level": 3,
+    "text": "Pembentukan Landskap",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Pembentukan Landskap"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-062",
+    "level": 3,
+    "text": "Penanaman Tumbuhan",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Penanaman Tumbuhan"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-064",
+    "level": 3,
+    "text": "Jalan akses",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Jalan akses"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-066",
+    "level": 3,
+    "text": "Fungsi",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Fungsi"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-068",
+    "level": 3,
+    "text": "Fokus Utama Kontraktor",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Fokus Utama Kontraktor"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-069",
+    "level": 3,
+    "text": "Penyediaan Tapak Asas (Sub-base)",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Penyediaan Tapak Asas (Sub-base)"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-071",
+    "level": 3,
+    "text": "Pemasangan Bebendul (Kerb)",
+    "module_page": 254,
+    "heading_path": [
+     "Infrastruktur",
+     "Pemasangan Bebendul (Kerb)"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-073",
+    "level": 3,
+    "text": "Lapisan Permukaan",
+    "module_page": 255,
+    "heading_path": [
+     "Infrastruktur",
+     "Lapisan Permukaan"
+    ]
+   },
+   {
+    "row_id": "T03B03-ROW-075",
+    "level": 3,
+    "text": "Kamber (Camber)",
+    "module_page": 255,
+    "heading_path": [
+     "Infrastruktur",
+     "Kamber (Camber)"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 6,
+  "rows": [
+   {
+    "row_id": "T03B03-ROW-004",
+    "text": "Mewujudkan pemandangan yang menarik secara visual serta mengurangkan kerataan tapak.",
+    "module_page": 250,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T03B03-ROW-005",
+    "text": "Berfungsi sebagai penghadang visual atau bunyi.",
+    "module_page": 250,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T03B03-ROW-006",
+    "text": "Mengawal dan mengarahkan aliran air permukaan.",
+    "module_page": 250,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T03B03-ROW-018",
+    "text": "Mengelakkan tanah daripada menjadi tepu air, yang boleh merosakkan akar tanaman dan menjadikan kawasan tidak boleh digun",
+    "module_page": 251,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T03B03-ROW-034",
+    "text": "Membentuk kawasan rata di lereng bukit, menstabilkan cerun, dan menetapkan sempadan aras.",
+    "module_page": 252,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T03B03-ROW-058",
+    "text": "Menguruskan aliran air larian permukaan dengan memperlahankannya, menggalakkan penyerapan air ke dalam tanah, dan menapi",
+    "module_page": 254,
+    "style": "Heading3"
+   }
+  ]
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 6,
+  "components": [
+   {
+    "name": "Landform / Earthmound",
+    "row_id": "T03B03-ROW-002",
+    "module_page": 250,
+    "marker": "Fungsi"
+   },
+   {
+    "name": "Sub soil drainage",
+    "row_id": "T03B03-ROW-016",
+    "module_page": 251,
+    "marker": "Fungsi"
+   },
+   {
+    "name": "Dinding Penahan (Retaining Wall)",
+    "row_id": "T03B03-ROW-032",
+    "module_page": 252,
+    "marker": "Fungsi"
+   },
+   {
+    "name": "Fencing",
+    "row_id": "T03B03-ROW-042",
+    "module_page": 252,
+    "marker": "Fungsi"
+   },
+   {
+    "name": "Swale/ Natural Drain",
+    "row_id": "T03B03-ROW-055",
+    "module_page": 253,
+    "marker": "Fungsi"
+   },
+   {
+    "name": "Jalan akses",
+    "row_id": "T03B03-ROW-064",
+    "module_page": 254,
+    "marker": "Fungsi"
+   }
+  ]
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "MODULE_REPEATED_COMPONENT_BLOCK",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Landform / Earthmound",
+    "row_id": "T03B03-ROW-002",
+    "basis": "MODULE_REPEATED_COMPONENT_BLOCK"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Sub soil drainage",
+    "row_id": "T03B03-ROW-016",
+    "basis": "MODULE_REPEATED_COMPONENT_BLOCK"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Dinding Penahan (Retaining Wall)",
+    "row_id": "T03B03-ROW-032",
+    "basis": "MODULE_REPEATED_COMPONENT_BLOCK"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Fencing",
+    "row_id": "T03B03-ROW-042",
+    "basis": "MODULE_REPEATED_COMPONENT_BLOCK"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Swale/ Natural Drain",
+    "row_id": "T03B03-ROW-055",
+    "basis": "MODULE_REPEATED_COMPONENT_BLOCK"
+   },
+   {
+    "group_id": "G6",
+    "covers": "Jalan akses",
+    "row_id": "T03B03-ROW-064",
+    "basis": "MODULE_REPEATED_COMPONENT_BLOCK"
+   }
+  ],
+  "automatic_component_detection": [
+   "Landform / Earthmound",
+   "Sub soil drainage",
+   "Dinding Penahan (Retaining Wall)",
+   "Fencing",
+   "Swale/ Natural Drain",
+   "Jalan akses"
+  ],
+  "override_declared": false,
+  "override_reason": null,
+  "note": "A floor, not a ceiling. Extraction shows what exists; how many screens each group needs is not settled here. Where a declared override is used, the automatic detector's own answer is kept beside it so the two can be compared."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Landform / Earthmound",
+   "G2: Sub soil drainage",
+   "G3: Dinding Penahan (Retaining Wall)",
+   "G4: Fencing",
+   "G5: Swale/ Natural Drain",
+   "G6: Jalan akses",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 6,
+   "closing_screens": 3,
+   "minimum_total_screens": 11,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "click-to-reveal",
+  "secondary_candidate": "comparison",
+  "reason": "Six parallel components with the same internal shape — Fungsi, then Fokus Utama Kontraktor. That is the shape click-to-reveal fits; comparison is the alternative if the six are better read side by side than one at a time.",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "Named as candidates only. The pattern package that would settle this is still with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Landform / Earthmound",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Sub soil drainage",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Dinding Penahan (Retaining Wall)",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G4",
+    "covers": "Fencing",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G5",
+    "covers": "Swale/ Natural Drain",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G6",
+    "covers": "Jalan akses",
+    "candidate": "reveal per component detail"
+   }
+  ],
+  "note": "Interaction shape follows the pattern family, which is undecided."
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 11,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "method": "base states = learner screens; triggered states depend on the pattern family, which is undecided",
+  "note": "T04's 65 states are not carried over."
+ },
+ "rumusan": {
+  "cls": "CAIR_PROPOSAL",
+  "beat_count": 3,
+  "beats": [
+   "Enam komponen infrastruktur landskap dan fungsi setiap satu.",
+   "Titik kegagalan yang paling kerap bagi setiap komponen.",
+   "Dokumen kawalan yang mengikat kontraktor: lukisan struktur, pelan ukur, pelan saliran."
+  ],
+  "treatment": "RP-007 — this Bahagian only, contractor perspective, no Kepentingan / Isi Utama / Manfaat labels",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "The beat COUNT is a proposal derived from this unit's own content, not carried from T04's three."
+ },
+ "dialogue": {
+  "cls": "CAIR_PROPOSAL",
+  "verdict": "NOT_JUSTIFIED",
+  "reason": "Six construction components, each with a function and a list of contractor focus points. There is no decision, conflict or judgement call in the source for a scenario to be about. AR-06 allows a dialogue only where justified, and nothing here justifies one.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+  "cast_cls": "PENDING_BARIAH_PATTERN_DECISION"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "count": 9,
+  "propositions": [
+   {
+    "proposition": "Busut tanah dibina berlapis, setiap lapisan tidak melebihi 300mm tebal, dan setiap lapisan dipadatkan.",
+    "rows": [
+     "T03B03-ROW-013"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Kecerunan busut dibentuk mengikut nisbah yang ditetapkan dalam lukisan, contohnya 1:3.",
+    "rows": [
+     "T03B03-ROW-015"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Bahan timbus mesti bebas daripada sisa binaan, akar kayu dan batu besar.",
+    "rows": [
+     "T03B03-ROW-011"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Dinding penahan mesti dibina mematuhi sepenuhnya lukisan struktur jurutera bertauliah; tapak asas adalah komponen paling kritikal.",
+    "rows": [
+     "T03B03-ROW-037",
+     "T03B03-ROW-039"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Kegagalan dinding penahan selalunya berpunca daripada tekanan air, jadi sistem perparitan di belakang dinding adalah wajib.",
+    "rows": [
+     "T03B03-ROW-041"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Jajaran pagar mesti ditanda mengikut Pelan Ukur Sempadan untuk mengelakkan pencerobohan tanah.",
+    "rows": [
+     "T03B03-ROW-048"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Swale ialah parit cetek dan lebar yang ditanami tumbuhan, alternatif kepada longkang konkrit, yang memperlahankan aliran dan menggalakkan penyerapan.",
+    "rows": [
+     "T03B03-ROW-056",
+     "T03B03-ROW-058"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Permukaan jalan akses dibina dengan kamber — kecerunan melintang dari tengah ke tepi — supaya air tidak bertakung.",
+    "rows": [
+     "T03B03-ROW-076"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Sistem saliran bawah tanah mesti disambungkan ke saluran keluar yang berfungsi.",
+    "rows": [
+     "T03B03-ROW-031"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "DRAFTED_NOT_APPROVED",
+  "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah ketebalan maksimum setiap lapisan semasa membina busut tanah (earthmound)?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Tidak melebihi 300mm setiap lapisan, dan setiap lapisan dipadatkan.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B03-ROW-013"
+    ],
+    "distractors": [
+     "Tidak melebihi 600mm, dipadatkan sekali pada akhir",
+     "Tiada had ketebalan selagi jentera boleh memadat",
+     "Satu lapisan penuh sehingga ketinggian puncak"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Mengapakah sistem perparitan di belakang dinding penahan adalah wajib?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Kerana kegagalan dinding penahan selalunya berpunca daripada tekanan air (hydrostatic pressure).",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B03-ROW-041"
+    ],
+    "distractors": [
+     "Kerana ia mengurangkan kos konkrit dinding",
+     "Kerana ia diperlukan untuk kemasan estetik belakang dinding",
+     "Kerana ia menggantikan keperluan tapak asas"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Pelan manakah yang menentukan jajaran pagar di tapak?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Pelan Ukur Sempadan.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B03-ROW-048"
+    ],
+    "distractors": [
+     "Pelan Saliran",
+     "Lukisan Struktur Jurutera",
+     "Pelan Susun Atur Tanaman"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah fungsi kamber (camber) pada permukaan jalan akses?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Memberikan kecerunan melintang dari tengah ke tepi supaya air tidak bertakung di permukaan.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B03-ROW-076"
+    ],
+    "distractors": [
+     "Menambah ketebalan lapisan permukaan di bahagian tengah",
+     "Menandakan sempadan jalan untuk pemandu",
+     "Menahan lapisan permukaan daripada bergerak ke tepi"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA ciri yang menepati swale sebagai alternatif kepada longkang konkrit.",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": [
+     "Parit yang cetek dan lebar",
+     "Ditanami rumput atau tumbuhan tahan air",
+     "Memperlahankan aliran air larian permukaan",
+     "Menggalakkan penyerapan air ke dalam tanah"
+    ],
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T03B03-ROW-056",
+     "T03B03-ROW-058",
+     "T03B03-ROW-063"
+    ],
+    "distractors": [
+     "Dilapisi konkrit di seluruh permukaannya",
+     "Direka untuk mempercepatkan aliran ke saluran keluar"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   }
+  ],
+  "note": "Every stem and every correct response cites the rows it came from. The distractors are ours and are labelled ours. Nothing here is an approved answer key."
+ },
+ "visual_obligations": {
+  "cls": "CAIR_PROPOSAL",
+  "count": 4,
+  "source_attested": 0,
+  "subjects": [
+   {
+    "subject": "Busut tanah berlapis 300mm dengan kecerunan 1:3",
+    "rows": [
+     "T03B03-ROW-013",
+     "T03B03-ROW-015"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan rentas dinding penahan dengan sistem perparitan di belakang",
+    "rows": [
+     "T03B03-ROW-039",
+     "T03B03-ROW-041"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan rentas swale bertanam",
+    "rows": [
+     "T03B03-ROW-056",
+     "T03B03-ROW-061"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Susunan lapisan jalan akses: sub-base, bebendul, permukaan, kamber",
+    "rows": [
+     "T03B03-ROW-070",
+     "T03B03-ROW-072",
+     "T03B03-ROW-074",
+     "T03B03-ROW-076"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "These are candidate SUBJECTS derived from text, not approved visual directions. Only a subject with has_source_figure=true has a figure behind it."
+ },
+ "reuse_candidates": {
+  "cls": "COURSE_RULE_ALREADY_APPROVED",
+  "candidates": [
+   "RP-001 review storyboard shell",
+   "RP-002 screen grammar",
+   "RP-003 production panel",
+   "RP-004 Notes block schema",
+   "RP-006 completion-state treatment",
+   "RP-007 Rumusan treatment",
+   "RP-008 quiz review structure",
+   "RP-011 feedback wording",
+   "RP-013 geometry registry",
+   "RP-014 artifact identity",
+   "RP-015 screen/state/page separation",
+   "RP-016 oracle contract",
+   "RP-017 population pinning"
+  ]
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 6,
+  "terms": [
+   {
+    "term": "Setting Out / Penandaan Tapak",
+    "rows": [
+     "T03B03-ROW-008"
+    ]
+   },
+   {
+    "term": "Sub soil drainage",
+    "rows": [
+     "T03B03-ROW-017"
+    ]
+   },
+   {
+    "term": "Retaining Wall / Dinding Penahan",
+    "rows": [
+     "T03B03-ROW-032"
+    ]
+   },
+   {
+    "term": "Swale / Natural Drain",
+    "rows": [
+     "T03B03-ROW-055"
+    ]
+   },
+   {
+    "term": "Kerb / Bebendul",
+    "rows": [
+     "T03B03-ROW-071"
+    ]
+   },
+   {
+    "term": "Camber / Kamber",
+    "rows": [
+     "T03B03-ROW-075"
+    ]
+   }
+  ]
+ },
+ "compliance_sensitive": {
+  "cls": "SOURCE_DERIVED",
+  "count": 3,
+  "statements": [
+   {
+    "statement": "Dinding penahan mesti mematuhi lukisan struktur jurutera bertauliah (Ir.) — a professional-liability boundary, not a contractor preference.",
+    "rows": [
+     "T03B03-ROW-037"
+    ],
+    "why": "NAMED_PROFESSIONAL_AUTHORITY"
+   },
+   {
+    "statement": "Jajaran pagar mengikut Pelan Ukur Sempadan — a land-encroachment exposure.",
+    "rows": [
+     "T03B03-ROW-048"
+    ],
+    "why": "LEGAL_BOUNDARY_EXPOSURE"
+   },
+   {
+    "statement": "Kemasan anti-karat tergalvani panas untuk komponen keluli.",
+    "rows": [
+     "T03B03-ROW-054"
+    ],
+    "why": "MATERIAL_SPECIFICATION"
+   }
+  ]
+ },
+ "ambiguity_register": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "items": [
+   {
+    "item": "The heading 'Fokus Utama Kontraktor' appears once per component but twice with a trailing colon and once without, so a naive equality match on the marker misses one component.",
+    "rows": [
+     "T03B03-ROW-059"
+    ],
+    "resolution": "COMPONENT_MARKERS lists both forms"
+   },
+   {
+    "item": "Sub soil drainage carries an installation sequence introduced by 'Proses pemasangan yang betul adalah kunci kejayaan sistem ini:' but the steps that follow are styled as headings, so their count is a reading rather than a fact.",
+    "rows": [
+     "T03B03-ROW-023"
+    ],
+    "resolution": "PENDING_UNIT_EXCEPTION_REVIEW"
+   }
+  ]
+ },
+ "missing_source_register": {
+  "cls": "SOURCE_DERIVED",
+  "items": [
+   {
+    "item": "No figure or photograph in this unit's source span.",
+    "consequence": "Every visual subject below is a CAIR reading of the text. None is a source-attested figure, and RP-104 forbids composing a subject from a component name.",
+    "severity": "BLOCKS_VISUAL_DIRECTION"
+   },
+   {
+    "item": "No table object in this unit's source span.",
+    "consequence": "Any comparison treatment must be built from prose, not lifted from a source table.",
+    "severity": "AFFECTS_TREATMENT_CHOICE"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T03-B03",
+  "rows": 76,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   250,
+   255
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 67,
+  "carried_forward_rows": 9,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

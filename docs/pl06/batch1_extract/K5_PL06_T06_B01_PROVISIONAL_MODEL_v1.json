@@ -1,0 +1,1014 @@
+{
+ "unit_id": "K5-PL06-T06-B01",
+ "lesson_title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+ "stage": "4.2F-C",
+ "authority_inherited": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "heading_tree": {
+  "cls": "SOURCE_DERIVED",
+  "criterion": "A Heading3 row counts as a structural heading when its text is at most 55 characters and does not end in a full stop. Heading1 and Heading2 always count. This is a CAIR reading of the module's styling, not a source fact — the extract keeps the style verbatim either way, and every row the criterion reclassifies is counted in the ambiguity register.",
+  "structural_headings": 37,
+  "tree": [
+   {
+    "row_id": "T06B01-ROW-001",
+    "level": 1,
+    "text": "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+    "module_page": 294,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-003",
+    "level": 2,
+    "text": "Environmental Management Plan",
+    "module_page": 294,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Environmental Management Plan"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-011",
+    "level": 2,
+    "text": "Contoh Aplikasi dalam Landskap",
+    "module_page": 295,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Contoh Aplikasi dalam Landskap"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-013",
+    "level": 3,
+    "text": "Penilaian Awal",
+    "module_page": 295,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Contoh Aplikasi dalam Landskap",
+     "Penilaian Awal"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-015",
+    "level": 3,
+    "text": "Strategi Mitigasi",
+    "module_page": 296,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Contoh Aplikasi dalam Landskap",
+     "Strategi Mitigasi"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-017",
+    "level": 3,
+    "text": "Pelan Pemulihan",
+    "module_page": 296,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Contoh Aplikasi dalam Landskap",
+     "Pelan Pemulihan"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-019",
+    "level": 3,
+    "text": "Prosedur Kecemasan",
+    "module_page": 296,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Contoh Aplikasi dalam Landskap",
+     "Prosedur Kecemasan"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-021",
+    "level": 2,
+    "text": "Pengurusan Alam Sekitar (Environmental Management)",
+    "module_page": 296,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-023",
+    "level": 3,
+    "text": "Air (Water)",
+    "module_page": 296,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Air (Water)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-041",
+    "level": 3,
+    "text": "Udara (Air)",
+    "module_page": 297,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Udara (Air)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-047",
+    "level": 3,
+    "text": "Kawalan Habuk",
+    "module_page": 298,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Kawalan Habuk"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-054",
+    "level": 3,
+    "text": "Kawalan Pelepasan Gas",
+    "module_page": 298,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Kawalan Pelepasan Gas"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-059",
+    "level": 3,
+    "text": "Bunyi (Noise)",
+    "module_page": 298,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Bunyi (Noise)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-064",
+    "level": 3,
+    "text": "Penggunaan Peralatan Lebih Senyap",
+    "module_page": 299,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Penggunaan Peralatan Lebih Senyap"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-066",
+    "level": 3,
+    "text": "Pembatas Bunyi (Noise Barriers)",
+    "module_page": 299,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pembatas Bunyi (Noise Barriers)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-068",
+    "level": 3,
+    "text": "Jadual Kerja",
+    "module_page": 299,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Jadual Kerja"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-070",
+    "level": 3,
+    "text": "Penyelenggaraan Peralatan",
+    "module_page": 299,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Penyelenggaraan Peralatan"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-072",
+    "level": 3,
+    "text": "Getaran (Vibration)",
+    "module_page": 299,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Getaran (Vibration)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-077",
+    "level": 3,
+    "text": "Kaedah Pembinaan Alternatif",
+    "module_page": 299,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Kaedah Pembinaan Alternatif"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-079",
+    "level": 3,
+    "text": "Pemantauan Getaran",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pemantauan Getaran"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-081",
+    "level": 3,
+    "text": "Jarak Selamat",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Jarak Selamat"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-083",
+    "level": 3,
+    "text": "Bau (Odour)",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Bau (Odour)"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-088",
+    "level": 3,
+    "text": "Pengurusan Sisa Organik",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pengurusan Sisa Organik"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-090",
+    "level": 3,
+    "text": "Penyimpanan Bahan Kimia",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Penyimpanan Bahan Kimia"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-092",
+    "level": 3,
+    "text": "Penggunaan Bahan Baku yang Sesuai",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Penggunaan Bahan Baku yang Sesuai"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-094",
+    "level": 3,
+    "text": "Flora dan Fauna",
+    "module_page": 300,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Flora dan Fauna"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-100",
+    "level": 3,
+    "text": "Perlindungan Poko Sedia Ada:",
+    "module_page": 301,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Perlindungan Poko Sedia Ada:"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-101",
+    "level": 3,
+    "text": "Pemasangan Pagar Perlindungan Pokok",
+    "module_page": 301,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pemasangan Pagar Perlindungan Pokok"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-103",
+    "level": 3,
+    "text": "Pemangkasan Profesional",
+    "module_page": 301,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pemangkasan Profesional"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-105",
+    "level": 3,
+    "text": "Translokasi Spesies (Jika Perlu):",
+    "module_page": 301,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Translokasi Spesies (Jika Perlu):"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-107",
+    "level": 3,
+    "text": "Penciptaan Habitat:",
+    "module_page": 301,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Penciptaan Habitat:"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-108",
+    "level": 3,
+    "text": "Penanaman Spesies Asli",
+    "module_page": 301,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Penanaman Spesies Asli"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-110",
+    "level": 3,
+    "text": "Pemasangan Sarang Burung/Kelawar",
+    "module_page": 302,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pemasangan Sarang Burung/Kelawar"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-112",
+    "level": 3,
+    "text": "Pembinaan Kolam/ Wetland Kecil",
+    "module_page": 302,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pembinaan Kolam/ Wetland Kecil"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-114",
+    "level": 3,
+    "text": "Pengurusan Hidupan Liar",
+    "module_page": 302,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Pengurusan Hidupan Liar"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-115",
+    "level": 3,
+    "text": "Meminimumkan Gangguan",
+    "module_page": 302,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Meminimumkan Gangguan"
+    ]
+   },
+   {
+    "row_id": "T06B01-ROW-117",
+    "level": 3,
+    "text": "Tiada Pembakaran Sisa",
+    "module_page": 302,
+    "heading_path": [
+     "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "Pengurusan Alam Sekitar (Environmental Management)",
+     "Tiada Pembakaran Sisa"
+    ]
+   }
+  ]
+ },
+ "prose_styled_as_heading": {
+  "cls": "SOURCE_DERIVED",
+  "count": 18,
+  "rows": [
+   {
+    "row_id": "T06B01-ROW-006",
+    "text": "Ia kemudian merangka langkah-langkah pencegahan, mitigasi (pengurangan), dan pemulihan untuk mengurus impak-impak terseb",
+    "module_page": 295,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-007",
+    "text": "EMP juga menetapkan prosedur pemantauan (monitoring), pelaporan (reporting), dan tindakan pembetulan (corrective actions",
+    "module_page": 295,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-008",
+    "text": "Tujuannya adalah untuk meminimumkan jejak ekologi projek dan memaksimumkan faedah alam sekitar.",
+    "module_page": 295,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-025",
+    "text": "Melibatkan langkah-langkah untuk mengawal hakisan tanah dan sedimen daripada memasuki sumber air (sungai, tasik, saliran",
+    "module_page": 296,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-026",
+    "text": "Pengurusan air sisa pembinaan (jika ada) dan pencegahan tumpahan bahan kimia atau minyak ke dalam sistem air.",
+    "module_page": 296,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-027",
+    "text": "Pemanfaatan sumber air secara cekap, terutamanya dalam sistem pengairan.",
+    "module_page": 296,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-043",
+    "text": "Mengurangkan pelepasan zarah habuk dari aktiviti pemotongan tanah, penggalian, atau pergerakan kenderaan.",
+    "module_page": 297,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-044",
+    "text": "Kawalan terhadap asap dan gas dari jentera berat atau pembakaran sisa.",
+    "module_page": 297,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-045",
+    "text": "Pengurusan bau dari bahan organik atau sisa.",
+    "module_page": 297,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-061",
+    "text": "Mengenal pasti sumber bunyi bising yang utama (jentera, pemotongan, pembinaan) dan mengambil langkah untuk meminimumkan ",
+    "module_page": 298,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-062",
+    "text": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa.",
+    "module_page": 298,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-074",
+    "text": "Kawalan getaran yang dihasilkan oleh aktiviti seperti pemancangan cerucuk, pemadatan tanah, atau penggunaan jentera bera",
+    "module_page": 299,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-075",
+    "text": "Penilaian potensi risiko kerosakan struktur atau gangguan kepada komuniti.",
+    "module_page": 299,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-085",
+    "text": "Mengurus bahan organik, tanah yang tercemar, atau sisa buangan yang boleh menghasilkan bau busuk.",
+    "module_page": 300,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-086",
+    "text": "Penyimpanan dan pelupusan bahan dengan cara yang betul.",
+    "module_page": 300,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-096",
+    "text": "Mengenal pasti spesies tumbuhan (flora) dan haiwan (fauna) yang penting atau dilindungi di tapak projek.",
+    "module_page": 301,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-097",
+    "text": "Melaksanakan langkah-langkah untuk mengelakkan kemusnahan habitat, gangguan kepada hidupan liar, dan kehilangan biodiver",
+    "module_page": 301,
+    "style": "Heading3"
+   },
+   {
+    "row_id": "T06B01-ROW-098",
+    "text": "Mempelbagaikan spesies tumbuhan asli dalam reka bentuk landskap untuk menyokong ekosistem tempatan.",
+    "module_page": 301,
+    "style": "Heading3"
+   }
+  ]
+ },
+ "components": {
+  "cls": "SOURCE_DERIVED",
+  "count": 0,
+  "components": []
+ },
+ "grouping": {
+  "cls": "CAIR_PROPOSAL",
+  "basis": "LEVEL_2_HEADING",
+  "groups": [
+   {
+    "group_id": "G1",
+    "covers": "Environmental Management Plan",
+    "row_id": "T06B01-ROW-003",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Contoh Aplikasi dalam Landskap",
+    "row_id": "T06B01-ROW-011",
+    "basis": "LEVEL_2_HEADING"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Pengurusan Alam Sekitar (Environmental Management)",
+    "row_id": "T06B01-ROW-021",
+    "basis": "LEVEL_2_HEADING"
+   }
+  ],
+  "automatic_component_detection": [],
+  "override_declared": false,
+  "override_reason": null,
+  "note": "A floor, not a ceiling. Extraction shows what exists; how many screens each group needs is not settled here. Where a declared override is used, the automatic detector's own answer is kept beside it so the two can be compared."
+ },
+ "screen_sequence": {
+  "cls": "CAIR_PROPOSAL",
+  "sequence": [
+   "S01 Topik entry",
+   "S0x Orientasi",
+   "G1: Environmental Management Plan",
+   "G2: Contoh Aplikasi dalam Landskap",
+   "G3: Pengurusan Alam Sekitar (Environmental Management)",
+   "Rumusan",
+   "Kuiz",
+   "Tamat"
+  ],
+  "arithmetic": {
+   "shell_screens": 2,
+   "shell_includes_dialogue": false,
+   "content_groups": 3,
+   "closing_screens": 3,
+   "minimum_total_screens": 8,
+   "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION",
+   "basis": "one content screen per proposed group — a floor"
+  }
+ },
+ "pattern_family": {
+  "cls": "PENDING_BARIAH_PATTERN_DECISION",
+  "primary_candidate": "click-to-reveal",
+  "secondary_candidate": "progressive process",
+  "reason": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one.",
+  "vocabulary": [
+   "static content",
+   "click-to-reveal",
+   "progressive process",
+   "comparison",
+   "scenario/dialogue only where justified"
+  ],
+  "note": "Named as candidates only. The pattern package that would settle this is still with Bariah."
+ },
+ "interaction_candidates": {
+  "cls": "CAIR_PROPOSAL",
+  "candidates": [
+   {
+    "group_id": "G1",
+    "covers": "Environmental Management Plan",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G2",
+    "covers": "Contoh Aplikasi dalam Landskap",
+    "candidate": "reveal per component detail"
+   },
+   {
+    "group_id": "G3",
+    "covers": "Pengurusan Alam Sekitar (Environmental Management)",
+    "candidate": "reveal per component detail"
+   }
+  ],
+  "note": "Interaction shape follows the pattern family, which is undecided."
+ },
+ "runtime_state_estimate": {
+  "cls": "CAIR_PROPOSAL",
+  "base_states_floor": 8,
+  "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+  "method": "base states = learner screens; triggered states depend on the pattern family, which is undecided",
+  "note": "T04's 65 states are not carried over."
+ },
+ "rumusan": {
+  "cls": "CAIR_PROPOSAL",
+  "beat_count": 4,
+  "beats": [
+   "EMP sebagai dokumen strategik dan empat peringkatnya.",
+   "Enam aspek pengurusan alam sekitar di tapak landskap.",
+   "Kawalan yang paling kerap diperlukan bagi setiap aspek.",
+   "Perlindungan flora dan fauna, termasuk larangan pembakaran sisa."
+  ],
+  "treatment": "RP-007 — this Bahagian only, contractor perspective, no Kepentingan / Isi Utama / Manfaat labels",
+  "treatment_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "The beat COUNT is a proposal derived from this unit's own content, not carried from T04's three."
+ },
+ "dialogue": {
+  "cls": "CAIR_PROPOSAL",
+  "verdict": "UNCERTAIN",
+  "reason": "'Contoh Aplikasi dalam Landskap' walks through one public-park project across four EMP stages, which is scenario-shaped. But the rest of the unit is a control catalogue, and whether one worked example earns a dialogue is an instructional judgement this run will not make. The batch 1 package also said UNCERTAIN; the extract does not settle it either way.",
+  "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+  "cast_cls": "PENDING_BARIAH_PATTERN_DECISION"
+ },
+ "mandatory_propositions": {
+  "cls": "SOURCE_DERIVED",
+  "count": 8,
+  "propositions": [
+   {
+    "proposition": "EMP bermula dengan mengenal pasti potensi impak negatif dan positif projek terhadap alam sekitar.",
+    "rows": [
+     "T06B01-ROW-005"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "EMP merangka langkah pencegahan, mitigasi dan pemulihan, dan menetapkan prosedur pemantauan, pelaporan dan tindakan pembetulan.",
+    "rows": [
+     "T06B01-ROW-006",
+     "T06B01-ROW-007"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Pengurusan alam sekitar meliputi enam aspek: air, udara, bunyi, getaran, bau, serta flora dan fauna.",
+    "rows": [
+     "T06B01-ROW-023",
+     "T06B01-ROW-041",
+     "T06B01-ROW-059",
+     "T06B01-ROW-072",
+     "T06B01-ROW-083",
+     "T06B01-ROW-094"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Air bilasan pencampuran konkrit mesti dikumpul dalam tangki atau kawasan tadahan khusus, bukan dilepaskan terus.",
+    "rows": [
+     "T06B01-ROW-038"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Lori yang membawa tanah atau bahan binaan mesti ditutup dengan kanvas untuk mengelakkan habuk bertebaran.",
+    "rows": [
+     "T06B01-ROW-051"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Pemangkasan pokok yang dikekalkan mesti dilakukan oleh arborist bertauliah.",
+    "rows": [
+     "T06B01-ROW-104"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Sisa tapak tidak boleh dibakar kerana ia memusnahkan habitat dan mengancam hidupan liar.",
+    "rows": [
+     "T06B01-ROW-118"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "proposition": "Kerja bising dijadualkan pada waktu yang kurang sensitif, dan kerja bising dielakkan semasa musim pembiakan haiwan.",
+    "rows": [
+     "T06B01-ROW-069",
+     "T06B01-ROW-116"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ]
+ },
+ "assessment": {
+  "composition": "4 Multiple Choice + 1 Multiple Response",
+  "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "key_status": "DRAFTED_NOT_APPROVED",
+  "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah langkah PERTAMA dalam Environmental Management Plan (EMP)?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Mengenal pasti potensi impak negatif dan positif projek terhadap alam sekitar.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T06B01-ROW-005"
+    ],
+    "distractors": [
+     "Merangka pelan pemulihan kawasan yang terganggu",
+     "Menetapkan prosedur pemantauan dan pelaporan",
+     "Memasang pagar perlindungan pokok"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Bagaimanakah air bilasan daripada pencampuran konkrit mesti diuruskan?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Dikumpul dalam tangki atau kawasan tadahan khusus.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T06B01-ROW-038"
+    ],
+    "distractors": [
+     "Dilepaskan terus ke sistem saliran tapak",
+     "Disembur ke kawasan tanah kosong untuk mengurangkan habuk",
+     "Dibiarkan meresap ke dalam tanah di sekitar tapak"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Siapakah yang perlu melakukan pemangkasan pokok matang yang dikekalkan di tapak?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Arborist bertauliah.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T06B01-ROW-104"
+    ],
+    "distractors": [
+     "Mana-mana pekerja am yang berpengalaman",
+     "Penyelia tapak kontraktor",
+     "Pengendali jentera yang memasang pagar perlindungan"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Mengapakah pembakaran sisa tapak dilarang?",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": "Kerana ia boleh memusnahkan habitat atau mengancam hidupan liar.",
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T06B01-ROW-118"
+    ],
+    "distractors": [
+     "Kerana ia meningkatkan kos pelupusan sisa",
+     "Kerana ia memerlukan kelulusan bertulis daripada perunding",
+     "Kerana abu sisa merosakkan lapisan pelapik kolam"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA langkah kawalan habuk yang dinyatakan bagi pengurusan kualiti udara.",
+    "stem_cls": "CAIR_PROPOSAL",
+    "correct": [
+     "Menyiram air secara berkala di laluan kenderaan dan kawasan kerja",
+     "Menutup lori pembawa tanah dengan kanvas",
+     "Memasang jaring debu di sekeliling kawasan kerja"
+    ],
+    "correct_cls": "SOURCE_DERIVED",
+    "correct_rows": [
+     "T06B01-ROW-049",
+     "T06B01-ROW-051",
+     "T06B01-ROW-053"
+    ],
+    "distractors": [
+     "Memasang pembatas bunyi di sempadan tapak",
+     "Menggunakan sistem pengairan titisan",
+     "Memasang monitor getaran berhampiran struktur kritikal"
+    ],
+    "distractors_cls": "CAIR_PROPOSAL"
+   }
+  ],
+  "note": "Every stem and every correct response cites the rows it came from. The distractors are ours and are labelled ours. Nothing here is an approved answer key."
+ },
+ "visual_obligations": {
+  "cls": "CAIR_PROPOSAL",
+  "count": 3,
+  "source_attested": 1,
+  "subjects": [
+   {
+    "subject": "Rajah 26: EMP Untuk Landskap",
+    "rows": [
+     "T06B01-ROW-010"
+    ],
+    "has_source_figure": true,
+    "note": "The only unit in this batch with a raster figure in the source, and it carries its own caption."
+   },
+   {
+    "subject": "Enam aspek pengurusan alam sekitar dan contoh kawalan bagi setiap satu",
+    "rows": [
+     "T06B01-ROW-023",
+     "T06B01-ROW-041",
+     "T06B01-ROW-059",
+     "T06B01-ROW-072",
+     "T06B01-ROW-083",
+     "T06B01-ROW-094"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Kawalan hakisan dan sedimen: silt fence, kolam takungan, penanaman penutup bumi",
+    "rows": [
+     "T06B01-ROW-031",
+     "T06B01-ROW-033",
+     "T06B01-ROW-035"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+  "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+  "note": "These are candidate SUBJECTS derived from text, not approved visual directions. Only a subject with has_source_figure=true has a figure behind it."
+ },
+ "reuse_candidates": {
+  "cls": "COURSE_RULE_ALREADY_APPROVED",
+  "candidates": [
+   "RP-001 review storyboard shell",
+   "RP-002 screen grammar",
+   "RP-003 production panel",
+   "RP-004 Notes block schema",
+   "RP-006 completion-state treatment",
+   "RP-007 Rumusan treatment",
+   "RP-008 quiz review structure",
+   "RP-011 feedback wording",
+   "RP-013 geometry registry",
+   "RP-014 artifact identity",
+   "RP-015 screen/state/page separation",
+   "RP-016 oracle contract",
+   "RP-017 population pinning"
+  ]
+ },
+ "terminology": {
+  "cls": "SOURCE_DERIVED",
+  "count": 6,
+  "terms": [
+   {
+    "term": "EMP — Environmental Management Plan",
+    "rows": [
+     "T06B01-ROW-004"
+    ]
+   },
+   {
+    "term": "Silt fence / halangan geotekstil",
+    "rows": [
+     "T06B01-ROW-031"
+    ]
+   },
+   {
+    "term": "Kolam takungan sedimen",
+    "rows": [
+     "T06B01-ROW-033"
+    ]
+   },
+   {
+    "term": "Noise barrier / pembatas bunyi",
+    "rows": [
+     "T06B01-ROW-067"
+    ]
+   },
+   {
+    "term": "Translokasi spesies",
+    "rows": [
+     "T06B01-ROW-106"
+    ]
+   },
+   {
+    "term": "Native species / spesies asli",
+    "rows": [
+     "T06B01-ROW-109"
+    ]
+   }
+  ]
+ },
+ "compliance_sensitive": {
+  "cls": "SOURCE_DERIVED",
+  "count": 4,
+  "statements": [
+   {
+    "statement": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa.",
+    "rows": [
+     "T06B01-ROW-062"
+    ],
+    "why": "STATUTORY_LIMIT"
+   },
+   {
+    "statement": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+    "rows": [
+     "T06B01-ROW-106"
+    ],
+    "why": "PROTECTED_SPECIES_EXPOSURE"
+   },
+   {
+    "statement": "Tiada pembakaran sisa tapak.",
+    "rows": [
+     "T06B01-ROW-118"
+    ],
+    "why": "ENVIRONMENTAL_PROHIBITION"
+   },
+   {
+    "statement": "Pemangkasan oleh arborist bertauliah — a named professional competency.",
+    "rows": [
+     "T06B01-ROW-104"
+    ],
+    "why": "NAMED_PROFESSIONAL_AUTHORITY"
+   }
+  ]
+ },
+ "ambiguity_register": {
+  "cls": "SOURCE_DERIVED",
+  "count": 2,
+  "items": [
+   {
+    "item": "'Contoh' appears as a bare structural heading six times, once per environmental aspect, with different examples beneath each.",
+    "rows": [
+     "T06B01-ROW-028",
+     "T06B01-ROW-046",
+     "T06B01-ROW-063",
+     "T06B01-ROW-076",
+     "T06B01-ROW-087",
+     "T06B01-ROW-099"
+    ],
+    "resolution": "Both retained; heading_path disambiguates them"
+   },
+   {
+    "item": "'Perlindungan Poko Sedia Ada:' is misspelled in the source — 'Poko' for 'Pokok'.",
+    "rows": [
+     "T06B01-ROW-101"
+    ],
+    "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+   }
+  ]
+ },
+ "missing_source_register": {
+  "cls": "SOURCE_DERIVED",
+  "items": [
+   {
+    "item": "No table object in this unit's source span.",
+    "consequence": "Any comparison treatment must be built from prose, not lifted from a source table.",
+    "severity": "AFFECTS_TREATMENT_CHOICE"
+   }
+  ]
+ },
+ "extraction_qa": {
+  "unit_id": "K5-PL06-T06-B01",
+  "rows": 118,
+  "every_row_has_a_row_id": true,
+  "row_ids_unique": true,
+  "every_row_carries_the_unit_id": true,
+  "sequence_is_contiguous": true,
+  "pages_monotonic": true,
+  "page_range": [
+   294,
+   302
+  ],
+  "page_range_matches_frozen": true,
+  "paragraph_indices_monotonic": true,
+  "paragraph_indices_inside_span": true,
+  "typeset_attributed_rows": 108,
+  "carried_forward_rows": 10,
+  "anchors_resolved": true,
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+ }
+}

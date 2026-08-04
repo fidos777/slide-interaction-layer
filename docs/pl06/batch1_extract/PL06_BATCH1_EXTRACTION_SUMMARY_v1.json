@@ -1,0 +1,275 @@
+{
+ "stage": "4.2F-C",
+ "authority": "SRC-AUTH-01",
+ "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+ "classifications": [
+  "SOURCE_DERIVED",
+  "CAIR_PROPOSAL",
+  "COURSE_RULE_ALREADY_APPROVED",
+  "PENDING_BARIAH_PATTERN_DECISION",
+  "PENDING_UNIT_EXCEPTION_REVIEW"
+ ],
+ "frozen_nothing": [
+  "screen count",
+  "sequence",
+  "dialogue",
+  "Rumusan form",
+  "pattern family",
+  "assessment key",
+  "visual reuse"
+ ],
+ "units": [
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "rows": 76,
+   "module_pages": [
+    250,
+    255
+   ],
+   "shared_start": true,
+   "shared_end": true,
+   "groups": 6,
+   "minimum_screens": 11,
+   "propositions": 9,
+   "quiz_items": 5,
+   "visual_subjects": 4,
+   "source_attested_visuals": 0,
+   "dialogue": "NOT_JUSTIFIED",
+   "ambiguities": 2,
+   "missing_source": 2,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T03-B03",
+    "rows": 76,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     250,
+     255
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 67,
+    "carried_forward_rows": 9,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "rows": 92,
+   "module_pages": [
+    255,
+    261
+   ],
+   "shared_start": true,
+   "shared_end": false,
+   "groups": 5,
+   "minimum_screens": 10,
+   "propositions": 8,
+   "quiz_items": 5,
+   "visual_subjects": 3,
+   "source_attested_visuals": 0,
+   "dialogue": "NOT_JUSTIFIED",
+   "ambiguities": 2,
+   "missing_source": 2,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T03-B04",
+    "rows": 92,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     255,
+     261
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 83,
+    "carried_forward_rows": 9,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "rows": 132,
+   "module_pages": [
+    284,
+    293
+   ],
+   "shared_start": false,
+   "shared_end": false,
+   "groups": 4,
+   "minimum_screens": 10,
+   "propositions": 8,
+   "quiz_items": 5,
+   "visual_subjects": 3,
+   "source_attested_visuals": 0,
+   "dialogue": "JUSTIFIED",
+   "ambiguities": 2,
+   "missing_source": 3,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T05-B01",
+    "rows": 132,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     284,
+     293
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 128,
+    "carried_forward_rows": 4,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "rows": 118,
+   "module_pages": [
+    294,
+    302
+   ],
+   "shared_start": false,
+   "shared_end": false,
+   "groups": 3,
+   "minimum_screens": 8,
+   "propositions": 8,
+   "quiz_items": 5,
+   "visual_subjects": 3,
+   "source_attested_visuals": 1,
+   "dialogue": "UNCERTAIN",
+   "ambiguities": 2,
+   "missing_source": 1,
+   "extraction_qa": {
+    "unit_id": "K5-PL06-T06-B01",
+    "rows": 118,
+    "every_row_has_a_row_id": true,
+    "row_ids_unique": true,
+    "every_row_carries_the_unit_id": true,
+    "sequence_is_contiguous": true,
+    "pages_monotonic": true,
+    "page_range": [
+     294,
+     302
+    ],
+    "page_range_matches_frozen": true,
+    "paragraph_indices_monotonic": true,
+    "paragraph_indices_inside_span": true,
+    "typeset_attributed_rows": 108,
+    "carried_forward_rows": 10,
+    "anchors_resolved": true,
+    "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE"
+   }
+  }
+ ],
+ "leak_report": {
+  "units": [
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "shared_start": true,
+    "shared_end": true,
+    "span": [
+     4704,
+     4814
+    ],
+    "rows_with_paragraph_index": 76,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "Badan Air (Water Body)",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T03-B04",
+    "shared_start": true,
+    "shared_end": false,
+    "span": [
+     4815,
+     4950
+    ],
+    "rows_with_paragraph_index": 92,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "Pencahayaan / Lighting",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T05-B01",
+    "shared_start": false,
+    "shared_end": false,
+    "span": [
+     5360,
+     5542
+    ],
+    "rows_with_paragraph_index": 132,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+    "clean": true
+   },
+   {
+    "unit_id": "K5-PL06-T06-B01",
+    "shared_start": false,
+    "shared_end": false,
+    "span": [
+     5543,
+     5704
+    ],
+    "rows_with_paragraph_index": 118,
+    "paragraph_indices_outside_own_span": [],
+    "rows_landing_in_another_units_span": {},
+    "first_excluded_before": "",
+    "first_excluded_after": "DEMOBILISASI",
+    "clean": true
+   }
+  ],
+  "adjacency": {
+   "pair": "K5-PL06-T03-B03 → K5-PL06-T03-B04",
+   "b03_last_included": 4814,
+   "b04_first_included": 4815,
+   "contiguous": true,
+   "gap": 0,
+   "note": "The two units share module page 255. If the slice were page-wise, one of them would carry the other's paragraphs. Contiguous with a gap of zero means the heading anchor split exactly, losing nothing and duplicating nothing."
+  },
+  "all_clean": true
+ },
+ "t04_equivalence": {
+  "ran": true,
+  "totals_compared": [
+   "body_elements_in_span",
+   "empty_spacing_paragraphs",
+   "content_rows",
+   "headings",
+   "paragraphs",
+   "numbered_paragraphs",
+   "list_item_rows",
+   "tables",
+   "diagrams"
+  ],
+  "totals_differing": {},
+  "frozen_row_count": 100,
+  "got_row_count": 100,
+  "row_count_matches": true,
+  "text_mismatches": [],
+  "type_mismatches": [],
+  "paragraph_index_mismatches": [],
+  "equivalent": true,
+  "note": "The generalised reader is only trusted on four new units because it reproduces the frozen T04 extract exactly on the unit it did not write."
+ }
+}
