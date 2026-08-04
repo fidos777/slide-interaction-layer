@@ -1,0 +1,71 @@
+{
+ "inventory_id": "K2-IMGTBL-01",
+ "stage": "4.2F-F",
+ "method": {
+  "images": "PyMuPDF page.get_images(full=True) — counts distinct image XObjects referenced by each page. This differs from a placement count (pdfimages -list counts every rendered instance); the object count is reported because it is the count relevant to extraction.",
+  "tables": "PyMuPDF page.find_tables() — a DETECTOR count, not a curated one. On this heavily ruled, form-style source the detector over-segments, so these are reported as table_detector_count and are an upper bound, not a hand-verified table tally."
+ },
+ "per_pl": [
+  {
+   "pl": "PL01",
+   "pages": 40,
+   "image_count": 19,
+   "table_detector_count": 43
+  },
+  {
+   "pl": "PL02",
+   "pages": 20,
+   "image_count": 2,
+   "table_detector_count": 21
+  },
+  {
+   "pl": "PL03",
+   "pages": 40,
+   "image_count": 2,
+   "table_detector_count": 49
+  },
+  {
+   "pl": "PL04",
+   "pages": 17,
+   "image_count": 3,
+   "table_detector_count": 19
+  },
+  {
+   "pl": "PL05",
+   "pages": 24,
+   "image_count": 2,
+   "table_detector_count": 25
+  },
+  {
+   "pl": "PL06",
+   "pages": 34,
+   "image_count": 5,
+   "table_detector_count": 40
+  },
+  {
+   "pl": "PL07",
+   "pages": 11,
+   "image_count": 4,
+   "table_detector_count": 12
+  },
+  {
+   "pl": "PL08",
+   "pages": 29,
+   "image_count": 6,
+   "table_detector_count": 33
+  },
+  {
+   "pl": "PL09",
+   "pages": 19,
+   "image_count": 2,
+   "table_detector_count": 20
+  }
+ ],
+ "totals": {
+  "images_total": 84,
+  "front_matter_images": 12,
+  "teaching_plan_images": 18,
+  "kt_region_images": 9
+ },
+ "honesty_note": "Table counts are labelled table_detector_count precisely because they are not measured the way page spans are. A detector result is reported as a detector result."
+}

@@ -1,0 +1,112 @@
+{
+ "map_id": "K2-PAGEMAP-01",
+ "stage": "4.2F-F",
+ "total_pages": 346,
+ "regions": [
+  {
+   "region": "FRONT_MATTER",
+   "pdf_start_page": 1,
+   "pdf_end_page": 22,
+   "pages": 22,
+   "contents": "cover, KANDUNGAN, §1.5 Silibus, §1.6 Tempoh Latihan",
+   "boundary_basis": "first PL/PT marker begins the next region"
+  },
+  {
+   "region": "TEACHING_PLANS",
+   "pdf_start_page": 23,
+   "pdf_end_page": 84,
+   "pages": 62,
+   "contents": "nine teaching plans PT01-PT09",
+   "boundary_basis": "each plan's own 'KOD PT' header and 'Muka Surat n/N' footer"
+  },
+  {
+   "region": "PL01",
+   "pdf_start_page": 85,
+   "pdf_end_page": 124,
+   "pages": 40,
+   "contents": "PL package body, module M01",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 40 == span 40"
+  },
+  {
+   "region": "PL02",
+   "pdf_start_page": 125,
+   "pdf_end_page": 144,
+   "pages": 20,
+   "contents": "PL package body, module M01",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 20 == span 20"
+  },
+  {
+   "region": "PL03",
+   "pdf_start_page": 145,
+   "pdf_end_page": 184,
+   "pages": 40,
+   "contents": "PL package body, module M01",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 40 == span 40"
+  },
+  {
+   "region": "PL04",
+   "pdf_start_page": 185,
+   "pdf_end_page": 201,
+   "pages": 17,
+   "contents": "PL package body, module M01",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 17 == span 17"
+  },
+  {
+   "region": "PL05",
+   "pdf_start_page": 202,
+   "pdf_end_page": 225,
+   "pages": 24,
+   "contents": "PL package body, module M02",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 24 == span 24"
+  },
+  {
+   "region": "PL06",
+   "pdf_start_page": 226,
+   "pdf_end_page": 259,
+   "pages": 34,
+   "contents": "PL package body, module M03",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 34 == span 34"
+  },
+  {
+   "region": "PL07",
+   "pdf_start_page": 260,
+   "pdf_end_page": 270,
+   "pages": 11,
+   "contents": "PL package body, module M04",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 11 == span 11"
+  },
+  {
+   "region": "PL08",
+   "pdf_start_page": 271,
+   "pdf_end_page": 299,
+   "pages": 29,
+   "contents": "PL package body, module M05",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 29 == span 29"
+  },
+  {
+   "region": "PL09",
+   "pdf_start_page": 300,
+   "pdf_end_page": 318,
+   "pages": 19,
+   "contents": "PL package body, module M06",
+   "boundary_basis": "confirmed twice: clean partition, and the package's own declared length 19 == span 19"
+  },
+  {
+   "region": "KT_ASSESSMENT",
+   "pdf_start_page": 319,
+   "pdf_end_page": 346,
+   "pages": 28,
+   "contents": "nine competency task papers (Kertas Tugasan)",
+   "boundary_basis": "each paper's own 'NO. KOD KTxx' header and 'Muka Surat n Drp N' footer"
+  }
+ ],
+ "accounting": {
+  "pages_total": 346,
+  "pages_assigned": 346,
+  "unassigned_pages": [],
+  "overlapping_pages": [],
+  "clean_partition": true
+ },
+ "all_pl_spans_match_declared": true,
+ "note": "Every one of the 346 pages is assigned to exactly one region, with no gaps and no overlaps. That is the boundary independence 4.2F-E's candidate structures were missing."
+}

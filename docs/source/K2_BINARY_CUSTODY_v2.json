@@ -1,0 +1,76 @@
+{
+ "record": {
+  "record_id": "K2-CUSTODY-03",
+  "supersedes": "K2-CUSTODY-02 (Stage 4.2F-E connector-identified record)",
+  "supersession_note": "K2-CUSTODY-02 is PRESERVED_UNCHANGED as historical evidence. It was correct when written: on that box the binary was genuinely absent and the status was rightly held at NOT_FOUND_IN_LOCATIONS_SEARCHED. This record does not overturn it — it records a later, different fact: the binary is now on local disk and its identity matches the brief, so the states 4.2F-E refused to claim are now claimed, on evidence.",
+  "status": "BINARY_LOCAL_HASH_VERIFIED",
+  "binary_local": true,
+  "binary_readable": true,
+  "content_read": "FULL",
+  "evidence_class": "LOCAL_BINARY_HASH_VERIFIED",
+  "states_claimed": [
+   "SOURCE_BINARY_LOCAL",
+   "SOURCE_BINARY_READABLE",
+   "SOURCE_CONTENT_READ",
+   "BOUNDARY_CONFIRMED"
+  ],
+  "states_claimed_why": "Each is now true and checkable. The bytes are on disk; their SHA-256 equals the brief's; the full text extracts at 481,659 characters (7.7x the truncated connector read); and every PL package boundary is confirmed twice over — by a clean 346-page partition with no gaps or overlaps, and by each package's own declared 'Muka Surat 1/N' length.",
+  "states_still_not_claimed": [
+   "EXTRACTED_ALL_NINE",
+   "MODELLED_ALL_NINE",
+   "UNIT_GRANULARITY_DECIDED"
+  ],
+  "states_still_not_claimed_why": "Content is read for the whole document, but only two packages (PL07, PL09) were carried through a controlled extraction and model this run — the brief asked for the first two, not all nine. And whether one PL equals one storyboard unit is an instructional decision, not a measurement; it is raised in the K2 decision register, not settled here.",
+  "verified": {
+   "bytes": {
+    "expected": 25043306,
+    "observed": 25043306,
+    "match": true
+   },
+   "sha256": {
+    "expected": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+    "observed": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+    "match": true
+   },
+   "pages": {
+    "expected": 346,
+    "observed": 346,
+    "match": true
+   },
+   "pdf_validity": "OPENED_AND_PARSED_BY_PYMUPDF",
+   "encryption_status": "NOT_ENCRYPTED",
+   "needs_password": false,
+   "pdf_format": "PDF 1.7",
+   "pdf_metadata": {
+    "title": "",
+    "author": "Ts. Faezal Husni",
+    "creator": "Adobe Acrobat Pro DC 20.6.20042",
+    "producer": "Adobe PDF Library 20.6.74",
+    "creationDate": "D:20251013174623+08'00'",
+    "modDate": "D:20251014171230+08'00'"
+   }
+  },
+  "all_brief_identity_fields_verified": true,
+  "local_path": ".source-intake/K2/2. PENGURUSAN PEMBINAAN LANDASAN.pdf"
+ },
+ "expected": {
+  "source": "the Stage 4.2F-E brief",
+  "filename": "2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "stated_runtime_path": "/mnt/data/2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "bytes": 25043306,
+  "sha256": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+  "pages": 346
+ },
+ "binding": {
+  "binding_id": "K2-BIND-02",
+  "supersedes": "K2-BIND-01 (CONNECTOR_IDENTIFIED)",
+  "drive_id": "1BW-OibYv3sDyordi0YIQkb5vXeAdOtMn",
+  "filename_matches": true,
+  "bytes_match": true,
+  "sha256_verified": true,
+  "sha256_verifiable": true,
+  "conclusion": "The local binary hashes to exactly the SHA-256 the brief stated. The identifier, the byte count and now the content hash all agree, so the binding moves from CONNECTOR_IDENTIFIED to LOCAL_BINARY_HASH_VERIFIED. The two-files-can-share-a-size caveat from 4.2F-E no longer applies: a shared SHA-256 is not a coincidence."
+ },
+ "stage": "4.2F-F",
+ "authority_inherited": "SRC-AUTH-01"
+}

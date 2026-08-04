@@ -1,0 +1,312 @@
+{
+ "course": {
+  "course": "K2",
+  "title": "PENGURUSAN PEMBINAAN LANDASAN",
+  "programme": "MODUL PENGURUSAN KONTRAKTOR",
+  "field_code": "CE07",
+  "job_code": "CE07"
+ },
+ "modules": 6,
+ "pl_packages": 9,
+ "teaching_plans": 9,
+ "teaching_plan_pages_total": 62,
+ "module_map": {
+  "M01": [
+   "PL01",
+   "PL02",
+   "PL03",
+   "PL04"
+  ],
+  "M02": [
+   "PL05"
+  ],
+  "M03": [
+   "PL06"
+  ],
+  "M04": [
+   "PL07"
+  ],
+  "M05": [
+   "PL08"
+  ],
+  "M06": [
+   "PL09"
+  ]
+ },
+ "pl_to_module_map_now_confirmed_from_each_package_header": true,
+ "supersedes_4_2F_E_inference": "4.2F-E could directly name only PL06, PL07, PL09 and inferred the other six by ordinal position. Every package's own first-page header now carries its module code and full title, so all nine are directly named and all nine module assignments are confirmed. K2-SOURCE-OBS-01's worry — the silibus KOD column prefixing everything M01- — is settled: the per-package headers are correct.",
+ "source_ready_clean": 9,
+ "confirmed_units": 0,
+ "confirmed_units_why": "Zero storyboard units are CONFIRMED because unit granularity is an instructional decision pending in the K2 decision register. Boundary confirmation is done; unit count is not a measurement.",
+ "unmapped_source_regions": 0,
+ "unmapped_note": "The PL package body that was one big unmapped region at 4.2F-E is now fully mapped: nine contiguous, boundary-confirmed spans plus a KT assessment region. Nothing is unmapped.",
+ "decomposition_completed": true,
+ "rows": [
+  {
+   "course": "K2",
+   "pl": "PL01",
+   "module_code": "M01",
+   "module_title": "PENGURUSAN OPERASI PERNIAGAAN",
+   "teaching_plan": "PT01",
+   "teaching_plan_pages": 8,
+   "official_title": "Muka Surat: 1/40",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 85,
+   "pdf_end_page": 124,
+   "span_pages": 40,
+   "declared_pages": 40,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    85,
+    86,
+    118,
+    123
+   ],
+   "skema_jawapan_pages": [
+    124
+   ],
+   "image_count": 19,
+   "table_detector_count": 43,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL02",
+   "module_code": "M01",
+   "module_title": "PENGURUSAN OPERASI PERNIAGAAN",
+   "teaching_plan": "PT02",
+   "teaching_plan_pages": 6,
+   "official_title": "Page: 1/20",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 125,
+   "pdf_end_page": 144,
+   "span_pages": 20,
+   "declared_pages": 20,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    125,
+    143,
+    144
+   ],
+   "skema_jawapan_pages": [
+    144
+   ],
+   "image_count": 2,
+   "table_detector_count": 21,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL03",
+   "module_code": "M01",
+   "module_title": "PENGURUSAN OPERASI PERNIAGAAN",
+   "teaching_plan": "PT03",
+   "teaching_plan_pages": 7,
+   "official_title": "Page: 1/40",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 145,
+   "pdf_end_page": 184,
+   "span_pages": 40,
+   "declared_pages": 40,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    145,
+    161,
+    163,
+    181
+   ],
+   "skema_jawapan_pages": [
+    183,
+    184
+   ],
+   "image_count": 2,
+   "table_detector_count": 49,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL04",
+   "module_code": "M01",
+   "module_title": "PENGURUSAN OPERASI PERNIAGAAN",
+   "teaching_plan": "PT04",
+   "teaching_plan_pages": 7,
+   "official_title": "Page: 1/17",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 185,
+   "pdf_end_page": 201,
+   "span_pages": 17,
+   "declared_pages": 17,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    185,
+    186,
+    200
+   ],
+   "skema_jawapan_pages": [
+    201
+   ],
+   "image_count": 3,
+   "table_detector_count": 19,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL05",
+   "module_code": "M02",
+   "module_title": "PENGURUSAN TENDER",
+   "teaching_plan": "PT05",
+   "teaching_plan_pages": 7,
+   "official_title": "Page: 1/24",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 202,
+   "pdf_end_page": 225,
+   "span_pages": 24,
+   "declared_pages": 24,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    202,
+    203,
+    207,
+    224
+   ],
+   "skema_jawapan_pages": [
+    225
+   ],
+   "image_count": 2,
+   "table_detector_count": 25,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL06",
+   "module_code": "M03",
+   "module_title": "PENGURUSAN DAN PELAKSANAAN KONTRAK",
+   "teaching_plan": "PT06",
+   "teaching_plan_pages": 7,
+   "official_title": "Page: 1/34",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 226,
+   "pdf_end_page": 259,
+   "span_pages": 34,
+   "declared_pages": 34,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    226,
+    227,
+    258
+   ],
+   "skema_jawapan_pages": [
+    259
+   ],
+   "image_count": 5,
+   "table_detector_count": 40,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL07",
+   "module_code": "M04",
+   "module_title": "PERANCANGAN DAN PENJADUALAN PROJEK",
+   "teaching_plan": "PT07",
+   "teaching_plan_pages": 6,
+   "official_title": "Page: 1/11",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 260,
+   "pdf_end_page": 270,
+   "span_pages": 11,
+   "declared_pages": 11,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    260,
+    263,
+    269
+   ],
+   "skema_jawapan_pages": [
+    270
+   ],
+   "image_count": 4,
+   "table_detector_count": 12,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL08",
+   "module_code": "M05",
+   "module_title": "PENGURUSAN OPERASI PEMBINAAN",
+   "teaching_plan": "PT08",
+   "teaching_plan_pages": 8,
+   "official_title": "Muka surat: 1/29",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 271,
+   "pdf_end_page": 299,
+   "span_pages": 29,
+   "declared_pages": 29,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    271,
+    272,
+    280,
+    298
+   ],
+   "skema_jawapan_pages": [
+    299
+   ],
+   "image_count": 6,
+   "table_detector_count": 33,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  },
+  {
+   "course": "K2",
+   "pl": "PL09",
+   "module_code": "M06",
+   "module_title": "PENYERAHAN PROJEK",
+   "teaching_plan": "PT09",
+   "teaching_plan_pages": 6,
+   "official_title": "Page: 1/19",
+   "title_source": "PL_PACKAGE_OWN_FIRST_PAGE",
+   "pdf_start_page": 300,
+   "pdf_end_page": 318,
+   "span_pages": 19,
+   "declared_pages": 19,
+   "boundary_confirmed": true,
+   "module_map_confirmed_from_own_header": true,
+   "latihan_pages": [
+    300,
+    317
+   ],
+   "skema_jawapan_pages": [
+    318
+   ],
+   "image_count": 2,
+   "table_detector_count": 20,
+   "record_type": "SOURCE_READY_CLEAN",
+   "record_type_why": "Binary readable and boundary independently confirmed — the two criteria a SOURCE_READY_CLEAN candidate must meet. Whether it is one storyboard unit or several is a granularity decision, not a source fact, so it is not called a CONFIRMED_UNIT yet.",
+   "authority_inherited": "SRC-AUTH-01"
+  }
+ ],
+ "stage": "4.2F-F"
+}

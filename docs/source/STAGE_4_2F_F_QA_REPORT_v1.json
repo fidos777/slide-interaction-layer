@@ -1,0 +1,1040 @@
+{
+ "suite_id": "STAGE_4_2F_F_K2_QA_v1",
+ "total": 66,
+ "passed": 66,
+ "skipped": 0,
+ "failed": [],
+ "by_type": {
+  "ACCOUNTING": 4,
+  "ASSESS": 8,
+  "CUSTODY": 11,
+  "DECISIONS": 4,
+  "HIERARCHY": 8,
+  "HONESTY": 3,
+  "IMGTBL": 3,
+  "MODELS": 5,
+  "PAGEMAP": 6,
+  "QUEUE": 14
+ },
+ "by_oracle_basis": {
+  "BRIEF_LITERAL": 32,
+  "SOURCE_TEXT_LITERAL": 4,
+  "INDEPENDENT_MEASURE": 29,
+  "RAW_BINARY": 1
+ },
+ "oracle_separation_structural": "DEFERRED_BY_DELIVERY_DEADLINE",
+ "not_checked": [
+  "whether six modules is instructionally right — that is K2-DEC-04, not a QA question",
+  "whether one PL should be one storyboard unit — that is K2-DEC-01",
+  "the curated (as opposed to detector) table count — it is not claimed, so not checked",
+  "the seven packages not extracted this run — only PL07 and PL09 were modelled"
+ ],
+ "gates": [
+  {
+   "gate_id": "STATUS_IS_NOW_HASH_VERIFIED",
+   "gate_type": "CUSTODY",
+   "value": "BINARY_LOCAL_HASH_VERIFIED",
+   "expected": "BINARY_LOCAL_HASH_VERIFIED",
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "BINARY_IS_CLAIMED_LOCAL_AND_READABLE",
+   "gate_type": "CUSTODY",
+   "value": [
+    true,
+    true
+   ],
+   "expected": [
+    true,
+    true
+   ],
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "CONTENT_READ_IS_FULL",
+   "gate_type": "CUSTODY",
+   "value": "FULL",
+   "expected": "FULL",
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SHA256_IS_VERIFIED_TRUE",
+   "gate_type": "CUSTODY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "OBSERVED_SHA256_EQUALS_THE_BRIEF",
+   "gate_type": "CUSTODY",
+   "value": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+   "expected": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "OBSERVED_BYTES_EQUAL_THE_BRIEF",
+   "gate_type": "CUSTODY",
+   "value": 25043306,
+   "expected": 25043306,
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "OBSERVED_PAGES_EQUAL_THE_BRIEF",
+   "gate_type": "CUSTODY",
+   "value": 346,
+   "expected": 346,
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "PDF_IS_NOT_ENCRYPTED",
+   "gate_type": "CUSTODY",
+   "value": "NOT_ENCRYPTED",
+   "expected": "NOT_ENCRYPTED",
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "IT_SUPERSEDES_CUSTODY_02_WITHOUT_OVERTURNING_IT",
+   "gate_type": "CUSTODY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "GRANULARITY_IS_STILL_NOT_CLAIMED_DECIDED",
+   "gate_type": "CUSTODY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "LIVE_REHASH_MATCHES_THE_BRIEF",
+   "gate_type": "CUSTODY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": ".source-intake/K2/…pdf",
+   "oracle_basis": "RAW_BINARY",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_346_PAGES_FORM_A_CLEAN_PARTITION",
+   "gate_type": "PAGEMAP",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_PAGE_BOUNDARY_MAP_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_PAGE_IS_UNASSIGNED",
+   "gate_type": "PAGEMAP",
+   "value": [],
+   "expected": [],
+   "population": 346,
+   "source_artifact": "K2_PAGE_BOUNDARY_MAP_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_PAGE_IS_IN_TWO_REGIONS",
+   "gate_type": "PAGEMAP",
+   "value": [],
+   "expected": [],
+   "population": 346,
+   "source_artifact": "K2_PAGE_BOUNDARY_MAP_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_PL_SPAN_MATCHES_THE_HAND_TYPED_SPAN",
+   "gate_type": "PAGEMAP",
+   "value": {
+    "PL01": [
+     85,
+     124
+    ],
+    "PL02": [
+     125,
+     144
+    ],
+    "PL03": [
+     145,
+     184
+    ],
+    "PL04": [
+     185,
+     201
+    ],
+    "PL05": [
+     202,
+     225
+    ],
+    "PL06": [
+     226,
+     259
+    ],
+    "PL07": [
+     260,
+     270
+    ],
+    "PL08": [
+     271,
+     299
+    ],
+    "PL09": [
+     300,
+     318
+    ]
+   },
+   "expected": {
+    "PL01": [
+     85,
+     124
+    ],
+    "PL02": [
+     125,
+     144
+    ],
+    "PL03": [
+     145,
+     184
+    ],
+    "PL04": [
+     185,
+     201
+    ],
+    "PL05": [
+     202,
+     225
+    ],
+    "PL06": [
+     226,
+     259
+    ],
+    "PL07": [
+     260,
+     270
+    ],
+    "PL08": [
+     271,
+     299
+    ],
+    "PL09": [
+     300,
+     318
+    ]
+   },
+   "population": 9,
+   "source_artifact": "K2_PAGE_BOUNDARY_MAP_v1.json",
+   "oracle_basis": "SOURCE_TEXT_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_PL_SPAN_MATCHES_ITS_OWN_DECLARED_LENGTH",
+   "gate_type": "PAGEMAP",
+   "value": true,
+   "expected": true,
+   "population": 9,
+   "source_artifact": "K2_PAGE_BOUNDARY_MAP_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "REGION_PAGES_SUM_TO_346",
+   "gate_type": "PAGEMAP",
+   "value": 346,
+   "expected": 346,
+   "population": 12,
+   "source_artifact": "K2_PAGE_BOUNDARY_MAP_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "DECOMPOSITION_IS_NOW_COMPLETE",
+   "gate_type": "HIERARCHY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_SOURCE_REGION_REMAINS_UNMAPPED",
+   "gate_type": "HIERARCHY",
+   "value": 0,
+   "expected": 0,
+   "population": 1,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "PL_TO_MODULE_MAP_IS_CONFIRMED_FROM_EACH_HEADER",
+   "gate_type": "HIERARCHY",
+   "value": {
+    "PL01": "M01",
+    "PL02": "M01",
+    "PL03": "M01",
+    "PL04": "M01",
+    "PL05": "M02",
+    "PL06": "M03",
+    "PL07": "M04",
+    "PL08": "M05",
+    "PL09": "M06"
+   },
+   "expected": {
+    "PL01": "M01",
+    "PL02": "M01",
+    "PL03": "M01",
+    "PL04": "M01",
+    "PL05": "M02",
+    "PL06": "M03",
+    "PL07": "M04",
+    "PL08": "M05",
+    "PL09": "M06"
+   },
+   "population": 9,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "SOURCE_TEXT_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ALL_NINE_ARE_SOURCE_READY_CLEAN",
+   "gate_type": "HIERARCHY",
+   "value": 9,
+   "expected": 9,
+   "population": 9,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "STILL_NO_PL_IS_A_CONFIRMED_UNIT",
+   "gate_type": "HIERARCHY",
+   "value": 0,
+   "expected": 0,
+   "population": 9,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_ROW_HAS_AN_OBSERVED_PAGE_SPAN",
+   "gate_type": "HIERARCHY",
+   "value": true,
+   "expected": true,
+   "population": 9,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_ROW_STILL_CARRIES_AN_UNKNOWN_SPAN",
+   "gate_type": "HIERARCHY",
+   "value": [],
+   "expected": [],
+   "population": 9,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ALL_NINE_TITLES_ARE_OBSERVED_NOT_INFERRED",
+   "gate_type": "HIERARCHY",
+   "value": true,
+   "expected": true,
+   "population": 9,
+   "source_artifact": "K2_COURSE_HIERARCHY_v2.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NINE_KT_TASK_PAPERS_ARE_INVENTORIED",
+   "gate_type": "ASSESS",
+   "value": 9,
+   "expected": 9,
+   "population": 9,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "SOURCE_TEXT_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ALL_NINE_PACKAGES_HAVE_THEIR_OWN_ANSWER_SCHEME",
+   "gate_type": "ASSESS",
+   "value": 9,
+   "expected": 9,
+   "population": 9,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_KT_NUMBERING_BREAK_IS_RECORDED",
+   "gate_type": "ASSESS",
+   "value": [
+    "KT PL08",
+    "KT PL09"
+   ],
+   "expected": [
+    "KT PL08",
+    "KT PL09"
+   ],
+   "population": 1,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "SOURCE_TEXT_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_KT06_COLLISION_IS_RECORDED_NOT_RESOLVED",
+   "gate_type": "ASSESS",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "KT06_RECORDS_DISTINCT_CONSEQUENCES_FOR_PL06_AND_PL08",
+   "gate_type": "ASSESS",
+   "value": [
+    "EXPECTED_ASSESSMENT_MAPPING_MISSING_OR_MISLABELLED",
+    "POSSIBLE_DUPLICATED_OR_MISASSIGNED_ASSESSMENT_TITLE"
+   ],
+   "expected": [
+    "EXPECTED_ASSESSMENT_MAPPING_MISSING_OR_MISLABELLED",
+    "POSSIBLE_DUPLICATED_OR_MISASSIGNED_ASSESSMENT_TITLE"
+   ],
+   "population": 2,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "PL06_AND_PL08_CONSEQUENCES_ARE_NOT_THE_SAME",
+   "gate_type": "ASSESS",
+   "value": true,
+   "expected": true,
+   "population": 2,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SOURCE_ANOMALIES_STAY_WITH_FIRDAUS_NOT_BARIAH",
+   "gate_type": "ASSESS",
+   "value": [
+    "FIRDAUS"
+   ],
+   "expected": [
+    "FIRDAUS"
+   ],
+   "population": 2,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "TWO_ASSESSMENT_SYSTEMS_ARE_NAMED",
+   "gate_type": "ASSESS",
+   "value": 2,
+   "expected": 2,
+   "population": 2,
+   "source_artifact": "K2_ASSESSMENT_INVENTORY_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "TABLE_COUNTS_ARE_LABELLED_DETECTOR_NOT_MEASURED",
+   "gate_type": "IMGTBL",
+   "value": true,
+   "expected": true,
+   "population": 9,
+   "source_artifact": "K2_IMAGE_TABLE_INVENTORY_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_TABLE_FIELD_IS_CALLED_A_PLAIN_TABLE_COUNT",
+   "gate_type": "IMGTBL",
+   "value": false,
+   "expected": false,
+   "population": 9,
+   "source_artifact": "K2_IMAGE_TABLE_INVENTORY_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "IMAGE_TOTAL_IS_THE_SUM_OF_ALL_REGIONS_PLUS_PL",
+   "gate_type": "IMGTBL",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_IMAGE_TABLE_INVENTORY_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EXACTLY_TWO_MODELS_WERE_PRODUCED",
+   "gate_type": "MODELS",
+   "value": 2,
+   "expected": 2,
+   "population": 2,
+   "source_artifact": "K2_PROVISIONAL_MODELS_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_SELECTION_CRITERION_IS_STATED",
+   "gate_type": "MODELS",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_PROVISIONAL_MODELS_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "MODELS_ARE_PL07_AND_PL09",
+   "gate_type": "MODELS",
+   "value": [
+    "PL07",
+    "PL09"
+   ],
+   "expected": [
+    "PL07",
+    "PL09"
+   ],
+   "population": 2,
+   "source_artifact": "K2_PROVISIONAL_MODELS_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_MODEL_CITES_ITS_SOURCE_PAGES",
+   "gate_type": "MODELS",
+   "value": true,
+   "expected": true,
+   "population": 2,
+   "source_artifact": "K2_PROVISIONAL_MODELS_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "MODELS_ARE_MARKED_PROVISIONAL_NOT_FINAL",
+   "gate_type": "MODELS",
+   "value": true,
+   "expected": true,
+   "population": 2,
+   "source_artifact": "K2_PROVISIONAL_MODELS_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_DECISION_REGISTER_EXISTS_NOW",
+   "gate_type": "DECISIONS",
+   "value": "K2-DECISIONS-01",
+   "expected": "K2-DECISIONS-01",
+   "population": 1,
+   "source_artifact": "K2_DECISION_REGISTER_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "IT_IS_ROUTED_TO_BARIAH_AND_CAIR",
+   "gate_type": "DECISIONS",
+   "value": "BARIAH_AND_CAIR",
+   "expected": "BARIAH_AND_CAIR",
+   "population": 1,
+   "source_artifact": "K2_DECISION_REGISTER_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_DECISION_SAYS_WHY_IT_IS_ANSWERABLE_NOW",
+   "gate_type": "DECISIONS",
+   "value": true,
+   "expected": true,
+   "population": 4,
+   "source_artifact": "K2_DECISION_REGISTER_v1.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "GRANULARITY_IS_THE_FIRST_DECISION",
+   "gate_type": "DECISIONS",
+   "value": "K2-DEC-01",
+   "expected": "K2-DEC-01",
+   "population": 4,
+   "source_artifact": "K2_DECISION_REGISTER_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "K2_ROWS_ARE_BOUNDARY_CONFIRMED_AND_READABLE",
+   "gate_type": "QUEUE",
+   "value": [
+    [
+     true,
+     true
+    ]
+   ],
+   "expected": [
+    [
+     true,
+     true
+    ]
+   ],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_K2_ROW_IS_A_CONFIRMED_UNIT",
+   "gate_type": "QUEUE",
+   "value": [],
+   "expected": [],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_K2_ROW_IS_IMMEDIATELY_EXECUTABLE_YET",
+   "gate_type": "QUEUE",
+   "value": [],
+   "expected": [],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EXACTLY_TWO_K2_ROWS_ARE_EXTRACTED",
+   "gate_type": "QUEUE",
+   "value": 2,
+   "expected": 2,
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EXACTLY_TWO_K2_ROWS_ARE_MODEL_READY",
+   "gate_type": "QUEUE",
+   "value": [
+    "PL07",
+    "PL09"
+   ],
+   "expected": [
+    "PL07",
+    "PL09"
+   ],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "KT06_EXCEPTION_PLS_ARE_HELD_AND_NOT_MODEL_READY",
+   "gate_type": "QUEUE",
+   "value": [
+    "PL06",
+    "PL08"
+   ],
+   "expected": [
+    "PL06",
+    "PL08"
+   ],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_K2_ROW_IS_READY_TO_EMIT_FALSE",
+   "gate_type": "QUEUE",
+   "value": [],
+   "expected": [],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_HEADLINE_METRIC_STILL_DID_NOT_MOVE",
+   "gate_type": "QUEUE",
+   "value": 13,
+   "expected": 13,
+   "population": 1,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EXTRACTED_UNITS_ROSE_BY_EXACTLY_TWO",
+   "gate_type": "QUEUE",
+   "value": 16,
+   "expected": 16,
+   "population": 1,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "MODEL_READY_UNITS_ROSE_BY_EXACTLY_TWO",
+   "gate_type": "QUEUE",
+   "value": 25,
+   "expected": 25,
+   "population": 1,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ALL_QUEUE_INVARIANTS_HOLD",
+   "gate_type": "QUEUE",
+   "value": [],
+   "expected": [],
+   "population": 16,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EVERY_MEMBER_ROLL_MATCHES_ITS_COUNT",
+   "gate_type": "QUEUE",
+   "value": [],
+   "expected": [],
+   "population": 9,
+   "source_artifact": "PRODUCTION_QUEUE_v5.json",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "EXACTLY_ONE_QUEUE_VERSION_IS_LIVE",
+   "gate_type": "QUEUE",
+   "value": [
+    "PRODUCTION_QUEUE_v5"
+   ],
+   "expected": [
+    "PRODUCTION_QUEUE_v5"
+   ],
+   "population": 1,
+   "source_artifact": "docs/source listing",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "V4_IS_RETIRED_FROM_THE_LIVE_TREE",
+   "gate_type": "QUEUE",
+   "value": [],
+   "expected": [],
+   "population": 3,
+   "source_artifact": "docs/source listing",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "BINARY_ABSENT_STATES_ARE_NOT_STILL_CLAIMED",
+   "gate_type": "HONESTY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_BINARY_CUSTODY_v2.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "ALL_NINE_ARE_NOT_OVERCLAIMED_AS_MODELLED",
+   "gate_type": "HONESTY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_PROVISIONAL_MODELS_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "THE_MODULE_COUNT_CONFLICT_IS_STILL_OPEN_NOT_SILENTLY_FIXED",
+   "gate_type": "HONESTY",
+   "value": true,
+   "expected": true,
+   "population": 1,
+   "source_artifact": "K2_DECISION_REGISTER_v1.json",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SUITE_ID_DECLARED",
+   "gate_type": "ACCOUNTING",
+   "value": "STAGE_4_2F_F_K2_QA_v1",
+   "expected": "STAGE_4_2F_F_K2_QA_v1",
+   "population": 1,
+   "source_artifact": "this file",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "SUITE_ID_IS_NOT_ANY_SIBLING_SUITE",
+   "gate_type": "ACCOUNTING",
+   "value": false,
+   "expected": false,
+   "population": 3,
+   "source_artifact": "this file",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "A_RAW_BINARY_ORACLE_IS_NOW_LEGITIMATELY_USED",
+   "gate_type": "ACCOUNTING",
+   "value": true,
+   "expected": true,
+   "population": 64,
+   "source_artifact": "this file",
+   "oracle_basis": "INDEPENDENT_MEASURE",
+   "empty_by_design": null,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  },
+  {
+   "gate_id": "NO_GATE_IS_VACUOUS",
+   "gate_type": "ACCOUNTING",
+   "value": [],
+   "expected": [],
+   "population": 65,
+   "source_artifact": "this file",
+   "oracle_basis": "BRIEF_LITERAL",
+   "empty_by_design": true,
+   "vacuous": false,
+   "skipped": false,
+   "ok": true
+  }
+ ]
+}

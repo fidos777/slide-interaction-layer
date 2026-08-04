@@ -1,0 +1,290 @@
+{
+ "inventory_id": "K2-ASSESS-01",
+ "stage": "4.2F-F",
+ "two_assessment_systems": [
+  "per-PL: each package ends with its own SKEMA JAWAPAN (UNTUK PENGAJAR)",
+  "course-level: nine KT competency task papers at the back (pages 319-346)"
+ ],
+ "per_pl": [
+  {
+   "pl": "PL01",
+   "module": "M01",
+   "latihan_pages": [
+    85,
+    86,
+    118,
+    123
+   ],
+   "skema_jawapan_pages": [
+    124
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL02",
+   "module": "M01",
+   "latihan_pages": [
+    125,
+    143,
+    144
+   ],
+   "skema_jawapan_pages": [
+    144
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL03",
+   "module": "M01",
+   "latihan_pages": [
+    145,
+    161,
+    163,
+    181
+   ],
+   "skema_jawapan_pages": [
+    183,
+    184
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL04",
+   "module": "M01",
+   "latihan_pages": [
+    185,
+    186,
+    200
+   ],
+   "skema_jawapan_pages": [
+    201
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL05",
+   "module": "M02",
+   "latihan_pages": [
+    202,
+    203,
+    207,
+    224
+   ],
+   "skema_jawapan_pages": [
+    225
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL06",
+   "module": "M03",
+   "latihan_pages": [
+    226,
+    227,
+    258
+   ],
+   "skema_jawapan_pages": [
+    259
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL07",
+   "module": "M04",
+   "latihan_pages": [
+    260,
+    263,
+    269
+   ],
+   "skema_jawapan_pages": [
+    270
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL08",
+   "module": "M05",
+   "latihan_pages": [
+    271,
+    272,
+    280,
+    298
+   ],
+   "skema_jawapan_pages": [
+    299
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  },
+  {
+   "pl": "PL09",
+   "module": "M06",
+   "latihan_pages": [
+    300,
+    317
+   ],
+   "skema_jawapan_pages": [
+    318
+   ],
+   "has_own_answer_scheme": true,
+   "answer_scheme_audience": "UNTUK PENGAJAR (instructor-facing), per SKEMA JAWAPAN heading"
+  }
+ ],
+ "kt_papers": [
+  {
+   "kt_code": "KT01",
+   "pages": [
+    319,
+    321
+   ],
+   "positional_pl": "PL01",
+   "printed_unit_competency": "PENGENALAN MODUL PEMBINAAN LANDASAN (TRACKWORKS)"
+  },
+  {
+   "kt_code": "KT02",
+   "pages": [
+    322,
+    324
+   ],
+   "positional_pl": "PL02",
+   "printed_unit_competency": "PENGURUSAN OPERASI PERNIAGAAN DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT03",
+   "pages": [
+    325,
+    327
+   ],
+   "positional_pl": "PL03",
+   "printed_unit_competency": "REGULASI DAN PEMATUHAN INDUSTRI REL DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT04",
+   "pages": [
+    328,
+    330
+   ],
+   "positional_pl": "PL04",
+   "printed_unit_competency": "INOVASI DAN TEKNOLOGI DIGITAL SERTA AUTOMASI DALAM INDUSTRI REL"
+  },
+  {
+   "kt_code": "KT05",
+   "pages": [
+    331,
+    333
+   ],
+   "positional_pl": "PL05",
+   "printed_unit_competency": "PENGURUSAN TENDER DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT06",
+   "pages": [
+    334,
+    337
+   ],
+   "positional_pl": "PL06",
+   "printed_unit_competency": "PENGURUSAN OPERASI PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT07",
+   "pages": [
+    338,
+    340
+   ],
+   "positional_pl": "PL07",
+   "printed_unit_competency": "PERANCANGAN DAN PENJADUALAN PROJEK DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT PL08",
+   "pages": [
+    341,
+    343
+   ],
+   "positional_pl": "PL08",
+   "printed_unit_competency": "PENGURUSAN OPERASI PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT PL09",
+   "pages": [
+    344,
+    346
+   ],
+   "positional_pl": "PL09",
+   "printed_unit_competency": "PENYERAHAN PROJEK PEMBINAAN LANDASAN"
+  }
+ ],
+ "kt_paper_count": 9,
+ "observations": [
+  {
+   "defect_id": "K2-SOURCE-OBS-02",
+   "subject": "the KT task-paper numbering breaks after KT07",
+   "finding": "The competency task papers are coded KT01..KT07, then the last two are coded 'KT PL08' and 'KT PL09' instead of KT08 and KT09. Nine papers, one per unit, but two coding schemes in one series.",
+   "codes_observed": [
+    "KT01",
+    "KT02",
+    "KT03",
+    "KT04",
+    "KT05",
+    "KT06",
+    "KT07",
+    "KT PL08",
+    "KT PL09"
+   ],
+   "numbering_break_codes": [
+    "KT PL08",
+    "KT PL09"
+   ],
+   "classification": "TYPOGRAPHICAL",
+   "routed_to": "FIRDAUS",
+   "production_impact": "A parser keyed on a strict KTdd pattern would miss the last two papers. Match on the paper's position and its printed UNIT KOMPETENSI, not on the code alone."
+  },
+  {
+   "defect_id": "K2-SOURCE-OBS-03",
+   "subject": "KT06's printed unit competency collides with PL08's",
+   "finding": "KT06 sits sixth in the series — between KT05 (Tender, PL05) and KT07 (Perancangan, PL07) — so by position it assesses PL06 (Pelaksanaan dan Pengurusan Kontrak, M03). But its printed UNIT KOMPETENSI reads 'PENGURUSAN OPERASI PEMBINAAN LANDASAN', which is PL08's topic (M05) and is also what 'KT PL08' carries. So by printed title PL08 has two task papers and PL06 has none.",
+   "collisions": [
+    {
+     "kt_code": "KT06",
+     "positional_pl": "PL06",
+     "positional_topic": "Pelaksanaan dan Pengurusan Kontrak (M03)",
+     "printed_unit_competency": "PENGURUSAN OPERASI PEMBINAAN LANDASAN",
+     "collides_with": "KT PL08 / PL08 (Pengurusan Operasi Pembinaan, M05)"
+    }
+   ],
+   "classification": "SOURCE_CONTENT_AMBIGUITY",
+   "routed_to": "FIRDAUS",
+   "consequences": [
+    {
+     "pl": "PL06",
+     "consequence": "EXPECTED_ASSESSMENT_MAPPING_MISSING_OR_MISLABELLED",
+     "detail": "No KT paper carries PL06's contract-management competency title; KT06, which occupies PL06's positional slot, prints PL08's title instead. PL06 is left with no task paper of its own, or a mislabelled one."
+    },
+    {
+     "pl": "PL08",
+     "consequence": "POSSIBLE_DUPLICATED_OR_MISASSIGNED_ASSESSMENT_TITLE",
+     "detail": "Both KT06 and KT PL08 print PL08's competency title, so PL08 appears to carry two task papers — one of which may be a duplicate or a paper misassigned from PL06."
+    }
+   ],
+   "not_resolved_here": "Whether KT06 is a mislabelled PL06 paper or a genuine second PL08 paper is a source question for the author. This run records both readings and picks neither; no KT paper is silently reassigned."
+  }
+ ],
+ "answer_schemes_present": [
+  "PL01",
+  "PL02",
+  "PL03",
+  "PL04",
+  "PL05",
+  "PL06",
+  "PL07",
+  "PL08",
+  "PL09"
+ ],
+ "answer_schemes_absent": []
+}

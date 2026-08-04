@@ -1,0 +1,80 @@
+{
+ "models_id": "K2-MODELS-01",
+ "stage": "4.2F-F",
+ "selection_criterion": "The two smallest SOURCE_READY_CLEAN packages that are directly named by their own teaching plan and close with a single answer-scheme page: PL07 (11 pages) and PL09 (19 pages). Stated so the choice is auditable rather than convenient.",
+ "count": 2,
+ "models": [
+  {
+   "model_id": "K2-MODEL-PL07",
+   "pl": "PL07",
+   "module": "M04",
+   "official_title": "Perancangan dan Penjadualan Pembinaan Landasan",
+   "pdf_span": [
+    260,
+    270
+   ],
+   "pages": 11,
+   "tajuk_page": 261,
+   "tajuk": "PERANCANGAN DAN PENJADUALAN PEMBINAAN LANDASAN",
+   "objektif": "WBS sebagai asas perancangan; membangunkan program kerja dan penjadualan supaya setiap aktiviti dilaksanakan mengikut masa, sumber dan keutamaan (p261)",
+   "penerangan_topics": [
+    "1) Penyediaan Work Breakdown Structure (WBS) (p261)",
+    "Pendekatan Konvensional, Fast Track dan Accelerated (p269 latihan ref, body p262-268)",
+    "Critical Path Method (CPM): Mula Awal, Mula Lewat, Apungan (p269 latihan ref)"
+   ],
+   "latihan": {
+    "page": 269,
+    "item_count": 3,
+    "items_sample": [
+     "Kepentingan WBS dan komponennya",
+     "Bandingkan Konvensional / Fast Track / Accelerated",
+     "Jelaskan CPM dan Mula Awal / Mula Lewat / Apungan"
+    ]
+   },
+   "skema_jawapan": {
+    "page": 270,
+    "audience": "UNTUK PENGAJAR"
+   },
+   "images": 4,
+   "tables_detector": 12,
+   "confidence": "PROVISIONAL — extracted and structured from the bytes this run; not yet reviewed by Bariah and unit granularity not yet decided",
+   "model_state": "EXTRACTED_AND_MODELLED"
+  },
+  {
+   "model_id": "K2-MODEL-PL09",
+   "pl": "PL09",
+   "module": "M06",
+   "official_title": "Penyerahan Projek Pembinaan Landasan",
+   "pdf_span": [
+    300,
+    318
+   ],
+   "pages": 19,
+   "tajuk_page": 301,
+   "tajuk": "PENYERAHAN PROJEK PEMBINAAN LANDASAN",
+   "objektif": "Proses akhir kitaran pembinaan: keperluan Certificate of Practical Completion (CPC) dan jenis-jenis kecacatan (type of defect) (p301)",
+   "penerangan_topics": [
+    "1) Keperluan CPC (Certificate of Practical Completion) (p301)",
+    "Ujian teknikal: SAT, SIT, IFT, T&C; Defects Liability Period (DLP) (p301-302)",
+    "As-Built Drawings dan dokumen serahan (p317 latihan ref)"
+   ],
+   "latihan": {
+    "page": 317,
+    "item_count": 2,
+    "items_sample": [
+     "Maksud CPC dalam projek pembinaan",
+     "Bagaimana As-Built Drawings membantu serahan projek"
+    ]
+   },
+   "skema_jawapan": {
+    "page": 318,
+    "audience": "UNTUK PENGAJAR"
+   },
+   "images": 2,
+   "tables_detector": 20,
+   "confidence": "PROVISIONAL — extracted and structured from the bytes this run; not yet reviewed by Bariah and unit granularity not yet decided",
+   "model_state": "EXTRACTED_AND_MODELLED"
+  }
+ ],
+ "not_modelled": "PL01-PL06, PL08 — SOURCE_READY_CLEAN but not carried through extraction this run; the brief asked for the first two."
+}

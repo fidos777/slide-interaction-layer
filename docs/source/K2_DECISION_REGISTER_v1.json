@@ -1,0 +1,34 @@
+{
+ "register_id": "K2-DECISIONS-01",
+ "stage": "4.2F-F",
+ "routed_to": "BARIAH_AND_CAIR",
+ "preamble": "4.2F-E deliberately produced no decision register: with nothing decomposed, asking Bariah to rule on unread content would have wasted the review. Decomposition is now done, so these decisions are real and answerable.",
+ "decisions": [
+  {
+   "decision_id": "K2-DEC-01",
+   "owner": "BARIAH_CAIR",
+   "question": "Unit granularity: is each PL package one storyboard unit, or do the larger packages (PL01 40p, PL03 40p, PL06 34p) split into several?",
+   "why_now": "Boundaries are confirmed, so the page budget per package is known and the split is now a concrete choice, not a guess.",
+   "blocks": "promotion of any PL from SOURCE_READY_CLEAN to CONFIRMED_UNIT"
+  },
+  {
+   "decision_id": "K2-DEC-02",
+   "owner": "BARIAH",
+   "question": "Assessment treatment: each PL carries its own SKEMA JAWAPAN (UNTUK PENGAJAR) AND there is a separate KT competency task paper. Which drives the storyboard's assessment slides?",
+   "why_now": "Both assessment systems are now inventoried (K2-ASSESS-01)."
+  },
+  {
+   "decision_id": "K2-DEC-03",
+   "owner": "FIRDAUS_THEN_BARIAH",
+   "question": "KT06 / KT PL08 collision (K2-SOURCE-OBS-03): does PL06 need a task paper authored, or is KT06 a mislabelled PL06 paper?",
+   "why_now": "Only visible once the KT tail was read this run."
+  },
+  {
+   "decision_id": "K2-DEC-04",
+   "owner": "BARIAH",
+   "question": "Module-count correction (K2-SOURCE-CONFLICT-01, carried from 4.2F-E): confirm six modules / nine packages as the production structure so the prose 'lapan (8)' can be corrected at source.",
+   "why_now": "Now corroborated a further way — every PL header names its own module, and they enumerate exactly M01-M06."
+  }
+ ],
+ "note": "Every decision names why it is answerable now and was not at 4.2F-E. None is a source correction dressed as an instructional decision: the two source corrections (OBS-02, OBS-03) stay with Firdaus."
+}

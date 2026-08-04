@@ -1,0 +1,345 @@
+{
+ "stage": "4.2F-F",
+ "generated_by": "docs/source/tools/src_k2f_extract_v1.py",
+ "binary_identity": {
+  "path": ".source-intake/K2/2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "bytes_observed": 25043306,
+  "sha256_observed": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+  "bytes_expected": 25043306,
+  "sha256_expected": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+  "bytes_match": true,
+  "sha256_match": true,
+  "pages_observed": 346,
+  "pages_expected": 346,
+  "pages_match": true,
+  "encrypted": false,
+  "needs_password": false,
+  "pdf_format": "PDF 1.7",
+  "pdf_metadata": {
+   "title": "",
+   "author": "Ts. Faezal Husni",
+   "creator": "Adobe Acrobat Pro DC 20.6.20042",
+   "producer": "Adobe PDF Library 20.6.74",
+   "creationDate": "D:20251013174623+08'00'",
+   "modDate": "D:20251014171230+08'00'"
+  }
+ },
+ "text": {
+  "chars_total": 481659,
+  "chars_per_page": 1392.1,
+  "connector_chars_stage_4_2F_E": 62638,
+  "ratio_full_over_connector": 7.7
+ },
+ "regions": {
+  "front_matter": [
+   1,
+   22
+  ],
+  "teaching_plan_region": [
+   23,
+   84
+  ],
+  "pl_packages_region": [
+   85,
+   318
+  ],
+  "kt_assessment_region": [
+   319,
+   346
+  ]
+ },
+ "region_accounting": {
+  "pages_total": 346,
+  "pages_assigned": 346,
+  "unassigned_pages": [],
+  "overlapping_pages": {},
+  "clean_partition": true
+ },
+ "pl_packages": [
+  {
+   "pl": "PL01",
+   "pdf_start_page": 85,
+   "pdf_end_page": 124,
+   "span_pages": 40,
+   "declared_pages": 40,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M01",
+   "official_title": "Muka Surat: 1/40",
+   "latihan_pages": [
+    85,
+    86,
+    118,
+    123
+   ],
+   "latihan_page_count": 4,
+   "skema_jawapan_pages": [
+    124
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 19,
+   "table_detector_count": 43
+  },
+  {
+   "pl": "PL02",
+   "pdf_start_page": 125,
+   "pdf_end_page": 144,
+   "span_pages": 20,
+   "declared_pages": 20,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M01",
+   "official_title": "Page: 1/20",
+   "latihan_pages": [
+    125,
+    143,
+    144
+   ],
+   "latihan_page_count": 3,
+   "skema_jawapan_pages": [
+    144
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 2,
+   "table_detector_count": 21
+  },
+  {
+   "pl": "PL03",
+   "pdf_start_page": 145,
+   "pdf_end_page": 184,
+   "span_pages": 40,
+   "declared_pages": 40,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M01",
+   "official_title": "Page: 1/40",
+   "latihan_pages": [
+    145,
+    161,
+    163,
+    181
+   ],
+   "latihan_page_count": 4,
+   "skema_jawapan_pages": [
+    183,
+    184
+   ],
+   "skema_jawapan_page_count": 2,
+   "image_count": 2,
+   "table_detector_count": 49
+  },
+  {
+   "pl": "PL04",
+   "pdf_start_page": 185,
+   "pdf_end_page": 201,
+   "span_pages": 17,
+   "declared_pages": 17,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M01",
+   "official_title": "Page: 1/17",
+   "latihan_pages": [
+    185,
+    186,
+    200
+   ],
+   "latihan_page_count": 3,
+   "skema_jawapan_pages": [
+    201
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 3,
+   "table_detector_count": 19
+  },
+  {
+   "pl": "PL05",
+   "pdf_start_page": 202,
+   "pdf_end_page": 225,
+   "span_pages": 24,
+   "declared_pages": 24,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M02",
+   "official_title": "Page: 1/24",
+   "latihan_pages": [
+    202,
+    203,
+    207,
+    224
+   ],
+   "latihan_page_count": 4,
+   "skema_jawapan_pages": [
+    225
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 2,
+   "table_detector_count": 25
+  },
+  {
+   "pl": "PL06",
+   "pdf_start_page": 226,
+   "pdf_end_page": 259,
+   "span_pages": 34,
+   "declared_pages": 34,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M03",
+   "official_title": "Page: 1/34",
+   "latihan_pages": [
+    226,
+    227,
+    258
+   ],
+   "latihan_page_count": 3,
+   "skema_jawapan_pages": [
+    259
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 5,
+   "table_detector_count": 40
+  },
+  {
+   "pl": "PL07",
+   "pdf_start_page": 260,
+   "pdf_end_page": 270,
+   "span_pages": 11,
+   "declared_pages": 11,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M04",
+   "official_title": "Page: 1/11",
+   "latihan_pages": [
+    260,
+    263,
+    269
+   ],
+   "latihan_page_count": 3,
+   "skema_jawapan_pages": [
+    270
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 4,
+   "table_detector_count": 12
+  },
+  {
+   "pl": "PL08",
+   "pdf_start_page": 271,
+   "pdf_end_page": 299,
+   "span_pages": 29,
+   "declared_pages": 29,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M05",
+   "official_title": "Muka surat: 1/29",
+   "latihan_pages": [
+    271,
+    272,
+    280,
+    298
+   ],
+   "latihan_page_count": 4,
+   "skema_jawapan_pages": [
+    299
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 6,
+   "table_detector_count": 33
+  },
+  {
+   "pl": "PL09",
+   "pdf_start_page": 300,
+   "pdf_end_page": 318,
+   "span_pages": 19,
+   "declared_pages": 19,
+   "span_matches_declared": true,
+   "module_code_from_own_header": "M06",
+   "official_title": "Page: 1/19",
+   "latihan_pages": [
+    300,
+    317
+   ],
+   "latihan_page_count": 2,
+   "skema_jawapan_pages": [
+    318
+   ],
+   "skema_jawapan_page_count": 1,
+   "image_count": 2,
+   "table_detector_count": 20
+  }
+ ],
+ "kt_papers": [
+  {
+   "kt_code": "KT01",
+   "pdf_start_page": 319,
+   "pdf_end_page": 321,
+   "span_pages": 3,
+   "positional_pl": "PL01",
+   "printed_unit_competency": "PENGENALAN MODUL PEMBINAAN LANDASAN (TRACKWORKS)"
+  },
+  {
+   "kt_code": "KT02",
+   "pdf_start_page": 322,
+   "pdf_end_page": 324,
+   "span_pages": 3,
+   "positional_pl": "PL02",
+   "printed_unit_competency": "PENGURUSAN OPERASI PERNIAGAAN DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT03",
+   "pdf_start_page": 325,
+   "pdf_end_page": 327,
+   "span_pages": 3,
+   "positional_pl": "PL03",
+   "printed_unit_competency": "REGULASI DAN PEMATUHAN INDUSTRI REL DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT04",
+   "pdf_start_page": 328,
+   "pdf_end_page": 330,
+   "span_pages": 3,
+   "positional_pl": "PL04",
+   "printed_unit_competency": "INOVASI DAN TEKNOLOGI DIGITAL SERTA AUTOMASI DALAM INDUSTRI REL"
+  },
+  {
+   "kt_code": "KT05",
+   "pdf_start_page": 331,
+   "pdf_end_page": 333,
+   "span_pages": 3,
+   "positional_pl": "PL05",
+   "printed_unit_competency": "PENGURUSAN TENDER DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT06",
+   "pdf_start_page": 334,
+   "pdf_end_page": 337,
+   "span_pages": 4,
+   "positional_pl": "PL06",
+   "printed_unit_competency": "PENGURUSAN OPERASI PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT07",
+   "pdf_start_page": 338,
+   "pdf_end_page": 340,
+   "span_pages": 3,
+   "positional_pl": "PL07",
+   "printed_unit_competency": "PERANCANGAN DAN PENJADUALAN PROJEK DALAM PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT PL08",
+   "pdf_start_page": 341,
+   "pdf_end_page": 343,
+   "span_pages": 3,
+   "positional_pl": "PL08",
+   "printed_unit_competency": "PENGURUSAN OPERASI PEMBINAAN LANDASAN"
+  },
+  {
+   "kt_code": "KT PL09",
+   "pdf_start_page": 344,
+   "pdf_end_page": 346,
+   "span_pages": 3,
+   "positional_pl": "PL09",
+   "printed_unit_competency": "PENYERAHAN PROJEK PEMBINAAN LANDASAN"
+  }
+ ],
+ "front_matter_images": 12,
+ "teaching_plan_images": 18,
+ "kt_region_images": 9,
+ "totals": {
+  "images_total": 84,
+  "pl_pages_total": 234,
+  "all_pl_spans_match_declared": true,
+  "kt_paper_count": 9
+ }
+}
