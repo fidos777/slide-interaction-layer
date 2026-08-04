@@ -1,7 +1,7 @@
 {
  "suite_id": "K5_BARIAH_POLICY_QA_v1",
- "total": 91,
- "passed": 91,
+ "total": 93,
+ "passed": 93,
  "failed": [],
  "by_type": {
   "ACCOUNTING": 4,
@@ -13,12 +13,12 @@
   "INGESTION": 10,
   "NARRATOR": 4,
   "SCENARIO": 5,
-  "SECTION_B": 20,
+  "SECTION_B": 22,
   "STRUCTURES": 10,
   "SUMMARY": 5
  },
  "by_oracle_basis": {
-  "DOC_LITERAL": 77,
+  "DOC_LITERAL": 79,
   "INDEPENDENT_MEASURE": 14
  },
  "oracle_separation_structural": "DEFERRED_BY_DELIVERY_DEADLINE",
@@ -600,6 +600,44 @@
    "expected": "REQUIRES_FIRDAUS_CONFIRMATION",
    "population": 1,
    "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "MULTIPLE_SLOTS_ONLY_ON_A_CONFIRMED_AVAILABLE_DAY",
+   "gate_type": "SECTION_B",
+   "value": [
+    "CONDITIONAL_WORKING_DAYS_EXCEPT_CYBERJAYA_MEETINGS",
+    "REQUIRES_FIRDAUS_CONFIRMATION",
+    "REQUIRES_FIRDAUS_CONFIRMATION"
+   ],
+   "expected": [
+    "CONDITIONAL_WORKING_DAYS_EXCEPT_CYBERJAYA_MEETINGS",
+    "REQUIRES_FIRDAUS_CONFIRMATION",
+    "REQUIRES_FIRDAUS_CONFIRMATION"
+   ],
+   "population": 1,
+   "source_artifact": "k5_pattern_policy_v1.POLICY",
+   "oracle_basis": "DOC_LITERAL",
+   "empty_by_design": null,
+   "vacuous": false,
+   "ok": true
+  },
+  {
+   "gate_id": "B4_NAMES_WHAT_FIRDAUS_MUST_CONFIRM",
+   "gate_type": "SECTION_B",
+   "value": [
+    "the actual available dates",
+    "the actual slot count per day"
+   ],
+   "expected": [
+    "the actual available dates",
+    "the actual slot count per day"
+   ],
+   "population": 2,
+   "source_artifact": "K5_BARIAH_DECISION_INGESTION_v1.json",
    "oracle_basis": "DOC_LITERAL",
    "empty_by_design": null,
    "vacuous": false,
@@ -1394,7 +1432,7 @@
    "gate_type": "ACCOUNTING",
    "value": [],
    "expected": [],
-   "population": 90,
+   "population": 92,
    "source_artifact": "this file",
    "oracle_basis": "DOC_LITERAL",
    "empty_by_design": true,

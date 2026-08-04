@@ -293,6 +293,20 @@ def run():
     chk("SLOTS_PER_DAY_ARE_NOT_INVENTED", SECTION_B,
         P.POLICY["slots_per_day"], "REQUIRES_FIRDAUS_CONFIRMATION", 1,
         "k5_pattern_policy_v1.POLICY", DOC_LITERAL)
+    # The conditional link itself. Bariah allows several slots a day, but only on a day
+    # that is available — and availability is not hers to fix alone. A model that carried
+    # "several slots per day" without that qualifier would read as a throughput promise.
+    chk("MULTIPLE_SLOTS_ONLY_ON_A_CONFIRMED_AVAILABLE_DAY", SECTION_B,
+        [P.POLICY["availability"], P.POLICY["slots_per_day"],
+         P.POLICY["availability_dates"]],
+        ["CONDITIONAL_WORKING_DAYS_EXCEPT_CYBERJAYA_MEETINGS",
+         "REQUIRES_FIRDAUS_CONFIRMATION", "REQUIRES_FIRDAUS_CONFIRMATION"], 1,
+        "k5_pattern_policy_v1.POLICY", DOC_LITERAL)
+    chk("B4_NAMES_WHAT_FIRDAUS_MUST_CONFIRM", SECTION_B,
+        sorted(next(d for d in P.DECISIONS
+                    if d["id"] == "B4")["requires_firdaus_confirmation"]),
+        ["the actual available dates", "the actual slot count per day"], 2,
+        "K5_BARIAH_DECISION_INGESTION_v1.json", DOC_LITERAL)
     chk("B4_AVAILABILITY_IS_MARKED_CONDITIONAL", SECTION_B,
         next(d for d in P.DECISIONS if d["id"] == "B4")[
             "availability_is_conditional"], True, 1,

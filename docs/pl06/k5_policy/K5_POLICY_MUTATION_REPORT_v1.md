@@ -4,10 +4,10 @@
 
 ```
 SUITE_ID = K5_BARIAH_POLICY_QA_v1
-FIXTURES = 79
-DETECTED = 79
+FIXTURES = 82
+DETECTED = 82
 MISSED   = 0
-BASELINE = 91/91
+BASELINE = 93/93
 ```
 
 | fixture | what it breaks | target | gates that fired |
@@ -45,6 +45,9 @@ BASELINE = 91/91
 | KB-08 | the slot length is shortened | P | `ONE_UNIT_PER_NINETY_MINUTE_SLOT` |
 | KB-09 | availability dates are invented | P | `AVAILABILITY_DATES_ARE_NOT_INVENTED` |
 | KB-10 | a slot count per day is invented | P | `SLOTS_PER_DAY_ARE_NOT_INVENTED` |
+| KB-25 | several slots per day become unconditional throughput | P | `MULTIPLE_SLOTS_ONLY_ON_A_CONFIRMED_AVAILABLE_DAY`, `SLOTS_PER_DAY_ARE_NOT_INVENTED` |
+| KB-26 | availability stops being conditional in the policy | P | `MULTIPLE_SLOTS_ONLY_ON_A_CONFIRMED_AVAILABLE_DAY` |
+| KB-27 | what Firdaus must confirm is quietly narrowed | P | `B4_NAMES_WHAT_FIRDAUS_MUST_CONFIRM` |
 | KB-11 | B4 availability stops being conditional | P | `B4_AVAILABILITY_IS_MARKED_CONDITIONAL` |
 | KB-12 | mass generation is declared authorized | P | `MASS_GENERATION_IS_NOT_AUTHORIZED` |
 | KB-13 | the authorized unit list is widened beyond calibration | P | `ONLY_THE_FOUR_CALIBRATION_UNITS_ARE_AUTHORIZED` |
