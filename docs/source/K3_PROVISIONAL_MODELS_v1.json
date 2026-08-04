@@ -1,0 +1,327 @@
+{
+ "stage": "4.2F-C",
+ "authority": "SRC-AUTH-01",
+ "assessment_finding": {
+  "id": "K3-ASSESS-01",
+  "finding": "Both K3 units carry a source-authored LATIHAN and a SKEMA JAWAPAN. The questions are short-essay with a 15-minute allowance and three model answers each. The course-wide rule AR-01 is 4 Multiple Choice + 1 Multiple Response. The source assessment and the course format do not match.",
+  "classification": "PENDING_BARIAH_PATTERN_DECISION",
+  "options_not_chosen": [
+   "convert the three source essay questions into the 4+1 format, keeping the SKEMA answers as the key material",
+   "keep the source essay assessment as-is for K3 and treat 4+1 as K5-shaped",
+   "run both — source LATIHAN as a reflection, 4+1 as the scored quiz"
+  ],
+  "note": "Not chosen here. This is exactly the kind of format decision the pattern package under review exists to settle, and the source answers are strong enough that guessing would waste them."
+ },
+ "models": [
+  {
+   "course": "K3",
+   "pl": "PL01",
+   "unit_id": "K3-M01-PL01",
+   "title": "Pengenalan Pengurusan Kerja Penstabilan Tanah",
+   "authority_inherited": "SRC-AUTH-01",
+   "stage": "4.2F-C",
+   "source": {
+    "cls": "SOURCE_DERIVED",
+    "pages": 17,
+    "top_sections": 7,
+    "tables": 2,
+    "figures": 7,
+    "drive_id": "1jVNJhmX-MEkHGfjOJ6b2IrfkjXICuijd"
+   },
+   "grouping": {
+    "cls": "CAIR_PROPOSAL",
+    "basis": "TOP_LEVEL_NUMBERED_SECTION",
+    "groups": [
+     {
+      "group_id": "G1",
+      "covers": "Asas konsep penyiasatan dan penstabilan tanah"
+     },
+     {
+      "group_id": "G2",
+      "covers": "Kepentingan penyiasatan tanah"
+     },
+     {
+      "group_id": "G3",
+      "covers": "Kepentingan penstabilan tanah"
+     },
+     {
+      "group_id": "G4",
+      "covers": "Kaedah penyiasatan tanah"
+     },
+     {
+      "group_id": "G5",
+      "covers": "Kaedah penstabilan tanah"
+     },
+     {
+      "group_id": "G6",
+      "covers": "Faktor pemilihan kaedah penyiasatan"
+     },
+     {
+      "group_id": "G7",
+      "covers": "Faktor pemilihan kaedah penstabilan"
+     }
+    ]
+   },
+   "screen_sequence": {
+    "cls": "CAIR_PROPOSAL",
+    "arithmetic": {
+     "shell_screens": 2,
+     "shell_includes_dialogue": false,
+     "content_groups": 7,
+     "closing_screens": 3,
+     "minimum_total_screens": 12,
+     "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+    }
+   },
+   "pattern_family": {
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "primary_candidate": "click-to-reveal",
+    "secondary_candidate": "comparison",
+    "reason": "Two eight-row importance tables and two five-method lists sit in parallel — penyiasatan against penstabilan — which is a comparison; the method lists themselves are reveals."
+   },
+   "dialogue": {
+    "cls": "CAIR_PROPOSAL",
+    "verdict": "NOT_JUSTIFIED",
+    "reason": "A concepts-and-methods package with no decision scenario in the source.",
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+   },
+   "runtime_state_estimate": {
+    "cls": "CAIR_PROPOSAL",
+    "base_states_floor": 12,
+    "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+    "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+   },
+   "rumusan": {
+    "cls": "CAIR_PROPOSAL",
+    "beat_count": 3,
+    "beats": [
+     "Penyiasatan tanah dan penstabilan tanah sebagai dua proses yang saling melengkapi.",
+     "Lima kaedah penyiasatan dan lima kaedah penstabilan.",
+     "Faktor yang menentukan pemilihan kaedah di tapak."
+    ],
+    "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+   },
+   "source_assessment": {
+    "questions": [
+     "Jelaskan kepentingan penyiasatan tanah dalam pembinaan.",
+     "Huraikan dua kaedah penstabilan tanah dan situasi penggunaannya.",
+     "Apakah faktor yang mempengaruhi pemilihan kaedah penyiasatan tanah?"
+    ],
+    "model_answers": [
+     [
+      "Menentukan sifat dan keadaan tanah tapak",
+      "Mengurangkan risiko kegagalan struktur",
+      "Menyediakan data teknikal untuk reka bentuk asas"
+     ],
+     [
+      "Penstabilan mekanikal",
+      "Penstabilan kimia",
+      "Penstabilan melalui penggantian tanah (soil replacement)"
+     ],
+     [
+      "Jenis tanah (liat, pasir, gambut)",
+      "Akses dan keadaan tapak",
+      "Tujuan projek dan jenis struktur"
+     ]
+    ],
+    "cls": "SOURCE_DERIVED",
+    "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED"
+   },
+   "assessment_format_conflict": {
+    "id": "K3-ASSESS-01",
+    "finding": "Both K3 units carry a source-authored LATIHAN and a SKEMA JAWAPAN. The questions are short-essay with a 15-minute allowance and three model answers each. The course-wide rule AR-01 is 4 Multiple Choice + 1 Multiple Response. The source assessment and the course format do not match.",
+    "classification": "PENDING_BARIAH_PATTERN_DECISION",
+    "options_not_chosen": [
+     "convert the three source essay questions into the 4+1 format, keeping the SKEMA answers as the key material",
+     "keep the source essay assessment as-is for K3 and treat 4+1 as K5-shaped",
+     "run both — source LATIHAN as a reflection, 4+1 as the scored quiz"
+    ],
+    "note": "Not chosen here. This is exactly the kind of format decision the pattern package under review exists to settle, and the source answers are strong enough that guessing would waste them."
+   },
+   "visual_obligations": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 7,
+    "source_attested": 7,
+    "subjects": [
+     {
+      "subject": "Rajah 1: Surface Reconnaissance",
+      "has_source_figure": true
+     },
+     {
+      "subject": "Rajah 2: Dynamic Cone Penetrometer",
+      "has_source_figure": true
+     },
+     {
+      "subject": "Rajah 3: Boring",
+      "has_source_figure": true
+     },
+     {
+      "subject": "Rajah 4: Standard Penetration Test – SPT",
+      "has_source_figure": true
+     },
+     {
+      "subject": "Rajah 5: Soil Laboratory Testing",
+      "has_source_figure": true
+     },
+     {
+      "subject": "Rajah 6: Pemilihan Kaedah Penyiasatan Tanah",
+      "has_source_figure": true
+     },
+     {
+      "subject": "Rajah 7: Faktor-Faktor Pemilihan Kaedah Penstabilan Tanah",
+      "has_source_figure": true
+     }
+    ],
+    "note": "Unlike every K5 unit in this run, PL01's visual subjects are named and captioned in the source itself. RP-104 is satisfiable here in a way it is not for K5 batch 1."
+   },
+   "frozen_nothing": [
+    "screen count",
+    "sequence",
+    "dialogue",
+    "Rumusan form",
+    "pattern family",
+    "assessment key",
+    "visual reuse"
+   ]
+  },
+  {
+   "course": "K3",
+   "pl": "PL03",
+   "unit_id": "K3-M01-PL03",
+   "title": "Inovasi Teknologi Digital dan Automasi dalam Penstabilan Tanah",
+   "authority_inherited": "SRC-AUTH-01",
+   "stage": "4.2F-C",
+   "source": {
+    "cls": "SOURCE_DERIVED",
+    "pages": 9,
+    "top_sections": 3,
+    "tables": 1,
+    "figures": 0,
+    "drive_id": "1yRqREUFlu2jDmPCgwh3XywLiFooej6sW"
+   },
+   "grouping": {
+    "cls": "CAIR_PROPOSAL",
+    "basis": "TOP_LEVEL_NUMBERED_SECTION",
+    "groups": [
+     {
+      "group_id": "G1",
+      "covers": "Pengenalan kepada digital dan inovasi"
+     },
+     {
+      "group_id": "G2",
+      "covers": "Teknologi digital: peralatan, bahan, mesin"
+     },
+     {
+      "group_id": "G3",
+      "covers": "Cabaran dan strategi pelaksanaan"
+     }
+    ]
+   },
+   "screen_sequence": {
+    "cls": "CAIR_PROPOSAL",
+    "arithmetic": {
+     "shell_screens": 2,
+     "shell_includes_dialogue": false,
+     "content_groups": 3,
+     "closing_screens": 3,
+     "minimum_total_screens": 8,
+     "maximum_total_screens": "UNKNOWN_PENDING_PATTERN_DECISION"
+    }
+   },
+   "pattern_family": {
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "primary_candidate": "click-to-reveal",
+    "secondary_candidate": "comparison",
+    "reason": "Section 2 fans into three categories of four lettered items each — twelve reveals in a three-way structure. Section 3 is a challenge-against-strategy table, which is a comparison."
+   },
+   "dialogue": {
+    "cls": "CAIR_PROPOSAL",
+    "verdict": "NOT_JUSTIFIED",
+    "reason": "A technology catalogue. No scenario in the source.",
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN"
+   },
+   "runtime_state_estimate": {
+    "cls": "CAIR_PROPOSAL",
+    "base_states_floor": 8,
+    "triggered_states": "UNKNOWN_PENDING_PATTERN_DECISION",
+    "total_runtime_states": "UNKNOWN_PENDING_PATTERN_DECISION"
+   },
+   "rumusan": {
+    "cls": "CAIR_PROPOSAL",
+    "beat_count": 3,
+    "beats": [
+     "Teknologi digital sebagai pengganti dan pelengkap kaedah tradisional.",
+     "Tiga kategori inovasi: peralatan, bahan dan mesin.",
+     "Tiga cabaran pelaksanaan dan strategi mengatasinya."
+    ],
+    "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+   },
+   "source_assessment": {
+    "questions": [
+     "Terangkan dua contoh teknologi peralatan digital yang digunakan dalam kerja penyiasatan tanah serta huraikan bagaimana ia membantu kontraktor mengesahkan reka bentuk yang diberi oleh perunding.",
+     "Jelaskan peranan bahan teknologi baharu seperti Smart Polymer, Nano-Silika atau MICP dalam meningkatkan keberkesanan kerja penstabilan tanah oleh kontraktor.",
+     "Huraikan 2 contoh mesin yang digunakan dalam kerja penstabilan tanah dan jelaskan bagaimana teknologi automasi membantu meningkatkan kawalan kualiti di tapak pembinaan."
+    ],
+    "model_answers": [
+     [
+      "GPR AI-Enhanced",
+      "UAV LiDAR Hybrid",
+      "IoT Geotechnical Sensors",
+      "Cloud-based GIS & Automated Data Logger"
+     ],
+     [
+      "Smart Polymer Soil Stabiliser",
+      "Nano-Silika dan Geopolimer",
+      "Biopolimer dan Enzim Stabiliser",
+      "MICP Industri"
+     ],
+     [
+      "Automated Drilling Rig & Digital CPTu",
+      "Jet Grouting Machine Digital dengan Flow Control",
+      "Deep Soil Mixing GPS Integrated",
+      "Vibro-Compaction 4.0 & Dynamic Compaction AI-Controlled"
+     ]
+    ],
+    "cls": "SOURCE_DERIVED",
+    "key_status": "SOURCE_AUTHORED_NOT_STORYBOARD_APPROVED",
+    "marks_note": "The SKEMA allocates marks per part — 2 + 4 + 4 for each question."
+   },
+   "assessment_format_conflict": {
+    "id": "K3-ASSESS-01",
+    "finding": "Both K3 units carry a source-authored LATIHAN and a SKEMA JAWAPAN. The questions are short-essay with a 15-minute allowance and three model answers each. The course-wide rule AR-01 is 4 Multiple Choice + 1 Multiple Response. The source assessment and the course format do not match.",
+    "classification": "PENDING_BARIAH_PATTERN_DECISION",
+    "options_not_chosen": [
+     "convert the three source essay questions into the 4+1 format, keeping the SKEMA answers as the key material",
+     "keep the source essay assessment as-is for K3 and treat 4+1 as K5-shaped",
+     "run both — source LATIHAN as a reflection, 4+1 as the scored quiz"
+    ],
+    "note": "Not chosen here. This is exactly the kind of format decision the pattern package under review exists to settle, and the source answers are strong enough that guessing would waste them."
+   },
+   "visual_obligations": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 2,
+    "source_attested": 0,
+    "subjects": [
+     {
+      "subject": "Twelve digital technologies across peralatan, bahan and mesin",
+      "has_source_figure": false
+     },
+     {
+      "subject": "Jadual: cabaran against strategi mengatasi",
+      "has_source_figure": false
+     }
+    ],
+    "note": "Unlike every K5 unit in this run, PL01's visual subjects are named and captioned in the source itself. RP-104 is satisfiable here in a way it is not for K5 batch 1."
+   },
+   "frozen_nothing": [
+    "screen count",
+    "sequence",
+    "dialogue",
+    "Rumusan form",
+    "pattern family",
+    "assessment key",
+    "visual reuse"
+   ]
+  }
+ ]
+}

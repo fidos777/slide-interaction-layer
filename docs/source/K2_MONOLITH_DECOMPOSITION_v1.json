@@ -1,0 +1,58 @@
+{
+ "course": "K2",
+ "course_title": "Pengurusan Pembinaan Landasan",
+ "folder_id": "1OHB-x0zOPEOLHYSxtJDyJVG5FmEECUBp",
+ "file": {
+  "filename": "2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "drive_id": "1BW-OibYv3sDyordi0YIQkb5vXeAdOtMn",
+  "bytes": 25043306,
+  "bytes_source": "DRIVE_METADATA",
+  "sha256": "SHA256_NOT_COMPUTED_NO_LOCAL_BINARY",
+  "format": "PDF",
+  "format_basis": "DRIVE_MIME_TYPE"
+ },
+ "outcome": "NOT_PERFORMED_LOCAL_BINARY_UNAVAILABLE",
+ "page_count": "UNKNOWN_NOT_MEASURED",
+ "heading_tree": "UNKNOWN_NOT_MEASURED",
+ "module_pl_hierarchy": "UNKNOWN_NOT_MEASURED",
+ "descendant_map": "UNKNOWN_NOT_MEASURED",
+ "latihan_locations": "UNKNOWN_NOT_MEASURED",
+ "skema_jawapan_locations": "UNKNOWN_NOT_MEASURED",
+ "image_inventory": "UNKNOWN_NOT_MEASURED",
+ "table_inventory": "UNKNOWN_NOT_MEASURED",
+ "candidate_unit_boundaries": "UNKNOWN_NOT_MEASURED",
+ "shared_page_risks": "UNKNOWN_NOT_MEASURED",
+ "candidate_clean_units": "UNKNOWN_NOT_MEASURED",
+ "estimated_total_units": "UNKNOWN_NOT_MEASURED",
+ "first_clean_candidate_unit": null,
+ "first_clean_candidate_model": "NOT_PERFORMED_LOCAL_BINARY_UNAVAILABLE",
+ "missing_capability": {
+  "what_is_missing": "the monolith as a local file, or a page-bounded connector read",
+  "exact_identifier": "Drive file 1BW-OibYv3sDyordi0YIQkb5vXeAdOtMn — 2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "folder": "Drive folder 1OHB-x0zOPEOLHYSxtJDyJVG5FmEECUBp — 2_Kursus Pengurusan Pembinaan Landasan",
+  "why": "The connector returns whole-file text and warns it may be incomplete for very large files. At 25,043,306 bytes this is by far the largest source in the project — roughly 28 times the largest K3 PDF that was read. Pulling it through a text channel would consume the remainder of this run's working context and would still not give a page count, an image inventory or a table inventory, because those need the binary.",
+  "what_would_unblock_it": [
+   "the PDF placed on local disk in this environment, where PyMuPDF is already available and gives page count, heading tree, images and tables directly",
+   "or a connector that can return a named page range rather than the whole file"
+  ]
+ },
+ "uncertainty_register": [
+  {
+   "item": "Page count",
+   "status": "UNKNOWN_NOT_MEASURED",
+   "note": "Not estimated from byte size. A 25 MB PDF may be 100 image-heavy pages or 900 text pages, and guessing would put a number into the production queue that nobody measured."
+  },
+  {
+   "item": "Whether the monolith contains PL packages at all",
+   "status": "LIKELY_BUT_UNVERIFIED",
+   "note": "The K3 folder holds nine PL PDFs and the K5 folder holds one module DOCX covering eight PLs, so both shapes exist in this project. Which shape K2 has was not verified."
+  },
+  {
+   "item": "Candidate unit count",
+   "status": "UNKNOWN_NOT_MEASURED",
+   "note": "Cannot be derived without the heading tree."
+  }
+ ],
+ "authority_inherited": "SRC-AUTH-01",
+ "note": "Recorded as not performed, with the exact identifier named, rather than filled in from the shape of the other two courses. Every other lane in this run continued."
+}

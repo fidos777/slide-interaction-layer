@@ -1,0 +1,412 @@
+{
+ "course": "K5",
+ "scope_requested": [
+  "PL01",
+  "PL02",
+  "PL03",
+  "PL04",
+  "PL05",
+  "PL07"
+ ],
+ "pakej_latihan_in_module": 8,
+ "syllabus_authority": "module's own syllabus table, module pages xvii-xviii",
+ "prior_estimate": {
+  "prior_estimate": "approximately 33 units",
+  "status": "NOT_CARRIED_FORWARD_AS_A_PRODUCTION_FACT",
+  "reason": "It was a planning estimate. This lane publishes what is evidenced instead: confirmed units, candidate units, and source regions nobody has mapped."
+ },
+ "findings": [
+  {
+   "id": "K5-INV-01",
+   "severity": "SCOPE",
+   "finding": "The module contains EIGHT Pakej Latihan. Its own syllabus table on module pages xvii-xviii lists PL01 to PL08, and every one of them has body headings in the DOCX. This lane was scoped to PL01-PL05 and PL07; PL08 'Inovasi & Teknologi Landskap' exists, occupies module pages 316 onward, and is inventoried here rather than left unmentioned."
+  },
+  {
+   "id": "K5-INV-02",
+   "severity": "SOURCE_ANOMALY",
+   "finding": "The syllabus table gives PL07 three sub-modul, the third being 'Organisasi Landskap Projek Luar' — which is PL02's third sub-modul, repeated. The body has only two headings between module pages 310 and 315. Recorded, not corrected; the body-anchor precedence rule already governs extraction."
+  },
+  {
+   "id": "K5-INV-03",
+   "severity": "BOUNDARY_RISK",
+   "finding": "PL03 carries two top-level headings on the same printed page: SEBUT HARGA and LUKISAN TENDER both begin on module page 80. Any unit split between them is a shared-page boundary and must be split by heading anchor, exactly as T03-B03 and T03-B04 were."
+  },
+  {
+   "id": "K5-INV-04",
+   "severity": "SCALE",
+   "finding": "PL05 is six module pages with two sub-modul, and PL07 is six pages with two. PL03 is fifty-five pages with eight. Unit counts cannot be spread evenly across PLs, and the previous planning estimate of roughly 33 units is not carried forward as a production fact."
+  }
+ ],
+ "rows": [
+  {
+   "course": "K5",
+   "pl": "PL01",
+   "title": "Pengenalan Dan Latar Belakang Industri Landskap Luar",
+   "in_lane_6_scope": true,
+   "module_pages": [
+    1,
+    32
+   ],
+   "page_count": 32,
+   "sub_modul_count": 4,
+   "sub_modul": [
+    {
+     "text": "PENGENALAN DAN LATAR BELAKANG INDUSTRI LANDSKAP LUAR",
+     "paragraph": 152,
+     "page": 1
+    },
+    {
+     "text": "KONSEP SENI BINA LANDSKAP",
+     "paragraph": 264,
+     "page": 9
+    },
+    {
+     "text": "KATEGORI LANDSKAP LUAR",
+     "paragraph": 359,
+     "page": 16
+    },
+    {
+     "text": "SKOP KERJA UTAMA LANDSKAP LUAR BANGUNAN",
+     "paragraph": 505,
+     "page": 27
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 4,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  },
+  {
+   "course": "K5",
+   "pl": "PL02",
+   "title": "Pengurusan Operasi Perniagaan",
+   "in_lane_6_scope": true,
+   "module_pages": [
+    33,
+    76
+   ],
+   "page_count": 44,
+   "sub_modul_count": 3,
+   "sub_modul": [
+    {
+     "text": "PASUKAN PELAKSANA PROJEK PEMBINAAN LANDSKAP LUAR",
+     "paragraph": 582,
+     "page": 33
+    },
+    {
+     "text": "PASUKAN PERUNDING TEKNIKAL DAN PAKAR",
+     "paragraph": 979,
+     "page": 49
+    },
+    {
+     "text": "ORGANISASI PROJEK LANDSKAP LUAR",
+     "paragraph": 1327,
+     "page": 64
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 3,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  },
+  {
+   "course": "K5",
+   "pl": "PL03",
+   "title": "Pengurusan Tender",
+   "in_lane_6_scope": true,
+   "module_pages": [
+    77,
+    131
+   ],
+   "page_count": 55,
+   "sub_modul_count": 8,
+   "sub_modul": [
+    {
+     "text": "TENDER",
+     "paragraph": 1569,
+     "page": 77
+    },
+    {
+     "text": "SEBUT HARGA",
+     "paragraph": 1597,
+     "page": 80
+    },
+    {
+     "text": "LUKISAN TENDER",
+     "paragraph": 1600,
+     "page": 80
+    },
+    {
+     "text": "KOMPONEN SENARAI KUANTITI LANDSKAP / BILLS OF QUANTITIES",
+     "paragraph": 1673,
+     "page": 84
+    },
+    {
+     "text": "SPESIFIKASI",
+     "paragraph": 1790,
+     "page": 89
+    },
+    {
+     "text": "PENYEDIAAN DATA KOS, ANGGARAN DAN TENDER LANDSKAP",
+     "paragraph": 1902,
+     "page": 94
+    },
+    {
+     "text": "PENYEDIAAN DOKUMENTASI TENDER",
+     "paragraph": 2491,
+     "page": 120
+    },
+    {
+     "text": "STRUKTUR PELAPORAN TEKNIKAL DAN DOKUMENTASI PROJEK",
+     "paragraph": 2598,
+     "page": 124
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 8,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": true,
+    "shared_pages": [
+     80
+    ],
+    "note": "Two sub-modul begin on the same printed page."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  },
+  {
+   "course": "K5",
+   "pl": "PL04",
+   "title": "Pelaksanaan Dan Pengurusan Kontrak",
+   "in_lane_6_scope": true,
+   "module_pages": [
+    132,
+    155
+   ],
+   "page_count": 24,
+   "sub_modul_count": 2,
+   "sub_modul": [
+    {
+     "text": "PENGURUSAN KEPERLUAN DAN DOKUMENTASI KONTRAK",
+     "paragraph": 2744,
+     "page": 132
+    },
+    {
+     "text": "PENGURUSAN PENENTUAN ATAU PENAMATAN KONTRAK",
+     "paragraph": 3123,
+     "page": 151
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 2,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  },
+  {
+   "course": "K5",
+   "pl": "PL05",
+   "title": "Perancangan Dan Penjadualan Projek",
+   "in_lane_6_scope": true,
+   "module_pages": [
+    156,
+    161
+   ],
+   "page_count": 6,
+   "sub_modul_count": 2,
+   "sub_modul": [
+    {
+     "text": "PENYEDIAAN WORK BREAKDOWN STRUCTRUE (WBS) UNTUK LANDSKAP KEJUR DAN LEMBUT",
+     "paragraph": 3238,
+     "page": 156
+    },
+    {
+     "text": "PENYEDIAAN PROGRAM KERJA (WORK PROGRAM) DAN PENJADUALAN PEMBINAAN LANDSKAP",
+     "paragraph": 3310,
+     "page": 159
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 2,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  },
+  {
+   "course": "K5",
+   "pl": "PL06",
+   "title": "Pengurusan Operasi Pembinaan Landskap",
+   "in_lane_6_scope": false,
+   "module_pages": [
+    162,
+    309
+   ],
+   "page_count": 148,
+   "sub_modul_count": 7,
+   "sub_modul": [
+    {
+     "text": "PROSES MEMULA KERJA",
+     "paragraph": 3375,
+     "page": 162
+    },
+    {
+     "text": "ELEMEN PEMBINAAN LANDSKAP",
+     "paragraph": 4085,
+     "page": 201
+    },
+    {
+     "text": "KOMPONEN LANDSKAP",
+     "paragraph": 4463,
+     "page": 226
+    },
+    {
+     "text": "PENJAAGAAN DAN PENYELENGGARAAN",
+     "paragraph": 5220,
+     "page": 276
+    },
+    {
+     "text": "PENGURUSAN KUALITI PROJEK",
+     "paragraph": 5360,
+     "page": 284
+    },
+    {
+     "text": "PERLINDUNGAN DAN PENAMBAHBAIKAN ALAM SEKITAR",
+     "paragraph": 5543,
+     "page": 294
+    },
+    {
+     "text": "DEMOBILISASI",
+     "paragraph": 5705,
+     "page": 303
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 14,
+   "candidate_units": 0,
+   "unit_basis": "FROZEN_BOUNDARY_MAP",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": false
+  },
+  {
+   "course": "K5",
+   "pl": "PL07",
+   "title": "Penyerahan Projek",
+   "in_lane_6_scope": true,
+   "module_pages": [
+    310,
+    315
+   ],
+   "page_count": 6,
+   "sub_modul_count": 2,
+   "sub_modul": [
+    {
+     "text": "PENYEDIAAN DOKUMEN SERAHAN",
+     "paragraph": 5813,
+     "page": 310
+    },
+    {
+     "text": "MENGURUS LIABILITI KECACATAN DAN CMGD",
+     "paragraph": 5866,
+     "page": 312
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 2,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  },
+  {
+   "course": "K5",
+   "pl": "PL08",
+   "title": "Inovasi & Teknologi Landskap",
+   "in_lane_6_scope": false,
+   "module_pages": [
+    316,
+    332
+   ],
+   "page_count": 17,
+   "sub_modul_count": 1,
+   "sub_modul": [
+    {
+     "text": "APLIKASI TEKNOLOGI DAN INOVASI DALAM PEMBINAAN",
+     "paragraph": 5949,
+     "page": 316
+    }
+   ],
+   "source_availability": "LOCAL_BINARY_HASH_VERIFIED",
+   "quiz_available": false,
+   "quiz_note": "The K5 module carries no LATIHAN or SKEMA JAWAPAN section anywhere. K3's packages do. Every K5 quiz to date has been drafted from content, and that remains true for every PL here.",
+   "confirmed_units": 0,
+   "candidate_units": 1,
+   "unit_basis": "SUB_MODUL_HEADING_ONE_CANDIDATE_EACH",
+   "shared_boundary_risk": {
+    "risk": false,
+    "shared_pages": [],
+    "note": "No two sub-modul in this PL begin on the same printed page. Whether a unit boundary inside a sub-modul shares a page is not determined until that unit is mapped."
+   },
+   "source_completeness": "COMPLETE_BODY_TEXT_PRESENT",
+   "unmapped": true
+  }
+ ],
+ "totals": {
+  "confirmed_units": 14,
+  "candidate_units": 22,
+  "unmapped_source_regions": 7,
+  "unmapped_pages": 184,
+  "total_module_pages": 332
+ }
+}
