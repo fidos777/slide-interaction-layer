@@ -1,0 +1,167 @@
+{
+ "record": {
+  "record_id": "K2-CUSTODY-02",
+  "supersedes": "K2-CUSTODY-01 (Stage 4.2F-C/D scoped blocker report)",
+  "supersession_note": "The earlier blocker report is PRESERVED_UNCHANGED as historical evidence. It was correct when written and it is still correct: the binary was not retrievable then and is not retrievable now. This record adds the Drive binding and the partial text read.",
+  "status": "NOT_FOUND_IN_LOCATIONS_SEARCHED",
+  "binary_local": false,
+  "binary_readable": false,
+  "content_read": "PARTIAL",
+  "evidence_class": "CONNECTOR_TEXT_READABLE_PARTIAL",
+  "states_claimed": [
+   "SOURCE_LOCATED_BY_CONNECTOR",
+   "SOURCE_CONTENT_PARTIALLY_READ"
+  ],
+  "states_not_claimed": [
+   "SOURCE_BINARY_LOCAL",
+   "SOURCE_BINARY_READABLE",
+   "SOURCE_CONTENT_READ",
+   "BOUNDARY_CONFIRMED",
+   "EXTRACTED"
+  ],
+  "states_not_claimed_why": "The brief asked for the live status to move to SOURCE_BINARY_LOCAL / SOURCE_BINARY_READABLE / SOURCE_CONTENT_READ. Two of those three are false and the third is only partly true, so none is claimed. Moving the status because a run expected it to move is the exact failure this register exists to prevent.",
+  "unverifiable": {
+   "sha256": "NOT_READ_BINARY_UNAVAILABLE",
+   "pdf_validity": "NOT_READ_BINARY_UNAVAILABLE",
+   "encryption_status": "NOT_READ_BINARY_UNAVAILABLE",
+   "page_count_verified": "NOT_READ_BINARY_UNAVAILABLE",
+   "image_readability": "NOT_READ_BINARY_UNAVAILABLE",
+   "table_readability": "NOT_READ_BINARY_UNAVAILABLE",
+   "pdf_metadata": "NOT_READ_BINARY_UNAVAILABLE",
+   "note": "Each of these requires the bytes. The brief's stated values are recorded as EXPECTED, never as OBSERVED."
+  }
+ },
+ "expected": {
+  "source": "the Stage 4.2F-E brief",
+  "filename": "2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "stated_runtime_path": "/mnt/data/2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "bytes": 25043306,
+  "sha256": "0b2d81dda46eaf4fb018a20a78f7f9b2870129c61125768e4438937f3f405680",
+  "pages": 346
+ },
+ "drive": {
+  "drive_id": "1BW-OibYv3sDyordi0YIQkb5vXeAdOtMn",
+  "title": "2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+  "file_size": 25043306,
+  "mime_type": "application/pdf",
+  "file_extension": "pdf",
+  "created_time": "2026-06-16T02:38:52.120Z",
+  "modified_time": "2026-04-30T18:15:43Z",
+  "parent_id": "1OHB-x0zOPEOLHYSxtJDyJVG5FmEECUBp",
+  "evidence_class": "CONNECTOR_IDENTIFIED"
+ },
+ "binding": {
+  "binding_id": "K2-BIND-01",
+  "drive_id": "1BW-OibYv3sDyordi0YIQkb5vXeAdOtMn",
+  "filename_matches": true,
+  "bytes_match": true,
+  "sha256_verified": false,
+  "sha256_verifiable": false,
+  "why_not": "A hash requires the bytes. The connector returns metadata and an extracted text rendering, never the binary, so the SHA-256 in the brief could not be confirmed or refuted.",
+  "conclusion": "The Drive identifier resolves to a file whose name and byte count both equal the brief's expected identity. That is a strong binding and it is NOT proof of content: two files can share a size. The binding is recorded at CONNECTOR_IDENTIFIED, one class below LOCAL_BINARY_HASH_VERIFIED."
+ },
+ "connector_read": {
+  "read_id": "K2-READ-01",
+  "chars": 62638,
+  "document_pages_declared_by_brief": 346,
+  "chars_per_page_if_complete": 181.0,
+  "complete": false,
+  "truncation_evidence": [
+   "The text ends mid-document inside teaching plan PT09, at the marker 'NO. KOD PT PT09 Muka Surat: 2/6' — PT09 declares six pages and only two appear.",
+   "62,638 characters over 346 pages is about 181 characters a page. The K3 packages, read through the same connector, ran 1,500 to 2,000 characters a page.",
+   "Not one 'KOD PL PLxx Muka Surat' marker appears. The PL packages are the bulk of the document and none of their pages came back."
+  ],
+  "covers": [
+   "front matter",
+   "KANDUNGAN MODUL DAN PAKEJ LATIHAN summary table",
+   "section 1.5 Silibus Modul Latihan and its table",
+   "section 1.6 Tempoh Latihan and its hour tables",
+   "teaching plans PT01 to PT08 in full",
+   "teaching plan PT09, first two of six pages"
+  ],
+  "does_not_cover": [
+   "every PL package body (PL01 to PL09)",
+   "all LATIHAN sections",
+   "all SKEMA JAWAPAN sections",
+   "appendices and supporting material",
+   "any image or table beyond those in the front matter"
+  ],
+  "consequence": "Course-level structure is fully evidenced. Unit-level decomposition is not evidenced at all, and is not attempted."
+ },
+ "locations_searched": [
+  {
+   "location": "/mnt/data/2. PENGURUSAN PEMBINAAN LANDASAN.pdf",
+   "method": "direct stat of the path named in the brief",
+   "found": false,
+   "note": "The path does not exist. /mnt/data is not a directory on this box."
+  },
+  {
+   "location": "/mnt (attach, user-data, skills)",
+   "method": "recursive listing",
+   "found": false,
+   "note": "/mnt/attach is empty; /mnt/user-data holds only 'working'."
+  },
+  {
+   "location": "whole filesystem, by exact byte size",
+   "method": "find / -type f -size 25043306c",
+   "found": false,
+   "note": "No file of exactly 25,043,306 bytes exists anywhere on the box."
+  },
+  {
+   "location": "whole filesystem, by name",
+   "method": "find / -iname '*LANDASAN*'",
+   "found": false,
+   "note": "No match."
+  },
+  {
+   "location": "whole filesystem, large PDFs",
+   "method": "find / -iname '*.pdf' -size +20M",
+   "found": false,
+   "note": "No PDF over 20 MB exists. The largest PDF present is 9,039,981 bytes and is the K5 rendered module."
+  },
+  {
+   "location": "session upload directory",
+   "method": "listing /root/.claude/uploads/<session>/",
+   "found": false,
+   "note": "21 files present, newest 2026-08-03 02:28. Nothing was uploaded for this run, and no member is the K2 PDF."
+  },
+  {
+   "location": "every ZIP archive on the box",
+   "method": "enumerating members of all *.zip over 1 MB",
+   "found": false,
+   "note": "No member is named LANDASAN and no member is 25,043,306 bytes. The only large archive is the PL06 freeze at 25,142,903 bytes — a similar size, a different file, and its members are the K5 module."
+  },
+  {
+   "location": "all runtime mounts",
+   "method": "findmnt over every target",
+   "found": false,
+   "note": "Mounts are /proc, /sys, /dev, cgroups, /opt/rclone, /opt/claude-code, /opt/env-runner and /mnt/skills. None carries user data."
+  },
+  {
+   "location": "recently written files",
+   "method": "find / -newermt '-3 hours' -size +1M",
+   "found": false,
+   "note": "Only logs, the session transcript, and files this session itself wrote."
+  },
+  {
+   "location": "rclone remotes",
+   "method": "/opt/rclone/rclone listremotes",
+   "found": false,
+   "note": "The rclone binary is not present at that path; only a 'rclone-filestore' directory entry exists. No remote could be listed."
+  },
+  {
+   "location": "Google Drive, by the known identifier",
+   "method": "connector get_file_metadata + read_file_content",
+   "found": "METADATA_AND_PARTIAL_TEXT",
+   "note": "Metadata resolved and matched the expected name and byte count. Text returned but truncated. The binary itself is never returned by this tool."
+  }
+ ],
+ "locations_not_searched": [
+  "any machine other than this container — there is no route to the operator's disk",
+  "Google Drive folders other than the parent of the known identifier",
+  "any CIDB internal system, SharePoint or shared drive",
+  "email attachments or chat transcripts outside this session"
+ ],
+ "authority_inherited": "SRC-AUTH-01",
+ "stage": "4.2F-E"
+}

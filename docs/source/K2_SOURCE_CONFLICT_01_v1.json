@@ -1,0 +1,100 @@
+{
+ "conflict_id": "K2-SOURCE-CONFLICT-01",
+ "subject": "how many training modules the K2 course contains",
+ "evidence": [
+  {
+   "source": "narrative prose, section 1.5 Silibus Modul Latihan",
+   "exact_value": "Panduan ini mengandungi lapan (8) modul latihan yang dibangunkan oleh panel-panel Jawatankuasa Pembangunan Modul dilantik hasil.",
+   "asserts_module_count": 8,
+   "kind": "PROSE"
+  },
+  {
+   "source": "the silibus table, printed immediately below that sentence",
+   "exact_value": "01. Business Operation Management M01-LP01 M01-LP02 M01-LP03 M01-LP04 | 02. Tendering Management M01-LP05 | 03. Contract Implementation & Management M01-LP06 | 04. Project Planning & Scheduling M01-LP07 | 05. Construction Operation Management M01-LP08 | 06. Project Handover M01-LP09",
+   "asserts_module_count": 6,
+   "asserts_package_count": 9,
+   "kind": "TABLE"
+  },
+  {
+   "source": "KANDUNGAN MODUL DAN PAKEJ LATIHAN, front matter",
+   "exact_value": "module rows numbered 1 to 6; package codes PL01 to PL09",
+   "asserts_module_count": 6,
+   "asserts_package_count": 9,
+   "kind": "TABLE"
+  },
+  {
+   "source": "section 1.6 Tempoh Latihan, module-hours table",
+   "exact_value": "LP01 LP02 LP03 LP04 LP05 LP06 LP07 LP08 LP09",
+   "asserts_package_count": 9,
+   "kind": "TABLE"
+  },
+  {
+   "source": "the nine teaching plans, each carrying its own module header",
+   "exact_value": "PT01-PT04 -> M01; PT05 -> M02; PT06 -> M03; PT07 -> M04; PT08 -> M05; PT09 -> M06",
+   "asserts_module_count": 6,
+   "asserts_package_count": 9,
+   "kind": "REPEATED_SECTION"
+  }
+ ],
+ "finding": "Four independent enumerations — two front-matter tables, an hours table and nine separately-headed teaching plans — agree on six modules and nine packages. One prose sentence says eight. The eight matches nothing in the document: not the six named modules, not the nine LP codes, not the nine PL codes, not the nine teaching plans. It is contradicted by the table printed directly beneath it.",
+ "narrative_module_count": 8,
+ "syllabus_table_module_count": 6,
+ "module_codes_present": [
+  "M01",
+  "M02",
+  "M03",
+  "M04",
+  "M05",
+  "M06"
+ ],
+ "pl_codes_present": [
+  "PL01",
+  "PL02",
+  "PL03",
+  "PL04",
+  "PL05",
+  "PL06",
+  "PL07",
+  "PL08",
+  "PL09"
+ ],
+ "pt_codes_present": [
+  "PT01",
+  "PT02",
+  "PT03",
+  "PT04",
+  "PT05",
+  "PT06",
+  "PT07",
+  "PT08",
+  "PT09"
+ ],
+ "lp_codes_present": [
+  "M01-LP01",
+  "M01-LP02",
+  "M01-LP03",
+  "M01-LP04",
+  "M01-LP05",
+  "M01-LP06",
+  "M01-LP07",
+  "M01-LP08",
+  "M01-LP09"
+ ],
+ "classification": "TYPOGRAPHICAL",
+ "classification_reasoning": "Not METADATA_ONLY: the sentence is body prose a learner could read. Not SOURCE_AUTHORITY_CONFLICT: the sources are not of equal weight — one unsupported prose count against four enumerations, one of which is on the same page. Not INSTRUCTIONAL_STRUCTURE_DECISION_REQUIRED: nobody has to choose a structure. Six modules and nine packages are consistently supported, so there is nothing to decide — only something to correct.",
+ "requires_instructional_decision": false,
+ "routed_to": "FIRDAUS",
+ "route_type": "SOURCE_CONTENT_CORRECTION",
+ "in_bariah_register": false,
+ "silently_corrected": false,
+ "correction_note": "The source is not altered. The provisional structure used for decomposition is six modules and nine packages, as the brief permits when that structure is consistently supported, and this record travels with it.",
+ "secondary_defect": {
+  "defect_id": "K2-SOURCE-OBS-01",
+  "subject": "the KOD column of the silibus table",
+  "exact_value": "M01-LP01 through M01-LP09",
+  "finding": "All nine package codes are prefixed M01-, including those belonging to modules 02 through 06. The teaching plans independently assign PT05 to M02, PT06 to M03, PT07 to M04, PT08 to M05 and PT09 to M06, so the prefix is wrong for five of the nine rows.",
+  "classification": "TYPOGRAPHICAL",
+  "routed_to": "FIRDAUS",
+  "production_impact": "A parser keyed on the KOD column would file every package under M01 — the same defect the K3 queue carried until Stage 4.2F-D corrected it. K2 unit IDs must be built from the teaching-plan headers, not from this column."
+ }
+}
