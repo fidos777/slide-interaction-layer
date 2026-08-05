@@ -19,17 +19,27 @@ caller-supplied `f3_case`.
     F4 override   a screen the authority named explicitly wins outright
     F3 fallback   everything else is selected from the module's own structure
 
-PARITY POPULATION CONTRACT (binding on the 0c gate and its fixtures)
---------------------------------------------------------------------
+POST-0A PARITY POPULATION TARGET (binding on the 0c gate and its fixtures)
+--------------------------------------------------------------------------
+SUPERSEDES_THE_PRESENT_TENSE_PARITY_POPULATION_CLAIM_IN_ba73600.
+
+The ba73600 revision of this block stated five populations in the present tense,
+as though both six-record populations already existed. They do not. At the
+current commit:
+
+    current packet population      = ONE interaction record per active unit
+    current calibration population = six B03 content groups
+
+The packet lane has no group-level treatment decision at all, so there is nothing
+on that side to compare six-to-six with until 0a creates it. The six-and-six
+figures below are a TARGET the refactor must produce, not a description of today.
+
+    future packet population       = six canonical B03 group evidence records
+    future calibration population  = six canonical B03 group evidence records
+
 The shared constructor is NOT the parity population. Each lane must independently
 supply its own raw adapter inputs; the comparison population is the six canonical
 evidence records produced from those two independently supplied input sets.
-
-    expected B03 group population        = 6
-    packet adapter input population      = 6 unique canonical group IDs
-    calibration adapter input population = 6 unique canonical group IDs
-    packet canonical evidence population = 6
-    calibration canonical evidence population = 6
 
 An evidence-parity fixture MUST mutate exactly one lane BEFORE shared
 canonicalisation. It must NOT mutate the shared constructor, the shared resolver
@@ -38,6 +48,18 @@ would pass while proving nothing about divergence at the lane boundary. A fixtur
 that only perturbs the shared final treatment mapping is likewise insufficient —
 it cannot distinguish agreement from a shared last step, which is the whole defect
 this module exists to remove.
+
+CANONICAL HASHING (both pre-refactor oracles and any frozen baseline here)
+--------------------------------------------------------------------------
+    payload_bytes    = json.dumps(records, sort_keys=True,
+                                  separators=(",", ":")).encode("utf-8")
+    canonical_sha256 = sha256(payload_bytes).hexdigest()
+
+Hash the RECORDS payload only, never metadata that carries the hash itself.
+Default JSON separators are forbidden for hash comparison: they emit different
+bytes for semantically identical data, so two runs can disagree over whitespace
+and look like content drift. The serialization string must be recorded verbatim
+in the baseline metadata.
 
 Nothing here restates an F4 value as a literal. The overrides are read from the authority
 declaration, and this module holds no unit-specific wording of its own.
