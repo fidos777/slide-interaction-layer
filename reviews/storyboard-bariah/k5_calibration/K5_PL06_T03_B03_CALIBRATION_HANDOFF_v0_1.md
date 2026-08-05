@@ -5,23 +5,26 @@
 ```
 STAGE          = 4.2F-H
 UNIT           = K5-PL06-T03-B03 (Infrastruktur)
-STATUS         = DRAFT_FOR_BARIAH_REVIEW · NOT_INSTRUCTIONALLY_APPROVED · NOT_LEARNER_FACING_FINAL
-RENDER_STATUS  = NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE
+STATUS         = TECHNICAL_PROOF · DRAFT_FOR_BARIAH_REVIEW · NOT_INSTRUCTIONALLY_APPROVED · NOT_LEARNER_FACING_FINAL
+RENDER_STATUS  = NATIVE_RENDER_COMPLETED_LIBREOFFICE
+RENDERER       = LibreOffice 24.2.7.2 420(Build:2)
 ```
 
 ## 1. Files
 
 | File | Slides | Bytes |
 | --- | --- | --- |
-| K5PL06T03B03_STORYBOARD_KALIBRASI_DRAF_v0_1.pptx | 14 | 75,021 |
-| K5PL06T03B03_LAMPIRAN_KEADAAN_DRAF_v0_1_2panel.pptx | 21 | 69,183 |
-| K5PL06T03B03_LAMPIRAN_KEADAAN_DRAF_v0_1_3panel.pptx | 15 | 59,764 |
+| K5PL06T03B03_STORYBOARD_KALIBRASI_DRAF_v0_1.pptx | 18 | 87,717 |
+| K5PL06T03B03_LAMPIRAN_KEADAAN_DRAF_v0_1_2panel.pptx | 21 | 69,364 |
+| K5PL06T03B03_LAMPIRAN_KEADAAN_DRAF_v0_1_3panel.pptx | 15 | 59,866 |
 
 ## 2. Counts
 
 | Measure | Value |
 | --- | --- |
-| Learner screens | 12 |
+| **Learner screens** | **12** — unchanged by review pagination |
+| Storyboard review pages | 17 |
+| Storyboard slides (cover + review pages) | 18 |
 | Policy minimum after D3/A5 | 12 |
 | Content groups | 6 |
 | Reveal panels | 20 |
@@ -46,19 +49,27 @@ Measured renderer capacity is **5 panels/page**, so both tested densities sit in
 
 | Measure | Value |
 | --- | --- |
-| Gates passed | 70 / 70 |
-| Mutation fixtures detected | 40 / 40 |
+| Gates passed | 94 / 94 |
+| Mutation fixtures detected | 54 / 54 |
 | Storyboard pages overflowing | 0 |
 | Off-canvas shapes | 0 |
-| Preview coverage | 50 previews from 50 PPTX slides (every slide, covers included) |
+| Preview coverage | 54 previews from 54 PPTX slides (every slide, covers included) |
 
 Every gate re-opens the `.pptx` from disk. No gate asks the builder what it believes it wrote.
 
 ## 5. Render status
 
-`NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE`
+`NATIVE_RENDER_COMPLETED_LIBREOFFICE` · LibreOffice 24.2.7.2 420(Build:2)
 
-No Impress or PowerPoint filter exists in this environment, so no native render was produced and none is claimed. Every slide was drawn a second time at 1280x720 with real Liberation Sans metrics, from the same model, and inspected for overflow, clipping and off-canvas geometry. That is a layout approximation, not proof of PowerPoint pagination.
+The proxy preview is a scale model drawn from the same model and is NOT evidence of renderer behaviour. The render status below is produced at runtime by exporting each PPTX through LibreOffice Impress and rasterising every resulting PDF page.
+
+| File | PPTX slides | Native PDF pages | Rendered-overflow pages |
+| --- | --- | --- | --- |
+| K5PL06T03B03_STORYBOARD_KALIBRASI_DRAF_v0_1.pptx | 18 | 18 | none |
+| K5PL06T03B03_LAMPIRAN_KEADAAN_DRAF_v0_1_2panel.pptx | 21 | 21 | none |
+| K5PL06T03B03_LAMPIRAN_KEADAAN_DRAF_v0_1_3panel.pptx | 15 | 15 | none |
+
+Every page of every deck was exported through LibreOffice Impress and rasterised. No rendered ink enters the footer band, sits below the footer box, or touches the page edge.
 
 ## 6. A4 — Comparison
 
@@ -108,8 +119,9 @@ Plus 2 ambiguities carried from the committed unit model:
 
 ## 9. What this package is not
 
-This is a **calibration draft**. It is generated from controlled source rows and Bariah's committed rulings so that the pattern, the density and the review packaging can be judged on a real unit.
+This is a **TECHNICAL PROOF**, not an instructional deliverable. It exists to prove that the generator, the pagination contract and the native render behave correctly on a real unit, and to let the pattern, the density and the review packaging be judged on real content. Every instructional decision in it remains provisional.
 
+- `TECHNICAL_PROOF`
 - `DRAFT_FOR_BARIAH_REVIEW`
 - `NOT_INSTRUCTIONALLY_APPROVED`
 - `NOT_LEARNER_FACING_FINAL`

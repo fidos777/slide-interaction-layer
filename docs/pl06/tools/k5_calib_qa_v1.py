@@ -25,8 +25,11 @@ import tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
+from pptx import Presentation      # noqa: E402
+
 import k5_calib_model_v1 as M      # noqa: E402
 import k5_calib_build_v1 as B      # noqa: E402
+import k5_calib_metrics_v1 as MT   # noqa: E402
 import pl06_extract_v1 as EX       # noqa: E402
 import pl06_unit_model_v1 as U     # noqa: E402
 import k5_policy_apply_v1 as AP    # noqa: E402
@@ -40,10 +43,16 @@ assert SUITE_ID not in SIBLING_SUITES
 RAW_FILE, DOC_LITERAL = "RAW_FILE", "DOC_LITERAL"
 SOURCE_TEXT_LITERAL, COMMITTED_MODEL = "SOURCE_TEXT_LITERAL", "COMMITTED_MODEL"
 INDEPENDENT_MEASURE = "INDEPENDENT_MEASURE"
+NATIVE_RENDER = "NATIVE_RENDER"
 
 # ------------------------------------------------------------------ hand-declared literals
 DECLARED_SCREENS = 12
-DECLARED_STORYBOARD_SLIDES = 14          # 1 cover + 13 pages (one screen paginates to 2)
+# A learner screen may need more than one REVIEW page. That is documentation pagination and
+# does not change the learner-screen count, which stays 12.
+DECLARED_REVIEW_PAGES = 17
+DECLARED_STORYBOARD_SLIDES = 18          # 1 cover + 17 review pages
+DECLARED_MULTIPAGE_SCREENS = ["T03B03-S04", "T03B03-S05", "T03B03-S07", "T03B03-S09",
+                              "T03B03-S11"]
 DECLARED_RUNTIME_STATES = 43
 DECLARED_PANEL_STATES = 38
 DECLARED_LAMPIRAN_PAGES = {2: 20, 3: 14}
@@ -54,8 +63,8 @@ DECLARED_NARRATOR = "Hilmi"
 # gates self-referential: fixtures KR-04 and KA-02 rewrote the constant, the deck followed it,
 # and the gates agreed with the mutation. A gate that compares an artifact against its own
 # source proves only that a copy succeeded.
-DECLARED_STATUS_MARKS = ["DRAFT_FOR_BARIAH_REVIEW", "NOT_INSTRUCTIONALLY_APPROVED",
-                         "NOT_LEARNER_FACING_FINAL"]
+DECLARED_STATUS_MARKS = ["TECHNICAL_PROOF", "DRAFT_FOR_BARIAH_REVIEW",
+                         "NOT_INSTRUCTIONALLY_APPROVED", "NOT_LEARNER_FACING_FINAL"]
 DECLARED_MONTAGE_MARKS = ["PROVISIONAL_VISUAL_DIRECTION", "PENDING_BARIAH_UNIT_REVIEW",
                           "NOT_MMD_ASSET"]
 DECLARED_PANEL_FIELDS_MS = ["Pencetus", "Apa yang dipaparkan",
@@ -71,6 +80,28 @@ DECLARED_A4_ROWS = ["T03B03-ROW-056", "T03B03-ROW-061"]
 DECLARED_A4_WORDING = {"T03B03-ROW-056": "alternatif mesra alam kepada parit konkrit",
                        "T03B03-ROW-061": "bukannya parit yang dalam dan curam"}
 HANDOFF_NAME = "K5_PL06_T03_B03_CALIBRATION_HANDOFF_v0_1.md"
+
+# ---------------------------------------------------------------- native-oracle thresholds
+# Hand-typed HERE, in points, and passed INTO the render check. They were previously read off
+# k5_calib_build_v1's own geometry constants — so if the generator moved the footer, the
+# oracle moved with it and could never disagree. An oracle that imports its thresholds from
+# the module under test is not an oracle.
+#   storyboard body box   1,320,000 + 4,600,000 EMU  -> 466.14 pt
+#   Lampiran panel box    1,280,000 + 4,700,000 EMU  -> 470.87 pt
+#   footer box            6,150,000 + 500,000 EMU    -> 484.25 pt .. 523.62 pt
+DECLARED_BANDS_PT = {
+    "sb": (466.14, 484.25, 523.62),
+    "lp2": (470.87, 484.25, 523.62),
+    "lp3": (470.87, 484.25, 523.62),
+}
+DECLARED_PAGE_H_PT = 540.0
+# Every bounded text body in all three decks must declare noAutofit. There are no exemptions;
+# if one is ever needed it is named here and in the handoff, never left implicit.
+AUTOFIT_EXCEPTIONS = []
+DECLARED_LINE_FACTOR = 1.2
+DECLARED_METRICS_VERSION = "1"
+DECLARED_FONT_SHA256 = ("4659bc0c58c5028dd488ec928d41d9265db43d9b669fc14ca8b0832"
+                        "daca7b144")
 
 
 # ==========================================================================================
@@ -108,13 +139,73 @@ def _inputs():
     return _EX_ONCE, _UM_ONCE
 
 
+def _expected_screen_ids(pol):
+    """Screen IDs derived from the POLICY record and the unit ID, not from the screen roll.
+
+    shell(after D3/A5) + content groups + closing, numbered from the unit's short code.
+    """
+    plan = pol["screen_pattern_plan"]
+    n = (plan["shell_screens_after"] + plan["content_groups"] + plan["closing_screens"])
+    short = "".join(M.UNIT_ID.split("-")[2:])
+    return [f"{short}-S{i:02d}" for i in range(1, n + 1)]
+
+
+PARITY_NORMALISATION = ("A soft line break serialises as a vertical tab in the run text; it "
+                        "is normalised to a space on readback. Nothing else is normalised.")
+
+
+def _parity_report():
+    """Replay a traced build into scratch and compare canonical / measured / rendered / read.
+
+    Never writes to the real package directory.
+    """
+    import collections
+    tmp = tempfile.mkdtemp(prefix="k5parity_")
+    old_dir, old_prev = M.PPTX_DIR, B.WRITE_PREVIEW_IMAGES
+    M.PPTX_DIR, B.WRITE_PREVIEW_IMAGES = tmp, False
+    try:
+        B.trace_start()
+        path = B.build_storyboard()
+        tr = B.trace_stop()
+        read = [t for _, t in B.storyboard_body_runs(path)]
+    finally:
+        M.PPTX_DIR, B.WRITE_PREVIEW_IMAGES = old_dir, old_prev
+        shutil.rmtree(tmp, ignore_errors=True)
+
+    blocks = [b for sc in M.screens() for b in sc["blocks"]]
+    labels = tr["label"]
+    ids = [labels.get(id(b), f"UNLABELLED:{i}") for i, b in enumerate(blocks)]
+    dup = [k for k, v in collections.Counter(ids).items() if v > 1]
+    missing = [labels.get(id(b), f"UNLABELLED:{i}") for i, b in enumerate(blocks)
+               if id(b) not in tr["measured"] or id(b) not in tr["rendered"]]
+
+    remaining = collections.Counter(read)
+    mismatched = []
+    for i, b in enumerate(blocks):
+        lab = labels.get(id(b), f"UNLABELLED:{i}")
+        canon = B.block_text(b)
+        meas = tr["measured"].get(id(b))
+        rend = tr["rendered"].get(id(b))
+        in_file = remaining.get(rend, 0) > 0 if rend is not None else False
+        if in_file:
+            remaining[rend] -= 1
+        if not (canon == meas == rend) or not in_file:
+            mismatched.append(dict(block=lab, canonical=canon, measured=meas,
+                                   rendered=rend, found_in_pptx=in_file))
+    return dict(population=len(blocks), missing=missing, duplicate=dup,
+                mismatched=mismatched, readback_runs=len(read))
+
+
 def _screen_of(kind):
     """The screen of a kind, or None. A gate must be able to report an ABSENT screen rather
     than raise before it is evaluated — fixture KN-04 deletes the scenario screen."""
     return next((s for s in M.screens() if s["kind"] == kind), None)
 
 
-def gates():
+NATIVE_DIR = os.path.join(tempfile.gettempdir(), "k5_native_render")
+
+
+def gates(native=None):
     p = _paths()
     rb = {k: B.readback(v) for k, v in p.items()}
     sb, lp2, lp3 = rb["sb"], rb["lp2"], rb["lp3"]
@@ -122,6 +213,7 @@ def gates():
     ex, um = _inputs()
     pol = next(u for u in AP.calibration_units()["units"] if u["unit_id"] == M.UNIT_ID)
     G = []
+    native_ran = native is not None
 
     # ---------------------------------------------------------------- files and geometry ---
     G.append(_g("ALL_THREE_FILES_EXIST_AND_ARE_NON_EMPTY", "READBACK",
@@ -337,7 +429,7 @@ def gates():
               if any(re.search(r"(?<!NOT_)" + re.escape(c), t) for t in all_text.values())]
     G.append(_g("NO_FILE_CLAIMS_ANY_FORM_OF_APPROVAL", "STATUS",
                 claims, [], len(M.FORBIDDEN_STATUS_CLAIMS), "all three files", DOC_LITERAL))
-    G.append(_g("EVERY_FILE_CARRIES_ALL_THREE_STATUS_MARKS", "STATUS",
+    G.append(_g("EVERY_FILE_CARRIES_EVERY_DECLARED_STATUS_MARK", "STATUS",
                 sorted(k for k, t in all_text.items()
                        if all(m in t for m in DECLARED_STATUS_MARKS)),
                 ["lp2", "lp3", "sb"], 3, "all three files", DOC_LITERAL))
@@ -398,7 +490,8 @@ def gates():
     hp = os.path.join(M.PPTX_DIR, HANDOFF_NAME)
     htxt = open(hp, encoding="utf-8").read() if os.path.exists(hp) else ""
     required = [M.STORYBOARD_NAME, M.LAMPIRAN_NAME.format(n=2), M.LAMPIRAN_NAME.format(n=3),
-                "NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE", "A4",
+                "RENDER_STATUS", "Native PDF pages", "Rendered-overflow pages",
+                "Storyboard review pages", "Learner screens", "A4",
                 "Rumusan", "DRAFT_FOR_BARIAH_REVIEW"]
     G.append(_g("THE_HANDOFF_LISTS_EVERY_REQUIRED_ITEM", "HANDOFF",
                 [r for r in required if r not in htxt], [], len(required),
@@ -406,7 +499,7 @@ def gates():
     G.append(_g("THE_HANDOFF_CLAIMS_NO_NATIVE_POWERPOINT_VALIDATION", "HANDOFF",
                 [c for c in M.FORBIDDEN_STATUS_CLAIMS
                  if re.search(r"(?<!NOT_)" + re.escape(c), htxt)]
-                + (["CLAIMS_NATIVE_RENDER"] if "rendered in PowerPoint" in htxt else []),
+                + (["CLAIMS_NATIVE_POWERPOINT"] if "rendered in PowerPoint" in htxt else []),
                 [], len(M.FORBIDDEN_STATUS_CLAIMS), HANDOFF_NAME, DOC_LITERAL))
 
     # ------------------------------------------------------------------------- layout ------
@@ -443,14 +536,190 @@ def gates():
                 len(sbp + lp2p + lp3p) if B.WRITE_PREVIEW_IMAGES else 0,
                 "preview directories", RAW_FILE,
                 empty_by_design=not B.WRITE_PREVIEW_IMAGES))
-    G.append(_g("THE_RENDER_STATUS_IS_REPORTED_HONESTLY", "LAYOUT",
-                B.RENDER_STATUS, "NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE", 1,
-                "k5_calib_build_v1", DOC_LITERAL))
+    # ---------------------------------------------------------------------- structural ----
+    # POSITIVE contract. The old gate only forbade spAutoFit, so a bodyPr with no autofit
+    # child at all passed while declaring nothing. The package contract is that every bounded
+    # text body states `noAutofit` explicitly; omission is ambiguous and therefore fails. No
+    # claim is made about what a renderer infers from an empty bodyPr.
+    audit = {k: B.autofit_audit(v) for k, v in p.items()}
+    bodies = [(k, r) for k, rs in audit.items() for r in rs]
+    bad = [f"{k}:s{r['slide']}:{r['shape_id']}"
+           for k, r in bodies
+           if not (r["noAutofit"] and not r["spAutoFit"] and not r["normAutofit"])]
+    G.append(_g("EVERY_BOUNDED_TEXT_BOX_EXPLICITLY_DECLARES_NO_AUTOFIT", "STRUCTURAL",
+                bad, [], len(bodies), "bodyPr read back from the .pptx", RAW_FILE))
+    G.append(_g("THE_AUTOFIT_CONTRACT_HAS_NO_PERMITTED_EXCEPTIONS", "STRUCTURAL",
+                AUTOFIT_EXCEPTIONS, [], len(bodies), "k5_calib_qa_v1", DOC_LITERAL,
+                empty_by_design=True))
+    G.append(_g("LEARNER_SCREEN_COUNT_IS_UNCHANGED_BY_REVIEW_PAGINATION", "STRUCTURAL",
+                (len(M.screens()), len(B.slides())),
+                (DECLARED_SCREENS, DECLARED_REVIEW_PAGES), DECLARED_SCREENS,
+                "screen roll vs review-page roll", DOC_LITERAL))
+    labelled = [sl["screen"]["screen_id"] for sl in B.slides()
+                if sl["page_count"] > 1 and "halaman" not in sl["title_suffix"]]
+    G.append(_g("EVERY_MULTIPAGE_SCREEN_LABELS_ITS_REVIEW_PAGE", "STRUCTURAL",
+                labelled, [],
+                len([sl for sl in B.slides() if sl["page_count"] > 1]),
+                "review-page roll", INDEPENDENT_MEASURE))
+    G.append(_g("THE_MULTIPAGE_SCREENS_ARE_THE_DECLARED_ONES", "STRUCTURAL",
+                sorted({sl["screen"]["screen_id"] for sl in B.slides()
+                        if sl["page_count"] > 1}),
+                DECLARED_MULTIPAGE_SCREENS, len(DECLARED_MULTIPAGE_SCREENS),
+                "review-page roll", DOC_LITERAL))
+
+    # ------------------------------------------------------------------- native render ----
+    # The only oracle here is what LibreOffice actually drew. No model geometry, no preview.
+    nat = native or {}
+    G.append(_g("THE_NATIVE_RENDER_COMPLETED_FOR_EVERY_FILE", "NATIVE",
+                sorted(k for k, r in nat.items() if r["status"] != B.NATIVE_COMPLETED),
+                [], len(nat), "LibreOffice Impress export", NATIVE_RENDER,
+                empty_by_design=not native_ran))
+    G.append(_g("EVERY_NATIVE_PDF_PAGE_COUNT_EQUALS_ITS_PPTX_SLIDE_COUNT", "NATIVE",
+                sorted(k for k in nat if nat[k].get("page_count") != rb[k]["slide_count"]),
+                [], len(nat), "PDF page count vs readback", NATIVE_RENDER,
+                empty_by_design=not native_ran))
+    G.append(_g("NO_RENDERED_INK_ENTERS_THE_FOOTER_BAND", "NATIVE",
+                sorted((k, f["page"]) for k, r in nat.items() for f in r["findings"]
+                       if f["ink_in_gap_band"] or f["ink_below_footer"]),
+                [], sum(len(r["findings"]) for r in nat.values()),
+                "rasterised PDF pages", NATIVE_RENDER,
+                empty_by_design=not native_ran))
+    G.append(_g("NO_RENDERED_INK_LEAVES_THE_PAGE_CANVAS", "NATIVE",
+                sorted((k, f["page"]) for k, r in nat.items() for f in r["findings"]
+                       if f["ink_at_page_edge"]),
+                [], sum(len(r["findings"]) for r in nat.values()),
+                "rasterised PDF pages", NATIVE_RENDER,
+                empty_by_design=not native_ran))
+    # Silent clipping is the risk noAutofit introduces: the box no longer grows, so text that
+    # does not fit is simply not drawn. Extracting the rendered text back out of the PDF is
+    # the only way to prove nothing was lost.
+    retained = []
+    if native_ran and nat.get("sb", {}).get("status") == B.NATIVE_COMPLETED:
+        rendered = B.native_text(nat["sb"]["pdf"])
+        retained = [r["row_id"] for r in ex["rows"]
+                    if (r["controlled_display_text"] or "").strip()
+                    and " ".join(r["controlled_display_text"].split()) not in rendered]
+    G.append(_g("EVERY_CONTROLLED_ROW_SURVIVES_INTO_THE_RENDERED_PDF", "NATIVE",
+                retained, [], len([r for r in ex["rows"]
+                                   if (r["controlled_display_text"] or "").strip()]),
+                "text extracted from the native PDF", NATIVE_RENDER,
+                empty_by_design=not native_ran))
+    G.append(_g("THE_PACKAGE_RENDER_STATUS_AGREES_WITH_EVERY_FILE_RECORD", "NATIVE",
+                B.render_status(native),
+                (B.NATIVE_COMPLETED
+                 if native_ran and all(r["status"] == B.NATIVE_COMPLETED
+                                       for r in nat.values())
+                 else B.NATIVE_UNAVAILABLE if not native_ran
+                 else B.NATIVE_FAILED), 1, "runtime detection", NATIVE_RENDER))
+    G.append(_g("THE_RENDER_STATUS_IS_NOT_A_HARDCODED_CONSTANT", "NATIVE",
+                hasattr(B, "RENDER_STATUS"), False, 1, "k5_calib_build_v1", DOC_LITERAL))
+
+    # ------------------------------------------------------- pagination determinism -------
+    G.append(_g("THE_FROZEN_METRICS_MATCH_THE_FONT_THEY_WERE_MEASURED_FROM", "DETERMINISM",
+                {k: v for k, v in MT.verify_against_font().items()
+                 if k in ("sha256_matches", "drifted")},
+                dict(sha256_matches=True, drifted=[]), len(MT.ADVANCE),
+                "k5_calib_metrics_v1 vs the font on disk", INDEPENDENT_MEASURE))
+    G.append(_g("THE_FROZEN_METRICS_ARE_THE_DECLARED_VERSION_AND_FONT", "DETERMINISM",
+                (MT.VERSION, MT.FONT_SHA256),
+                (DECLARED_METRICS_VERSION, DECLARED_FONT_SHA256), 1,
+                "k5_calib_metrics_v1", DOC_LITERAL))
+    G.append(_g("THE_LINE_PITCH_IS_THE_DECLARED_FROZEN_LITERAL", "DETERMINISM",
+                B.LINE_FACTOR, DECLARED_LINE_FACTOR, 1, "k5_calib_build_v1", DOC_LITERAL))
+    G.append(_g("THE_PAGE_BREAK_DECISION_PATH_TOUCHES_NO_RENDERER_OR_RUNTIME_FONT",
+                "DETERMINISM", sorted(_decision_path_forbidden_calls()), [], 4,
+                "source of paginate/block_height_pt/wrapped_lines_pt/MT.wrap",
+                INDEPENDENT_MEASURE))
+    # B03-SPECIFIC golden master. Not a generator invariant: another unit will legitimately
+    # produce a different map. Update it only on an approved source change, an approved
+    # layout-contract change, or an explicit review decision — never to silence a failure.
+    G.append(_g("B03_PAGE_BREAK_MAP_MATCHES_GOLDEN_MASTER", "GOLDEN_MASTER",
+                B.page_break_map(), DECLARED_PAGE_BREAK_MAP, len(DECLARED_PAGE_BREAK_MAP),
+                "review-page roll", DOC_LITERAL))
+
+    # ------------------------------------------------- reusable relationship invariants ---
+    # These hold for ANY unit. No review-page count appears in them.
+    screen_ids = [s["screen_id"] for s in M.screens()]
+    pages = B.slides()
+    page_ids = [sl["screen"]["screen_id"] for sl in pages]
+    G.append(_g("LEARNER_SCREEN_IDS_ARE_DERIVED_INDEPENDENTLY_OF_THE_REVIEW_PAGES",
+                "RELATIONSHIP", screen_ids, _expected_screen_ids(pol), len(screen_ids),
+                "k5_policy_apply_v1 + UNIT_ID", COMMITTED_MODEL))
+    G.append(_g("EVERY_LEARNER_SCREEN_HAS_AT_LEAST_ONE_REVIEW_PAGE", "RELATIONSHIP",
+                sorted(set(screen_ids) - set(page_ids)), [], len(screen_ids),
+                "review-page roll", INDEPENDENT_MEASURE))
+    G.append(_g("THE_REVIEW_PAGE_SCREEN_SET_EQUALS_THE_LEARNER_SCREEN_SET", "RELATIONSHIP",
+                sorted(set(page_ids)), sorted(set(screen_ids)), len(set(page_ids)),
+                "review-page roll", INDEPENDENT_MEASURE))
+    G.append(_g("NO_REVIEW_PAGE_REFERENCES_AN_UNKNOWN_SCREEN", "RELATIONSHIP",
+                sorted(set(page_ids) - set(screen_ids)), [], len(page_ids),
+                "review-page roll", INDEPENDENT_MEASURE))
+    seq = {}
+    for sl in pages:
+        seq.setdefault(sl["screen"]["screen_id"], []).append(
+            (sl["page_index"], sl["page_count"]))
+    incomplete = [sid for sid, v in seq.items()
+                  if sorted(i for i, _ in v) != list(range(1, len(v) + 1))
+                  or {c for _, c in v} != {len(v)}]
+    G.append(_g("EVERY_MULTIPAGE_SEQUENCE_IS_COMPLETE_ONE_TO_N", "RELATIONSHIP",
+                incomplete, [], len(seq), "review-page roll", INDEPENDENT_MEASURE))
+    idents = [(sl["screen"]["screen_id"], sl["page_index"]) for sl in pages]
+    G.append(_g("NO_DUPLICATE_SCREEN_ID_AND_PAGE_NUMBER_IDENTITY", "RELATIONSHIP",
+                len(idents) - len(set(idents)), 0, len(idents),
+                "review-page roll", INDEPENDENT_MEASURE))
+
+    # ------------------------------------------------ canonical measured/render parity ----
+    # By VALUE, not by grep. A build is replayed with the trace on; the string the
+    # measurement path received and the string the writer emitted are compared to each other,
+    # to the canonical text, and to what came back out of the .pptx.
+    par = _parity_report()
+    G.append(_g("EVERY_STORYBOARD_BLOCK_IS_MEASURED_AND_RENDERED_FROM_THE_SAME_"
+                "CANONICAL_TEXT", "PARITY",
+                dict(missing=par["missing"], duplicate=par["duplicate"],
+                     mismatched=par["mismatched"]),
+                dict(missing=[], duplicate=[], mismatched=[]), par["population"],
+                f"runtime trace vs {M.STORYBOARD_NAME} readback", RAW_FILE))
+
+    # ------------------------------------------------------------- full provenance --------
+    all_ids = {r["row_id"] for r in ex["rows"]}
+    notes_ids = set(re.findall(r"T03B03-ROW-\d{3}", sb["all_notes"]))
+    G.append(_g("EVERY_CONTROLLED_ROW_ID_IS_MACHINE_READABLE_IN_THE_SPEAKER_NOTES",
+                "TRACEABILITY", sorted(all_ids - notes_ids), [], len(all_ids),
+                f"{M.STORYBOARD_NAME} notesSlide", RAW_FILE))
     return G
 
 
-def run(verbose=True):
-    G = gates()
+_FORBIDDEN_IN_DECISION_PATH = ("soffice", "libreoffice", "fitz", "ImageFont", "truetype",
+                               "getlength", "textlength", "_font(", "_draw(",
+                               "native_render", "native_check")
+
+
+def _decision_path_forbidden_calls():
+    """Read the SOURCE of every function on the page-break decision path and flag any
+    renderer or runtime-font call. A claim of determinism should be checkable, not asserted."""
+    import inspect
+    out = []
+    for fn in (B.paginate, B.block_height_pt, B.wrapped_lines_pt, MT.wrap):
+        src = inspect.getsource(fn)
+        body = "\n".join(ln for ln in src.splitlines()
+                          if not ln.strip().startswith("#"))
+        for tok in _FORBIDDEN_IN_DECISION_PATH:
+            if tok in body:
+                out.append(f"{fn.__module__}.{fn.__name__}:{tok}")
+    return out
+
+
+DECLARED_PAGE_BREAK_MAP = {
+    "T03B03-S01": ["1/1"], "T03B03-S02": ["1/1"], "T03B03-S03": ["1/1"],
+    "T03B03-S04": ["1/2", "2/2"], "T03B03-S05": ["1/2", "2/2"],
+    "T03B03-S06": ["1/1"], "T03B03-S07": ["1/2", "2/2"], "T03B03-S08": ["1/1"],
+    "T03B03-S09": ["1/2", "2/2"], "T03B03-S10": ["1/1"],
+    "T03B03-S11": ["1/2", "2/2"], "T03B03-S12": ["1/1"],
+}
+
+
+def run(verbose=True, native=None):
+    G = gates(native)
     bad = [g for g in G if not g["passed"]]
     if verbose:
         print(f"SUITE_ID = {SUITE_ID}")
@@ -472,10 +741,14 @@ def run(verbose=True):
 # ==========================================================================================
 # MUTATIONS — each fixture breaks one thing; the suite must notice
 # ==========================================================================================
-def _rebuild(tmp):
+def _rebuild(tmp, native=False):
     """Rebuild all three files into a scratch directory and point the gates at them."""
     for f in os.listdir(tmp):
-        os.remove(os.path.join(tmp, f))
+        fp = os.path.join(tmp, f)
+        if os.path.isfile(fp):
+            os.remove(fp)
+        else:
+            shutil.rmtree(fp, ignore_errors=True)
     M.reset()
     old = M.PPTX_DIR
     M.PPTX_DIR = tmp
@@ -484,7 +757,13 @@ def _rebuild(tmp):
         B.build_lampiran(2)
         B.build_lampiran(3)
         B.emit_handoff()
-        return run(verbose=False)
+        # A native render costs ~10s per rebuild, so it runs only for the fixtures that
+        # target a native gate. The rest leave those gates skipped by design.
+        # (8) native output lives INSIDE this fixture's scratch, so no PDF or raster from
+        # another fixture or another iteration can be read back by mistake.
+        nat = (B.native_check(os.path.join(tmp, "_native"), DECLARED_BANDS_PT)
+               if native else None)
+        return run(verbose=False, native=nat)
     finally:
         M.PPTX_DIR = old
 
@@ -492,9 +771,9 @@ def _rebuild(tmp):
 FIXTURES = []
 
 
-def fixture(fid, target):
+def fixture(fid, target, needs_native=False):
     def deco(fn):
-        FIXTURES.append(dict(id=fid, target=target, fn=fn))
+        FIXTURES.append(dict(id=fid, target=target, fn=fn, needs_native=needs_native))
         return fn
     return deco
 
@@ -777,7 +1056,7 @@ def _a1():
     return _patch(M, "STATUS_MARKS", ["BARIAH_APPROVED"])
 
 
-@fixture("KA-02", "EVERY_FILE_CARRIES_ALL_THREE_STATUS_MARKS")
+@fixture("KA-02", "EVERY_FILE_CARRIES_EVERY_DECLARED_STATUS_MARK")
 def _a2():
     return _patch(M, "STATUS_MARKS", ["DRAFT_FOR_BARIAH_REVIEW"])
 
@@ -824,9 +1103,11 @@ def _l4():
     return _patch(B, "render_lampiran_previews", lambda n: orig(n)[1:])
 
 
-@fixture("KL-03", "THE_RENDER_STATUS_IS_REPORTED_HONESTLY")
+@fixture("KL-03", "THE_RENDER_STATUS_IS_NOT_A_HARDCODED_CONSTANT")
 def _l3():
-    return _patch(B, "RENDER_STATUS", "RENDERED_AND_VERIFIED_IN_POWERPOINT")
+    """A hardcoded status constant reintroduced — the exact shape of the original defect."""
+    setattr(B, "RENDER_STATUS", "RENDERED_AND_VERIFIED_IN_POWERPOINT")
+    return lambda: delattr(B, "RENDER_STATUS")
 
 
 # --- A4 and handoff ---------------------------------------------------------------------------
@@ -877,38 +1158,259 @@ def _h2():
                   "The deck was rendered in PowerPoint and visually verified.")
 
 
+# --- render divergence ------------------------------------------------------------------------
+@fixture("KX-01", "EVERY_BOUNDED_TEXT_BOX_EXPLICITLY_DECLARES_NO_AUTOFIT")
+def _x1():
+    """spAutoFit reintroduced: the renderer may grow the box past its declared height."""
+    return _patch(B, "strip_autofit", lambda prs: 0)
+
+
+@fixture("KX-08", "EVERY_BOUNDED_TEXT_BOX_EXPLICITLY_DECLARES_NO_AUTOFIT")
+def _x8():
+    """The autofit child is REMOVED but noAutofit is never written.
+
+    The old negative gate passed this: nothing forbidden was present. The package still
+    declared no contract, which is the ambiguity the positive gate exists to reject.
+    """
+    from pptx.oxml.ns import qn
+
+    def strip_only(tf):
+        bodyPr = tf._txBody.find(qn("a:bodyPr"))
+        for tag in ("a:spAutoFit", "a:normAutofit", "a:noAutofit"):
+            for el in bodyPr.findall(qn(tag)):
+                bodyPr.remove(el)
+        return tf
+    undo_a = _patch(B, "_no_autofit", strip_only)
+
+    def strip_all(prs):
+        for slide in prs.slides:
+            for shape in slide.shapes:
+                if shape.has_text_frame:
+                    strip_only(shape.text_frame)
+        return 0
+    undo_b = _patch(B, "strip_autofit", strip_all)
+
+    def undo():
+        undo_a()
+        undo_b()
+    return undo
+
+
+@fixture("KX-02", "NO_RENDERED_INK_ENTERS_THE_FOOTER_BAND", needs_native=True)
+def _x2():
+    """Review pagination omitted: every screen becomes one page and long screens spill."""
+    return _patch(B, "paginate", lambda blocks: [list(blocks)])
+
+
+@fixture("KX-03", "NO_RENDERED_INK_ENTERS_THE_FOOTER_BAND", needs_native=True)
+def _x3():
+    """Body limit pushed past the footer: rendered text enters the footer band."""
+    return _patch(B, "BODY_LIMIT_PT", 520.0)
+
+
+@fixture("KX-04", "THE_NATIVE_RENDER_COMPLETED_FOR_EVERY_FILE", needs_native=True)
+def _x4():
+    """Renderer falsely reported unavailable: the gate must not accept a silent skip."""
+    return _patch(B, "libreoffice", lambda: (None, None))
+
+
+@fixture("KX-05", "THE_PACKAGE_RENDER_STATUS_AGREES_WITH_EVERY_FILE_RECORD",
+         needs_native=True)
+def _x5():
+    """A failed native render reported as a pass."""
+    orig = B.native_render
+
+    def broken(pptx_path, outdir):
+        rec = orig(pptx_path, outdir)
+        if "STORYBOARD" in pptx_path:
+            rec = dict(rec, status=B.NATIVE_FAILED)
+        return rec
+    undo_render = _patch(B, "native_render", broken)
+    undo_status = _patch(B, "render_status", lambda native=None: B.NATIVE_COMPLETED)
+
+    def undo():
+        undo_render()
+        undo_status()
+    return undo
+
+
+@fixture("KX-06", "NO_RENDERED_INK_LEAVES_THE_PAGE_CANVAS", needs_native=True)
+def _x6():
+    """Body limit pushed past the page itself: rendered ink exits the canvas at the bottom
+    edge. Distinct from footer entry — the page is 540pt and the limit becomes 900pt."""
+    return _patch(B, "BODY_LIMIT_PT", 900.0)
+
+
+@fixture("KX-07", "EVERY_NATIVE_PDF_PAGE_COUNT_EQUALS_ITS_PPTX_SLIDE_COUNT",
+         needs_native=True)
+def _x7():
+    """NATIVE PDF PAGE-LOSS mutation.
+
+    The renderer silently drops a slide and the PDF comes back one page short. This is a
+    page-loss fixture, NOT a stale-output fixture. Stale-output protection is a property of
+    the harness, not of any single fixture: unique random scratch per fixture, empty-directory
+    assertion before execution, a fixture-scoped `_native` directory, a clean rebuild that
+    must pass before the mutation is applied, no PDF or raster reuse across fixtures, cleanup
+    on success, and retain-on-failure with the path reported.
+    """
+    orig = B.native_render
+
+    def broken(pptx_path, outdir):
+        rec = orig(pptx_path, outdir)
+        if rec["status"] == B.NATIVE_COMPLETED and "STORYBOARD" in pptx_path:
+            import fitz
+            with fitz.open(rec["pdf"]) as d:
+                d.delete_page(1)
+                d.save(rec["pdf"] + ".short")
+            os.replace(rec["pdf"] + ".short", rec["pdf"])
+            with fitz.open(rec["pdf"]) as d:
+                rec["page_count"] = d.page_count
+        return rec
+    return _patch(B, "native_render", broken)
+
+
+# --- determinism and retention ----------------------------------------------------------------
+@fixture("KD-01", "THE_LINE_PITCH_IS_THE_DECLARED_FROZEN_LITERAL")
+def _d1():
+    return _patch(B, "LINE_FACTOR", 1.0)
+
+
+@fixture("KD-02", "THE_PAGE_BREAK_DECISION_PATH_TOUCHES_NO_RENDERER_OR_RUNTIME_FONT")
+def _d2():
+    """Runtime font measurement reintroduced into the decision path."""
+    orig = MT.wrap
+
+    def measured(text, size_pt, width_pt):
+        from PIL import ImageFont          # noqa: F401
+        return orig(text, size_pt, width_pt)
+    return _patch(MT, "wrap", measured)
+
+
+@fixture("KD-03", "B03_PAGE_BREAK_MAP_MATCHES_GOLDEN_MASTER")
+def _d3():
+    return _patch(B, "BODY_LIMIT_PT", 300.0)
+
+
+@fixture("KV-01", "EVERY_CONTROLLED_ROW_SURVIVES_INTO_THE_RENDERED_PDF", needs_native=True)
+def _v1():
+    """A block silently dropped after pagination — the clipping this gate exists to catch."""
+    orig = B.paginate
+
+    def broken(blocks):
+        pages = orig(blocks)
+        if len(pages[0]) > 3:
+            pages[0] = pages[0][:-2]
+        return pages
+    return _patch(B, "paginate", broken)
+
+
+@fixture("KV-02", "EVERY_CONTROLLED_ROW_ID_IS_MACHINE_READABLE_IN_THE_SPEAKER_NOTES")
+def _v2():
+    """Notes truncated: the complete row-ID set stops being machine-verifiable."""
+    orig = M.notes_for
+    return _patch(M, "notes_for",
+                  lambda sc: orig(sc).split("Baris sumber:")[0])
+
+
+RETAINED_ON_FAILURE = []
+
+
+@fixture("KY-01", "EVERY_STORYBOARD_BLOCK_IS_MEASURED_AND_RENDERED_FROM_THE_SAME_"
+                  "CANONICAL_TEXT")
+def _y1():
+    """Recreates the discovered defect on ONE path only: the writer re-inserts the ' · '
+    separator that pagination does not measure."""
+    orig = B.block_text
+    return _patch(B, "render_text",
+                  lambda b: orig(b).replace("] ", "] · ", 1))
+
+
+# ---- registry integrity ----------------------------------------------------------------------
+def registry_integrity(executed_ids=None):
+    """Fixture accounting derived FROM the registry, never hand-written."""
+    import collections
+    ids = [f["id"] for f in FIXTURES]
+    dup = [k for k, v in collections.Counter(ids).items() if v > 1]
+    ex = list(executed_ids or [])
+    return dict(registry_count=len(ids), ordered_ids=ids, unique=not dup, duplicates=dup,
+                native_fixtures=sum(1 for f in FIXTURES if f.get("needs_native")),
+                executed_count=len(ex),
+                registered_not_executed=sorted(set(ids) - set(ex)),
+                executed_not_registered=sorted(set(ex) - set(ids)),
+                reconciles=(not dup and sorted(ids) == sorted(ex)) if ex else None)
+
+
 def run_mutations(verbose=True):
-    base_G, base_bad = run(verbose=False)
-    tmp = tempfile.mkdtemp(prefix="k5calib_")
-    results, missed = [], []
+    base_nat = B.native_check(NATIVE_DIR, DECLARED_BANDS_PT)
+    base_G, base_bad = run(verbose=False, native=base_nat)
+    results, missed, dirty = [], [], []
+    root = tempfile.mkdtemp(prefix="k5calib_root_")
     # The layout gates need the MEASUREMENT, not the PNGs; writing 48 images per fixture is
     # pure I/O. Measurement is unchanged, so KL-01 and KL-02 still bite.
     B.WRITE_PREVIEW_IMAGES = False
     try:
         for fx in FIXTURES:
-            undo = fx["fn"]()
+            # (1) unique fresh scratch per fixture — never shared, never reused
+            tmp = tempfile.mkdtemp(prefix=f"k5fx_{fx['id']}_", dir=root)
+            nat_dir = os.path.join(tmp, "_native")
+            # (2) empty-directory assertion, before anything is written
+            assert os.listdir(tmp) == [], f"{fx['id']}: scratch not empty at start"
+            keep = False
             try:
-                G, bad = _rebuild(tmp)
-                names = {g["name"] for g in bad}
-                caught = fx["target"] in names
-                results.append(dict(id=fx["id"], target=fx["target"], detected=caught,
-                                    also_failed=sorted(names - {fx["target"]})))
-                if not caught:
-                    missed.append(fx["id"])
+                # (3)+(4) clean direction: the UNMUTATED build must pass in this same
+                # directory first. A stale PDF, raster or manifest leaking in from another
+                # fixture shows up here as a clean-run failure, not as a false detection.
+                _, clean_bad = _rebuild(tmp, native=fx.get("needs_native", False))
+                clean_ok = not clean_bad
+                if not clean_ok:
+                    dirty.append(dict(id=fx["id"],
+                                      failed=sorted(g["name"] for g in clean_bad)))
+                # (5) exactly one declared mutation
+                undo = fx["fn"]()
+                try:
+                    # (6) rerun; (7) assert the SPECIFIC expected gate fails
+                    G, bad = _rebuild(tmp, native=fx.get("needs_native", False))
+                    names = {g["name"] for g in bad}
+                    caught = fx["target"] in names
+                    results.append(dict(id=fx["id"], target=fx["target"], detected=caught,
+                                        clean_before=clean_ok,
+                                        scratch=tmp, native_dir=nat_dir,
+                                        also_failed=sorted(names - {fx["target"]})))
+                    if not caught or not clean_ok:
+                        missed.append(fx["id"])
+                        keep = True
+                finally:
+                    undo()
+                    M.reset()
             finally:
-                undo()
-                M.reset()
+                # (9) cleaned, or retained on failure with the path reported
+                if keep:
+                    RETAINED_ON_FAILURE.append(tmp)
+                else:
+                    shutil.rmtree(tmp, ignore_errors=True)
     finally:
         B.WRITE_PREVIEW_IMAGES = True
-        shutil.rmtree(tmp, ignore_errors=True)
+        if not RETAINED_ON_FAILURE:
+            shutil.rmtree(root, ignore_errors=True)
     # Rebuild the real files so the on-disk artifacts match the unmutated model.
     M.reset()
     B.build_storyboard()
     B.build_lampiran(2)
     B.build_lampiran(3)
+    reg = registry_integrity([r["id"] for r in results])
     out = dict(baseline_pass=len(base_G) - len(base_bad), baseline_total=len(base_G),
-               fixture_count=len(FIXTURES), detected=len(FIXTURES) - len(missed),
-               missed=missed, results=results)
+               baseline_executions=1,
+               fixture_count=reg["registry_count"],
+               detected=reg["registry_count"] - len(missed),
+               missed=missed,
+               clean_before_executions=len(results),
+               mutated_executions=len(results),
+               total_suite_executions=1 + 2 * len(results),
+               native_fixtures=reg["native_fixtures"],
+               registry=reg,
+               clean_before_all_passed=not dirty, dirty=dirty,
+               retained_on_failure=RETAINED_ON_FAILURE, results=results)
+    assert reg["reconciles"], f"fixture registry does not reconcile: {reg}"
     if verbose:
         print(json.dumps({k: v for k, v in out.items() if k != "results"}, indent=1))
         for r in results:
@@ -920,5 +1422,7 @@ if __name__ == "__main__":
     if "--mutations" in sys.argv:
         r = run_mutations()
         sys.exit(0 if not r["missed"] else 1)
-    G, bad = run()
+    nat = B.native_check(NATIVE_DIR, DECLARED_BANDS_PT)
+    G, bad = run(native=nat)
+    print(f"native: {B.render_status(nat)}")
     sys.exit(0 if not bad else 1)

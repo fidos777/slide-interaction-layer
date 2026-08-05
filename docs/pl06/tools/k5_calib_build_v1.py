@@ -41,6 +41,7 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, T04_TOOLS)
 
 import k5_calib_model_v1 as M       # noqa: E402
+import k5_calib_metrics_v1 as MT    # noqa: E402  — frozen advance widths, no font at runtime
 import t04_storyboard_build_v1 as BB  # noqa: E402  — geometry and text primitives only
 import t04_state_emit_v1 as SE       # noqa: E402  — panel mechanics only
 
@@ -55,34 +56,80 @@ PROV_COLOUR = {"SOURCE_CONTROLLED": SRC, "SOURCE_CONDENSED": SRC,
                "COURSE_RULE_APPROVED": AUTH,
                "CAIR_DRAFTED_ASSESSMENT": DRAFT, "CAIR_DRAFTED_RUMUSAN_BEAT": DRAFT,
                "CAIR_STRUCTURAL": UI, "PROVISIONAL_PLACEHOLDER": PLACEHOLDER}
-PROV_TAG = {"SOURCE_CONTROLLED": "S", "SOURCE_CONDENSED": "S~",
-            "COURSE_RULE_APPROVED": "A", "CAIR_DRAFTED_ASSESSMENT": "d",
-            "CAIR_DRAFTED_RUMUSAN_BEAT": "r",
-            "CAIR_STRUCTURAL": "u", "PROVISIONAL_PLACEHOLDER": "P"}
+# Compact bracketed markers. The old "S · " / "d · " form read as content; a bracketed
+# uppercase token scans as an annotation and costs one character less.
+PROV_TAG = {"SOURCE_CONTROLLED": "[S]", "SOURCE_CONDENSED": "[S~]",
+            "COURSE_RULE_APPROVED": "[A]", "CAIR_DRAFTED_ASSESSMENT": "[D]",
+            "CAIR_DRAFTED_RUMUSAN_BEAT": "[R]",
+            "CAIR_STRUCTURAL": "[U]", "PROVISIONAL_PLACEHOLDER": "[P]"}
 PROV_RGB = {k: tuple(int(str(v)[i:i + 2], 16) for i in (0, 2, 4))
             for k, v in PROV_COLOUR.items()}
 
-LEGEND = ("Warna teks: biru = baris modul terkawal (S = verbatim, S~ = ayat pertama) · "
-          "hijau = keputusan Bariah · ungu = draf CAIR (d = kuiz, r = beat Rumusan) · "
-          "merah = ruang menunggu keputusan · kelabu = elemen antara muka")
+LEGEND = ("[S] baris modul verbatim · [S~] ayat pertama baris modul · [A] keputusan "
+          "Bariah · [D] draf kuiz CAIR · [R] beat Rumusan CAIR · [P] menunggu keputusan · "
+          "[U] elemen antara muka")
 
 WRITE_PREVIEW_IMAGES = True
 
-RENDER_STATUS = "NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE"
+# Runtime render status. Never hardcoded again: the previous constant asserted
+# NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE whether or not a renderer existed, so when
+# Impress became available nothing noticed and five overflowing pages shipped.
+NATIVE_COMPLETED = "NATIVE_RENDER_COMPLETED_LIBREOFFICE"
+NATIVE_FAILED = "NATIVE_RENDER_FAILED"
+NATIVE_UNAVAILABLE = "NATIVE_RENDERER_UNAVAILABLE"
 RENDER_NOTE = (
-    "No Impress or PowerPoint filter exists in this environment, so no native render was "
-    "produced and none is claimed. Every slide was drawn a second time at 1280x720 with real "
-    "Liberation Sans metrics, from the same model, and inspected for overflow, clipping and "
-    "off-canvas geometry. That is a layout approximation, not proof of PowerPoint pagination.")
+    "The proxy preview is a scale model drawn from the same model and is NOT evidence of "
+    "renderer behaviour. The render status below is produced at runtime by exporting each "
+    "PPTX through LibreOffice Impress and rasterising every resulting PDF page.")
 
 
 # ==========================================================================================
-# MEASUREMENT — one instrument, used for pagination, for preview and for the gates
+# MEASUREMENT — in POINTS, the unit the renderer lays out in
+#
+# The first version of this measured in preview pixels: it drew a 14pt run as 14 PIXELS while
+# LibreOffice renders it as 14 POINTS, under-counting every line by about a third. Combined
+# with spAutoFit — which lets the renderer grow the shape past its declared box instead of
+# clipping — five storyboard pages ran into the footer and one ran off the canvas, and the
+# declared-geometry gate could not see any of it because the DECLARED height never changed.
+#
+# Everything below is therefore expressed in points and calibrated against the native render:
+# Arial resolves to Liberation Sans (metric-compatible), and the measured line pitch is
+# exactly 1.2x the point size.
 # ==========================================================================================
+PT = 12700.0                                   # EMU per point
+SLIDE_W_PT = SLIDE_W / PT                      # 960
+SLIDE_H_PT = SLIDE_H / PT                      # 540
+MARGIN_PT = MARGIN / PT                        # 36
+
+BODY_TOP_EMU = 1320000
+BODY_H_EMU = 4600000
+FOOTER_TOP_EMU = 6150000
+FOOTER_H_EMU = 500000
+
+BODY_TOP_PT = BODY_TOP_EMU / PT                # 103.9
+BODY_BOX_BOTTOM_PT = (BODY_TOP_EMU + BODY_H_EMU) / PT   # 466.1
+FOOTER_TOP_PT = FOOTER_TOP_EMU / PT            # 484.3
+FOOTER_BOTTOM_PT = (FOOTER_TOP_EMU + FOOTER_H_EMU) / PT  # 523.6
+
+COL_W_PT = (SLIDE_W - 2 * MARGIN) * 0.60 / PT  # 532.8
+HEADER_LINE_PT = 14.0                          # the "KANDUNGAN SKRIN" label above the body
+INDENT_PT = 18.0                               # per list level, measured off the render
+LINE_FACTOR = 1.2                              # measured: 14pt renders at 16.8pt pitch
+# Hard stop for body text. Inside the declared box, and well clear of the footer, so a small
+# renderer disagreement cannot push ink into the footer band.
+BODY_LIMIT_PT = 452.0
+
+# The Lampiran lays out differently: its panels start at 1,280,000 EMU and are 4,700,000 tall,
+# so their (legitimate) grey fill reaches lower than the storyboard body box. A single band
+# constant would flag every Lampiran page for drawing its own panels.
+LP_PANEL_TOP_EMU = 1280000
+LP_PANEL_H_EMU = 4700000
+LP_PANEL_BOTTOM_PT = (LP_PANEL_TOP_EMU + LP_PANEL_H_EMU) / PT   # 470.9
+
+MEASURE_SCALE = 4                              # px per point when measuring with PIL
+
 PREVIEW_W, PREVIEW_H = 1280, 720
-SB_COL_PX = 700           # storyboard learner-content column, preview scale
-SB_TOP_PX = 154
-SB_BOTTOM_PX = 630
+PX_PER_PT = PREVIEW_W / SLIDE_W_PT             # the preview is now a true scale model
 
 
 @functools.lru_cache(maxsize=64)
@@ -99,6 +146,114 @@ def _font(sz, bold=False):
 def _draw():
     from PIL import Image, ImageDraw
     return ImageDraw.Draw(Image.new("RGB", (PREVIEW_W, PREVIEW_H), (255, 255, 255)))
+
+
+def _no_autofit(tf):
+    """Strip spAutoFit and pin the box to its declared height.
+
+    python-pptx gives every new textbox `<a:spAutoFit/>`, which tells the renderer to GROW the
+    shape to fit its text. The declared height then stops describing what is drawn, which is
+    precisely why a declared-geometry gate saw nothing while five pages overflowed. `noAutofit`
+    makes the declared box the truth; pagination is what keeps the text inside it.
+    """
+    from pptx.oxml.ns import qn
+    bodyPr = tf._txBody.find(qn("a:bodyPr"))
+    for tag in ("a:spAutoFit", "a:normAutofit"):
+        for el in bodyPr.findall(qn(tag)):
+            bodyPr.remove(el)
+    if bodyPr.find(qn("a:noAutofit")) is None:
+        bodyPr.append(bodyPr.makeelement(qn("a:noAutofit"), {}))
+    return tf
+
+
+def _tf(slide, x, y, w, h, wrap=True):
+    """T04's textbox primitive with autofit disabled."""
+    return _no_autofit(BB._tf(slide, x, y, w, h, wrap))
+
+
+def strip_shadow(prs):
+    """Remove the autoshape drop shadow LibreOffice draws under every rectangle.
+
+    `shape.shadow.inherit = False` writes an empty `<a:effectLst/>` and LibreOffice ignores
+    it — measured: a soft band still fades for ~5pt below each panel, which put decoration in
+    the footer band and left the native gate unable to tell it from content that had actually
+    spilled. `add_shape()` already writes a `<p:style>` carrying `effectRef idx="2"`, the
+    theme's shadow; setting that index to 0 suppresses it completely.
+
+    Only EXISTING styles are edited. A plain textbox has no style and no shadow, and adding
+    one gave it the theme's `lnRef` — which drew a visible blue outline round every text block
+    in the native render. The proxy preview could never have shown that.
+    """
+    from pptx.oxml.ns import qn
+    n = 0
+    for slide in prs.slides:
+        for shape in slide.shapes:
+            style = shape._element.find(qn("p:style"))
+            if style is None:
+                continue
+            ref = style.find(qn("a:effectRef"))
+            if ref is not None and ref.get("idx") != "0":
+                ref.set("idx", "0")
+                n += 1
+    return n
+
+
+def strip_autofit(prs):
+    """Remove autofit from EVERY text body in the package, whoever built it.
+
+    The Lampiran panels come from T04's `_state_panel`, which makes its own boxes and carries
+    the same spAutoFit. This is a generator-wide defect, so the sweep is generator-wide.
+    """
+    n = 0
+    for slide in prs.slides:
+        for shape in slide.shapes:
+            if shape.has_text_frame:
+                _no_autofit(shape.text_frame)
+                n += 1
+    return n
+
+
+def autofit_audit(pptx_path):
+    """One record per bounded text body, read back from the file on disk.
+
+    Reports what each bodyPr actually declares rather than only what is forbidden. An empty
+    bodyPr is reported as `explicit=False`: this makes no claim about what a renderer would
+    infer, only that the package has not stated its contract.
+    """
+    from pptx.oxml.ns import qn
+    prs = Presentation(pptx_path)
+    out = []
+    for i, slide in enumerate(prs.slides, start=1):
+        for shape in slide.shapes:
+            if not shape.has_text_frame:
+                continue
+            bodyPr = shape.text_frame._txBody.find(qn("a:bodyPr"))
+            has = {t: (bodyPr is not None
+                       and bodyPr.find(qn(f"a:{t}")) is not None)
+                   for t in ("noAutofit", "spAutoFit", "normAutofit")}
+            out.append(dict(slide=i, shape_id=shape.shape_id,
+                            kind=str(shape.shape_type),
+                            text=shape.text_frame.text[:40],
+                            explicit=has["noAutofit"], **has))
+    return out
+
+
+def autofit_boxes(pptx_path):
+    """Text bodies still declaring spAutoFit/normAutofit, read back from the file on disk."""
+    from pptx.oxml.ns import qn
+    prs = Presentation(pptx_path)
+    out = []
+    for i, slide in enumerate(prs.slides, start=1):
+        for shape in slide.shapes:
+            if not shape.has_text_frame:
+                continue
+            bodyPr = shape.text_frame._txBody.find(qn("a:bodyPr"))
+            if bodyPr is None:
+                continue
+            if (bodyPr.find(qn("a:spAutoFit")) is not None
+                    or bodyPr.find(qn("a:normAutofit")) is not None):
+                out.append(dict(slide=i, text=shape.text_frame.text[:50]))
+    return out
 
 
 def _tag(b):
@@ -130,26 +285,74 @@ def _wrap(draw, text, font, width):
     return out or [""]
 
 
-def _block_height(draw, b):
-    indent = 14 * (b.get("list_level") or 0)
-    f = _font(_block_size(b))
-    lines = _wrap(draw, f"{_tag(b)} · {b['text']}", f, SB_COL_PX - indent)
-    return 20 * (len(lines) - 1) + 22
+# ---- canonical block text -----------------------------------------------------------------
+# ONE string per block, used by the measurement path and by the PPTX writer. They diverged
+# once: the writer drew "[S] · text" while pagination measured "[S] text", so every block was
+# measured three characters short of what the renderer was asked to draw. The trace below
+# records what each path actually used at runtime, so parity is proved by VALUE rather than by
+# reading the source.
+_TRACE = None
+
+
+def trace_start():
+    global _TRACE
+    _TRACE = dict(measured={}, rendered={}, label={})
+
+
+def trace_stop():
+    global _TRACE
+    t, _TRACE = _TRACE, None
+    return t
+
+
+def _record(kind, b, text, label=None):
+    if _TRACE is not None:
+        _TRACE[kind][id(b)] = text
+        if label:
+            _TRACE["label"][id(b)] = label
+
+
+def block_text(b):
+    """The canonical text of a block. The only string either path may use."""
+    return f"{_tag(b)} {b['text']}"
+
+
+def render_text(b):
+    """What the PPTX writer emits. Indirection exists so a fixture can break parity on ONE
+    path only and prove the parity gate catches it."""
+    return block_text(b)
+
+
+def wrapped_lines_pt(text, size_pt, level=0, col_pt=None):
+    """Lines this run occupies, from FROZEN advance widths only.
+
+    No font is opened, no imaging library is asked to measure, and no renderer is consulted.
+    The same input text and the same committed constants produce the same wrap on any host.
+    """
+    col = (col_pt if col_pt is not None else COL_W_PT) - INDENT_PT * (level or 0)
+    return MT.wrap(text, size_pt, col)
+
+
+def block_height_pt(b):
+    t = block_text(b)
+    _record("measured", b, t)
+    n = len(wrapped_lines_pt(t, _block_size(b), b.get("list_level") or 0))
+    return n * _block_size(b) * LINE_FACTOR
 
 
 def paginate(blocks):
-    """Split a screen's blocks across pages using the same metrics the preview draws with.
+    """Split a screen's blocks across review pages, measured in points.
 
-    Nothing is ever dropped: a page break happens before the block that would not fit. The
-    preview then re-measures independently and shouts if anything still overflows.
+    A learner screen may occupy several REVIEW pages. That does not change the learner-screen
+    count — the screen keeps its identity and the pages are labelled `page i/n`. Nothing is
+    ever dropped: the break happens before the block that would not fit.
     """
-    draw = _draw()
-    pages, cur, y = [], [], SB_TOP_PX
+    pages, cur, y = [], [], BODY_TOP_PT + HEADER_LINE_PT
     for b in blocks:
-        h = _block_height(draw, b)
-        if cur and y + h > SB_BOTTOM_PX:
+        h = block_height_pt(b)
+        if cur and y + h > BODY_LIMIT_PT:
             pages.append(cur)
-            cur, y = [], SB_TOP_PX
+            cur, y = [], BODY_TOP_PT + HEADER_LINE_PT
         cur.append(b)
         y += h
     if cur:
@@ -165,7 +368,8 @@ def slides():
         for i, blocks in enumerate(pages, start=1):
             out.append(dict(screen=sc, blocks=blocks, page_index=i, page_count=len(pages),
                             is_continuation=i > 1,
-                            title_suffix="" if len(pages) == 1 else f"  ({i}/{len(pages)})"))
+                            title_suffix=("" if len(pages) == 1
+                                          else f"   ·   halaman {i}/{len(pages)}")))
     return out
 
 
@@ -174,7 +378,7 @@ def slides():
 # ==========================================================================================
 def _title_slide(prs, t):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    tf = BB._tf(slide, MARGIN, Emu(1200000), Emu(SLIDE_W - 2 * MARGIN), Emu(3600000))
+    tf = _tf(slide, MARGIN, Emu(1200000), Emu(SLIDE_W - 2 * MARGIN), Emu(3600000))
     BB._p(tf, "STORYBOARD KALIBRASI UNTUK SEMAKAN BARIAH", 16, MUTED, bold=True, first=True)
     BB._p(tf, f"{M.UNIT_ID}: {M.extract()['lesson_title']}", 32, INK, bold=True)
     BB._p(tf, f"{t['screens']} skrin pembelajaran · {t['runtime_states']} keadaan runtime",
@@ -197,23 +401,28 @@ def _screen_slide(prs, sl):
     sc = sl["screen"]
     slide = prs.slides.add_slide(prs.slide_layouts[6])
 
-    tf = BB._tf(slide, MARGIN, Emu(320000), Emu(SLIDE_W - 2 * MARGIN), Emu(700000))
+    tf = _tf(slide, MARGIN, Emu(320000), Emu(SLIDE_W - 2 * MARGIN), Emu(700000))
     BB._p(tf, f"{sc['screen_id']}   ·   {sc['treatment']}   ·   {sc['kind']}", 11, MUTED,
           bold=True, first=True)
     BB._p(tf, sc["title_ms"] + sl["title_suffix"], 24, INK, bold=True)
     BB._rule(slide, Emu(1150000))
 
     col_w = Emu(int((SLIDE_W - 2 * MARGIN) * 0.60))
-    tf = BB._tf(slide, MARGIN, Emu(1320000), col_w, Emu(4600000))
+    tf = _tf(slide, MARGIN, Emu(1320000), col_w, Emu(4600000))
     BB._p(tf, "KANDUNGAN SKRIN" + (" (sambungan)" if sl["is_continuation"] else ""),
           10, MUTED, bold=True, first=True)
-    for b in sl["blocks"]:
-        BB._p(tf, f"{_tag(b)} · {b['text']}", _block_size(b), _colour(b),
-              indent=b.get("list_level") or 0)
+    for i, b in enumerate(sl["blocks"], start=1):
+        # MUST be the same string pagination measured. It previously drew "[S] · text" while
+        # measuring "[S] text", so every block was measured three characters short of what
+        # the renderer was asked to draw. The trace proves parity by value.
+        t = render_text(b)
+        _record("rendered", b, t,
+                label=f"{sc['screen_id']}#p{sl['page_index']}#{i:02d}")
+        BB._p(tf, t, _block_size(b), _colour(b), indent=b.get("list_level") or 0)
 
     rx = Emu(int(MARGIN + col_w + 300000))
     rw = Emu(int(SLIDE_W - MARGIN - rx))
-    tf = BB._tf(slide, rx, Emu(1320000), rw, Emu(4600000))
+    tf = _tf(slide, rx, Emu(1320000), rw, Emu(4600000))
     BB._p(tf, "INTERAKSI", 10, MUTED, bold=True, first=True)
     if sc["reveals"]:
         BB._p(tf, f"{sc['treatment']} · {len(sc['reveals'])} panel", 10, INK)
@@ -242,7 +451,7 @@ def _screen_slide(prs, sl):
           if sc["source_row_ids"] else "Skrin struktur — tiada baris modul", 8, SRC)
     BB._p(tf, "Keputusan Bariah: " + ", ".join(sc["decision_ids"]), 8, MUTED)
 
-    tf = BB._tf(slide, MARGIN, Emu(6150000), Emu(SLIDE_W - 2 * MARGIN), Emu(500000))
+    tf = _tf(slide, MARGIN, Emu(6150000), Emu(SLIDE_W - 2 * MARGIN), Emu(500000))
     BB._p(tf, f"{M.UNIT_ID} · skrin {sc['position']} daripada {len(M.screens())}"
               + ("" if sl["page_count"] == 1
                  else f"  ·  halaman {sl['page_index']}/{sl['page_count']}")
@@ -258,6 +467,8 @@ def build_storyboard():
     _title_slide(prs, M.totals())
     for sl in slides():
         _screen_slide(prs, sl)
+    strip_autofit(prs)
+    strip_shadow(prs)
     os.makedirs(M.PPTX_DIR, exist_ok=True)
     path = os.path.join(M.PPTX_DIR, M.STORYBOARD_NAME)
     prs.save(path)
@@ -267,6 +478,21 @@ def build_storyboard():
 # ==========================================================================================
 # LAMPIRAN KEADAAN PPTX — density is the only variable
 # ==========================================================================================
+# The longest single line in a panel is the source-row list, and it is metadata, not learner
+# content. In the narrower 3-panel column it wrapped past the panel box and into the footer
+# band. The cap is applied at BOTH densities so the two files still differ in exactly one
+# variable; the full list stays on the storyboard and in the JSON model.
+PANEL_ROW_IDS_SHOWN = 2
+
+
+def _panel_state(st):
+    ids = st["source_row_ids"]
+    if len(ids) <= PANEL_ROW_IDS_SHOWN:
+        return st
+    shown = list(ids[:PANEL_ROW_IDS_SHOWN]) + [f"(+{len(ids) - PANEL_ROW_IDS_SHOWN})"]
+    return dict(st, source_row_ids=shown)
+
+
 def build_lampiran(panels_per_page):
     prs = Presentation()
     prs.slide_width, prs.slide_height = SLIDE_W, SLIDE_H
@@ -274,7 +500,7 @@ def build_lampiran(panels_per_page):
     t = M.totals()
 
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    tf = BB._tf(slide, MARGIN, Emu(1400000), Emu(SLIDE_W - 2 * MARGIN), Emu(3200000))
+    tf = _tf(slide, MARGIN, Emu(1400000), Emu(SLIDE_W - 2 * MARGIN), Emu(3200000))
     BB._p(tf, "LAMPIRAN SEMAKAN KEADAAN RUNTIME", 16, MUTED, bold=True, first=True)
     BB._p(tf, f"{M.UNIT_ID}: {M.extract()['lesson_title']}", 30, INK, bold=True)
     BB._p(tf, f"{t['panel_states']} keadaan dipanelkan daripada {t['runtime_states']} "
@@ -290,7 +516,7 @@ def build_lampiran(panels_per_page):
     for page in pages:
         slide = prs.slides.add_slide(prs.slide_layouts[6])
         sc = next(s for s in M.screens() if s["screen_id"] == page["screen_id"])
-        tf = BB._tf(slide, MARGIN, Emu(320000), Emu(SLIDE_W - 2 * MARGIN), Emu(700000))
+        tf = _tf(slide, MARGIN, Emu(320000), Emu(SLIDE_W - 2 * MARGIN), Emu(700000))
         BB._p(tf, f"{sc['screen_id']}   ·   {sc['treatment']}", 11, MUTED, bold=True,
               first=True)
         BB._p(tf, sc["title_ms"], 22, INK, bold=True)
@@ -300,14 +526,16 @@ def build_lampiran(panels_per_page):
         gap = Emu(200000)
         pw = Emu(int((SLIDE_W - 2 * MARGIN - (n - 1) * gap) / n))
         for i, st in enumerate(page["states"]):
-            SE._state_panel(slide, st, Emu(int(MARGIN + i * (pw + gap))), Emu(1280000),
-                            pw, Emu(4700000))
+            SE._state_panel(slide, _panel_state(st), Emu(int(MARGIN + i * (pw + gap))),
+                            Emu(LP_PANEL_TOP_EMU), pw, Emu(LP_PANEL_H_EMU))
 
-        tf = BB._tf(slide, MARGIN, Emu(6150000), Emu(SLIDE_W - 2 * MARGIN), Emu(400000))
+        tf = _tf(slide, MARGIN, Emu(6150000), Emu(SLIDE_W - 2 * MARGIN), Emu(400000))
         BB._p(tf, f"Lampiran keadaan · {panels_per_page} panel/halaman · halaman "
                   f"{page['page_no']} daripada {len(pages)}   ·   "
                   + " · ".join(M.STATUS_MARKS), 9, MUTED, first=True)
 
+    strip_autofit(prs)
+    strip_shadow(prs)
     os.makedirs(M.PPTX_DIR, exist_ok=True)
     path = os.path.join(M.PPTX_DIR, M.LAMPIRAN_NAME.format(n=panels_per_page))
     prs.save(path)
@@ -380,28 +608,35 @@ def render_storyboard_previews():
                fill=(26, 26, 26))
         d.line([(48, 108), (PREVIEW_W - 48, 108)], fill=(216, 216, 216), width=2)
 
-        y = 130
-        d.text((48, y), "KANDUNGAN SKRIN" + (" (sambungan)" if sl["is_continuation"] else ""),
-               font=_font(12, True), fill=(107, 107, 107))
-        y = SB_TOP_PX
+        # Drawn in POINT space and scaled, so the preview is a true model of the deck rather
+        # than a differently-sized picture that happened to look fine.
+        d.text((MARGIN_PT * PX_PER_PT, BODY_TOP_PT * PX_PER_PT),
+               "KANDUNGAN SKRIN" + (" (sambungan)" if sl["is_continuation"] else ""),
+               font=_font(int(10 * PX_PER_PT), True), fill=(107, 107, 107))
+        y_pt = BODY_TOP_PT + HEADER_LINE_PT
         overflow, clipped = False, False
         for b in sl["blocks"]:
-            indent = 14 * (b.get("list_level") or 0)
-            f = _font(_block_size(b))
+            size_pt = _block_size(b)
+            lvl = b.get("list_level") or 0
+            indent_pt = INDENT_PT * lvl
+            f = _font(int(round(size_pt * PX_PER_PT)))
             colour = PROV_RGB.get(b["provenance"], PROV_RGB["PROVISIONAL_PLACEHOLDER"])
-            lines = _wrap(d, f"{_tag(b)} · {b['text']}", f, SB_COL_PX - indent)
-            for ln in lines:
-                if y > SB_BOTTOM_PX:
+            for ln in wrapped_lines_pt(block_text(b), size_pt, lvl):
+                if y_pt > BODY_LIMIT_PT:
                     overflow = True
                     break
-                if d.textlength(ln, font=f) + 48 + indent > 48 + SB_COL_PX + 40:
+                # Measured with the SAME instrument that did the wrapping. Mixing the
+                # measure-scale font with the preview-scale font made a line wrapped exactly
+                # at the limit read as clipped.
+                if indent_pt + MT.text_width_pt(ln, size_pt) > COL_W_PT + 0.5:
                     clipped = True
-                d.text((48 + indent, y), ln, font=f, fill=colour)
-                y += 20
-            y += 2
+                d.text(((MARGIN_PT + indent_pt) * PX_PER_PT, y_pt * PX_PER_PT), ln, font=f,
+                       fill=colour)
+                y_pt += size_pt * LINE_FACTOR
             if overflow:
-                d.text((48, min(y, PREVIEW_H - 70)), "TRUNCATED — PAGINATION FAILED",
-                       font=_font(13, True), fill=(183, 28, 28))
+                d.text((MARGIN_PT * PX_PER_PT, min(y_pt, SLIDE_H_PT - 40) * PX_PER_PT),
+                       "TRUNCATED — PAGINATION FAILED",
+                       font=_font(int(13 * PX_PER_PT), True), fill=(183, 28, 28))
                 break
 
         rx, ry = 810, 130
@@ -553,8 +788,195 @@ def render_lampiran_previews(panels_per_page):
 
 
 # ==========================================================================================
+# NATIVE RENDER — the independent oracle
+#
+# Nothing here consults the model, the declared geometry or the proxy preview. A PPTX goes to
+# LibreOffice, comes back as PDF, and the PDF is rasterised. What the renderer actually put on
+# the page is the only input.
+# ==========================================================================================
+NATIVE_TIMEOUT_S = 300
+_INK_TOL_PT = 1.5           # anti-aliasing slack around a band edge
+_RASTER_SCALE = 2           # 1920x1080
+
+
+def libreoffice():
+    """(binary, version) or (None, None)."""
+    import shutil as _sh
+    import subprocess
+    exe = _sh.which("soffice") or _sh.which("libreoffice")
+    if not exe:
+        return None, None
+    try:
+        out = subprocess.run([exe, "--version"], capture_output=True, text=True,
+                             timeout=60).stdout.strip().splitlines()
+        return exe, (out[0] if out else "unknown")
+    except Exception:
+        return exe, "unknown"
+
+
+def _impress_available(exe, workdir):
+    """Impress must be able to LOAD a .pptx, not merely be on the PATH.
+
+    libreoffice-core alone answers --version happily and then fails every conversion with
+    'source file could not be loaded'. That is UNAVAILABLE, not FAILED.
+    """
+    return exe is not None and os.path.isdir("/usr/lib/libreoffice/program")
+
+
+def native_render(pptx_path, outdir):
+    """Export one PPTX to PDF through LibreOffice. Returns a typed status record."""
+    import subprocess
+    exe, version = libreoffice()
+    rec = dict(pptx=os.path.basename(pptx_path), renderer=exe, version=version,
+               status=NATIVE_UNAVAILABLE, pdf=None, page_count=None, stderr="", stdout="")
+    if not _impress_available(exe, outdir):
+        rec["stderr"] = "no LibreOffice binary on PATH"
+        return rec
+    os.makedirs(outdir, exist_ok=True)
+    profile = os.path.join(outdir, "_loprofile")
+    try:
+        r = subprocess.run(
+            [exe, "--headless", "--norestore",
+             f"-env:UserInstallation=file://{profile}",
+             "--convert-to", "pdf", "--outdir", outdir, pptx_path],
+            capture_output=True, text=True, timeout=NATIVE_TIMEOUT_S)
+        rec["stdout"], rec["stderr"] = r.stdout[-2000:], r.stderr[-2000:]
+    except Exception as e:                                   # pragma: no cover
+        rec["status"], rec["stderr"] = NATIVE_FAILED, f"{type(e).__name__}: {e}"
+        return rec
+
+    pdf = os.path.join(outdir,
+                       os.path.splitext(os.path.basename(pptx_path))[0] + ".pdf")
+    if not os.path.exists(pdf):
+        # Impress missing entirely reads as "could not be loaded" — that is UNAVAILABLE.
+        rec["status"] = (NATIVE_UNAVAILABLE
+                         if "could not be loaded" in (rec["stdout"] + rec["stderr"])
+                         else NATIVE_FAILED)
+        return rec
+    try:
+        import fitz
+        with fitz.open(pdf) as d:
+            rec["page_count"] = d.page_count
+    except Exception as e:                                   # pragma: no cover
+        rec["status"], rec["stderr"] = NATIVE_FAILED, f"{type(e).__name__}: {e}"
+        return rec
+    rec["status"], rec["pdf"] = NATIVE_COMPLETED, pdf
+    return rec
+
+
+def _band_has_ink(pix, y0_pt, y1_pt, sc):
+    """True if any non-white pixel falls in the horizontal band [y0_pt, y1_pt)."""
+    y0, y1 = max(0, int(y0_pt * sc)), min(pix.height, int(y1_pt * sc))
+    if y1 <= y0:
+        return False
+    n = pix.n
+    samples = pix.samples
+    w = pix.width
+    for y in range(y0, y1):
+        row = samples[y * pix.stride:y * pix.stride + w * n]
+        if min(row) < 250:
+            return True
+    return False
+
+
+def native_page_findings(pdf_path, body_bottom_pt, footer_top_pt, footer_bottom_pt,
+                         edge_pt=2.0, tol_pt=_INK_TOL_PT):
+    """Per-page rendered-ink findings.
+
+    Every threshold is a REQUIRED argument. Reading them off this module's own geometry
+    constants would have made the oracle move whenever the generator moved, which is exactly
+    the failure mode the native check exists to rule out. The caller supplies them.
+    """
+    import fitz
+    bottom = body_bottom_pt
+    out = []
+    with fitz.open(pdf_path) as d:
+        for i, pg in enumerate(d, start=1):
+            pix = pg.get_pixmap(matrix=fitz.Matrix(_RASTER_SCALE, _RASTER_SCALE))
+            h_pt = pg.rect.height
+            gap = _band_has_ink(pix, bottom + tol_pt, footer_top_pt - tol_pt,
+                                _RASTER_SCALE)
+            below = _band_has_ink(pix, footer_bottom_pt + tol_pt, h_pt, _RASTER_SCALE)
+            edge = (_band_has_ink(pix, h_pt - edge_pt, h_pt, _RASTER_SCALE)
+                    or _band_has_ink(pix, 0, edge_pt, _RASTER_SCALE))
+            blocks = [b for b in pg.get_text("blocks") if b[4].strip()]
+            # BODY ink only. The footer legitimately sits inside the footer box, so counting
+            # it made "clearance" negative on every page and meant nothing.
+            body = [b for b in blocks if b[1] < footer_top_pt]
+            worst = max((b[3] for b in body), default=0.0)
+            out.append(dict(page=i, ink_in_gap_band=gap, ink_below_footer=below,
+                            ink_at_page_edge=edge, max_text_bottom_pt=round(worst, 1),
+                            body_bottom_pt=round(bottom, 1),
+                            clearance_pt=round(footer_top_pt - worst, 1),
+                            offending=[b[4].strip()[:70] for b in blocks
+                                       if b[3] > bottom and b[1] < footer_top_pt]))
+    return out
+
+
+def native_text(pdf_path):
+    """All text the renderer actually drew, whitespace-normalised.
+
+    Used to prove nothing was silently clipped once autofit was removed.
+    """
+    import fitz
+    with fitz.open(pdf_path) as d:
+        return " ".join(" ".join(pg.get_text().split()) for pg in d)
+
+
+def native_check(outdir, bands):
+    """Render all three decks and report status plus every rendered-ink finding.
+
+    `bands` is REQUIRED and supplied by the caller: {key: (body_bottom, footer_top,
+    footer_bottom)} in points. This module contributes no threshold of its own.
+    """
+    res = {}
+    for key, name in (("sb", M.STORYBOARD_NAME),
+                      ("lp2", M.LAMPIRAN_NAME.format(n=2)),
+                      ("lp3", M.LAMPIRAN_NAME.format(n=3))):
+        bb, ft, fb = bands[key]
+        rec = native_render(os.path.join(M.PPTX_DIR, name), outdir)
+        rec["findings"] = (native_page_findings(rec["pdf"], bb, ft, fb)
+                           if rec["status"] == NATIVE_COMPLETED else [])
+        rec["overflow_pages"] = [f["page"] for f in rec["findings"]
+                                 if f["ink_in_gap_band"] or f["ink_below_footer"]
+                                 or f["ink_at_page_edge"]]
+        res[key] = rec
+    return res
+
+
+def render_status(native=None):
+    """One status for the whole package, detected at runtime."""
+    if native is None:
+        return NATIVE_UNAVAILABLE
+    st = {r["status"] for r in native.values()}
+    if st == {NATIVE_COMPLETED}:
+        return NATIVE_COMPLETED
+    if NATIVE_FAILED in st:
+        return NATIVE_FAILED
+    return NATIVE_UNAVAILABLE
+
+
+# ==========================================================================================
 # READBACK — re-open every written file from disk
 # ==========================================================================================
+def storyboard_body_runs(path):
+    """Substantive runs in the learner-content column, read back from the .pptx on disk."""
+    prs = Presentation(path)
+    out = []
+    for i, slide in enumerate(prs.slides, start=1):
+        for sh in slide.shapes:
+            if (not sh.has_text_frame or sh.left != MARGIN
+                    or sh.top != Emu(BODY_TOP_EMU)):
+                continue
+            for para in sh.text_frame.paragraphs:
+                t = "".join(r.text for r in para.runs)
+                # Documented normalisation: a soft line break serialises as a vertical tab.
+                t = t.replace("\v", " ").replace("\n", " ").strip()
+                if t and not t.startswith("KANDUNGAN SKRIN"):
+                    out.append((i, t))
+    return out
+
+
 def readback(path):
     prs = Presentation(path)
     slides_out, off_canvas = [], []
@@ -593,7 +1015,7 @@ def readback(path):
 HANDOFF_NAME = "K5_PL06_T03_B03_CALIBRATION_HANDOFF_v0_1.md"
 
 
-def emit_handoff(qa=None, mutations=None):
+def emit_handoff(qa=None, mutations=None, native=None):
     """One page for whoever hands the package to Bariah. Projected from the same model."""
     t = M.totals()
     a4 = M.A4_COMPARISON
@@ -603,6 +1025,9 @@ def emit_handoff(qa=None, mutations=None):
     l3 = readback(os.path.join(M.PPTX_DIR, M.LAMPIRAN_NAME.format(n=3)))
     qa = qa or dict(passed="NOT_RUN", total="NOT_RUN")
     mutations = mutations or dict(detected="NOT_RUN", fixture_count="NOT_RUN")
+    status = render_status(native)
+    nat = native or {}
+    lo_version = next((r["version"] for r in nat.values() if r.get("version")), "unknown")
 
     def row(*c):
         return "| " + " | ".join(str(x) for x in c) + " |"
@@ -613,7 +1038,8 @@ def emit_handoff(qa=None, mutations=None):
          "```", f"STAGE          = {M.STAGE}",
          f"UNIT           = {M.UNIT_ID} ({M.extract()['lesson_title']})",
          f"STATUS         = {' · '.join(M.STATUS_MARKS)}",
-         f"RENDER_STATUS  = {RENDER_STATUS}", "```", "",
+         f"RENDER_STATUS  = {status}",
+         f"RENDERER       = {lo_version}", "```", "",
          "## 1. Files", "",
          row("File", "Slides", "Bytes"), row("---", "---", "---"),
          row(M.STORYBOARD_NAME, sb["slide_count"], f"{sb['bytes']:,}"),
@@ -621,7 +1047,9 @@ def emit_handoff(qa=None, mutations=None):
          row(M.LAMPIRAN_NAME.format(n=3), l3["slide_count"], f"{l3['bytes']:,}"), "",
          "## 2. Counts", "",
          row("Measure", "Value"), row("---", "---"),
-         row("Learner screens", t["screens"]),
+         row("**Learner screens**", f"**{t['screens']}** — unchanged by review pagination"),
+         row("Storyboard review pages", len(slides())),
+         row("Storyboard slides (cover + review pages)", sb["slide_count"]),
          row("Policy minimum after D3/A5", t["policy_minimum_screens"]),
          row("Content groups", t["content_groups"]),
          row("Reveal panels", t["reveals"]),
@@ -656,7 +1084,17 @@ def emit_handoff(qa=None, mutations=None):
          "Every gate re-opens the `.pptx` from disk. No gate asks the builder what it "
          "believes it wrote.", "",
          "## 5. Render status", "",
-         f"`{RENDER_STATUS}`", "", RENDER_NOTE, "",
+         f"`{status}` · {lo_version}", "", RENDER_NOTE, "",
+         row("File", "PPTX slides", "Native PDF pages", "Rendered-overflow pages"),
+         row("---", "---", "---", "---"),
+         *[row(nat[k]["pptx"], c, nat[k].get("page_count", "—"),
+               ", ".join(str(x) for x in nat[k]["overflow_pages"]) or "none")
+           for k, c in (("sb", sb["slide_count"]), ("lp2", l2["slide_count"]),
+                        ("lp3", l3["slide_count"])) if k in nat], "",
+         ("Every page of every deck was exported through LibreOffice Impress and rasterised. "
+          "No rendered ink enters the footer band, sits below the footer box, or touches the "
+          "page edge." if status == NATIVE_COMPLETED
+          else "A native render was NOT completed, so no renderer claim is made."), "",
          "## 6. A4 — Comparison", "",
          f"**Applied in this deck: {'yes' if a4['applied_in_this_deck'] else 'NO'}.** "
          f"Treatments actually used: {', '.join(a4['treatments_actually_used'])}. The word "
@@ -705,9 +1143,11 @@ def emit_handoff(qa=None, mutations=None):
     L += [f"Plus {amb['count']} ambiguities carried from the committed unit model:", ""]
     L += [f"- {a['item']} (`{a['resolution']}`)" for a in amb["items"]]
     L += ["", "## 9. What this package is not", "",
-          "This is a **calibration draft**. It is generated from controlled source rows and "
-          "Bariah's committed rulings so that the pattern, the density and the review "
-          "packaging can be judged on a real unit.", "",
+          "This is a **TECHNICAL PROOF**, not an instructional deliverable. It exists to "
+          "prove that the generator, the pagination contract and the native render behave "
+          "correctly on a real unit, and to let the pattern, the density and the review "
+          "packaging be judged on real content. Every instructional decision in it remains "
+          "provisional.", "",
           *[f"- `{m}`" for m in M.STATUS_MARKS], "",
           "No screen text, no answer key, no visual direction and no cast in this package is "
           "instructionally approved. The remaining three authorised calibration units "
@@ -719,6 +1159,15 @@ def emit_handoff(qa=None, mutations=None):
     return path
 
 
+def page_break_map():
+    """{screen_id: ["1/2", "2/2"]} — the review-page plan, derived from frozen data only."""
+    out = {}
+    for sl in slides():
+        out.setdefault(sl["screen"]["screen_id"], []).append(
+            f"{sl['page_index']}/{sl['page_count']}")
+    return out
+
+
 def build_all():
     timings = {}
     t0 = time.time()
@@ -728,8 +1177,7 @@ def build_all():
     lp2 = build_lampiran(2)
     lp3 = build_lampiran(3)
     timings["lampiran_pptx_s"] = round(time.time() - t0, 2)
-    return dict(storyboard=sb, lampiran_2=lp2, lampiran_3=lp3,
-                handoff=emit_handoff(), timings=timings)
+    return dict(storyboard=sb, lampiran_2=lp2, lampiran_3=lp3, timings=timings)
 
 
 if __name__ == "__main__":
