@@ -43,6 +43,45 @@ import pl06_unit_model_v1 as U         # noqa: E402
 import k5_pattern_policy_v1 as P       # noqa: E402
 import k5_policy_apply_v1 as AP        # noqa: E402
 import pl06_authority_v1 as AU        # noqa: E402  — the ONLY source of approved B03 copy
+import k5_treatment_resolver_v1 as TR  # noqa: E402  — the ONE shared F4/F3 resolver
+
+# ------------------------------------------------------- F4(a): the Sub-soil step sequence --
+# An analysis/implementation record, NOT an authority declaration. F4(a) decided the
+# TREATMENT; which rows carry the sequence is a source reading, and this is that reading.
+#
+# ROW-023 is an explicit process lead-in — "Proses pemasangan yang betul adalah kunci
+# kejayaan sistem ini:" — followed by six contiguous LIST_ITEM rows. ROW-020/021 (trench
+# excavation) and ROW-030/031 (outlet connection) sit OUTSIDE the list: absorbing them would
+# invent a step 0 and a step 7.
+SUBSOIL_LEAD_IN_ROW = "T03B03-ROW-023"
+SUBSOIL_STEP_ROWS = ["T03B03-ROW-024", "T03B03-ROW-025", "T03B03-ROW-026",
+                     "T03B03-ROW-027", "T03B03-ROW-028", "T03B03-ROW-029"]
+SUBSOIL_PREREQUISITE_ROWS = ["T03B03-ROW-020", "T03B03-ROW-021"]
+SUBSOIL_FOLLOW_ON_ROWS = ["T03B03-ROW-030", "T03B03-ROW-031"]
+SUBSOIL_PARENT_HEADING = "T03B03-ROW-022"
+SUBSOIL_ORDER_BASIS = ("CONTIGUOUS_CONTROLLED_SOURCE_ORDER_AFTER_EXPLICIT_PROCESS_LEAD_IN")
+
+# Reused verbatim from the approved T04 STEP contract — schema and semantics only.
+_T04SM = __import__("importlib").import_module("t04_state_model_v1")
+STEP_RETURN = _T04SM.RETURN_BEHAVIOURS["STEP"]
+STEP_RETURN_MS = _T04SM.RETURN_BEHAVIOURS_MS["STEP"]
+
+
+def subsoil_sequence():
+    """The six source-bound steps, in source order. Never reordered, merged or invented."""
+    by = rows_by_id()
+    return dict(
+        lead_in_row=SUBSOIL_LEAD_IN_ROW, lead_in_text=_txt(by[SUBSOIL_LEAD_IN_ROW]),
+        parent_heading_row=SUBSOIL_PARENT_HEADING,
+        parent_heading_text=_txt(by[SUBSOIL_PARENT_HEADING]),
+        order_basis=SUBSOIL_ORDER_BASIS,
+        prerequisite_rows=list(SUBSOIL_PREREQUISITE_ROWS),
+        prerequisite_note="Trench excavation. Context for the sequence, not step 0.",
+        follow_on_rows=list(SUBSOIL_FOLLOW_ON_ROWS),
+        follow_on_note="Outlet connection. Context after the sequence, not step 7.",
+        steps=[dict(step=i, row_id=r, text=_txt(by[r]))
+               for i, r in enumerate(SUBSOIL_STEP_ROWS, start=1)],
+        step_count=len(SUBSOIL_STEP_ROWS))
 
 STAGE = "4.2F-K"
 SUITE_ID = "K5_CALIBRATION_PROOF_QA_v1"
@@ -445,9 +484,25 @@ def _screens_uncached():
         srows = [r for r in srows if r]
         subj = next((v for v in um["visual_obligations"]["subjects"]
                      if any(r in srows for r in v["rows"])), None)
-        add(kind="CONTENT", treatment=pol["screen_pattern_plan"]["primary"],
+        # ONE resolver, shared with the packet lane. F4 names Sub-soil and Swale; every
+        # other group falls back to F3 read from its own structure. The global
+        # screen_pattern_plan primary is no longer applied to every group — that is what
+        # left Sub-soil on click-to-reveal against F4(a).
+        res = TR.resolve(UNIT_ID, g["covers"], TR.LAYERED,
+                         f"{len(g['reveals'])} parallel Fokus entries under one component.")
+        seq = subsoil_sequence() if TR.is_step_by_step(res["treatment"]) else None
+        if seq:
+            blocks = [b for b in blocks if not b.get("revealed")]
+            blocks.append(dict(text=seq["lead_in_text"], provenance="SOURCE_CONTROLLED",
+                               row_id=seq["lead_in_row"]))
+            for st_ in seq["steps"]:
+                blocks.append(dict(text=st_["text"], provenance="SOURCE_CONTROLLED",
+                                   row_id=st_["row_id"], list_level=2,
+                                   step_index=st_["step"]))
+        add(kind="CONTENT", treatment=res["treatment"],
+            treatment_resolution=res, sequence=seq,
             title_ms=g["covers"], group=g, blocks=blocks, source_row_ids=srows,
-            reveals=g["reveals"],
+            reveals=[] if seq else g["reveals"],
             vo=" ".join(p["proposition"] for p in props) or _txt(by[g["head_row"]]),
             visual=dict(subject=subj["subject"] if subj else None,
                         rows=subj["rows"] if subj else [],
@@ -510,9 +565,10 @@ def _screens_uncached():
 # The grammar (kinds, ID shape, the five panel fields, the return-behaviour vocabulary) is
 # T04's proven one and is reused deliberately. The COUNT is derived here and owes nothing to
 # T04's 65.
-STATE_KINDS = ["BASE", "REVEAL", "QUIZ_ITEM", "QUIZ_RESULT", "COMPLETION"]
+STATE_KINDS = ["BASE", "REVEAL", "STEP", "QUIZ_ITEM", "QUIZ_RESULT", "COMPLETION"]
 
 RETURN_MS = {
+    "STEP": STEP_RETURN_MS,
     "BASE": "Keadaan masuk. Pelajar meneruskan dengan SETERUSNYA setelah syarat selesai "
             "dipenuhi.",
     "REVEAL": "Panel tertutup apabila ditekan sekali lagi atau apabila panel lain dibuka. "
@@ -524,6 +580,7 @@ RETURN_MS = {
                   "pendedahan dilihat, dan inilah yang membuka SETERUSNYA.",
 }
 RETURN_EN = {
+    "STEP": STEP_RETURN,
     "BASE": "Entry state. The learner continues with SETERUSNYA once the completion "
             "condition is met.",
     "REVEAL": "The panel closes on a second activation or when another opens; the base state "
@@ -575,6 +632,44 @@ def _states_uncached():
                            differs_from_base="Score shown after the fifth item.",
                            differs_from_base_ms="Markah dipaparkan selepas item kelima.",
                            parent_state_id=f"{sid}-ST-01"))
+            continue
+
+        # ---- F4(a) STEP_BY_STEP ------------------------------------------------------
+        # Schema, RETURN_BEHAVIOURS["STEP"] and ALL_VIEWED completion are reused from the
+        # approved T04 state contract. The BINDING is not: T04's STEP labels come from
+        # SmartArt obligations and bind DIAGRAM_OBLIGATION_NOT_A_TEXT_ROW. B03's steps are
+        # controlled text, so each binds SOURCE_ROWS with exactly one row.
+        if sc.get("sequence"):
+            seq = sc["sequence"]
+            base_id = f"{sid}-ST-BASE"
+            base_rows = [b["row_id"] for b in sc["blocks"]
+                         if b.get("row_id") and b.get("step_index") is None]
+            out.append(_st(base_id, sc, "BASE",
+                           content_block_texts=[b["text"] for b in sc["blocks"]
+                                                if b.get("step_index") is None],
+                           source_row_ids=base_rows, binding_kind="SOURCE_ROWS",
+                           visual_obligations=([sc["visual"]["subject"]]
+                                               if sc.get("visual")
+                                               and sc["visual"]["subject"] else [])))
+            for st_ in seq["steps"]:
+                out.append(_st(f"{sid}-ST-{st_['step']:02d}", sc, "STEP",
+                               trigger_id=f"{sid}-TRG-{st_['step']:02d}",
+                               trigger_label=f"langkah {st_['step']}",
+                               parent_state_id=base_id,
+                               content_block_texts=[st_["text"]],
+                               source_row_ids=[st_["row_id"]],
+                               binding_kind="SOURCE_ROWS",
+                               step_index=st_["step"], step_count=seq["step_count"],
+                               differs_from_base=f"Step {st_['step']} of "
+                                                 f"{seq['step_count']} is marked.",
+                               differs_from_base_ms=f"Langkah {st_['step']} daripada "
+                                                    f"{seq['step_count']} ditandakan."))
+            out.append(_st(f"{sid}-ST-ALL_VIEWED", sc, "COMPLETION",
+                           trigger_id=f"{sid}-TRG-ALL",
+                           trigger_label=f"semua {seq['step_count']} langkah dilihat",
+                           parent_state_id=base_id,
+                           differs_from_base="Not displayed; unlocks SETERUSNYA.",
+                           differs_from_base_ms="Tidak dipaparkan; membuka SETERUSNYA."))
             continue
 
         hidden = {r for rv in sc["reveals"] for r in rv["content_rows"]}
