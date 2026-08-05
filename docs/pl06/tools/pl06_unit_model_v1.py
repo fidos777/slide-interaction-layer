@@ -39,6 +39,8 @@ FROZEN_NOTHING = ["screen count", "sequence", "dialogue", "Rumusan form", "patte
 
 PENDING_PACKAGE = "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx"
 
+# SETTLED 2026-08-04 by A7 at K5 scope, and re-confirmed by F2(a) on 2026-08-05: the
+# RP-009 / RP-010 VERIFY flags are no longer open.
 # Course-wide rules already in force. Carried, not re-decided. RP-009 / RP-010 keep the
 # VERIFY flag they have carried since the portability matrix.
 COURSE_RULES = [

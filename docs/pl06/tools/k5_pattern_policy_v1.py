@@ -139,6 +139,9 @@ DECLARED_TOTAL = 17
 APPROVED = "APPROVED_AS_K5_DEFAULT"
 APPROVED_AMENDED = "APPROVED_WITH_BARIAH_AMENDMENT"
 PENDING = "PENDING_BARIAH_DECISION"
+# SUPERSEDED 2026-08-05 by F5 of the returned authority: "3 panel sebagai format produksi."
+# The 4 August record below is HISTORICAL and deliberately unchanged; it is no longer the
+# current instruction. See k5_calib_build_v1.PRODUCTION_PANEL_DENSITY.
 # B2 is neither approved nor pending: Bariah ruled HOW it will be decided and made a test
 # a prerequisite. Collapsing it into either bucket would be wrong in both directions.
 TEST_REQUIRED = "TEST_REQUIRED_BEFORE_FINAL_FREEZE"

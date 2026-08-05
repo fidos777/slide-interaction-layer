@@ -381,7 +381,7 @@ def _screens_uncached():
         vo=f"Selamat datang. Saya {pol['narrator']['name']}.",
         decision_ids=["D2", "D4"])
 
-    # ---- S02 shell: scenario (D3 mandatory) ----------------------------------------------
+    # ---- S02 shell: dialogue (E1 mandatory; D3 of Kelompok 0 was the wrong locus) ----------------------------------------------
     sc = scenario()
     add(kind="SCENARIO", treatment="dialog dua penutur (E1)",
         title_ms="Situasi di tapak",
