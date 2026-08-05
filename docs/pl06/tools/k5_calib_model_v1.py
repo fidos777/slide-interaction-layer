@@ -275,25 +275,35 @@ def scenario():
 # citation. This deck is NOT regenerated in the closure pass, so the label pairing below is
 # still what B03 carries. It is a named open item for the B03 rebuild.
 # ==========================================================================================
+# A6's three COMPONENTS survive; their DISPLAY as learner-facing headings does not. The
+# labels are retained here as PRODUCTION METADATA so the montage mapping stays checkable,
+# and are marked not-learner-facing so nothing draws them on a learner screen.
 A6_LABELS = ["Kepentingan", "Skop dan Isi Utama", "Manfaat"]
+A6_LABELS_ARE_LEARNER_FACING = False
 MONTAGE_MAPPING_BASIS = "POSITIONAL_A6_LABEL_ORDER_TO_COMMITTED_UNIT_BEAT_ORDER"
 RUMUSAN_SUPERSESSION = (
-    "The committed unit model proposes RP-007 (contractor perspective, no Kepentingan / Isi "
-    "Utama / Manfaat labels). A6 is Bariah's ruling and supersedes that CAIR proposal. The "
-    "BEAT TEXT stays the unit's own; only the three labels come from A6.")
+    "RP-007 (contractor perspective, no Kepentingan / Isi Utama / Manfaat labels) is a "
+    "VERBATIM BARIAH ANSWER, not a CAIR proposal, and A6 is a real decision in the Kelompok 0 "
+    "v1.2 ingestion, not a phantom citation. Both earlier descriptions were wrong. D3 rule 1 "
+    "of the returned authority settles it: 'Copy learner-facing mengalir tanpa tajuk kecil "
+    "Kepentingan / Skop / Manfaat', and D2 states the labels are not shown to the trainee. "
+    "A6's three COMPONENTS stay (D3 rule 2); the labels are production metadata only.")
 
 
 def rumusan():
     beats = unit_model()["rumusan"]["beats"]
     montage = [dict(component_id=f"MT-{i + 1:02d}", label=A6_LABELS[i], beat=b,
+                    label_is_learner_facing=A6_LABELS_ARE_LEARNER_FACING,
                     points_at_beat_index=i + 1, marks=list(MONTAGE_MARKS))
                for i, b in enumerate(beats[:len(A6_LABELS)])]
     return dict(labels=list(A6_LABELS), beats=list(beats),
                 beat_count=len(beats),
+                labels_are_learner_facing=A6_LABELS_ARE_LEARNER_FACING,
                 montage=montage,
                 mapping_basis=MONTAGE_MAPPING_BASIS,
                 supersedes=RUMUSAN_SUPERSESSION,
-                decision_ids=["A6"])
+                learner_facing_rule="D3 rule 1 / D2",
+                decision_ids=["A6", "D3"])
 
 
 # ==========================================================================================
@@ -445,8 +455,13 @@ def _screens_uncached():
     # ---- Rumusan -------------------------------------------------------------------------
     rm = rumusan()
     add(kind="RUMUSAN", treatment="static content", title_ms="Rumusan",
-        blocks=([dict(text=f"{c['label']}: {c['beat']}",
+        # D3 rule 1: the learner-facing copy flows WITHOUT the small headings. The label was
+        # being drawn as an inline prefix, which is that heading moved rather than removed —
+        # the same defect the packet model's scope beat carried. The block text is now the
+        # beat alone; the label rides along as production metadata for the montage mapping.
+        blocks=([dict(text=c["beat"],
                       provenance="CAIR_DRAFTED_RUMUSAN_BEAT",
+                      montage_label=c["label"], montage_label_learner_facing=False,
                       montage_id=c["component_id"]) for c in rm["montage"]]
                 + [dict(text="MONTAJ RUMUSAN · " + " · ".join(MONTAGE_MARKS),
                         provenance="PROVISIONAL_PLACEHOLDER")]),
@@ -454,7 +469,7 @@ def _screens_uncached():
         visual=dict(subject="Montaj tiga komponen mengikut tiga beat Rumusan",
                     rows=[], has_source_figure=False,
                     status=PLACEHOLDER_VISUAL, note=" · ".join(MONTAGE_MARKS)),
-        decision_ids=["A6"])
+        decision_ids=["A6", "D3"])
 
     # ---- Kuiz ----------------------------------------------------------------------------
     items = um["assessment"]["items"]

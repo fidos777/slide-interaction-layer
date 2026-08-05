@@ -16,7 +16,7 @@
    "SOURCE_ANALYSIS_COMPLETE": 4,
    "DIALOGUE_COPY_COMPLETE": 12,
    "RUMUSAN_COPY_COMPLETE": 12,
-   "QUIZ_COPY_COMPLETE": 10,
+   "QUIZ_COPY_COMPLETE": 12,
    "VISUAL_DIRECTION_COMPLETE": 12,
    "INTERACTION_TREATMENT_COMPLETE": 12,
    "PRODUCTION_READY": 0
@@ -27,9 +27,9 @@
   "reuse_encik_rahman": 8,
   "new_role_required": 0,
   "distinct_new_roles": 0,
-  "quiz_items_drafted": 58,
+  "quiz_items_drafted": 60,
   "quiz_anchored_slots": 0,
-  "quiz_unanchored_slots": 2,
+  "quiz_unanchored_slots": 0,
   "dialogue_judgment_required": 0,
   "source_rows_total": 1568,
   "legacy_artifacts": 3
@@ -152,14 +152,13 @@
     "SOURCE_ANALYSIS_COMPLETE": false,
     "DIALOGUE_COPY_COMPLETE": true,
     "RUMUSAN_COPY_COMPLETE": true,
-    "QUIZ_COPY_COMPLETE": false,
+    "QUIZ_COPY_COMPLETE": true,
     "VISUAL_DIRECTION_COMPLETE": true,
     "INTERACTION_TREATMENT_COMPLETE": true,
     "PRODUCTION_READY": false
    },
    "blockers": [
-    "AWAITING_BARIAH_WRITTEN_RETURN",
-    "QUIZ_KEY_UNRESOLVED"
+    "AWAITING_BARIAH_WRITTEN_RETURN"
    ]
   },
   {
@@ -173,14 +172,13 @@
     "SOURCE_ANALYSIS_COMPLETE": false,
     "DIALOGUE_COPY_COMPLETE": true,
     "RUMUSAN_COPY_COMPLETE": true,
-    "QUIZ_COPY_COMPLETE": false,
+    "QUIZ_COPY_COMPLETE": true,
     "VISUAL_DIRECTION_COMPLETE": true,
     "INTERACTION_TREATMENT_COMPLETE": true,
     "PRODUCTION_READY": false
    },
    "blockers": [
-    "AWAITING_BARIAH_WRITTEN_RETURN",
-    "QUIZ_KEY_UNRESOLVED"
+    "AWAITING_BARIAH_WRITTEN_RETURN"
    ]
   },
   {

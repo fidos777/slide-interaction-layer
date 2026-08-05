@@ -19,7 +19,7 @@ STATUS           = PROVISIONAL_WORKING_PACKET · NOT_INSTRUCTIONALLY_APPROVED ·
 | SOURCE_ANALYSIS_COMPLETE | False |
 | DIALOGUE_COPY_COMPLETE | True |
 | RUMUSAN_COPY_COMPLETE | True |
-| QUIZ_COPY_COMPLETE | False |
+| QUIZ_COPY_COMPLETE | True |
 | VISUAL_DIRECTION_COMPLETE | True |
 | INTERACTION_TREATMENT_COMPLETE | True |
 | PRODUCTION_READY | False |
@@ -69,7 +69,7 @@ Beat labels are production metadata and are **not learner-facing**. All declared
 
 ## Quiz — 4 MCQ + 1 MR · pass 60%
 
-drafted: 4 · anchored slots: 0 · unanchored slots: 1
+drafted: 5 · anchored slots: 0 · unanchored slots: 0
 
 | Slot | Kind | State | Stem | Correct | Key status | Rows |
 |---|---|---|---|---|---|---|
@@ -77,7 +77,7 @@ drafted: 4 · anchored slots: 0 · unanchored slots: 1
 | Q2 | MULTIPLE_CHOICE | QUIZ_DRAFT_COMPLETE | Apakah yang mesti dipastikan berkaitan Pembinaan / Pemasanga | Landskap kejur adalah elemen-elemen bukan hidup yang membent | DRAFTED_NOT_APPROVED | T01B02-ROW-047 |
 | Q3 | MULTIPLE_CHOICE | QUIZ_DRAFT_COMPLETE | Apakah yang mesti dipastikan berkaitan Kerja-Kerja Penanaman | Kerja-kerja penanaman atau landskap lembut adalah proses mem | DRAFTED_NOT_APPROVED | T01B02-ROW-069 |
 | Q4 | MULTIPLE_CHOICE | QUIZ_DRAFT_COMPLETE | Apakah yang mesti dipastikan berkaitan Pemeriksaan Tapak dan | Untuk mengesahkan bahawa kerja yang dilaksanakan di tapak me | DRAFTED_NOT_APPROVED | T01B02-ROW-088 |
-| Q5 | MULTIPLE_RESPONSE | QUIZ_UNANCHORED_SLOT | — | — | NO_KEY_PENDING_AUTHORING |  |
+| Q5 | MULTIPLE_RESPONSE | QUIZ_DRAFT_COMPLETE | Yang manakah antara berikut termasuk dalam Jadual Kerja? (Pi | ['Mesyuarat Permulaan (Kick-off Meeting)', 'Pemeriksaan Tapak Bersama (Joint Site Inspection)', 'Perancangan Songsang (Backward Planning)'] | DRAFTED_NOT_APPROVED | T01B02-ROW-008, T01B02-ROW-010, T01B02-ROW-020 |
 
 ## Visual direction
 
@@ -113,4 +113,3 @@ subjects: 3 · source-attested: 0
 | Blocker |
 |---|
 | AWAITING_BARIAH_WRITTEN_RETURN |
-| QUIZ_KEY_UNRESOLVED |

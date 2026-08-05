@@ -355,19 +355,37 @@
    {
     "slot": "Q5",
     "kind": "MULTIPLE_RESPONSE",
-    "stem": null,
-    "correct": null,
-    "correct_rows": [],
-    "anchor_row": null,
-    "distractors": [],
-    "feedback": null,
-    "state": "QUIZ_UNANCHORED_SLOT",
-    "key_status": "NO_KEY_PENDING_AUTHORING"
+    "stem": "Yang manakah antara berikut termasuk dalam Penyediaan Tapak (Site Preparation)? (Pilih semua yang berkenaan.)",
+    "correct": [
+     "Pembersihan Tapak (Site Clearing)",
+     "Perataan Kasar dan Pembentukan (Levelling dan Grading)",
+     "Pembinaan Pelantar (Platforms)"
+    ],
+    "correct_rows": [
+     "T01B01-ROW-017",
+     "T01B01-ROW-019",
+     "T01B01-ROW-021"
+    ],
+    "anchor_row": "T01B01-ROW-015",
+    "distractors": [
+     "Peralatan Pelindung Diri (PPE)",
+     "Topi Keselamatan: Melindungi daripada objek jatuh.",
+     "Kasut Keselamatan: Melindungi daripada objek tajam dan hentakan."
+    ],
+    "distractor_rows": [
+     "T01B01-ROW-192",
+     "T01B01-ROW-194",
+     "T01B01-ROW-195"
+    ],
+    "feedback": "Pembersihan Tapak (Site Clearing); Perataan Kasar dan Pembentukan (Levelling dan Grading); Pembinaan Pelantar (Platforms)",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "cls": "CAIR_DRAFTED_MULTIPLE_RESPONSE_FROM_SIBLING_SUBPOINTS"
    }
   ],
-  "drafted": 4,
+  "drafted": 5,
   "anchored": 0,
-  "unanchored": 1
+  "unanchored": 0
  },
  "visual_direction": {
   "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
@@ -444,14 +462,13 @@
   "SOURCE_ANALYSIS_COMPLETE": false,
   "DIALOGUE_COPY_COMPLETE": true,
   "RUMUSAN_COPY_COMPLETE": true,
-  "QUIZ_COPY_COMPLETE": false,
+  "QUIZ_COPY_COMPLETE": true,
   "VISUAL_DIRECTION_COMPLETE": true,
   "INTERACTION_TREATMENT_COMPLETE": true,
   "PRODUCTION_READY": false
  },
  "production_ready": false,
  "production_blockers": [
-  "AWAITING_BARIAH_WRITTEN_RETURN",
-  "QUIZ_KEY_UNRESOLVED"
+  "AWAITING_BARIAH_WRITTEN_RETURN"
  ]
 }

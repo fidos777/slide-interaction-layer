@@ -4,7 +4,7 @@
 
 ```
 STAGE = 4.2F-J
-AUTHORING_TODO                   = 10
+AUTHORING_TODO                   = 8
 OWNER_DEFAULT_DECISION           = 8
 INTERNAL_REVIEW                  = 3
 BARIAH_EXCEPTION                 = 0
@@ -29,9 +29,7 @@ Incomplete writing tasks are NOT sent to Bariah as instructional exceptions. Sin
 
 | ID | Unit | Detail |
 |---|---|---|
-| AUTH-QUIZ-K5-PL06-T01-B01-Q5 | K5-PL06-T01-B01 | Quiz Q5 is an UNANCHORED slot: the unit ran out of structural headings before the composition was filled, so there is no candidate row yet. The row must be chosen before the item can be written. |
 | AUTH-ANALYSIS-K5-PL06-T01-B01 | K5-PL06-T01-B01 | No committed unit analysis. Contract fields whose evidence is already short in the controlled rows: ambiguities, assessment. See the gap matrix; nothing is authored yet. |
-| AUTH-QUIZ-K5-PL06-T01-B02-Q5 | K5-PL06-T01-B02 | Quiz Q5 is an UNANCHORED slot: the unit ran out of structural headings before the composition was filled, so there is no candidate row yet. The row must be chosen before the item can be written. |
 | AUTH-ANALYSIS-K5-PL06-T01-B02 | K5-PL06-T01-B02 | No committed unit analysis. Contract fields whose evidence is already short in the controlled rows: ambiguities, assessment. See the gap matrix; nothing is authored yet. |
 | AUTH-ANALYSIS-K5-PL06-T01-B03 | K5-PL06-T01-B03 | No committed unit analysis. Contract fields whose evidence is already short in the controlled rows: ambiguities, compliance_sensitive, mandatory_propositions. See the gap matrix; nothing is authored yet. |
 | AUTH-ANALYSIS-K5-PL06-T02-B01 | K5-PL06-T02-B01 | No committed unit analysis. Contract fields whose evidence is already short in the controlled rows: ambiguities, compliance_sensitive. See the gap matrix; nothing is authored yet. |

@@ -19,7 +19,7 @@ STATUS           = PROVISIONAL_WORKING_PACKET · NOT_INSTRUCTIONALLY_APPROVED ·
 | SOURCE_ANALYSIS_COMPLETE | False |
 | DIALOGUE_COPY_COMPLETE | True |
 | RUMUSAN_COPY_COMPLETE | True |
-| QUIZ_COPY_COMPLETE | False |
+| QUIZ_COPY_COMPLETE | True |
 | VISUAL_DIRECTION_COMPLETE | True |
 | INTERACTION_TREATMENT_COMPLETE | True |
 | PRODUCTION_READY | False |
@@ -69,7 +69,7 @@ Beat labels are production metadata and are **not learner-facing**. All declared
 
 ## Quiz — 4 MCQ + 1 MR · pass 60%
 
-drafted: 4 · anchored slots: 0 · unanchored slots: 1
+drafted: 5 · anchored slots: 0 · unanchored slots: 0
 
 | Slot | Kind | State | Stem | Correct | Key status | Rows |
 |---|---|---|---|---|---|---|
@@ -77,7 +77,7 @@ drafted: 4 · anchored slots: 0 · unanchored slots: 1
 | Q2 | MULTIPLE_CHOICE | QUIZ_DRAFT_COMPLETE | Apakah yang mesti dipastikan berkaitan Penyediaan Tapak (Sit | Setelah mobilisasi selesai, kerja penyediaan fizikal tapak d | DRAFTED_NOT_APPROVED | T01B01-ROW-016 |
 | Q3 | MULTIPLE_CHOICE | QUIZ_DRAFT_COMPLETE | Apakah yang mesti dipastikan berkaitan Penandaan Tapak (Sett | Penandaan Tapak, juga dikenali sebagai setting out atau pema | DRAFTED_NOT_APPROVED | T01B01-ROW-173 |
 | Q4 | MULTIPLE_CHOICE | QUIZ_DRAFT_COMPLETE | Apakah yang mesti dipastikan berkaitan Pemeriksaan Tapak & P | Setiap kontraktor bertanggungjawab sepenuhnya untuk memastik | DRAFTED_NOT_APPROVED | T01B01-ROW-190 |
-| Q5 | MULTIPLE_RESPONSE | QUIZ_UNANCHORED_SLOT | — | — | NO_KEY_PENDING_AUTHORING |  |
+| Q5 | MULTIPLE_RESPONSE | QUIZ_DRAFT_COMPLETE | Yang manakah antara berikut termasuk dalam Penyediaan Tapak  | ['Pembersihan Tapak (Site Clearing)', 'Perataan Kasar dan Pembentukan (Levelling dan Grading)', 'Pembinaan Pelantar (Platforms)'] | DRAFTED_NOT_APPROVED | T01B01-ROW-017, T01B01-ROW-019, T01B01-ROW-021 |
 
 ## Visual direction
 
@@ -113,4 +113,3 @@ subjects: 3 · source-attested: 0
 | Blocker |
 |---|
 | AWAITING_BARIAH_WRITTEN_RETURN |
-| QUIZ_KEY_UNRESOLVED |

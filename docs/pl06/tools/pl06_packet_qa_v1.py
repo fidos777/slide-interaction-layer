@@ -438,6 +438,30 @@ def gates():
     unanchored_named = [f"{p['unit_id']}:{i['slot']}" for p in ps
                         for i in p["quiz"].get("items", [])
                         if i["state"] == PM.ANCHORED and not i.get("anchor_row")]
+    # A Multiple Response is built from sibling sub-points, so its distractors are real rows
+    # of the SAME unit that belong to a DIFFERENT heading. Both halves matter: a distractor
+    # invented from nothing is unfalsifiable, and one drawn from the correct block is right.
+    mr_bad = []
+    for p in ps:
+        valid = {r["row_id"] for r in rows.get(p["unit_id"], {}).get("rows", [])}
+        for i in p["quiz"].get("items", []):
+            if i["kind"] != "MULTIPLE_RESPONSE" or not i.get("distractor_rows"):
+                continue
+            dr = set(i["distractor_rows"])
+            if dr - valid:
+                mr_bad.append(f"{p['unit_id']}:{i['slot']}:FOREIGN_ROW")
+            if dr & set(i.get("correct_rows") or []):
+                mr_bad.append(f"{p['unit_id']}:{i['slot']}:DISTRACTOR_IS_ALSO_CORRECT")
+    G.append(_g("EVERY_MULTIPLE_RESPONSE_DISTRACTOR_IS_A_REAL_ROW_OF_A_DIFFERENT_BLOCK",
+                "QUIZ", mr_bad, [],
+                len([1 for p in ps for i in p["quiz"].get("items", [])
+                     if i["kind"] == "MULTIPLE_RESPONSE"]),
+                "packet citations vs extractors", SOURCE_TEXT))
+    G.append(_g("EVERY_QUIZ_SLOT_IS_DRAFTED", "QUIZ",
+                (t["quiz_items_drafted"], t["quiz_anchored_slots"],
+                 t["quiz_unanchored_slots"]),
+                (DECLARED_ACTIVE * 5, 0, 0), DECLARED_ACTIVE * 5, "packet totals",
+                DOC_LITERAL))
     G.append(_g("NO_SLOT_CALLED_ANCHORED_LACKS_AN_ANCHOR_ROW", "QUIZ",
                 unanchored_named, [], sum(len(p["quiz"].get("items", [])) for p in ps),
                 "packet roll", MODEL_DERIVED))

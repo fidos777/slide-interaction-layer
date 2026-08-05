@@ -55,6 +55,8 @@ DECLARED_MULTIPAGE_SCREENS = ["T03B03-S04", "T03B03-S05", "T03B03-S07", "T03B03-
                               "T03B03-S11"]
 DECLARED_RUNTIME_STATES = 43
 DECLARED_PANEL_STATES = 38
+DECLARED_PRODUCTION_DENSITY = 3
+DECLARED_CALIBRATION_DENSITIES = [2, 3]
 DECLARED_LAMPIRAN_PAGES = {2: 20, 3: 14}
 DECLARED_SLIDE_W, DECLARED_SLIDE_H = 12192000, 6858000
 DECLARED_A6_LABELS = ["Kepentingan", "Skop dan Isi Utama", "Manfaat"]
@@ -436,10 +438,20 @@ def gates(native=None):
     G.append(_g("THE_MODELS_STATUS_MARKS_HAVE_NOT_DRIFTED_FROM_THE_LITERALS", "STATUS",
                 list(M.STATUS_MARKS), DECLARED_STATUS_MARKS, len(DECLARED_STATUS_MARKS),
                 "k5_calib_model_v1.STATUS_MARKS", DOC_LITERAL))
-    G.append(_g("B2_IS_STILL_TEST_REQUIRED_NO_DENSITY_IS_FROZEN", "STATUS",
-                next(d for d in P.DECISIONS if d["id"] == "B2")["status"],
-                "TEST_REQUIRED_BEFORE_FINAL_FREEZE", 1, "k5_pattern_policy_v1",
-                COMMITTED_MODEL))
+    # B2 asked WHICH density to ship and was answered at F5 of the returned authority:
+    # "3 panel sebagai format produksi." The Kelompok 0 record still reads TEST_REQUIRED,
+    # correctly — it is a 4 August record and F5 is 5 August. The gate now checks that the
+    # historical record is unchanged AND that the production density comes from F5.
+    G.append(_g("B2_HISTORICAL_RECORD_IS_UNCHANGED_AND_F5_SUPPLIES_THE_PRODUCTION_DENSITY",
+                "STATUS",
+                (next(d for d in P.DECISIONS if d["id"] == "B2")["status"],
+                 B.PRODUCTION_PANEL_DENSITY, sorted(B.CALIBRATION_DENSITIES)),
+                ("TEST_REQUIRED_BEFORE_FINAL_FREEZE", DECLARED_PRODUCTION_DENSITY,
+                 DECLARED_CALIBRATION_DENSITIES), 1,
+                "k5_pattern_policy_v1 + the authority declaration", COMMITTED_MODEL))
+    G.append(_g("THE_TWO_PANEL_FILE_IS_RETAINED_AS_CALIBRATION_EVIDENCE", "STATUS",
+                os.path.exists(os.path.join(M.PPTX_DIR, M.LAMPIRAN_NAME.format(n=2))),
+                True, 1, "on-disk bytes", RAW_FILE))
     G.append(_g("MASS_GENERATION_REMAINS_UNAUTHORISED", "STATUS",
                 (P.CALIBRATION_GENERATION_AUTHORIZED, P.MASS_GENERATION_AUTHORIZED),
                 (True, False), 1, "k5_pattern_policy_v1", COMMITTED_MODEL))

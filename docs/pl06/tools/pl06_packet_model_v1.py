@@ -319,6 +319,82 @@ def _rumusan(unit_id, ex, subs):
 # ==========================================================================================
 # QUIZ
 # ==========================================================================================
+def _heading_blocks(ex):
+    """(heading_row, rows_until_the_next_structural_heading) for every structural heading."""
+    heads = _structural(ex)
+    ids = {h["row_id"] for h in heads}
+    out, cur, body = [], None, []
+    for r in ex["rows"]:
+        if r["row_id"] in ids:
+            if cur is not None:
+                out.append((cur, body))
+            cur, body = r, []
+        elif cur is not None:
+            body.append(r)
+    if cur is not None:
+        out.append((cur, body))
+    return out
+
+
+# A lead-in is not an option. "Prosedur Rasmi iaitu proses pengambilan tapak biasanya
+# melibatkan:" introduces the items; it is not one of them.
+LEAD_IN_TAILS = ("melibatkan:", "termasuk:", "berikut:", "adalah:", "ialah:", "meliputi:")
+
+
+def _point_text(r):
+    t = _txt(r)
+    return t[:-1].strip() if t.endswith(":") else t
+
+
+def _points(body):
+    """Parallel sub-points under a heading — the natural material for a MR item.
+
+    Bare section labels ("Skop Kerja", "Kepentingan Kontrak") are excluded by length: they
+    name a block rather than state anything a learner could be asked to select.
+    """
+    out = []
+    for r in body:
+        if r["content_type"] != "LIST_ITEM":
+            continue
+        t = _txt(r)
+        if any(t.endswith(x) for x in LEAD_IN_TAILS):
+            continue
+        if 25 <= len(_point_text(r)) <= 130:
+            out.append(r)
+    return out
+
+
+def _mr_item(ex, slot, avoid_rows):
+    """A Multiple Response built from sibling sub-points, not from a fifth heading.
+
+    A MR asks which of several things apply. The units that ran out of HEADING_3 rows did not
+    run out of source: each has headings whose sub-points are exactly such a set. Correct
+    options are the real sub-points of one heading; distractors are sub-points of ANOTHER
+    heading in the same unit — same domain, so plausible, but they answer a different
+    question.
+    """
+    blocks = [(h, _points(b)) for h, b in _heading_blocks(ex)]
+    usable = [(h, p) for h, p in blocks if len(p) >= 3]
+    if len(usable) < 2:
+        return None
+    # Most usable points wins, then least overlap with what earlier slots already used.
+    usable.sort(key=lambda hp: (-len(hp[1]), len({r["row_id"] for r in hp[1]} & avoid_rows)))
+    head, pts = usable[0]
+    other = next((p for h, p in usable[1:] if h["row_id"] != head["row_id"]), [])
+    correct = [_point_text(r) for r in pts[:3]]
+    return dict(slot=slot, kind="MULTIPLE_RESPONSE",
+                stem=f"Yang manakah antara berikut termasuk dalam {_txt(head)}? "
+                     "(Pilih semua yang berkenaan.)",
+                correct=correct,
+                correct_rows=[r["row_id"] for r in pts[:3]],
+                anchor_row=head["row_id"],
+                distractors=[_point_text(r) for r in other[:3]],
+                distractor_rows=[r["row_id"] for r in other[:3]],
+                feedback="; ".join(correct),
+                state="QUIZ_DRAFT_COMPLETE", key_status=A.DRAFTED_NOT_APPROVED,
+                cls="CAIR_DRAFTED_MULTIPLE_RESPONSE_FROM_SIBLING_SUBPOINTS")
+
+
 def _quiz(unit_id, ex):
     shape = A.quiz_shape()
     anal = U.UNIT_ANALYSIS.get(unit_id)
@@ -365,6 +441,11 @@ def _quiz(unit_id, ex):
                               state="QUIZ_DRAFT_COMPLETE",
                               key_status=A.DRAFTED_NOT_APPROVED))
         else:
+            used = {r for it in items for r in (it.get("correct_rows") or [])}
+            mr = _mr_item(ex, f"Q{i + 1}", used) if kind == "MULTIPLE_RESPONSE" else None
+            if mr:
+                items.append(mr)
+                continue
             # A slot with no heading left to point at is NOT an anchored slot. Calling it one
             # reads as "the row is chosen, only the wording is missing", which is false.
             a = heads[i] if i < len(heads) else None

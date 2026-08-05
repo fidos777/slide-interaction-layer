@@ -1174,20 +1174,24 @@ def emit_handoff(qa=None, mutations=None, native=None):
     L += ["", f"**Asymmetry.** {a4['asymmetry']}", "",
           f"**Verdict.** {a4['verdict']}", "",
           "## 7. The Rumusan mapping question", "",
-          "The committed unit model proposes RP-007 for Rumusan — contractor perspective, "
-          "**KOREKSI 4.2F-J: D3 peraturan 1 (5 Ogos 2026) menetapkan copy learner-facing "
-          "mengalir TANPA tajuk kecil Kepentingan / Skop / Manfaat. Tiga komponen A6 kekal; "
-          "paparan labelnya tidak. Deck ini belum dijana semula.** "
-          "**no** Kepentingan / Skop dan Isi Utama / Manfaat labels. A6 is Bariah's ruling "
-          "and supersedes that CAIR proposal, so this deck applies A6's three labels to the "
-          "unit's own three beats **positionally** "
-          f"(`{M.MONTAGE_MAPPING_BASIS}`).", "",
-          row("A6 label", "Unit beat it was paired with"), row("---", "---")]
-    L += [row(c["label"], c["beat"]) for c in M.rumusan()["montage"]]
-    L += ["", "The beat TEXT is the unit's own; only the labels come from A6. **Bariah "
-          "should confirm both the supersession and the pairing** — the mapping is "
-          "positional, not interpreted, and is marked "
-          f"{' · '.join(M.MONTAGE_MARKS)} on the slide.", "",
+          "**Settled since the last revision.** RP-007 (contractor perspective, no "
+          "Kepentingan / Isi Utama / Manfaat labels) is a **verbatim Bariah answer**, not a "
+          "CAIR proposal, and A6 is a real decision in the Kelompok 0 v1.2 ingestion, not a "
+          "phantom citation. Earlier revisions of this handoff described both wrongly.", "",
+          "D3 rule 1 of the returned authority (5 Ogos 2026) decides it: *\"Copy "
+          "learner-facing mengalir tanpa tajuk kecil Kepentingan / Skop / Manfaat\"*, and D2 "
+          "states the labels are **not shown to the trainee**. A6's three COMPONENTS stay "
+          "(D3 rule 2); their DISPLAY does not.", "",
+          "So the pairing below is **production metadata**, kept so the mapping stays "
+          f"checkable (`{M.MONTAGE_MAPPING_BASIS}`). No label is drawn on a learner screen.",
+          "",
+          row("A6 label (production metadata)", "Unit beat it is paired with",
+              "Learner-facing"), row("---", "---", "---")]
+    L += [row(c["label"], c["beat"],
+              "yes" if c["label_is_learner_facing"] else "**no**")
+          for c in M.rumusan()["montage"]]
+    L += ["", "The beat TEXT is the unit's own. The mapping is positional, not interpreted, "
+          f"and is marked {' · '.join(M.MONTAGE_MARKS)} on the slide.", "",
           "## 8. Unresolved review items", "",
           row("#", "Item", "Why it is open"), row("---", "---", "---"),
           row(1, "Watak / cast", "D1 sets characters per unit; STOP-006 open. The scenario "
