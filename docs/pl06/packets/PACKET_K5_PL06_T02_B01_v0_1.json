@@ -3,7 +3,7 @@
  "topik": 2,
  "bahagian": 1,
  "title": "Elemen Landskap Kejur dan Elemen Landskap Lembut/Penanaman",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -87,35 +87,52 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
  "dialogue": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "AUTHORED_AFTER_HUMAN_TENSION_REVIEW",
   "authority_status": "DRAFTED_NOT_APPROVED",
   "status": "DIALOGUE_COPY_COMPLETE",
-  "tension_kind": "OBLIGATION",
+  "tension_kind": "DECISION",
   "turns": [
    {
     "seq": 1,
     "speaker": "Alya",
     "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
-    "kind": "QUESTION",
-    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "kind": "DECISION_POINT",
+    "text": "Encik Rahman, pokok yang kita tanam dua minggu lepas nampak sihat semua. Boleh tak kita jarangkan siraman dan pemantauan perosak?",
+    "rows": [
+     "T02B01-ROW-039"
+    ],
     "cls": "CAIR_STRUCTURAL_FRAME",
-    "rows": []
+    "paraphrase_of": null,
+    "paraphrase_source": null
    },
    {
     "seq": 2,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_RESPONSE",
-    "text": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman.",
+    "text": "Belum boleh. Dalam tempoh awal penanaman, siraman yang mencukupi dan pemantauan serangan perosak adalah wajib.",
     "rows": [
      "T02B01-ROW-040"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "CONTROLLED_PARAPHRASE",
+    "paraphrase_of": "T02B01-ROW-040",
+    "paraphrase_source": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman."
+   },
+   {
+    "seq": 3,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "DECISION_TAKEN",
+    "text": "Jadi pokok nampak sihat bukan sebab untuk kita jarangkan. Saya teruskan jadual asal.",
+    "rows": [],
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "paraphrase_of": null,
+    "paraphrase_source": null
    }
   ],
   "anchors": [
@@ -124,9 +141,11 @@
     "rows": [
      "T02B01-ROW-040"
     ],
-    "kind": "OBLIGATION"
+    "kind": "DECISION"
    }
   ],
+  "decision": "Whether watering and pest monitoring may be reduced when the planting looks healthy in the early period.",
+  "disposition": "CLOSED_BY_FIRDAUS_HUMAN_REVIEW",
   "copy_complete": true
  },
  "rumusan": {
@@ -157,7 +176,7 @@
      "2.2 Elemen Landskap Lembut/ Penanaman"
     ],
     "subtopic_count": 2,
-    "text": "Skop: 2.1 Elemen Landskap Kejur; 2.2 Elemen Landskap Lembut/ Penanaman",
+    "text": "Kerja ini merangkumi 2.1 Elemen Landskap Kejur dan 2.2 Elemen Landskap Lembut/ Penanaman.",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -275,7 +294,8 @@
    }
   ],
   "drafted": 5,
-  "anchored": 0
+  "anchored": 0,
+  "unanchored": 0
  },
  "visual_direction": {
   "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
@@ -309,18 +329,57 @@
   "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
  },
  "interaction": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "click-to-reveal",
-  "secondary": "static content",
+  "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+  "primary": "Click-to-Reveal",
+  "secondary": null,
+  "reason": "13 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "resolved": true,
   "repeated_components": 0,
-  "reason": "13 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+  "authority_locus": "F3",
+  "committed_pattern": null,
+  "agrees_with_committed": null
  },
  "analysis": {
-  "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "13 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "dialogue_tension": "Selected a DECISION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "13 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN"
+ },
+ "analysis_conformance": {
+  "satisfied": false,
+  "defects": [
+   "NO_COMMITTED_ANALYSIS"
+  ],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": {
+  "unit_id": "K5-PL06-T02-B01",
+  "source_basis": "ACCEPTED",
+  "current_tension": "ACCEPTED",
+  "action": "CLOSE",
+  "classification": "CLOSED_BY_FIRDAUS_HUMAN_REVIEW",
+  "rows_permitted": [
+   "T02B01-ROW-040"
+  ],
+  "direction": "Operational decision: whether watering or pest monitoring may be reduced when the planting looks healthy in the early period. The answer stays on the source claim. A compliance-sensitive or legal issue is NOT required to accept a tension; E2 asks only for a meaningful question, problem, doubt, tension or decision point.",
+  "escalated_to_authority": false,
+  "escalation_reason": null,
+  "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+  "named_authority": "Firdaus Ismail",
+  "date": "2026-08-05"
  },
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,

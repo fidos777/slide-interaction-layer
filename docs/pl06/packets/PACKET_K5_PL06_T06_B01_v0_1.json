@@ -3,7 +3,7 @@
  "topik": 6,
  "bahagian": 1,
  "title": "Perlindungan dan Penambahbaikan Alam Sekitar",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -92,7 +92,7 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
@@ -120,18 +120,18 @@
     "rows": [
      "T06B01-ROW-062"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    },
    {
     "seq": 3,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_CONSEQUENCE",
-    "text": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+    "text": "Jika ada spesies tumbuhan yang dilindungi atau penting di laluan pembangunan, kontraktor mungkin perlu memindahkannya ke lokasi yang sesuai di dalam atau di luar tapak projek.",
     "rows": [
      "T06B01-ROW-106"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    }
   ],
   "anchors": [
@@ -140,28 +140,36 @@
     "rows": [
      "T06B01-ROW-062"
     ],
-    "kind": "STATUTORY_LIMIT"
+    "kind": "STATUTORY_LIMIT",
+    "analyst_note": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+    "text": "Jika ada spesies tumbuhan yang dilindungi atau penting di laluan pembangunan, kontraktor mungkin perlu memindahkannya ke lokasi yang sesuai di dalam atau di luar tapak projek.",
     "rows": [
      "T06B01-ROW-106"
     ],
-    "kind": "PROTECTED_SPECIES_EXPOSURE"
+    "kind": "PROTECTED_SPECIES_EXPOSURE",
+    "analyst_note": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "Tiada pembakaran sisa tapak.",
+    "text": "Mengelakkan pembakaran sisa tapak yang boleh memusnahkan habitat atau mengancam hidupan liar",
     "rows": [
      "T06B01-ROW-118"
     ],
-    "kind": "ENVIRONMENTAL_PROHIBITION"
+    "kind": "ENVIRONMENTAL_PROHIBITION",
+    "analyst_note": "Tiada pembakaran sisa tapak.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "Pemangkasan oleh arborist bertauliah — a named professional competency.",
+    "text": "Melakukan pemangkasan oleh arborist bertauliah untuk memastikan kesihatan pokok dan mengelakkan kerosakan tidak perlu.",
     "rows": [
      "T06B01-ROW-104"
     ],
-    "kind": "NAMED_PROFESSIONAL_AUTHORITY"
+    "kind": "NAMED_PROFESSIONAL_AUTHORITY",
+    "analyst_note": "Pemangkasan oleh arborist bertauliah — a named professional competency.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    }
   ],
   "copy_complete": true
@@ -195,7 +203,7 @@
      "6.3 Pengurusan Alam Sekitar"
     ],
     "subtopic_count": 3,
-    "text": "Skop: 6.1 Environmental Management Plan; 6.2 Contoh Aplikasi dalam Landskap; 6.3 Pengurusan Alam Sekitar",
+    "text": "Kerja ini merangkumi 6.1 Environmental Management Plan, 6.2 Contoh Aplikasi dalam Landskap dan 6.3 Pengurusan Alam Sekitar.",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -359,19 +367,45 @@
   "source_attested": 1
  },
  "interaction": {
-  "cls": "COMMITTED_UNIT_PATTERN",
+  "cls": "F3_RULE_APPLIED_OVER_A_COMMITTED_UNIT_PATTERN",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "click-to-reveal",
-  "secondary": "progressive process",
-  "reason": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one.",
+  "f3_case": "SEQUENTIAL_PROCESS",
+  "primary": "Langkah demi langkah",
+  "secondary": null,
+  "reason": "Source names an ordered process (Prosedur).",
   "resolved": true,
-  "repeated_components": 0
+  "repeated_components": 0,
+  "authority_locus": "F3",
+  "committed_pattern": {
+   "primary": "click-to-reveal",
+   "secondary": "progressive process",
+   "reason": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one."
+  },
+  "agrees_with_committed": false
  },
  "analysis": {
   "dialogue_tension": "Selected a STATUTORY_LIMIT anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one.",
+  "treatment": "Source names an ordered process (Prosedur).",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN"
  },
+ "analysis_conformance": {
+  "satisfied": true,
+  "defects": [],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": null,
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,
   "SOURCE_EXTRACTION_COMPLETE": true,

@@ -1,11 +1,483 @@
 {
  "schema": "k5_instructional_authority_v1",
- "stage": "4.2F-I",
- "note": "Single machine-readable source for every instructional rule that packet generation depends on. Packet modules MUST read these values and MUST NOT duplicate them as literals. Every rule carries its own authority status; a rule that is PROPOSED_NOT_APPROVED is a drafting basis, never an approval.",
+ "stage": "4.2F-J",
+ "note": "Single machine-readable source for every instructional rule that packet generation depends on. Packet modules MUST read these values and MUST NOT duplicate them as literals. Every rule carries its own authority status AND a citation triple (artifact, locus, named authority); a rule that is PROPOSED_NOT_APPROVED is a drafting basis, never an approval.",
+ "ingestion": {
+  "pass": "PHASE_A_RETURNED_AUTHORITY_INGESTION",
+  "returned_artifact": "RETURNED_AUTHORITY_v0_2",
+  "what_changed": "Every WRITTEN_CONFIRMED rule now names the artifact, the decision locus inside it and the human who holds the authority. Three rules that had been recorded WRITTEN_CONFIRMED against citations that resolve to nothing (A6, A7) were repaired or downgraded; see `warrant_audit`.",
+  "what_did_not_change": "No quiz item, no answer key and no unit is marked approved. The returned document explicitly excludes actual quiz questions and keys from its scope."
+ },
+ "artifacts": {
+  "RETURNED_AUTHORITY_v0_2": {
+   "artifact_id": "RETURNED_AUTHORITY_v0_2",
+   "path": "docs/pl06/authority/K5_Pengesahan_ID_Watak_Dialog_Rumusan_v0_2_vBariah.docx",
+   "sha256": "a4775daaacb551d7db44851f3cd8cd888fbdf47637d79c572dc172ff8f9de0b3",
+   "md5": "4e4f2bdd14d92f222ff35d7745c94d3d",
+   "bytes": 49045,
+   "date": "2026-08-05",
+   "named_authority": "Bariah Ahmad",
+   "authority_role": "INSTRUCTIONAL_AUTHORITY",
+   "identity_basis": "BYTE_HASH_CONTROLLING_METADATA_SUPPORTING",
+   "verification": {
+    "filename_matches": true,
+    "tracked_changes": 0,
+    "comment_parts": 0,
+    "signature_objects": 0,
+    "signed": false,
+    "signature_note": "No signature object of any kind was found in the package. This artifact carries NO cryptographic or digital signature. Its identity rests on the byte hash and on the custody chain.",
+    "docx_last_modified_by": "Bariah Ahmad",
+    "option_marks_checked": 41,
+    "option_marks_unchecked": 31,
+    "option_marks_total": 72,
+    "marks_in_sections_A_to_F": 23,
+    "option_blocks_in_sections_A_to_F": 17,
+    "marks_in_section_G": 18,
+    "checked_glyph": "U+2611 BALLOT BOX WITH CHECK",
+    "render_pages_observed": 16,
+    "render_pages_expected": 14,
+    "renderer": "LibreOffice Writer 24.2.7.2 420(Build:2)",
+    "render_page_size": "A4 210x297mm",
+    "render_font_substitutions": "Calibri and Calibri Light resolved to Carlito; Cambria resolved to Caladea (metric-compatible substitutions installed in this container)",
+    "render_page_count_note": "The 16-page render is a rendering observation from a substitute layout engine, not a property of the artifact. It does NOT block ingestion because the controlling byte identity matches. No evidence in this environment establishes that the expected 14 pages came from Microsoft Word, and that claim is NOT made."
+   }
+  },
+  "RULE_PORTABILITY_MATRIX_v1": {
+   "artifact_id": "RULE_PORTABILITY_MATRIX_v1",
+   "path": "docs/pl06/PL06_RULE_PORTABILITY_MATRIX_v1.md",
+   "date": "2026-08-02",
+   "named_authority": "Firdaus Ismail",
+   "authority_role": "OWNER_ENGINEERING_AUTHORITY",
+   "identity_basis": "COMMITTED_REPOSITORY_ARTIFACT"
+  },
+  "STORYBOARD_PRODUCTION_INVENTORY_v1": {
+   "artifact_id": "STORYBOARD_PRODUCTION_INVENTORY_v1",
+   "path": "docs/pl06/PL06_STORYBOARD_PRODUCTION_INVENTORY_v1.md",
+   "date": "2026-08-02",
+   "named_authority": "Firdaus Ismail",
+   "authority_role": "OWNER_ENGINEERING_AUTHORITY",
+   "identity_basis": "COMMITTED_REPOSITORY_ARTIFACT"
+  },
+  "B02_BARIAH_CALL_APPROVAL_RECORD_v1": {
+   "artifact_id": "B02_BARIAH_CALL_APPROVAL_RECORD_v1",
+   "path": "docs/pl06/B02_BARIAH_CALL_APPROVAL_RECORD_v1.md",
+   "date": "2026-08-02",
+   "named_authority": "Firdaus Ismail",
+   "authority_role": "OWNER_ENGINEERING_AUTHORITY",
+   "identity_basis": "COMMITTED_REPOSITORY_ARTIFACT",
+   "weakness_note": "AUTHORITY_CLASS = FIRDAUS_ATTESTED_BARIAH_CALL. A phone call leaves no frozen bytes; this is the weakest authority class in use and it is cited only for the B02 delivery-contract exception."
+  },
+  "FIRDAUS_TENSION_DISPOSITION_v1": {
+   "artifact_id": "FIRDAUS_TENSION_DISPOSITION_v1",
+   "path": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+   "date": "2026-08-05",
+   "named_authority": "Firdaus Ismail",
+   "authority_role": "OWNER_ENGINEERING_AUTHORITY",
+   "identity_basis": "COMMITTED_REPOSITORY_ARTIFACT",
+   "weakness_note": "An OWNER human-review disposition under E2's human-verification clause. It carries no instructional authority and approves nothing."
+  },
+  "BARIAH_KELOMPOK0_v1_2": {
+   "artifact_id": "BARIAH_KELOMPOK0_v1_2",
+   "path": "docs/pl06/k5_policy/K5_BARIAH_DECISION_INGESTION_v1.md",
+   "date": "2026-08-04",
+   "named_authority": "Bariah Ahmad",
+   "authority_role": "INSTRUCTIONAL_AUTHORITY",
+   "identity_basis": "COMMITTED_INGESTION_RECORD_OF_AN_EXTERNAL_DOCX",
+   "source_document": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2_vBariah.docx",
+   "source_sha256": "d22f6315a9bdec2c00d376aee710aacb301d97b2587ca82ee2ce0adcb8d964ce",
+   "source_bytes": 33406,
+   "note": "17 declared decisions A1-A7, B1-B4, C1-C2, D1-D4, ingested at Stage 4.2F-G and gated by K5_BARIAH_POLICY_QA_v1. THIS IS WHERE A6 AND A7 LIVE. The Phase A warrant audit did not search this directory and wrongly reported both as resolving to nothing; see WA-07."
+  }
+ },
+ "named_authorities": {
+  "Bariah Ahmad": "INSTRUCTIONAL_AUTHORITY",
+  "Firdaus Ismail": "OWNER_ENGINEERING_AUTHORITY"
+ },
+ "warrant_audit": {
+  "note": "Historical audit of every citation that was recorded WRITTEN_CONFIRMED before the returned document arrived. A citation that resolves to nothing is not a weak warrant; it is no warrant. A warrant audit can fail in two directions. WA-01, WA-02 and WA-05 found rules claiming more warrant than they had. WA-03, WA-04 and WA-06 found the opposite: rules the authority HAD confirmed, recorded as proposals because the confirming rule was never read. Both are misstatements of what the authority said. REVISION 3: findings WA-01, WA-02, WA-03 and WA-05 are withdrawn as audit errors. A6 and A7 are real, dated, named-authority decisions in the Kelompok 0 v1.2 ingestion. Only WA-04 (the forbidden phrase, which cited no locus at all) and WA-06 (an under-claimed rule) survive as genuine warrant findings. WA-07 records the method defect that produced the false ones.",
+  "findings": [
+   {
+    "finding_id": "WA-01",
+    "rules": [
+     "quiz.mcq_count",
+     "quiz.multiple_response_count",
+     "quiz.pass_percent"
+    ],
+    "prior_citation": "A7",
+    "resolves_to": "A7_IN_BARIAH_KELOMPOK0_v1_2",
+    "evidence": "CORRECTED AGAIN. A7 EXISTS. It is decision A7 of K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2_vBariah.docx, dated 4 August 2026, authored by Bariah Ahmad, ingested at Stage 4.2F-G into docs/pl06/k5_policy/ and gated by a 93-gate suite. Its effective rule is 4 MCQ + 1 Multiple Response at 60 percent, and its own note records that it settles the RP-009 / RP-010 VERIFY flags. The citation was VALID.",
+    "corroborating_verbatim": "Angka ini belum ada dalam mana-mana dokumen keputusan, jadi ia memerlukan pengesahan.",
+    "corroborating_locus": "F2 preamble, RETURNED_AUTHORITY_v0_2",
+    "verdict": "CITATION_VALID_AUDIT_WAS_WRONG",
+    "repair": "RE_CITED_TO_A7_IN_THE_REGISTERED_KELOMPOK0_ARTIFACT_AND_RE_CONFIRMED_BY_F2a",
+    "value_changed": false,
+    "correction_note": "Revision 1 recorded THE_A7_CITATION_WAS_UNWARRANTED_WHEN_IT_WAS_WRITTEN. That is withdrawn. Separate finding: the F2 preamble sentence 'Angka ini belum ada dalam mana-mana dokumen keputusan' is CAIR's own wording in the request form, not Bariah's, and it was factually wrong when written because A7 already existed. Bariah then ticked SAH, so the VALUE is now confirmed twice. No source conflict on her side."
+   },
+   {
+    "finding_id": "WA-02",
+    "rules": [
+     "rumusan.internal_beats"
+    ],
+    "prior_citation": "A6 as amended by the written course-wide rule",
+    "resolves_to": "A6_IN_BARIAH_KELOMPOK0_v1_2",
+    "evidence": "CORRECTED AGAIN. A6 EXISTS in the same Kelompok 0 v1.2 document and accepts the three-beat structure verbatim. The citation was VALID. What D3 rule 1 changes is the LABEL DISPLAY, not the structure.",
+    "verdict": "CITATION_VALID_AUDIT_WAS_WRONG",
+    "repair": "RE_CITED_TO_A6_WITH_D3_RULE_1_RECORDED_AS_A_LABEL_DISPLAY_SUPERSESSION",
+    "value_changed": false,
+    "correction_note": "Revision 1 recorded the A6 citation as resolving to nothing. Withdrawn."
+   },
+   {
+    "finding_id": "WA-03",
+    "rules": [
+     "rumusan.support_visual_required"
+    ],
+    "prior_citation": "A6",
+    "resolves_to": "A6_IN_BARIAH_KELOMPOK0_v1_2",
+    "evidence": "CORRECTED AGAIN. A6 requires the supporting visual in Bariah's own verbatim amendment. The citation was VALID from the start. Revision 1 downgraded the rule; revision 2 restored it but re-cited it to D3 rule 5 as though A6 were phantom. Both were wrong about A6.",
+    "verdict": "CITATION_VALID_AUDIT_WAS_WRONG_TWICE",
+    "repair": "RE_CITED_TO_A6_AND_RE_CONFIRMED_BY_D3_RULE_5",
+    "value_changed": false,
+    "correction_note": "This finding previously recorded a downgrade to PROPOSED_NOT_APPROVED. That was an over-correction by CC and is withdrawn."
+   },
+   {
+    "finding_id": "WA-04",
+    "rules": [
+     "rumusan.forbidden_phrase"
+    ],
+    "prior_citation": "written course-wide rule",
+    "resolves_to": "NOTHING",
+    "evidence": "CORRECTED. D3 rule 4 reads verbatim \"Frasa “Unit ini” tidak boleh digunakan.\" The rule is a written confirmation, not house style. The first pass searched for the phrase across repository artifacts, found only the QA literal, and did not read the D3 rule list, which lives in a table cell rather than in body text.",
+    "verdict": "CITATION_UNWARRANTED_RULE_ALWAYS_WARRANTED",
+    "repair": "RE_CITED_TO_D3_RULE_4_STATUS_RESTORED_TO_WRITTEN_CONFIRMED",
+    "value_changed": false,
+    "correction_note": "This finding previously recorded a downgrade to PROPOSED_NOT_APPROVED. That was an over-correction by CC and is withdrawn."
+   },
+   {
+    "finding_id": "WA-05",
+    "rules": [
+     "quiz.answer_key_approval"
+    ],
+    "prior_citation": "A7 authorises composition only",
+    "resolves_to": "A7_SCOPE_IN_BARIAH_KELOMPOK0_v1_2",
+    "evidence": "CORRECTED AGAIN. A7 exists and its scope genuinely is composition only; the citation said so and was correct. F2(b) adds the confirmation channel.",
+    "verdict": "CITATION_VALID_VALUE_UNCHANGED",
+    "repair": "RE_CITED_TO_A7_SCOPE_WITH_F2b",
+    "value_changed": false
+   },
+   {
+    "finding_id": "WA-06",
+    "rules": [
+     "visual_direction.suits_unit_topic"
+    ],
+    "prior_citation": "Firdaus proposed contract",
+    "resolves_to": "D3_RULE_5",
+    "evidence": "D3 rule 5 requires the supporting visual to be \"sesuai dengan topik unit berkenaan\", which is exactly this rule. It was carried as an owner proposal because rule 5 had been read for its form clause alone.",
+    "verdict": "UNDER_CLAIMED_A_RULE_THE_AUTHORITY_HAD_ALREADY_CONFIRMED",
+    "repair": "RE_CITED_TO_D3_RULE_5_AND_RAISED_TO_WRITTEN_CONFIRMED",
+    "value_changed": false
+   },
+   {
+    "finding_id": "WA-07",
+    "rules": [
+     "warrant_audit itself"
+    ],
+    "prior_citation": "the Phase A audit method",
+    "resolves_to": "A_DEFECT_IN_THE_AUDIT_NOT_IN_THE_RULES",
+    "evidence": "The audit searched the returned document's Section A and the rule portability matrix, then concluded that A6 and A7 'resolve to nothing'. It did not search docs/pl06/k5_policy/, which holds a 17-decision Bariah ingestion dated 4 August 2026 with its own QA suite, and which is exactly where A6 and A7 live. The method treated 'absent from the artifact registry I had just built' as 'does not exist'.",
+    "verdict": "AUDIT_DECLARED_A_CITATION_NONEXISTENT_ON_AN_INCOMPLETE_INDEX",
+    "repair": "THE_KELOMPOK0_INGESTION_IS_NOW_A_REGISTERED_ARTIFACT",
+    "value_changed": false,
+    "standing_control": "A citation that cannot be resolved must be reported as UNRESOLVED_AGAINST_THE_REGISTERED_INDEX, never as nonexistent, until the index is shown to be complete."
+   }
+  ]
+ },
+ "crosswalk": {
+  "note": "One record per authority record ingested from RETURNED_AUTHORITY_v0_2. `section_g_reconciles_only` marks a record whose ONLY explicit confirmation is the Section G summary row. Section G's own instruction reads: 'Ringkasan ini diisi selepas Bahagian A hingga F dilengkapkan.' — it reconciles the A-to-F decisions, it does not originate them.",
+  "records": [
+   {
+    "authority_record_id": "AR-A1",
+    "source_decision_block": "A1",
+    "selected_option": "NONE — A1 carries no option block; it is a statement of the existing named cast",
+    "authority_from_a_to_f": false,
+    "section_g_merely_reconciles": false,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+    "detail": "A1 names Alya (Kontraktor Junior, attributed to 'Keputusan Bariah T04'), Encik Rahman (Mentor / Kontraktor Senior) and Hilmi (Narator, Seluruh K5), and records Haziq and Encik Roslan as replaced / no longer used. Section G has no A1 row, so there is no option mark and no reconciliation row. It is an assertion of a prior decision, repeated by the named authority inside a dated artifact.",
+    "confirmation_path": "ASSERTED_PRIOR_DECISION"
+   },
+   {
+    "authority_record_id": "AR-A2",
+    "source_decision_block": "A2",
+    "selected_option": "SETUJU — peraturan A2 (1-5) diterima sebagai kontrak pemilihan watak K5.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-A3",
+    "source_decision_block": "A3",
+    "selected_option": "BETUL — kekalkan pendekatan ini. Jangan bina roster nama penuh untuk semua PL sekarang.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-B5",
+    "source_decision_block": "B5",
+    "selected_option": "SAH — inventori peranan B1-B4 tepat dan boleh digunakan sebagai rujukan pemilihan watak.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "REFERENCE_ONLY",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-C2",
+    "source_decision_block": "C2",
+    "selected_option": "All three procedural claims marked; claim 2 annotated 'BETUL — verbatim modul', claim 3 annotated 'BETUL — disokong modul', claim 1 marked with no annotation.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "B03_SAHAJA",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-C3",
+    "source_decision_block": "C3",
+    "selected_option": "TERIMA — dialog boleh digunakan seadanya.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "B03_SAHAJA",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-C4",
+    "source_decision_block": "C4",
+    "selected_option": "SETUJU — formula C4 diterima sebagai default bagi semua dialog K5.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-C5",
+    "source_decision_block": "C5",
+    "selected_option": "NONE — C5 carries no option block. It is a worked exhibit showing how the C4 formula lands on B03: two speakers (Alya and Encik Rahman), Alya opens by asking whether the work may proceed, Encik Rahman answers with the document-check and control principle, length 5 lines.",
+    "authority_from_a_to_f": false,
+    "section_g_merely_reconciles": false,
+    "section_g_only_explicit_confirmation": true,
+    "scope": "B03_SAHAJA",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "CROSSWALK CORRECTION. C5 was previously read as an independent generator-contract rule. It is not. It has no checkbox anywhere in Sections A-F; its only explicit confirmation is the Section G row 'Penerapan formula pada B03 (C5) | B03 sahaja — kandungan unit'. C5's own text says 'Susunan ini khusus untuk B03. Unit lain akan mengikut formula C4...'. It is therefore a B03 CONTENT IMPLEMENTATION RECORD derived from C4, confirmed only through Section G — neither a pure Section-G reconciliation of an A-to-F decision, nor a generator contract in its own right.",
+    "confirmation_path": "SECTION_G_ONLY"
+   },
+   {
+    "authority_record_id": "AR-D1",
+    "source_decision_block": "D1",
+    "selected_option": "NONE — D1 carries no option block; it is the Rumusan copy itself, written by the named authority and used without amendment.",
+    "authority_from_a_to_f": false,
+    "section_g_merely_reconciles": false,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "B03_SAHAJA",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "D1 is confirmed by D4(a) 'TERIMA — copy D1 digunakan seadanya untuk B03', which IS an A-to-F option mark. D1 needs no mark of its own because D4(a) accepts it by reference."
+   },
+   {
+    "authority_record_id": "AR-D2",
+    "source_decision_block": "D2",
+    "selected_option": "NONE — D2 carries no option block; it is the mapping from the D1 copy to the three internal components.",
+    "authority_from_a_to_f": false,
+    "section_g_merely_reconciles": false,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "D2 states verbatim 'Label ini TIDAK dipaparkan kepada pelatih.' and is confirmed through D3 rule 1, which IS an A-to-F option mark."
+   },
+   {
+    "authority_record_id": "AR-D3",
+    "source_decision_block": "D3",
+    "selected_option": "SETUJU — peraturan D3 (1-5) diterima sebagai default bagi semua Rumusan K5.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-D4",
+    "source_decision_block": "D4",
+    "selected_option": "(a) TERIMA — copy D1 digunakan seadanya untuk B03. (b) Satu visual tapak keseluruhan yang menunjukkan kedudukan enam komponen infrastruktur.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "B03_SAHAJA",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-E1",
+    "source_decision_block": "E1",
+    "selected_option": "SAH — S02 mesti berbentuk dialog bagi semua unit K5.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-E2",
+    "source_decision_block": "E2",
+    "selected_option": "SAH — ini keperluan minimum bagi setiap dialog K5.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "E2 attaches its own verification clause: 'keperluan ini akan disemak oleh manusia, bukan oleh pemeriksa automatik. Kehadiran tanda soal sahaja tidak dianggap memenuhi syarat ini.' The rule is confirmed; its verification is explicitly withheld from automated checking."
+   },
+   {
+    "authority_record_id": "AR-F1",
+    "source_decision_block": "F1",
+    "selected_option": "SETUJU — baki unit PL06 boleh dihasilkan tanpa semakan awal Bariah bagi setiap unit.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-F2a",
+    "source_decision_block": "F2(a)",
+    "selected_option": "SAH — 4 aneka pilihan + 1 Multiple Response, lulus 60%.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-F2b",
+    "source_decision_block": "F2(b)",
+    "selected_option": "Bariah menyemak setiap set kuiz dalam slot semakan unit. Kuiz disemak sebagai sebahagian daripada storyboard penuh unit, bukan melalui dokumen berasingan.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "F2(b) confirms the CHANNEL by which keys will be reviewed. It confirms no key. The document's own scope statement excludes 'Soalan kuiz sebenar dan kunci jawapan setiap unit'."
+   },
+   {
+    "authority_record_id": "AR-F3",
+    "source_decision_block": "F3",
+    "selected_option": "SETUJU — peraturan F3 diterima sebagai asas pemilihan treatment bagi semua unit K5.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-F4",
+    "source_decision_block": "F4",
+    "selected_option": "(a) Sub-soil Drainage: Langkah demi langkah. (b) Swale / Natural Drain: Click-to-Reveal — cadangan kami, kerana sumber tidak simetri.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "B03_SAHAJA",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   },
+   {
+    "authority_record_id": "AR-F5",
+    "source_decision_block": "F5",
+    "selected_option": "3 panel sebagai format produksi.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "The 2-panel option is unchecked and 'Tangguh' is unchecked. The calibration finding was recorded alongside the choice: at 3 panels the source-row list had to be shortened; at 2 panels it did not; full provenance was retained at both densities."
+   },
+   {
+    "authority_record_id": "AR-F6",
+    "source_decision_block": "F6",
+    "selected_option": "Both statements marked: B03 is accepted as the K5 implementation sample once the amendments in this document are applied, AND that acceptance authorises the remaining PL06 units under the same contract, subject to internal QA and exception reporting.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED",
+    "detail": "CONDITIONAL. The acceptance is predicated on the amendments being applied to B03 and on the named authority being satisfied with the result. Neither has happened. F6 does NOT make B03 instructionally approved."
+   },
+   {
+    "authority_record_id": "AR-F7",
+    "source_decision_block": "F7",
+    "selected_option": "SETUJU — pembahagian ini diterima.",
+    "authority_from_a_to_f": true,
+    "section_g_merely_reconciles": true,
+    "section_g_only_explicit_confirmation": false,
+    "scope": "SEMUA_UNIT_K5",
+    "resulting_status": "WRITTEN_CONFIRMED"
+   }
+  ]
+ },
+ "supersessions": [
+  {
+   "id": "SUP-01",
+   "supersedes": "STOP-006 CAST_BINDING_UNRESOLVED",
+   "held_in": "docs/pl06/PL06_OPEN_AUTHORITY_ITEMS_v1.md",
+   "by": "A1",
+   "effect": "The named cast is settled: Alya, Encik Rahman, Hilmi. Haziq and Encik Roslan are recorded as replaced / no longer used.",
+   "residual_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+   "residual_note": "A1 carries no option mark and no Section G row. The conflict is resolved in the sense that the authority has stated in a dated artifact which names are in use; it is NOT resolved by a fresh explicit confirmation."
+  },
+  {
+   "id": "SUP-02",
+   "supersedes": "SRC-ANOM-003 ratified character bank vs delivered B02 cast",
+   "held_in": "docs/pl06/PL06_OPEN_AUTHORITY_ITEMS_v1.md",
+   "by": "A1",
+   "effect": "Same as SUP-01. RP-106 and RP-215 no longer describe an unresolved pair.",
+   "residual_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT"
+  },
+  {
+   "id": "SUP-03",
+   "supersedes": "AR-06 'a dialogue is produced only where the source justifies one'",
+   "held_in": "docs/pl06/tools/pl06_unit_model_v1.py UNIT_ANALYSIS[*].dialogue.verdict",
+   "by": "E1",
+   "effect": "S02 must be a dialogue for every K5 unit. The `dialogue.verdict` field in the four committed unit analyses (NOT_JUSTIFIED for T03-B03 and T03-B04, UNCERTAIN for T06-B01, JUSTIFIED for T05-B01) is now a record of a superseded judgment and must not gate production.",
+   "residual_status": "WRITTEN_CONFIRMED",
+   "residual_note": "The committed analyses are NOT rewritten. The field is retained as historical evidence and marked superseded here."
+  },
+  {
+   "id": "SUP-04",
+   "supersedes": "B2 Lampiran density test — no density frozen",
+   "held_in": "docs/pl06/tools/k5_calib_qa_v1.py, docs/pl06/STAGE_4_2F_B2_RUN_MANIFEST.md",
+   "by": "F5",
+   "effect": "3 panels is the production format. The 2-panel artifact and both preview sets are retained unchanged as calibration and regression evidence and are NOT deleted.",
+   "residual_status": "WRITTEN_CONFIRMED"
+  },
+  {
+   "id": "SUP-05",
+   "supersedes": "quiz.* citation 'A7' and rumusan.* citation 'A6'",
+   "held_in": "docs/pl06/contracts/k5_instructional_authority_v1.json (previous revision)",
+   "by": "warrant_audit WA-01 through WA-05",
+   "effect": "Citations that resolve to nothing were repaired to real loci or the rule was downgraded. No rule VALUE changed.",
+   "residual_status": "WRITTEN_CONFIRMED"
+  }
+ ],
  "effective_scope": {
   "value": "FORWARD_FROM_B03",
   "authority_status": "WRITTEN_CONFIRMED",
-  "authority_source": "Bariah written scope ruling",
+  "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+  "authority_locus": "F6",
+  "named_authority": "Bariah Ahmad",
+  "authority_date": "2026-08-05",
+  "authority_source": "F6 accepts B03 as the K5 implementation sample and authorises the remaining PL06 units under the same contract; F1 removes per-unit pre-review.",
   "scope": "All PL06 generation from K5-PL06-T03-B03 forward.",
   "exceptions": [
    {
@@ -28,29 +500,60 @@
   "mcq_count": {
    "value": 4,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "A7",
+   "authority_artifact": "BARIAH_KELOMPOK0_v1_2",
+   "authority_locus": "A7",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-04",
+   "authority_source": "A7 (Kelompok 0 v1.2, ticked DEFAULT SEMUA PL K5): the default K5 quiz is 4 MCQ + 1 Multiple Response at a 60 percent pass mark, applying to all PL in K5 unless a unit exception is stated. A7's own note records that this settles the RP-009 and RP-010 VERIFY flags. Re-confirmed by F2(a) on 2026-08-05. This rule: 4 MCQ.",
    "scope": "every PL06 unit",
-   "exceptions": []
+   "exceptions": [],
+   "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
   },
   "multiple_response_count": {
    "value": 1,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "A7",
+   "authority_artifact": "BARIAH_KELOMPOK0_v1_2",
+   "authority_locus": "A7",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-04",
+   "authority_source": "A7 (Kelompok 0 v1.2, ticked DEFAULT SEMUA PL K5): the default K5 quiz is 4 MCQ + 1 Multiple Response at a 60 percent pass mark, applying to all PL in K5 unless a unit exception is stated. A7's own note records that this settles the RP-009 and RP-010 VERIFY flags. Re-confirmed by F2(a) on 2026-08-05. This rule: 1 Multiple Response.",
    "scope": "every PL06 unit",
-   "exceptions": []
+   "exceptions": [],
+   "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
   },
   "pass_percent": {
    "value": 60,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "A7",
+   "authority_artifact": "BARIAH_KELOMPOK0_v1_2",
+   "authority_locus": "A7",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-04",
+   "authority_source": "A7 (Kelompok 0 v1.2, ticked DEFAULT SEMUA PL K5): the default K5 quiz is 4 MCQ + 1 Multiple Response at a 60 percent pass mark, applying to all PL in K5 unless a unit exception is stated. A7's own note records that this settles the RP-009 and RP-010 VERIFY flags. Re-confirmed by F2(a) on 2026-08-05. This rule: 60 percent pass mark.",
    "scope": "every PL06 unit",
-   "exceptions": []
+   "exceptions": [],
+   "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
   },
   "answer_key_approval": {
    "value": "DRAFTED_NOT_APPROVED",
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "A7 authorises composition only",
+   "authority_artifact": "BARIAH_KELOMPOK0_v1_2",
+   "authority_locus": "A7 scope, with F2(b)",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-04",
+   "authority_source": "A7 fixes the COMPOSITION only; it approves no key. F2(b) then selects the channel by which keys are confirmed, and the returned document's scope excludes 'Soalan kuiz sebenar dan kunci jawapan setiap unit'. Both loci agree: keys are drafted and approved by nobody.",
    "scope": "keys are drafted by CAIR and approved by nobody",
+   "exceptions": [],
+   "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
+  },
+  "review_channel": {
+   "value": "REVIEWED_INSIDE_THE_FULL_UNIT_STORYBOARD_SLOT_NOT_A_SEPARATE_DOCUMENT",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F2(b)",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F2(b) 'Bariah menyemak setiap set kuiz dalam slot semakan unit. Kuiz disemak sebagai sebahagian daripada storyboard penuh unit, bukan melalui dokumen berasingan.'",
+   "scope": "every PL06 unit",
    "exceptions": []
   }
  },
@@ -62,36 +565,119 @@
     "benefit"
    ],
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "A6 as amended by the written course-wide rule",
+   "authority_artifact": "BARIAH_KELOMPOK0_v1_2",
+   "authority_locus": "A6",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-04",
+   "authority_source": "A6 (Kelompok 0 v1.2) accepts the three-beat structure verbatim: 'Terima struktur tiga-beat (Kepentingan / Skop dan Isi Utama / Manfaat).' D3 rule 2 re-confirms that all three components must be contained in the copy. D3 rule 1 supersedes A6's LABEL DISPLAY only, not the structure.",
    "scope": "exactly three internal beats per unit; subtopics nest inside the scope beat and never become beats of their own",
-   "exceptions": []
+   "exceptions": [],
+   "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
   },
   "learner_facing_labels": {
    "value": false,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written course-wide rule",
-   "scope": "beat labels are production metadata only",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D3 rule 1 and D2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D3 rule 1 'Copy learner-facing mengalir tanpa tajuk kecil Kepentingan / Skop / Manfaat'; D2 'Label ini TIDAK dipaparkan kepada pelatih.' Corroborated by RP-007, which records the earlier verbatim answer 'Ia tidak memaparkan label Kepentingan, Isi Utama atau Manfaat.'",
+   "scope": "beat labels are production metadata only and must not appear in learner-facing copy in any form, including as an inline prefix",
    "exceptions": []
   },
   "scope_lists_every_declared_subtopic": {
    "value": true,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written course-wide rule",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D3 rule 3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D3 rule 3 requires every declared subtopic to be contained in the copy.",
    "scope": "scope beat enumerates every declared subtopic exactly once",
    "exceptions": []
+  },
+  "visual_form_not_fixed": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D3 rule 5 and its accompanying note",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D3 rule 5 requires a suitable supporting visual; the note beside it says \"Peraturan 5 sengaja tidak menetapkan bentuk visual. Bentuk yang sesuai bagi infrastruktur tapak belum tentu sesuai bagi tumbuhan, kontrak, keselamatan atau penyelenggaraan. Arah visual ditetapkan setiap unit.\" The visual is REQUIRED; its FORM is per unit.",
+   "scope": "the form of the Rumusan visual is set per unit; the requirement to have one is course-wide",
+   "exceptions": [
+    "K5-PL06-T03-B03"
+   ]
   },
   "forbidden_phrase": {
    "value": "Unit ini",
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written course-wide rule",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D3 rule 4",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D3 rule 4, verbatim: \"Frasa “Unit ini” tidak boleh digunakan.\" Confirmed by the D3 option mark SETUJU, scope SEMUA UNIT K5, reconciled at Section G.",
    "scope": "must not appear in any learner-facing Rumusan copy",
-   "exceptions": []
+   "exceptions": [],
+   "prior_unwarranted_citation": "written course-wide rule"
   },
   "support_visual_required": {
    "value": true,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "A6",
-   "scope": "every Rumusan carries a supporting visual",
+   "authority_artifact": "BARIAH_KELOMPOK0_v1_2",
+   "authority_locus": "A6",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-04",
+   "authority_source": "A6 verbatim: 'Rumusan sepatutnya mempunyai visual sokongan ... Visual adalah elemen standard Rumusan untuk mengukuhkan ingatan, bukan sekadar \"digunakan apabila membantu\".' Re-confirmed by D3 rule 5 on 2026-08-05.",
+   "scope": "every Rumusan carries a supporting visual suited to that unit's topic; A6 records a brief montage as an ILLUSTRATION of the form, not as a specification",
+   "exceptions": [],
+   "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
+  },
+  "b03_copy": {
+   "value": "Pengurusan infrastruktur landskap yang tepat penting bagi memastikan kerja mematuhi lukisan, sempadan dan keperluan teknikal tapak. Komponen infrastruktur merangkumi…",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D1 accepted by D4(a)",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D1 is copy written by the named authority herself; D4(a) TERIMA accepts it for B03 without amendment. Recorded here as an authority value, NOT as generated copy.",
+   "scope": "K5-PL06-T03-B03 only",
+   "value_is_truncated_in_this_record": true,
+   "exceptions": []
+  },
+  "b03_support_visual": {
+   "value": "Satu visual tapak keseluruhan yang menunjukkan kedudukan enam komponen infrastruktur.",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D4(b)",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D4(b) selected 'Satu visual tapak keseluruhan' over 'Enam panel berasingan'.",
+   "scope": "K5-PL06-T03-B03 only",
+   "exceptions": []
+  },
+  "rp007_disposition": {
+   "value": "RESOLVED_BY_D3_RULES_1_AND_2",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D3 rules 1 and 2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D3 rule 1 removes the Kepentingan / Skop / Manfaat headings from learner-facing copy; D3 rule 2 keeps all three components inside it. That is exactly the issue RP-007 raised, decided by the current authority.",
+   "rp007": {
+    "issue": "Rumusan treatment: summarises THIS Bahagian only, contractor/site perspective, and displays NO Kepentingan / Isi Utama / Manfaat labels.",
+    "held_in": "docs/pl06/PL06_RULE_PORTABILITY_MATRIX_v1.md and pl06_inventory_data_v1.py",
+    "original_status": "PL06_GLOBAL_REUSABLE, oracle yes, propagation risk LOW",
+    "original_evidence": "A B02-era Bariah answer quoted verbatim: 'Rumusan perlu merumuskan Bahagian 2 sahaja dan menggunakan perspektif kontraktor. Ia tidak memaparkan label Kepentingan, Isi Utama atau Manfaat.' It is a Bariah answer, NOT a CAIR proposal.",
+    "historical_closing_warrant": "A6 was treated as superseding RP-007's no-label clause, because A6 accepts the three-beat structure using those label names. k5_calib_model_v1 records it as 'A6 is Bariah's ruling and supersedes that CAIR proposal', which also mis-describes RP-007's provenance as a CAIR proposal.",
+    "a6_was_sole_basis": true,
+    "historical_a6_closure": "WITHDRAWN",
+    "disposition": "RESOLVED",
+    "current_warrant": "D3 rules 1 and 2, RETURNED_AUTHORITY_v0_2, 2026-08-05, Bariah Ahmad",
+    "resolution": "The three components stay (A6 structure, D3 rule 2). The LABELS do not appear in learner-facing copy (RP-007's clause, D3 rule 1). Once structure and display are separated the two are not in conflict.",
+    "open_consequence": "The B03 calibration deck pairs A6_LABELS to the three beats and displays them. Under D3 rule 1 that display is no longer correct for learner-facing copy. B03 is NOT regenerated in this pass; recorded as a named open item for the B03 rebuild."
+   },
+   "scope": "every K5 Rumusan",
    "exceptions": []
   }
  },
@@ -101,69 +687,385 @@
     "name": "Alya",
     "role": "Kontraktor Junior",
     "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
-    "authority_status": "WRITTEN_CONFIRMED",
-    "authority_source": "written character confirmation",
-    "may_speak": true
+    "authority_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+    "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+    "authority_locus": "A1",
+    "named_authority": "Bariah Ahmad",
+    "authority_date": "2026-08-05",
+    "authority_source": "A1 attributes this to 'Keputusan Bariah T04'. A1 carries no option mark and no Section G row.",
+    "may_speak": true,
+    "confirmation_path": "ASSERTED_PRIOR_DECISION"
    },
    {
     "name": "Encik Rahman",
     "role": "Mentor / Kontraktor Senior",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
-    "authority_status": "WRITTEN_CONFIRMED",
-    "authority_source": "written character confirmation",
-    "may_speak": true
+    "authority_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+    "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+    "authority_locus": "A1",
+    "named_authority": "Bariah Ahmad",
+    "authority_date": "2026-08-05",
+    "authority_source": "A1. No option mark, no Section G row.",
+    "may_speak": true,
+    "confirmation_path": "ASSERTED_PRIOR_DECISION"
    },
    {
     "name": "Hilmi",
-    "role": "Narrator K5",
+    "role": "Narator",
     "role_family": "NARRATOR",
-    "authority_status": "WRITTEN_CONFIRMED",
-    "authority_source": "D2",
-    "may_speak": true
+    "authority_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+    "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+    "authority_locus": "A1",
+    "named_authority": "Bariah Ahmad",
+    "authority_date": "2026-08-05",
+    "authority_source": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+    "may_speak": true,
+    "confirmation_path": "ASSERTED_PRIOR_DECISION"
    }
   ],
+  "replaced": [
+   {
+    "name": "Haziq",
+    "state": "REPLACED_NO_LONGER_USED",
+    "authority_locus": "A1"
+   },
+   {
+    "name": "Encik Roslan",
+    "state": "REPLACED_NO_LONGER_USED",
+    "authority_locus": "A1"
+   }
+  ],
+  "out_of_scope": [
+   {
+    "name": "Maya",
+    "state": "K2_AND_K4_NARRATOR_NOT_K5",
+    "authority_locus": "A1"
+   }
+  ],
+  "selection_contract": {
+   "value": "A2_RULES_1_TO_5_ARE_THE_K5_CHARACTER_SELECTION_CONTRACT",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A2 SETUJU — peraturan A2 (1-5) diterima sebagai kontrak pemilihan watak K5.",
+   "scope": "every K5 unit",
+   "exceptions": []
+  },
   "reuse_rule": {
    "value": "SAME_ROLE_FAMILY_REUSES_THE_APPROVED_CHARACTER",
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written character contract",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A2 rules 1-5, accepted.",
    "scope": "applies before any new role may be proposed",
    "exceptions": []
   },
   "new_role_rule": {
    "value": "DIFFERENT_AUTHORITY_LICENCE_OR_COMPETENCE_PROPOSES_A_NEW_ROLE",
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written character contract",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A2 rules 1-5, accepted.",
    "scope": "a proposal is a ROLE, never a name",
    "exceptions": []
   },
   "reference_only_rule": {
    "value": "REFERENCE_ONLY_AUTHORITY_NEEDS_NO_SPEAKING_CHARACTER",
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written character contract",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A2 rules 1-5, accepted; B5 SAH confirms the B1-B4 role inventory is accurate as the selection reference.",
    "scope": "an approval body or cited document is not a character",
    "exceptions": []
   },
   "naming_of_new_roles": {
    "value": "NAME_PENDING_PROPOSAL",
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written character contract",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A3 BETUL — do not build a full per-PL name roster now; when a unit needs a new character the proposed name comes with it.",
    "scope": "no name may be invented for an unapproved role",
+   "exceptions": []
+  },
+  "role_inventory_is_reference": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "B5",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "B5 SAH — inventori peranan B1-B4 tepat dan boleh digunakan sebagai rujukan pemilihan watak.",
+   "scope": "the module role inventory is a selection reference, not a cast list",
+   "exceptions": []
+  },
+  "puan_nadia_reconciliation": {
+   "value": "UNRESOLVED_RECONCILIATION",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "FIRDAUS_TENSION_DISPOSITION_v1",
+   "authority_locus": "section 6",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-05",
+   "confirmation_path": "OWNER_ENGINEERING_ARTIFACT",
+   "authority_source": "The name appears nowhere in the returned authority document — not in A1 cast table, not among the replaced names, not in Section G. Silence is neither revocation nor approval.",
+   "flags": [
+    "NOT_EXPLICITLY_REVOKED",
+    "NOT_AUTOMATICALLY_ACTIVE",
+    "NON_BLOCKING_WHILE_UNUSED"
+   ],
+   "scope": "not added to any active PL06 packet; not removed from historical cast evidence",
    "exceptions": []
   }
  },
  "dialogue": {
+  "s02_must_be_dialogue": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "E1",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "E1 SAH — S02 mesti berbentuk dialog bagi semua unit K5.",
+   "scope": "every K5 unit. Supersedes AR-06, under which a dialogue was produced only where the source justified one.",
+   "exceptions": []
+  },
   "tension_required": {
    "value": true,
-   "authority_status": "PROPOSED_NOT_APPROVED",
-   "authority_source": "Firdaus proposed contract",
-   "scope": "S02 built on a work-related question, problem or tension",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "E2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "E2 SAH. Verbatim requirement: 'satu soalan, masalah, keraguan, ketegangan atau titik keputusan yang mencetuskan perbualan — bukan penerangan panjang yang dibahagikan antara dua nama.'",
+   "scope": "every K5 dialogue",
+   "prior_status": "PROPOSED_NOT_APPROVED",
    "exceptions": []
+  },
+  "tension_verification": {
+   "value": "HUMAN_REVIEW_NOT_AN_AUTOMATED_CHECKER",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "E2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "E2 note: 'keperluan ini akan disemak oleh manusia, bukan oleh pemeriksa automatik. Kehadiran tanda soal sahaja tidak dianggap memenuhi syarat ini.'",
+   "scope": "no gate in this repository may report that a dialogue satisfies E2; a gate may only report that a candidate tension anchor was found and cited",
+   "exceptions": []
+  },
+  "question_mark_is_not_sufficient": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "E2",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "E2 note, verbatim: 'Kehadiran tanda soal sahaja tidak dianggap memenuhi syarat ini.'",
+   "scope": "every K5 dialogue",
+   "exceptions": []
+  },
+  "formula": {
+   "value": "C4_IS_THE_DEFAULT_DIALOGUE_FORMULA_FOR_ALL_K5",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "C4",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "C4 SETUJU — formula C4 diterima sebagai default bagi semua dialog K5.",
+   "scope": "every K5 unit",
+   "exceptions": []
+  },
+  "b03_formula_application": {
+   "value": {
+    "speakers": 2,
+    "speaker_names": [
+     "Alya",
+     "Encik Rahman"
+    ],
+    "opening": "Alya membuka dengan soalan sama ada kerja boleh diteruskan",
+    "answer": "Encik Rahman memberi prinsip semakan dokumen dan kawalan",
+    "length_lines": 5
+   },
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "C5",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "C5 carries no option block in Sections A-F. Its only explicit confirmation is the Section G row \"Penerapan formula pada B03 (C5) | B03 sahaja — kandungan unit\". It is a worked exhibit derived from C4: \"Susunan ini khusus untuk B03. Unit lain akan mengikut formula C4...\". Recorded with the existing status enum; the Section-G-only fact is carried by `confirmation_path`, not by a new status.",
+   "scope": "K5-PL06-T03-B03 only",
+   "exceptions": [],
+   "confirmation_path": "SECTION_G_ONLY"
   },
   "responses_source_backed": {
    "value": true,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "standing source-control rule",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "C2 and C3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "C2 submits the dialogue's three substantive claims for technical confirmation against the module and the named authority marked all three, annotating claim 2 'BETUL — verbatim modul' and claim 3 'BETUL — disokong modul'. C3 TERIMA then accepts the dialogue as usable as-is. Substantive responses are therefore held to the module.",
    "scope": "every substantive response cites controlled rows",
+   "exceptions": []
+  },
+  "c2_claims": [
+   {
+    "claim_id": "C2-1",
+    "claim": "Kedudukan pagar perlu disemak dengan Pelan Ukur Sempadan.",
+    "mark": "CHECKED",
+    "annotation": null,
+    "annotation_present": false,
+    "controlled_rows": [
+     "T03B03-ROW-047",
+     "T03B03-ROW-048"
+    ],
+    "support_class": "SOURCE_SUPPORTED_NOT_VERBATIM",
+    "support_note": "T03B03-ROW-048 reads 'Jajaran pagar mesti ditanda mengikut Pelan Ukur Sempadan untuk mengelakkan isu pencerobohan tanah.' under the heading T03B03-ROW-047 'Penjajaran Sempadan'. The claim paraphrases 'ditanda mengikut' as 'disemak dengan'. The named authority marked the claim but wrote no annotation, unlike claims 2 and 3. The controlled source does support it; the paraphrase is ours, not hers."
+   },
+   {
+    "claim_id": "C2-2",
+    "claim": "Dinding penahan mesti mengikut lukisan struktur yang diluluskan.",
+    "mark": "CHECKED",
+    "annotation": "BETUL — verbatim modul",
+    "annotation_present": true,
+    "controlled_rows": [
+     "T03B03-ROW-037"
+    ],
+    "support_class": "SOURCE_VERBATIM_PER_NAMED_AUTHORITY_ANNOTATION"
+   },
+   {
+    "claim_id": "C2-3",
+    "claim": "Perbezaan antara lukisan dan keadaan tapak perlu dicatat dan diluluskan dahulu, bukan diubah terus di tapak.",
+    "mark": "CHECKED",
+    "annotation": "BETUL — disokong modul",
+    "annotation_present": true,
+    "controlled_rows": [
+     "T03B03-ROW-037",
+     "T03B03-ROW-048"
+    ],
+    "support_class": "SOURCE_SUPPORTED_PER_NAMED_AUTHORITY_ANNOTATION"
+   }
+  ],
+  "encik_rahman_depiction_limit": {
+   "value": "MUST_NOT_BE_DEPICTED_APPROVING_STRUCTURAL_CHANGES_OR_CONFIRMING_BOUNDARIES",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "C2 closing instruction",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "The C2 block closes with an explicit instruction that Encik Rahman must not be shown approving structural changes or confirming boundaries. Those are a licensed engineer's and a surveyor's acts.",
+   "scope": "every K5 dialogue in which Encik Rahman speaks",
+   "exceptions": []
+  },
+  "paraphrase_contract": {
+   "value": "CONTROLLED_PARAPHRASE_PERMITTED_ESCALATION_FORBIDDEN",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "FIRDAUS_TENSION_DISPOSITION_v1",
+   "authority_locus": "section 5",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-05",
+   "authority_source": "Owner engineering authoring contract. It exists because E1 requires S02 to be a conversation and E2 rejects a long explanation split between two names — neither is reachable if every line must be a verbatim substring of a source row. The instructional requirement is Bariah's (E1, E2, C4); the AUTHORING MECHANISM below is the owner's, and is recorded as his, not hers.",
+   "limits": [
+    "every substantive line cites at least one controlled row of its own unit",
+    "a paraphrase names the row text it paraphrases",
+    "a paraphrase may not introduce an obligation, prohibition, approval or legal duty that its cited rows do not carry",
+    "no analyst note, reviewer annotation or production marker may appear in a line",
+    "a scenario frame that makes no claim carries no source burden but may name only objects its unit's rows name"
+   ],
+   "line_classes": [
+    "SOURCE_VERBATIM",
+    "CONTROLLED_PARAPHRASE",
+    "CAIR_STRUCTURAL_FRAME"
+   ],
+   "escalation_markers": [
+    "mesti",
+    "wajib",
+    "hendaklah",
+    "dilarang",
+    "tidak dibenarkan",
+    "diluluskan",
+    "kelulusan",
+    "mandatori",
+    "undang-undang",
+    "sah di sisi"
+   ],
+   "scope": "every K5 S02 dialogue line",
+   "exceptions": [],
+   "record_type": "OWNER_ENGINEERING_AUTHORING_CONTRACT",
+   "confirmation_path": "OWNER_ENGINEERING_ARTIFACT",
+   "derives_from": [
+    "RETURNED_AUTHORITY_v0_2:E1",
+    "RETURNED_AUTHORITY_v0_2:E2",
+    "RETURNED_AUTHORITY_v0_2:C4"
+   ]
+  },
+  "b03_s02_canonical_copy": {
+   "value": [
+    {
+     "seq": 1,
+     "speaker": "Alya",
+     "text": "Encik Rahman, jajaran pagar sudah ditanda di tapak. Boleh kita teruskan pemasangan sementara kerja lain berjalan?"
+    },
+    {
+     "seq": 2,
+     "speaker": "Encik Rahman",
+     "text": "Belum, Alya. Kedudukan pagar perlu disemak dengan Pelan Ukur Sempadan, manakala dinding penahan mesti mengikut lukisan struktur yang diluluskan."
+    },
+    {
+     "seq": 3,
+     "speaker": "Alya",
+     "text": "Kalau keadaan sebenar tapak tidak sama dengan lukisan, bolehkah kedudukannya kita ubah sedikit?"
+    },
+    {
+     "seq": 4,
+     "speaker": "Encik Rahman",
+     "text": "Jangan ubah terus di tapak. Catat perbezaannya dan dapatkan kelulusan yang diperlukan sebelum kerja diteruskan."
+    },
+    {
+     "seq": 5,
+     "speaker": "Alya",
+     "text": "Jadi semakan dokumen dan keadaan tapak terlebih dahulu dapat mengelakkan masalah sempadan, kegagalan kerja dan pembaikan semula."
+    }
+   ],
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "C1 and C3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "C3: 'TERIMA — dialog boleh digunakan seadanya.' The copy is C1's five lines as written by the instructional authority and accepted without amendment.",
+   "source_file": "K5_Pengesahan_ID_Watak_Dialog_Rumusan_v0_2_vBariah.docx",
+   "source_sha256": "a4775daaacb551d7db44851f3cd8cd888fbdf47637d79c572dc172ff8f9de0b3",
+   "source_sections": [
+    "C1",
+    "C3"
+   ],
+   "source_date_ms": "5 Ogos 2026",
+   "line_count": 5,
+   "canonicalisation": {
+    "removed_reviewer_annotations": [
+     "BETUL — verbatim modul"
+    ],
+    "removed_from_line": 2,
+    "normalisation": "Unicode NFC and whitespace only. No wording, no speaker and no ordering was changed.",
+    "forbidden_operations": [
+     "paraphrase",
+     "reordering",
+     "adding a line",
+     "removing a line",
+     "changing a speaker",
+     "re-authoring"
+    ]
+   },
+   "paraphrase_contract_applies": false,
+   "paraphrase_exemption_reason": "The controlled-paraphrase contract governs unapproved or generated dialogue. This copy is approved instructional content, accepted as-is at C3. It is reproduced, never regenerated.",
+   "scope": "K5-PL06-T03-B03 S02 only",
    "exceptions": []
   }
  },
@@ -171,24 +1073,193 @@
   "rp104_source_figure_required": {
    "value": true,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "RP-104",
+   "authority_artifact": "RULE_PORTABILITY_MATRIX_v1",
+   "authority_locus": "RP-104",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "RP-104 'Source figure binding: a visual direction is read from the source row's own figure or table photograph, never composed from the component name.' Classified PL06_GLOBAL_REUSABLE with oracle = yes.",
    "scope": "a direction is read from a source figure or table, never composed from a component name",
    "exceptions": []
   },
   "suits_unit_topic": {
    "value": true,
-   "authority_status": "PROPOSED_NOT_APPROVED",
-   "authority_source": "Firdaus proposed contract",
-   "scope": "visual must suit the unit's own topic",
-   "exceptions": []
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "D3 rule 5",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "D3 rule 5 requires the supporting visual to be \"sesuai dengan topik unit berkenaan\". That is the same requirement this rule states, and it was recorded as an owner proposal only because the rule had been read for its visual-FORM clause alone.",
+   "scope": "the supporting visual must suit the unit's own topic",
+   "exceptions": [],
+   "prior_status": "PROPOSED_NOT_APPROVED"
   }
  },
  "interaction": {
   "treatment_selection": {
-   "value": "READ_FROM_THE_MODULES_OWN_REPEATED_STRUCTURE",
-   "authority_status": "PROPOSED_NOT_APPROVED",
-   "authority_source": "Firdaus proposed contract",
-   "scope": "candidate only; Bariah may choose otherwise",
+   "value": "F3_RULES_SELECT_THE_TREATMENT_FROM_THE_SOURCE_STRUCTURE",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F3 SETUJU — peraturan F3 diterima sebagai asas pemilihan treatment bagi semua unit K5.",
+   "scope": "every K5 unit",
+   "prior_status": "PROPOSED_NOT_APPROVED",
+   "exceptions": []
+  },
+  "treatment_rules": {
+   "value": [
+    {
+     "when": "SEQUENTIAL_PROCESS",
+     "treatment": "Langkah demi langkah"
+    },
+    {
+     "when": "EXPLICIT_SYMMETRIC_COMPARISON",
+     "treatment": "Comparison"
+    },
+    {
+     "when": "LAYERED_NON_PROCESS_NON_COMPARISON",
+     "treatment": "Click-to-Reveal"
+    },
+    {
+     "when": "OTHERWISE",
+     "treatment": "Kandungan statik"
+    }
+   ],
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F3, accepted without amendment.",
+   "scope": "every K5 unit",
+   "exceptions": []
+  },
+  "symmetry_definition": {
+   "value": "BOTH_SIDES_MUST_CARRY_THEIR_OWN_INFORMATION_IN_THE_CONTROLLED_SOURCE",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F3",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F3 defines symmetry: a comparison is only symmetric when both sides have their own information in the source.",
+   "scope": "applies when deciding between Comparison and Click-to-Reveal",
+   "exceptions": []
+  },
+  "b03_treatments": {
+   "value": [
+    {
+     "screen": "Sub-soil Drainage",
+     "treatment": "Langkah demi langkah"
+    },
+    {
+     "screen": "Swale / Natural Drain",
+     "treatment": "Click-to-Reveal"
+    }
+   ],
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F4",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F4(a) Langkah demi langkah; F4(b) Click-to-Reveal, chosen with the recorded reason that Comparison 'boleh disokong daripada baris sumber ROW-056 dan ROW-061, tetapi ia tidak simetri'.",
+   "scope": "K5-PL06-T03-B03 only",
+   "exceptions": []
+  }
+ },
+ "lampiran": {
+  "production_panel_density": {
+   "value": 3,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F5",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F5 '3 panel sebagai format produksi.' The 2-panel option and the 'Tangguh' option are both unchecked.",
+   "scope": "every Lampiran Keadaan produced from B03 forward",
+   "prior_status": "B2_TEST_REQUIRED_NO_DENSITY_FROZEN",
+   "exceptions": []
+  },
+  "calibration_densities_retained": {
+   "value": [
+    2,
+    3
+   ],
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F5",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F5 was answered on the strength of both calibration files. The 2-panel artifact is the evidence the decision was made against and is retained as calibration and regression evidence, not deleted.",
+   "scope": "calibration and regression evidence only; density 2 is NOT a production format",
+   "exceptions": []
+  },
+  "density_test_finding": {
+   "value": "AT_3_PANELS_THE_SOURCE_ROW_LIST_HAD_TO_BE_SHORTENED_AT_2_PANELS_IT_DID_NOT",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F5",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "The test finding was recorded in F5 alongside the choice. Full provenance is retained at both densities; only the visible source-row id list is truncated.",
+   "scope": "recorded so the production choice is not read as a claim that 3 panels cost nothing",
+   "exceptions": []
+  }
+ },
+ "review_model": {
+  "per_unit_pre_review": {
+   "value": false,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F1",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F1 SETUJU — after this contract and the sample unit are accepted, the remaining PL06 units may be produced without a per-unit pre-review by the named authority.",
+   "scope": "remaining PL06 units",
+   "exceptions": []
+  },
+  "sample_unit_acceptance": {
+   "value": "CONDITIONAL_NOT_YET_SATISFIED",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F6",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F6 accepts B03 as the K5 implementation sample ONCE the amendments in the returned document are applied to B03 and the named authority is satisfied with the result. Neither condition has been met. F6 does not make any unit instructionally approved.",
+   "scope": "K5-PL06-T03-B03, then the remaining PL06 units",
+   "exceptions": []
+  },
+  "responsibility_split": {
+   "value": {
+    "Bariah Ahmad": [
+     "instructional contract",
+     "content accuracy",
+     "named exceptions"
+    ],
+    "Firdaus Ismail / SME Cloud": [
+     "routine unit implementation",
+     "technical QA",
+     "production release"
+    ]
+   },
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F7",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "F7 SETUJU — pembahagian ini diterima.",
+   "scope": "the whole of PL06",
+   "exceptions": []
+  },
+  "excluded_from_this_document": {
+   "value": "SOALAN_KUIZ_SEBENAR_DAN_KUNCI_JAWAPAN_SETIAP_UNIT",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "document scope statement",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "'Soalan kuiz sebenar dan kunci jawapan setiap unit — dihantar melalui saluran yang dipilih di F2(b)'. Nothing in this document approves any quiz item or key.",
+   "scope": "the whole document",
    "exceptions": []
   }
  },
@@ -196,31 +1267,51 @@
   "total_units": {
    "value": 14,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "frozen production inventory",
+   "authority_artifact": "STORYBOARD_PRODUCTION_INVENTORY_v1",
+   "authority_locus": "UNITS = 14, BAHAGIAN_ENUMERATED = 14 of 14",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "The frozen boundary map supplies 14 lesson units, each with a named DOCX body-heading anchor.",
    "exceptions": []
   },
   "legacy_retained": {
    "value": 2,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "Bariah FORWARD_FROM_B03 scope",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "F6",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "The FORWARD_FROM_B03 scope leaves K5-PL06-T03-B02 and K5-PL06-T04-B01 as retained legacy artifacts.",
    "exceptions": []
   },
   "active_generation": {
    "value": 12,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "14 total minus 2 legacy",
+   "authority_artifact": "STORYBOARD_PRODUCTION_INVENTORY_v1",
+   "authority_locus": "UNITS = 14 minus the 2 legacy units",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "Derived by subtraction from the frozen inventory and the legacy exception list; re-derived executably by ACTIVE_AND_LEGACY_RECONCILE_TO_THE_FROZEN_INVENTORY.",
    "exceptions": []
   },
   "total_storyboards": {
    "value": 14,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "one per unit",
+   "authority_artifact": "STORYBOARD_PRODUCTION_INVENTORY_v1",
+   "authority_locus": "one Storyboard per lesson unit",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "Every unit in the frozen inventory carries exactly one Storyboard, legacy units included.",
    "exceptions": []
   },
   "total_lampiran": {
    "value": 13,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "one per unit except the named B02 exception",
+   "authority_artifact": "B02_BARIAH_CALL_APPROVAL_RECORD_v1",
+   "authority_locus": "the B02 approval record names one artifact",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "14 units minus the single named exception. The B02 approval record names one artifact, which is why B02 carries no Lampiran; it is not a loss.",
    "exceptions": [
     "K5-PL06-T03-B02"
    ]
@@ -228,13 +1319,21 @@
   "total_primary_pptx": {
    "value": 27,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "14 Storyboards + 13 Lampiran",
+   "authority_artifact": "STORYBOARD_PRODUCTION_INVENTORY_v1",
+   "authority_locus": "14 Storyboards + 13 Lampiran",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "Derived from the unit roll and the artifact profiles; re-derived executably by PRIMARY_PPTX_TOTAL_IS_DERIVED_NOT_ASSERTED.",
    "exceptions": []
   },
   "named_legacy_exception": {
    "value": 1,
    "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "B02 Lampiran not in delivery contract",
+   "authority_artifact": "B02_BARIAH_CALL_APPROVAL_RECORD_v1",
+   "authority_locus": "LAMPIRAN_NOT_PART_OF_ORIGINAL_DELIVERY_CONTRACT",
+   "named_authority": "Firdaus Ismail",
+   "authority_date": "2026-08-02",
+   "authority_source": "Exactly one legacy unit carries a named exception. The approval record's own class is FIRDAUS_ATTESTED_BARIAH_CALL, the weakest in use; it is cited only for the delivery-contract shape, never for instructional content.",
    "exceptions": []
   }
  },

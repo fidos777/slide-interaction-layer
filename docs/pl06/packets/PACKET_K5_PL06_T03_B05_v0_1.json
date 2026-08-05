@@ -3,7 +3,7 @@
  "topik": 3,
  "bahagian": 5,
  "title": "Pencahayaan dan Pengairan",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -64,7 +64,7 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
@@ -88,34 +88,34 @@
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_RESPONSE",
-    "text": "Ini adalah peringkat paling kritikal.",
+    "text": "Tapak konkrit mesti dibina mengikut spesifikasi jurutera (saiz, kedalaman, dan saiz tetulang).",
     "rows": [
      "T03B05-ROW-014"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    },
    {
     "seq": 3,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_CONSEQUENCE",
-    "text": "Lazimnya menggunakan voltan 240V.",
+    "text": "Semua kabel bawah tanah mesti dilindungi menggunakan paip konduit (cth: paip GI atau uPVC) pada kedalaman yang betul untuk mengelakkan kerosakan.",
     "rows": [
      "T03B05-ROW-016"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    }
   ],
   "anchors": [
    {
-    "text": "Ini adalah peringkat paling kritikal.",
+    "text": "Tapak konkrit mesti dibina mengikut spesifikasi jurutera (saiz, kedalaman, dan saiz tetulang).",
     "rows": [
      "T03B05-ROW-014"
     ],
     "kind": "OBLIGATION"
    },
    {
-    "text": "Lazimnya menggunakan voltan 240V.",
+    "text": "Semua kabel bawah tanah mesti dilindungi menggunakan paip konduit (cth: paip GI atau uPVC) pada kedalaman yang betul untuk mengelakkan kerosakan.",
     "rows": [
      "T03B05-ROW-016"
     ],
@@ -152,7 +152,7 @@
      "3.8 Pengairan (Irrigation)"
     ],
     "subtopic_count": 2,
-    "text": "Skop: 3.7 Pencahayaan / Lighting; 3.8 Pengairan (Irrigation)",
+    "text": "Kerja ini merangkumi 3.7 Pencahayaan / Lighting dan 3.8 Pengairan (Irrigation).",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -270,7 +270,8 @@
    }
   ],
   "drafted": 5,
-  "anchored": 0
+  "anchored": 0,
+  "unanchored": 0
  },
  "visual_direction": {
   "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
@@ -304,19 +305,43 @@
   "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
  },
  "interaction": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "click-to-reveal",
-  "secondary": "static content",
+  "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+  "primary": "Click-to-Reveal",
+  "secondary": null,
+  "reason": "88 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "resolved": true,
   "repeated_components": 0,
-  "reason": "88 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+  "authority_locus": "F3",
+  "committed_pattern": null,
+  "agrees_with_committed": null
  },
  "analysis": {
   "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "88 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "treatment": "88 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA"
  },
+ "analysis_conformance": {
+  "satisfied": false,
+  "defects": [
+   "NO_COMMITTED_ANALYSIS"
+  ],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": null,
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,
   "SOURCE_EXTRACTION_COMPLETE": true,

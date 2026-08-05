@@ -3,7 +3,7 @@
  "topik": 1,
  "bahagian": 3,
  "title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -117,46 +117,66 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
  "dialogue": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "AUTHORED_AFTER_HUMAN_TENSION_REVIEW",
   "authority_status": "DRAFTED_NOT_APPROVED",
   "status": "DIALOGUE_COPY_COMPLETE",
-  "tension_kind": "RISK",
+  "tension_kind": "DECISION",
   "turns": [
    {
     "seq": 1,
     "speaker": "Alya",
     "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
-    "kind": "QUESTION",
-    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "kind": "DECISION_POINT",
+    "text": "Encik Rahman, pemasangan lampu dan pam air dah siap. Klien nak kita serahkan minggu ini. Boleh tak kita teruskan dulu, ujian penebatan buat kemudian?",
+    "rows": [
+     "T01B03-ROW-123",
+     "T01B03-ROW-124"
+    ],
     "cls": "CAIR_STRUCTURAL_FRAME",
-    "rows": []
+    "paraphrase_of": null,
+    "paraphrase_source": null
    },
    {
     "seq": 2,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_RESPONSE",
-    "text": "Menggunakan penguji megger untuk memastikan penebatan kabel tidak rosak atau bocor, yang boleh menyebabkan litar pintas atau risiko renjatan elektrik.",
+    "text": "Ujian itulah yang tunjukkan sama ada penebatan kabel dah rosak atau bocor, Alya. Kalau ada kebocoran, kita berdepan litar pintas atau renjatan elektrik.",
     "rows": [
      "T01B03-ROW-125"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "CONTROLLED_PARAPHRASE",
+    "paraphrase_of": "T01B03-ROW-125",
+    "paraphrase_source": "Menggunakan penguji megger untuk memastikan penebatan kabel tidak rosak atau bocor, yang boleh menyebabkan litar pintas atau risiko renjatan elektrik."
    },
    {
     "seq": 3,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_CONSEQUENCE",
-    "text": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
+    "text": "Dan T&C itu yang sahkan semua sistem, terutamanya elektrik, selamat dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
     "rows": [
      "T01B03-ROW-142"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "CONTROLLED_PARAPHRASE",
+    "paraphrase_of": "T01B03-ROW-142",
+    "paraphrase_source": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir."
+   },
+   {
+    "seq": 4,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "DECISION_TAKEN",
+    "text": "Baiklah. Saya pastikan ujian penebatan dan T&C selesai dahulu, dan saya maklumkan kepada pasukan sebelum proses serahan diteruskan.",
+    "rows": [],
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "paraphrase_of": null,
+    "paraphrase_source": null
    }
   ],
   "anchors": [
@@ -165,16 +185,18 @@
     "rows": [
      "T01B03-ROW-125"
     ],
-    "kind": "RISK"
+    "kind": "DECISION"
    },
    {
     "text": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
     "rows": [
      "T01B03-ROW-142"
     ],
-    "kind": "RISK"
+    "kind": "DECISION"
    }
   ],
+  "decision": "Whether the handover may proceed before the electrical insulation test and T&C are done.",
+  "disposition": "INTERNAL_HUMAN_AUTHORING_REVIEW",
   "copy_complete": true
  },
  "rumusan": {
@@ -204,7 +226,7 @@
      "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
     ],
     "subtopic_count": 1,
-    "text": "Skop: 1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+    "text": "Kerja ini merangkumi 1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap.",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -322,7 +344,8 @@
    }
   ],
   "drafted": 5,
-  "anchored": 0
+  "anchored": 0,
+  "unanchored": 0
  },
  "visual_direction": {
   "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
@@ -363,18 +386,58 @@
   "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
  },
  "interaction": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "click-to-reveal",
-  "secondary": "static content",
+  "f3_case": "SEQUENTIAL_PROCESS",
+  "primary": "Langkah demi langkah",
+  "secondary": null,
+  "reason": "Source names an ordered process (Proses ).",
   "resolved": true,
   "repeated_components": 0,
-  "reason": "8 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+  "authority_locus": "F3",
+  "committed_pattern": null,
+  "agrees_with_committed": null
  },
  "analysis": {
-  "dialogue_tension": "Selected a RISK anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "8 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "dialogue_tension": "Selected a DECISION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "Source names an ordered process (Proses ).",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED"
+ },
+ "analysis_conformance": {
+  "satisfied": false,
+  "defects": [
+   "NO_COMMITTED_ANALYSIS"
+  ],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": {
+  "unit_id": "K5-PL06-T01-B03",
+  "source_basis": "ACCEPTED",
+  "current_tension": "NOT_ACCEPTED",
+  "action": "REAUTHOR",
+  "classification": "INTERNAL_HUMAN_AUTHORING_REVIEW",
+  "rows_permitted": [
+   "T01B03-ROW-125",
+   "T01B03-ROW-142"
+  ],
+  "direction": "Build a real work decision, for example whether the work may proceed before the electrical safety test is done.",
+  "escalated_to_authority": false,
+  "escalation_reason": null,
+  "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+  "named_authority": "Firdaus Ismail",
+  "date": "2026-08-05"
  },
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,

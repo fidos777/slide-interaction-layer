@@ -1,5 +1,5 @@
 {
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "totals": {
   "TOTAL_PL06_UNITS": 14,
   "LEGACY_RETAINED": 2,
@@ -28,7 +28,8 @@
   "new_role_required": 0,
   "distinct_new_roles": 0,
   "quiz_items_drafted": 58,
-  "quiz_anchored_slots": 2,
+  "quiz_anchored_slots": 0,
+  "quiz_unanchored_slots": 2,
   "dialogue_judgment_required": 0,
   "source_rows_total": 1568,
   "legacy_artifacts": 3
@@ -47,25 +48,40 @@
    "name": "Alya",
    "role": "Kontraktor Junior",
    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
-   "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written character confirmation",
-   "may_speak": true
+   "authority_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A1",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A1 attributes this to 'Keputusan Bariah T04'. A1 carries no option mark and no Section G row.",
+   "may_speak": true,
+   "confirmation_path": "ASSERTED_PRIOR_DECISION"
   },
   {
    "name": "Encik Rahman",
    "role": "Mentor / Kontraktor Senior",
    "role_family": "MENTOR_CONTRACTOR_SENIOR",
-   "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "written character confirmation",
-   "may_speak": true
+   "authority_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A1",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A1. No option mark, no Section G row.",
+   "may_speak": true,
+   "confirmation_path": "ASSERTED_PRIOR_DECISION"
   },
   {
    "name": "Hilmi",
-   "role": "Narrator K5",
+   "role": "Narator",
    "role_family": "NARRATOR",
-   "authority_status": "WRITTEN_CONFIRMED",
-   "authority_source": "D2",
-   "may_speak": true
+   "authority_status": "ASSERTED_PRIOR_BARIAH_DECISION_REPEATED_IN_RETURNED_DOCUMENT",
+   "authority_artifact": "RETURNED_AUTHORITY_v0_2",
+   "authority_locus": "A1",
+   "named_authority": "Bariah Ahmad",
+   "authority_date": "2026-08-05",
+   "authority_source": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+   "may_speak": true,
+   "confirmation_path": "ASSERTED_PRIOR_DECISION"
   }
  ],
  "legacy": [

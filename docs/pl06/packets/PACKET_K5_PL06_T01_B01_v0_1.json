@@ -3,7 +3,7 @@
  "topik": 1,
  "bahagian": 1,
  "title": "Proses Memula Kerja - Penyediaan Tapak",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -167,7 +167,7 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
@@ -195,7 +195,7 @@
     "rows": [
      "T01B01-ROW-026"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    },
    {
     "seq": 3,
@@ -206,7 +206,7 @@
     "rows": [
      "T01B01-ROW-048"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    }
   ],
   "anchors": [
@@ -254,7 +254,7 @@
      "1.1 Penyediaan Tapak"
     ],
     "subtopic_count": 1,
-    "text": "Skop: 1.1 Penyediaan Tapak",
+    "text": "Kerja ini merangkumi 1.1 Penyediaan Tapak.",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -361,12 +361,13 @@
     "anchor_row": null,
     "distractors": [],
     "feedback": null,
-    "state": "QUIZ_ANCHORED_SLOT",
+    "state": "QUIZ_UNANCHORED_SLOT",
     "key_status": "NO_KEY_PENDING_AUTHORING"
    }
   ],
   "drafted": 4,
-  "anchored": 1
+  "anchored": 0,
+  "unanchored": 1
  },
  "visual_direction": {
   "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
@@ -400,19 +401,43 @@
   "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
  },
  "interaction": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "click-to-reveal",
-  "secondary": "static content",
+  "f3_case": "SEQUENTIAL_PROCESS",
+  "primary": "Langkah demi langkah",
+  "secondary": null,
+  "reason": "Source names an ordered process (Proses , Prosedur).",
   "resolved": true,
   "repeated_components": 0,
-  "reason": "6 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+  "authority_locus": "F3",
+  "committed_pattern": null,
+  "agrees_with_committed": null
  },
  "analysis": {
   "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "6 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "treatment": "Source names an ordered process (Proses , Prosedur).",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUTERA=SPEAKER_NOT_REQUIRED; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED"
  },
+ "analysis_conformance": {
+  "satisfied": false,
+  "defects": [
+   "NO_COMMITTED_ANALYSIS"
+  ],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": null,
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,
   "SOURCE_EXTRACTION_COMPLETE": true,

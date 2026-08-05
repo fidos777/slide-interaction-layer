@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Stage 4.2F-I — emit the 14 PL06 working packets and one consolidated exception report."""
+"""Stage 4.2F-J — emit the 14 PL06 working packets and the review reports."""
 import json
 import os
 import sys
@@ -71,7 +71,8 @@ def _packet_md(p):
                [(b["beat"], "none", ", ".join(b.get("subtopics") or []) or "—",
                  b.get("text") or "—") for b in rm["beats"]]), "",
           f"## Quiz — {q.get('composition', '—')} · pass {q.get('pass_percent', '—')}%", "",
-          f"drafted: {q.get('drafted', 0)} · anchored slots: {q.get('anchored', 0)}", ""]
+          f"drafted: {q.get('drafted', 0)} · anchored slots: {q.get('anchored', 0)} · "
+         f"unanchored slots: {q.get('unanchored', 0)}", ""]
     if q.get("items"):
         L += [_tbl(["Slot", "Kind", "State", "Stem", "Correct", "Key status", "Rows"],
                    [(i["slot"], i["kind"], i["state"], (i["stem"] or "—")[:60],
@@ -146,54 +147,279 @@ def emit_all():
                                            for p in ps]),
                                ensure_ascii=False, indent=1)))
 
-    # ---------------------------------------------------------- consolidated exceptions ----
-    authoring, owner, bariah = [], [], []
+    files.append(_w("PL06_AUTHORITY_CROSSWALK_v0_1.md", _crosswalk_md()))
+    files.append(_w("PL06_ANALYSIS_GAP_MATRIX_v0_1.md", _gap_md()))
+    files.append(_w("PL06_ANALYSIS_GAP_MATRIX_v0_1.json",
+                    json.dumps(dict(stage=PM.STAGE, contract=PM.ANALYSIS_CONTRACT,
+                                    rows=PM.analysis_gap_matrix()),
+                               ensure_ascii=False, indent=1)))
+    files.append(_w("PL06_DIALOGUE_TENSION_REVIEW_v0_1.md", _tension_md()))
+    files.append(_w("PL06_EXCEPTION_REPORT_v0_1.md", _exception_md(ps)))
+    return files
+
+
+# ==========================================================================================
+# EXCEPTION REPORT — reclassified against F1, D3, F3, F5 and F7
+#
+# F7 splits the work: the instructional contract, content accuracy and named exceptions are
+# Bariah's; routine unit implementation, technical QA and production release are Firdaus and
+# SME Cloud's. An item that used to be escalated because nobody had said who owns it is now
+# owned. F1 removes per-unit pre-review, D3 settles the Rumusan rules, F3 settles treatment
+# selection and F5 settles the Lampiran density — four whole classes of exception close.
+# ==========================================================================================
+def _exception_md(ps):
+    authoring, owner, bariah, closed = [], [], [], []
+    internal = []
+
+    closed.append(("CLOSED-TREATMENT", "ALL", "F3",
+                   "Interaction treatment was an owner default read from each module's "
+                   "repeated structure. F3 is now a WRITTEN_CONFIRMED rule with its own four "
+                   "treatments and its own definition of symmetry, so the choice is made by "
+                   "contract, not by default."))
+    closed.append(("CLOSED-DENSITY", "ALL", "F5",
+                   "The Lampiran density was an open B2 test. F5 fixes 3 panels as the "
+                   "production format. The 2-panel file is retained as the evidence the "
+                   "decision was made against."))
+    closed.append(("CLOSED-RUMUSAN-RULES", "ALL", "D3",
+                   "The Rumusan shape — three internal components, no learner-facing labels, "
+                   "every declared subtopic contained in the copy, visual form left open — is "
+                   "confirmed. The COPY for each unit is still drafted and unapproved."))
+    closed.append(("CLOSED-PRE-REVIEW", "ALL", "F1",
+                   "Every unit no longer waits on a Bariah pre-review before it may be "
+                   "produced. She reviews the finished unit."))
+    closed.append(("CLOSED-RETURN-DOC", "ALL", "returned document",
+                   "The K5_Pengesahan_ID_Watak_Dialog_Rumusan has landed and is ingested. "
+                   "That does NOT approve any drafted item; it settles the contract they are "
+                   "drafted against."))
+    closed.append(("CLOSED-CAST", "ALL", "A1",
+                   "STOP-006 and SRC-ANOM-003 named an unresolved cast. A1 states the cast in "
+                   "use and records Haziq and Encik Roslan as replaced. Residual: A1 carries "
+                   "no option mark and no Section G row, so it is an asserted prior decision "
+                   "repeated in a dated artifact, not a fresh confirmation."))
+    closed.append(("CLOSED-VISUAL-B03", "K5-PL06-T03-B03", "D4(b)",
+                   "The Rumusan support visual for B03 is fixed: one whole-site visual "
+                   "showing where the six infrastructure components sit."))
+
     for p in ps:
         u = p["unit_id"]
         for i in p["quiz"].get("items", []):
-            if i["state"] == "QUIZ_ANCHORED_SLOT":
+            if i["state"] == PM.ANCHORED:
                 authoring.append((f"AUTH-QUIZ-{u}-{i['slot']}", u,
                                   f"Quiz {i['slot']} is an anchored slot: stem and options "
-                                  f"must be written against {i.get('anchor_row')}."))
+                                  f"must be written against {i['anchor_row']}. F7 puts "
+                                  "routine implementation with SME Cloud; F2(b) puts the key "
+                                  "review inside the unit's own storyboard slot."))
+            elif i["state"] == PM.UNANCHORED:
+                authoring.append((f"AUTH-QUIZ-{u}-{i['slot']}", u,
+                                  f"Quiz {i['slot']} is an UNANCHORED slot: the unit ran out "
+                                  "of structural headings before the composition was filled, "
+                                  "so there is no candidate row yet. The row must be chosen "
+                                  "before the item can be written."))
         if not p["completion"]["SOURCE_ANALYSIS_COMPLETE"]:
+            gap = PM.analysis_gap_row(u)
+            short = ", ".join(gap["fields_short"]) or "none"
             authoring.append((f"AUTH-ANALYSIS-{u}", u,
-                              "Rows extracted but no committed unit analysis; the drafted "
-                              "copy is derived and needs an editorial pass."))
-        if p["dialogue"].get("status") == PM.JUDGMENT:
-            bariah.append((f"BARIAH-DIALOGUE-{u}", u,
-                           "No defensible tension found in the controlled rows; a human "
-                           "judgment call on whether a scenario is warranted."))
+                              "No committed unit analysis. Contract fields whose evidence is "
+                              f"already short in the controlled rows: {short}. See the gap "
+                              "matrix; nothing is authored yet."))
         if p["visual_direction"].get("source_attested", 0) == 0:
             owner.append((f"OWNER-VISUAL-{u}", u,
-                          "No source-attested figure. RP-104 default is a lockable owner "
-                          "decision unless Bariah wants each one reviewed."))
+                          "No source-attested figure. D3 rule 5 deliberately leaves the "
+                          "visual form open course-wide, so under F7 this is Firdaus's "
+                          "production decision, not a Bariah exception."))
         for r in p["roles"]["new_required"]:
             bariah.append((f"BARIAH-ROLE-{u}-{r['role_id']}", u,
-                           f"Genuinely new speaking role: {r['role_description']}"))
-    owner.append(("OWNER-TREATMENT-DEFAULT", "ALL",
-                  "Interaction treatment defaults were read from each module's own repeated "
-                  "structure. Lockable by Firdaus for fast-track production."))
-    bariah.append(("BARIAH-RETURN-DOC", "ALL",
-                   "The returned K5_Pengesahan_ID_Watak_Dialog_Rumusan itself: every drafted "
-                   "item is DRAFTED_NOT_APPROVED until it lands."))
+                           f"Genuinely new speaking role: {r['role_description']}. A2 "
+                           "reserves a new role to the instructional authority."))
+
+    # The three tension records are INTERNAL review items. F7 puts routine unit
+    # implementation with Firdaus and SME Cloud, and the owner's human review under E2 has
+    # disposed of all three. None is a Bariah exception. Escalation happens only on a source
+    # conflict, a real technical ambiguity, an unsupportable claim, or a need for a character
+    # with different authority, licence or competence.
+    for d in PM.tension_dispositions():
+        u = d["unit_id"]
+        detail = (f"source basis {d['source_basis']} - tension {d['current_tension']} - "
+                  f"action {d['action']}. {d['direction']}")
+        if d["escalated_to_authority"]:
+            bariah.append((f"ESCALATED-{u}", u,
+                           f"{detail} Escalation trigger: {d['escalation_reason']}."))
+        else:
+            internal.append((f"{d['classification']}-{u}", u, d["classification"], detail))
+
+    counts = f"""STAGE = {PM.STAGE}
+AUTHORING_TODO                   = {len(authoring)}
+OWNER_DEFAULT_DECISION           = {len(owner)}
+INTERNAL_REVIEW                  = {len(internal)}
+BARIAH_EXCEPTION                 = {len(bariah)}
+CLOSED_BY_THE_RETURNED_AUTHORITY = {len(closed)}"""
 
     L = [BANNER, "", "# PL06 — reclassified exception report", "",
-         "```", f"STAGE = {PM.STAGE}",
-         f"AUTHORING_TODO         = {len(authoring)}",
-         f"OWNER_DEFAULT_DECISION = {len(owner)}",
-         f"BARIAH_EXCEPTION       = {len(bariah)}", "```", "",
-         "Incomplete writing tasks are NOT sent to Bariah as instructional exceptions.", "",
+         "```", counts, "```", "",
+         "Incomplete writing tasks are NOT sent to Bariah as instructional exceptions. Since "
+         "F7 the split is written down: instructional contract, content accuracy and named "
+         "exceptions are hers; routine unit implementation, technical QA and production "
+         "release are Firdaus's and SME Cloud's.", "",
+         "## CLOSED_BY_THE_RETURNED_AUTHORITY — no longer an exception", "",
+         _tbl(["ID", "Unit", "Locus", "What closed"], closed), "",
          "## AUTHORING_TODO — CC / SME Cloud can complete without Bariah", "",
          _tbl(["ID", "Unit", "Detail"], authoring) if authoring else "None.", "",
          "## OWNER_DEFAULT_DECISION — Firdaus can lock for fast-track production", "",
          _tbl(["ID", "Unit", "Detail"], owner) if owner else "None.", "",
+         "## INTERNAL_REVIEW — owner human review under E2, not an instructional exception",
+         "",
+         _tbl(["ID", "Unit", "Class", "Detail"], internal) if internal else "None.", "",
          "## BARIAH_EXCEPTION — genuinely needs her judgment", "",
+         "Escalation happens only when a review leaves a source conflict, a real technical "
+         "ambiguity, an unsupportable claim, or a need for a character with different "
+         "authority, licence or competence.", "",
          _tbl(["ID", "Unit", "Detail"], bariah) if bariah else "None.", "",
          "## Human-judgment checks — deliberately NOT automated", "",
          _tbl(["Check", "Why a gate cannot decide it"],
               [(c["check"], c["why"]) for c in HUMAN_JUDGMENT]), ""]
-    files.append(_w("PL06_EXCEPTION_REPORT_v0_1.md", "\n".join(L)))
-    return files
+    return "\n".join(L)
+
+
+def _crosswalk_md():
+    C = PM.A.contract()
+    L = [BANNER, "", "# PL06 — returned-authority crosswalk", "",
+         "```", f"STAGE = {PM.STAGE}",
+         f"ARTIFACT = {C['artifacts']['RETURNED_AUTHORITY_v0_2']['path']}",
+         f"SHA256   = {C['artifacts']['RETURNED_AUTHORITY_v0_2']['sha256']}",
+         f"RECORDS  = {len(PM.A.crosswalk())}", "```", "",
+         "Section G's own instruction reads *\"Ringkasan ini diisi selepas Bahagian A hingga "
+         "F dilengkapkan.\"* — it reconciles the A-to-F decisions, it does not originate "
+         "them. A record whose only explicit confirmation is a Section G row is marked as "
+         "such and is not counted as an A-to-F decision.", "",
+         _tbl(["Record", "Block", "From A–F?", "G reconciles?", "G is the only "
+               "confirmation?", "Scope", "Resulting status"],
+              [(c["authority_record_id"], c["source_decision_block"],
+                "yes" if c["authority_from_a_to_f"] else "**no**",
+                "yes" if c["section_g_merely_reconciles"] else "no",
+                "**yes**" if c["section_g_only_explicit_confirmation"] else "no",
+                c["scope"], c["resulting_status"]) for c in PM.A.crosswalk()]), "",
+         "## Selected option, verbatim", "",
+         _tbl(["Record", "Selected option"],
+              [(c["authority_record_id"], c["selected_option"]) for c in PM.A.crosswalk()]),
+         "", "## Records carrying a detail note", ""]
+    for c in PM.A.crosswalk():
+        if c.get("detail"):
+            L += [f"**{c['authority_record_id']} ({c['source_decision_block']})** — "
+                  f"{c['detail']}", ""]
+    L += ["## Warrant audit — citations that resolved to nothing", "",
+          _tbl(["Finding", "Rules", "Prior citation", "Verdict", "Repair", "Value changed"],
+               [(f["finding_id"], ", ".join(f["rules"]), f["prior_citation"], f["verdict"],
+                 f["repair"], "yes" if f["value_changed"] else "**no**")
+                for f in PM.A.warrant_findings()]), "",
+          "## Supersessions", "",
+          _tbl(["ID", "Supersedes", "Held in", "By", "Effect"],
+               [(s["id"], s["supersedes"], s["held_in"], s["by"], s["effect"])
+                for s in PM.A.supersessions()]), ""]
+    return "\n".join(L)
+
+
+def _gap_md():
+    rows = PM.analysis_gap_matrix()
+    fields = PM.ANALYSIS_FIELDS
+    L = [BANNER, "", "# PL06 — SOURCE_ANALYSIS_COMPLETE gap matrix", "",
+         "```", f"STAGE = {PM.STAGE}",
+         f"UNITS_WITH_A_COMMITTED_ANALYSIS = {12 - len(rows)}",
+         f"UNITS_IN_THIS_MATRIX            = {len(rows)}", "```", "",
+         "`SOURCE_ANALYSIS_COMPLETE` used to be a membership test — is this unit a key in "
+         "`UNIT_ANALYSIS`. That proves a dict key exists. The contract below is what the four "
+         "completed analyses actually contain, stated as required fields and floors, so a "
+         "fifth unit can be checked against it.", "",
+         "**Nothing here is authored.** Each cell reports how much evidence the controlled "
+         "rows already carry against the floor the contract sets.", "",
+         "## The contract", "",
+         _tbl(["Field", "Floor", "Every item traced by", "Why"],
+              [(f, PM.ANALYSIS_CONTRACT[f]["min"],
+                PM.ANALYSIS_CONTRACT[f].get("item_rows") or "—",
+                PM.ANALYSIS_CONTRACT[f]["why"]) for f in fields]), "",
+         "## Evidence available in the controlled rows, per unit", "",
+         _tbl(["Unit"] + fields + ["Verdict"],
+              [[r["unit_id"]] +
+               [f"{r['fields'][f]['source_evidence']} / {r['fields'][f]['required']}"
+                + ("" if r["fields"][f]["verdict"].startswith("EVIDENCE_SUFF") else " ⚠")
+                for f in fields] + [r["verdict"]] for r in rows]), "",
+         "⚠ marks a field where the controlled rows do not yet carry enough evidence to reach "
+         "the floor, so authoring it needs a judgment call rather than a reading pass. "
+         "`ambiguities` is ⚠ everywhere by construction: nothing mechanical can find the "
+         "places a source is genuinely unclear.", ""]
+    return "\n".join(L)
+
+
+def _tension_md():
+    ts = {r["unit_id"]: r for r in PM.tension_screen()}
+    L = [BANNER, "", "# PL06 — S02 dialogue tension review", "",
+         "```", f"STAGE = {PM.STAGE}",
+         "E2 = WRITTEN_CONFIRMED",
+         "E2_VERIFICATION = HUMAN_REVIEW_NOT_AN_AUTOMATED_CHECKER",
+         f"RECORDS_REQUESTED = {len(PM.TENSION_REVIEW_REQUESTED)}", "```", "",
+         "E2 is confirmed: every K5 dialogue must carry *\"satu soalan, masalah, keraguan, "
+         "ketegangan atau titik keputusan yang mencetuskan perbualan — bukan penerangan "
+         "panjang yang dibahagikan antara dua nama.\"* E2 also says who checks it: "
+         "*\"keperluan ini akan disemak oleh manusia, bukan oleh pemeriksa automatik. "
+         "Kehadiran tanda soal sahaja tidak dianggap memenuhi syarat ini.\"*", "",
+         "So nothing below is a verdict on E2. The screen sorts anchors by whether they can "
+         "show their own evidence, so a human reads the weak ones first.", "",
+         "## Screen over every active unit", "",
+         _tbl(["Unit", "Anchor source", "Weak / total", "Screen verdict"],
+              [(r["unit_id"], r["derivation"], f"{r['weak_anchors']} / {r['total_anchors']}",
+                r["verdict"]) for _u, r in sorted(ts.items())]), ""]
+    v = PM.source_scope_verification("K5-PL06-T02-B02")
+    rd = PM.row_use_disposition("K5-PL06-T02-B02")
+    L += ["## Owner human-review disposition", "",
+          _tbl(["Unit", "Source basis", "Tension", "Action", "Class", "Escalated?"],
+               [(d["unit_id"], d["source_basis"], d["current_tension"], d["action"],
+                 d["classification"], "yes" if d["escalated_to_authority"] else "no")
+                for d in PM.tension_dispositions()]), "",
+          "## K5-PL06-T02-B02 — source and subtopic verification", "",
+          _tbl(["Field", "Value"],
+               [("declared subtopic", v["declared_subtopic"]),
+                ("extraction method", v["extraction_method"]),
+                ("frozen paragraphs", " - ".join(str(x) for x in v["frozen_paragraphs"])),
+                ("module pages", " - ".join(str(x) for x in v["module_pages"]))]), "",
+          _tbl(["Row", "In frozen slice", "Parent heading", "Heading text", "Verdict"],
+               [(k.upper().replace("_", "-"),
+                 "yes" if v[k]["inside_frozen_slice"] else "no",
+                 v[k]["parent_heading"], v[k]["parent_heading_text"], v[k]["verdict"])
+                for k in ("row_051", "row_058")]), "",
+          f"**Recorded anomaly.** {v['recorded_anomaly']}", "",
+          "### ROW-058 disposition", "",
+          _tbl(["Condition the owner set", "Met", "Finding"],
+               [(c["condition"], "yes" if c["met"] else "**no**", c["finding"])
+                for c in rd["conditions_tested"]]), "",
+          rd["outcome"], "",
+          "## Re-authored dialogue", ""]
+    for u in PM.TENSION_REVIEW_REQUESTED:
+        pk = next(x for x in PM.packets() if x["unit_id"] == u)
+        d = pk["dialogue"]
+        L += [f"### {u} — {pk['title']}", "",
+              f"**Decision:** {d.get('decision', '—')}", "",
+              f"`{d.get('disposition', '—')}` · `{d['cls']}` · "
+              f"`{d['authority_status']}`", "",
+              _tbl(["#", "Speaker", "Line class", "Rows", "Line"],
+                   [(t["seq"], t["speaker"], t["cls"], ", ".join(t["rows"]) or "—",
+                     t["text"]) for t in d["turns"]]), "",
+              _tbl(["Line", "Paraphrase of", "Source row text"],
+                   [(t["seq"], t["paraphrase_of"], t["paraphrase_source"])
+                    for t in d["turns"] if t.get("paraphrase_of")]), ""]
+    L += ["## Screen record taken before re-authoring", ""]
+    for u in PM.TENSION_REVIEW_REQUESTED:
+        r = ts[u]
+        L += [f"### {u} — {r['title']}", "",
+              _tbl(["Field", "Value"],
+                   [("evidence tier", r["evidence_tier"]),
+                    ("anchor source", r["derivation"]),
+                    ("tension kind", r["tension_kind"]),
+                    ("anchors", r["total_anchors"]),
+                    ("screen verdict", r["verdict"]),
+                    ("E2 verification", r["e2_verification"])]), "",
+              _tbl(["Row(s)", "Anchor text as it would be spoken", "Screen", "Why"],
+                   [(", ".join(a["rows"]), a["text"], a["verdict"],
+                     "; ".join(a["reasons"]) or "—") for a in r["anchors"]]), ""]
+    return "\n".join(L)
 
 
 HUMAN_JUDGMENT = [

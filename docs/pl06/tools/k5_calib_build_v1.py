@@ -43,8 +43,17 @@ sys.path.insert(0, T04_TOOLS)
 
 import k5_calib_model_v1 as M       # noqa: E402
 import k5_calib_metrics_v1 as MT    # noqa: E402  — frozen advance widths, no font at runtime
+import pl06_authority_v1 as AU      # noqa: E402  — the density is an authority value now
 import t04_storyboard_build_v1 as BB  # noqa: E402  — geometry and text primitives only
 import t04_state_emit_v1 as SE       # noqa: E402  — panel mechanics only
+
+# ------------------------------------------------------------------ F5: B2 is now resolved --
+# B2 asked which Lampiran density to ship. The returned authority answered it at F5:
+# "3 panel sebagai format produksi." The 2-panel file is NOT deleted — it is the evidence the
+# decision was made against, and both densities remain buildable so the regression suite can
+# still prove that only the layout differs between them.
+PRODUCTION_PANEL_DENSITY = AU.lampiran_production_density()
+CALIBRATION_DENSITIES = tuple(AU.lampiran_calibration_densities())
 
 SLIDE_W, SLIDE_H, MARGIN = BB.SLIDE_W, BB.SLIDE_H, BB.MARGIN
 INK, MUTED, RULE = BB.INK, BB.MUTED, BB.RULE
@@ -1166,6 +1175,9 @@ def emit_handoff(qa=None, mutations=None, native=None):
           f"**Verdict.** {a4['verdict']}", "",
           "## 7. The Rumusan mapping question", "",
           "The committed unit model proposes RP-007 for Rumusan — contractor perspective, "
+          "**KOREKSI 4.2F-J: D3 peraturan 1 (5 Ogos 2026) menetapkan copy learner-facing "
+          "mengalir TANPA tajuk kecil Kepentingan / Skop / Manfaat. Tiga komponen A6 kekal; "
+          "paparan labelnya tidak. Deck ini belum dijana semula.** "
           "**no** Kepentingan / Skop dan Isi Utama / Manfaat labels. A6 is Bariah's ruling "
           "and supersedes that CAIR proposal, so this deck applies A6's three labels to the "
           "unit's own three beats **positionally** "

@@ -3,7 +3,7 @@
  "topik": 2,
  "bahagian": 2,
  "title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -34,64 +34,88 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
  "dialogue": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "AUTHORED_AFTER_HUMAN_TENSION_REVIEW",
   "authority_status": "DRAFTED_NOT_APPROVED",
   "status": "DIALOGUE_COPY_COMPLETE",
-  "tension_kind": "RISK",
+  "tension_kind": "DECISION",
   "turns": [
    {
     "seq": 1,
     "speaker": "Alya",
     "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
-    "kind": "QUESTION",
-    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "kind": "DECISION_POINT",
+    "text": "Encik Rahman, kawasan ini dah ada swale. Kita masih perlu pasang sistem saliran bawah tanah juga?",
+    "rows": [
+     "T02B02-ROW-042",
+     "T02B02-ROW-050"
+    ],
     "cls": "CAIR_STRUCTURAL_FRAME",
-    "rows": []
+    "paraphrase_of": null,
+    "paraphrase_source": null
    },
    {
     "seq": 2,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_RESPONSE",
-    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur.",
+    "text": "Swale alirkan air hujan secara semula jadi. Yang di bawah tanah lain ceritanya — sistem saliran bawah tanah kritikal untuk mengelakkan genangan air dan kerosakan pada struktur.",
     "rows": [
+     "T02B02-ROW-045",
      "T02B02-ROW-051"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "CONTROLLED_PARAPHRASE",
+    "paraphrase_of": "T02B02-ROW-051",
+    "paraphrase_source": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi."
    },
    {
     "seq": 3,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_CONSEQUENCE",
-    "text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah.",
+    "text": "Ia paling penting di kawasan tanah liat atau di mana paras air tanah tinggi. Di situ paip berlubang dibalut geotekstil dan ditimbun kerikil untuk kumpul dan alirkan air bawah tanah yang berlebihan.",
     "rows": [
-     "T02B02-ROW-058"
+     "T02B02-ROW-051"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "CONTROLLED_PARAPHRASE",
+    "paraphrase_of": "T02B02-ROW-051",
+    "paraphrase_source": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi."
+   },
+   {
+    "seq": 4,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "DECISION_TAKEN",
+    "text": "Baik, saya semak dulu jenis tanah dan paras air tanah tapak ini sebelum kita putuskan.",
+    "rows": [],
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "paraphrase_of": null,
+    "paraphrase_source": null
    }
   ],
   "anchors": [
    {
-    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur.",
+    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
+    "rows": [
+     "T02B02-ROW-045",
+     "T02B02-ROW-051"
+    ],
+    "kind": "DECISION"
+   },
+   {
+    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
     "rows": [
      "T02B02-ROW-051"
     ],
-    "kind": "RISK"
-   },
-   {
-    "text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah.",
-    "rows": [
-     "T02B02-ROW-058"
-    ],
-    "kind": "RISK"
+    "kind": "DECISION"
    }
   ],
+  "decision": "Whether the surface swale alone is enough or a sub-soil drainage system is still needed.",
+  "disposition": "INTERNAL_SOURCE_SCOPE_REVIEW",
   "copy_complete": true
  },
  "rumusan": {
@@ -121,7 +145,7 @@
      "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
     ],
     "subtopic_count": 1,
-    "text": "Skop: 2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "text": "Kerja ini merangkumi 2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E).",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -239,7 +263,8 @@
    }
   ],
   "drafted": 5,
-  "anchored": 0
+  "anchored": 0,
+  "unanchored": 0
  },
  "visual_direction": {
   "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
@@ -280,18 +305,117 @@
   "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
  },
  "interaction": {
-  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "click-to-reveal",
-  "secondary": "static content",
+  "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+  "primary": "Click-to-Reveal",
+  "secondary": null,
+  "reason": "12 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "resolved": true,
   "repeated_components": 0,
-  "reason": "12 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+  "authority_locus": "F3",
+  "committed_pattern": null,
+  "agrees_with_committed": null
  },
  "analysis": {
-  "dialogue_tension": "Selected a RISK anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "12 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "dialogue_tension": "Selected a DECISION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "12 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "role_mapping": "no role markers in source"
+ },
+ "analysis_conformance": {
+  "satisfied": false,
+  "defects": [
+   "NO_COMMITTED_ANALYSIS"
+  ],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": {
+  "unit": "K5-PL06-T02-B02",
+  "declared_subtopic": "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+  "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE",
+  "frozen_paragraphs": [
+   4340,
+   4463
+  ],
+  "module_pages": [
+   215,
+   225
+  ],
+  "row_051": {
+   "inside_frozen_slice": true,
+   "parent_heading": "T02B02-ROW-050",
+   "parent_heading_text": "Sub-soil drainage",
+   "heading_level": "HEADING_3",
+   "verdict": "MAPPING_VALID"
+  },
+  "row_058": {
+   "inside_frozen_slice": true,
+   "parent_heading": "T02B02-ROW-057",
+   "parent_heading_text": "Retaining Wall",
+   "heading_level": "HEADING_3",
+   "verdict": "DIFFERENT_COMPONENT_HEADING_NOT_THE_SAME_DECISION"
+  },
+  "recorded_anomaly": "The declared subtopic string names Mechanical & Electrical, while the HEADING_3 components inside the frozen slice are Swale/dry river bed, Sub-soil drainage and Retaining Wall — drainage and earth-retaining work. The boundary is anchor-frozen and body-anchor precedence governs extraction, so ROW-051 is in scope; the LABEL does not describe the content. Recorded, not silently corrected."
+ },
+ "row_use_disposition": {
+  "row_id": "T02B02-ROW-058",
+  "outcome": "Three of four conditions fail. ROW-058 is not used. It is retained in the unit's row inventory and remains available for a separate screen.",
+  "value": "EXCLUDED_FROM_THE_T02B02_S02_DIALOGUE",
+  "conditions_tested": [
+   {
+    "condition": "clear subtopic relationship",
+    "met": false,
+    "finding": "ROW-058 sits under its own HEADING_3 'Retaining Wall' with its own Fungsi and Contoh block, parallel to 'Sub-soil drainage', not beneath it."
+   },
+   {
+    "condition": "a second coherent decision",
+    "met": false,
+    "finding": "The authored decision is surface drainage versus sub-soil drainage. A retaining wall answers a different question."
+   },
+   {
+    "condition": "separate source trace",
+    "met": true,
+    "finding": "ROW-058 does carry its own row id and heading."
+   },
+   {
+    "condition": "justification for relevance to the same tension",
+    "met": false,
+    "finding": "None available from the controlled rows."
+   }
+  ],
+  "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+  "locus": "section 3",
+  "named_authority": "Firdaus Ismail",
+  "date": "2026-08-05"
+ },
+ "tension_disposition": {
+  "unit_id": "K5-PL06-T02-B02",
+  "source_basis": "CONDITIONALLY_ACCEPTED",
+  "current_tension": "NOT_ACCEPTED",
+  "action": "VERIFY_THEN_REAUTHOR",
+  "classification": "INTERNAL_SOURCE_SCOPE_REVIEW",
+  "rows_permitted": [
+   "T02B02-ROW-051"
+  ],
+  "rows_excluded": [
+   "T02B02-ROW-058"
+  ],
+  "direction": "After verifying the mapping, build the decision of whether surface drainage alone is enough or a sub-soil drainage system is still needed, using the risk of standing water and structural damage as the basis of the answer.",
+  "escalated_to_authority": false,
+  "escalation_reason": null,
+  "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+  "named_authority": "Firdaus Ismail",
+  "date": "2026-08-05"
  },
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,

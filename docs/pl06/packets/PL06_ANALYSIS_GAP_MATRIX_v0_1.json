@@ -1,0 +1,654 @@
+{
+ "stage": "4.2F-J",
+ "contract": {
+  "mandatory_propositions": {
+   "min": 8,
+   "item_rows": "rows",
+   "why": "Obligations the unit states, each traced to the row that states it."
+  },
+  "terminology": {
+   "min": 6,
+   "item_rows": "rows",
+   "why": "Terms the unit introduces, each traced."
+  },
+  "compliance_sensitive": {
+   "min": 2,
+   "item_rows": "rows",
+   "why": "Statements where getting it wrong has a professional or legal consequence. These are the dialogue anchors."
+  },
+  "assessment": {
+   "min": 5,
+   "exact": 5,
+   "item_rows": "correct_rows",
+   "why": "F2(a) fixes the composition at 4 MCQ + 1 MR."
+  },
+  "visual_subjects": {
+   "min": 3,
+   "item_rows": "rows",
+   "why": "Named visual subjects, each traced to a row."
+  },
+  "rumusan_beats": {
+   "min": 3,
+   "item_rows": null,
+   "why": "At least the three internal beats D3 requires."
+  },
+  "ambiguities": {
+   "min": 2,
+   "item_rows": "rows",
+   "why": "Places the source is genuinely unclear and how it was resolved. An analysis that found none did not look."
+  },
+  "pattern": {
+   "min": 1,
+   "item_rows": null,
+   "fields": [
+    "primary",
+    "secondary",
+    "reason"
+   ],
+   "why": "The interaction reading, with its reason."
+  },
+  "dialogue": {
+   "min": 1,
+   "item_rows": null,
+   "fields": [
+    "verdict",
+    "reason"
+   ],
+   "why": "The dialogue judgment. SUP-03: E1 now makes S02 a dialogue regardless, so this field is retained evidence, not a gate."
+  }
+ },
+ "rows": [
+  {
+   "unit_id": "K5-PL06-T01-B01",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 4,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 4,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 25,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 145,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 80,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 6,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities",
+    "assessment"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T01-B02",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 4,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 11,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 11,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 61,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 30,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 6,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities",
+    "assessment"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T01-B03",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 7,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 2,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 71,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 51,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 6,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities",
+    "compliance_sensitive",
+    "mandatory_propositions"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T02-B01",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 10,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 11,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 99,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 77,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 13,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities",
+    "compliance_sensitive"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T02-B02",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 11,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 18,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 17,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 4,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities",
+    "compliance_sensitive",
+    "mandatory_propositions"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B01",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 45,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 2,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 15,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 57,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 24,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 3,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T03-B05",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 86,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 19,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 89,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 78,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 88,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities",
+    "compliance_sensitive"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  },
+  {
+   "unit_id": "K5-PL06-T07-B01",
+   "evidence_tier": "ROWS_ONLY",
+   "fields": {
+    "ambiguities": {
+     "required": 2,
+     "source_evidence": 0,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SHORT_ASSESS_THEN_AUTHOR_OR_RECORD_NO_FINDINGS"
+    },
+    "assessment": {
+     "required": 5,
+     "source_evidence": 15,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "compliance_sensitive": {
+     "required": 2,
+     "source_evidence": 2,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "dialogue": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "mandatory_propositions": {
+     "required": 8,
+     "source_evidence": 8,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "pattern": {
+     "required": 1,
+     "source_evidence": 1,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "rumusan_beats": {
+     "required": 3,
+     "source_evidence": 35,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "terminology": {
+     "required": 6,
+     "source_evidence": 10,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    },
+    "visual_subjects": {
+     "required": 3,
+     "source_evidence": 19,
+     "authored": false,
+     "closable_by_assessed_no_findings": true,
+     "verdict": "EVIDENCE_SUFFICIENT_AUTHORING_REQUIRED"
+    }
+   },
+   "fields_short": [
+    "ambiguities"
+   ],
+   "verdict": "AUTHORING_REQUIRED_EVIDENCE_SHORT"
+  }
+ ]
+}

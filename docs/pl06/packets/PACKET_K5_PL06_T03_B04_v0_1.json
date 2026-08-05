@@ -3,7 +3,7 @@
  "topik": 3,
  "bahagian": 4,
  "title": "Badan Air (Water Body)",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -63,7 +63,7 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
@@ -87,40 +87,44 @@
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_RESPONSE",
-    "text": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+    "text": "Pam merupakan 'jantung' sistem ini, dan saiz serta kuasanya mesti sepadan dengan ketinggian (head height) serta isipadu aliran air (flow rate) yang diperlukan",
     "rows": [
      "T03B04-ROW-053",
      "T03B04-ROW-085"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    },
    {
     "seq": 3,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_CONSEQUENCE",
-    "text": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+    "text": "Ini adalah pilihan paling lazim dan terbaik.",
     "rows": [
      "T03B04-ROW-076"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    }
   ],
   "anchors": [
    {
-    "text": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+    "text": "Pam merupakan 'jantung' sistem ini, dan saiz serta kuasanya mesti sepadan dengan ketinggian (head height) serta isipadu aliran air (flow rate) yang diperlukan",
     "rows": [
      "T03B04-ROW-053",
      "T03B04-ROW-085"
     ],
-    "kind": "MATERIAL_SPECIFICATION"
+    "kind": "MATERIAL_SPECIFICATION",
+    "analyst_note": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+    "text": "Ini adalah pilihan paling lazim dan terbaik.",
     "rows": [
      "T03B04-ROW-076"
     ],
-    "kind": "MATERIAL_SPECIFICATION"
+    "kind": "MATERIAL_SPECIFICATION",
+    "analyst_note": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    }
   ],
   "copy_complete": true
@@ -152,7 +156,7 @@
      "3.6 Badan Air (Water Body)"
     ],
     "subtopic_count": 1,
-    "text": "Skop: 3.6 Badan Air (Water Body)",
+    "text": "Kerja ini merangkumi 3.6 Badan Air (Water Body).",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -317,19 +321,45 @@
   "source_attested": 0
  },
  "interaction": {
-  "cls": "COMMITTED_UNIT_PATTERN",
+  "cls": "F3_RULE_APPLIED_OVER_A_COMMITTED_UNIT_PATTERN",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "progressive process",
-  "secondary": "click-to-reveal",
-  "reason": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal.",
+  "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+  "primary": "Click-to-Reveal",
+  "secondary": null,
+  "reason": "36 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "resolved": true,
-  "repeated_components": 2
+  "repeated_components": 2,
+  "authority_locus": "F3",
+  "committed_pattern": {
+   "primary": "progressive process",
+   "secondary": "click-to-reveal",
+   "reason": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal."
+  },
+  "agrees_with_committed": false
  },
  "analysis": {
   "dialogue_tension": "Selected a MATERIAL_SPECIFICATION anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal.",
+  "treatment": "36 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA"
  },
+ "analysis_conformance": {
+  "satisfied": true,
+  "defects": [],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": null,
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,
   "SOURCE_EXTRACTION_COMPLETE": true,

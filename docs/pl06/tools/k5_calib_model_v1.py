@@ -265,6 +265,15 @@ def scenario():
 
 # ==========================================================================================
 # RUMUSAN — A6's three labels, the unit's own three beats, mapped positionally
+#
+# SUPERSEDED AT STAGE 4.2F-J — NOT YET APPLIED HERE.
+# D3 rule 1 of the returned authority (2026-08-05) reads: "Copy learner-facing mengalir tanpa
+# tajuk kecil Kepentingan / Skop / Manfaat", and D2 states the labels are not shown to the
+# trainee. A6's three COMPONENTS survive (D3 rule 2); their DISPLAY as labels does not.
+# Two further corrections to the note below: RP-007 is a verbatim Bariah answer, not a CAIR
+# proposal, and A6 is a real decision in the Kelompok 0 v1.2 ingestion, not a phantom
+# citation. This deck is NOT regenerated in the closure pass, so the label pairing below is
+# still what B03 carries. It is a named open item for the B03 rebuild.
 # ==========================================================================================
 A6_LABELS = ["Kepentingan", "Skop dan Isi Utama", "Manfaat"]
 MONTAGE_MAPPING_BASIS = "POSITIONAL_A6_LABEL_ORDER_TO_COMMITTED_UNIT_BEAT_ORDER"

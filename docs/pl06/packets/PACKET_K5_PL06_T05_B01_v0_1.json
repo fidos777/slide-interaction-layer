@@ -3,7 +3,7 @@
  "topik": 5,
  "bahagian": 1,
  "title": "Pengurusan Kualiti Projek",
- "stage": "4.2F-I",
+ "stage": "4.2F-J",
  "generation_scope": "ACTIVE_GENERATION",
  "status_marks": [
   "PROVISIONAL_WORKING_PACKET",
@@ -93,7 +93,7 @@
   "new_required": [],
   "narrator": {
    "name": "Hilmi",
-   "authority": "D2",
+   "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
    "reused": true
   }
  },
@@ -117,56 +117,64 @@
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_RESPONSE",
-    "text": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+    "text": "Piawaian Malaysia (MS): Piawaian rasmi negara untuk bahan-bahan binaan seperti simen, keluli, dan produk konkrit.",
     "rows": [
      "T05B01-ROW-046",
      "T05B01-ROW-047"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    },
    {
     "seq": 3,
     "speaker": "Encik Rahman",
     "role_family": "MENTOR_CONTRACTOR_SENIOR",
     "kind": "SOURCE_BACKED_CONSEQUENCE",
-    "text": "PBT and ILAM guidelines are named authority bodies.",
+    "text": "Pihak Berkuasa Tempatan (PBT): Mempunyai garis panduan sendiri untuk penanaman pokok di rizab jalan, pembinaan longkang, dan lain-lain.",
     "rows": [
      "T05B01-ROW-050",
      "T05B01-ROW-051"
     ],
-    "cls": "SOURCE_DERIVED"
+    "cls": "SOURCE_VERBATIM"
    }
   ],
   "anchors": [
    {
-    "text": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+    "text": "Piawaian Malaysia (MS): Piawaian rasmi negara untuk bahan-bahan binaan seperti simen, keluli, dan produk konkrit.",
     "rows": [
      "T05B01-ROW-046",
      "T05B01-ROW-047"
     ],
-    "kind": "NAMED_EXTERNAL_STANDARD"
+    "kind": "NAMED_EXTERNAL_STANDARD",
+    "analyst_note": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "PBT and ILAM guidelines are named authority bodies.",
+    "text": "Pihak Berkuasa Tempatan (PBT): Mempunyai garis panduan sendiri untuk penanaman pokok di rizab jalan, pembinaan longkang, dan lain-lain.",
     "rows": [
      "T05B01-ROW-050",
      "T05B01-ROW-051"
     ],
-    "kind": "NAMED_AUTHORITY_BODY"
+    "kind": "NAMED_AUTHORITY_BODY",
+    "analyst_note": "PBT and ILAM guidelines are named authority bodies.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "Method Statement as a mandatory contract requirement.",
+    "text": "Menjadi salah satu keperluan mandatori dalam kebanyakan dokumen kontrak pembinaan.",
     "rows": [
      "T05B01-ROW-104"
     ],
-    "kind": "CONTRACTUAL_OBLIGATION"
+    "kind": "CONTRACTUAL_OBLIGATION",
+    "analyst_note": "Method Statement as a mandatory contract requirement.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    },
    {
-    "text": "PPE obligations named for all involved workers.",
+    "text": "Menyatakan PPE yang wajib dipakai oleh semua pekerja terlibat (cth: topi keselamatan, kasut keselamatan, sarung tangan, abah-abah keselamatan untuk kerja di tempat tinggi).",
     "rows": [
      "T05B01-ROW-123"
     ],
-    "kind": "STATUTORY_SAFETY_EXPOSURE"
+    "kind": "STATUTORY_SAFETY_EXPOSURE",
+    "analyst_note": "PPE obligations named for all involved workers.",
+    "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE"
    }
   ],
   "copy_complete": true
@@ -201,7 +209,7 @@
      "5.4 Penyata Kaedah Kerja"
     ],
     "subtopic_count": 4,
-    "text": "Skop: 5.1 Project Quality Plan (PQP); 5.2 Jaminan Kualiti; 5.3 Inspection and Testing for Quality Control; 5.4 Penyata Kaedah Kerja",
+    "text": "Kerja ini merangkumi 5.1 Project Quality Plan (PQP), 5.2 Jaminan Kualiti, 5.3 Inspection and Testing for Quality Control dan 5.4 Penyata Kaedah Kerja.",
     "rows": [],
     "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
    },
@@ -371,19 +379,45 @@
   "source_attested": 0
  },
  "interaction": {
-  "cls": "COMMITTED_UNIT_PATTERN",
+  "cls": "F3_RULE_APPLIED_OVER_A_COMMITTED_UNIT_PATTERN",
   "authority_status": "DRAFTED_NOT_APPROVED",
-  "primary": "progressive process",
-  "secondary": "comparison",
-  "reason": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence.",
+  "f3_case": "SEQUENTIAL_PROCESS",
+  "primary": "Langkah demi langkah",
+  "secondary": null,
+  "reason": "Source names an ordered process (Proses , Prosedur).",
   "resolved": true,
-  "repeated_components": 0
+  "repeated_components": 0,
+  "authority_locus": "F3",
+  "committed_pattern": {
+   "primary": "progressive process",
+   "secondary": "comparison",
+   "reason": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence."
+  },
+  "agrees_with_committed": true
  },
  "analysis": {
   "dialogue_tension": "Selected a NAMED_EXTERNAL_STANDARD anchor because the module's own rows state it; no obligation was invented.",
-  "treatment": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence.",
+  "treatment": "Source names an ordered process (Proses , Prosedur).",
   "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN"
  },
+ "analysis_conformance": {
+  "satisfied": true,
+  "defects": [],
+  "contract_fields": [
+   "ambiguities",
+   "assessment",
+   "compliance_sensitive",
+   "dialogue",
+   "mandatory_propositions",
+   "pattern",
+   "rumusan_beats",
+   "terminology",
+   "visual_subjects"
+  ]
+ },
+ "source_scope_verification": null,
+ "row_use_disposition": null,
+ "tension_disposition": null,
  "completion": {
   "PACKET_SCHEMA_COMPLETE": true,
   "SOURCE_EXTRACTION_COMPLETE": true,
