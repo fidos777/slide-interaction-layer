@@ -634,7 +634,7 @@
    "confirmed_again_at": "RETURNED_AUTHORITY_v0_2"
   },
   "b03_copy": {
-   "value": "Pengurusan infrastruktur landskap yang tepat penting bagi memastikan kerja mematuhi lukisan, sempadan dan keperluan teknikal tapak. Komponen infrastruktur merangkumi…",
+   "value": "Pengurusan infrastruktur landskap yang tepat penting bagi memastikan kerja mematuhi lukisan, sempadan dan keperluan teknikal tapak. Komponen infrastruktur merangkumi Landform/Earthmound, Sub-soil Drainage, Dinding Penahan, Fencing, Swale/Natural Drain dan Jalan Akses. Pemahaman terhadap komponen-komponen ini membantu kontraktor mengawal pelaksanaan kerja, mengenal pasti titik kegagalan dan mengurangkan risiko di tapak.",
    "authority_status": "WRITTEN_CONFIRMED",
    "authority_artifact": "RETURNED_AUTHORITY_v0_2",
    "authority_locus": "D1 accepted by D4(a)",
@@ -642,8 +642,9 @@
    "authority_date": "2026-08-05",
    "authority_source": "D1 is copy written by the named authority herself; D4(a) TERIMA accepts it for B03 without amendment. Recorded here as an authority value, NOT as generated copy.",
    "scope": "K5-PL06-T03-B03 only",
-   "value_is_truncated_in_this_record": true,
-   "exceptions": []
+   "value_is_truncated_in_this_record": false,
+   "exceptions": [],
+   "sentences": 3
   },
   "b03_support_visual": {
    "value": "Satu visual tapak keseluruhan yang menunjukkan kedudukan enam komponen infrastruktur.",

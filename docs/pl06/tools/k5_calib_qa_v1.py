@@ -56,6 +56,31 @@ DECLARED_MULTIPAGE_SCREENS = ["T03B03-S04", "T03B03-S05", "T03B03-S07", "T03B03-
 DECLARED_RUNTIME_STATES = 43
 DECLARED_PANEL_STATES = 38
 DECLARED_PRODUCTION_DENSITY = 3
+# The five approved C1 lines and the approved D1 copy, restated by the SUITE. These are the
+# oracle for the ARTIFACT gates below. They are deliberately not read from the declaration
+# the generator reads — a gate that reads the record instead of the emitted file proves the
+# record, not the deck, and that is the shape of occurrences #8 to #14.
+DECLARED_C1_DECK_LINES = [
+    "Alya: Encik Rahman, jajaran pagar sudah ditanda di tapak. Boleh kita teruskan pemasangan "
+    "sementara kerja lain berjalan?",
+    "Encik Rahman: Belum, Alya. Kedudukan pagar perlu disemak dengan Pelan Ukur Sempadan, "
+    "manakala dinding penahan mesti mengikut lukisan struktur yang diluluskan.",
+    "Alya: Kalau keadaan sebenar tapak tidak sama dengan lukisan, bolehkah kedudukannya kita "
+    "ubah sedikit?",
+    "Encik Rahman: Jangan ubah terus di tapak. Catat perbezaannya dan dapatkan kelulusan yang "
+    "diperlukan sebelum kerja diteruskan.",
+    "Alya: Jadi semakan dokumen dan keadaan tapak terlebih dahulu dapat mengelakkan masalah "
+    "sempadan, kegagalan kerja dan pembaikan semula.",
+]
+DECLARED_D1_DECK_COPY = (
+    "Pengurusan infrastruktur landskap yang tepat penting bagi memastikan kerja mematuhi "
+    "lukisan, sempadan dan keperluan teknikal tapak. Komponen infrastruktur merangkumi "
+    "Landform/Earthmound, Sub-soil Drainage, Dinding Penahan, Fencing, Swale/Natural Drain "
+    "dan Jalan Akses. Pemahaman terhadap komponen-komponen ini membantu kontraktor mengawal "
+    "pelaksanaan kerja, mengenal pasti titik kegagalan dan mengurangkan risiko di tapak.")
+DECLARED_DECK_CAST = ["Alya", "Encik Rahman"]
+FORBIDDEN_DECK_MARKERS = ["PENDING_UNIT_REVIEW", "WATAK_A", "WATAK_B", "PENDING_CAST"]
+OFF_CANON_NAMES = ["Haziq", "Encik Roslan", "Puan Nadia", "Maya", "Cikgu Zaini"]
 DECLARED_CALIBRATION_DENSITIES = [2, 3]
 DECLARED_LAMPIRAN_PAGES = {2: 20, 3: 14}
 DECLARED_SLIDE_W, DECLARED_SLIDE_H = 12192000, 6858000
@@ -73,11 +98,13 @@ DECLARED_PANEL_FIELDS_MS = ["Pencetus", "Apa yang dipaparkan",
                             "Beza daripada keadaan asas",
                             "Cara pelajar kembali / meneruskan", "Sumber dan kuasa"]
 # Names that must never appear: T04's cast, and any cast invented for K5.
-FORBIDDEN_NAMES = ["Alya", "Encik Rahman", "Puan ", "Cikgu ", "Ahmad", "Siti"]
+# Alya and Encik Rahman are the APPROVED cast (A1) and the speakers of the approved C1
+# dialogue. They were on this list while the deck was cast-free; keeping them here would now
+# forbid the very copy the authority accepted.
+FORBIDDEN_NAMES = ["Puan ", "Cikgu ", "Ahmad", "Siti", "Haziq", "Roslan"]
 FORBIDDEN_T04_TOKENS = ["T04-", "T04_", "K5PL06T04"]
 FORBIDDEN_FINALITY = ["Tamat Topik", "DILULUSKAN OLEH BARIAH", "KUNCI JAWAPAN DISAHKAN"]
-DECLARED_TREATMENTS = ["click-to-reveal", "scenario/dialogue only where justified",
-                       "static content"]
+DECLARED_TREATMENTS = ["click-to-reveal", "dialog dua penutur (E1)", "static content"]
 DECLARED_A4_ROWS = ["T03B03-ROW-056", "T03B03-ROW-061"]
 DECLARED_A4_WORDING = {"T03B03-ROW-056": "alternatif mesra alam kepada parit konkrit",
                        "T03B03-ROW-061": "bukannya parit yang dalam dan curam"}
@@ -333,22 +360,27 @@ def gates(native=None):
 
     # ----------------------------------------------------------------------- scenario ------
     sc2 = _screen_of("SCENARIO")
-    G.append(_g("A_SCENARIO_SCREEN_EXISTS_AS_D3_REQUIRES", "SCENARIO",
-                (sc2["screen_id"], "D3" in sc2["decision_ids"]) if sc2
+    G.append(_g("A_SCENARIO_SCREEN_EXISTS_AS_E1_REQUIRES", "SCENARIO",
+                (sc2["screen_id"], "E1" in sc2["decision_ids"]) if sc2
                 else ("ABSENT", False),
                 ("T03B03-S02", True), 1, "screen roll", DOC_LITERAL))
-    G.append(_g("THE_SCENARIO_CARRIES_A_PENDING_CAST_PLACEHOLDER_ON_THE_FACE_OF_THE_DECK",
-                "SCENARIO",
-                "WATAK: PENDING_UNIT_REVIEW" in all_text["sb"], True, 1,
-                M.STORYBOARD_NAME, RAW_FILE))
+    # E1 makes S02 a dialogue and C3 accepts the C1 copy as-is, so the deck no longer carries
+    # a cast placeholder. It carries the approved cast, and the placeholder must be gone.
+    G.append(_g("THE_SCENARIO_IS_A_TWO_SPEAKER_DIALOGUE_AS_E1_REQUIRES", "SCENARIO",
+                (sc2["scenario"]["format"], sc2["scenario"]["cast"],
+                 sc2["scenario"]["line_count"]) if sc2 else ("ABSENT", [], 0),
+                ("APPROVED_C1_DIALOGUE", DECLARED_DECK_CAST, 5), 1,
+                "screen roll", DOC_LITERAL))
     hits = [n for n in FORBIDDEN_NAMES
             if any(n in t for t in all_text.values())]
     G.append(_g("NO_PROPER_NAME_WAS_INVENTED_FOR_THE_CAST", "SCENARIO",
                 hits, [], len(FORBIDDEN_NAMES), "all three files", DOC_LITERAL))
-    sitems = sc2["scenario"]["items"] if sc2 else []
-    unsourced = [i["row_id"] for i in sitems if by.get(i["row_id"]) != i["text"]]
-    G.append(_g("EVERY_SCENARIO_LINE_IS_A_CONTROLLED_ROW_VERBATIM", "SCENARIO",
-                unsourced, [], len(sitems),
+    # The dialogue is APPROVED instructional copy, so it is not a controlled row verbatim and
+    # must not be tested as one. What must still trace is the C2 claim set behind it.
+    claims = sc2["scenario"]["c2_claims"] if sc2 else []
+    badrows = [r for c in claims for r in c["rows"] if r not in by]
+    G.append(_g("EVERY_C2_CLAIM_BEHIND_THE_DIALOGUE_CITES_A_REAL_B03_ROW", "SCENARIO",
+                badrows, [], sum(len(c["rows"]) for c in claims),
                 "scenario vs pl06_extract_v1", SOURCE_TEXT_LITERAL))
     G.append(_g("THE_SCENARIO_IS_MARKED_DRAFT_ON_THE_DECK", "SCENARIO",
                 all(m in all_text["sb"] for m in DECLARED_STATUS_MARKS), True,
@@ -356,7 +388,11 @@ def gates(native=None):
 
     # ------------------------------------------------------------------------ Rumusan ------
     _rs = _screen_of("RUMUSAN")
-    rm = _rs["rumusan"] if _rs else dict(montage=[], beats=[])
+    rm = _rs["rumusan"] if _rs else dict(montage=[], beats=[], approved_copy=None)
+    G.append(_g("THE_RUMUSAN_SCREEN_CARRIES_THE_APPROVED_COPY_AND_VISUAL", "RUMUSAN",
+                (rm.get("approved_copy") == DECLARED_D1_DECK_COPY,
+                 bool(rm.get("approved_visual"))), (True, True), 1,
+                "screen roll vs the authority declaration", DOC_LITERAL))
     G.append(_g("THE_MONTAGE_USES_A6_THREE_LABELS_IN_ORDER", "RUMUSAN",
                 [c["label"] for c in rm["montage"]], DECLARED_A6_LABELS, 3,
                 "montage roll", DOC_LITERAL))
@@ -449,6 +485,43 @@ def gates(native=None):
                 ("TEST_REQUIRED_BEFORE_FINAL_FREEZE", DECLARED_PRODUCTION_DENSITY,
                  DECLARED_CALIBRATION_DENSITIES), 1,
                 "k5_pattern_policy_v1 + the authority declaration", COMMITTED_MODEL))
+    # ---------------------------------------------- APPROVED CONTENT IN THE EMITTED DECK ---
+    # The five B03 canonical fixtures in the packet suite assert against the packet RECORD.
+    # The deck Bariah receives is emitted by THIS lane, and for one revision it carried a
+    # cast placeholder and three static statements while the record held the approved
+    # dialogue. These gates read the emitted PPTX.
+    sb_text = sb["all_text"]
+    sb_norm = " ".join(sb_text.split())
+    missing = [i + 1 for i, ln in enumerate(DECLARED_C1_DECK_LINES)
+               if " ".join(ln.split()) not in sb_norm]
+    G.append(_g("THE_EMITTED_S02_SLIDE_CARRIES_THE_FIVE_APPROVED_C1_LINES", "APPROVED_DECK",
+                missing, [], len(DECLARED_C1_DECK_LINES), M.STORYBOARD_NAME, RAW_FILE))
+    pos = [sb_norm.find(" ".join(ln.split())) for ln in DECLARED_C1_DECK_LINES]
+    G.append(_g("THE_FIVE_APPROVED_LINES_APPEAR_IN_ORDER_IN_THE_EMITTED_DECK",
+                "APPROVED_DECK", pos == sorted(pos) and -1 not in pos, True,
+                len(DECLARED_C1_DECK_LINES), M.STORYBOARD_NAME, RAW_FILE))
+    G.append(_g("THE_EMITTED_RUMUSAN_SLIDE_CARRIES_THE_APPROVED_D1_COPY", "APPROVED_DECK",
+                " ".join(DECLARED_D1_DECK_COPY.split()) in sb_norm, True, 1,
+                M.STORYBOARD_NAME, RAW_FILE))
+    G.append(_g("NO_CAST_PLACEHOLDER_MARKER_SURVIVES_IN_ANY_EMITTED_FILE", "APPROVED_DECK",
+                sorted({m for m in FORBIDDEN_DECK_MARKERS
+                        for t in all_text.values() if m in t}), [],
+                len(FORBIDDEN_DECK_MARKERS), "all three files", RAW_FILE))
+    G.append(_g("THE_EMITTED_DECK_NAMES_ONLY_THE_APPROVED_CAST", "APPROVED_DECK",
+                (sorted(n for n in DECLARED_DECK_CAST if n in sb_text),
+                 sorted(n for n in OFF_CANON_NAMES if n in sb_text)),
+                (DECLARED_DECK_CAST, []), len(DECLARED_DECK_CAST) + len(OFF_CANON_NAMES),
+                M.STORYBOARD_NAME, RAW_FILE))
+    # One copy, one place. If the approved text is also a literal in the calibration model,
+    # the two can drift and the deck can go stale without any gate noticing.
+    src = open(os.path.join(HERE, "k5_calib_model_v1.py"), encoding="utf-8").read()
+    dup = [f"C1_LINE_{i + 1}" for i, ln in enumerate(DECLARED_C1_DECK_LINES)
+           if ln.split(": ", 1)[-1][:60] in src]
+    if DECLARED_D1_DECK_COPY[:60] in src:
+        dup.append("D1_COPY")
+    G.append(_g("NO_APPROVED_B03_CONTENT_IS_DUPLICATED_IN_THE_CALIBRATION_MODEL",
+                "APPROVED_DECK", dup, [],
+                len(DECLARED_C1_DECK_LINES) + 1, "k5_calib_model_v1.py source", RAW_FILE))
     G.append(_g("THE_TWO_PANEL_FILE_IS_RETAINED_AS_CALIBRATION_EVIDENCE", "STATUS",
                 os.path.exists(os.path.join(M.PPTX_DIR, M.LAMPIRAN_NAME.format(n=2))),
                 True, 1, "on-disk bytes", RAW_FILE))
@@ -901,31 +974,89 @@ def _s5():
                   lambda n: orig(2) if n == 3 else orig(n))
 
 
+# --- approved-content-in-the-deck defects -------------------------------------------------
+# These mutate the CONTENT SOURCE and must be caught by gates that read the emitted PPTX.
+# The packet suite's five B03 fixtures assert against the packet record; for one revision the
+# record held the approved dialogue while the deck shipped a cast placeholder and three
+# static statements. A gate that reads the record instead of the artifact proves the record.
+@fixture("KB-01", "THE_EMITTED_S02_SLIDE_CARRIES_THE_FIVE_APPROVED_C1_LINES")
+def _b1():
+    """One content word altered in an approved line."""
+    lines = M.AU.contract()["dialogue"]["b03_s02_canonical_copy"]["value"]
+    old = lines[1]["text"]
+    lines[1]["text"] = old.replace("mesti mengikut", "sebaiknya mengikut")
+    return lambda: lines[1].__setitem__("text", old)
+
+
+@fixture("KB-02", "THE_FIVE_APPROVED_LINES_APPEAR_IN_ORDER_IN_THE_EMITTED_DECK")
+def _b2():
+    """Speaker order reversed on the first exchange."""
+    lines = M.AU.contract()["dialogue"]["b03_s02_canonical_copy"]["value"]
+    old = [dict(l) for l in lines]
+    lines[0], lines[1] = dict(lines[1], seq=1), dict(lines[0], seq=2)
+    return lambda: [l.update(o) for l, o in zip(lines, old)]
+
+
+@fixture("KB-03", "THE_EMITTED_S02_SLIDE_CARRIES_THE_FIVE_APPROVED_C1_LINES")
+def _b3():
+    """One approved line dropped from the deck."""
+    c = M.AU.contract()["dialogue"]["b03_s02_canonical_copy"]
+    old = c["value"]
+    c["value"] = old[:-1]
+    return lambda: c.__setitem__("value", old)
+
+
+@fixture("KB-04", "THE_EMITTED_RUMUSAN_SLIDE_CARRIES_THE_APPROVED_D1_COPY")
+def _b4():
+    """The Rumusan screen falls back to drafted beats instead of the approved D1 copy."""
+    r = M.AU.contract()["rumusan"]["b03_copy"]
+    old = r["value"]
+    r["value"] = "Rumusan draf: enam komponen infrastruktur landskap."
+    return lambda: r.__setitem__("value", old)
+
+
+@fixture("KB-05", "NO_CAST_PLACEHOLDER_MARKER_SURVIVES_IN_ANY_EMITTED_FILE")
+def _b5():
+    """The pending-cast placeholder returns to the deck cover."""
+    return _patch(M, "APPROVED_CAST_LINE", "WATAK: PENDING_UNIT_REVIEW ({})")
+
+
+@fixture("KB-06", "NO_APPROVED_B03_CONTENT_IS_DUPLICATED_IN_THE_CALIBRATION_MODEL")
+def _b6():
+    """The calibration model keeps its own copy of an approved line — the two-lane defect
+    this pass exists to remove."""
+    src = os.path.join(HERE, "k5_calib_model_v1.py")
+    old = open(src, encoding="utf-8").read()
+    open(src, "w", encoding="utf-8").write(
+        old + '\nDUPLICATED = "' + DECLARED_D1_DECK_COPY[:80] + '"\n')
+    return lambda: open(src, "w", encoding="utf-8").write(old)
+
+
 # --- scenario defects -----------------------------------------------------------------------
 @fixture("KN-01", "NO_PROPER_NAME_WAS_INVENTED_FOR_THE_CAST")
 def _n1():
-    return _patch(M, "PLACEHOLDER_CAST", "WATAK: Encik Rahman dan Alya")
+    return _patch(M, "APPROVED_CAST_LINE", "Watak: {} dan Puan Nadia")
 
 
-@fixture("KN-02", "THE_SCENARIO_CARRIES_A_PENDING_CAST_PLACEHOLDER_ON_THE_FACE_OF_THE_DECK")
+@fixture("KN-02", "THE_EMITTED_DECK_NAMES_ONLY_THE_APPROVED_CAST")
 def _n2():
-    return _patch(M, "PLACEHOLDER_CAST", "WATAK: dua pekerja tapak")
+    """An off-canon name reaches the deck."""
+    return _patch(M, "APPROVED_CAST_LINE", "Watak: Haziq dan Encik Roslan ({})")
 
 
-@fixture("KN-03", "EVERY_SCENARIO_LINE_IS_A_CONTROLLED_ROW_VERBATIM")
+@fixture("KN-03", "EVERY_C2_CLAIM_BEHIND_THE_DIALOGUE_CITES_A_REAL_B03_ROW")
 def _n3():
     orig = M._screens_uncached
 
     def broken():
         scs = orig()
         s = next(x for x in scs if x["kind"] == "SCENARIO")
-        s["scenario"]["items"][0]["text"] = ("Kontraktor perlu berbincang dengan jurutera "
-                                             "sebelum memulakan kerja.")
+        s["scenario"]["c2_claims"][0]["rows"] = ["T03B03-ROW-999"]
         return scs
     return _patch(M, "_screens_uncached", broken)
 
 
-@fixture("KN-04", "A_SCENARIO_SCREEN_EXISTS_AS_D3_REQUIRES")
+@fixture("KN-04", "A_SCENARIO_SCREEN_EXISTS_AS_E1_REQUIRES")
 def _n4():
     orig = M._screens_uncached
 

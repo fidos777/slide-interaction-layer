@@ -42,8 +42,9 @@ import pl06_extract_v1 as EX           # noqa: E402
 import pl06_unit_model_v1 as U         # noqa: E402
 import k5_pattern_policy_v1 as P       # noqa: E402
 import k5_policy_apply_v1 as AP        # noqa: E402
+import pl06_authority_v1 as AU        # noqa: E402  — the ONLY source of approved B03 copy
 
-STAGE = "4.2F-H"
+STAGE = "4.2F-K"
 SUITE_ID = "K5_CALIBRATION_PROOF_QA_v1"
 GENERATED_BY = "docs/pl06/tools/k5_calib_build_v1.py"
 
@@ -82,9 +83,9 @@ FORBIDDEN_PROVENANCE_REASON = (
     "with no row and no Bariah ruling behind it is a placeholder, not content.")
 
 # ------------------------------------------------------------------- provisional placeholders
-PLACEHOLDER_CAST = "WATAK: PENDING_UNIT_REVIEW — D1 menetapkan watak dipilih per unit"
-PLACEHOLDER_CAST_A = "WATAK A — PENDING_UNIT_REVIEW"
-PLACEHOLDER_CAST_B = "WATAK B — PENDING_UNIT_REVIEW"
+# A1 names the cast and C3 accepts the C1 dialogue as-is, so nothing on this deck is pending
+# a cast decision. The cover states the approved cast instead of a placeholder.
+APPROVED_CAST_LINE = "Watak: {} (A1, Keputusan Bariah)"
 PLACEHOLDER_VISUAL = "ASET VISUAL BELUM DIHASILKAN — NOT_MMD_ASSET"
 PLACEHOLDER_SUBJECT = "SUBJEK VISUAL: PENDING_BARIAH_UNIT_REVIEW"
 MONTAGE_MARKS = ["PROVISIONAL_VISUAL_DIRECTION", "PENDING_BARIAH_UNIT_REVIEW",
@@ -234,33 +235,33 @@ def _prop_for_group(g):
 # SCENARIO — cast-free, source-bound, provisional
 # ==========================================================================================
 SCENARIO_FORMAT_BASIS = (
-    "The committed unit model records dialogue verdict NOT_JUSTIFIED for this unit, so the "
-    "cast-free SITUASI frame is used. D3 still makes the screen mandatory, and D1 leaves the "
-    "cast to unit review, so a WATAK placeholder is carried instead of any proper name.")
+    "E1 makes S02 a dialogue for every K5 unit, superseding AR-06's 'only where justified'. "
+    "C1 supplies the five B03 dialogue lines and C3 accepts them as-is: 'TERIMA — dialog "
+    "boleh digunakan seadanya.' This deck REPRODUCES that copy; it does not draft one. The "
+    "lines and the cast are read from the authority declaration through pl06_authority_v1 and "
+    "are deliberately NOT restated in this module — a second copy is a second place for the "
+    "two to disagree.")
 
 
 def scenario():
-    by = rows_by_id()
-    um = unit_model()
-    stmts = um["compliance_sensitive"]["statements"]
-    items = []
-    for s in stmts:
-        for rid in s["rows"]:
-            r = by.get(rid)
-            if r and _txt(r):
-                items.append(dict(row_id=rid, text=_txt(r), why=s["why"],
-                                  module_page=r["module_page"]))
-            break
+    """The approved C1 dialogue, read from the authority declaration. Never drafted here."""
+    rec = AU.rule("dialogue", "b03_s02_canonical_copy")
+    lines = [dict(seq=l["seq"], speaker=l["speaker"], text=l["text"]) for l in rec["value"]]
+    cast = sorted({l["speaker"] for l in lines})
     return dict(
-        format="SITUASI_CAST_FREE",
+        format="APPROVED_C1_DIALOGUE",
         format_basis=SCENARIO_FORMAT_BASIS,
-        dialogue_verdict=um["dialogue"]["verdict"],
-        cast_placeholder=PLACEHOLDER_CAST,
-        alternate_cast_placeholders=[PLACEHOLDER_CAST_A, PLACEHOLDER_CAST_B],
-        items=items,
-        source_row_ids=[i["row_id"] for i in items],
+        authority_status=rec["authority_status"],
+        source_file=rec["source_file"], source_sha256=rec["source_sha256"],
+        source_sections=list(rec["source_sections"]),
+        source_date_ms=rec["source_date_ms"], authority=rec["named_authority"],
+        cast=cast, line_count=len(lines), lines=lines,
+        c2_claims=[dict(claim=c["claim"], rows=list(c["controlled_rows"]),
+                        support=c["support_class"]) for c in AU.c2_claims()],
+        source_row_ids=sorted({r for c in AU.c2_claims() for r in c["controlled_rows"]}),
+        depiction_limit=AU.value("dialogue", "encik_rahman_depiction_limit"),
         marks=list(STATUS_MARKS),
-        decision_ids=["D3", "A5", "D1"])
+        decision_ids=["C1", "C3", "E1", "E2"])
 
 
 # ==========================================================================================
@@ -296,7 +297,10 @@ def rumusan():
                     label_is_learner_facing=A6_LABELS_ARE_LEARNER_FACING,
                     points_at_beat_index=i + 1, marks=list(MONTAGE_MARKS))
                for i, b in enumerate(beats[:len(A6_LABELS)])]
-    return dict(labels=list(A6_LABELS), beats=list(beats),
+    return dict(approved_copy=AU.value("rumusan", "b03_copy"),
+                approved_visual=AU.value("rumusan", "b03_support_visual"),
+                approved_status=AU.status("rumusan", "b03_copy"),
+                labels=list(A6_LABELS), beats=list(beats),
                 beat_count=len(beats),
                 labels_are_learner_facing=A6_LABELS_ARE_LEARNER_FACING,
                 montage=montage,
@@ -379,16 +383,15 @@ def _screens_uncached():
 
     # ---- S02 shell: scenario (D3 mandatory) ----------------------------------------------
     sc = scenario()
-    add(kind="SCENARIO", treatment="scenario/dialogue only where justified",
+    add(kind="SCENARIO", treatment="dialog dua penutur (E1)",
         title_ms="Situasi di tapak",
-        blocks=([dict(text="SITUASI", provenance="CAIR_STRUCTURAL"),
-                 dict(text=sc["cast_placeholder"], provenance="PROVISIONAL_PLACEHOLDER")]
-                + [dict(text=i["text"], provenance="SOURCE_CONTROLLED", row_id=i["row_id"])
-                   for i in sc["items"]]
+        blocks=([dict(text=f"{l['speaker']}: {l['text']}",
+                      provenance="COURSE_RULE_APPROVED", line_seq=l["seq"],
+                      speaker=l["speaker"]) for l in sc["lines"]]
                 + [dict(text=" · ".join(STATUS_MARKS),
                         provenance="PROVISIONAL_PLACEHOLDER")]),
         source_row_ids=sc["source_row_ids"],
-        vo=" ".join(i["text"] for i in sc["items"]),
+        vo=" ".join(l["text"] for l in sc["lines"]),
         decision_ids=sc["decision_ids"], scenario=sc)
 
     # ---- S03 shell: orientation ----------------------------------------------------------
@@ -459,17 +462,14 @@ def _screens_uncached():
         # being drawn as an inline prefix, which is that heading moved rather than removed —
         # the same defect the packet model's scope beat carried. The block text is now the
         # beat alone; the label rides along as production metadata for the montage mapping.
-        blocks=([dict(text=c["beat"],
-                      provenance="CAIR_DRAFTED_RUMUSAN_BEAT",
-                      montage_label=c["label"], montage_label_learner_facing=False,
-                      montage_id=c["component_id"]) for c in rm["montage"]]
-                + [dict(text="MONTAJ RUMUSAN · " + " · ".join(MONTAGE_MARKS),
+        # D1 copy, accepted at D4(a). Read from the declaration, never drafted here.
+        blocks=([dict(text=rm["approved_copy"], provenance="COURSE_RULE_APPROVED")]
+                + [dict(text="VISUAL SOKONGAN · " + " · ".join(MONTAGE_MARKS),
                         provenance="PROVISIONAL_PLACEHOLDER")]),
-        vo=" ".join(rm["beats"]), rumusan=rm,
-        visual=dict(subject="Montaj tiga komponen mengikut tiga beat Rumusan",
-                    rows=[], has_source_figure=False,
+        vo=rm["approved_copy"], rumusan=rm,
+        visual=dict(subject=rm["approved_visual"], rows=[], has_source_figure=False,
                     status=PLACEHOLDER_VISUAL, note=" · ".join(MONTAGE_MARKS)),
-        decision_ids=["A6", "D3"])
+        decision_ids=["D1", "D3", "D4"])
 
     # ---- Kuiz ----------------------------------------------------------------------------
     items = um["assessment"]["items"]

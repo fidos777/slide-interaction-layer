@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Stage 4.2F-H — build the K5-PL06-T03-B03 calibration Storyboard and Lampiran Keadaan.
+"""Stage 4.2F-K — build the K5-PL06-T03-B03 calibration Storyboard and Lampiran Keadaan.
 
 SMALLEST CONTROLLED ADAPTATION
 ------------------------------
@@ -454,7 +454,8 @@ def _title_slide(prs, t):
           11, MUTED, italic=True)
     BB._p(tf, "", 8)
     BB._p(tf, f"Narator: {M._policy_unit()['narrator']['name']}  (D2)", 11, AUTH)
-    BB._p(tf, M.PLACEHOLDER_CAST, 11, PLACEHOLDER)
+    BB._p(tf, M.APPROVED_CAST_LINE.format(" dan ".join(M.scenario()["cast"])),
+          11, AUTH)
     BB._p(tf, M.PLACEHOLDER_VISUAL, 11, PLACEHOLDER)
     BB._p(tf, "", 8)
     BB._p(tf, LEGEND, 10, MUTED, italic=True)
