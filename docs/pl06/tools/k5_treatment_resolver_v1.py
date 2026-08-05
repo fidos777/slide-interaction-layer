@@ -8,7 +8,13 @@ receives, quietly drafted its own. The same shape was live for interaction treat
 `screen_pattern_plan["primary"]` to every content group, leaving Sub-soil Drainage on
 click-to-reveal against F4(a).
 
-So there is one resolver and both lanes call it.
+INCOMPLETE AS OF 2026-08-05 (f082dd2). Only `k5_calib_model_v1` calls this module. The
+packet lane still runs its own `_f3_select`, so there are still two evidence-to-treatment
+paths joined at a shared final mapping — which is weaker than it looks: a parity gate built
+on the current API would compare two independent classifications that agree only because the
+last step is shared. The final API must be `resolve_for_group(unit_id, screen_name,
+controlled_group_evidence)` with F3 evidence classification INSIDE this module and no
+caller-supplied `f3_case`.
 
     F4 override   a screen the authority named explicitly wins outright
     F3 fallback   everything else is selected from the module's own structure
@@ -53,8 +59,13 @@ def _norm(s):
 
 
 def overrides(unit_id):
-    """{normalised screen name: treatment} for every screen F4 names for this unit."""
-    if unit_id != "K5-PL06-T03-B03":
+    """{normalised screen name: treatment} for every screen F4 names for this unit.
+
+    INCOMPLETE: this still carries a unit literal, which a unit-neutral shared module must
+    not. The lookup belongs in `pl06_authority_v1.treatment_overrides(unit_id)` — the
+    resolver asks, it does not know which unit has overrides.
+    """
+    if unit_id != "K5-PL06-T03-B03":   # TODO(0b): move to pl06_authority_v1
         return {}
     return {_norm(t["screen"]): t["treatment"]
             for t in A.value("interaction", "b03_treatments")}
