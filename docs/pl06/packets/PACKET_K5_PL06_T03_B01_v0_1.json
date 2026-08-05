@@ -1,0 +1,405 @@
+{
+ "unit_id": "K5-PL06-T03-B01",
+ "topik": 3,
+ "bahagian": 1,
+ "title": "Kawasan Berturap dan Gelanggang Sukan & Permainan",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "3.1 Kawasan Berturap / Paved Areas + 3.2 Gelanggang Sukan & Permainan",
+  "items": [
+   "3.1 Kawasan Berturap / Paved Areas",
+   "3.2 Gelanggang Sukan & Permainan"
+  ],
+  "count": 2
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 121,
+  "structural_headings": 48,
+  "first_row": "T03B01-ROW-001",
+  "last_row": "T03B01-ROW-121"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T03-B01",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T03B01-ROW-037",
+      "text": "Dengan memahami secara mendalam setiap jenis kawasan berturap ini, kontraktor landskap akan dilengkapi dengan pengetahuan untuk memilih bahan yang sesuai, merancang saliran yang be"
+     },
+     {
+      "row_id": "T03B01-ROW-045",
+      "text": "Fokus Utama Kontraktor:"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B01",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B01-ROW-040",
+      "text": "Satu komponen yang mempunyai tahap pemantauan kualiti dan keselamatan yang paling tinggi. Kecuaian dalam pemasangan boleh mengakibatkan kecederaan serius dan liabiliti undang-undan"
+     },
+     {
+      "row_id": "T03B01-ROW-110",
+      "text": "Sebelum serahan, komponen ini mesti melalui proses pengujian beban dan pemeriksaan keselamatan oleh badan bebas yang bertauliah."
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B01",
+    "role_id": "ROLE-JURUTERA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B01-ROW-105",
+      "text": "Kelulusan Jurutera"
+     },
+     {
+      "row_id": "T03B01-ROW-106",
+      "text": "Semua lukisan struktur bagi komponen ini wajib disemak dan diluluskan oleh Jurutera Profesional (Ir.) yang bertauliah."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described."
+   }
+  ],
+  "speaker_not_required": [
+   {
+    "unit_id": "K5-PL06-T03-B01",
+    "role_id": "ROLE-JURUTERA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B01-ROW-105",
+      "text": "Kelulusan Jurutera"
+     },
+     {
+      "row_id": "T03B01-ROW-106",
+      "text": "Semua lukisan struktur bagi komponen ini wajib disemak dan diluluskan oleh Jurutera Profesional (Ir.) yang bertauliah."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described."
+   }
+  ],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "OBLIGATION",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing.",
+    "rows": [
+     "T03B01-ROW-047"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Setiap tiang struktur mesti dipasang dengan tapak konkrit yang kukuh di bawah tanah mengikut spesifikasi pengeluar untuk mengelakkan sebarang pergerakan atau ketidakstabilan.",
+    "rows": [
+     "T03B01-ROW-051"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing.",
+    "rows": [
+     "T03B01-ROW-047"
+    ],
+    "kind": "OBLIGATION"
+   },
+   {
+    "text": "Setiap tiang struktur mesti dipasang dengan tapak konkrit yang kukuh di bawah tanah mengikut spesifikasi pengeluar untuk mengelakkan sebarang pergerakan atau ketidakstabilan.",
+    "rows": [
+     "T03B01-ROW-051"
+    ],
+    "kind": "OBLIGATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+    "rows": [
+     "T03B01-ROW-003"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "3.1 Kawasan Berturap / Paved Areas",
+     "3.2 Gelanggang Sukan & Permainan"
+    ],
+    "subtopic_count": 2,
+    "text": "Skop: 3.1 Kawasan Berturap / Paved Areas; 3.2 Gelanggang Sukan & Permainan",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Membantu dalam pengurusan air larian permukaan",
+    "rows": [
+     "T03B01-ROW-007"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Trek Pejalan Kaki, Jogging & Berbasikal?",
+    "correct": "Trek atau laluan ini adalah tulang belakang kepada sirkulasi pejalan kaki dan aktiviti riadah dalam sesebuah landskap",
+    "correct_rows": [
+     "T03B01-ROW-010"
+    ],
+    "anchor_row": "T03B01-ROW-009",
+    "distractors": [
+     "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+     "Kepentingan Kawasan Berturap dalam Landskap",
+     "Meningkatkan aksesibiliti dan aliran pergerakan"
+    ],
+    "feedback": "Trek atau laluan ini adalah tulang belakang kepada sirkulasi pejalan kaki dan aktiviti riadah dalam sesebuah landskap",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Tempat Letak Kereta (Parking)?",
+    "correct": "Tempat letak kereta adalah kawasan berturap yang penting untuk fasiliti dan kemudahan akses.",
+    "correct_rows": [
+     "T03B01-ROW-027"
+    ],
+    "anchor_row": "T03B01-ROW-026",
+    "distractors": [
+     "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+     "Kepentingan Kawasan Berturap dalam Landskap",
+     "Meningkatkan aksesibiliti dan aliran pergerakan"
+    ],
+    "feedback": "Tempat letak kereta adalah kawasan berturap yang penting untuk fasiliti dan kemudahan akses.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Rajah 22: Contoh Alat Permainan Kanak-Kanak?",
+    "correct": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+    "correct_rows": [
+     "T03B01-ROW-044"
+    ],
+    "anchor_row": "T03B01-ROW-042",
+    "distractors": [
+     "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+     "Kepentingan Kawasan Berturap dalam Landskap",
+     "Meningkatkan aksesibiliti dan aliran pergerakan"
+    ],
+    "feedback": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Contoh Komponen?",
+    "correct": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+    "correct_rows": [
+     "T03B01-ROW-044"
+    ],
+    "anchor_row": "T03B01-ROW-043",
+    "distractors": [
+     "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+     "Kepentingan Kawasan Berturap dalam Landskap",
+     "Meningkatkan aksesibiliti dan aliran pergerakan"
+    ],
+    "feedback": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Fokus Utama Kontraktor:?",
+    "correct": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing.",
+    "correct_rows": [
+     "T03B01-ROW-047"
+    ],
+    "anchor_row": "T03B01-ROW-045",
+    "distractors": [
+     "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+     "Kepentingan Kawasan Berturap dalam Landskap",
+     "Meningkatkan aksesibiliti dan aliran pergerakan"
+    ],
+    "feedback": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Rajah sumber pada T03B01-ROW-035",
+    "rows": [
+     "T03B01-ROW-035"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T03B01-ROW-040",
+    "rows": [
+     "T03B01-ROW-040"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T03B01-ROW-041",
+    "rows": [
+     "T03B01-ROW-041"
+    ],
+    "has_source_figure": true
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 3,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 6,
+  "reason": "The module repeats 6 components with the same internal shape."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "The module repeats 6 components with the same internal shape.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUTERA=SPEAKER_NOT_REQUIRED"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

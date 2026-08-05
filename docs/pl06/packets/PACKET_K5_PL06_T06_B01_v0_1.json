@@ -1,0 +1,390 @@
+{
+ "unit_id": "K5-PL06-T06-B01",
+ "topik": 6,
+ "bahagian": 1,
+ "title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "6.1 Environmental Management Plan + 6.2 Contoh Aplikasi dalam Landskap + 6.3 Pengurusan Alam Sekitar",
+  "items": [
+   "6.1 Environmental Management Plan",
+   "6.2 Contoh Aplikasi dalam Landskap",
+   "6.3 Pengurusan Alam Sekitar"
+  ],
+  "count": 3
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 118,
+  "structural_headings": 37,
+  "first_row": "T06B01-ROW-001",
+  "last_row": "T06B01-ROW-118"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T06-B01",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T06B01-ROW-002",
+      "text": "Dalam konteks kontraktor landskap, peranan untuk melindungi dan menambah baik alam sekitar menjadi semakin penting. Ini bukan sahaja melibatkan pematuhan undang-undang dan peratura"
+     },
+     {
+      "row_id": "T06B01-ROW-004",
+      "text": "EMP adalah dokumen strategik yang menggariskan bagaimana kesan alam sekitar yang berpotensi daripada sesuatu projek akan diurus, dikurangkan, atau dielakkan. Ia adalah panduan prak"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T06-B01",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T06B01-ROW-007",
+      "text": "EMP juga menetapkan prosedur pemantauan (monitoring), pelaporan (reporting), dan tindakan pembetulan (corrective actions) sekiranya berlaku penyelewengan."
+     },
+     {
+      "row_id": "T06B01-ROW-022",
+      "text": "Pengurusan alam sekitar merujuk kepada pelaksanaan langkah-langkah yang digariskan dalam EMP. Ia melibatkan kawalan dan pemantauan berterusan terhadap pelbagai aspek alam sekitar s"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   }
+  ],
+  "speaker_not_required": [],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "STATUTORY_LIMIT",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa.",
+    "rows": [
+     "T06B01-ROW-062"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+    "rows": [
+     "T06B01-ROW-106"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa.",
+    "rows": [
+     "T06B01-ROW-062"
+    ],
+    "kind": "STATUTORY_LIMIT"
+   },
+   {
+    "text": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+    "rows": [
+     "T06B01-ROW-106"
+    ],
+    "kind": "PROTECTED_SPECIES_EXPOSURE"
+   },
+   {
+    "text": "Tiada pembakaran sisa tapak.",
+    "rows": [
+     "T06B01-ROW-118"
+    ],
+    "kind": "ENVIRONMENTAL_PROHIBITION"
+   },
+   {
+    "text": "Pemangkasan oleh arborist bertauliah — a named professional competency.",
+    "rows": [
+     "T06B01-ROW-104"
+    ],
+    "kind": "NAMED_PROFESSIONAL_AUTHORITY"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Dalam konteks kontraktor landskap, peranan untuk melindungi dan menambah baik alam sekitar menjadi semakin penting.",
+    "rows": [
+     "T06B01-ROW-002"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "6.1 Environmental Management Plan",
+     "6.2 Contoh Aplikasi dalam Landskap",
+     "6.3 Pengurusan Alam Sekitar"
+    ],
+    "subtopic_count": 3,
+    "text": "Skop: 6.1 Environmental Management Plan; 6.2 Contoh Aplikasi dalam Landskap; 6.3 Pengurusan Alam Sekitar",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Mengesan spesies pokok yang dilindungi, mengenal pasti habitat hidupan liar (jika ada), dan menilai kualiti air/tanah sedia ada.",
+    "rows": [
+     "T06B01-ROW-014"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "COMMITTED_UNIT_ITEMS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah langkah PERTAMA dalam Environmental Management Plan (EMP)?",
+    "correct": "Mengenal pasti potensi impak negatif dan positif projek terhadap alam sekitar.",
+    "correct_rows": [
+     "T06B01-ROW-005"
+    ],
+    "distractors": [
+     "Merangka pelan pemulihan kawasan yang terganggu",
+     "Menetapkan prosedur pemantauan dan pelaporan",
+     "Memasang pagar perlindungan pokok"
+    ],
+    "feedback": "Mengenal pasti potensi impak negatif dan positif projek terhadap alam sekitar.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Bagaimanakah air bilasan daripada pencampuran konkrit mesti diuruskan?",
+    "correct": "Dikumpul dalam tangki atau kawasan tadahan khusus.",
+    "correct_rows": [
+     "T06B01-ROW-038"
+    ],
+    "distractors": [
+     "Dilepaskan terus ke sistem saliran tapak",
+     "Disembur ke kawasan tanah kosong untuk mengurangkan habuk",
+     "Dibiarkan meresap ke dalam tanah di sekitar tapak"
+    ],
+    "feedback": "Dikumpul dalam tangki atau kawasan tadahan khusus.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Siapakah yang perlu melakukan pemangkasan pokok matang yang dikekalkan di tapak?",
+    "correct": "Arborist bertauliah.",
+    "correct_rows": [
+     "T06B01-ROW-104"
+    ],
+    "distractors": [
+     "Mana-mana pekerja am yang berpengalaman",
+     "Penyelia tapak kontraktor",
+     "Pengendali jentera yang memasang pagar perlindungan"
+    ],
+    "feedback": "Arborist bertauliah.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Mengapakah pembakaran sisa tapak dilarang?",
+    "correct": "Kerana ia boleh memusnahkan habitat atau mengancam hidupan liar.",
+    "correct_rows": [
+     "T06B01-ROW-118"
+    ],
+    "distractors": [
+     "Kerana ia meningkatkan kos pelupusan sisa",
+     "Kerana ia memerlukan kelulusan bertulis daripada perunding",
+     "Kerana abu sisa merosakkan lapisan pelapik kolam"
+    ],
+    "feedback": "Kerana ia boleh memusnahkan habitat atau mengancam hidupan liar.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA langkah kawalan habuk yang dinyatakan bagi pengurusan kualiti udara.",
+    "correct": [
+     "Menyiram air secara berkala di laluan kenderaan dan kawasan kerja",
+     "Menutup lori pembawa tanah dengan kanvas",
+     "Memasang jaring debu di sekeliling kawasan kerja"
+    ],
+    "correct_rows": [
+     "T06B01-ROW-049",
+     "T06B01-ROW-051",
+     "T06B01-ROW-053"
+    ],
+    "distractors": [
+     "Memasang pembatas bunyi di sempadan tapak",
+     "Menggunakan sistem pengairan titisan",
+     "Memasang monitor getaran berhampiran struktur kritikal"
+    ],
+    "feedback": [
+     "Menyiram air secara berkala di laluan kenderaan dan kawasan kerja",
+     "Menutup lori pembawa tanah dengan kanvas",
+     "Memasang jaring debu di sekeliling kawasan kerja"
+    ],
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "COMMITTED_UNIT_SUBJECTS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Rajah 26: EMP Untuk Landskap",
+    "rows": [
+     "T06B01-ROW-010"
+    ],
+    "has_source_figure": true,
+    "note": "The only unit in this batch with a raster figure in the source, and it carries its own caption."
+   },
+   {
+    "subject": "Enam aspek pengurusan alam sekitar dan contoh kawalan bagi setiap satu",
+    "rows": [
+     "T06B01-ROW-023",
+     "T06B01-ROW-041",
+     "T06B01-ROW-059",
+     "T06B01-ROW-072",
+     "T06B01-ROW-083",
+     "T06B01-ROW-094"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Kawalan hakisan dan sedimen: silt fence, kolam takungan, penanaman penutup bumi",
+    "rows": [
+     "T06B01-ROW-031",
+     "T06B01-ROW-033",
+     "T06B01-ROW-035"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 1
+ },
+ "interaction": {
+  "cls": "COMMITTED_UNIT_PATTERN",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "progressive process",
+  "reason": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one.",
+  "resolved": true,
+  "repeated_components": 0
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a STATUTORY_LIMIT anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": true,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

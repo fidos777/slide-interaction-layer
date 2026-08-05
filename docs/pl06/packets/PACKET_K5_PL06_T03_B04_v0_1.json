@@ -1,0 +1,348 @@
+{
+ "unit_id": "K5-PL06-T03-B04",
+ "topik": 3,
+ "bahagian": 4,
+ "title": "Badan Air (Water Body)",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "3.6 Badan Air (Water Body)",
+  "items": [
+   "3.6 Badan Air (Water Body)"
+  ],
+  "count": 1
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 92,
+  "structural_headings": 36,
+  "first_row": "T03B04-ROW-001",
+  "last_row": "T03B04-ROW-092"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T03-B04",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T03B04-ROW-012",
+      "text": "Tasik dalam pembinaan landskap ialah sebuah sistem kejuruteraan kompleks yang direka bentuk untuk meniru ciri semula jadi bagi tujuan estetik, ekologi, dan fungsian. Sebagai kontra"
+     },
+     {
+      "row_id": "T03B04-ROW-067",
+      "text": "Aspek Kritikal Kontraktor:"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   }
+  ],
+  "speaker_not_required": [],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "MATERIAL_SPECIFICATION",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+    "rows": [
+     "T03B04-ROW-053",
+     "T03B04-ROW-085"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+    "rows": [
+     "T03B04-ROW-076"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+    "rows": [
+     "T03B04-ROW-053",
+     "T03B04-ROW-085"
+    ],
+    "kind": "MATERIAL_SPECIFICATION"
+   },
+   {
+    "text": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+    "rows": [
+     "T03B04-ROW-076"
+    ],
+    "kind": "MATERIAL_SPECIFICATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Direka khusus untuk memelihara ikan koi, memerlukan sistem penapisan (filtration system) yang efisien untuk memastikan kualiti air sentiasa bersih dan sihat untuk ikan.",
+    "rows": [
+     "T03B04-ROW-006"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "3.6 Badan Air (Water Body)"
+    ],
+    "subtopic_count": 1,
+    "text": "Skop: 3.6 Badan Air (Water Body)",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Direka khusus untuk memelihara ikan koi, memerlukan sistem penapisan (filtration system) yang efisien untuk memastikan kualiti air sentiasa bersih dan sihat untuk ikan.",
+    "rows": [
+     "T03B04-ROW-006"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "COMMITTED_UNIT_ITEMS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah aspek paling kritikal dalam pembinaan alur air?",
+    "correct": "Kecerunan, kerana ia mengawal kelajuan aliran air.",
+    "correct_rows": [
+     "T03B04-ROW-039"
+    ],
+    "distractors": [
+     "Warna batu yang digunakan di tebing",
+     "Jenis tumbuhan yang ditanam di sepanjang alur",
+     "Kedalaman takungan bawah"
+    ],
+    "feedback": "Kecerunan, kerana ia mengawal kelajuan aliran air.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Mengapakah pelapik fleksibel seperti EPDM atau PVC menjadi pilihan utama bagi alur air?",
+    "correct": "Kerana ia mudah dibentuk mengikut kontur alur.",
+    "correct_rows": [
+     "T03B04-ROW-044"
+    ],
+    "distractors": [
+     "Kerana ia lebih murah daripada semua bahan lain",
+     "Kerana ia tidak memerlukan lapisan pelindung",
+     "Kerana ia lebih kukuh daripada konkrit"
+    ],
+    "feedback": "Kerana ia mudah dibentuk mengikut kontur alur.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Bagaimanakah sistem kitaran air bagi sungai buatan berfungsi?",
+    "correct": "Sebagai kitaran tertutup — air yang sama digunakan berterusan.",
+    "correct_rows": [
+     "T03B04-ROW-080"
+    ],
+    "distractors": [
+     "Air baharu dibekalkan berterusan dari sumber bandar",
+     "Air dilepaskan ke longkang selepas setiap kitaran",
+     "Air hanya dipam semasa waktu operasi taman"
+    ],
+    "feedback": "Sebagai kitaran tertutup — air yang sama digunakan berterusan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah kesan kecerunan yang terlalu landai pada laluan aliran sungai buatan?",
+    "correct": "Air bertakung.",
+    "correct_rows": [
+     "T03B04-ROW-069"
+    ],
+    "distractors": [
+     "Hakisan tebing yang berlebihan",
+     "Aliran menjadi terlalu laju",
+     "Pam bekerja pada kadar yang lebih rendah"
+    ],
+    "feedback": "Air bertakung.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA komponen yang membentuk sistem kitaran air.",
+    "correct": [
+     "Punca air di titik tertinggi",
+     "Takungan bawah (sump) di titik terendah",
+     "Pam air",
+     "Sistem perpaipan"
+    ],
+    "correct_rows": [
+     "T03B04-ROW-049",
+     "T03B04-ROW-051",
+     "T03B04-ROW-053",
+     "T03B04-ROW-055"
+    ],
+    "distractors": [
+     "Bebendul konkrit di tepi alur",
+     "Sistem penapisan wajib untuk semua badan air"
+    ],
+    "feedback": [
+     "Punca air di titik tertinggi",
+     "Takungan bawah (sump) di titik terendah",
+     "Pam air",
+     "Sistem perpaipan"
+    ],
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "COMMITTED_UNIT_SUBJECTS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Empat jenis kolam landskap: koi, reflektif, taman air, tasik",
+    "rows": [
+     "T03B04-ROW-005",
+     "T03B04-ROW-007",
+     "T03B04-ROW-009",
+     "T03B04-ROW-011"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Rajah kitaran air tertutup: punca air, sump, pam, perpaipan",
+    "rows": [
+     "T03B04-ROW-049",
+     "T03B04-ROW-051",
+     "T03B04-ROW-053",
+     "T03B04-ROW-055"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Perbandingan pelapik fleksibel dan pelapik konkrit",
+    "rows": [
+     "T03B04-ROW-044",
+     "T03B04-ROW-046"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 0
+ },
+ "interaction": {
+  "cls": "COMMITTED_UNIT_PATTERN",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "progressive process",
+  "secondary": "click-to-reveal",
+  "reason": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal.",
+  "resolved": true,
+  "repeated_components": 2
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a MATERIAL_SPECIFICATION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": true,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

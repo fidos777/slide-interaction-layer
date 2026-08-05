@@ -1,0 +1,59 @@
+{
+ "stage": "4.2F-I",
+ "legacy": [
+  {
+   "unit_id": "K5-PL06-T03-B02",
+   "topik": 3,
+   "bahagian": 2,
+   "title": "Struktur Taman dan Perabot Taman",
+   "generation_scope": "LEGACY_RETAINED",
+   "artifact_profile": "LEGACY_STORYBOARD_ONLY",
+   "named_exception": "LAMPIRAN_NOT_PART_OF_ORIGINAL_DELIVERY_CONTRACT",
+   "basis": "Delivered and phone-approved before the Lampiran Keadaan artifact class existed. Its approval record names one artifact. No Lampiran was deleted or lost; none formed part of its approved delivery package.",
+   "declared_artifacts": [
+    {
+     "unit_id": "K5-PL06-T03-B02",
+     "kind": "STORYBOARD",
+     "path": "reviews/source-completion/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4_1.pptx",
+     "bytes": 471881,
+     "slides": 100,
+     "sha256": "faef6c85745d2750236ffdf23fb7d14b81d26ed37c7db58ed274cb8d0f0178e5"
+    }
+   ],
+   "artifact_count": 1,
+   "production_packet": false,
+   "note": "Retained artifact. No production packet is created and this unit never appears in PRODUCTION refusal totals."
+  },
+  {
+   "unit_id": "K5-PL06-T04-B01",
+   "topik": 4,
+   "bahagian": 1,
+   "title": "Penjagaan dan Penyelenggaraan",
+   "generation_scope": "LEGACY_RETAINED",
+   "artifact_profile": "STORYBOARD_AND_LAMPIRAN",
+   "named_exception": null,
+   "basis": "Delivered under the current artifact shape; retained unchanged.",
+   "declared_artifacts": [
+    {
+     "unit_id": "K5-PL06-T04-B01",
+     "kind": "STORYBOARD",
+     "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STORYBOARD_FOR_BARIAH_REVIEW_v1_0.pptx",
+     "bytes": 76248,
+     "slides": 27,
+     "sha256": "d2157155a89c7fd2ff362daad08355296118cce72b74b8fb4c7825e1917042fa"
+    },
+    {
+     "unit_id": "K5-PL06-T04-B01",
+     "kind": "LAMPIRAN",
+     "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STATE_REVIEW_APPENDIX_v1_0.pptx",
+     "bytes": 83234,
+     "slides": 29,
+     "sha256": "13a3aabe0ad96e2c399185df61db7844fc21986b63e99da5fd6a88b055644cd4"
+    }
+   ],
+   "artifact_count": 2,
+   "production_packet": false,
+   "note": "Retained artifact. No production packet is created and this unit never appears in PRODUCTION refusal totals."
+  }
+ ]
+}

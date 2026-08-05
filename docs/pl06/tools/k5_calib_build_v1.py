@@ -27,6 +27,7 @@ The third file exists only so B2 can be decided by comparison. It is the same co
 different density — one variable — and neither density is frozen here.
 """
 import functools
+import json
 import os
 import sys
 import time
@@ -70,6 +71,60 @@ LEGEND = ("[S] baris modul verbatim · [S~] ayat pertama baris modul · [A] kepu
           "[U] elemen antara muka")
 
 WRITE_PREVIEW_IMAGES = True
+
+# ==========================================================================================
+# GENERATION MODES
+#
+# REVIEW_DRAFT  writes an artifact whose unresolved instructional inputs are visible as
+#               labelled placeholders. That is the whole point of a review draft.
+# PRODUCTION    refuses to write anything at all while any required instructional input is
+#               unresolved. It does not degrade, it does not substitute, it raises.
+#
+# The builder takes a UNIT PACKET and an AUTHORITY CONTRACT rather than being wired to one
+# unit. `k5_calib_model_v1` remains the B03 packet; a packet from `pl06_packet_model_v1`
+# satisfies the same interface once its instructional fields are resolved.
+# ==========================================================================================
+REVIEW_DRAFT = "REVIEW_DRAFT"
+PRODUCTION = "PRODUCTION"
+MODES = [REVIEW_DRAFT, PRODUCTION]
+
+REQUIRED_FOR_PRODUCTION = ["CAST_UNRESOLVED", "DIALOGUE_ABSENT",
+                           "DIALOGUE_WORDING_UNRESOLVED", "RUMUSAN_ABSENT",
+                           "RUMUSAN_WORDING_UNRESOLVED", "QUIZ_UNRESOLVED",
+                           "QUIZ_KEY_UNRESOLVED", "VISUAL_DIRECTION_UNRESOLVED",
+                           "INTERACTION_TREATMENT_UNRESOLVED", "SOURCE_TRACE_UNRESOLVED"]
+PENDING_TOKENS = ["PENDING", "NAME_PENDING_PROPOSAL", "ROLE_NEW_REQUIRED",
+                  "EXCEPTION_FOR_REVIEW", "TBD"]
+
+
+class ProductionRefused(Exception):
+    """Raised instead of writing a production artifact with unresolved inputs."""
+
+
+def production_blockers(packet):
+    """Everything that must be resolved before PRODUCTION may write. Packet-driven."""
+    b = list(packet.get("production_blockers") or [])
+    for field in ("dialogue", "rumusan", "quiz", "visual_direction", "interaction"):
+        sec = packet.get(field) or {}
+        if any(tok in json.dumps(sec, ensure_ascii=False) for tok in PENDING_TOKENS):
+            b.append(f"{field.upper()}_CONTAINS_PENDING_MARKER")
+    if not (packet.get("controlled_source_rows") or {}).get("count"):
+        b.append("SOURCE_TRACE_UNRESOLVED")
+    return sorted(set(b))
+
+
+def guard_production(packet, mode):
+    """PRODUCTION refuses; REVIEW_DRAFT proceeds and labels. No third behaviour."""
+    if mode not in MODES:
+        raise ValueError(f"unknown mode {mode!r}; expected one of {MODES}")
+    if mode != PRODUCTION:
+        return production_blockers(packet)
+    blockers = production_blockers(packet)
+    if blockers:
+        raise ProductionRefused(
+            f"{packet.get('unit_id')}: PRODUCTION refused — unresolved instructional "
+            f"inputs: {', '.join(blockers)}")
+    return []
 
 # Runtime render status. Never hardcoded again: the previous constant asserted
 # NOT_CHECKED_POWERPOINT_RENDERER_UNAVAILABLE whether or not a renderer existed, so when

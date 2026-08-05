@@ -1,0 +1,267 @@
+{
+ "schema": "k5_instructional_authority_v1",
+ "stage": "4.2F-I",
+ "note": "Single machine-readable source for every instructional rule that packet generation depends on. Packet modules MUST read these values and MUST NOT duplicate them as literals. Every rule carries its own authority status; a rule that is PROPOSED_NOT_APPROVED is a drafting basis, never an approval.",
+ "effective_scope": {
+  "value": "FORWARD_FROM_B03",
+  "authority_status": "WRITTEN_CONFIRMED",
+  "authority_source": "Bariah written scope ruling",
+  "scope": "All PL06 generation from K5-PL06-T03-B03 forward.",
+  "exceptions": [
+   {
+    "unit_id": "K5-PL06-T03-B02",
+    "generation_scope": "LEGACY_RETAINED",
+    "artifact_profile": "LEGACY_STORYBOARD_ONLY",
+    "named_exception": "LAMPIRAN_NOT_PART_OF_ORIGINAL_DELIVERY_CONTRACT",
+    "basis": "Delivered and phone-approved before the Lampiran Keadaan artifact class existed. Its approval record names one artifact. No Lampiran was deleted or lost; none formed part of its approved delivery package."
+   },
+   {
+    "unit_id": "K5-PL06-T04-B01",
+    "generation_scope": "LEGACY_RETAINED",
+    "artifact_profile": "STORYBOARD_AND_LAMPIRAN",
+    "named_exception": null,
+    "basis": "Delivered under the current artifact shape; retained unchanged."
+   }
+  ]
+ },
+ "quiz": {
+  "mcq_count": {
+   "value": 4,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "A7",
+   "scope": "every PL06 unit",
+   "exceptions": []
+  },
+  "multiple_response_count": {
+   "value": 1,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "A7",
+   "scope": "every PL06 unit",
+   "exceptions": []
+  },
+  "pass_percent": {
+   "value": 60,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "A7",
+   "scope": "every PL06 unit",
+   "exceptions": []
+  },
+  "answer_key_approval": {
+   "value": "DRAFTED_NOT_APPROVED",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "A7 authorises composition only",
+   "scope": "keys are drafted by CAIR and approved by nobody",
+   "exceptions": []
+  }
+ },
+ "rumusan": {
+  "internal_beats": {
+   "value": [
+    "importance",
+    "scope",
+    "benefit"
+   ],
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "A6 as amended by the written course-wide rule",
+   "scope": "exactly three internal beats per unit; subtopics nest inside the scope beat and never become beats of their own",
+   "exceptions": []
+  },
+  "learner_facing_labels": {
+   "value": false,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written course-wide rule",
+   "scope": "beat labels are production metadata only",
+   "exceptions": []
+  },
+  "scope_lists_every_declared_subtopic": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written course-wide rule",
+   "scope": "scope beat enumerates every declared subtopic exactly once",
+   "exceptions": []
+  },
+  "forbidden_phrase": {
+   "value": "Unit ini",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written course-wide rule",
+   "scope": "must not appear in any learner-facing Rumusan copy",
+   "exceptions": []
+  },
+  "support_visual_required": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "A6",
+   "scope": "every Rumusan carries a supporting visual",
+   "exceptions": []
+  }
+ },
+ "characters": {
+  "approved": [
+   {
+    "name": "Alya",
+    "role": "Kontraktor Junior",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority_status": "WRITTEN_CONFIRMED",
+    "authority_source": "written character confirmation",
+    "may_speak": true
+   },
+   {
+    "name": "Encik Rahman",
+    "role": "Mentor / Kontraktor Senior",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority_status": "WRITTEN_CONFIRMED",
+    "authority_source": "written character confirmation",
+    "may_speak": true
+   },
+   {
+    "name": "Hilmi",
+    "role": "Narrator K5",
+    "role_family": "NARRATOR",
+    "authority_status": "WRITTEN_CONFIRMED",
+    "authority_source": "D2",
+    "may_speak": true
+   }
+  ],
+  "reuse_rule": {
+   "value": "SAME_ROLE_FAMILY_REUSES_THE_APPROVED_CHARACTER",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written character contract",
+   "scope": "applies before any new role may be proposed",
+   "exceptions": []
+  },
+  "new_role_rule": {
+   "value": "DIFFERENT_AUTHORITY_LICENCE_OR_COMPETENCE_PROPOSES_A_NEW_ROLE",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written character contract",
+   "scope": "a proposal is a ROLE, never a name",
+   "exceptions": []
+  },
+  "reference_only_rule": {
+   "value": "REFERENCE_ONLY_AUTHORITY_NEEDS_NO_SPEAKING_CHARACTER",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written character contract",
+   "scope": "an approval body or cited document is not a character",
+   "exceptions": []
+  },
+  "naming_of_new_roles": {
+   "value": "NAME_PENDING_PROPOSAL",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written character contract",
+   "scope": "no name may be invented for an unapproved role",
+   "exceptions": []
+  }
+ },
+ "dialogue": {
+  "tension_required": {
+   "value": true,
+   "authority_status": "PROPOSED_NOT_APPROVED",
+   "authority_source": "Firdaus proposed contract",
+   "scope": "S02 built on a work-related question, problem or tension",
+   "exceptions": []
+  },
+  "responses_source_backed": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "standing source-control rule",
+   "scope": "every substantive response cites controlled rows",
+   "exceptions": []
+  }
+ },
+ "visual_direction": {
+  "rp104_source_figure_required": {
+   "value": true,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "RP-104",
+   "scope": "a direction is read from a source figure or table, never composed from a component name",
+   "exceptions": []
+  },
+  "suits_unit_topic": {
+   "value": true,
+   "authority_status": "PROPOSED_NOT_APPROVED",
+   "authority_source": "Firdaus proposed contract",
+   "scope": "visual must suit the unit's own topic",
+   "exceptions": []
+  }
+ },
+ "interaction": {
+  "treatment_selection": {
+   "value": "READ_FROM_THE_MODULES_OWN_REPEATED_STRUCTURE",
+   "authority_status": "PROPOSED_NOT_APPROVED",
+   "authority_source": "Firdaus proposed contract",
+   "scope": "candidate only; Bariah may choose otherwise",
+   "exceptions": []
+  }
+ },
+ "package_shape": {
+  "total_units": {
+   "value": 14,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "frozen production inventory",
+   "exceptions": []
+  },
+  "legacy_retained": {
+   "value": 2,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "Bariah FORWARD_FROM_B03 scope",
+   "exceptions": []
+  },
+  "active_generation": {
+   "value": 12,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "14 total minus 2 legacy",
+   "exceptions": []
+  },
+  "total_storyboards": {
+   "value": 14,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "one per unit",
+   "exceptions": []
+  },
+  "total_lampiran": {
+   "value": 13,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "one per unit except the named B02 exception",
+   "exceptions": [
+    "K5-PL06-T03-B02"
+   ]
+  },
+  "total_primary_pptx": {
+   "value": 27,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "14 Storyboards + 13 Lampiran",
+   "exceptions": []
+  },
+  "named_legacy_exception": {
+   "value": 1,
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "B02 Lampiran not in delivery contract",
+   "exceptions": []
+  }
+ },
+ "legacy_artifacts": [
+  {
+   "unit_id": "K5-PL06-T03-B02",
+   "kind": "STORYBOARD",
+   "path": "reviews/source-completion/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4_1.pptx",
+   "bytes": 471881,
+   "slides": 100,
+   "sha256": "faef6c85745d2750236ffdf23fb7d14b81d26ed37c7db58ed274cb8d0f0178e5"
+  },
+  {
+   "unit_id": "K5-PL06-T04-B01",
+   "kind": "STORYBOARD",
+   "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STORYBOARD_FOR_BARIAH_REVIEW_v1_0.pptx",
+   "bytes": 76248,
+   "slides": 27,
+   "sha256": "d2157155a89c7fd2ff362daad08355296118cce72b74b8fb4c7825e1917042fa"
+  },
+  {
+   "unit_id": "K5-PL06-T04-B01",
+   "kind": "LAMPIRAN",
+   "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STATE_REVIEW_APPENDIX_v1_0.pptx",
+   "bytes": 83234,
+   "slides": 29,
+   "sha256": "13a3aabe0ad96e2c399185df61db7844fc21986b63e99da5fd6a88b055644cd4"
+  }
+ ]
+}

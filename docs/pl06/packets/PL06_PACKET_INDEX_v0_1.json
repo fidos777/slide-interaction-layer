@@ -1,0 +1,371 @@
+{
+ "stage": "4.2F-I",
+ "totals": {
+  "TOTAL_PL06_UNITS": 14,
+  "LEGACY_RETAINED": 2,
+  "ACTIVE_GENERATION": 12,
+  "ACTIVE_UNITS_WITH_EXTRACTION": 12,
+  "by_tier": {
+   "COMMITTED_ANALYSIS_AND_ROWS": 4,
+   "ROWS_ONLY": 8,
+   "NO_EXTRACTOR": 0
+  },
+  "completion": {
+   "PACKET_SCHEMA_COMPLETE": 12,
+   "SOURCE_EXTRACTION_COMPLETE": 12,
+   "SOURCE_ANALYSIS_COMPLETE": 4,
+   "DIALOGUE_COPY_COMPLETE": 12,
+   "RUMUSAN_COPY_COMPLETE": 12,
+   "QUIZ_COPY_COMPLETE": 10,
+   "VISUAL_DIRECTION_COMPLETE": 12,
+   "INTERACTION_TREATMENT_COMPLETE": 12,
+   "PRODUCTION_READY": 0
+  },
+  "role_instances": 28,
+  "speaker_not_required": 9,
+  "reuse_alya": 11,
+  "reuse_encik_rahman": 8,
+  "new_role_required": 0,
+  "distinct_new_roles": 0,
+  "quiz_items_drafted": 58,
+  "quiz_anchored_slots": 2,
+  "dialogue_judgment_required": 0,
+  "source_rows_total": 1568,
+  "legacy_artifacts": 3
+ },
+ "package_shape": {
+  "total_units": 14,
+  "legacy_retained": 2,
+  "active_generation": 12,
+  "total_storyboards": 14,
+  "total_lampiran": 13,
+  "total_primary_pptx": 27,
+  "named_legacy_exception": 1
+ },
+ "approved_cast": [
+  {
+   "name": "Alya",
+   "role": "Kontraktor Junior",
+   "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written character confirmation",
+   "may_speak": true
+  },
+  {
+   "name": "Encik Rahman",
+   "role": "Mentor / Kontraktor Senior",
+   "role_family": "MENTOR_CONTRACTOR_SENIOR",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "written character confirmation",
+   "may_speak": true
+  },
+  {
+   "name": "Hilmi",
+   "role": "Narrator K5",
+   "role_family": "NARRATOR",
+   "authority_status": "WRITTEN_CONFIRMED",
+   "authority_source": "D2",
+   "may_speak": true
+  }
+ ],
+ "legacy": [
+  {
+   "unit_id": "K5-PL06-T03-B02",
+   "topik": 3,
+   "bahagian": 2,
+   "title": "Struktur Taman dan Perabot Taman",
+   "generation_scope": "LEGACY_RETAINED",
+   "artifact_profile": "LEGACY_STORYBOARD_ONLY",
+   "named_exception": "LAMPIRAN_NOT_PART_OF_ORIGINAL_DELIVERY_CONTRACT",
+   "basis": "Delivered and phone-approved before the Lampiran Keadaan artifact class existed. Its approval record names one artifact. No Lampiran was deleted or lost; none formed part of its approved delivery package.",
+   "declared_artifacts": [
+    {
+     "unit_id": "K5-PL06-T03-B02",
+     "kind": "STORYBOARD",
+     "path": "reviews/source-completion/K5PL06T03B02_STORYBOARD_FOR_BARIAH_REVIEW_v0_4_4_1.pptx",
+     "bytes": 471881,
+     "slides": 100,
+     "sha256": "faef6c85745d2750236ffdf23fb7d14b81d26ed37c7db58ed274cb8d0f0178e5"
+    }
+   ],
+   "artifact_count": 1,
+   "production_packet": false,
+   "note": "Retained artifact. No production packet is created and this unit never appears in PRODUCTION refusal totals."
+  },
+  {
+   "unit_id": "K5-PL06-T04-B01",
+   "topik": 4,
+   "bahagian": 1,
+   "title": "Penjagaan dan Penyelenggaraan",
+   "generation_scope": "LEGACY_RETAINED",
+   "artifact_profile": "STORYBOARD_AND_LAMPIRAN",
+   "named_exception": null,
+   "basis": "Delivered under the current artifact shape; retained unchanged.",
+   "declared_artifacts": [
+    {
+     "unit_id": "K5-PL06-T04-B01",
+     "kind": "STORYBOARD",
+     "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STORYBOARD_FOR_BARIAH_REVIEW_v1_0.pptx",
+     "bytes": 76248,
+     "slides": 27,
+     "sha256": "d2157155a89c7fd2ff362daad08355296118cce72b74b8fb4c7825e1917042fa"
+    },
+    {
+     "unit_id": "K5-PL06-T04-B01",
+     "kind": "LAMPIRAN",
+     "path": "reviews/storyboard-bariah/t04_storyboard/K5PL06T04B01_STATE_REVIEW_APPENDIX_v1_0.pptx",
+     "bytes": 83234,
+     "slides": 29,
+     "sha256": "13a3aabe0ad96e2c399185df61db7844fc21986b63e99da5fd6a88b055644cd4"
+    }
+   ],
+   "artifact_count": 2,
+   "production_packet": false,
+   "note": "Retained artifact. No production packet is created and this unit never appears in PRODUCTION refusal totals."
+  }
+ ],
+ "units": [
+  {
+   "unit_id": "K5-PL06-T01-B01",
+   "title": "Proses Memula Kerja - Penyediaan Tapak",
+   "tier": "ROWS_ONLY",
+   "rows": 258,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": false,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN",
+    "QUIZ_KEY_UNRESOLVED"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T01-B02",
+   "title": "Jadual Kerja dan Perlaksanaan Pembinaan Landskap",
+   "tier": "ROWS_ONLY",
+   "rows": 100,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": false,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN",
+    "QUIZ_KEY_UNRESOLVED"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T01-B03",
+   "title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+   "tier": "ROWS_ONLY",
+   "rows": 146,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T02-B01",
+   "title": "Elemen Landskap Kejur dan Elemen Landskap Lembut/Penanaman",
+   "tier": "ROWS_ONLY",
+   "rows": 180,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T02-B02",
+   "title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+   "tier": "ROWS_ONLY",
+   "rows": 90,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T03-B01",
+   "title": "Kawasan Berturap dan Gelanggang Sukan & Permainan",
+   "tier": "ROWS_ONLY",
+   "rows": 121,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T03-B03",
+   "title": "Infrastruktur",
+   "tier": "COMMITTED_ANALYSIS_AND_ROWS",
+   "rows": 76,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": true,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T03-B04",
+   "title": "Badan Air (Water Body)",
+   "tier": "COMMITTED_ANALYSIS_AND_ROWS",
+   "rows": 92,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": true,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T03-B05",
+   "title": "Pencahayaan dan Pengairan",
+   "tier": "ROWS_ONLY",
+   "rows": 189,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T05-B01",
+   "title": "Pengurusan Kualiti Projek",
+   "tier": "COMMITTED_ANALYSIS_AND_ROWS",
+   "rows": 132,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": true,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T06-B01",
+   "title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+   "tier": "COMMITTED_ANALYSIS_AND_ROWS",
+   "rows": 118,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": true,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  },
+  {
+   "unit_id": "K5-PL06-T07-B01",
+   "title": "Demobilisasi",
+   "tier": "ROWS_ONLY",
+   "rows": 66,
+   "completion": {
+    "PACKET_SCHEMA_COMPLETE": true,
+    "SOURCE_EXTRACTION_COMPLETE": true,
+    "SOURCE_ANALYSIS_COMPLETE": false,
+    "DIALOGUE_COPY_COMPLETE": true,
+    "RUMUSAN_COPY_COMPLETE": true,
+    "QUIZ_COPY_COMPLETE": true,
+    "VISUAL_DIRECTION_COMPLETE": true,
+    "INTERACTION_TREATMENT_COMPLETE": true,
+    "PRODUCTION_READY": false
+   },
+   "blockers": [
+    "AWAITING_BARIAH_WRITTEN_RETURN"
+   ]
+  }
+ ]
+}

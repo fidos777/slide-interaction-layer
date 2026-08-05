@@ -1,0 +1,394 @@
+{
+ "unit_id": "K5-PL06-T01-B03",
+ "topik": 1,
+ "bahagian": 3,
+ "title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+  "items": [
+   "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+  ],
+  "count": 1
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 146,
+  "structural_headings": 8,
+  "first_row": "T01B03-ROW-001",
+  "last_row": "T01B03-ROW-146"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T01-B03",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B03-ROW-107",
+      "text": "Gaji pekerja am, tukang kebun, pemandu jentera, dan bayaran kepada sub-kontraktor."
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B03",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B03-ROW-005",
+      "text": "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B03",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B03-ROW-008",
+      "text": "Juruukur Bahan (Quantity Surveyor) – Menyediakan anggaran kos dan kawalan belanjawan."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "speaker_not_required": [
+   {
+    "unit_id": "K5-PL06-T01-B03",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B03-ROW-008",
+      "text": "Juruukur Bahan (Quantity Surveyor) – Menyediakan anggaran kos dan kawalan belanjawan."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "RISK",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Menggunakan penguji megger untuk memastikan penebatan kabel tidak rosak atau bocor, yang boleh menyebabkan litar pintas atau risiko renjatan elektrik.",
+    "rows": [
+     "T01B03-ROW-125"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
+    "rows": [
+     "T01B03-ROW-142"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Menggunakan penguji megger untuk memastikan penebatan kabel tidak rosak atau bocor, yang boleh menyebabkan litar pintas atau risiko renjatan elektrik.",
+    "rows": [
+     "T01B03-ROW-125"
+    ],
+    "kind": "RISK"
+   },
+   {
+    "text": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
+    "rows": [
+     "T01B03-ROW-142"
+    ],
+    "kind": "RISK"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+    "rows": [
+     "T01B03-ROW-002"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+    ],
+    "subtopic_count": 1,
+    "text": "Skop: 1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Pekerja Am – Membantu dalam kerja asas dan buruh am.",
+    "rows": [
+     "T01B03-ROW-017"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Sumber Manusia?",
+    "correct": "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+    "correct_rows": [
+     "T01B03-ROW-004"
+    ],
+    "anchor_row": "T01B03-ROW-003",
+    "distractors": [
+     "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+     "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek.",
+     "Arkitek Landskap / Pereka Landskap – Menyediakan pelan, reka bentuk dan skema tanaman."
+    ],
+    "feedback": "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Bahan Penanaman?",
+    "correct": "Pokok-pokok (berteduh, hiasan, tempatan).",
+    "correct_rows": [
+     "T01B03-ROW-038"
+    ],
+    "anchor_row": "T01B03-ROW-037",
+    "distractors": [
+     "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+     "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+     "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+    ],
+    "feedback": "Pokok-pokok (berteduh, hiasan, tempatan).",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Perisian & Alat Komunikasi?",
+    "correct": "Alat bantu pengurusan dan koordinasi projek:",
+    "correct_rows": [
+     "T01B03-ROW-084"
+    ],
+    "anchor_row": "T01B03-ROW-083",
+    "distractors": [
+     "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+     "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+     "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+    ],
+    "feedback": "Alat bantu pengurusan dan koordinasi projek:",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pengurusan Aliran Tunai bagi Operasi Pembinaan?",
+    "correct": "Pengurusan Aliran Tunai adalah proses memantau, menganalisis, dan mengoptimumkan pergerakan wang masuk dan wang keluar dalam perniagaan anda sepanjang tempoh projek.",
+    "correct_rows": [
+     "T01B03-ROW-090"
+    ],
+    "anchor_row": "T01B03-ROW-089",
+    "distractors": [
+     "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+     "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+     "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+    ],
+    "feedback": "Pengurusan Aliran Tunai adalah proses memantau, menganalisis, dan mengoptimumkan pergerakan wang masuk dan wang keluar dalam perniagaan anda sepanjang tempoh projek.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pengujian dan Pentauliahan (T&C) Sambungan Utiliti?",
+    "correct": "Pengujian dan Pentauliahan (T&C) bagi sambungan utiliti adalah fasa kritikal dalam pengurusan operasi projek landskap luar.",
+    "correct_rows": [
+     "T01B03-ROW-113"
+    ],
+    "anchor_row": "T01B03-ROW-112",
+    "distractors": [
+     "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+     "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+     "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+    ],
+    "feedback": "Pengujian dan Pentauliahan (T&C) bagi sambungan utiliti adalah fasa kritikal dalam pengurusan operasi projek landskap luar.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Rajah sumber pada T01B03-ROW-055",
+    "rows": [
+     "T01B03-ROW-055"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T01B03-ROW-057",
+    "rows": [
+     "T01B03-ROW-057"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T01B03-ROW-059",
+    "rows": [
+     "T01B03-ROW-059"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T01B03-ROW-077",
+    "rows": [
+     "T01B03-ROW-077"
+    ],
+    "has_source_figure": true
+   }
+  ],
+  "count": 4,
+  "copy_complete": true,
+  "source_attested": 6,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 0,
+  "reason": "8 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a RISK anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "8 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

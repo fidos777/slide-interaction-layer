@@ -1,0 +1,432 @@
+{
+ "unit_id": "K5-PL06-T01-B01",
+ "topik": 1,
+ "bahagian": 1,
+ "title": "Proses Memula Kerja - Penyediaan Tapak",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "1.1 Penyediaan Tapak",
+  "items": [
+   "1.1 Penyediaan Tapak"
+  ],
+  "count": 1
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 258,
+  "structural_headings": 6,
+  "first_row": "T01B01-ROW-001",
+  "last_row": "T01B01-ROW-258"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B01-ROW-006",
+      "text": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula. Ia menandakan permulaan rasmi opera"
+     },
+     {
+      "row_id": "T01B01-ROW-024",
+      "text": "Selari dengan kerja-kerja penyediaan tapak, adalah menjadi tanggungjawab utama kontraktor untuk memelihara dan melindungi aset sedia ada di tapak yang telah dikenal pasti untuk dik"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B01-ROW-012",
+      "text": "Memastikan pasukan kerja yang diperlukan, termasuk penyelia tapak, operator jentera, dan pekerja am, berada di tapak dan telah diberi taklimat keselamatan serta penerangan skop ker"
+     },
+     {
+      "row_id": "T01B01-ROW-201",
+      "text": "Papan tanda yang memaparkan maklumat hubungan kecemasan (contoh: Ambulans, Bomba, Polis, Pejabat Tapak) dan nama serta nombor telefon Person-in-Charge (PIC) atau Penyelia Tapak ada"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "role_id": "ROLE-JURUTERA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B01-ROW-135",
+      "text": "Lukisan red mark-up ini menjadi dokumen rasmi untuk berkomunikasi dengan perunding (Arkitek Landskap/Jurutera) dan menjadi asas kepada Permintaan Maklumat (Request for Information "
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B01-ROW-002",
+      "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+     },
+     {
+      "row_id": "T01B01-ROW-004",
+      "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "speaker_not_required": [
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "role_id": "ROLE-JURUTERA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B01-ROW-135",
+      "text": "Lukisan red mark-up ini menjadi dokumen rasmi untuk berkomunikasi dengan perunding (Arkitek Landskap/Jurutera) dan menjadi asas kepada Permintaan Maklumat (Request for Information "
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B01",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B01-ROW-002",
+      "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+     },
+     {
+      "row_id": "T01B01-ROW-004",
+      "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "OBLIGATION",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Pokok-pokok matang atau elemen semula jadi lain yang bernilai estetik atau ekologi mesti dilindungi sepenuhnya.",
+    "rows": [
+     "T01B01-ROW-026"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Kawasan ini wajib dipagar dengan jelas menggunakan pagar hoarding atau orange netting.",
+    "rows": [
+     "T01B01-ROW-048"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Pokok-pokok matang atau elemen semula jadi lain yang bernilai estetik atau ekologi mesti dilindungi sepenuhnya.",
+    "rows": [
+     "T01B01-ROW-026"
+    ],
+    "kind": "OBLIGATION"
+   },
+   {
+    "text": "Kawasan ini wajib dipagar dengan jelas menggunakan pagar hoarding atau orange netting.",
+    "rows": [
+     "T01B01-ROW-048"
+    ],
+    "kind": "OBLIGATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+    "rows": [
+     "T01B01-ROW-002"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "1.1 Penyediaan Tapak"
+    ],
+    "subtopic_count": 1,
+    "text": "Skop: 1.1 Penyediaan Tapak",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Melindungi struktur, longkang, atau laluan sedia ada yang bersebelahan dengan kawasan kerja daripada sebarang kerosakan.",
+    "rows": [
+     "T01B01-ROW-028"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Mobilisasi Tapak (Site Mobilisation)?",
+    "correct": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula.",
+    "correct_rows": [
+     "T01B01-ROW-006"
+    ],
+    "anchor_row": "T01B01-ROW-005",
+    "distractors": [
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Penubuhan Pejabat Tapak dan Kemudahan Asas"
+    ],
+    "feedback": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Penyediaan Tapak (Site Preparation)?",
+    "correct": "Setelah mobilisasi selesai, kerja penyediaan fizikal tapak dimulakan.",
+    "correct_rows": [
+     "T01B01-ROW-016"
+    ],
+    "anchor_row": "T01B01-ROW-015",
+    "distractors": [
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula."
+    ],
+    "feedback": "Setelah mobilisasi selesai, kerja penyediaan fizikal tapak dimulakan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Penandaan Tapak (Setting out / Site Pegging)?",
+    "correct": "Penandaan Tapak, juga dikenali sebagai setting out atau pemancangan (pegging), adalah proses teknikal yang kritikal untuk memindahkan butiran-butiran daripada pelan reka bentuk ke lokasi sebenar di atas tanah.",
+    "correct_rows": [
+     "T01B01-ROW-173"
+    ],
+    "anchor_row": "T01B01-ROW-172",
+    "distractors": [
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula."
+    ],
+    "feedback": "Penandaan Tapak, juga dikenali sebagai setting out atau pemancangan (pegging), adalah proses teknikal yang kritikal untuk memindahkan butiran-butiran daripada pelan reka bentuk ke lokasi sebenar di atas tanah.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pemeriksaan Tapak & Pengesahan Kerja Mengukur?",
+    "correct": "Setiap kontraktor bertanggungjawab sepenuhnya untuk memastikan semua aktiviti tinjauan dijalankan dengan mematuhi empat tonggak utama pematuhan: Kesihatan & Keselamatan (HSE), standard peralatan, keperluan Pihak Berkuasa Tempatan (PBT), dan peraturan Badan Pengawal Selia.",
+    "correct_rows": [
+     "T01B01-ROW-190"
+    ],
+    "anchor_row": "T01B01-ROW-188",
+    "distractors": [
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+     "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula."
+    ],
+    "feedback": "Setiap kontraktor bertanggungjawab sepenuhnya untuk memastikan semua aktiviti tinjauan dijalankan dengan mematuhi empat tonggak utama pematuhan: Kesihatan & Keselamatan (HSE), standard peralatan, keperluan Pihak Berkuasa Tempatan (PBT), dan peraturan Badan Pengawal Selia.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": null,
+    "correct": null,
+    "correct_rows": [],
+    "anchor_row": null,
+    "distractors": [],
+    "feedback": null,
+    "state": "QUIZ_ANCHORED_SLOT",
+    "key_status": "NO_KEY_PENDING_AUTHORING"
+   }
+  ],
+  "drafted": 4,
+  "anchored": 1
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Keratan atau susunan bagi PROSES MEMULA KERJA",
+    "rows": [
+     "T01B01-ROW-001"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Penyediaan Tapak",
+    "rows": [
+     "T01B01-ROW-003"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Mobilisasi Tapak (Site Mobilisation)",
+    "rows": [
+     "T01B01-ROW-005"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 0,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 0,
+  "reason": "6 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "6 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUTERA=SPEAKER_NOT_REQUIRED; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": false,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN",
+  "QUIZ_KEY_UNRESOLVED"
+ ]
+}

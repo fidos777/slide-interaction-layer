@@ -1,0 +1,469 @@
+{
+ "unit_id": "K5-PL06-T03-B03",
+ "topik": 3,
+ "bahagian": 3,
+ "title": "Infrastruktur",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "3.5 Infrastruktur",
+  "items": [
+   "3.5 Infrastruktur"
+  ],
+  "count": 1
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 76,
+  "structural_headings": 39,
+  "first_row": "T03B03-ROW-001",
+  "last_row": "T03B03-ROW-076"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-007",
+      "text": "Fokus Utama Kontraktor"
+     },
+     {
+      "row_id": "T03B03-ROW-019",
+      "text": "Fokus Utama Kontraktor"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-JURUTERA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-036",
+      "text": "Lukisan Jurutera"
+     },
+     {
+      "row_id": "T03B03-ROW-037",
+      "text": "Dinding penahan mesti dibina dengan mematuhi sepenuhnya Lukisan Struktur Jurutera Bertauliah (Ir.). Sebarang perubahan memerlukan kelulusan jurutera."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-PEGAWAI-PENGUASA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-011",
+      "text": "Bahan tanah yang digunakan mestilah bahan yang sesuai, bebas daripada sisa binaan, akar kayu, dan batu besar. Tanah mestilah diluluskan oleh Pegawai Penguasa (S.O.)."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The S.O. appears as an APPROVAL BODY. Approval is an event, not a speaking part."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-048",
+      "text": "Jajaran pagar mesti ditanda mengikut Pelan Ukur Sempadan untuk mengelakkan isu pencerobohan tanah."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "speaker_not_required": [
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-JURUTERA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-036",
+      "text": "Lukisan Jurutera"
+     },
+     {
+      "row_id": "T03B03-ROW-037",
+      "text": "Dinding penahan mesti dibina dengan mematuhi sepenuhnya Lukisan Struktur Jurutera Bertauliah (Ir.). Sebarang perubahan memerlukan kelulusan jurutera."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-PEGAWAI-PENGUASA",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-011",
+      "text": "Bahan tanah yang digunakan mestilah bahan yang sesuai, bebas daripada sisa binaan, akar kayu, dan batu besar. Tanah mestilah diluluskan oleh Pegawai Penguasa (S.O.)."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The S.O. appears as an APPROVAL BODY. Approval is an event, not a speaking part."
+   },
+   {
+    "unit_id": "K5-PL06-T03-B03",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T03B03-ROW-048",
+      "text": "Jajaran pagar mesti ditanda mengikut Pelan Ukur Sempadan untuk mengelakkan isu pencerobohan tanah."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "NAMED_PROFESSIONAL_AUTHORITY",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Dinding penahan mesti mematuhi lukisan struktur jurutera bertauliah (Ir.) — a professional-liability boundary, not a contractor preference.",
+    "rows": [
+     "T03B03-ROW-037"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Jajaran pagar mengikut Pelan Ukur Sempadan — a land-encroachment exposure.",
+    "rows": [
+     "T03B03-ROW-048"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Dinding penahan mesti mematuhi lukisan struktur jurutera bertauliah (Ir.) — a professional-liability boundary, not a contractor preference.",
+    "rows": [
+     "T03B03-ROW-037"
+    ],
+    "kind": "NAMED_PROFESSIONAL_AUTHORITY"
+   },
+   {
+    "text": "Jajaran pagar mengikut Pelan Ukur Sempadan — a land-encroachment exposure.",
+    "rows": [
+     "T03B03-ROW-048"
+    ],
+    "kind": "LEGAL_BOUNDARY_EXPOSURE"
+   },
+   {
+    "text": "Kemasan anti-karat tergalvani panas untuk komponen keluli.",
+    "rows": [
+     "T03B03-ROW-054"
+    ],
+    "kind": "MATERIAL_SPECIFICATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Busut tanah mesti dibina secara berperingkat dalam lapisan-lapisan tidak melebihi 300mm tebal.",
+    "rows": [
+     "T03B03-ROW-013"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "3.5 Infrastruktur"
+    ],
+    "subtopic_count": 1,
+    "text": "Skop: 3.5 Infrastruktur",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Busut tanah mesti dibina secara berperingkat dalam lapisan-lapisan tidak melebihi 300mm tebal.",
+    "rows": [
+     "T03B03-ROW-013"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "COMMITTED_UNIT_ITEMS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah ketebalan maksimum setiap lapisan semasa membina busut tanah (earthmound)?",
+    "correct": "Tidak melebihi 300mm setiap lapisan, dan setiap lapisan dipadatkan.",
+    "correct_rows": [
+     "T03B03-ROW-013"
+    ],
+    "distractors": [
+     "Tidak melebihi 600mm, dipadatkan sekali pada akhir",
+     "Tiada had ketebalan selagi jentera boleh memadat",
+     "Satu lapisan penuh sehingga ketinggian puncak"
+    ],
+    "feedback": "Tidak melebihi 300mm setiap lapisan, dan setiap lapisan dipadatkan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Mengapakah sistem perparitan di belakang dinding penahan adalah wajib?",
+    "correct": "Kerana kegagalan dinding penahan selalunya berpunca daripada tekanan air (hydrostatic pressure).",
+    "correct_rows": [
+     "T03B03-ROW-041"
+    ],
+    "distractors": [
+     "Kerana ia mengurangkan kos konkrit dinding",
+     "Kerana ia diperlukan untuk kemasan estetik belakang dinding",
+     "Kerana ia menggantikan keperluan tapak asas"
+    ],
+    "feedback": "Kerana kegagalan dinding penahan selalunya berpunca daripada tekanan air (hydrostatic pressure).",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Pelan manakah yang menentukan jajaran pagar di tapak?",
+    "correct": "Pelan Ukur Sempadan.",
+    "correct_rows": [
+     "T03B03-ROW-048"
+    ],
+    "distractors": [
+     "Pelan Saliran",
+     "Lukisan Struktur Jurutera",
+     "Pelan Susun Atur Tanaman"
+    ],
+    "feedback": "Pelan Ukur Sempadan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah fungsi kamber (camber) pada permukaan jalan akses?",
+    "correct": "Memberikan kecerunan melintang dari tengah ke tepi supaya air tidak bertakung di permukaan.",
+    "correct_rows": [
+     "T03B03-ROW-076"
+    ],
+    "distractors": [
+     "Menambah ketebalan lapisan permukaan di bahagian tengah",
+     "Menandakan sempadan jalan untuk pemandu",
+     "Menahan lapisan permukaan daripada bergerak ke tepi"
+    ],
+    "feedback": "Memberikan kecerunan melintang dari tengah ke tepi supaya air tidak bertakung di permukaan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA ciri yang menepati swale sebagai alternatif kepada longkang konkrit.",
+    "correct": [
+     "Parit yang cetek dan lebar",
+     "Ditanami rumput atau tumbuhan tahan air",
+     "Memperlahankan aliran air larian permukaan",
+     "Menggalakkan penyerapan air ke dalam tanah"
+    ],
+    "correct_rows": [
+     "T03B03-ROW-056",
+     "T03B03-ROW-058",
+     "T03B03-ROW-063"
+    ],
+    "distractors": [
+     "Dilapisi konkrit di seluruh permukaannya",
+     "Direka untuk mempercepatkan aliran ke saluran keluar"
+    ],
+    "feedback": [
+     "Parit yang cetek dan lebar",
+     "Ditanami rumput atau tumbuhan tahan air",
+     "Memperlahankan aliran air larian permukaan",
+     "Menggalakkan penyerapan air ke dalam tanah"
+    ],
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "COMMITTED_UNIT_SUBJECTS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Busut tanah berlapis 300mm dengan kecerunan 1:3",
+    "rows": [
+     "T03B03-ROW-013",
+     "T03B03-ROW-015"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan rentas dinding penahan dengan sistem perparitan di belakang",
+    "rows": [
+     "T03B03-ROW-039",
+     "T03B03-ROW-041"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan rentas swale bertanam",
+    "rows": [
+     "T03B03-ROW-056",
+     "T03B03-ROW-061"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Susunan lapisan jalan akses: sub-base, bebendul, permukaan, kamber",
+    "rows": [
+     "T03B03-ROW-070",
+     "T03B03-ROW-072",
+     "T03B03-ROW-074",
+     "T03B03-ROW-076"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 4,
+  "copy_complete": true,
+  "source_attested": 0
+ },
+ "interaction": {
+  "cls": "COMMITTED_UNIT_PATTERN",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "comparison",
+  "reason": "Six parallel components with the same internal shape — Fungsi, then Fokus Utama Kontraktor. That is the shape click-to-reveal fits; comparison is the alternative if the six are better read side by side than one at a time.",
+  "resolved": true,
+  "repeated_components": 6
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a NAMED_PROFESSIONAL_AUTHORITY anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "Six parallel components with the same internal shape — Fungsi, then Fokus Utama Kontraktor. That is the shape click-to-reveal fits; comparison is the alternative if the six are better read side by side than one at a time.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-JURUTERA=SPEAKER_NOT_REQUIRED; ROLE-PEGAWAI-PENGUASA=SPEAKER_NOT_REQUIRED; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": true,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

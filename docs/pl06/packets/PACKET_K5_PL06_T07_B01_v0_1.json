@@ -1,0 +1,364 @@
+{
+ "unit_id": "K5-PL06-T07-B01",
+ "topik": 7,
+ "bahagian": 1,
+ "title": "Demobilisasi",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "7.1 Tujuan Demobilisasi + 7.2 Proses Demobilisasi + 7.3 Kepentingan Perancangan Demobilisasi",
+  "items": [
+   "7.1 Tujuan Demobilisasi",
+   "7.2 Proses Demobilisasi",
+   "7.3 Kepentingan Perancangan Demobilisasi"
+  ],
+  "count": 3
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 66,
+  "structural_headings": 19,
+  "first_row": "T07B01-ROW-001",
+  "last_row": "T07B01-ROW-066"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T07-B01",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T07B01-ROW-017",
+      "text": "Sebuah mini excavator yang digunakan untuk menggali kolam hiasan akan dicuci bersih, diperiksa untuk kerosakan, dan diangkut menggunakan low-loader (treler pengangkut jentera berat"
+     },
+     {
+      "row_id": "T07B01-ROW-028",
+      "text": "Kontraktor perlu mematuhi Peraturan Kualiti Alam Sekeliling (Buangan Terjadual) jika ada sisa berbahaya, dan peraturan pengurusan sisa pepejal perbandaran. Kontraktor perlu menyedi"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T07-B01",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T07B01-ROW-015",
+      "text": "Ini adalah langkah pertama dan paling jelas dalam demobilisasi. Semua peralatan dan jentera berat yang digunakan sepanjang projek perlu dikeluarkan dari tapak. Melibatkan penyenara"
+     },
+     {
+      "row_id": "T07B01-ROW-017",
+      "text": "Sebuah mini excavator yang digunakan untuk menggali kolam hiasan akan dicuci bersih, diperiksa untuk kerosakan, dan diangkut menggunakan low-loader (treler pengangkut jentera berat"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   }
+  ],
+  "speaker_not_required": [],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "OBLIGATION",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan.",
+    "rows": [
+     "T07B01-ROW-021"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Piawaian kebersihan mesti ditetapkan dalam kontrak.",
+    "rows": [
+     "T07B01-ROW-036"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan.",
+    "rows": [
+     "T07B01-ROW-021"
+    ],
+    "kind": "OBLIGATION"
+   },
+   {
+    "text": "Piawaian kebersihan mesti ditetapkan dalam kontrak.",
+    "rows": [
+     "T07B01-ROW-036"
+    ],
+    "kind": "OBLIGATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+    "rows": [
+     "T07B01-ROW-004"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "7.1 Tujuan Demobilisasi",
+     "7.2 Proses Demobilisasi",
+     "7.3 Kepentingan Perancangan Demobilisasi"
+    ],
+    "subtopic_count": 3,
+    "text": "Skop: 7.1 Tujuan Demobilisasi; 7.2 Proses Demobilisasi; 7.3 Kepentingan Perancangan Demobilisasi",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan.",
+    "rows": [
+     "T07B01-ROW-021"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Keselamatan Tapak?",
+    "correct": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+    "correct_rows": [
+     "T07B01-ROW-004"
+    ],
+    "anchor_row": "T07B01-ROW-003",
+    "distractors": [
+     "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+     "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+     "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui."
+    ],
+    "feedback": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Kepatuhan Kontrak?",
+    "correct": "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+    "correct_rows": [
+     "T07B01-ROW-006"
+    ],
+    "anchor_row": "T07B01-ROW-005",
+    "distractors": [
+     "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+     "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+     "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui."
+    ],
+    "feedback": "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pengurangan Kos?",
+    "correct": "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+    "correct_rows": [
+     "T07B01-ROW-008"
+    ],
+    "anchor_row": "T07B01-ROW-007",
+    "distractors": [
+     "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+     "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+     "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui."
+    ],
+    "feedback": "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pemulihan Alam Sekitar?",
+    "correct": "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui.",
+    "correct_rows": [
+     "T07B01-ROW-010"
+    ],
+    "anchor_row": "T07B01-ROW-009",
+    "distractors": [
+     "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+     "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+     "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak."
+    ],
+    "feedback": "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pengurusan Logistik?",
+    "correct": "Mengeluarkan aset syarikat secara cekap untuk digunakan dalam projek seterusnya.",
+    "correct_rows": [
+     "T07B01-ROW-012"
+    ],
+    "anchor_row": "T07B01-ROW-011",
+    "distractors": [
+     "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+     "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+     "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak."
+    ],
+    "feedback": "Mengeluarkan aset syarikat secara cekap untuk digunakan dalam projek seterusnya.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Keratan atau susunan bagi DEMOBILISASI",
+    "rows": [
+     "T07B01-ROW-001"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Tujuan Demobilisasi",
+    "rows": [
+     "T07B01-ROW-002"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Keselamatan Tapak",
+    "rows": [
+     "T07B01-ROW-003"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 0,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 0,
+  "reason": "19 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "19 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

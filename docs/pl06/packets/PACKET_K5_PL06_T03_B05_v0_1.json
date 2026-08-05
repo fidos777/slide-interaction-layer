@@ -1,0 +1,335 @@
+{
+ "unit_id": "K5-PL06-T03-B05",
+ "topik": 3,
+ "bahagian": 5,
+ "title": "Pencahayaan dan Pengairan",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "3.7 Pencahayaan / Lighting + 3.8 Pengairan (Irrigation)",
+  "items": [
+   "3.7 Pencahayaan / Lighting",
+   "3.8 Pengairan (Irrigation)"
+  ],
+  "count": 2
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 189,
+  "structural_headings": 88,
+  "first_row": "T03B05-ROW-001",
+  "last_row": "T03B05-ROW-189"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T03-B05",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T03B05-ROW-002",
+      "text": "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja. Bagi seorang kontraktor, pema"
+     },
+     {
+      "row_id": "T03B05-ROW-012",
+      "text": "Aspek Pemasangan & Pengurusan Kritikal untuk Kontraktor:"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   }
+  ],
+  "speaker_not_required": [],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "OBLIGATION",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Ini adalah peringkat paling kritikal.",
+    "rows": [
+     "T03B05-ROW-014"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Lazimnya menggunakan voltan 240V.",
+    "rows": [
+     "T03B05-ROW-016"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Ini adalah peringkat paling kritikal.",
+    "rows": [
+     "T03B05-ROW-014"
+    ],
+    "kind": "OBLIGATION"
+   },
+   {
+    "text": "Lazimnya menggunakan voltan 240V.",
+    "rows": [
+     "T03B05-ROW-016"
+    ],
+    "kind": "OBLIGATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+    "rows": [
+     "T03B05-ROW-002"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "3.7 Pencahayaan / Lighting",
+     "3.8 Pengairan (Irrigation)"
+    ],
+    "subtopic_count": 2,
+    "text": "Skop: 3.7 Pencahayaan / Lighting; 3.8 Pengairan (Irrigation)",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Lazimnya menggunakan voltan 240V.",
+    "rows": [
+     "T03B05-ROW-016"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pole Light?",
+    "correct": "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+    "correct_rows": [
+     "T03B05-ROW-004"
+    ],
+    "anchor_row": "T03B05-ROW-003",
+    "distractors": [
+     "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+     "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+     "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam."
+    ],
+    "feedback": "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Fungsi Utama?",
+    "correct": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+    "correct_rows": [
+     "T03B05-ROW-007"
+    ],
+    "anchor_row": "T03B05-ROW-005",
+    "distractors": [
+     "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+     "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+     "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam."
+    ],
+    "feedback": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Keselamatan & Sekuriti?",
+    "correct": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+    "correct_rows": [
+     "T03B05-ROW-007"
+    ],
+    "anchor_row": "T03B05-ROW-006",
+    "distractors": [
+     "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+     "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+     "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam."
+    ],
+    "feedback": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pencahayaan Umum?",
+    "correct": "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam.",
+    "correct_rows": [
+     "T03B05-ROW-009"
+    ],
+    "anchor_row": "T03B05-ROW-008",
+    "distractors": [
+     "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+     "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+     "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah."
+    ],
+    "feedback": "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Navigasi?",
+    "correct": "Menjadi penanda visual yang jelas bagi laluan utama dari jarak jauh.",
+    "correct_rows": [
+     "T03B05-ROW-011"
+    ],
+    "anchor_row": "T03B05-ROW-010",
+    "distractors": [
+     "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+     "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+     "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah."
+    ],
+    "feedback": "Menjadi penanda visual yang jelas bagi laluan utama dari jarak jauh.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Keratan atau susunan bagi Pencahayaan / Lighting",
+    "rows": [
+     "T03B05-ROW-001"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Pole Light",
+    "rows": [
+     "T03B05-ROW-003"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Fungsi Utama",
+    "rows": [
+     "T03B05-ROW-005"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 0,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 0,
+  "reason": "88 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "88 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

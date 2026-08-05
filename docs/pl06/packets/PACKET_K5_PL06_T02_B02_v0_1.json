@@ -1,0 +1,311 @@
+{
+ "unit_id": "K5-PL06-T02-B02",
+ "topik": 2,
+ "bahagian": 2,
+ "title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+  "items": [
+   "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+  ],
+  "count": 1
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 90,
+  "structural_headings": 12,
+  "first_row": "T02B02-ROW-001",
+  "last_row": "T02B02-ROW-090"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [],
+  "speaker_not_required": [],
+  "reused": [],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "RISK",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur.",
+    "rows": [
+     "T02B02-ROW-051"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah.",
+    "rows": [
+     "T02B02-ROW-058"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur.",
+    "rows": [
+     "T02B02-ROW-051"
+    ],
+    "kind": "RISK"
+   },
+   {
+    "text": "Tembok penahan adalah struktur penting untuk pengurusan cerun dan perubahan aras tanah.",
+    "rows": [
+     "T02B02-ROW-058"
+    ],
+    "kind": "RISK"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering.",
+    "rows": [
+     "T02B02-ROW-012"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+    ],
+    "subtopic_count": 1,
+    "text": "Skop: 2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut.",
+    "rows": [
+     "T02B02-ROW-019"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pencahayaan (Lighting)?",
+    "correct": "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+    "correct_rows": [
+     "T02B02-ROW-004"
+    ],
+    "anchor_row": "T02B02-ROW-003",
+    "distractors": [
+     "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+     "Menonjolkan elemen landskap seperti pokok atau air pancut",
+     "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering."
+    ],
+    "feedback": "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pengairan?",
+    "correct": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering.",
+    "correct_rows": [
+     "T02B02-ROW-012"
+    ],
+    "anchor_row": "T02B02-ROW-011",
+    "distractors": [
+     "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+     "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+     "Menonjolkan elemen landskap seperti pokok atau air pancut"
+    ],
+    "feedback": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Kolam (Fountain)?",
+    "correct": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut.",
+    "correct_rows": [
+     "T02B02-ROW-019"
+    ],
+    "anchor_row": "T02B02-ROW-018",
+    "distractors": [
+     "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+     "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+     "Menonjolkan elemen landskap seperti pokok atau air pancut"
+    ],
+    "feedback": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Kerja-kerja berkaitan dengan Infrastuktur?",
+    "correct": "Kerja-kerja infrastruktur melibatkan pembentukan struktur asas dan elemen bukan hidup dalam landskap untuk menyokong fungsi dan estetika keseluruhan.",
+    "correct_rows": [
+     "T02B02-ROW-032"
+    ],
+    "anchor_row": "T02B02-ROW-031",
+    "distractors": [
+     "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+     "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+     "Menonjolkan elemen landskap seperti pokok atau air pancut"
+    ],
+    "feedback": "Kerja-kerja infrastruktur melibatkan pembentukan struktur asas dan elemen bukan hidup dalam landskap untuk menyokong fungsi dan estetika keseluruhan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Landform (Earthmound)?",
+    "correct": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang.",
+    "correct_rows": [
+     "T02B02-ROW-034"
+    ],
+    "anchor_row": "T02B02-ROW-033",
+    "distractors": [
+     "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+     "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+     "Menonjolkan elemen landskap seperti pokok atau air pancut"
+    ],
+    "feedback": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Rajah sumber pada T02B02-ROW-035",
+    "rows": [
+     "T02B02-ROW-035"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T02B02-ROW-059",
+    "rows": [
+     "T02B02-ROW-059"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T02B02-ROW-068",
+    "rows": [
+     "T02B02-ROW-068"
+    ],
+    "has_source_figure": true
+   },
+   {
+    "subject": "Rajah sumber pada T02B02-ROW-077",
+    "rows": [
+     "T02B02-ROW-077"
+    ],
+    "has_source_figure": true
+   }
+  ],
+  "count": 4,
+  "copy_complete": true,
+  "source_attested": 4,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 0,
+  "reason": "12 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a RISK anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "12 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "role_mapping": "no role markers in source"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

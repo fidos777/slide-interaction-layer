@@ -1,0 +1,402 @@
+{
+ "unit_id": "K5-PL06-T05-B01",
+ "topik": 5,
+ "bahagian": 1,
+ "title": "Pengurusan Kualiti Projek",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "5.1 Project Quality Plan (PQP) + 5.2 Jaminan Kualiti + 5.3 Inspection and Testing for Quality Control + 5.4 Penyata Kaedah Kerja",
+  "items": [
+   "5.1 Project Quality Plan (PQP)",
+   "5.2 Jaminan Kualiti",
+   "5.3 Inspection and Testing for Quality Control",
+   "5.4 Penyata Kaedah Kerja"
+  ],
+  "count": 4
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 132,
+  "structural_headings": 44,
+  "first_row": "T05B01-ROW-001",
+  "last_row": "T05B01-ROW-132"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T05-B01",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T05B01-ROW-004",
+      "text": "Pelan Kualiti Projek (PQP) adalah sebuah dokumen strategik yang formal dan terperinci, berfungsi sebagai panduan utama bagi pasukan projek untuk melaksanakan dan mengawal kualiti k"
+     },
+     {
+      "row_id": "T05B01-ROW-053",
+      "text": "Sebelum pembelian pukal atau pembinaan skala penuh, kontraktor mesti menyediakan sampel bahan (cth: paver, boulder, perabot taman) atau membina mock-up (cth: satu panel feature wal"
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T05-B01",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T05B01-ROW-014",
+      "text": "Penyelia Tapak"
+     },
+     {
+      "row_id": "T05B01-ROW-015",
+      "text": "Bertanggungjawab untuk menjalankan pemeriksaan harian ke atas campuran tanah (topsoil mix), saiz lubang tanaman, dan kaedah pemasangan geotextile."
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   }
+  ],
+  "speaker_not_required": [],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "NAMED_EXTERNAL_STANDARD",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+    "rows": [
+     "T05B01-ROW-046",
+     "T05B01-ROW-047"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "PBT and ILAM guidelines are named authority bodies.",
+    "rows": [
+     "T05B01-ROW-050",
+     "T05B01-ROW-051"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+    "rows": [
+     "T05B01-ROW-046",
+     "T05B01-ROW-047"
+    ],
+    "kind": "NAMED_EXTERNAL_STANDARD"
+   },
+   {
+    "text": "PBT and ILAM guidelines are named authority bodies.",
+    "rows": [
+     "T05B01-ROW-050",
+     "T05B01-ROW-051"
+    ],
+    "kind": "NAMED_AUTHORITY_BODY"
+   },
+   {
+    "text": "Method Statement as a mandatory contract requirement.",
+    "rows": [
+     "T05B01-ROW-104"
+    ],
+    "kind": "CONTRACTUAL_OBLIGATION"
+   },
+   {
+    "text": "PPE obligations named for all involved workers.",
+    "rows": [
+     "T05B01-ROW-123"
+    ],
+    "kind": "STATUTORY_SAFETY_EXPOSURE"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Pengurusan Kualiti Projek dalam konteks pembinaan landskap adalah pendekatan sistematik dan proaktif untuk memastikan setiap komponen projek, sama ada landskap lembut atau landskap kejur mematuhi spesifikasi teknikal, lukisan reka bentuk, dan paling penting, memenuhi jangkaan klien.",
+    "rows": [
+     "T05B01-ROW-002"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "5.1 Project Quality Plan (PQP)",
+     "5.2 Jaminan Kualiti",
+     "5.3 Inspection and Testing for Quality Control",
+     "5.4 Penyata Kaedah Kerja"
+    ],
+    "subtopic_count": 4,
+    "text": "Skop: 5.1 Project Quality Plan (PQP); 5.2 Jaminan Kualiti; 5.3 Inspection and Testing for Quality Control; 5.4 Penyata Kaedah Kerja",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Pengurusan Kualiti Projek dalam konteks pembinaan landskap adalah pendekatan sistematik dan proaktif untuk memastikan setiap komponen projek, sama ada landskap lembut atau landskap kejur mematuhi spesifikasi teknikal, lukisan reka bentuk, dan paling penting, memenuhi jangkaan klien.",
+    "rows": [
+     "T05B01-ROW-002"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "COMMITTED_UNIT_ITEMS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Dalam hierarki rujukan kualiti, dokumen manakah yang mengatasi semua sumber lain?",
+    "correct": "Dokumen kontrak.",
+    "correct_rows": [
+     "T05B01-ROW-041"
+    ],
+    "distractors": [
+     "Piawaian Malaysia (MS)",
+     "Garis panduan Pihak Berkuasa Tempatan (PBT)",
+     "Garis panduan ILAM"
+    ],
+    "feedback": "Dokumen kontrak.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah perbezaan utama antara Jaminan Kualiti (QA) dan Kawalan Kualiti (QC)?",
+    "correct": "QA ialah proses proaktif untuk memberi keyakinan bahawa kualiti akan dicapai; QC ialah aspek praktikal yang mengesan kecacatan.",
+    "correct_rows": [
+     "T05B01-ROW-038",
+     "T05B01-ROW-056",
+     "T05B01-ROW-057"
+    ],
+    "distractors": [
+     "QA dijalankan oleh kontraktor, QC oleh perunding sahaja",
+     "QA hanya untuk bahan, QC hanya untuk kerja tapak",
+     "QA dilakukan selepas siap, QC sebelum kerja bermula"
+    ],
+    "feedback": "QA ialah proses proaktif untuk memberi keyakinan bahawa kualiti akan dicapai; QC ialah aspek praktikal yang mengesan kecacatan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah langkah PERTAMA dalam proses aliran kerja NCR?",
+    "correct": "Pengenalpastian ketidakpatuhan oleh penyelia tapak atau perunding semasa pemeriksaan.",
+    "correct_rows": [
+     "T05B01-ROW-082"
+    ],
+    "distractors": [
+     "Kelulusan cadangan pembetulan oleh perunding",
+     "Pelaksanaan kerja pembaikan oleh kontraktor",
+     "Analisis punca masalah oleh kontraktor"
+    ],
+    "feedback": "Pengenalpastian ketidakpatuhan oleh penyelia tapak atau perunding semasa pemeriksaan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Objektif kualiti dalam PQP mesti mempunyai satu ciri yang membezakannya daripada kenyataan hasrat. Apakah ciri itu?",
+    "correct": "Ia mesti boleh diukur (measurable).",
+    "correct_rows": [
+     "T05B01-ROW-006"
+    ],
+    "distractors": [
+     "Ia mesti diluluskan oleh PBT",
+     "Ia mesti ditulis dalam dua bahasa",
+     "Ia mesti disertakan dengan anggaran kos"
+    ],
+    "feedback": "Ia mesti boleh diukur (measurable).",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": "Pilih SEMUA tujuan utama Pelan Pemeriksaan dan Ujian (ITP).",
+    "correct": [
+     "Memastikan tiada peringkat kritikal tertinggal",
+     "Mengklarifikasi tanggungjawab pemeriksaan dan kelulusan",
+     "Menjadi rujukan standard dengan kriteria penerimaan yang jelas",
+     "Mewujudkan rekod formal bahawa pemeriksaan telah dijalankan"
+    ],
+    "correct_rows": [
+     "T05B01-ROW-062",
+     "T05B01-ROW-064",
+     "T05B01-ROW-066",
+     "T05B01-ROW-068"
+    ],
+    "distractors": [
+     "Menetapkan harga kontrak bagi setiap aktiviti kerja",
+     "Menggantikan keperluan Penyata Kaedah Kerja"
+    ],
+    "feedback": [
+     "Memastikan tiada peringkat kritikal tertinggal",
+     "Mengklarifikasi tanggungjawab pemeriksaan dan kelulusan",
+     "Menjadi rujukan standard dengan kriteria penerimaan yang jelas",
+     "Mewujudkan rekod formal bahawa pemeriksaan telah dijalankan"
+    ],
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   }
+  ],
+  "drafted": 5,
+  "anchored": 0
+ },
+ "visual_direction": {
+  "cls": "COMMITTED_UNIT_SUBJECTS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Hierarki rujukan kualiti: dokumen kontrak di atas, kemudian MS/JKR, PBT/ILAM, sampel dan mock-up",
+    "rows": [
+     "T05B01-ROW-041",
+     "T05B01-ROW-046",
+     "T05B01-ROW-050",
+     "T05B01-ROW-053"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Aliran kerja NCR lima peringkat",
+    "rows": [
+     "T05B01-ROW-082",
+     "T05B01-ROW-084",
+     "T05B01-ROW-086",
+     "T05B01-ROW-088",
+     "T05B01-ROW-090"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Kandungan Penyata Kaedah Kerja yang lengkap",
+    "rows": [
+     "T05B01-ROW-112",
+     "T05B01-ROW-114",
+     "T05B01-ROW-116",
+     "T05B01-ROW-119"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 0
+ },
+ "interaction": {
+  "cls": "COMMITTED_UNIT_PATTERN",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "progressive process",
+  "secondary": "comparison",
+  "reason": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence.",
+  "resolved": true,
+  "repeated_components": 0
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a NAMED_EXTERNAL_STANDARD anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": true,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": true,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN"
+ ]
+}

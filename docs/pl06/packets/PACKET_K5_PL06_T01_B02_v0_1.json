@@ -1,0 +1,434 @@
+{
+ "unit_id": "K5-PL06-T01-B02",
+ "topik": 1,
+ "bahagian": 2,
+ "title": "Jadual Kerja dan Perlaksanaan Pembinaan Landskap",
+ "stage": "4.2F-I",
+ "generation_scope": "ACTIVE_GENERATION",
+ "status_marks": [
+  "PROVISIONAL_WORKING_PACKET",
+  "NOT_INSTRUCTIONALLY_APPROVED",
+  "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+ ],
+ "evidence_tier": "ROWS_ONLY",
+ "subtopics": {
+  "cls": "SOURCE_DERIVED",
+  "declared": "1.2 Jadual Kerja + 1.3 Perlaksanaan Pembinaan Landskap",
+  "items": [
+   "1.2 Jadual Kerja",
+   "1.3 Perlaksanaan Pembinaan Landskap"
+  ],
+  "count": 2
+ },
+ "controlled_source_rows": {
+  "cls": "SOURCE_DERIVED",
+  "count": 100,
+  "structural_headings": 6,
+  "first_row": "T01B02-ROW-001",
+  "last_row": "T01B02-ROW-100"
+ },
+ "roles": {
+  "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+  "audit": [
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "role_id": "ROLE-KONTRAKTOR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B02-ROW-004",
+      "text": "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor. Ia menandakan titik permulaan bagi semua aktiviti pembinaan dan tempoh kontrak."
+     },
+     {
+      "row_id": "T01B02-ROW-011",
+      "text": "Klien dan kontraktor memeriksa keadaan semasa tapak bersama-sama. Sebarang kecacatan atau keadaan sedia ada yang luar biasa mesti direkodkan dalam borang serahan tapak."
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "classification": "REUSE_ALYA",
+    "reused_character": "Alya",
+    "new_role_description": null,
+    "name": "Alya",
+    "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "role_id": "ROLE-PENYELIA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B02-ROW-067",
+      "text": "Kontraktor mesti memaklumkan Pegawai Penguasa (S.O.) untuk menjalankan pemeriksaan pada peringkat-peringkat kritikal (contoh: sebelum kerja penutupan formwork atau tuangan konkrit)"
+     },
+     {
+      "row_id": "T01B02-ROW-092",
+      "text": "Setelah satu bahagian kerja disiapkan, kontraktor perlu menghantar borang permohonan pemeriksaan secara rasmi kepada pihak S.O."
+     }
+    ],
+    "needs_to_speak": true,
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "classification": "REUSE_ENCIK_RAHMAN",
+    "reused_character": "Encik Rahman",
+    "new_role_description": null,
+    "name": "Encik Rahman",
+    "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "role_id": "ROLE-PEGAWAI-PENGUASA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B02-ROW-037",
+      "text": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mend"
+     },
+     {
+      "row_id": "T01B02-ROW-043",
+      "text": "Semakan oleh Perunding: Pihak S.O. atau Arkitek Landskap akan menyemak penyerahan tersebut berbanding dengan spesifikasi teknikal."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The S.O. appears as an APPROVAL BODY. Approval is an event, not a speaking part."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B02-ROW-061",
+      "text": "Sebelum sebarang kerja penggalian, lokasi, jajaran (alignment), dan aras ketinggian bagi setiap elemen mesti ditanda dengan tepat di tapak oleh Juruukur Bertauliah berdasarkan Luki"
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "speaker_not_required": [
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "role_id": "ROLE-PEGAWAI-PENGUASA",
+    "cited_module_text": [
+     {
+      "row_id": "T01B02-ROW-037",
+      "text": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mend"
+     },
+     {
+      "row_id": "T01B02-ROW-043",
+      "text": "Semakan oleh Perunding: Pihak S.O. atau Arkitek Landskap akan menyemak penyerahan tersebut berbanding dengan spesifikasi teknikal."
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The S.O. appears as an APPROVAL BODY. Approval is an event, not a speaking part."
+   },
+   {
+    "unit_id": "K5-PL06-T01-B02",
+    "role_id": "ROLE-JURUUKUR",
+    "cited_module_text": [
+     {
+      "row_id": "T01B02-ROW-061",
+      "text": "Sebelum sebarang kerja penggalian, lokasi, jajaran (alignment), dan aras ketinggian bagi setiap elemen mesti ditanda dengan tepat di tapak oleh Juruukur Bertauliah berdasarkan Luki"
+     }
+    ],
+    "needs_to_speak": false,
+    "role_family": null,
+    "classification": "SPEAKER_NOT_REQUIRED",
+    "reused_character": null,
+    "new_role_description": null,
+    "name": null,
+    "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document."
+   }
+  ],
+  "reused": [
+   {
+    "role_id": "ROLE-KONTRAKTOR",
+    "name": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "authority": "WRITTEN_CONFIRMED"
+   },
+   {
+    "role_id": "ROLE-PENYELIA",
+    "name": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "authority": "WRITTEN_CONFIRMED"
+   }
+  ],
+  "new_required": [],
+  "narrator": {
+   "name": "Hilmi",
+   "authority": "D2",
+   "reused": true
+  }
+ },
+ "dialogue": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "status": "DIALOGUE_COPY_COMPLETE",
+  "tension_kind": "OBLIGATION",
+  "turns": [
+   {
+    "seq": 1,
+    "speaker": "Alya",
+    "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+    "kind": "QUESTION",
+    "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?",
+    "cls": "CAIR_STRUCTURAL_FRAME",
+    "rows": []
+   },
+   {
+    "seq": 2,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_RESPONSE",
+    "text": "Klien dan kontraktor memeriksa keadaan semasa tapak bersama-sama.",
+    "rows": [
+     "T01B02-ROW-011"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "seq": 3,
+    "speaker": "Encik Rahman",
+    "role_family": "MENTOR_CONTRACTOR_SENIOR",
+    "kind": "SOURCE_BACKED_CONSEQUENCE",
+    "text": "Tarikh Siap adalah tarikh akhir yang ditetapkan di dalam dokumen kontrak di mana semua skop kerja mesti disiapkan sepenuhnya dan tapak sedia untuk diserahkan kembali kepada Klien.",
+    "rows": [
+     "T01B02-ROW-015"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "anchors": [
+   {
+    "text": "Klien dan kontraktor memeriksa keadaan semasa tapak bersama-sama.",
+    "rows": [
+     "T01B02-ROW-011"
+    ],
+    "kind": "OBLIGATION"
+   },
+   {
+    "text": "Tarikh Siap adalah tarikh akhir yang ditetapkan di dalam dokumen kontrak di mana semua skop kerja mesti disiapkan sepenuhnya dan tapak sedia untuk diserahkan kembali kepada Klien.",
+    "rows": [
+     "T01B02-ROW-015"
+    ],
+    "kind": "OBLIGATION"
+   }
+  ],
+  "copy_complete": true
+ },
+ "rumusan": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "declared_beats": [
+   "importance",
+   "scope",
+   "benefit"
+  ],
+  "beats": [
+   {
+    "beat": "importance",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Pengurus projek yang cekap sering menggunakan kaedah perancangan songsang.",
+    "rows": [
+     "T01B02-ROW-021"
+    ],
+    "cls": "SOURCE_DERIVED"
+   },
+   {
+    "beat": "scope",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "subtopics": [
+     "1.2 Jadual Kerja",
+     "1.3 Perlaksanaan Pembinaan Landskap"
+    ],
+    "subtopic_count": 2,
+    "text": "Skop: 1.2 Jadual Kerja; 1.3 Perlaksanaan Pembinaan Landskap",
+    "rows": [],
+    "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION"
+   },
+   {
+    "beat": "benefit",
+    "learner_facing_label": null,
+    "learner_facing": false,
+    "text": "Proses ini bertujuan untuk memastikan semua bahan yang akan digunakan sama ada elemen landskap kejur atau lembut mematuhi kualiti, jenama, saiz, dan spesifikasi yang ditetapkan di dalam Dokumen Kontrak dan Bill of Quantities (BQ).",
+    "rows": [
+     "T01B02-ROW-038"
+    ],
+    "cls": "SOURCE_DERIVED"
+   }
+  ],
+  "beat_count": 3,
+  "copy_complete": true,
+  "support_visual_required": true,
+  "uses_forbidden_phrase": false
+ },
+ "quiz": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "composition": "4 MCQ + 1 MR",
+  "pass_percent": 60,
+  "items": [
+   {
+    "slot": "Q1",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Penyerahan dan kelulusan bahan landskap?",
+    "correct": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mendapatkan kelulusan rasmi daripada Pegawai Penguasa (S.O.) atau Perunding.",
+    "correct_rows": [
+     "T01B02-ROW-037"
+    ],
+    "anchor_row": "T01B02-ROW-036",
+    "distractors": [
+     "Perancangan jadual kerja adalah seperti berikut:",
+     "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+     "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+    ],
+    "feedback": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mendapatkan kelulusan rasmi daripada Pegawai Penguasa (S.O.) atau Perunding.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q2",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pembinaan / Pemasangan Infrastruktur & Landskap Kejur?",
+    "correct": "Landskap kejur adalah elemen-elemen bukan hidup yang membentuk struktur, fungsi, dan tulang belakang kepada keseluruhan reka bentuk landskap.",
+    "correct_rows": [
+     "T01B02-ROW-047"
+    ],
+    "anchor_row": "T01B02-ROW-046",
+    "distractors": [
+     "Perancangan jadual kerja adalah seperti berikut:",
+     "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+     "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+    ],
+    "feedback": "Landskap kejur adalah elemen-elemen bukan hidup yang membentuk struktur, fungsi, dan tulang belakang kepada keseluruhan reka bentuk landskap.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q3",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Kerja-Kerja Penanaman (Planting Works)?",
+    "correct": "Kerja-kerja penanaman atau landskap lembut adalah proses memasukkan elemen-elemen hortikultur yang memberikan nilai estetik, ekologi, dan kehidupan kepada landskap.",
+    "correct_rows": [
+     "T01B02-ROW-069"
+    ],
+    "anchor_row": "T01B02-ROW-068",
+    "distractors": [
+     "Perancangan jadual kerja adalah seperti berikut:",
+     "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+     "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+    ],
+    "feedback": "Kerja-kerja penanaman atau landskap lembut adalah proses memasukkan elemen-elemen hortikultur yang memberikan nilai estetik, ekologi, dan kehidupan kepada landskap.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q4",
+    "kind": "MULTIPLE_CHOICE",
+    "stem": "Apakah yang mesti dipastikan berkaitan Pemeriksaan Tapak dan Pengesahan?",
+    "correct": "Untuk mengesahkan bahawa kerja yang dilaksanakan di tapak mematuhi lukisan, spesifikasi, dan standard kualiti yang ditetapkan.",
+    "correct_rows": [
+     "T01B02-ROW-088"
+    ],
+    "anchor_row": "T01B02-ROW-086",
+    "distractors": [
+     "Perancangan jadual kerja adalah seperti berikut:",
+     "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+     "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+    ],
+    "feedback": "Untuk mengesahkan bahawa kerja yang dilaksanakan di tapak mematuhi lukisan, spesifikasi, dan standard kualiti yang ditetapkan.",
+    "state": "QUIZ_DRAFT_COMPLETE",
+    "key_status": "DRAFTED_NOT_APPROVED"
+   },
+   {
+    "slot": "Q5",
+    "kind": "MULTIPLE_RESPONSE",
+    "stem": null,
+    "correct": null,
+    "correct_rows": [],
+    "anchor_row": null,
+    "distractors": [],
+    "feedback": null,
+    "state": "QUIZ_ANCHORED_SLOT",
+    "key_status": "NO_KEY_PENDING_AUTHORING"
+   }
+  ],
+  "drafted": 4,
+  "anchored": 1
+ },
+ "visual_direction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "subjects": [
+   {
+    "subject": "Keratan atau susunan bagi Jadual Kerja",
+    "rows": [
+     "T01B02-ROW-001"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Perlaksanaan Pembinaan Landskap",
+    "rows": [
+     "T01B02-ROW-035"
+    ],
+    "has_source_figure": false
+   },
+   {
+    "subject": "Keratan atau susunan bagi Penyerahan dan kelulusan bahan landskap",
+    "rows": [
+     "T01B02-ROW-036"
+    ],
+    "has_source_figure": false
+   }
+  ],
+  "count": 3,
+  "copy_complete": true,
+  "source_attested": 0,
+  "rp104_note": "a direction is read from a source figure or table, never composed from a component name"
+ },
+ "interaction": {
+  "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+  "authority_status": "DRAFTED_NOT_APPROVED",
+  "primary": "click-to-reveal",
+  "secondary": "static content",
+  "resolved": true,
+  "repeated_components": 0,
+  "reason": "6 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat."
+ },
+ "analysis": {
+  "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+  "treatment": "6 structural headings give enough parallel entries for a reveal treatment even though the Fungsi/Fokus markers do not repeat.",
+  "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-PEGAWAI-PENGUASA=SPEAKER_NOT_REQUIRED; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED"
+ },
+ "completion": {
+  "PACKET_SCHEMA_COMPLETE": true,
+  "SOURCE_EXTRACTION_COMPLETE": true,
+  "SOURCE_ANALYSIS_COMPLETE": false,
+  "DIALOGUE_COPY_COMPLETE": true,
+  "RUMUSAN_COPY_COMPLETE": true,
+  "QUIZ_COPY_COMPLETE": false,
+  "VISUAL_DIRECTION_COMPLETE": true,
+  "INTERACTION_TREATMENT_COMPLETE": true,
+  "PRODUCTION_READY": false
+ },
+ "production_ready": false,
+ "production_blockers": [
+  "AWAITING_BARIAH_WRITTEN_RETURN",
+  "QUIZ_KEY_UNRESOLVED"
+ ]
+}
