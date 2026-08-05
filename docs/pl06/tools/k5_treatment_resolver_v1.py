@@ -19,6 +19,26 @@ caller-supplied `f3_case`.
     F4 override   a screen the authority named explicitly wins outright
     F3 fallback   everything else is selected from the module's own structure
 
+PARITY POPULATION CONTRACT (binding on the 0c gate and its fixtures)
+--------------------------------------------------------------------
+The shared constructor is NOT the parity population. Each lane must independently
+supply its own raw adapter inputs; the comparison population is the six canonical
+evidence records produced from those two independently supplied input sets.
+
+    expected B03 group population        = 6
+    packet adapter input population      = 6 unique canonical group IDs
+    calibration adapter input population = 6 unique canonical group IDs
+    packet canonical evidence population = 6
+    calibration canonical evidence population = 6
+
+An evidence-parity fixture MUST mutate exactly one lane BEFORE shared
+canonicalisation. It must NOT mutate the shared constructor, the shared resolver
+or the authority declaration: those change both lanes together, so the fixture
+would pass while proving nothing about divergence at the lane boundary. A fixture
+that only perturbs the shared final treatment mapping is likewise insufficient —
+it cannot distinguish agreement from a shared last step, which is the whole defect
+this module exists to remove.
+
 Nothing here restates an F4 value as a literal. The overrides are read from the authority
 declaration, and this module holds no unit-specific wording of its own.
 """
