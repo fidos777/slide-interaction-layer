@@ -1,0 +1,472 @@
+{
+  "artifact": "PL06_UNIT_SOURCE_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1_SOURCE_ANALYSIS",
+  "stage": "4.2F-C",
+  "unit_id": "K5-PL06-T03-B05",
+  "lesson_title": "Pencahayaan dan Pengairan",
+  "topik": 3,
+  "bahagian": 5,
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T03_B05_SOURCE_EXTRACT_v1.json",
+  "controlled_rows_in_unit": 189,
+  "controlled_rows_read": 189,
+  "every_cited_row_exists_in_extract": true,
+  "cited_row_count": 46,
+  "authorship": "HAND_AUTHORED_CAIR_FROM_CONTROLLED_ROWS",
+  "classification_vocabulary": [
+    "SOURCE_DERIVED",
+    "CAIR_PROPOSAL",
+    "COURSE_RULE_ALREADY_APPROVED",
+    "PENDING_BARIAH_PATTERN_DECISION",
+    "PENDING_UNIT_EXCEPTION_REVIEW"
+  ],
+  "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+  "analysis_contract": {
+    "reference": "docs/pl06/packets/PL06_ANALYSIS_GAP_MATRIX_v0_1.md",
+    "note": "Fields and floors are the live analysis contract from the gap matrix. Every traced item cites the controlled row(s) that carry it. No PPTX, no generation, no answer-key approval, no authority invented."
+  },
+  "isolation_note": "Isolated per-unit record. Not added to the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py, which was left unedited by instruction. No per-unit analysis-file convention existed, so this is an isolated JSON file.",
+  "assessment_key_status": "DRAFTED_NOT_APPROVED",
+  "assessment_key_authority": "NONE — stems and distractors are CAIR proposals; only the correct response is SOURCE_DERIVED and cites its rows",
+  "mandatory_propositions": [
+    {
+      "proposition": "Tapak konkrit (concrete footing) pole light mesti dibina mengikut spesifikasi jurutera — saiz, kedalaman dan tetulang — dan anchor bolt mesti dipasang tepat serta dibiarkan curing secukupnya sebelum tiang dipasang.",
+      "rows": [
+        "T03B05-ROW-014"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Semua kabel bawah tanah mesti dilindungi dengan paip konduit (GI atau uPVC) pada kedalaman yang betul, dan sambungan elektrik di dasar tiang mesti dibuat di dalam petak yang kalis air.",
+      "rows": [
+        "T03B05-ROW-016"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kontraktor mesti memastikan tiang dipasang tegak (perfectly vertical) dan semua nat diikat kemas.",
+      "rows": [
+        "T03B05-ROW-018"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Bollard mesti dipasang mengikut pelan lampu supaya pencahayaan sekata dan tiada 'titik panas' (hot spots) atau kawasan gelap di antara lampu; semua bollard dalam satu barisan mesti dijajar sempurna.",
+      "rows": [
+        "T03B05-ROW-032",
+        "T03B05-ROW-034"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Uplight mesti mempunyai IP Rating yang tinggi (IP67 atau IP68) kerana terdedah terus kepada air, dan sambungan wayar mesti menggunakan penyambung kalis air.",
+      "rows": [
+        "T03B05-ROW-050"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Bagi lampu bawah air, penarafan IP yang betul (biasanya IP68) adalah mandatori dan semua sambungan kabel mesti kedap air sepenuhnya untuk mengelakkan litar pintas dan bahaya elektrik.",
+      "rows": [
+        "T03B05-ROW-076"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Embedded floor light di kawasan laluan kenderaan mesti mempunyai spesifikasi drive-over, dan bahagian atasnya mesti dipasang rata sepenuhnya dengan permukaan untuk mengelakkan bahaya tersadung.",
+      "rows": [
+        "T03B05-ROW-104",
+        "T03B05-ROW-106"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Semua sambungan paip bawah tanah mesti diuji tekanan (pressure test) sebelum ditimbus.",
+      "rows": [
+        "T03B05-ROW-143"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kontraktor mesti memastikan liputan kepala-ke-kepala (head-to-head coverage) supaya semburan satu kepala sprinkler sampai ke kepala seterusnya, menjamin agihan air sekata tanpa tompok kering.",
+      "rows": [
+        "T03B05-ROW-165"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kerana sistem titisan beroperasi pada tekanan air rendah, pemasangan penapis (filter) dan pengatur tekanan (pressure regulator) adalah mandatori untuk mengelakkan kerosakan dan penyumbatan.",
+      "rows": [
+        "T03B05-ROW-174"
+      ],
+      "cls": "SOURCE_DERIVED"
+    }
+  ],
+  "terminology": [
+    {
+      "term": "Pole Light / Lampu Tiang (3–8 m, general illumination)",
+      "rows": [
+        "T03B05-ROW-004"
+      ]
+    },
+    {
+      "term": "Bollard Light (lampu aras rendah 0.6–1.2 m)",
+      "rows": [
+        "T03B05-ROW-022"
+      ]
+    },
+    {
+      "term": "Uplight / in-ground uplight / well light",
+      "rows": [
+        "T03B05-ROW-040",
+        "T03B05-ROW-096"
+      ]
+    },
+    {
+      "term": "IP Rating (Ingress Protection — IP67 / IP68)",
+      "rows": [
+        "T03B05-ROW-050",
+        "T03B05-ROW-076"
+      ]
+    },
+    {
+      "term": "Flood Light / Lampu Limpah vs Spot Light / Lampu Tumpu",
+      "rows": [
+        "T03B05-ROW-083",
+        "T03B05-ROW-085"
+      ]
+    },
+    {
+      "term": "Beacon Light / Lampu Suar",
+      "rows": [
+        "T03B05-ROW-111"
+      ]
+    },
+    {
+      "term": "Tap Point / Hose Bib / Pili Air, dan Stopcock / Injap Henti",
+      "rows": [
+        "T03B05-ROW-126",
+        "T03B05-ROW-130"
+      ]
+    },
+    {
+      "term": "Controller / Timer dan Solenoid Valve (sistem automatik)",
+      "rows": [
+        "T03B05-ROW-150",
+        "T03B05-ROW-152"
+      ]
+    },
+    {
+      "term": "Mainline vs Lateral Line (paip utama sentiasa bertekanan / paip sisi)",
+      "rows": [
+        "T03B05-ROW-154"
+      ]
+    },
+    {
+      "term": "Drip Irrigation / Sistem Titisan dan head-to-head coverage",
+      "rows": [
+        "T03B05-ROW-166",
+        "T03B05-ROW-165"
+      ]
+    },
+    {
+      "term": "System Commissioning / Pentauliahan Sistem",
+      "rows": [
+        "T03B05-ROW-178"
+      ]
+    }
+  ],
+  "compliance_sensitive": [
+    {
+      "statement": "Pendawaian 240V dengan kabel bawah tanah dalam konduit dan sambungan di dasar tiang dalam petak kalis air — kerja elektrik voltan utama, satu pendedahan keselamatan berkanun, bukan pilihan pemasangan.",
+      "rows": [
+        "T03B05-ROW-016"
+      ],
+      "why": "STATUTORY_ELECTRICAL_SAFETY"
+    },
+    {
+      "statement": "Lampu bawah air memerlukan IP68 dan sambungan kedap air sepenuhnya untuk mengelakkan litar pintas dan bahaya elektrik dalam air — pendedahan keselamatan nyawa di persekitaran basah.",
+      "rows": [
+        "T03B05-ROW-076"
+      ],
+      "why": "LIFE_SAFETY_ELECTRICAL_IN_WATER"
+    },
+    {
+      "statement": "Tapak konkrit pole light dibina mengikut spesifikasi jurutera — sempadan tanggungjawab profesional yang bertauliah, bukan budi bicara kontraktor.",
+      "rows": [
+        "T03B05-ROW-014"
+      ],
+      "why": "NAMED_PROFESSIONAL_AUTHORITY"
+    },
+    {
+      "statement": "Embedded floor light mesti rata dengan permukaan untuk mengelakkan bahaya tersadung, dan berspesifikasi drive-over di laluan kenderaan — pendedahan keselamatan awam dan beban struktur.",
+      "rows": [
+        "T03B05-ROW-106",
+        "T03B05-ROW-104"
+      ],
+      "why": "PUBLIC_SAFETY_LOAD_EXPOSURE"
+    }
+  ],
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah peringkat paling kritikal dalam pemasangan sebuah pole light?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Pembinaan tapak konkrit (concrete footing) mengikut spesifikasi jurutera, dengan anchor bolt dipasang tepat dan dibiarkan curing sebelum tiang dipasang.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B05-ROW-014"
+        ],
+        "distractors": [
+          "Pemilihan warna mentol untuk kesan visual waktu malam",
+          "Menyembunyikan lekapan lampu di belakang pokok renek",
+          "Melaraskan sudut pancaran pada waktu siang"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah uplight dan lampu bawah air memerlukan penarafan IP yang tinggi (IP67/IP68)?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kerana ia terdedah terus kepada air dan kelembapan; sambungan mesti kedap air untuk mengelakkan litar pintas dan bahaya elektrik.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B05-ROW-050",
+          "T03B05-ROW-076"
+        ],
+        "distractors": [
+          "Kerana IP tinggi menjadikan cahaya lebih terang",
+          "Kerana ia mengurangkan penggunaan tenaga elektrik lampu",
+          "Kerana ia melebarkan sudut pancaran cahaya"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah prinsip pemasangan kritikal bagi sistem sprinkler automatik supaya agihan air sekata?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Liputan kepala-ke-kepala (head-to-head), di mana semburan satu kepala sampai ke kepala sprinkler yang seterusnya, tanpa tompok kering.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B05-ROW-165"
+        ],
+        "distractors": [
+          "Memasang setiap kepala sejauh mungkin untuk menjimatkan kepala",
+          "Menghalakan semua kepala ke satu titik pusat kawasan",
+          "Menyembur air ke permukaan keras untuk menguji tekanan"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah penapis (filter) dan pengatur tekanan (pressure regulator) adalah mandatori dalam sistem pengairan titisan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kerana sistem titisan beroperasi pada tekanan air rendah, jadi tanpa keduanya berlaku kerosakan dan penyumbatan.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B05-ROW-174"
+        ],
+        "distractors": [
+          "Kerana sistem titisan beroperasi pada tekanan yang sangat tinggi",
+          "Kerana ia diperlukan untuk memanaskan air sebelum diagihkan",
+          "Kerana ia menggantikan keperluan controller dan solenoid"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA langkah yang termasuk dalam pentauliahan sistem (commissioning) pengairan automatik.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Membilas sistem (flushing) sebelum memasang emitters",
+          "Ujian tekanan pada paip utama untuk mengesan kebocoran",
+          "Pelarasan muncung (nozzle) dan lengkok semburan (arc)",
+          "Pengaturcaraan controller mengikut jadual penyiraman",
+          "Penyerahan, latihan klien dan lukisan siap bina (as-built)"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B05-ROW-181",
+          "T03B05-ROW-183",
+          "T03B05-ROW-185",
+          "T03B05-ROW-187",
+          "T03B05-ROW-189"
+        ],
+        "distractors": [
+          "Penebukan teras konkrit (coring) untuk lekapan lampu",
+          "Memasang pelindung silau (glare shield) pada lekapan"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": [
+    {
+      "subject": "Tujuh jenis lekapan lampu landskap mengikut ketinggian dan fungsi: pole, bollard, uplight, pencahayaan khas, flood/spot, embedded floor, beacon",
+      "rows": [
+        "T03B05-ROW-004",
+        "T03B05-ROW-022",
+        "T03B05-ROW-040",
+        "T03B05-ROW-061",
+        "T03B05-ROW-081",
+        "T03B05-ROW-096",
+        "T03B05-ROW-111"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Keratan rentas tapak pole light: concrete footing, anchor bolt, konduit kabel 240V, dan petak sambungan kalis air",
+      "rows": [
+        "T03B05-ROW-014",
+        "T03B05-ROW-016"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Perbandingan sudut pancaran flood light (lebar 40°–120°) berbanding spot light (tirus 10°–25°)",
+      "rows": [
+        "T03B05-ROW-084",
+        "T03B05-ROW-086"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Skema sistem pengairan automatik: controller, injap solenoid dalam valve box, paip utama/sisi, dan pengeluar air (emitters)",
+      "rows": [
+        "T03B05-ROW-150",
+        "T03B05-ROW-152",
+        "T03B05-ROW-154",
+        "T03B05-ROW-155"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Keluarga pengeluar air dan kesesuaian: sprinkler, pop-up spray, rotor, dan sistem titisan dengan liputan head-to-head",
+      "rows": [
+        "T03B05-ROW-158",
+        "T03B05-ROW-160",
+        "T03B05-ROW-162",
+        "T03B05-ROW-166",
+        "T03B05-ROW-165"
+      ],
+      "has_source_figure": false
+    }
+  ],
+  "rumusan_beats": [
+    "Pencahayaan landskap: tujuh jenis lekapan lampu mengikut ketinggian dan fungsi, dari pole light hingga embedded floor light dan lampu suar.",
+    "Aspek kritikal yang berulang pada setiap jenis lampu: tapak konkrit yang kukuh, kalis air (IP rating) dan perlindungan kabel dalam konduit.",
+    "Pengairan: sistem manual (tap points, hos) berbanding sistem automatik (controller, injap solenoid, rangkaian paip, emitters).",
+    "Tiga keluarga pengeluar air — semburan (sprinkler/pop-up/rotor) dan titisan — dengan prinsip head-to-head serta penapis dan pengatur tekanan.",
+    "Pentauliahan sistem pengairan (flushing, ujian tekanan, pelarasan, pengaturcaraan) dan penyerahan dengan lukisan siap bina (as-built)."
+  ],
+  "pattern": {
+    "primary": "click-to-reveal",
+    "secondary": "comparison",
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "reason": "A large parallel catalogue: seven light fixtures, each written to the same internal shape — a definition, 'Fungsi Utama', then 'Aspek Pemasangan & Pengurusan Kritikal untuk Kontraktor'. That repetition is the shape click-to-reveal fits. Comparison is the strong secondary — flood vs spot beam angles, manual vs automatic irrigation, and the emitter types are contrasts. A progressive-process reading also exists locally for the commissioning sequence (flushing -> pressure test -> adjustment -> programming -> handover), but it governs one sub-block, not the unit.",
+    "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+    ]
+  },
+  "dialogue": {
+    "verdict": "NOT_JUSTIFIED",
+    "cls": "CAIR_PROPOSAL",
+    "reason": "Seven fixture types and two irrigation systems, each described by function and installation criteria. There is no decision, conflict or judgement call between parties in the source for a scenario to be about. AR-06 allows a dialogue only where justified, and nothing here justifies one — consistent with the other component-catalogue units (T03-B03, T03-B04) which also read NOT_JUSTIFIED.",
+    "note": "SUP-03: retained as evidence, not a gate. E1 makes S02 a dialogue regardless of this verdict."
+  },
+  "ambiguities": [
+    {
+      "item": "The unit styles most rows as Heading 3, including full-sentence definitions. The Bollard Light definition (a whole sentence ending in a full stop) carries the same HEADING_3 style as its own heading above it, so a style-derived heading count over-reads: totals report 96 headings against 80 paragraphs.",
+      "rows": [
+        "T03B05-ROW-021",
+        "T03B05-ROW-022"
+      ],
+      "resolution": "STRUCTURAL_CRITERION (<=55 chars and no trailing full stop) reclassifies these; every reclassified row is recorded, not silently dropped"
+    },
+    {
+      "item": "The two repeated block markers vary in wording and punctuation across the seven fixtures: 'Aspek Pemasangan & Pengurusan Kritikal untuk Kontraktor:' (with colon) versus 'Aspek Pemasangan & Pengurusan untuk Kontraktor' (no 'Kritikal', no colon). A naive equality match on the marker mis-slots some fixtures' critical-aspect blocks.",
+      "rows": [
+        "T03B05-ROW-012",
+        "T03B05-ROW-072"
+      ],
+      "resolution": "Both forms retained; heading_path disambiguates the block owner"
+    },
+    {
+      "item": "The frozen unit title 'Pencahayaan dan Pengairan' is not a single source heading — the source carries two separate level-2 headings, 'Pencahayaan / Lighting' and 'Pengairan (Irrigation)'. The combined title is the boundary map's, not the module's.",
+      "rows": [
+        "T03B05-ROW-001",
+        "T03B05-ROW-122"
+      ],
+      "resolution": "Two level-2 headings give a two-group split at the top; recorded rather than merged into one invented title row"
+    },
+    {
+      "item": "'Prinsip Pemasangan Kritikal' appears twice with different styling — once as HEADING_3 for the sprinkler head-to-head rule and once as LIST_ITEM for the drip filter/regulator rule — so a style-keyed parser treats two equally-weighted rules unequally.",
+      "rows": [
+        "T03B05-ROW-164",
+        "T03B05-ROW-173"
+      ],
+      "resolution": "Both retained as SOURCE_DERIVED mandatory propositions regardless of their differing source style"
+    }
+  ],
+  "contract_coverage": {
+    "mandatory_propositions": {
+      "count": 10,
+      "floor": 8,
+      "meets": true
+    },
+    "terminology": {
+      "count": 11,
+      "floor": 6,
+      "meets": true
+    },
+    "compliance_sensitive": {
+      "count": 4,
+      "floor": 2,
+      "meets": true
+    },
+    "assessment": {
+      "count": 5,
+      "floor": 5,
+      "meets": true
+    },
+    "visual_subjects": {
+      "count": 5,
+      "floor": 3,
+      "meets": true
+    },
+    "rumusan_beats": {
+      "count": 5,
+      "floor": 3,
+      "meets": true
+    },
+    "ambiguities": {
+      "count": 4,
+      "floor": 2,
+      "meets": true
+    },
+    "dialogue": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    },
+    "pattern": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    }
+  },
+  "all_contract_floors_met": true
+}
