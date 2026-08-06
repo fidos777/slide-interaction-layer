@@ -1,5 +1,13 @@
 # PL06 Pilot — Unit Manifest — `K5-PL06-T05-B01`
 
+> INTERNAL_GENERATION_DRAFT
+> NOT_BARIAH_REVIEW_READY
+> NOT_INSTRUCTIONALLY_APPROVED
+>
+> AUTHORITY_STATUS: CONFIRMED
+> IMPLEMENTATION_STATUS: NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY
+> PILOT_CLASSIFICATION: PILOT_OUTPUT_STILL_BLOCKED
+
 > **INTERNAL_GENERATION_DRAFT** — machine-authored engineering record. Not reviewed, not
 > Bariah-approved, not a production template. **No Bariah readiness is claimed.**
 
@@ -35,12 +43,12 @@ span (`missing_source_register`).
 
 | # | requested artifact | status | reason |
 |---:|---|---|---|
-| 1 | Storyboard (PPTX) | **BLOCKED — not produced** | requires the B03-hardcoded generator (D-1) and a decided pattern (D-2) |
-| 2 | Lampiran Keadaan 3-panel (PPTX) | **BLOCKED — not produced** | triggered-state set is `UNKNOWN_PENDING_PATTERN_DECISION`; producing it would invent states (D-2, D-3) |
+| 1 | Storyboard (PPTX) | **BLOCKED — not produced** | unit-parameterised generator and unit-specific source binding are unavailable |
+| 2 | Lampiran Keadaan 3-panel (PPTX) | **BLOCKED — not produced** | triggered-state inventory is `NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY`; producing it now would invent states |
 | 3 | previews (PNG) | **BLOCKED — not produced** | nothing defensible to render (depends on #1/#2) |
 | 4 | structural / XML QA | **BLOCKED — not produced** | no PPTX exists to inspect |
 | 5 | overflow & placeholder scan | **BLOCKED — not produced** | no rendered artifact exists to scan |
-| 6 | state inventory reconciliation | **PRODUCED** | `PL06_PILOT_STATE_INVENTORY_RECONCILIATION_v1.md` — records known floor vs undetermined triggered set; no states invented |
+| 6 | state inventory reconciliation | **PRODUCED** | `PL06_PILOT_STATE_INVENTORY_RECONCILIATION_v1.md` — records known floor vs triggered-state set not computable with current shared capability; no states invented |
 | 7 | unit manifest | **PRODUCED** | this document |
 | — | defect report | **PRODUCED** | `PL06_PILOT_DEFECT_REPORT_v1.md` |
 | — | selection record | **PRODUCED** | `PL06_PILOT_SELECTION_v1.md` |
