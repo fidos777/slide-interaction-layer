@@ -101,16 +101,13 @@ def _norm(s):
 
 
 def overrides(unit_id):
-    """{normalised screen name: treatment} for every screen F4 names for this unit.
+    """{normalised screen name: treatment} for every screen F4 names for this unit."""
+    return {
+        _norm(record["screen"]): record["treatment"]
+        for record in A.treatment_overrides(unit_id)
+    }
 
-    INCOMPLETE: this still carries a unit literal, which a unit-neutral shared module must
-    not. The lookup belongs in `pl06_authority_v1.treatment_overrides(unit_id)` — the
-    resolver asks, it does not know which unit has overrides.
-    """
-    if unit_id != "K5-PL06-T03-B03":   # TODO(0b): move to pl06_authority_v1
-        return {}
-    return {_norm(t["screen"]): t["treatment"]
-            for t in A.value("interaction", "b03_treatments")}
+
 
 
 def resolve(unit_id, screen_name, f3_case, f3_reason=None):

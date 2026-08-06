@@ -321,6 +321,20 @@ def lampiran_calibration_densities():
 def treatment_rules():
     return list(value("interaction", "treatment_rules"))
 
+def treatment_overrides(unit_id):
+    """Return F4 treatment records explicitly named for one unit.
+
+    Unit-specific authority routing belongs here, not in the shared resolver. An empty
+    list means F4 names no screen for that unit, so the resolver must apply F3.
+    """
+    field_by_unit = {
+        "K5-PL06-T03-B03": "b03_treatments",
+    }
+    field = field_by_unit.get(unit_id)
+    return list(value("interaction", field)) if field else []
+
+
+
 
 def c2_claims():
     return list(contract()["dialogue"]["c2_claims"])
