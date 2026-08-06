@@ -1,0 +1,587 @@
+{
+  "artifact": "K5_PL06_UNIT_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1",
+  "lane_note": "Source-analysis-only lane. No PPTX, no generation, no authority invention. Isolated per-unit record; the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py is NOT modified.",
+  "unit_id": "K5-PL06-T01-B01",
+  "lesson_title": "Proses Memula Kerja - Penyediaan Tapak",
+  "topik": 1,
+  "bahagian": 1,
+  "stage": "4.2F-C",
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T01_B01_SOURCE_EXTRACT_v1.json",
+  "source_extract_sha256": "0761463d360beca893238039d9d86615375a18e7ac1e733bf0a9ea8bbd542569",
+  "controlled_rows_total": 258,
+  "row_id_range": [
+    "T01B01-ROW-001",
+    "T01B01-ROW-258"
+  ],
+  "source_totals": {
+    "body_elements_in_span": 368,
+    "empty_spacing_paragraphs": 110,
+    "content_rows": 258,
+    "headings": 8,
+    "paragraphs": 30,
+    "numbered_paragraphs": 221,
+    "list_item_rows": 220,
+    "tables": 0,
+    "diagrams": 0,
+    "raster_images": 0,
+    "assets": 0
+  },
+  "provenance_posture": {
+    "classification_legend": {
+      "SOURCE_DERIVED": "read off the extract, with the row IDs to check it",
+      "CAIR_PROPOSAL": "ours; reject it freely",
+      "COURSE_RULE_ALREADY_APPROVED": "a rule that already applies course-wide",
+      "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER": "an analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane; not an authority application",
+      "PENDING_UNIT_EXCEPTION_REVIEW": "this unit does not fit the general shape (a source-fit deferral, not an authority hold)"
+    },
+    "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+    "does_not_override_live_instructional_authority": true,
+    "live_authority_reference": {
+      "path": "docs/pl06/contracts/k5_instructional_authority_v1.json",
+      "git_blob_sha1": "66ec8eb3c55c96db6245fe7e604930252d80917c",
+      "captured_at_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+      "handling": "REFERENCED_NOT_RESTATED",
+      "note": "The live instructional authority is active at execution time. This lane references it by path+blob and does not copy, apply or override its rules; authority application is the integration lane's job."
+    },
+    "committed_to_shared_unit_analysis": false,
+    "note": "Every claim carries a classification. SOURCE_DERIVED claims cite the rows to check them. Distractors and analyst pattern/dialogue readings are proposals for the shared resolver; no answer key is approved here. This record neither states nor implies any instructional-authority hold."
+  },
+  "analysis_contract": {
+    "floors": {
+      "mandatory_propositions": 8,
+      "terminology": 6,
+      "compliance_sensitive": 2,
+      "assessment": 5,
+      "visual_subjects": 3,
+      "rumusan_beats": 3,
+      "ambiguities": 2,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "counts": {
+      "mandatory_propositions": 12,
+      "terminology": 10,
+      "compliance_sensitive": 6,
+      "assessment": 5,
+      "visual_subjects": 4,
+      "rumusan_beats": 5,
+      "ambiguities": 3,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "assessment_composition": {
+      "multiple_choice": 4,
+      "multiple_response": 1,
+      "required": "4 MULTIPLE_CHOICE + 1 MULTIPLE_RESPONSE",
+      "composition_cls": "COURSE_RULE_ALREADY_APPROVED"
+    },
+    "floors_short_of_evidence": {},
+    "authored_to_floor_note": "Fields marked here as short in the PL06 gap matrix (ambiguities everywhere; assessment MR; B03 propositions and 2nd compliance item) are authored by judgment from a genuine reading of the controlled rows, each still row-traced."
+  },
+  "mandatory_propositions": {
+    "cls": "SOURCE_DERIVED",
+    "count": 12,
+    "propositions": [
+      {
+        "proposition": "Mobilisasi tapak mesti menubuhkan pejabat tapak, stor selamat, kabin pekerja dan kemudahan asas (air, elektrik, tandas sementara) sebelum kerja fizikal bermula.",
+        "rows": [
+          "T01B01-ROW-007",
+          "T01B01-ROW-008"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Pematuhan keselamatan (papan tanda, pagar perimeter, PPE) mesti dipasang sebelum sebarang kerja dimulakan.",
+        "rows": [
+          "T01B01-ROW-013",
+          "T01B01-ROW-014"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Perataan kasar (cut/fill) ke aras pembentukan mengikut pelan yang diluluskan memastikan saliran permukaan berkesan dan asas yang stabil.",
+        "rows": [
+          "T01B01-ROW-019",
+          "T01B01-ROW-020"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Pokok matang dan aset semula jadi yang dikekalkan mesti dilindungi sepenuhnya menerusi Zon Perlindungan Akar (RPZ) berpagar dan tree guard.",
+        "rows": [
+          "T01B01-ROW-026"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Utiliti bawah tanah mesti dikenal pasti melalui pelan utiliti (as-built) dan ditanda jelas di permukaan untuk mengelakkan insiden penggalian berbahaya.",
+        "rows": [
+          "T01B01-ROW-028",
+          "T01B01-ROW-055"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Kawalan hakisan dan kelodak (silt fence, gabion, check dam) di perimeter wajib untuk menghalang larian tanah mencemari perparitan awam.",
+        "rows": [
+          "T01B01-ROW-030"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Zon sensitif (RPZ, cerun tidak stabil, warisan) wajib dipagar (hoarding/orange netting) dengan papan amaran; tiada aktiviti, simpanan bahan atau laluan jentera dibenarkan di dalamnya.",
+        "rows": [
+          "T01B01-ROW-048"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Sebelum kerja penandaan, kontraktor wajib menyediakan Kaedah Pernyataan Kerja (KPK) yang komprehensif.",
+        "rows": [
+          "T01B01-ROW-084"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Setiap peralatan ukur jitu wajib mempunyai sijil kalibrasi yang sah dan belum tamat tempoh; peralatan tidak dikalibrasi membawa kepada kesilapan pembinaan yang serius.",
+        "rows": [
+          "T01B01-ROW-089",
+          "T01B01-ROW-204"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Percanggahan antara pelan reka bentuk dan keadaan sebenar tapak mesti didokumentasikan menerusi red mark-up, menjadi asas kepada RFI atau Variation Order (VO).",
+        "rows": [
+          "T01B01-ROW-133",
+          "T01B01-ROW-135"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Penemuan unsur baharu wajib direkod dengan jelas, dimaklumkan serta-merta kepada Penguasa Projek/Perunding, tanpa tindakan sendiri sebelum arahan rasmi.",
+        "rows": [
+          "T01B01-ROW-256",
+          "T01B01-ROW-257",
+          "T01B01-ROW-258"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Kerja tinjauan tertakluk kepada Akta Keselamatan dan Kesihatan Pekerjaan 1994 (Akta 514); kontraktor bertanggungjawab di sisi undang-undang untuk persekitaran kerja yang selamat.",
+        "rows": [
+          "T01B01-ROW-217"
+        ],
+        "cls": "SOURCE_DERIVED"
+      }
+    ]
+  },
+  "terminology": {
+    "cls": "SOURCE_DERIVED",
+    "count": 10,
+    "terms": [
+      {
+        "term": "Mobilisasi Tapak (Site Mobilisation)",
+        "rows": [
+          "T01B01-ROW-005"
+        ]
+      },
+      {
+        "term": "Aras Pembentukan / Formation Level (cut & fill)",
+        "rows": [
+          "T01B01-ROW-020"
+        ]
+      },
+      {
+        "term": "Zon Perlindungan Akar / Root Protection Zone (RPZ)",
+        "rows": [
+          "T01B01-ROW-026"
+        ]
+      },
+      {
+        "term": "Pagar kelodak / Silt fence (gabion, check dam)",
+        "rows": [
+          "T01B01-ROW-030"
+        ]
+      },
+      {
+        "term": "Kaedah Pernyataan Kerja (KPK)",
+        "rows": [
+          "T01B01-ROW-084"
+        ]
+      },
+      {
+        "term": "HIRARC — Hazard Identification, Risk Assessment, Risk Control",
+        "rows": [
+          "T01B01-ROW-096"
+        ]
+      },
+      {
+        "term": "Titik Rujukan Utama / Benchmark (TBM)",
+        "rows": [
+          "T01B01-ROW-099"
+        ]
+      },
+      {
+        "term": "Setting Out / Penandaan Tapak (Site Pegging)",
+        "rows": [
+          "T01B01-ROW-172"
+        ]
+      },
+      {
+        "term": "Red mark-up",
+        "rows": [
+          "T01B01-ROW-131"
+        ]
+      },
+      {
+        "term": "Total Station",
+        "rows": [
+          "T01B01-ROW-041"
+        ]
+      }
+    ]
+  },
+  "compliance_sensitive": {
+    "cls": "SOURCE_DERIVED",
+    "count": 6,
+    "statements": [
+      {
+        "statement": "Semasa penggalian menemui utiliti bawah tanah, kerja mesti dihentikan serta-merta untuk mengelakkan kerosakan.",
+        "rows": [
+          "T01B01-ROW-140"
+        ],
+        "why": "UTILITY_STRIKE_HAZARD"
+      },
+      {
+        "statement": "Semua amalan, metodologi dan format data tinjauan hendaklah sejajar dengan piawaian JUPEM (Jabatan Ukur dan Pemetaan Malaysia).",
+        "rows": [
+          "T01B01-ROW-214",
+          "T01B01-ROW-215"
+        ],
+        "why": "NAMED_REGULATORY_BODY"
+      },
+      {
+        "statement": "Aktiviti tapak tertakluk kepada Akta 514 di bawah JKKP/DOSH — penilaian risiko, kaedah kerja selamat dan pelaporan kemalangan wajib.",
+        "rows": [
+          "T01B01-ROW-216",
+          "T01B01-ROW-217"
+        ],
+        "why": "STATUTORY_SAFETY_OBLIGATION"
+      },
+      {
+        "statement": "Permit PBT (permit memulakan kerja, permit korek, kebenaran penutupan jalan) mesti diperolehi sebelum kerja bermula.",
+        "rows": [
+          "T01B01-ROW-208",
+          "T01B01-ROW-209",
+          "T01B01-ROW-210",
+          "T01B01-ROW-211"
+        ],
+        "why": "REGULATORY_PERMIT"
+      },
+      {
+        "statement": "Kerja ukur dan tinjauan mesti dilaksanakan oleh Individu Kompeten (Juruukur Bertauliah).",
+        "rows": [
+          "T01B01-ROW-199"
+        ],
+        "why": "NAMED_PROFESSIONAL_COMPETENCY"
+      },
+      {
+        "statement": "Papan tanda hubungan kecemasan dan nama/nombor PIC adalah mandatori di lokasi strategik.",
+        "rows": [
+          "T01B01-ROW-201"
+        ],
+        "why": "STATUTORY_SAFETY_EXPOSURE"
+      }
+    ]
+  },
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Dalam mobilisasi tapak, apakah yang mesti dipastikan berada di tempatnya sebelum sebarang kerja fizikal dimulakan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Langkah keselamatan (papan tanda, pagar perimeter, PPE) dan prosedur keselamatan dipatuhi.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B01-ROW-013",
+          "T01B01-ROW-014"
+        ],
+        "distractors": [
+          "Penanaman pokok teduhan di sempadan tapak",
+          "Tuntutan kemajuan kerja pertama kepada klien",
+          "Pemasangan sistem pengairan automatik"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah tujuan utama kerja perataan dan pembentukan (cut/fill) ke aras pembentukan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Memastikan saliran air permukaan yang berkesan dan asas yang stabil bagi elemen landskap.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B01-ROW-020"
+        ],
+        "distractors": [
+          "Menambah nilai estetik permukaan tanah",
+          "Menggantikan keperluan pelan reka bentuk",
+          "Mempercepatkan penghantaran jentera berat"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Sebelum memulakan kerja penandaan tapak, dokumen formal apakah yang wajib disediakan oleh kontraktor?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kaedah Pernyataan Kerja (KPK) yang komprehensif.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B01-ROW-084"
+        ],
+        "distractors": [
+          "Borang tuntutan bayaran kemajuan",
+          "Sijil Perakuan Siap Kerja (CPC)",
+          "Laporan Penilaian Impak Alam Sekitar"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah tindakan PERTAMA yang betul apabila pasukan tapak menemui utiliti bawah tanah yang tidak direkodkan semasa penggalian?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Hentikan kerja penggalian di kawasan tersebut serta-merta.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B01-ROW-140"
+        ],
+        "distractors": [
+          "Teruskan penggalian sehingga utiliti dapat dialihkan",
+          "Tutup semula lubang dan pindah ke kawasan lain tanpa rekod",
+          "Robohkan utiliti tersebut untuk melancarkan kerja"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA padanan kod warna penandaan utiliti bawah tanah yang betul.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Merah — Kabel Elektrik",
+          "Biru — Paip Air",
+          "Kuning — Paip Gas",
+          "Jingga — Kabel Telekomunikasi"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B01-ROW-127",
+          "T01B01-ROW-128",
+          "T01B01-ROW-129",
+          "T01B01-ROW-130"
+        ],
+        "distractors": [
+          "Hijau — Paip Air",
+          "Merah — Kabel Telekomunikasi"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 4,
+    "source_attested": 0,
+    "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+    "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "subjects": [
+      {
+        "subject": "Susun atur pengzonan tapak: enam zon (pembinaan, sensitif, utiliti, akses/mobilisasi, simpanan, semaian sementara)",
+        "rows": [
+          "T01B01-ROW-034",
+          "T01B01-ROW-042",
+          "T01B01-ROW-049",
+          "T01B01-ROW-057",
+          "T01B01-ROW-068",
+          "T01B01-ROW-075"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Rangkaian titik kawalan setting-out: benchmark, garisan asas, garisan offset, titik struktur, aras ketinggian",
+        "rows": [
+          "T01B01-ROW-099",
+          "T01B01-ROW-100",
+          "T01B01-ROW-101",
+          "T01B01-ROW-102",
+          "T01B01-ROW-103"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Legenda kod warna penandaan utiliti bawah tanah",
+        "rows": [
+          "T01B01-ROW-127",
+          "T01B01-ROW-128",
+          "T01B01-ROW-129",
+          "T01B01-ROW-130"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Red mark-up di atas lukisan pembinaan: percanggahan dipangkah dan jajaran sebenar dilukis dengan pen merah",
+        "rows": [
+          "T01B01-ROW-133",
+          "T01B01-ROW-134",
+          "T01B01-ROW-141"
+        ],
+        "has_source_figure": false
+      }
+    ],
+    "note": "Candidate SUBJECTS. Only a subject with has_source_figure=true has a source figure behind it."
+  },
+  "rumusan_beats": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 5,
+    "beats": [
+      "Empat fasa memula kerja: mobilisasi, penyediaan tapak, pemeliharaan & perlindungan, dan tinjauan & penandaan.",
+      "Enam zon tapak dan tujuan kawalan bagi setiap satu.",
+      "Setting out sebagai jambatan antara lukisan dan realiti — ketepatan lokasi, aras, dan jajaran.",
+      "Red mark-up dan pelaporan percanggahan sebagai asas RFI/VO.",
+      "Rangka pematuhan undang-undang kerja tinjauan: JUPEM, JKKP (Akta 514), dan PBT."
+    ],
+    "treatment": "RP-007 — this Bahagian only, contractor perspective",
+    "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+  },
+  "dialogue": {
+    "cls": "CAIR_PROPOSAL",
+    "verdict": "UNCERTAIN",
+    "reason": "Empat kes red mark-up — utiliti bawah tanah, struktur tersembunyi, sistem saliran, dan badan air — ditulis dalam bentuk Situasi / Tindakan / Implikasi, satu bentuk senario dengan konflik (pelan lawan realiti) dan taruhan (utility strike, kos, VO). Namun selebihnya unit ini ialah katalog prosedur. Sama ada satu kes red mark-up wajar dijadikan dialog ialah pertimbangan instruksional yang tidak diputuskan dalam larian ini.",
+    "cast": "NO_CHARACTER_PROPOSED",
+    "cast_cls": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE"
+  },
+  "pattern": {
+    "cls": "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER",
+    "primary_candidate": "progressive process",
+    "secondary_candidate": "click-to-reveal",
+    "reason": "Memula kerja ialah jujukan tulen — mobilisasi, penyediaan, perlindungan, penandaan, pengesahan — jadi progressive process. Enam zon, bahan penandaan, dan kod warna ialah senarai selari yang sesuai dengan click-to-reveal.",
+    "note": "An analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane. This lane does not apply or override instructional authority."
+  },
+  "ambiguities": {
+    "cls": "SOURCE_DERIVED",
+    "count": 3,
+    "items": [
+      {
+        "item": "Seksyen pengzonan tapak (ROW-033..ROW-081) ditulis sebagai satu aliran LIST_ITEM/PARAGRAPH rata dengan sub-label Tujuan/Contoh/Pelaksanaan berulang; nama enam zon distailkan sebagai list item, bukan heading, jadi sempadan zon ialah bacaan bukan fakta struktur.",
+        "rows": [
+          "T01B01-ROW-042",
+          "T01B01-ROW-049",
+          "T01B01-ROW-057",
+          "T01B01-ROW-068",
+          "T01B01-ROW-075"
+        ],
+        "resolution": "Enam zon disimpulkan daripada triplet Tujuan/Contoh/Pelaksanaan yang berulang; PENDING_UNIT_EXCEPTION_REVIEW"
+      },
+      {
+        "item": "Konsep 'Penandaan Tapak / Setting Out' muncul di beberapa tempat — heading 'Tinjauan Tapak & Penandaan Sempadan' (ROW-031), tajuk bebas 'Melaksanakan kerja penandaan tapak' (ROW-082), dan heading khusus 'Penandaan Tapak (Setting out / Site Pegging)' (ROW-172) — jadi sama ada ia satu atau dua titik pengajaran ialah pertimbangan instruksional.",
+        "rows": [
+          "T01B01-ROW-031",
+          "T01B01-ROW-082",
+          "T01B01-ROW-172"
+        ],
+        "resolution": "Semua dikekalkan; PENDING_UNIT_EXCEPTION_REVIEW"
+      },
+      {
+        "item": "Beberapa baris dipenggal di tengah ayat merentas list item (cth. ROW-059/060/061 'Untuk menetapkan laluan... / pergerakan jentera... / pekerja.') — artifak pemenggalan baris sumber, bukan item berasingan.",
+        "rows": [
+          "T01B01-ROW-059",
+          "T01B01-ROW-060",
+          "T01B01-ROW-061",
+          "T01B01-ROW-063",
+          "T01B01-ROW-064",
+          "T01B01-ROW-065"
+        ],
+        "resolution": "RECORDED_NOT_SILENTLY_MERGED"
+      }
+    ]
+  },
+  "source_row_trace": {
+    "every_cited_row_exists": true,
+    "unresolved_row_citations": [],
+    "distinct_cited_rows": [
+      "T01B01-ROW-005",
+      "T01B01-ROW-007",
+      "T01B01-ROW-008",
+      "T01B01-ROW-013",
+      "T01B01-ROW-014",
+      "T01B01-ROW-019",
+      "T01B01-ROW-020",
+      "T01B01-ROW-026",
+      "T01B01-ROW-028",
+      "T01B01-ROW-030",
+      "T01B01-ROW-031",
+      "T01B01-ROW-034",
+      "T01B01-ROW-041",
+      "T01B01-ROW-042",
+      "T01B01-ROW-048",
+      "T01B01-ROW-049",
+      "T01B01-ROW-055",
+      "T01B01-ROW-057",
+      "T01B01-ROW-059",
+      "T01B01-ROW-060",
+      "T01B01-ROW-061",
+      "T01B01-ROW-063",
+      "T01B01-ROW-064",
+      "T01B01-ROW-065",
+      "T01B01-ROW-068",
+      "T01B01-ROW-075",
+      "T01B01-ROW-082",
+      "T01B01-ROW-084",
+      "T01B01-ROW-089",
+      "T01B01-ROW-096",
+      "T01B01-ROW-099",
+      "T01B01-ROW-100",
+      "T01B01-ROW-101",
+      "T01B01-ROW-102",
+      "T01B01-ROW-103",
+      "T01B01-ROW-127",
+      "T01B01-ROW-128",
+      "T01B01-ROW-129",
+      "T01B01-ROW-130",
+      "T01B01-ROW-131",
+      "T01B01-ROW-133",
+      "T01B01-ROW-134",
+      "T01B01-ROW-135",
+      "T01B01-ROW-140",
+      "T01B01-ROW-141",
+      "T01B01-ROW-172",
+      "T01B01-ROW-199",
+      "T01B01-ROW-201",
+      "T01B01-ROW-204",
+      "T01B01-ROW-208",
+      "T01B01-ROW-209",
+      "T01B01-ROW-210",
+      "T01B01-ROW-211",
+      "T01B01-ROW-214",
+      "T01B01-ROW-215",
+      "T01B01-ROW-216",
+      "T01B01-ROW-217",
+      "T01B01-ROW-256",
+      "T01B01-ROW-257",
+      "T01B01-ROW-258"
+    ],
+    "distinct_cited_row_count": 60
+  }
+}

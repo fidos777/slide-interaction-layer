@@ -1,0 +1,527 @@
+{
+  "artifact": "K5_PL06_UNIT_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1",
+  "lane_note": "Source-analysis-only lane. No PPTX, no generation, no authority invention. Isolated per-unit record; the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py is NOT modified.",
+  "unit_id": "K5-PL06-T01-B02",
+  "lesson_title": "Jadual Kerja dan Perlaksanaan Pembinaan Landskap",
+  "topik": 1,
+  "bahagian": 2,
+  "stage": "4.2F-C",
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T01_B02_SOURCE_EXTRACT_v1.json",
+  "source_extract_sha256": "64f42efc33a7aa7594f06b85baac22bbed51348ed50175aaf1f5181df65635ef",
+  "controlled_rows_total": 100,
+  "row_id_range": [
+    "T01B02-ROW-001",
+    "T01B02-ROW-100"
+  ],
+  "source_totals": {
+    "body_elements_in_span": 144,
+    "empty_spacing_paragraphs": 44,
+    "content_rows": 100,
+    "headings": 6,
+    "paragraphs": 37,
+    "numbered_paragraphs": 57,
+    "list_item_rows": 57,
+    "tables": 0,
+    "diagrams": 0,
+    "raster_images": 0,
+    "assets": 0
+  },
+  "provenance_posture": {
+    "classification_legend": {
+      "SOURCE_DERIVED": "read off the extract, with the row IDs to check it",
+      "CAIR_PROPOSAL": "ours; reject it freely",
+      "COURSE_RULE_ALREADY_APPROVED": "a rule that already applies course-wide",
+      "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER": "an analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane; not an authority application",
+      "PENDING_UNIT_EXCEPTION_REVIEW": "this unit does not fit the general shape (a source-fit deferral, not an authority hold)"
+    },
+    "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+    "does_not_override_live_instructional_authority": true,
+    "live_authority_reference": {
+      "path": "docs/pl06/contracts/k5_instructional_authority_v1.json",
+      "git_blob_sha1": "66ec8eb3c55c96db6245fe7e604930252d80917c",
+      "captured_at_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+      "handling": "REFERENCED_NOT_RESTATED",
+      "note": "The live instructional authority is active at execution time. This lane references it by path+blob and does not copy, apply or override its rules; authority application is the integration lane's job."
+    },
+    "committed_to_shared_unit_analysis": false,
+    "note": "Every claim carries a classification. SOURCE_DERIVED claims cite the rows to check them. Distractors and analyst pattern/dialogue readings are proposals for the shared resolver; no answer key is approved here. This record neither states nor implies any instructional-authority hold."
+  },
+  "analysis_contract": {
+    "floors": {
+      "mandatory_propositions": 8,
+      "terminology": 6,
+      "compliance_sensitive": 2,
+      "assessment": 5,
+      "visual_subjects": 3,
+      "rumusan_beats": 3,
+      "ambiguities": 2,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "counts": {
+      "mandatory_propositions": 10,
+      "terminology": 9,
+      "compliance_sensitive": 6,
+      "assessment": 5,
+      "visual_subjects": 4,
+      "rumusan_beats": 5,
+      "ambiguities": 3,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "assessment_composition": {
+      "multiple_choice": 4,
+      "multiple_response": 1,
+      "required": "4 MULTIPLE_CHOICE + 1 MULTIPLE_RESPONSE",
+      "composition_cls": "COURSE_RULE_ALREADY_APPROVED"
+    },
+    "floors_short_of_evidence": {},
+    "authored_to_floor_note": "Fields marked here as short in the PL06 gap matrix (ambiguities everywhere; assessment MR; B03 propositions and 2nd compliance item) are authored by judgment from a genuine reading of the controlled rows, each still row-traced."
+  },
+  "mandatory_propositions": {
+    "cls": "SOURCE_DERIVED",
+    "count": 10,
+    "propositions": [
+      {
+        "proposition": "Pengambilan Tapak ialah tarikh rasmi tapak diserahkan Klien kepada Kontraktor dan memulakan kiraan masa serta tempoh kontrak.",
+        "rows": [
+          "T01B02-ROW-004",
+          "T01B02-ROW-006"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Pemeriksaan Tapak Bersama semasa serahan mesti merekod sebarang kecacatan/keadaan luar biasa dalam borang serahan tapak.",
+        "rows": [
+          "T01B02-ROW-011"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Dokumen serahan yang ditandatangani kedua-dua pihak melindungi kontraktor daripada dipertanggungjawabkan atas isu sedia ada sebelum pengambilan tapak.",
+        "rows": [
+          "T01B02-ROW-013"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Kegagalan menyiapkan projek menjelang Tarikh Siap membolehkan Klien mengenakan LAD (Liquidated Ascertained Damages), penalti harian yang dipersetujui dalam kontrak.",
+        "rows": [
+          "T01B02-ROW-019"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Jadual kerja profesional wajib mempunyai fasa khusus 'Pengesahan Utiliti Bawah Tanah' sejurus selepas pengambilan tapak, sebelum pengorekan besar-besaran.",
+        "rows": [
+          "T01B02-ROW-031",
+          "T01B02-ROW-034"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Tiada bahan boleh dibawa masuk atau digunakan di tapak sebelum kelulusan bertulis daripada Pegawai Penguasa (S.O.)/Perunding.",
+        "rows": [
+          "T01B02-ROW-037",
+          "T01B02-ROW-045"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Penandaan (setting out) lokasi, jajaran dan aras mesti dilakukan oleh Juruukur Bertauliah berdasarkan Lukisan Pembinaan yang diluluskan sebelum penggalian.",
+        "rows": [
+          "T01B02-ROW-061"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Kontraktor mesti memaklumkan S.O. untuk pemeriksaan pada peringkat kritikal (cth. sebelum penutupan formwork atau tuangan konkrit) dan mendapat kelulusan sebelum meneruskan.",
+        "rows": [
+          "T01B02-ROW-067"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Saiz lubang penanaman mesti mengikut spesifikasi (biasanya 2 kali ganda saiz bebola akar) untuk perkembangan akar yang sihat.",
+        "rows": [
+          "T01B02-ROW-080"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Kerja mesti disahkan dan diterima oleh S.O. sebelum kontraktor boleh memasukkan item kerja dalam tuntutan bayaran seterusnya.",
+        "rows": [
+          "T01B02-ROW-100"
+        ],
+        "cls": "SOURCE_DERIVED"
+      }
+    ]
+  },
+  "terminology": {
+    "cls": "SOURCE_DERIVED",
+    "count": 9,
+    "terms": [
+      {
+        "term": "Pengambilan Tapak / Site Handover",
+        "rows": [
+          "T01B02-ROW-003"
+        ]
+      },
+      {
+        "term": "Tarikh Siap / Completion Date",
+        "rows": [
+          "T01B02-ROW-014"
+        ]
+      },
+      {
+        "term": "LAD — Liquidated Ascertained Damages / Denda Lewat Siap",
+        "rows": [
+          "T01B02-ROW-019"
+        ]
+      },
+      {
+        "term": "Perancangan Songsang (Backward Planning)",
+        "rows": [
+          "T01B02-ROW-020"
+        ]
+      },
+      {
+        "term": "Pegawai Penguasa (S.O.)",
+        "rows": [
+          "T01B02-ROW-037"
+        ]
+      },
+      {
+        "term": "Bill of Quantities (BQ)",
+        "rows": [
+          "T01B02-ROW-038"
+        ]
+      },
+      {
+        "term": "Landskap Kejur (Hardscape)",
+        "rows": [
+          "T01B02-ROW-047"
+        ]
+      },
+      {
+        "term": "Senarai Kecacatan (Defect List)",
+        "rows": [
+          "T01B02-ROW-095"
+        ]
+      },
+      {
+        "term": "Spot turfing / Hydroseeding",
+        "rows": [
+          "T01B02-ROW-073"
+        ]
+      }
+    ]
+  },
+  "compliance_sensitive": {
+    "cls": "SOURCE_DERIVED",
+    "count": 6,
+    "statements": [
+      {
+        "statement": "Jangan mula kerja dengan bahan yang belum menerima kelulusan bertulis; kegagalan boleh membawa arahan meroboh dan bina semula atas tanggungan kontraktor.",
+        "rows": [
+          "T01B02-ROW-045"
+        ],
+        "why": "CONTRACTUAL_OBLIGATION"
+      },
+      {
+        "statement": "LAD ialah kos penalti harian yang dipersetujui bagi kelewatan siap.",
+        "rows": [
+          "T01B02-ROW-019"
+        ],
+        "why": "CONTRACTUAL_PENALTY"
+      },
+      {
+        "statement": "Dokumen serahan yang ditandatangani memperuntukkan liabiliti keadaan sedia ada tapak.",
+        "rows": [
+          "T01B02-ROW-013"
+        ],
+        "why": "CONTRACTUAL_LIABILITY_BOUNDARY"
+      },
+      {
+        "statement": "Setting out mesti oleh Juruukur Bertauliah berdasarkan Lukisan Pembinaan yang diluluskan.",
+        "rows": [
+          "T01B02-ROW-061"
+        ],
+        "why": "NAMED_PROFESSIONAL_COMPETENCY"
+      },
+      {
+        "statement": "Pemeriksaan S.O. pada peringkat kritikal sebagai hold point sebelum kerja ditutup (formwork/konkrit).",
+        "rows": [
+          "T01B02-ROW-067"
+        ],
+        "why": "HOLD_POINT_INSPECTION"
+      },
+      {
+        "statement": "Pengesahan dan penerimaan kerja oleh S.O. ialah prasyarat kepada tuntutan bayaran.",
+        "rows": [
+          "T01B02-ROW-100"
+        ],
+        "why": "PAYMENT_CERTIFICATION"
+      }
+    ]
+  },
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah yang ditandakan oleh tarikh Pengambilan Tapak?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Permulaan rasmi kiraan masa dan tempoh kontrak projek.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B02-ROW-006"
+        ],
+        "distractors": [
+          "Tarikh akhir projek mesti disiapkan",
+          "Tarikh bayaran akhir diterima daripada klien",
+          "Tarikh pemeriksaan kecacatan terakhir"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah yang boleh dikenakan oleh Klien jika projek tidak siap menjelang Tarikh Siap?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "LAD (Liquidated Ascertained Damages) — penalti harian yang dipersetujui dalam kontrak.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B02-ROW-019"
+        ],
+        "distractors": [
+          "Penamatan automatik lesen kontraktor",
+          "Bayaran bonus dipercepatkan kepada kontraktor",
+          "Pengambilan semula tapak tanpa notis"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Sebelum menggunakan sebarang bahan di tapak, apakah yang mesti diperoleh kontraktor?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kelulusan bertulis daripada Pegawai Penguasa (S.O.)/Perunding.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B02-ROW-037",
+          "T01B02-ROW-045"
+        ],
+        "distractors": [
+          "Kelulusan lisan daripada mandur tapak",
+          "Resit pembelian daripada pembekal",
+          "Bayaran pendahuluan daripada klien"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah lubang penanaman digali kira-kira 2 kali ganda saiz bebola akar?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Untuk memastikan perkembangan akar yang sihat.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B02-ROW-080"
+        ],
+        "distractors": [
+          "Untuk menjimatkan penggunaan tanah atas",
+          "Untuk mempercepatkan kerja penanaman",
+          "Untuk mengurangkan keperluan siraman pertama"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA langkah dalam aliran kerja pemeriksaan tapak dan pengesahan.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Permohonan pemeriksaan secara rasmi kepada S.O.",
+          "Pemeriksaan bersama (joint inspection) di tapak",
+          "Pengeluaran senarai kecacatan (defect list)",
+          "Tindakan pembetulan oleh kontraktor",
+          "Pemeriksaan semula dan pengesahan"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B02-ROW-092",
+          "T01B02-ROW-094",
+          "T01B02-ROW-096",
+          "T01B02-ROW-098",
+          "T01B02-ROW-100"
+        ],
+        "distractors": [
+          "Mengenakan LAD kepada sub-kontraktor",
+          "Menghantar tuntutan bayaran sebelum pemeriksaan semula"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 4,
+    "source_attested": 0,
+    "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+    "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "subjects": [
+      {
+        "subject": "Garis masa projek dengan fasa dirancang songsang dari Tarikh Siap; pencetus LAD di hujung",
+        "rows": [
+          "T01B02-ROW-019",
+          "T01B02-ROW-020",
+          "T01B02-ROW-021"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Peta skop landskap kejur: saliran, pengairan, struktur binaan, perabot, pencahayaan",
+        "rows": [
+          "T01B02-ROW-049",
+          "T01B02-ROW-051",
+          "T01B02-ROW-053",
+          "T01B02-ROW-055",
+          "T01B02-ROW-057"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Keratan penanaman yang betul: lubang 2x bebola akar, staking, mulching",
+        "rows": [
+          "T01B02-ROW-080",
+          "T01B02-ROW-083",
+          "T01B02-ROW-085"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Aliran kerja penyerahan dan kelulusan bahan: serah, semak, lulus/tolak",
+        "rows": [
+          "T01B02-ROW-039",
+          "T01B02-ROW-043",
+          "T01B02-ROW-044"
+        ],
+        "has_source_figure": false
+      }
+    ],
+    "note": "Candidate SUBJECTS. Only a subject with has_source_figure=true has a source figure behind it."
+  },
+  "rumusan_beats": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 5,
+    "beats": [
+      "Pengambilan tapak sebagai titik mula kiraan masa kontrak dan borang serahan sebagai pelindung liabiliti.",
+      "Tarikh Siap, LAD, dan kaedah perancangan songsang.",
+      "Pengesahan utiliti bawah tanah sebagai fasa wajib sebelum pengorekan.",
+      "Kelulusan bahan bertulis sebelum guna, dan pemeriksaan berperingkat oleh S.O.",
+      "Aliran kerja pemeriksaan dan senarai kecacatan sebelum tuntutan bayaran."
+    ],
+    "treatment": "RP-007 — this Bahagian only, contractor perspective",
+    "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+  },
+  "dialogue": {
+    "cls": "CAIR_PROPOSAL",
+    "verdict": "JUSTIFIED",
+    "reason": "Kitaran kelulusan bahan dan pemeriksaan/senarai kecacatan ialah pertukaran dua pihak yang tulen antara Kontraktor dan Pegawai Penguasa (S.O.) — kontraktor menyerah, S.O. lulus/tolak, mengeluarkan senarai kecacatan, kontraktor membaiki, S.O. mengesahkan. Ia keputusan bertaruhan (tolakan = meroboh & bina semula; bayaran ditahan), iaitu maksud AR-06 'justified'.",
+    "cast": "NO_CHARACTER_PROPOSED",
+    "cast_cls": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE"
+  },
+  "pattern": {
+    "cls": "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER",
+    "primary_candidate": "progressive process",
+    "secondary_candidate": "click-to-reveal",
+    "reason": "Dua jujukan tulen — jadual kerja dari serahan ke pelaksanaan ke pemeriksaan, dan aliran kerja senarai kecacatan. Skop landskap kejur dan langkah penanaman ialah senarai selari (click-to-reveal).",
+    "note": "An analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane. This lane does not apply or override instructional authority."
+  },
+  "ambiguities": {
+    "cls": "SOURCE_DERIVED",
+    "count": 3,
+    "items": [
+      {
+        "item": "ROW-026 mengandungi typo sumber — ayat berakhir dengan huruf 'P' tersasar: '...5 batang pokok sedia ada.P'.",
+        "rows": [
+          "T01B02-ROW-026"
+        ],
+        "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+      },
+      {
+        "item": "Dua konsep 'pemeriksaan tapak' bertindih — pemeriksaan berperingkat di bawah prinsip landskap kejur (ROW-066/067) dan seksyen khusus 'Pemeriksaan Tapak dan Pengesahan' (ROW-086) — sama ada satu atau dua titik pengajaran ialah pertimbangan instruksional.",
+        "rows": [
+          "T01B02-ROW-066",
+          "T01B02-ROW-086"
+        ],
+        "resolution": "Kedua-dua dikekalkan; PENDING_UNIT_EXCEPTION_REVIEW"
+      },
+      {
+        "item": "Sub-langkah penyerahan bahan (Penyerahan/Semakan/Kelulusan) di ROW-039/043/044 distailkan sebagai PARAGRAPH bukan LIST_ITEM walaupun ia jujukan prosedur; ROW-050 juga membawa typo petikan '\"cell\"'.",
+        "rows": [
+          "T01B02-ROW-039",
+          "T01B02-ROW-043",
+          "T01B02-ROW-044",
+          "T01B02-ROW-050"
+        ],
+        "resolution": "Jujukan dibaca daripada kandungan; typo direkod; RECORDED"
+      }
+    ]
+  },
+  "source_row_trace": {
+    "every_cited_row_exists": true,
+    "unresolved_row_citations": [],
+    "distinct_cited_rows": [
+      "T01B02-ROW-003",
+      "T01B02-ROW-004",
+      "T01B02-ROW-006",
+      "T01B02-ROW-011",
+      "T01B02-ROW-013",
+      "T01B02-ROW-014",
+      "T01B02-ROW-019",
+      "T01B02-ROW-020",
+      "T01B02-ROW-021",
+      "T01B02-ROW-026",
+      "T01B02-ROW-031",
+      "T01B02-ROW-034",
+      "T01B02-ROW-037",
+      "T01B02-ROW-038",
+      "T01B02-ROW-039",
+      "T01B02-ROW-043",
+      "T01B02-ROW-044",
+      "T01B02-ROW-045",
+      "T01B02-ROW-047",
+      "T01B02-ROW-049",
+      "T01B02-ROW-050",
+      "T01B02-ROW-051",
+      "T01B02-ROW-053",
+      "T01B02-ROW-055",
+      "T01B02-ROW-057",
+      "T01B02-ROW-061",
+      "T01B02-ROW-066",
+      "T01B02-ROW-067",
+      "T01B02-ROW-073",
+      "T01B02-ROW-080",
+      "T01B02-ROW-083",
+      "T01B02-ROW-085",
+      "T01B02-ROW-086",
+      "T01B02-ROW-092",
+      "T01B02-ROW-094",
+      "T01B02-ROW-095",
+      "T01B02-ROW-096",
+      "T01B02-ROW-098",
+      "T01B02-ROW-100"
+    ],
+    "distinct_cited_row_count": 39
+  }
+}
