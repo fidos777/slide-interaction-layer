@@ -1,0 +1,77 @@
+{
+  "artifact": "K5_PL06_ANALYSIS_VALIDATION",
+  "artifact_version": "v1",
+  "lane": "S1",
+  "unit_id": "K5-PL06-T01-B03",
+  "validates": "docs/pl06/unit_analysis/K5_PL06_T01_B03_UNIT_ANALYSIS_v1.json",
+  "validated_record_sha256": "545b06d2b775e4dd8bd07e1f691ef10694b8be383464f9123e80eae0610f8972",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T01_B03_SOURCE_EXTRACT_v1.json",
+  "source_extract_sha256": "474b30318d0bd9b34eede96811a031ba6dcaa522782109a59243daa63f541505",
+  "controlled_rows_total": 146,
+  "row_id_range": [
+    "T01B03-ROW-001",
+    "T01B03-ROW-146"
+  ],
+  "contract_floors_TARGET": {
+    "mandatory_propositions": 8,
+    "terminology": 6,
+    "compliance_sensitive": 2,
+    "assessment": 5,
+    "visual_subjects": 3,
+    "rumusan_beats": 3,
+    "ambiguities": 2,
+    "dialogue": 1,
+    "pattern": 1
+  },
+  "observed_counts_OBSERVED": {
+    "mandatory_propositions": 10,
+    "terminology": 11,
+    "compliance_sensitive": 5,
+    "assessment": 5,
+    "visual_subjects": 7,
+    "rumusan_beats": 5,
+    "ambiguities": 4,
+    "dialogue": 1,
+    "pattern": 1
+  },
+  "floor_met_OBSERVED": {
+    "mandatory_propositions": true,
+    "terminology": true,
+    "compliance_sensitive": true,
+    "assessment": true,
+    "visual_subjects": true,
+    "rumusan_beats": true,
+    "ambiguities": true,
+    "dialogue": true,
+    "pattern": true
+  },
+  "assessment_composition_OBSERVED": {
+    "multiple_choice": 4,
+    "multiple_response": 1,
+    "total": 5,
+    "required_TARGET": "4 MULTIPLE_CHOICE + 1 MULTIPLE_RESPONSE",
+    "exactly_five": true,
+    "composition_ok": true
+  },
+  "row_trace_OBSERVED": {
+    "every_cited_row_exists": true,
+    "unresolved_row_citations": [],
+    "distinct_cited_rows": 44
+  },
+  "source_discipline": {
+    "controlled_row_ids_preserved": true,
+    "source_anomalies_recorded_not_repaired": true,
+    "note": "Typos/spelling variants and structural anomalies are logged in the ambiguities register with resolution=RECORDED_NOT_SILENTLY_CORRECTED / PENDING_UNIT_EXCEPTION_REVIEW, never silently reconciled."
+  },
+  "provenance_distinction": {
+    "source_fact_cls": "SOURCE_DERIVED",
+    "analyst_inference_and_proposed_learner_copy_cls": "CAIR_PROPOSAL",
+    "pending_authority_cls": [
+      "PENDING_BARIAH_PATTERN_DECISION",
+      "PENDING_UNIT_EXCEPTION_REVIEW"
+    ],
+    "answer_key_status": "DRAFTED_NOT_APPROVED"
+  },
+  "determinism_note": "Record and this evidence are byte-deterministic from the frozen extract (no timestamps/RNG); rebuild reproduces identical bytes.",
+  "overall_OBSERVED": "PASS"
+}

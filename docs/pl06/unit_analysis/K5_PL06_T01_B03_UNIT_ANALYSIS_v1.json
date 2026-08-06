@@ -1,0 +1,582 @@
+{
+  "artifact": "K5_PL06_UNIT_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1",
+  "lane_note": "Source-analysis-only lane. No PPTX, no generation, no authority invention. Isolated per-unit record; the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py is NOT modified.",
+  "unit_id": "K5-PL06-T01-B03",
+  "lesson_title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+  "topik": 1,
+  "bahagian": 3,
+  "stage": "4.2F-C",
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T01_B03_SOURCE_EXTRACT_v1.json",
+  "source_extract_sha256": "474b30318d0bd9b34eede96811a031ba6dcaa522782109a59243daa63f541505",
+  "controlled_rows_total": 146,
+  "row_id_range": [
+    "T01B03-ROW-001",
+    "T01B03-ROW-146"
+  ],
+  "source_totals": {
+    "body_elements_in_span": 198,
+    "empty_spacing_paragraphs": 52,
+    "content_rows": 146,
+    "headings": 9,
+    "paragraphs": 57,
+    "numbered_paragraphs": 74,
+    "list_item_rows": 74,
+    "tables": 0,
+    "diagrams": 0,
+    "raster_images": 6,
+    "assets": 6
+  },
+  "provenance_posture": {
+    "classification_legend": {
+      "SOURCE_DERIVED": "read off the extract, with the row IDs to check it",
+      "CAIR_PROPOSAL": "ours; reject it freely",
+      "COURSE_RULE_ALREADY_APPROVED": "a rule that already applies course-wide",
+      "PENDING_BARIAH_PATTERN_DECISION": "waits on the pattern package now under review",
+      "PENDING_UNIT_EXCEPTION_REVIEW": "this unit does not fit the general shape"
+    },
+    "nothing_frozen": [
+      "screen count",
+      "sequence",
+      "dialogue",
+      "Rumusan form",
+      "pattern family",
+      "assessment key",
+      "visual reuse"
+    ],
+    "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+    "pattern_package_is_not_authority": true,
+    "committed_to_shared_unit_analysis": false,
+    "note": "Every claim carries a classification. SOURCE_DERIVED claims cite the rows to check them. Distractors, screen/pattern/dialogue treatments are proposals only; no answer key is approved here."
+  },
+  "analysis_contract": {
+    "floors": {
+      "mandatory_propositions": 8,
+      "terminology": 6,
+      "compliance_sensitive": 2,
+      "assessment": 5,
+      "visual_subjects": 3,
+      "rumusan_beats": 3,
+      "ambiguities": 2,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "counts": {
+      "mandatory_propositions": 10,
+      "terminology": 11,
+      "compliance_sensitive": 5,
+      "assessment": 5,
+      "visual_subjects": 7,
+      "rumusan_beats": 5,
+      "ambiguities": 4,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "assessment_composition": {
+      "multiple_choice": 4,
+      "multiple_response": 1,
+      "required": "4 MULTIPLE_CHOICE + 1 MULTIPLE_RESPONSE",
+      "composition_cls": "COURSE_RULE_ALREADY_APPROVED"
+    },
+    "floors_short_of_evidence": {},
+    "authored_to_floor_note": "Fields marked here as short in the PL06 gap matrix (ambiguities everywhere; assessment MR; B03 propositions and 2nd compliance item) are authored by judgment from a genuine reading of the controlled rows, each still row-traced."
+  },
+  "mandatory_propositions": {
+    "cls": "SOURCE_DERIVED",
+    "count": 10,
+    "propositions": [
+      {
+        "proposition": "Perancangan dan perolehan sumber mesti dimulakan seawal peringkat pelaksanaan supaya item 'special features' berjadual dan penyerahan siap tepat pada masa kontrak.",
+        "rows": [
+          "T01B03-ROW-002"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Lukisan pembinaan mesti diselaraskan dan mencapai status 'Diluluskan untuk pembinaan' (Approved for Construction) sebelum kerja dibina.",
+        "rows": [
+          "T01B03-ROW-065"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Pengurusan Aliran Tunai mesti memastikan sentiasa ada wang tunai yang cukup untuk membayar perbelanjaan operasi tepat pada masanya — bukan sekadar mengira untung rugi.",
+        "rows": [
+          "T01B03-ROW-090"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Pengujian dan Pentauliahan (T&C) sambungan utiliti (air, elektrik, saliran) mesti mengesahkan sistem berfungsi selamat dan boleh dipercayai sebelum projek diserahkan kepada klien.",
+        "rows": [
+          "T01B03-ROW-113"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Sistem bekalan air/pengairan mesti menjalani ujian tekanan untuk mengesan kebocoran dan ujian aliran untuk liputan air yang sekata.",
+        "rows": [
+          "T01B03-ROW-117",
+          "T01B03-ROW-119"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Sistem elektrik mesti menjalani ujian penebatan (megger) untuk memastikan penebatan kabel tidak rosak atau bocor yang boleh menyebabkan litar pintas atau renjatan.",
+        "rows": [
+          "T01B03-ROW-124",
+          "T01B03-ROW-125"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Sistem saliran mesti menjalani ujian aliran graviti dan pemeriksaan kecerunan untuk memastikan aliran lancar ke discharge point tanpa aliran balik.",
+        "rows": [
+          "T01B03-ROW-133",
+          "T01B03-ROW-135"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Mengesan masalah menerusi T&C pada peringkat awal jauh lebih murah berbanding membaiki selepas kerja landskap lain siap sepenuhnya.",
+        "rows": [
+          "T01B03-ROW-144"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Pemasangan mesti mematuhi kehendak Pihak Berkuasa Tempatan (PBT) dan badan relevan yang lain.",
+        "rows": [
+          "T01B03-ROW-146"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Tuntutan Kemajuan Kerja dibayar oleh klien berdasarkan peringkat kerja yang telah siap.",
+        "rows": [
+          "T01B03-ROW-096"
+        ],
+        "cls": "SOURCE_DERIVED"
+      }
+    ]
+  },
+  "terminology": {
+    "cls": "SOURCE_DERIVED",
+    "count": 11,
+    "terms": [
+      {
+        "term": "Special features (item perolehan awal)",
+        "rows": [
+          "T01B03-ROW-002"
+        ]
+      },
+      {
+        "term": "Arboris",
+        "rows": [
+          "T01B03-ROW-016"
+        ]
+      },
+      {
+        "term": "Juruukur Bahan (Quantity Surveyor)",
+        "rows": [
+          "T01B03-ROW-008"
+        ]
+      },
+      {
+        "term": "Lukisan Pembinaan Landskap (keratan rentas, elevation, pembesaran)",
+        "rows": [
+          "T01B03-ROW-046"
+        ]
+      },
+      {
+        "term": "Shop drawings / Lukisan kedai",
+        "rows": [
+          "T01B03-ROW-062"
+        ]
+      },
+      {
+        "term": "Approved for Construction / Diluluskan untuk pembinaan",
+        "rows": [
+          "T01B03-ROW-065"
+        ]
+      },
+      {
+        "term": "Pengurusan Aliran Tunai (Cash Flow)",
+        "rows": [
+          "T01B03-ROW-089"
+        ]
+      },
+      {
+        "term": "Tuntutan Kemajuan Kerja (Progress Claims)",
+        "rows": [
+          "T01B03-ROW-095"
+        ]
+      },
+      {
+        "term": "T&C — Pengujian dan Pentauliahan",
+        "rows": [
+          "T01B03-ROW-112"
+        ]
+      },
+      {
+        "term": "Ujian Penebatan / Insulation Test (megger)",
+        "rows": [
+          "T01B03-ROW-124"
+        ]
+      },
+      {
+        "term": "Ujian Aliran Graviti (Gravity Flow Test)",
+        "rows": [
+          "T01B03-ROW-132"
+        ]
+      }
+    ]
+  },
+  "compliance_sensitive": {
+    "cls": "SOURCE_DERIVED",
+    "count": 5,
+    "statements": [
+      {
+        "statement": "Ujian penebatan wajib kerana penebatan kabel yang rosak boleh menyebabkan litar pintas atau risiko renjatan elektrik.",
+        "rows": [
+          "T01B03-ROW-125"
+        ],
+        "why": "ELECTRICAL_SAFETY_HAZARD"
+      },
+      {
+        "statement": "T&C mengesahkan semua sistem, terutamanya elektrik, selamat dikendalikan dan tidak membahayakan pengguna akhir.",
+        "rows": [
+          "T01B03-ROW-142"
+        ],
+        "why": "SAFETY_CERTIFICATION"
+      },
+      {
+        "statement": "Pemasangan mesti mematuhi kehendak PBT dan badan relevan yang lain.",
+        "rows": [
+          "T01B03-ROW-146"
+        ],
+        "why": "REGULATORY_COMPLIANCE"
+      },
+      {
+        "statement": "Ujian tekanan pada paip air/sambungan untuk mengesan kebocoran sebelum sistem diterima.",
+        "rows": [
+          "T01B03-ROW-117"
+        ],
+        "why": "SYSTEM_INTEGRITY"
+      },
+      {
+        "statement": "Pengurusan aliran tunai — mesti sentiasa mempunyai tunai mencukupi untuk membayar obligasi operasi tepat pada masanya.",
+        "rows": [
+          "T01B03-ROW-090"
+        ],
+        "why": "FINANCIAL_SOLVENCY_EXPOSURE"
+      }
+    ]
+  },
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah perancangan dan perolehan sumber perlu dimulakan seawal peringkat pelaksanaan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Supaya item 'special features' yang memerlukan tempahan awal dapat diuruskan mengikut jadual dan penyerahan siap tepat pada masa.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B03-ROW-002"
+        ],
+        "distractors": [
+          "Untuk mengurangkan bilangan pekerja mahir di tapak",
+          "Untuk mengelakkan keperluan lukisan pembinaan",
+          "Untuk menangguhkan bayaran pendahuluan daripada klien"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah maksud status 'Diluluskan untuk pembinaan' (Approved for Construction) bagi sesuatu lukisan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Lukisan yang telah diselaraskan itu diluluskan/dilepaskan untuk kerja pembinaan.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B03-ROW-065"
+        ],
+        "distractors": [
+          "Lukisan masih dalam peringkat cadangan balas",
+          "Lukisan hanya untuk rujukan tender sahaja",
+          "Lukisan menggantikan keperluan spesifikasi"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah tujuan utama Pengurusan Aliran Tunai dalam projek landskap?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Memastikan sentiasa ada wang tunai yang cukup untuk membayar perbelanjaan operasi tepat pada masanya.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B03-ROW-090"
+        ],
+        "distractors": [
+          "Mengira jumlah untung rugi akhir projek",
+          "Menetapkan harga kontrak dengan klien",
+          "Menggantikan keperluan tuntutan kemajuan kerja"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah ujian penebatan (insulation/megger test) dijalankan pada sistem elektrik?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Untuk memastikan penebatan kabel tidak rosak atau bocor yang boleh menyebabkan litar pintas atau renjatan elektrik.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B03-ROW-125"
+        ],
+        "distractors": [
+          "Untuk mengukur kadar aliran air pada perenjis",
+          "Untuk mengesahkan kecerunan longkang",
+          "Untuk menguji kecerahan lampu landskap"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA ujian yang merupakan sebahagian daripada T&C sambungan utiliti.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Ujian tekanan (pressure test) bekalan air",
+          "Ujian aliran (flow test) pengairan",
+          "Ujian penebatan (insulation/megger) elektrik",
+          "Ujian aliran graviti (gravity flow) saliran",
+          "Pemeriksaan kecerunan (gradient check) saliran"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T01B03-ROW-116",
+          "T01B03-ROW-118",
+          "T01B03-ROW-124",
+          "T01B03-ROW-132",
+          "T01B03-ROW-134"
+        ],
+        "distractors": [
+          "Ujian kalibrasi Total Station",
+          "Ujian pemadatan bebola akar pokok"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 7,
+    "source_attested": 6,
+    "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+    "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "subjects": [
+      {
+        "subject": "Rajah 11: Contoh Pelan Tapak Landskap Pencahayaan Dan Pengairan",
+        "rows": [
+          "T01B03-ROW-055",
+          "T01B03-ROW-056"
+        ],
+        "has_source_figure": true,
+        "asset_id": "T01B03-IMG-01",
+        "note": "Figura sumber tulen; caption 'Rajah 11:' berada di baris LIST_ITEM bersebelahan (asset caption metadata null — SOURCE_BOUND_CAPTIONLESS)."
+      },
+      {
+        "subject": "Rajah 12: Contoh Pelan Dan Jadual Landskap Lembut Pokok Dan Palma",
+        "rows": [
+          "T01B03-ROW-057",
+          "T01B03-ROW-058"
+        ],
+        "has_source_figure": true,
+        "asset_id": "T01B03-IMG-02",
+        "note": "Figura sumber tulen; caption di baris bersebelahan."
+      },
+      {
+        "subject": "Rajah 13: Contoh Pelan Terperinci Pintu Masuk Taman, Plaza Dan Bangku Taman",
+        "rows": [
+          "T01B03-ROW-059",
+          "T01B03-ROW-060"
+        ],
+        "has_source_figure": true,
+        "asset_id": "T01B03-IMG-03",
+        "note": "Figura sumber tulen; caption di baris bersebelahan."
+      },
+      {
+        "subject": "Rajah 14: Contoh Sebahagian Spesifikasi Landskap Lembut",
+        "rows": [
+          "T01B03-ROW-077",
+          "T01B03-ROW-078"
+        ],
+        "has_source_figure": true,
+        "asset_id": "T01B03-IMG-04",
+        "note": "Figura sumber tulen; caption 'Rajah 14:' (source spelling 'Spesfikasi')."
+      },
+      {
+        "subject": "Rajah 15: Contoh Sebahagian Spesifikasi Turfing",
+        "rows": [
+          "T01B03-ROW-079",
+          "T01B03-ROW-080"
+        ],
+        "has_source_figure": true,
+        "asset_id": "T01B03-IMG-05",
+        "note": "Figura sumber tulen; caption 'Rajah 15:' (source spelling 'Spesfikasi')."
+      },
+      {
+        "subject": "Rajah 16: Contoh Jadual Penyelenggaraan",
+        "rows": [
+          "T01B03-ROW-081",
+          "T01B03-ROW-082"
+        ],
+        "has_source_figure": true,
+        "asset_id": "T01B03-IMG-06",
+        "note": "Figura sumber tulen; caption di baris bersebelahan."
+      },
+      {
+        "subject": "Aliran tunai projek: aliran masuk (pendahuluan, tuntutan kemajuan, bayaran akhir, VO) berbanding aliran keluar (bahan, buruh, jentera, overhead)",
+        "rows": [
+          "T01B03-ROW-091",
+          "T01B03-ROW-101"
+        ],
+        "has_source_figure": false
+      }
+    ],
+    "note": "Candidate SUBJECTS. Only a subject with has_source_figure=true has a source figure behind it."
+  },
+  "rumusan_beats": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 5,
+    "beats": [
+      "Empat kategori sumber projek: manusia, jentera & peralatan, bahan binaan, dan bahan penanaman.",
+      "Dokumentasi dan kelulusan lukisan pembinaan (approved for construction) serta dokumen keperluan projek.",
+      "Pengurusan aliran tunai: aliran masuk berbanding aliran keluar operasi.",
+      "Pengujian dan Pentauliahan (T&C) bekalan air, elektrik, dan saliran sebelum serahan.",
+      "Kepentingan T&C: jaminan kualiti, keselamatan, penjimatan kos, dan pematuhan peraturan."
+    ],
+    "treatment": "RP-007 — this Bahagian only, contractor perspective",
+    "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+  },
+  "dialogue": {
+    "cls": "CAIR_PROPOSAL",
+    "verdict": "NOT_JUSTIFIED",
+    "reason": "Unit ini ialah inventori sumber (manusia, jentera, bahan, penanaman) diikuti dokumentasi, aliran tunai, dan prosedur T&C. Tiada keputusan, konflik, atau pertimbangan yang boleh dijadikan senario. AR-06 membenarkan dialog hanya di mana justified, dan tiada apa-apa di sini yang mewajarkannya.",
+    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
+    "cast_cls": "PENDING_BARIAH_PATTERN_DECISION"
+  },
+  "pattern": {
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "primary_candidate": "click-to-reveal",
+    "secondary_candidate": "progressive process",
+    "reason": "Empat kategori sumber, setiap satu senarai selari — bentuk yang sesuai dengan click-to-reveal. T&C setiap utiliti (air, elektrik, saliran) dan aliran tunai masuk/keluar ialah jujukan yang membaca sebagai progressive process.",
+    "note": "Named as candidates only; the pattern package is still with Bariah and is not authority."
+  },
+  "ambiguities": {
+    "cls": "SOURCE_DERIVED",
+    "count": 4,
+    "items": [
+      {
+        "item": "Di bawah 'Sumber Manusia' (ROW-004..ROW-018) setiap peranan distailkan sebagai PARAGRAPH bukan LIST_ITEM, jadi senarai kakitangan ialah bacaan corak perenggan berprefiks sengkang (–) dan bukan senarai berstruktur.",
+        "rows": [
+          "T01B03-ROW-005",
+          "T01B03-ROW-010",
+          "T01B03-ROW-016",
+          "T01B03-ROW-018"
+        ],
+        "resolution": "Senarai kakitangan dibaca daripada corak perenggan em-dash; RECORDED"
+      },
+      {
+        "item": "Enam figura (Rajah 11-16) dibenamkan sebagai baris IMAGE dengan metadata caption asset null; teks 'Rajah N: ...' berada di baris LIST_ITEM berikutnya, jadi ikatan figura->caption adalah melalui kedudukan bersebelahan, bukan caption terbenam.",
+        "rows": [
+          "T01B03-ROW-055",
+          "T01B03-ROW-056",
+          "T01B03-ROW-077",
+          "T01B03-ROW-078",
+          "T01B03-ROW-081",
+          "T01B03-ROW-082"
+        ],
+        "resolution": "Caption diikat mengikut kedudukan bersebelahan; SOURCE_BOUND_CAPTIONLESS direkod"
+      },
+      {
+        "item": "Varian ejaan/typo sumber: 'Primawera' untuk 'Primavera' (ROW-085), 'Spesfikasi' untuk 'Spesifikasi' (ROW-078, ROW-080), 'Pengcahayaan' (ROW-056).",
+        "rows": [
+          "T01B03-ROW-085",
+          "T01B03-ROW-078",
+          "T01B03-ROW-080",
+          "T01B03-ROW-056"
+        ],
+        "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+      },
+      {
+        "item": "'Dokumentasi & Kelulusan' (ROW-045..ROW-082) mencampurkan dua senarai — komponen lukisan pembinaan (ROW-047..054) dan dokumen keperluan projek (ROW-066..076) — dengan figura diselang-seli; pengumpulannya ialah bacaan.",
+        "rows": [
+          "T01B03-ROW-046",
+          "T01B03-ROW-066"
+        ],
+        "resolution": "PENDING_UNIT_EXCEPTION_REVIEW"
+      }
+    ]
+  },
+  "source_row_trace": {
+    "every_cited_row_exists": true,
+    "unresolved_row_citations": [],
+    "distinct_cited_rows": [
+      "T01B03-ROW-002",
+      "T01B03-ROW-005",
+      "T01B03-ROW-008",
+      "T01B03-ROW-010",
+      "T01B03-ROW-016",
+      "T01B03-ROW-018",
+      "T01B03-ROW-046",
+      "T01B03-ROW-055",
+      "T01B03-ROW-056",
+      "T01B03-ROW-057",
+      "T01B03-ROW-058",
+      "T01B03-ROW-059",
+      "T01B03-ROW-060",
+      "T01B03-ROW-062",
+      "T01B03-ROW-065",
+      "T01B03-ROW-066",
+      "T01B03-ROW-077",
+      "T01B03-ROW-078",
+      "T01B03-ROW-079",
+      "T01B03-ROW-080",
+      "T01B03-ROW-081",
+      "T01B03-ROW-082",
+      "T01B03-ROW-085",
+      "T01B03-ROW-089",
+      "T01B03-ROW-090",
+      "T01B03-ROW-091",
+      "T01B03-ROW-095",
+      "T01B03-ROW-096",
+      "T01B03-ROW-101",
+      "T01B03-ROW-112",
+      "T01B03-ROW-113",
+      "T01B03-ROW-116",
+      "T01B03-ROW-117",
+      "T01B03-ROW-118",
+      "T01B03-ROW-119",
+      "T01B03-ROW-124",
+      "T01B03-ROW-125",
+      "T01B03-ROW-132",
+      "T01B03-ROW-133",
+      "T01B03-ROW-134",
+      "T01B03-ROW-135",
+      "T01B03-ROW-142",
+      "T01B03-ROW-144",
+      "T01B03-ROW-146"
+    ],
+    "distinct_cited_row_count": 44
+  }
+}
