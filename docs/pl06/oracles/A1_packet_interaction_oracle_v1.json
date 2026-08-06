@@ -1,0 +1,4691 @@
+{
+  "controlling_module": "docs/pl06/tools/pl06_packet_model_v1.py",
+  "hash_scope": "RECORDS_PAYLOAD_ONLY",
+  "kind": "PRE_REFACTOR_ORACLE",
+  "lane": "O",
+  "metadata_observed": {
+    "canonical_sha256": "e827a996f81f74f8cebc6d608baa0dc41bd23b205490a827bca14dc5c373623b",
+    "controlling_module": "docs/pl06/tools/pl06_packet_model_v1.py",
+    "controlling_module_blob_sha1": "a4e6db69e08f93f3151fe4166d17c6d481765e8f",
+    "execution_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+    "record_count": 11,
+    "serialization": "json.dumps(records, sort_keys=True, separators=(\",\", \":\")).encode(\"utf-8\")",
+    "source_docx_name": "[PROOFREAD FINAL] SKP 2025 PEMBINAAN LANDSKAP LUAR 300426.docx",
+    "source_docx_sha256": "5a9142cdfa1a8090c2075e78caf45609438844daeac88e331bed3069a6a78df7",
+    "unit_ids": [
+      "K5-PL06-T01-B01",
+      "K5-PL06-T01-B02",
+      "K5-PL06-T01-B03",
+      "K5-PL06-T02-B01",
+      "K5-PL06-T02-B02",
+      "K5-PL06-T03-B01",
+      "K5-PL06-T03-B04",
+      "K5-PL06-T03-B05",
+      "K5-PL06-T05-B01",
+      "K5-PL06-T06-B01",
+      "K5-PL06-T07-B01"
+    ]
+  },
+  "oracle_id": "A1_NON_B03_PACKET_INTERACTION_ORACLE_v1",
+  "population_basis": "ONE interaction record per active unit (pl06_packet_model_v1.packets()), with the calibrated B03 unit removed — that unit is frozen by the A2 oracle.",
+  "records": [
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUTERA=SPEAKER_NOT_REQUIRED; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED",
+        "treatment": "Source names an ordered process (Proses , Prosedur)."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 1,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 258,
+        "first_row": "T01B01-ROW-001",
+        "last_row": "T01B01-ROW-258",
+        "structural_headings": 6
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T01B01-ROW-026"
+            ],
+            "text": "Pokok-pokok matang atau elemen semula jadi lain yang bernilai estetik atau ekologi mesti dilindungi sepenuhnya."
+          },
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T01B01-ROW-048"
+            ],
+            "text": "Kawasan ini wajib dipagar dengan jelas menggunakan pagar hoarding atau orange netting."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "OBLIGATION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T01B01-ROW-026"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Pokok-pokok matang atau elemen semula jadi lain yang bernilai estetik atau ekologi mesti dilindungi sepenuhnya."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T01B01-ROW-048"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Kawasan ini wajib dipagar dengan jelas menggunakan pagar hoarding atau orange netting."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "SEQUENTIAL_PROCESS",
+        "primary": "Langkah demi langkah",
+        "reason": "Source names an ordered process (Proses , Prosedur).",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T01B01-ROW-005",
+            "correct": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula.",
+            "correct_rows": [
+              "T01B01-ROW-006"
+            ],
+            "distractors": [
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Penubuhan Pejabat Tapak dan Kemudahan Asas"
+            ],
+            "feedback": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Mobilisasi Tapak (Site Mobilisation)?"
+          },
+          {
+            "anchor_row": "T01B01-ROW-015",
+            "correct": "Setelah mobilisasi selesai, kerja penyediaan fizikal tapak dimulakan.",
+            "correct_rows": [
+              "T01B01-ROW-016"
+            ],
+            "distractors": [
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula."
+            ],
+            "feedback": "Setelah mobilisasi selesai, kerja penyediaan fizikal tapak dimulakan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Penyediaan Tapak (Site Preparation)?"
+          },
+          {
+            "anchor_row": "T01B01-ROW-172",
+            "correct": "Penandaan Tapak, juga dikenali sebagai setting out atau pemancangan (pegging), adalah proses teknikal yang kritikal untuk memindahkan butiran-butiran daripada pelan reka bentuk ke lokasi sebenar di atas tanah.",
+            "correct_rows": [
+              "T01B01-ROW-173"
+            ],
+            "distractors": [
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula."
+            ],
+            "feedback": "Penandaan Tapak, juga dikenali sebagai setting out atau pemancangan (pegging), adalah proses teknikal yang kritikal untuk memindahkan butiran-butiran daripada pelan reka bentuk ke lokasi sebenar di atas tanah.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Penandaan Tapak (Setting out / Site Pegging)?"
+          },
+          {
+            "anchor_row": "T01B01-ROW-188",
+            "correct": "Setiap kontraktor bertanggungjawab sepenuhnya untuk memastikan semua aktiviti tinjauan dijalankan dengan mematuhi empat tonggak utama pematuhan: Kesihatan & Keselamatan (HSE), standard peralatan, keperluan Pihak Berkuasa Tempatan (PBT), dan peraturan Badan Pengawal Selia.",
+            "correct_rows": [
+              "T01B01-ROW-190"
+            ],
+            "distractors": [
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak.",
+              "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula."
+            ],
+            "feedback": "Setiap kontraktor bertanggungjawab sepenuhnya untuk memastikan semua aktiviti tinjauan dijalankan dengan mematuhi empat tonggak utama pematuhan: Kesihatan & Keselamatan (HSE), standard peralatan, keperluan Pihak Berkuasa Tempatan (PBT), dan peraturan Badan Pengawal Selia.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pemeriksaan Tapak & Pengesahan Kerja Mengukur?"
+          },
+          {
+            "anchor_row": "T01B01-ROW-015",
+            "cls": "CAIR_DRAFTED_MULTIPLE_RESPONSE_FROM_SIBLING_SUBPOINTS",
+            "correct": [
+              "Pembersihan Tapak (Site Clearing)",
+              "Perataan Kasar dan Pembentukan (Levelling dan Grading)",
+              "Pembinaan Pelantar (Platforms)"
+            ],
+            "correct_rows": [
+              "T01B01-ROW-017",
+              "T01B01-ROW-019",
+              "T01B01-ROW-021"
+            ],
+            "distractor_rows": [
+              "T01B01-ROW-192",
+              "T01B01-ROW-194",
+              "T01B01-ROW-195"
+            ],
+            "distractors": [
+              "Peralatan Pelindung Diri (PPE)",
+              "Topi Keselamatan: Melindungi daripada objek jatuh.",
+              "Kasut Keselamatan: Melindungi daripada objek tajam dan hentakan."
+            ],
+            "feedback": "Pembersihan Tapak (Site Clearing); Perataan Kasar dan Pembentukan (Levelling dan Grading); Pembinaan Pelantar (Platforms)",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Yang manakah antara berikut termasuk dalam Penyediaan Tapak (Site Preparation)? (Pilih semua yang berkenaan.)"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B01-ROW-006",
+                "text": "Mobilisasi tapak adalah proses penghantaran dan penyediaan semua sumber yang diperlukan ke tapak projek sebelum kerja pembinaan fizikal bermula. Ia menandakan permulaan rasmi opera"
+              },
+              {
+                "row_id": "T01B01-ROW-024",
+                "text": "Selari dengan kerja-kerja penyediaan tapak, adalah menjadi tanggungjawab utama kontraktor untuk memelihara dan melindungi aset sedia ada di tapak yang telah dikenal pasti untuk dik"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T01-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B01-ROW-012",
+                "text": "Memastikan pasukan kerja yang diperlukan, termasuk penyelia tapak, operator jentera, dan pekerja am, berada di tapak dan telah diberi taklimat keselamatan serta penerangan skop ker"
+              },
+              {
+                "row_id": "T01B01-ROW-201",
+                "text": "Papan tanda yang memaparkan maklumat hubungan kecemasan (contoh: Ambulans, Bomba, Polis, Pejabat Tapak) dan nama serta nombor telefon Person-in-Charge (PIC) atau Penyelia Tapak ada"
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T01-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B01-ROW-135",
+                "text": "Lukisan red mark-up ini menjadi dokumen rasmi untuk berkomunikasi dengan perunding (Arkitek Landskap/Jurutera) dan menjadi asas kepada Permintaan Maklumat (Request for Information "
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUTERA",
+            "unit_id": "K5-PL06-T01-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B01-ROW-002",
+                "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+              },
+              {
+                "row_id": "T01B01-ROW-004",
+                "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUUKUR",
+            "unit_id": "K5-PL06-T01-B01"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B01-ROW-135",
+                "text": "Lukisan red mark-up ini menjadi dokumen rasmi untuk berkomunikasi dengan perunding (Arkitek Landskap/Jurutera) dan menjadi asas kepada Permintaan Maklumat (Request for Information "
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUTERA",
+            "unit_id": "K5-PL06-T01-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B01-ROW-002",
+                "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+              },
+              {
+                "row_id": "T01B01-ROW-004",
+                "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak. Ia melibatkan satu siri langkah yang teratur dan sistematik untuk "
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUUKUR",
+            "unit_id": "K5-PL06-T01-B01"
+          }
+        ]
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T01B01-ROW-002"
+            ],
+            "text": "Proses memulakan kerja adalah peringkat di mana perancangan teori diterjemahkan kepada tindakan fizikal di tapak."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 1,
+            "subtopics": [
+              "1.1 Penyediaan Tapak"
+            ],
+            "text": "Kerja ini merangkumi 1.1 Penyediaan Tapak."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T01B01-ROW-028"
+            ],
+            "text": "Melindungi struktur, longkang, atau laluan sedia ada yang bersebelahan dengan kawasan kerja daripada sebarang kerosakan."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 1,
+        "declared": "1.1 Penyediaan Tapak",
+        "items": [
+          "1.1 Penyediaan Tapak"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Proses Memula Kerja - Penyediaan Tapak",
+      "topik": 1,
+      "unit_id": "K5-PL06-T01-B01",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 3,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T01B01-ROW-001"
+            ],
+            "subject": "Keratan atau susunan bagi PROSES MEMULA KERJA"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T01B01-ROW-003"
+            ],
+            "subject": "Keratan atau susunan bagi Penyediaan Tapak"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T01B01-ROW-005"
+            ],
+            "subject": "Keratan atau susunan bagi Mobilisasi Tapak (Site Mobilisation)"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-PEGAWAI-PENGUASA=SPEAKER_NOT_REQUIRED; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED",
+        "treatment": "Source names an ordered process (Proses , Prosedur)."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 2,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 100,
+        "first_row": "T01B02-ROW-001",
+        "last_row": "T01B02-ROW-100",
+        "structural_headings": 6
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T01B02-ROW-011"
+            ],
+            "text": "Sebarang kecacatan atau keadaan sedia ada yang luar biasa mesti direkodkan dalam borang serahan tapak."
+          },
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T01B02-ROW-015"
+            ],
+            "text": "Tarikh Siap adalah tarikh akhir yang ditetapkan di dalam dokumen kontrak di mana semua skop kerja mesti disiapkan sepenuhnya dan tapak sedia untuk diserahkan kembali kepada Klien."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "OBLIGATION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T01B02-ROW-011"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Sebarang kecacatan atau keadaan sedia ada yang luar biasa mesti direkodkan dalam borang serahan tapak."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T01B02-ROW-015"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Tarikh Siap adalah tarikh akhir yang ditetapkan di dalam dokumen kontrak di mana semua skop kerja mesti disiapkan sepenuhnya dan tapak sedia untuk diserahkan kembali kepada Klien."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "SEQUENTIAL_PROCESS",
+        "primary": "Langkah demi langkah",
+        "reason": "Source names an ordered process (Proses , Prosedur).",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T01B02-ROW-036",
+            "correct": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mendapatkan kelulusan rasmi daripada Pegawai Penguasa (S.O.) atau Perunding.",
+            "correct_rows": [
+              "T01B02-ROW-037"
+            ],
+            "distractors": [
+              "Perancangan jadual kerja adalah seperti berikut:",
+              "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+              "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+            ],
+            "feedback": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mendapatkan kelulusan rasmi daripada Pegawai Penguasa (S.O.) atau Perunding.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Penyerahan dan kelulusan bahan landskap?"
+          },
+          {
+            "anchor_row": "T01B02-ROW-046",
+            "correct": "Landskap kejur adalah elemen-elemen bukan hidup yang membentuk struktur, fungsi, dan tulang belakang kepada keseluruhan reka bentuk landskap.",
+            "correct_rows": [
+              "T01B02-ROW-047"
+            ],
+            "distractors": [
+              "Perancangan jadual kerja adalah seperti berikut:",
+              "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+              "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+            ],
+            "feedback": "Landskap kejur adalah elemen-elemen bukan hidup yang membentuk struktur, fungsi, dan tulang belakang kepada keseluruhan reka bentuk landskap.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pembinaan / Pemasangan Infrastruktur & Landskap Kejur?"
+          },
+          {
+            "anchor_row": "T01B02-ROW-068",
+            "correct": "Kerja-kerja penanaman atau landskap lembut adalah proses memasukkan elemen-elemen hortikultur yang memberikan nilai estetik, ekologi, dan kehidupan kepada landskap.",
+            "correct_rows": [
+              "T01B02-ROW-069"
+            ],
+            "distractors": [
+              "Perancangan jadual kerja adalah seperti berikut:",
+              "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+              "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+            ],
+            "feedback": "Kerja-kerja penanaman atau landskap lembut adalah proses memasukkan elemen-elemen hortikultur yang memberikan nilai estetik, ekologi, dan kehidupan kepada landskap.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Kerja-Kerja Penanaman (Planting Works)?"
+          },
+          {
+            "anchor_row": "T01B02-ROW-086",
+            "correct": "Untuk mengesahkan bahawa kerja yang dilaksanakan di tapak mematuhi lukisan, spesifikasi, dan standard kualiti yang ditetapkan.",
+            "correct_rows": [
+              "T01B02-ROW-088"
+            ],
+            "distractors": [
+              "Perancangan jadual kerja adalah seperti berikut:",
+              "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor.",
+              "Tarikh ini secara rasminya memulakan \"kiraan masa\" projek."
+            ],
+            "feedback": "Untuk mengesahkan bahawa kerja yang dilaksanakan di tapak mematuhi lukisan, spesifikasi, dan standard kualiti yang ditetapkan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pemeriksaan Tapak dan Pengesahan?"
+          },
+          {
+            "anchor_row": "T01B02-ROW-001",
+            "cls": "CAIR_DRAFTED_MULTIPLE_RESPONSE_FROM_SIBLING_SUBPOINTS",
+            "correct": [
+              "Mesyuarat Permulaan (Kick-off Meeting)",
+              "Pemeriksaan Tapak Bersama (Joint Site Inspection)",
+              "Perancangan Songsang (Backward Planning)"
+            ],
+            "correct_rows": [
+              "T01B02-ROW-008",
+              "T01B02-ROW-010",
+              "T01B02-ROW-020"
+            ],
+            "distractor_rows": [
+              "T01B02-ROW-071",
+              "T01B02-ROW-072",
+              "T01B02-ROW-073"
+            ],
+            "distractors": [
+              "Pembekalan tanah atas (topsoil) atau media tanaman (planting medium) yang telah diluluskan.",
+              "Penanaman pokok naungan, pokok renek, dan tumbuhan penutup bumi.",
+              "Kerja-kerja penanaman rumput secara kepingan (spot turfing) atau semaian biji benih (hydroseeding)."
+            ],
+            "feedback": "Mesyuarat Permulaan (Kick-off Meeting); Pemeriksaan Tapak Bersama (Joint Site Inspection); Perancangan Songsang (Backward Planning)",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Yang manakah antara berikut termasuk dalam Jadual Kerja? (Pilih semua yang berkenaan.)"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B02-ROW-004",
+                "text": "Pengambilan Tapak adalah tarikh rasmi di mana tapak projek diserahkan oleh Klien kepada Kontraktor. Ia menandakan titik permulaan bagi semua aktiviti pembinaan dan tempoh kontrak."
+              },
+              {
+                "row_id": "T01B02-ROW-011",
+                "text": "Klien dan kontraktor memeriksa keadaan semasa tapak bersama-sama. Sebarang kecacatan atau keadaan sedia ada yang luar biasa mesti direkodkan dalam borang serahan tapak."
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T01-B02"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B02-ROW-067",
+                "text": "Kontraktor mesti memaklumkan Pegawai Penguasa (S.O.) untuk menjalankan pemeriksaan pada peringkat-peringkat kritikal (contoh: sebelum kerja penutupan formwork atau tuangan konkrit)"
+              },
+              {
+                "row_id": "T01B02-ROW-092",
+                "text": "Setelah satu bahagian kerja disiapkan, kontraktor perlu menghantar borang permohonan pemeriksaan secara rasmi kepada pihak S.O."
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T01-B02"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B02-ROW-037",
+                "text": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mend"
+              },
+              {
+                "row_id": "T01B02-ROW-043",
+                "text": "Semakan oleh Perunding: Pihak S.O. atau Arkitek Landskap akan menyemak penyerahan tersebut berbanding dengan spesifikasi teknikal."
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The S.O. appears as an APPROVAL BODY. Approval is an event, not a speaking part.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-PEGAWAI-PENGUASA",
+            "unit_id": "K5-PL06-T01-B02"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B02-ROW-061",
+                "text": "Sebelum sebarang kerja penggalian, lokasi, jajaran (alignment), dan aras ketinggian bagi setiap elemen mesti ditanda dengan tepat di tapak oleh Juruukur Bertauliah berdasarkan Luki"
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUUKUR",
+            "unit_id": "K5-PL06-T01-B02"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B02-ROW-037",
+                "text": "Sebelum sebarang bahan dibawa masuk atau digunakan di tapak, kontraktor mempunyai tanggungjawab kontrak untuk mengemukakan sampel atau butiran teknikal bagi setiap bahan untuk mend"
+              },
+              {
+                "row_id": "T01B02-ROW-043",
+                "text": "Semakan oleh Perunding: Pihak S.O. atau Arkitek Landskap akan menyemak penyerahan tersebut berbanding dengan spesifikasi teknikal."
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The S.O. appears as an APPROVAL BODY. Approval is an event, not a speaking part.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-PEGAWAI-PENGUASA",
+            "unit_id": "K5-PL06-T01-B02"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B02-ROW-061",
+                "text": "Sebelum sebarang kerja penggalian, lokasi, jajaran (alignment), dan aras ketinggian bagi setiap elemen mesti ditanda dengan tepat di tapak oleh Juruukur Bertauliah berdasarkan Luki"
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUUKUR",
+            "unit_id": "K5-PL06-T01-B02"
+          }
+        ]
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T01B02-ROW-021"
+            ],
+            "text": "Pengurus projek yang cekap sering menggunakan kaedah perancangan songsang."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 2,
+            "subtopics": [
+              "1.2 Jadual Kerja",
+              "1.3 Perlaksanaan Pembinaan Landskap"
+            ],
+            "text": "Kerja ini merangkumi 1.2 Jadual Kerja dan 1.3 Perlaksanaan Pembinaan Landskap."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T01B02-ROW-038"
+            ],
+            "text": "Proses ini bertujuan untuk memastikan semua bahan yang akan digunakan sama ada elemen landskap kejur atau lembut mematuhi kualiti, jenama, saiz, dan spesifikasi yang ditetapkan di dalam Dokumen Kontrak dan Bill of Quantities (BQ)."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 2,
+        "declared": "1.2 Jadual Kerja + 1.3 Perlaksanaan Pembinaan Landskap",
+        "items": [
+          "1.2 Jadual Kerja",
+          "1.3 Perlaksanaan Pembinaan Landskap"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Jadual Kerja dan Perlaksanaan Pembinaan Landskap",
+      "topik": 1,
+      "unit_id": "K5-PL06-T01-B02",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 3,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T01B02-ROW-001"
+            ],
+            "subject": "Keratan atau susunan bagi Jadual Kerja"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T01B02-ROW-035"
+            ],
+            "subject": "Keratan atau susunan bagi Perlaksanaan Pembinaan Landskap"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T01B02-ROW-036"
+            ],
+            "subject": "Keratan atau susunan bagi Penyerahan dan kelulusan bahan landskap"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a DECISION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUUKUR=SPEAKER_NOT_REQUIRED",
+        "treatment": "Source names an ordered process (Proses )."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 3,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 146,
+        "first_row": "T01B03-ROW-001",
+        "last_row": "T01B03-ROW-146",
+        "structural_headings": 8
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "DECISION",
+            "rows": [
+              "T01B03-ROW-125"
+            ],
+            "text": "Menggunakan penguji megger untuk memastikan penebatan kabel tidak rosak atau bocor, yang boleh menyebabkan litar pintas atau risiko renjatan elektrik."
+          },
+          {
+            "kind": "DECISION",
+            "rows": [
+              "T01B03-ROW-142"
+            ],
+            "text": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "AUTHORED_AFTER_HUMAN_TENSION_REVIEW",
+        "copy_complete": true,
+        "decision": "Whether the handover may proceed before the electrical insulation test and T&C are done.",
+        "disposition": "INTERNAL_HUMAN_AUTHORING_REVIEW",
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "DECISION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "DECISION_POINT",
+            "paraphrase_of": null,
+            "paraphrase_source": null,
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [
+              "T01B03-ROW-123",
+              "T01B03-ROW-124"
+            ],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Encik Rahman, pemasangan lampu dan pam air dah siap. Klien nak kita serahkan minggu ini. Boleh tak kita teruskan dulu, ujian penebatan buat kemudian?"
+          },
+          {
+            "cls": "CONTROLLED_PARAPHRASE",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "paraphrase_of": "T01B03-ROW-125",
+            "paraphrase_source": "Menggunakan penguji megger untuk memastikan penebatan kabel tidak rosak atau bocor, yang boleh menyebabkan litar pintas atau risiko renjatan elektrik.",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T01B03-ROW-125"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Ujian itulah yang tunjukkan sama ada penebatan kabel dah rosak atau bocor, Alya. Kalau ada kebocoran, kita berdepan litar pintas atau renjatan elektrik."
+          },
+          {
+            "cls": "CONTROLLED_PARAPHRASE",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "paraphrase_of": "T01B03-ROW-142",
+            "paraphrase_source": "Mengesahkan semua sistem, terutamanya elektrik, adalah selamat untuk dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir.",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T01B03-ROW-142"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Dan T&C itu yang sahkan semua sistem, terutamanya elektrik, selamat dikendalikan dan tidak mendatangkan bahaya kepada pengguna akhir."
+          },
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "DECISION_TAKEN",
+            "paraphrase_of": null,
+            "paraphrase_source": null,
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 4,
+            "speaker": "Alya",
+            "text": "Baiklah. Saya pastikan ujian penebatan dan T&C selesai dahulu, dan saya maklumkan kepada pasukan sebelum proses serahan diteruskan."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "SEQUENTIAL_PROCESS",
+        "primary": "Langkah demi langkah",
+        "reason": "Source names an ordered process (Proses ).",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T01B03-ROW-003",
+            "correct": "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+            "correct_rows": [
+              "T01B03-ROW-004"
+            ],
+            "distractors": [
+              "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+              "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek.",
+              "Arkitek Landskap / Pereka Landskap – Menyediakan pelan, reka bentuk dan skema tanaman."
+            ],
+            "feedback": "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Sumber Manusia?"
+          },
+          {
+            "anchor_row": "T01B03-ROW-037",
+            "correct": "Pokok-pokok (berteduh, hiasan, tempatan).",
+            "correct_rows": [
+              "T01B03-ROW-038"
+            ],
+            "distractors": [
+              "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+              "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+              "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+            ],
+            "feedback": "Pokok-pokok (berteduh, hiasan, tempatan).",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Bahan Penanaman?"
+          },
+          {
+            "anchor_row": "T01B03-ROW-083",
+            "correct": "Alat bantu pengurusan dan koordinasi projek:",
+            "correct_rows": [
+              "T01B03-ROW-084"
+            ],
+            "distractors": [
+              "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+              "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+              "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+            ],
+            "feedback": "Alat bantu pengurusan dan koordinasi projek:",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Perisian & Alat Komunikasi?"
+          },
+          {
+            "anchor_row": "T01B03-ROW-089",
+            "correct": "Pengurusan Aliran Tunai adalah proses memantau, menganalisis, dan mengoptimumkan pergerakan wang masuk dan wang keluar dalam perniagaan anda sepanjang tempoh projek.",
+            "correct_rows": [
+              "T01B03-ROW-090"
+            ],
+            "distractors": [
+              "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+              "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+              "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+            ],
+            "feedback": "Pengurusan Aliran Tunai adalah proses memantau, menganalisis, dan mengoptimumkan pergerakan wang masuk dan wang keluar dalam perniagaan anda sepanjang tempoh projek.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pengurusan Aliran Tunai bagi Operasi Pembinaan?"
+          },
+          {
+            "anchor_row": "T01B03-ROW-112",
+            "correct": "Pengujian dan Pentauliahan (T&C) bagi sambungan utiliti adalah fasa kritikal dalam pengurusan operasi projek landskap luar.",
+            "correct_rows": [
+              "T01B03-ROW-113"
+            ],
+            "distractors": [
+              "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan.",
+              "Kakitangan penting yang diperlukan untuk merancang, mengurus dan melaksanakan projek.",
+              "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+            ],
+            "feedback": "Pengujian dan Pentauliahan (T&C) bagi sambungan utiliti adalah fasa kritikal dalam pengurusan operasi projek landskap luar.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pengujian dan Pentauliahan (T&C) Sambungan Utiliti?"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B03-ROW-107",
+                "text": "Gaji pekerja am, tukang kebun, pemandu jentera, dan bayaran kepada sub-kontraktor."
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T01-B03"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B03-ROW-005",
+                "text": "Pengurus Projek / Penyelia Tapak – Menyelia keseluruhan projek."
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T01-B03"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B03-ROW-008",
+                "text": "Juruukur Bahan (Quantity Surveyor) – Menyediakan anggaran kos dan kawalan belanjawan."
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUUKUR",
+            "unit_id": "K5-PL06-T01-B03"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T01B03-ROW-008",
+                "text": "Juruukur Bahan (Quantity Surveyor) – Menyediakan anggaran kos dan kawalan belanjawan."
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The surveyor appears only through the Pelan Ukur Sempadan, a cited reference document.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUUKUR",
+            "unit_id": "K5-PL06-T01-B03"
+          }
+        ]
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T01B03-ROW-002"
+            ],
+            "text": "Perancangan dan perolehan sumber perlu dimulakan sejak peringkat awal pelaksanaan pembinaan."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 1,
+            "subtopics": [
+              "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+            ],
+            "text": "Kerja ini merangkumi 1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T01B03-ROW-017"
+            ],
+            "text": "Pekerja Am – Membantu dalam kerja asas dan buruh am."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 1,
+        "declared": "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+        "items": [
+          "1.4 Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap"
+        ]
+      },
+      "tension_disposition": {
+        "action": "REAUTHOR",
+        "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+        "classification": "INTERNAL_HUMAN_AUTHORING_REVIEW",
+        "current_tension": "NOT_ACCEPTED",
+        "date": "2026-08-05",
+        "direction": "Build a real work decision, for example whether the work may proceed before the electrical safety test is done.",
+        "escalated_to_authority": false,
+        "escalation_reason": null,
+        "named_authority": "Firdaus Ismail",
+        "rows_permitted": [
+          "T01B03-ROW-125",
+          "T01B03-ROW-142"
+        ],
+        "source_basis": "ACCEPTED",
+        "unit_id": "K5-PL06-T01-B03"
+      },
+      "title": "Sumber-Sumber yang Diperlukan Untuk Memulakan Projek Landskap",
+      "topik": 1,
+      "unit_id": "K5-PL06-T01-B03",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 4,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 6,
+        "subjects": [
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T01B03-ROW-055"
+            ],
+            "subject": "Rajah sumber pada T01B03-ROW-055"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T01B03-ROW-057"
+            ],
+            "subject": "Rajah sumber pada T01B03-ROW-057"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T01B03-ROW-059"
+            ],
+            "subject": "Rajah sumber pada T01B03-ROW-059"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T01B03-ROW-077"
+            ],
+            "subject": "Rajah sumber pada T01B03-ROW-077"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a DECISION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN",
+        "treatment": "13 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 1,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 180,
+        "first_row": "T02B01-ROW-001",
+        "last_row": "T02B01-ROW-180",
+        "structural_headings": 13
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "DECISION",
+            "rows": [
+              "T02B01-ROW-040"
+            ],
+            "text": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "AUTHORED_AFTER_HUMAN_TENSION_REVIEW",
+        "copy_complete": true,
+        "decision": "Whether watering and pest monitoring may be reduced when the planting looks healthy in the early period.",
+        "disposition": "CLOSED_BY_FIRDAUS_HUMAN_REVIEW",
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "DECISION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "DECISION_POINT",
+            "paraphrase_of": null,
+            "paraphrase_source": null,
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [
+              "T02B01-ROW-039"
+            ],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Encik Rahman, pokok yang kita tanam dua minggu lepas nampak sihat semua. Boleh tak kita jarangkan siraman dan pemantauan perosak?"
+          },
+          {
+            "cls": "CONTROLLED_PARAPHRASE",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "paraphrase_of": "T02B01-ROW-040",
+            "paraphrase_source": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman.",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T02B01-ROW-040"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Belum boleh. Dalam tempoh awal penanaman, siraman yang mencukupi dan pemantauan serangan perosak adalah wajib."
+          },
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "DECISION_TAKEN",
+            "paraphrase_of": null,
+            "paraphrase_source": null,
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 3,
+            "speaker": "Alya",
+            "text": "Jadi pokok nampak sihat bukan sebab untuk kita jarangkan. Saya teruskan jadual asal."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+        "primary": "Click-to-Reveal",
+        "reason": "13 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T02B01-ROW-004",
+            "correct": "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti.",
+            "correct_rows": [
+              "T02B01-ROW-005"
+            ],
+            "distractors": [
+              "Landskap kejur merujuk kepada semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap.",
+              "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan.",
+              "Struktur landskap adalah binaan berfungsi estetik dan fungsi tambahan yang memperkayakan ruang landskap secara menegak dan mendatar."
+            ],
+            "feedback": "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Kemudahan Rekreasi?"
+          },
+          {
+            "anchor_row": "T02B01-ROW-007",
+            "correct": "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan.",
+            "correct_rows": [
+              "T02B01-ROW-008"
+            ],
+            "distractors": [
+              "Landskap kejur merujuk kepada semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap.",
+              "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti.",
+              "Struktur landskap adalah binaan berfungsi estetik dan fungsi tambahan yang memperkayakan ruang landskap secara menegak dan mendatar."
+            ],
+            "feedback": "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Sirkulasi & Kawan Berturap?"
+          },
+          {
+            "anchor_row": "T02B01-ROW-010",
+            "correct": "Struktur landskap adalah binaan berfungsi estetik dan fungsi tambahan yang memperkayakan ruang landskap secara menegak dan mendatar.",
+            "correct_rows": [
+              "T02B01-ROW-011"
+            ],
+            "distractors": [
+              "Landskap kejur merujuk kepada semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap.",
+              "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti.",
+              "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan."
+            ],
+            "feedback": "Struktur landskap adalah binaan berfungsi estetik dan fungsi tambahan yang memperkayakan ruang landskap secara menegak dan mendatar.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Struktur Landskap?"
+          },
+          {
+            "anchor_row": "T02B01-ROW-013",
+            "correct": "Perabot landskap adalah elemen bergerak atau tetap yang ditempatkan di dalam ruang landskap untuk meningkatkan keselesaan, fungsi, dan estetika.",
+            "correct_rows": [
+              "T02B01-ROW-014"
+            ],
+            "distractors": [
+              "Landskap kejur merujuk kepada semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap.",
+              "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti.",
+              "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan."
+            ],
+            "feedback": "Perabot landskap adalah elemen bergerak atau tetap yang ditempatkan di dalam ruang landskap untuk meningkatkan keselesaan, fungsi, dan estetika.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Perabot Landskap (Street Furniture)?"
+          },
+          {
+            "anchor_row": "T02B01-ROW-020",
+            "correct": "Pokok dan palma merupakan elemen terpenting dan paling dominan dalam kebanyakan reka bentuk landskap.",
+            "correct_rows": [
+              "T02B01-ROW-021"
+            ],
+            "distractors": [
+              "Landskap kejur merujuk kepada semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap.",
+              "Kemudahan yang direka untuk menyokong aktiviti riadah, senaman dan perhimpunan komuniti.",
+              "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan."
+            ],
+            "feedback": "Pokok dan palma merupakan elemen terpenting dan paling dominan dalam kebanyakan reka bentuk landskap.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pokok & Palma?"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T02B01-ROW-016",
+                "text": "Setiap elemen landskap kejur bukan sekadar struktur fizikal, tetapi membentuk naratif dan pengalaman pengguna di ruang landskap. Pemahaman yang mendalam terhadap bahan, fungsi, kes"
+              },
+              {
+                "row_id": "T02B01-ROW-021",
+                "text": "Pokok dan palma merupakan elemen terpenting dan paling dominan dalam kebanyakan reka bentuk landskap. Ia sering dianggap sebagai 'tulang belakang' atau struktur utama bagi sesuatu "
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T02-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T02B01-ROW-040",
+                "text": "Siraman yang mencukupi dan pemantauan serangan perosak adalah wajib dalam tempoh awal penanaman."
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T02-B01"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T02B01-ROW-008"
+            ],
+            "text": "Elemen ini adalah asas kepada fungsi dan pergerakan dalam sesebuah landskap, menyediakan laluan yang jelas dan permukaan yang stabil untuk pejalan kaki atau kenderaan."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 2,
+            "subtopics": [
+              "2.1 Elemen Landskap Kejur",
+              "2.2 Elemen Landskap Lembut/ Penanaman"
+            ],
+            "text": "Kerja ini merangkumi 2.1 Elemen Landskap Kejur dan 2.2 Elemen Landskap Lembut/ Penanaman."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T02B01-ROW-016"
+            ],
+            "text": "Setiap elemen landskap kejur bukan sekadar struktur fizikal, tetapi membentuk naratif dan pengalaman pengguna di ruang landskap."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 2,
+        "declared": "2.1 Elemen Landskap Kejur + 2.2 Elemen Landskap Lembut/ Penanaman",
+        "items": [
+          "2.1 Elemen Landskap Kejur",
+          "2.2 Elemen Landskap Lembut/ Penanaman"
+        ]
+      },
+      "tension_disposition": {
+        "action": "CLOSE",
+        "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+        "classification": "CLOSED_BY_FIRDAUS_HUMAN_REVIEW",
+        "current_tension": "ACCEPTED",
+        "date": "2026-08-05",
+        "direction": "Operational decision: whether watering or pest monitoring may be reduced when the planting looks healthy in the early period. The answer stays on the source claim. A compliance-sensitive or legal issue is NOT required to accept a tension; E2 asks only for a meaningful question, problem, doubt, tension or decision point.",
+        "escalated_to_authority": false,
+        "escalation_reason": null,
+        "named_authority": "Firdaus Ismail",
+        "rows_permitted": [
+          "T02B01-ROW-040"
+        ],
+        "source_basis": "ACCEPTED",
+        "unit_id": "K5-PL06-T02-B01"
+      },
+      "title": "Elemen Landskap Kejur dan Elemen Landskap Lembut/Penanaman",
+      "topik": 2,
+      "unit_id": "K5-PL06-T02-B01",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 3,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T02B01-ROW-001"
+            ],
+            "subject": "Keratan atau susunan bagi ELEMEN PEMBINAAN LANDSKAP"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T02B01-ROW-002"
+            ],
+            "subject": "Keratan atau susunan bagi Elemen Landskap Kejur"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T02B01-ROW-004"
+            ],
+            "subject": "Keratan atau susunan bagi Kemudahan Rekreasi"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a DECISION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "no role markers in source",
+        "treatment": "12 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 2,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 90,
+        "first_row": "T02B02-ROW-001",
+        "last_row": "T02B02-ROW-090",
+        "structural_headings": 12
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "DECISION",
+            "rows": [
+              "T02B02-ROW-045",
+              "T02B02-ROW-051"
+            ],
+            "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi."
+          },
+          {
+            "kind": "DECISION",
+            "rows": [
+              "T02B02-ROW-051"
+            ],
+            "text": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "AUTHORED_AFTER_HUMAN_TENSION_REVIEW",
+        "copy_complete": true,
+        "decision": "Whether the surface swale alone is enough or a sub-soil drainage system is still needed.",
+        "disposition": "INTERNAL_SOURCE_SCOPE_REVIEW",
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "DECISION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "DECISION_POINT",
+            "paraphrase_of": null,
+            "paraphrase_source": null,
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [
+              "T02B02-ROW-042",
+              "T02B02-ROW-050"
+            ],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Encik Rahman, kawasan ini dah ada swale. Kita masih perlu pasang sistem saliran bawah tanah juga?"
+          },
+          {
+            "cls": "CONTROLLED_PARAPHRASE",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "paraphrase_of": "T02B02-ROW-051",
+            "paraphrase_source": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T02B02-ROW-045",
+              "T02B02-ROW-051"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Swale alirkan air hujan secara semula jadi. Yang di bawah tanah lain ceritanya — sistem saliran bawah tanah kritikal untuk mengelakkan genangan air dan kerosakan pada struktur."
+          },
+          {
+            "cls": "CONTROLLED_PARAPHRASE",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "paraphrase_of": "T02B02-ROW-051",
+            "paraphrase_source": "Sistem saliran bawah tanah adalah kritikal untuk mengelakkan masalah genangan air dan kerosakan pada struktur. Pemasangan paip berlubang (perforated pipes) di bawah tanah, biasanya dibalut dengan geotekstil dan ditimbun dengan kerikil, untuk mengumpul dan mengalirkan air bawah tanah berlebihan. Ini penting di kawasan tanah liat atau di mana paras air tanah tinggi.",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T02B02-ROW-051"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Ia paling penting di kawasan tanah liat atau di mana paras air tanah tinggi. Di situ paip berlubang dibalut geotekstil dan ditimbun kerikil untuk kumpul dan alirkan air bawah tanah yang berlebihan."
+          },
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "DECISION_TAKEN",
+            "paraphrase_of": null,
+            "paraphrase_source": null,
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 4,
+            "speaker": "Alya",
+            "text": "Baik, saya semak dulu jenis tanah dan paras air tanah tapak ini sebelum kita putuskan."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+        "primary": "Click-to-Reveal",
+        "reason": "12 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T02B02-ROW-003",
+            "correct": "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+            "correct_rows": [
+              "T02B02-ROW-004"
+            ],
+            "distractors": [
+              "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+              "Menonjolkan elemen landskap seperti pokok atau air pancut",
+              "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering."
+            ],
+            "feedback": "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pencahayaan (Lighting)?"
+          },
+          {
+            "anchor_row": "T02B02-ROW-011",
+            "correct": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering.",
+            "correct_rows": [
+              "T02B02-ROW-012"
+            ],
+            "distractors": [
+              "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+              "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+              "Menonjolkan elemen landskap seperti pokok atau air pancut"
+            ],
+            "feedback": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pengairan?"
+          },
+          {
+            "anchor_row": "T02B02-ROW-018",
+            "correct": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut.",
+            "correct_rows": [
+              "T02B02-ROW-019"
+            ],
+            "distractors": [
+              "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+              "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+              "Menonjolkan elemen landskap seperti pokok atau air pancut"
+            ],
+            "feedback": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Kolam (Fountain)?"
+          },
+          {
+            "anchor_row": "T02B02-ROW-031",
+            "correct": "Kerja-kerja infrastruktur melibatkan pembentukan struktur asas dan elemen bukan hidup dalam landskap untuk menyokong fungsi dan estetika keseluruhan.",
+            "correct_rows": [
+              "T02B02-ROW-032"
+            ],
+            "distractors": [
+              "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+              "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+              "Menonjolkan elemen landskap seperti pokok atau air pancut"
+            ],
+            "feedback": "Kerja-kerja infrastruktur melibatkan pembentukan struktur asas dan elemen bukan hidup dalam landskap untuk menyokong fungsi dan estetika keseluruhan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Kerja-kerja berkaitan dengan Infrastuktur?"
+          },
+          {
+            "anchor_row": "T02B02-ROW-033",
+            "correct": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang.",
+            "correct_rows": [
+              "T02B02-ROW-034"
+            ],
+            "distractors": [
+              "Kerja M&E dalam landskap melibatkan pemasangan dan penyelenggaraan sistem yang memerlukan tenaga elektrik atau mekanikal untuk beroperasi.",
+              "Pencahayaan landskap bukan sahaja menambah nilai estetika pada waktu malam tetapi juga meningkatkan keselamatan dan kegunaan ruang.",
+              "Menonjolkan elemen landskap seperti pokok atau air pancut"
+            ],
+            "feedback": "Pembentukan rupa bumi adalah asas kepada reka bentuk landskap, mempengaruhi saliran dan pengalaman ruang.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Landform (Earthmound)?"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": {
+        "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+        "conditions_tested": [
+          {
+            "condition": "clear subtopic relationship",
+            "finding": "ROW-058 sits under its own HEADING_3 'Retaining Wall' with its own Fungsi and Contoh block, parallel to 'Sub-soil drainage', not beneath it.",
+            "met": false
+          },
+          {
+            "condition": "a second coherent decision",
+            "finding": "The authored decision is surface drainage versus sub-soil drainage. A retaining wall answers a different question.",
+            "met": false
+          },
+          {
+            "condition": "separate source trace",
+            "finding": "ROW-058 does carry its own row id and heading.",
+            "met": true
+          },
+          {
+            "condition": "justification for relevance to the same tension",
+            "finding": "None available from the controlled rows.",
+            "met": false
+          }
+        ],
+        "date": "2026-08-05",
+        "locus": "section 3",
+        "named_authority": "Firdaus Ismail",
+        "outcome": "Three of four conditions fail. ROW-058 is not used. It is retained in the unit's row inventory and remains available for a separate screen.",
+        "row_id": "T02B02-ROW-058",
+        "value": "EXCLUDED_FROM_THE_T02B02_S02_DIALOGUE"
+      },
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T02B02-ROW-012"
+            ],
+            "text": "Sistem pengairan yang berkesan adalah penting untuk memastikan tumbuhan menerima air yang mencukupi, terutamanya di kawasan iklim panas dan kering."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 1,
+            "subtopics": [
+              "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+            ],
+            "text": "Kerja ini merangkumi 2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T02B02-ROW-019"
+            ],
+            "text": "Melibatkan perancangan dan pemasangan pam air, sistem penapisan (filtration system), lampu bawah air, dan paip untuk ciri air seperti kolam ikan, kolam hiasan, atau air pancut."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": {
+        "declared_subtopic": "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+        "extraction_method": "HEADING_ANCHOR_BODY_CHILD_SLICE_NEVER_PAGE_RANGE",
+        "frozen_paragraphs": [
+          4340,
+          4463
+        ],
+        "module_pages": [
+          215,
+          225
+        ],
+        "recorded_anomaly": "The declared subtopic string names Mechanical & Electrical, while the HEADING_3 components inside the frozen slice are Swale/dry river bed, Sub-soil drainage and Retaining Wall — drainage and earth-retaining work. The boundary is anchor-frozen and body-anchor precedence governs extraction, so ROW-051 is in scope; the LABEL does not describe the content. Recorded, not silently corrected.",
+        "row_051": {
+          "heading_level": "HEADING_3",
+          "inside_frozen_slice": true,
+          "parent_heading": "T02B02-ROW-050",
+          "parent_heading_text": "Sub-soil drainage",
+          "verdict": "MAPPING_VALID"
+        },
+        "row_058": {
+          "heading_level": "HEADING_3",
+          "inside_frozen_slice": true,
+          "parent_heading": "T02B02-ROW-057",
+          "parent_heading_text": "Retaining Wall",
+          "verdict": "DIFFERENT_COMPONENT_HEADING_NOT_THE_SAME_DECISION"
+        },
+        "unit": "K5-PL06-T02-B02"
+      },
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 1,
+        "declared": "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)",
+        "items": [
+          "2.3 Kerja-Kerja berkaitan dengan Mekanikal & Elektrikal (M&E)"
+        ]
+      },
+      "tension_disposition": {
+        "action": "VERIFY_THEN_REAUTHOR",
+        "artifact": "docs/pl06/authority/FIRDAUS_TENSION_DISPOSITION_v1.md",
+        "classification": "INTERNAL_SOURCE_SCOPE_REVIEW",
+        "current_tension": "NOT_ACCEPTED",
+        "date": "2026-08-05",
+        "direction": "After verifying the mapping, build the decision of whether surface drainage alone is enough or a sub-soil drainage system is still needed, using the risk of standing water and structural damage as the basis of the answer.",
+        "escalated_to_authority": false,
+        "escalation_reason": null,
+        "named_authority": "Firdaus Ismail",
+        "rows_excluded": [
+          "T02B02-ROW-058"
+        ],
+        "rows_permitted": [
+          "T02B02-ROW-051"
+        ],
+        "source_basis": "CONDITIONALLY_ACCEPTED",
+        "unit_id": "K5-PL06-T02-B02"
+      },
+      "title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+      "topik": 2,
+      "unit_id": "K5-PL06-T02-B02",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 4,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 4,
+        "subjects": [
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T02B02-ROW-035"
+            ],
+            "subject": "Rajah sumber pada T02B02-ROW-035"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T02B02-ROW-059"
+            ],
+            "subject": "Rajah sumber pada T02B02-ROW-059"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T02B02-ROW-068"
+            ],
+            "subject": "Rajah sumber pada T02B02-ROW-068"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T02B02-ROW-077"
+            ],
+            "subject": "Rajah sumber pada T02B02-ROW-077"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN; ROLE-JURUTERA=SPEAKER_NOT_REQUIRED",
+        "treatment": "The module repeats 6 components with the same internal shape."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 1,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 121,
+        "first_row": "T03B01-ROW-001",
+        "last_row": "T03B01-ROW-121",
+        "structural_headings": 48
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T03B01-ROW-047"
+            ],
+            "text": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing."
+          },
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T03B01-ROW-051"
+            ],
+            "text": "Setiap tiang struktur mesti dipasang dengan tapak konkrit yang kukuh di bawah tanah mengikut spesifikasi pengeluar untuk mengelakkan sebarang pergerakan atau ketidakstabilan."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "OBLIGATION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T03B01-ROW-047"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T03B01-ROW-051"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Setiap tiang struktur mesti dipasang dengan tapak konkrit yang kukuh di bawah tanah mengikut spesifikasi pengeluar untuk mengelakkan sebarang pergerakan atau ketidakstabilan."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+        "primary": "Click-to-Reveal",
+        "reason": "The module repeats 6 components with the same internal shape.",
+        "repeated_components": 6,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T03B01-ROW-009",
+            "correct": "Trek atau laluan ini adalah tulang belakang kepada sirkulasi pejalan kaki dan aktiviti riadah dalam sesebuah landskap",
+            "correct_rows": [
+              "T03B01-ROW-010"
+            ],
+            "distractors": [
+              "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+              "Kepentingan Kawasan Berturap dalam Landskap",
+              "Meningkatkan aksesibiliti dan aliran pergerakan"
+            ],
+            "feedback": "Trek atau laluan ini adalah tulang belakang kepada sirkulasi pejalan kaki dan aktiviti riadah dalam sesebuah landskap",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Trek Pejalan Kaki, Jogging & Berbasikal?"
+          },
+          {
+            "anchor_row": "T03B01-ROW-026",
+            "correct": "Tempat letak kereta adalah kawasan berturap yang penting untuk fasiliti dan kemudahan akses.",
+            "correct_rows": [
+              "T03B01-ROW-027"
+            ],
+            "distractors": [
+              "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+              "Kepentingan Kawasan Berturap dalam Landskap",
+              "Meningkatkan aksesibiliti dan aliran pergerakan"
+            ],
+            "feedback": "Tempat letak kereta adalah kawasan berturap yang penting untuk fasiliti dan kemudahan akses.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Tempat Letak Kereta (Parking)?"
+          },
+          {
+            "anchor_row": "T03B01-ROW-042",
+            "correct": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+            "correct_rows": [
+              "T03B01-ROW-044"
+            ],
+            "distractors": [
+              "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+              "Kepentingan Kawasan Berturap dalam Landskap",
+              "Meningkatkan aksesibiliti dan aliran pergerakan"
+            ],
+            "feedback": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Rajah 22: Contoh Alat Permainan Kanak-Kanak?"
+          },
+          {
+            "anchor_row": "T03B01-ROW-043",
+            "correct": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+            "correct_rows": [
+              "T03B01-ROW-044"
+            ],
+            "distractors": [
+              "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+              "Kepentingan Kawasan Berturap dalam Landskap",
+              "Meningkatkan aksesibiliti dan aliran pergerakan"
+            ],
+            "feedback": "Set permainan bersepadu (integrated play set), buaian (swings), jongkang-jongket (seesaw), gelongsor, dan lain-lain.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Contoh Komponen?"
+          },
+          {
+            "anchor_row": "T03B01-ROW-045",
+            "correct": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing.",
+            "correct_rows": [
+              "T03B01-ROW-047"
+            ],
+            "distractors": [
+              "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan.",
+              "Kepentingan Kawasan Berturap dalam Landskap",
+              "Meningkatkan aksesibiliti dan aliran pergerakan"
+            ],
+            "feedback": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian yang relevan, terutamanya MS 966: Playground Equipment and Surfacing.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Fokus Utama Kontraktor:?"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T03B01-ROW-037",
+                "text": "Dengan memahami secara mendalam setiap jenis kawasan berturap ini, kontraktor landskap akan dilengkapi dengan pengetahuan untuk memilih bahan yang sesuai, merancang saliran yang be"
+              },
+              {
+                "row_id": "T03B01-ROW-045",
+                "text": "Fokus Utama Kontraktor:"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T03-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T03B01-ROW-040",
+                "text": "Satu komponen yang mempunyai tahap pemantauan kualiti dan keselamatan yang paling tinggi. Kecuaian dalam pemasangan boleh mengakibatkan kecederaan serius dan liabiliti undang-undan"
+              },
+              {
+                "row_id": "T03B01-ROW-110",
+                "text": "Sebelum serahan, komponen ini mesti melalui proses pengujian beban dan pemeriksaan keselamatan oleh badan bebas yang bertauliah."
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T03-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T03B01-ROW-105",
+                "text": "Kelulusan Jurutera"
+              },
+              {
+                "row_id": "T03B01-ROW-106",
+                "text": "Semua lukisan struktur bagi komponen ini wajib disemak dan diluluskan oleh Jurutera Profesional (Ir.) yang bertauliah."
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUTERA",
+            "unit_id": "K5-PL06-T03-B01"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T03B01-ROW-105",
+                "text": "Kelulusan Jurutera"
+              },
+              {
+                "row_id": "T03B01-ROW-106",
+                "text": "Semua lukisan struktur bagi komponen ini wajib disemak dan diluluskan oleh Jurutera Profesional (Ir.) yang bertauliah."
+              }
+            ],
+            "classification": "SPEAKER_NOT_REQUIRED",
+            "name": null,
+            "needs_to_speak": false,
+            "new_role_description": null,
+            "reason": "The engineer appears as the AUTHORITY BEHIND A DOCUMENT (the structural drawing), not as a participant in the work being described.",
+            "reused_character": null,
+            "role_family": null,
+            "role_id": "ROLE-JURUTERA",
+            "unit_id": "K5-PL06-T03-B01"
+          }
+        ]
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T03B01-ROW-003"
+            ],
+            "text": "Kawasan berturap dalam landskap merujuk kepada sebarang permukaan yang keras dan padu yang direka untuk kegunaan manusia atau kenderaan."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 2,
+            "subtopics": [
+              "3.1 Kawasan Berturap / Paved Areas",
+              "3.2 Gelanggang Sukan & Permainan"
+            ],
+            "text": "Kerja ini merangkumi 3.1 Kawasan Berturap / Paved Areas dan 3.2 Gelanggang Sukan & Permainan."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T03B01-ROW-007"
+            ],
+            "text": "Membantu dalam pengurusan air larian permukaan"
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 2,
+        "declared": "3.1 Kawasan Berturap / Paved Areas + 3.2 Gelanggang Sukan & Permainan",
+        "items": [
+          "3.1 Kawasan Berturap / Paved Areas",
+          "3.2 Gelanggang Sukan & Permainan"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Kawasan Berturap dan Gelanggang Sukan & Permainan",
+      "topik": 3,
+      "unit_id": "K5-PL06-T03-B01",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 3,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 3,
+        "subjects": [
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T03B01-ROW-035"
+            ],
+            "subject": "Rajah sumber pada T03B01-ROW-035"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T03B01-ROW-040"
+            ],
+            "subject": "Rajah sumber pada T03B01-ROW-040"
+          },
+          {
+            "has_source_figure": true,
+            "rows": [
+              "T03B01-ROW-041"
+            ],
+            "subject": "Rajah sumber pada T03B01-ROW-041"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a MATERIAL_SPECIFICATION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA",
+        "treatment": "36 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [],
+        "satisfied": true
+      },
+      "bahagian": 4,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": true,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 92,
+        "first_row": "T03B04-ROW-001",
+        "last_row": "T03B04-ROW-092",
+        "structural_headings": 36
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "analyst_note": "Pam mesti dipadankan dengan head height dan kadar aliran — an undersized pump is a specification failure, not a preference.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "MATERIAL_SPECIFICATION",
+            "rows": [
+              "T03B04-ROW-053",
+              "T03B04-ROW-085"
+            ],
+            "text": "Pam merupakan 'jantung' sistem ini, dan saiz serta kuasanya mesti sepadan dengan ketinggian (head height) serta isipadu aliran air (flow rate) yang diperlukan"
+          },
+          {
+            "analyst_note": "Lapisan pelindung (underlayment) di bawah pelapik fleksibel.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "MATERIAL_SPECIFICATION",
+            "rows": [
+              "T03B04-ROW-076"
+            ],
+            "text": "Ini adalah pilihan paling lazim dan terbaik."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "MATERIAL_SPECIFICATION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T03B04-ROW-053",
+              "T03B04-ROW-085"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Pam merupakan 'jantung' sistem ini, dan saiz serta kuasanya mesti sepadan dengan ketinggian (head height) serta isipadu aliran air (flow rate) yang diperlukan"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T03B04-ROW-076"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Ini adalah pilihan paling lazim dan terbaik."
+          }
+        ]
+      },
+      "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": false,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_OVER_A_COMMITTED_UNIT_PATTERN",
+        "committed_pattern": {
+          "primary": "progressive process",
+          "reason": "The water-circulation system is a genuine sequence — source, sump, pump, pipework, back to source — and reads as a process. The pond and canal types around it are click-to-reveal.",
+          "secondary": "click-to-reveal"
+        },
+        "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+        "primary": "Click-to-Reveal",
+        "reason": "36 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
+        "repeated_components": 2,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "COMMITTED_UNIT_ITEMS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "correct": "Kecerunan, kerana ia mengawal kelajuan aliran air.",
+            "correct_rows": [
+              "T03B04-ROW-039"
+            ],
+            "distractors": [
+              "Warna batu yang digunakan di tebing",
+              "Jenis tumbuhan yang ditanam di sepanjang alur",
+              "Kedalaman takungan bawah"
+            ],
+            "feedback": "Kecerunan, kerana ia mengawal kelajuan aliran air.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah aspek paling kritikal dalam pembinaan alur air?"
+          },
+          {
+            "correct": "Kerana ia mudah dibentuk mengikut kontur alur.",
+            "correct_rows": [
+              "T03B04-ROW-044"
+            ],
+            "distractors": [
+              "Kerana ia lebih murah daripada semua bahan lain",
+              "Kerana ia tidak memerlukan lapisan pelindung",
+              "Kerana ia lebih kukuh daripada konkrit"
+            ],
+            "feedback": "Kerana ia mudah dibentuk mengikut kontur alur.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Mengapakah pelapik fleksibel seperti EPDM atau PVC menjadi pilihan utama bagi alur air?"
+          },
+          {
+            "correct": "Sebagai kitaran tertutup — air yang sama digunakan berterusan.",
+            "correct_rows": [
+              "T03B04-ROW-080"
+            ],
+            "distractors": [
+              "Air baharu dibekalkan berterusan dari sumber bandar",
+              "Air dilepaskan ke longkang selepas setiap kitaran",
+              "Air hanya dipam semasa waktu operasi taman"
+            ],
+            "feedback": "Sebagai kitaran tertutup — air yang sama digunakan berterusan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Bagaimanakah sistem kitaran air bagi sungai buatan berfungsi?"
+          },
+          {
+            "correct": "Air bertakung.",
+            "correct_rows": [
+              "T03B04-ROW-069"
+            ],
+            "distractors": [
+              "Hakisan tebing yang berlebihan",
+              "Aliran menjadi terlalu laju",
+              "Pam bekerja pada kadar yang lebih rendah"
+            ],
+            "feedback": "Air bertakung.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah kesan kecerunan yang terlalu landai pada laluan aliran sungai buatan?"
+          },
+          {
+            "correct": [
+              "Punca air di titik tertinggi",
+              "Takungan bawah (sump) di titik terendah",
+              "Pam air",
+              "Sistem perpaipan"
+            ],
+            "correct_rows": [
+              "T03B04-ROW-049",
+              "T03B04-ROW-051",
+              "T03B04-ROW-053",
+              "T03B04-ROW-055"
+            ],
+            "distractors": [
+              "Bebendul konkrit di tepi alur",
+              "Sistem penapisan wajib untuk semua badan air"
+            ],
+            "feedback": [
+              "Punca air di titik tertinggi",
+              "Takungan bawah (sump) di titik terendah",
+              "Pam air",
+              "Sistem perpaipan"
+            ],
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Pilih SEMUA komponen yang membentuk sistem kitaran air."
+          }
+        ],
+        "pass_percent": 60
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T03B04-ROW-012",
+                "text": "Tasik dalam pembinaan landskap ialah sebuah sistem kejuruteraan kompleks yang direka bentuk untuk meniru ciri semula jadi bagi tujuan estetik, ekologi, dan fungsian. Sebagai kontra"
+              },
+              {
+                "row_id": "T03B04-ROW-067",
+                "text": "Aspek Kritikal Kontraktor:"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T03-B04"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          }
+        ],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T03B04-ROW-006"
+            ],
+            "text": "Direka khusus untuk memelihara ikan koi, memerlukan sistem penapisan (filtration system) yang efisien untuk memastikan kualiti air sentiasa bersih dan sihat untuk ikan."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 1,
+            "subtopics": [
+              "3.6 Badan Air (Water Body)"
+            ],
+            "text": "Kerja ini merangkumi 3.6 Badan Air (Water Body)."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T03B04-ROW-006"
+            ],
+            "text": "Direka khusus untuk memelihara ikan koi, memerlukan sistem penapisan (filtration system) yang efisien untuk memastikan kualiti air sentiasa bersih dan sihat untuk ikan."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 1,
+        "declared": "3.6 Badan Air (Water Body)",
+        "items": [
+          "3.6 Badan Air (Water Body)"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Badan Air (Water Body)",
+      "topik": 3,
+      "unit_id": "K5-PL06-T03-B04",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "COMMITTED_UNIT_SUBJECTS",
+        "copy_complete": true,
+        "count": 3,
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T03B04-ROW-005",
+              "T03B04-ROW-007",
+              "T03B04-ROW-009",
+              "T03B04-ROW-011"
+            ],
+            "subject": "Empat jenis kolam landskap: koi, reflektif, taman air, tasik"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T03B04-ROW-049",
+              "T03B04-ROW-051",
+              "T03B04-ROW-053",
+              "T03B04-ROW-055"
+            ],
+            "subject": "Rajah kitaran air tertutup: punca air, sump, pam, perpaipan"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T03B04-ROW-044",
+              "T03B04-ROW-046"
+            ],
+            "subject": "Perbandingan pelapik fleksibel dan pelapik konkrit"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA",
+        "treatment": "88 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 5,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 189,
+        "first_row": "T03B05-ROW-001",
+        "last_row": "T03B05-ROW-189",
+        "structural_headings": 88
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T03B05-ROW-014"
+            ],
+            "text": "Tapak konkrit mesti dibina mengikut spesifikasi jurutera (saiz, kedalaman, dan saiz tetulang)."
+          },
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T03B05-ROW-016"
+            ],
+            "text": "Semua kabel bawah tanah mesti dilindungi menggunakan paip konduit (cth: paip GI atau uPVC) pada kedalaman yang betul untuk mengelakkan kerosakan."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "OBLIGATION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T03B05-ROW-014"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Tapak konkrit mesti dibina mengikut spesifikasi jurutera (saiz, kedalaman, dan saiz tetulang)."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T03B05-ROW-016"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Semua kabel bawah tanah mesti dilindungi menggunakan paip konduit (cth: paip GI atau uPVC) pada kedalaman yang betul untuk mengelakkan kerosakan."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "LAYERED_NON_PROCESS_NON_COMPARISON",
+        "primary": "Click-to-Reveal",
+        "reason": "88 structural headings give parallel layered entries even though the Fungsi/Fokus markers do not repeat.",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T03B05-ROW-003",
+            "correct": "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+            "correct_rows": [
+              "T03B05-ROW-004"
+            ],
+            "distractors": [
+              "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+              "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+              "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam."
+            ],
+            "feedback": "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pole Light?"
+          },
+          {
+            "anchor_row": "T03B05-ROW-005",
+            "correct": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+            "correct_rows": [
+              "T03B05-ROW-007"
+            ],
+            "distractors": [
+              "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+              "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+              "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam."
+            ],
+            "feedback": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Fungsi Utama?"
+          },
+          {
+            "anchor_row": "T03B05-ROW-006",
+            "correct": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+            "correct_rows": [
+              "T03B05-ROW-007"
+            ],
+            "distractors": [
+              "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+              "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+              "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam."
+            ],
+            "feedback": "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Keselamatan & Sekuriti?"
+          },
+          {
+            "anchor_row": "T03B05-ROW-008",
+            "correct": "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam.",
+            "correct_rows": [
+              "T03B05-ROW-009"
+            ],
+            "distractors": [
+              "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+              "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+              "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah."
+            ],
+            "feedback": "Menyediakan tahap kecerahan yang sekata dan mencukupi untuk membolehkan aktiviti berlangsung dengan selamat pada waktu malam.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pencahayaan Umum?"
+          },
+          {
+            "anchor_row": "T03B05-ROW-010",
+            "correct": "Menjadi penanda visual yang jelas bagi laluan utama dari jarak jauh.",
+            "correct_rows": [
+              "T03B05-ROW-011"
+            ],
+            "distractors": [
+              "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja.",
+              "Pole Light atau lampu tiang adalah lekapan lampu yang dipasang pada tiang dengan ketinggian lazimnya antara 3 hingga 8 meter.",
+              "Menerangi kawasan luas seperti jalan utama, laluan pejalan kaki, tempat letak kereta, dan kawasan rekreasi awam untuk meningkatkan keselamatan pengguna dan mencegah jenayah."
+            ],
+            "feedback": "Menjadi penanda visual yang jelas bagi laluan utama dari jarak jauh.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Navigasi?"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T03B05-ROW-002",
+                "text": "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja. Bagi seorang kontraktor, pema"
+              },
+              {
+                "row_id": "T03B05-ROW-012",
+                "text": "Aspek Pemasangan & Pengurusan Kritikal untuk Kontraktor:"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T03-B05"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          }
+        ],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T03B05-ROW-002"
+            ],
+            "text": "Pencahayaan landskap adalah satu komponen teknikal yang kritikal, berfungsi untuk melanjutkan penggunaan dan apresiasi ruang luar selepas waktu senja."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 2,
+            "subtopics": [
+              "3.7 Pencahayaan / Lighting",
+              "3.8 Pengairan (Irrigation)"
+            ],
+            "text": "Kerja ini merangkumi 3.7 Pencahayaan / Lighting dan 3.8 Pengairan (Irrigation)."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T03B05-ROW-016"
+            ],
+            "text": "Lazimnya menggunakan voltan 240V."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 2,
+        "declared": "3.7 Pencahayaan / Lighting + 3.8 Pengairan (Irrigation)",
+        "items": [
+          "3.7 Pencahayaan / Lighting",
+          "3.8 Pengairan (Irrigation)"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Pencahayaan dan Pengairan",
+      "topik": 3,
+      "unit_id": "K5-PL06-T03-B05",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 3,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T03B05-ROW-001"
+            ],
+            "subject": "Keratan atau susunan bagi Pencahayaan / Lighting"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T03B05-ROW-003"
+            ],
+            "subject": "Keratan atau susunan bagi Pole Light"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T03B05-ROW-005"
+            ],
+            "subject": "Keratan atau susunan bagi Fungsi Utama"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a NAMED_EXTERNAL_STANDARD anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN",
+        "treatment": "Source names an ordered process (Proses , Prosedur)."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [],
+        "satisfied": true
+      },
+      "bahagian": 1,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": true,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 132,
+        "first_row": "T05B01-ROW-001",
+        "last_row": "T05B01-ROW-132",
+        "structural_headings": 44
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "analyst_note": "Piawaian Malaysia (MS) dan JKR Standard Specification for Road Works are named standards.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "NAMED_EXTERNAL_STANDARD",
+            "rows": [
+              "T05B01-ROW-046",
+              "T05B01-ROW-047"
+            ],
+            "text": "Piawaian Malaysia (MS): Piawaian rasmi negara untuk bahan-bahan binaan seperti simen, keluli, dan produk konkrit."
+          },
+          {
+            "analyst_note": "PBT and ILAM guidelines are named authority bodies.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "NAMED_AUTHORITY_BODY",
+            "rows": [
+              "T05B01-ROW-050",
+              "T05B01-ROW-051"
+            ],
+            "text": "Pihak Berkuasa Tempatan (PBT): Mempunyai garis panduan sendiri untuk penanaman pokok di rizab jalan, pembinaan longkang, dan lain-lain."
+          },
+          {
+            "analyst_note": "Method Statement as a mandatory contract requirement.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "CONTRACTUAL_OBLIGATION",
+            "rows": [
+              "T05B01-ROW-104"
+            ],
+            "text": "Menjadi salah satu keperluan mandatori dalam kebanyakan dokumen kontrak pembinaan."
+          },
+          {
+            "analyst_note": "PPE obligations named for all involved workers.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "STATUTORY_SAFETY_EXPOSURE",
+            "rows": [
+              "T05B01-ROW-123"
+            ],
+            "text": "Menyatakan PPE yang wajib dipakai oleh semua pekerja terlibat (cth: topi keselamatan, kasut keselamatan, sarung tangan, abah-abah keselamatan untuk kerja di tempat tinggi)."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "NAMED_EXTERNAL_STANDARD",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T05B01-ROW-046",
+              "T05B01-ROW-047"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Piawaian Malaysia (MS): Piawaian rasmi negara untuk bahan-bahan binaan seperti simen, keluli, dan produk konkrit."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T05B01-ROW-050",
+              "T05B01-ROW-051"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Pihak Berkuasa Tempatan (PBT): Mempunyai garis panduan sendiri untuk penanaman pokok di rizab jalan, pembinaan longkang, dan lain-lain."
+          }
+        ]
+      },
+      "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": true,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_OVER_A_COMMITTED_UNIT_PATTERN",
+        "committed_pattern": {
+          "primary": "progressive process",
+          "reason": "Two genuine sequences — the NCR workflow and the ITP inspection stages. Comparison carries the QA-versus-QC distinction, which is a contrast rather than a sequence.",
+          "secondary": "comparison"
+        },
+        "f3_case": "SEQUENTIAL_PROCESS",
+        "primary": "Langkah demi langkah",
+        "reason": "Source names an ordered process (Proses , Prosedur).",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "COMMITTED_UNIT_ITEMS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "correct": "Dokumen kontrak.",
+            "correct_rows": [
+              "T05B01-ROW-041"
+            ],
+            "distractors": [
+              "Piawaian Malaysia (MS)",
+              "Garis panduan Pihak Berkuasa Tempatan (PBT)",
+              "Garis panduan ILAM"
+            ],
+            "feedback": "Dokumen kontrak.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Dalam hierarki rujukan kualiti, dokumen manakah yang mengatasi semua sumber lain?"
+          },
+          {
+            "correct": "QA ialah proses proaktif untuk memberi keyakinan bahawa kualiti akan dicapai; QC ialah aspek praktikal yang mengesan kecacatan.",
+            "correct_rows": [
+              "T05B01-ROW-038",
+              "T05B01-ROW-056",
+              "T05B01-ROW-057"
+            ],
+            "distractors": [
+              "QA dijalankan oleh kontraktor, QC oleh perunding sahaja",
+              "QA hanya untuk bahan, QC hanya untuk kerja tapak",
+              "QA dilakukan selepas siap, QC sebelum kerja bermula"
+            ],
+            "feedback": "QA ialah proses proaktif untuk memberi keyakinan bahawa kualiti akan dicapai; QC ialah aspek praktikal yang mengesan kecacatan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah perbezaan utama antara Jaminan Kualiti (QA) dan Kawalan Kualiti (QC)?"
+          },
+          {
+            "correct": "Pengenalpastian ketidakpatuhan oleh penyelia tapak atau perunding semasa pemeriksaan.",
+            "correct_rows": [
+              "T05B01-ROW-082"
+            ],
+            "distractors": [
+              "Kelulusan cadangan pembetulan oleh perunding",
+              "Pelaksanaan kerja pembaikan oleh kontraktor",
+              "Analisis punca masalah oleh kontraktor"
+            ],
+            "feedback": "Pengenalpastian ketidakpatuhan oleh penyelia tapak atau perunding semasa pemeriksaan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah langkah PERTAMA dalam proses aliran kerja NCR?"
+          },
+          {
+            "correct": "Ia mesti boleh diukur (measurable).",
+            "correct_rows": [
+              "T05B01-ROW-006"
+            ],
+            "distractors": [
+              "Ia mesti diluluskan oleh PBT",
+              "Ia mesti ditulis dalam dua bahasa",
+              "Ia mesti disertakan dengan anggaran kos"
+            ],
+            "feedback": "Ia mesti boleh diukur (measurable).",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Objektif kualiti dalam PQP mesti mempunyai satu ciri yang membezakannya daripada kenyataan hasrat. Apakah ciri itu?"
+          },
+          {
+            "correct": [
+              "Memastikan tiada peringkat kritikal tertinggal",
+              "Mengklarifikasi tanggungjawab pemeriksaan dan kelulusan",
+              "Menjadi rujukan standard dengan kriteria penerimaan yang jelas",
+              "Mewujudkan rekod formal bahawa pemeriksaan telah dijalankan"
+            ],
+            "correct_rows": [
+              "T05B01-ROW-062",
+              "T05B01-ROW-064",
+              "T05B01-ROW-066",
+              "T05B01-ROW-068"
+            ],
+            "distractors": [
+              "Menetapkan harga kontrak bagi setiap aktiviti kerja",
+              "Menggantikan keperluan Penyata Kaedah Kerja"
+            ],
+            "feedback": [
+              "Memastikan tiada peringkat kritikal tertinggal",
+              "Mengklarifikasi tanggungjawab pemeriksaan dan kelulusan",
+              "Menjadi rujukan standard dengan kriteria penerimaan yang jelas",
+              "Mewujudkan rekod formal bahawa pemeriksaan telah dijalankan"
+            ],
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Pilih SEMUA tujuan utama Pelan Pemeriksaan dan Ujian (ITP)."
+          }
+        ],
+        "pass_percent": 60
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T05B01-ROW-004",
+                "text": "Pelan Kualiti Projek (PQP) adalah sebuah dokumen strategik yang formal dan terperinci, berfungsi sebagai panduan utama bagi pasukan projek untuk melaksanakan dan mengawal kualiti k"
+              },
+              {
+                "row_id": "T05B01-ROW-053",
+                "text": "Sebelum pembelian pukal atau pembinaan skala penuh, kontraktor mesti menyediakan sampel bahan (cth: paver, boulder, perabot taman) atau membina mock-up (cth: satu panel feature wal"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T05-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T05B01-ROW-014",
+                "text": "Penyelia Tapak"
+              },
+              {
+                "row_id": "T05B01-ROW-015",
+                "text": "Bertanggungjawab untuk menjalankan pemeriksaan harian ke atas campuran tanah (topsoil mix), saiz lubang tanaman, dan kaedah pemasangan geotextile."
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T05-B01"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T05B01-ROW-002"
+            ],
+            "text": "Pengurusan Kualiti Projek dalam konteks pembinaan landskap adalah pendekatan sistematik dan proaktif untuk memastikan setiap komponen projek, sama ada landskap lembut atau landskap kejur mematuhi spesifikasi teknikal, lukisan reka bentuk, dan paling penting, memenuhi jangkaan klien."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 4,
+            "subtopics": [
+              "5.1 Project Quality Plan (PQP)",
+              "5.2 Jaminan Kualiti",
+              "5.3 Inspection and Testing for Quality Control",
+              "5.4 Penyata Kaedah Kerja"
+            ],
+            "text": "Kerja ini merangkumi 5.1 Project Quality Plan (PQP), 5.2 Jaminan Kualiti, 5.3 Inspection and Testing for Quality Control dan 5.4 Penyata Kaedah Kerja."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T05B01-ROW-002"
+            ],
+            "text": "Pengurusan Kualiti Projek dalam konteks pembinaan landskap adalah pendekatan sistematik dan proaktif untuk memastikan setiap komponen projek, sama ada landskap lembut atau landskap kejur mematuhi spesifikasi teknikal, lukisan reka bentuk, dan paling penting, memenuhi jangkaan klien."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 4,
+        "declared": "5.1 Project Quality Plan (PQP) + 5.2 Jaminan Kualiti + 5.3 Inspection and Testing for Quality Control + 5.4 Penyata Kaedah Kerja",
+        "items": [
+          "5.1 Project Quality Plan (PQP)",
+          "5.2 Jaminan Kualiti",
+          "5.3 Inspection and Testing for Quality Control",
+          "5.4 Penyata Kaedah Kerja"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Pengurusan Kualiti Projek",
+      "topik": 5,
+      "unit_id": "K5-PL06-T05-B01",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "COMMITTED_UNIT_SUBJECTS",
+        "copy_complete": true,
+        "count": 3,
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T05B01-ROW-041",
+              "T05B01-ROW-046",
+              "T05B01-ROW-050",
+              "T05B01-ROW-053"
+            ],
+            "subject": "Hierarki rujukan kualiti: dokumen kontrak di atas, kemudian MS/JKR, PBT/ILAM, sampel dan mock-up"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T05B01-ROW-082",
+              "T05B01-ROW-084",
+              "T05B01-ROW-086",
+              "T05B01-ROW-088",
+              "T05B01-ROW-090"
+            ],
+            "subject": "Aliran kerja NCR lima peringkat"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T05B01-ROW-112",
+              "T05B01-ROW-114",
+              "T05B01-ROW-116",
+              "T05B01-ROW-119"
+            ],
+            "subject": "Kandungan Penyata Kaedah Kerja yang lengkap"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a STATUTORY_LIMIT anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN",
+        "treatment": "Source names an ordered process (Prosedur)."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [],
+        "satisfied": true
+      },
+      "bahagian": 1,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": true,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 118,
+        "first_row": "T06B01-ROW-001",
+        "last_row": "T06B01-ROW-118",
+        "structural_headings": 37
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "analyst_note": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "STATUTORY_LIMIT",
+            "rows": [
+              "T06B01-ROW-062"
+            ],
+            "text": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa."
+          },
+          {
+            "analyst_note": "Spesies tumbuhan yang dilindungi may require translocation before development proceeds.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "PROTECTED_SPECIES_EXPOSURE",
+            "rows": [
+              "T06B01-ROW-106"
+            ],
+            "text": "Jika ada spesies tumbuhan yang dilindungi atau penting di laluan pembangunan, kontraktor mungkin perlu memindahkannya ke lokasi yang sesuai di dalam atau di luar tapak projek."
+          },
+          {
+            "analyst_note": "Tiada pembakaran sisa tapak.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "ENVIRONMENTAL_PROHIBITION",
+            "rows": [
+              "T06B01-ROW-118"
+            ],
+            "text": "Mengelakkan pembakaran sisa tapak yang boleh memusnahkan habitat atau mengancam hidupan liar"
+          },
+          {
+            "analyst_note": "Pemangkasan oleh arborist bertauliah — a named professional competency.",
+            "cls": "SOURCE_ROW_TEXT_WITH_ANALYST_RATIONALE",
+            "kind": "NAMED_PROFESSIONAL_AUTHORITY",
+            "rows": [
+              "T06B01-ROW-104"
+            ],
+            "text": "Melakukan pemangkasan oleh arborist bertauliah untuk memastikan kesihatan pokok dan mengelakkan kerosakan tidak perlu."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "STATUTORY_LIMIT",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T06B01-ROW-062"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Pematuhan kepada had bunyi yang ditetapkan oleh pihak berkuasa."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T06B01-ROW-106"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Jika ada spesies tumbuhan yang dilindungi atau penting di laluan pembangunan, kontraktor mungkin perlu memindahkannya ke lokasi yang sesuai di dalam atau di luar tapak projek."
+          }
+        ]
+      },
+      "evidence_tier": "COMMITTED_ANALYSIS_AND_ROWS",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": false,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_OVER_A_COMMITTED_UNIT_PATTERN",
+        "committed_pattern": {
+          "primary": "click-to-reveal",
+          "reason": "Six environmental aspects, each with its own control list — click-to-reveal. The EMP itself is a four-stage process and reads as one.",
+          "secondary": "progressive process"
+        },
+        "f3_case": "SEQUENTIAL_PROCESS",
+        "primary": "Langkah demi langkah",
+        "reason": "Source names an ordered process (Prosedur).",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "COMMITTED_UNIT_ITEMS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "correct": "Mengenal pasti potensi impak negatif dan positif projek terhadap alam sekitar.",
+            "correct_rows": [
+              "T06B01-ROW-005"
+            ],
+            "distractors": [
+              "Merangka pelan pemulihan kawasan yang terganggu",
+              "Menetapkan prosedur pemantauan dan pelaporan",
+              "Memasang pagar perlindungan pokok"
+            ],
+            "feedback": "Mengenal pasti potensi impak negatif dan positif projek terhadap alam sekitar.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah langkah PERTAMA dalam Environmental Management Plan (EMP)?"
+          },
+          {
+            "correct": "Dikumpul dalam tangki atau kawasan tadahan khusus.",
+            "correct_rows": [
+              "T06B01-ROW-038"
+            ],
+            "distractors": [
+              "Dilepaskan terus ke sistem saliran tapak",
+              "Disembur ke kawasan tanah kosong untuk mengurangkan habuk",
+              "Dibiarkan meresap ke dalam tanah di sekitar tapak"
+            ],
+            "feedback": "Dikumpul dalam tangki atau kawasan tadahan khusus.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Bagaimanakah air bilasan daripada pencampuran konkrit mesti diuruskan?"
+          },
+          {
+            "correct": "Arborist bertauliah.",
+            "correct_rows": [
+              "T06B01-ROW-104"
+            ],
+            "distractors": [
+              "Mana-mana pekerja am yang berpengalaman",
+              "Penyelia tapak kontraktor",
+              "Pengendali jentera yang memasang pagar perlindungan"
+            ],
+            "feedback": "Arborist bertauliah.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Siapakah yang perlu melakukan pemangkasan pokok matang yang dikekalkan di tapak?"
+          },
+          {
+            "correct": "Kerana ia boleh memusnahkan habitat atau mengancam hidupan liar.",
+            "correct_rows": [
+              "T06B01-ROW-118"
+            ],
+            "distractors": [
+              "Kerana ia meningkatkan kos pelupusan sisa",
+              "Kerana ia memerlukan kelulusan bertulis daripada perunding",
+              "Kerana abu sisa merosakkan lapisan pelapik kolam"
+            ],
+            "feedback": "Kerana ia boleh memusnahkan habitat atau mengancam hidupan liar.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Mengapakah pembakaran sisa tapak dilarang?"
+          },
+          {
+            "correct": [
+              "Menyiram air secara berkala di laluan kenderaan dan kawasan kerja",
+              "Menutup lori pembawa tanah dengan kanvas",
+              "Memasang jaring debu di sekeliling kawasan kerja"
+            ],
+            "correct_rows": [
+              "T06B01-ROW-049",
+              "T06B01-ROW-051",
+              "T06B01-ROW-053"
+            ],
+            "distractors": [
+              "Memasang pembatas bunyi di sempadan tapak",
+              "Menggunakan sistem pengairan titisan",
+              "Memasang monitor getaran berhampiran struktur kritikal"
+            ],
+            "feedback": [
+              "Menyiram air secara berkala di laluan kenderaan dan kawasan kerja",
+              "Menutup lori pembawa tanah dengan kanvas",
+              "Memasang jaring debu di sekeliling kawasan kerja"
+            ],
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Pilih SEMUA langkah kawalan habuk yang dinyatakan bagi pengurusan kualiti udara."
+          }
+        ],
+        "pass_percent": 60
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T06B01-ROW-002",
+                "text": "Dalam konteks kontraktor landskap, peranan untuk melindungi dan menambah baik alam sekitar menjadi semakin penting. Ini bukan sahaja melibatkan pematuhan undang-undang dan peratura"
+              },
+              {
+                "row_id": "T06B01-ROW-004",
+                "text": "EMP adalah dokumen strategik yang menggariskan bagaimana kesan alam sekitar yang berpotensi daripada sesuatu projek akan diurus, dikurangkan, atau dielakkan. Ia adalah panduan prak"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T06-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T06B01-ROW-007",
+                "text": "EMP juga menetapkan prosedur pemantauan (monitoring), pelaporan (reporting), dan tindakan pembetulan (corrective actions) sekiranya berlaku penyelewengan."
+              },
+              {
+                "row_id": "T06B01-ROW-022",
+                "text": "Pengurusan alam sekitar merujuk kepada pelaksanaan langkah-langkah yang digariskan dalam EMP. Ia melibatkan kawalan dan pemantauan berterusan terhadap pelbagai aspek alam sekitar s"
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T06-B01"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T06B01-ROW-002"
+            ],
+            "text": "Dalam konteks kontraktor landskap, peranan untuk melindungi dan menambah baik alam sekitar menjadi semakin penting."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 3,
+            "subtopics": [
+              "6.1 Environmental Management Plan",
+              "6.2 Contoh Aplikasi dalam Landskap",
+              "6.3 Pengurusan Alam Sekitar"
+            ],
+            "text": "Kerja ini merangkumi 6.1 Environmental Management Plan, 6.2 Contoh Aplikasi dalam Landskap dan 6.3 Pengurusan Alam Sekitar."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T06B01-ROW-014"
+            ],
+            "text": "Mengesan spesies pokok yang dilindungi, mengenal pasti habitat hidupan liar (jika ada), dan menilai kualiti air/tanah sedia ada."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 3,
+        "declared": "6.1 Environmental Management Plan + 6.2 Contoh Aplikasi dalam Landskap + 6.3 Pengurusan Alam Sekitar",
+        "items": [
+          "6.1 Environmental Management Plan",
+          "6.2 Contoh Aplikasi dalam Landskap",
+          "6.3 Pengurusan Alam Sekitar"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Perlindungan dan Penambahbaikan Alam Sekitar",
+      "topik": 6,
+      "unit_id": "K5-PL06-T06-B01",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "COMMITTED_UNIT_SUBJECTS",
+        "copy_complete": true,
+        "count": 3,
+        "source_attested": 1,
+        "subjects": [
+          {
+            "has_source_figure": true,
+            "note": "The only unit in this batch with a raster figure in the source, and it carries its own caption.",
+            "rows": [
+              "T06B01-ROW-010"
+            ],
+            "subject": "Rajah 26: EMP Untuk Landskap"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T06B01-ROW-023",
+              "T06B01-ROW-041",
+              "T06B01-ROW-059",
+              "T06B01-ROW-072",
+              "T06B01-ROW-083",
+              "T06B01-ROW-094"
+            ],
+            "subject": "Enam aspek pengurusan alam sekitar dan contoh kawalan bagi setiap satu"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T06B01-ROW-031",
+              "T06B01-ROW-033",
+              "T06B01-ROW-035"
+            ],
+            "subject": "Kawalan hakisan dan sedimen: silt fence, kolam takungan, penanaman penutup bumi"
+          }
+        ]
+      }
+    },
+    {
+      "analysis": {
+        "dialogue_tension": "Selected a OBLIGATION anchor because the module's own rows state it; no obligation was invented.",
+        "role_mapping": "ROLE-KONTRAKTOR=REUSE_ALYA; ROLE-PENYELIA=REUSE_ENCIK_RAHMAN",
+        "treatment": "Source names an ordered process (Proses )."
+      },
+      "analysis_conformance": {
+        "contract_fields": [
+          "ambiguities",
+          "assessment",
+          "compliance_sensitive",
+          "dialogue",
+          "mandatory_propositions",
+          "pattern",
+          "rumusan_beats",
+          "terminology",
+          "visual_subjects"
+        ],
+        "defects": [
+          "NO_COMMITTED_ANALYSIS"
+        ],
+        "satisfied": false
+      },
+      "bahagian": 1,
+      "completion": {
+        "DIALOGUE_COPY_COMPLETE": true,
+        "INTERACTION_TREATMENT_COMPLETE": true,
+        "PACKET_SCHEMA_COMPLETE": true,
+        "PRODUCTION_READY": false,
+        "QUIZ_COPY_COMPLETE": true,
+        "RUMUSAN_COPY_COMPLETE": true,
+        "SOURCE_ANALYSIS_COMPLETE": false,
+        "SOURCE_EXTRACTION_COMPLETE": true,
+        "VISUAL_DIRECTION_COMPLETE": true
+      },
+      "controlled_source_rows": {
+        "cls": "SOURCE_DERIVED",
+        "count": 66,
+        "first_row": "T07B01-ROW-001",
+        "last_row": "T07B01-ROW-066",
+        "structural_headings": 19
+      },
+      "dialogue": {
+        "anchors": [
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T07B01-ROW-021"
+            ],
+            "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan."
+          },
+          {
+            "kind": "OBLIGATION",
+            "rows": [
+              "T07B01-ROW-036"
+            ],
+            "text": "Piawaian kebersihan mesti ditetapkan dalam kontrak."
+          }
+        ],
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "status": "DIALOGUE_COPY_COMPLETE",
+        "tension_kind": "OBLIGATION",
+        "turns": [
+          {
+            "cls": "CAIR_STRUCTURAL_FRAME",
+            "kind": "QUESTION",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "rows": [],
+            "seq": 1,
+            "speaker": "Alya",
+            "text": "Apa yang perlu saya pastikan sebelum kerja ini diteruskan?"
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_RESPONSE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T07B01-ROW-021"
+            ],
+            "seq": 2,
+            "speaker": "Encik Rahman",
+            "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan."
+          },
+          {
+            "cls": "SOURCE_VERBATIM",
+            "kind": "SOURCE_BACKED_CONSEQUENCE",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "rows": [
+              "T07B01-ROW-036"
+            ],
+            "seq": 3,
+            "speaker": "Encik Rahman",
+            "text": "Piawaian kebersihan mesti ditetapkan dalam kontrak."
+          }
+        ]
+      },
+      "evidence_tier": "ROWS_ONLY",
+      "generation_scope": "ACTIVE_GENERATION",
+      "interaction": {
+        "agrees_with_committed": null,
+        "authority_locus": "F3",
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "F3_RULE_APPLIED_TO_CONTROLLED_ROWS",
+        "committed_pattern": null,
+        "f3_case": "SEQUENTIAL_PROCESS",
+        "primary": "Langkah demi langkah",
+        "reason": "Source names an ordered process (Proses ).",
+        "repeated_components": 0,
+        "resolved": true,
+        "secondary": null
+      },
+      "production_blockers": [
+        "AWAITING_BARIAH_WRITTEN_RETURN"
+      ],
+      "production_ready": false,
+      "quiz": {
+        "anchored": 0,
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "composition": "4 MCQ + 1 MR",
+        "drafted": 5,
+        "items": [
+          {
+            "anchor_row": "T07B01-ROW-003",
+            "correct": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+            "correct_rows": [
+              "T07B01-ROW-004"
+            ],
+            "distractors": [
+              "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+              "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+              "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui."
+            ],
+            "feedback": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q1",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Keselamatan Tapak?"
+          },
+          {
+            "anchor_row": "T07B01-ROW-005",
+            "correct": "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+            "correct_rows": [
+              "T07B01-ROW-006"
+            ],
+            "distractors": [
+              "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+              "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+              "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui."
+            ],
+            "feedback": "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q2",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Kepatuhan Kontrak?"
+          },
+          {
+            "anchor_row": "T07B01-ROW-007",
+            "correct": "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+            "correct_rows": [
+              "T07B01-ROW-008"
+            ],
+            "distractors": [
+              "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+              "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+              "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui."
+            ],
+            "feedback": "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q3",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pengurangan Kos?"
+          },
+          {
+            "anchor_row": "T07B01-ROW-009",
+            "correct": "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui.",
+            "correct_rows": [
+              "T07B01-ROW-010"
+            ],
+            "distractors": [
+              "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+              "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+              "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak."
+            ],
+            "feedback": "Memastikan tapak dibersihkan dan dipulihkan kepada keadaan asal atau yang dipersetujui.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_CHOICE",
+            "slot": "Q4",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pemulihan Alam Sekitar?"
+          },
+          {
+            "anchor_row": "T07B01-ROW-011",
+            "correct": "Mengeluarkan aset syarikat secara cekap untuk digunakan dalam projek seterusnya.",
+            "correct_rows": [
+              "T07B01-ROW-012"
+            ],
+            "distractors": [
+              "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam.",
+              "Memenuhi semua syarat kontrak berkaitan dengan penutupan tapak dan pemulihan.",
+              "Mengurangkan kos sewa peralatan, gaji pekerja, dan kos penyelenggaraan tapak."
+            ],
+            "feedback": "Mengeluarkan aset syarikat secara cekap untuk digunakan dalam projek seterusnya.",
+            "key_status": "DRAFTED_NOT_APPROVED",
+            "kind": "MULTIPLE_RESPONSE",
+            "slot": "Q5",
+            "state": "QUIZ_DRAFT_COMPLETE",
+            "stem": "Apakah yang mesti dipastikan berkaitan Pengurusan Logistik?"
+          }
+        ],
+        "pass_percent": 60,
+        "unanchored": 0
+      },
+      "roles": {
+        "audit": [
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T07B01-ROW-017",
+                "text": "Sebuah mini excavator yang digunakan untuk menggali kolam hiasan akan dicuci bersih, diperiksa untuk kerosakan, dan diangkut menggunakan low-loader (treler pengangkut jentera berat"
+              },
+              {
+                "row_id": "T07B01-ROW-028",
+                "text": "Kontraktor perlu mematuhi Peraturan Kualiti Alam Sekeliling (Buangan Terjadual) jika ada sisa berbahaya, dan peraturan pengurusan sisa pepejal perbandaran. Kontraktor perlu menyedi"
+              }
+            ],
+            "classification": "REUSE_ALYA",
+            "name": "Alya",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER is covered by an approved character.",
+            "reused_character": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR",
+            "unit_id": "K5-PL06-T07-B01"
+          },
+          {
+            "cited_module_text": [
+              {
+                "row_id": "T07B01-ROW-015",
+                "text": "Ini adalah langkah pertama dan paling jelas dalam demobilisasi. Semua peralatan dan jentera berat yang digunakan sepanjang projek perlu dikeluarkan dari tapak. Melibatkan penyenara"
+              },
+              {
+                "row_id": "T07B01-ROW-017",
+                "text": "Sebuah mini excavator yang digunakan untuk menggali kolam hiasan akan dicuci bersih, diperiksa untuk kerosakan, dan diangkut menggunakan low-loader (treler pengangkut jentera berat"
+              }
+            ],
+            "classification": "REUSE_ENCIK_RAHMAN",
+            "name": "Encik Rahman",
+            "needs_to_speak": true,
+            "new_role_description": null,
+            "reason": "Role family MENTOR_CONTRACTOR_SENIOR is covered by an approved character.",
+            "reused_character": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA",
+            "unit_id": "K5-PL06-T07-B01"
+          }
+        ],
+        "cls": "WRITTEN_CHARACTER_CONTRACT_APPLIED",
+        "narrator": {
+          "authority": "A1, scope 'Seluruh K5'. No option mark, no Section G row.",
+          "name": "Hilmi",
+          "reused": true
+        },
+        "new_required": [],
+        "reused": [
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Alya",
+            "role_family": "CONTRACTOR_JUNIOR_TRAINEE_OPERATIONAL_LEARNER",
+            "role_id": "ROLE-KONTRAKTOR"
+          },
+          {
+            "authority": "WRITTEN_CONFIRMED",
+            "name": "Encik Rahman",
+            "role_family": "MENTOR_CONTRACTOR_SENIOR",
+            "role_id": "ROLE-PENYELIA"
+          }
+        ],
+        "speaker_not_required": []
+      },
+      "row_use_disposition": null,
+      "rumusan": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "beat_count": 3,
+        "beats": [
+          {
+            "beat": "importance",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T07B01-ROW-004"
+            ],
+            "text": "Memastikan semua bahaya telah dihapuskan dan tapak adalah selamat untuk pekerja dan orang awam."
+          },
+          {
+            "beat": "scope",
+            "cls": "SOURCE_DERIVED_SUBTOPIC_ENUMERATION",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [],
+            "subtopic_count": 3,
+            "subtopics": [
+              "7.1 Tujuan Demobilisasi",
+              "7.2 Proses Demobilisasi",
+              "7.3 Kepentingan Perancangan Demobilisasi"
+            ],
+            "text": "Kerja ini merangkumi 7.1 Tujuan Demobilisasi, 7.2 Proses Demobilisasi dan 7.3 Kepentingan Perancangan Demobilisasi."
+          },
+          {
+            "beat": "benefit",
+            "cls": "SOURCE_DERIVED",
+            "learner_facing": false,
+            "learner_facing_label": null,
+            "rows": [
+              "T07B01-ROW-021"
+            ],
+            "text": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan."
+          }
+        ],
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "declared_beats": [
+          "importance",
+          "scope",
+          "benefit"
+        ],
+        "support_visual_required": true,
+        "uses_forbidden_phrase": false
+      },
+      "source_scope_verification": null,
+      "stage": "4.2F-J",
+      "status_marks": [
+        "PROVISIONAL_WORKING_PACKET",
+        "NOT_INSTRUCTIONALLY_APPROVED",
+        "AWAITING_BARIAH_ID_WATAK_DIALOG_RUMUSAN"
+      ],
+      "subtopics": {
+        "cls": "SOURCE_DERIVED",
+        "count": 3,
+        "declared": "7.1 Tujuan Demobilisasi + 7.2 Proses Demobilisasi + 7.3 Kepentingan Perancangan Demobilisasi",
+        "items": [
+          "7.1 Tujuan Demobilisasi",
+          "7.2 Proses Demobilisasi",
+          "7.3 Kepentingan Perancangan Demobilisasi"
+        ]
+      },
+      "tension_disposition": null,
+      "title": "Demobilisasi",
+      "topik": 7,
+      "unit_id": "K5-PL06-T07-B01",
+      "visual_direction": {
+        "authority_status": "DRAFTED_NOT_APPROVED",
+        "cls": "CAIR_DRAFTED_FROM_CONTROLLED_ROWS",
+        "copy_complete": true,
+        "count": 3,
+        "rp104_note": "a direction is read from a source figure or table, never composed from a component name",
+        "source_attested": 0,
+        "subjects": [
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T07B01-ROW-001"
+            ],
+            "subject": "Keratan atau susunan bagi DEMOBILISASI"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T07B01-ROW-002"
+            ],
+            "subject": "Keratan atau susunan bagi Tujuan Demobilisasi"
+          },
+          {
+            "has_source_figure": false,
+            "rows": [
+              "T07B01-ROW-003"
+            ],
+            "subject": "Keratan atau susunan bagi Keselamatan Tapak"
+          }
+        ]
+      }
+    }
+  ]
+}
