@@ -1,0 +1,473 @@
+{
+  "artifact": "PL06_UNIT_SOURCE_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1_SOURCE_ANALYSIS",
+  "stage": "4.2F-C",
+  "unit_id": "K5-PL06-T02-B01",
+  "lesson_title": "Elemen Landskap Kejur dan Elemen Landskap Lembut/Penanaman",
+  "topik": 2,
+  "bahagian": 1,
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T02_B01_SOURCE_EXTRACT_v1.json",
+  "controlled_rows_in_unit": 180,
+  "controlled_rows_read": 180,
+  "every_cited_row_exists_in_extract": true,
+  "cited_row_count": 53,
+  "authorship": "HAND_AUTHORED_CAIR_FROM_CONTROLLED_ROWS",
+  "classification_vocabulary": [
+    "SOURCE_DERIVED",
+    "CAIR_PROPOSAL",
+    "COURSE_RULE_ALREADY_APPROVED",
+    "PENDING_BARIAH_PATTERN_DECISION",
+    "PENDING_UNIT_EXCEPTION_REVIEW"
+  ],
+  "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+  "span_note": "Two subtopics in one unit: 2.1 Elemen Landskap Kejur (hardscape, four component categories each backed by a KOMPONEN/CONTOH table) and 2.2 Elemen Landskap Lembut/Penanaman (softscape, eight plant families). Module pages 201-215. No raster figures; four tables.",
+  "analysis_contract": {
+    "reference": "docs/pl06/packets/PL06_ANALYSIS_GAP_MATRIX_v0_1.md",
+    "note": "Fields and floors are the live analysis contract from the gap matrix. Every traced item cites the controlled row(s) that carry it. No PPTX, no generation, no answer-key approval, no authority invented."
+  },
+  "isolation_note": "Isolated per-unit record. Not added to the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py, which was left unedited by instruction. Field names mirror a UNIT_ANALYSIS entry so the record can project into the generator later without rewrite.",
+  "assessment_key_status": "DRAFTED_NOT_APPROVED",
+  "assessment_key_authority": "NONE — stems and distractors are CAIR proposals; only the correct response is SOURCE_DERIVED and cites its rows",
+  "mandatory_propositions": [
+    {
+      "proposition": "Landskap kejur ialah semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap - batu, konkrit, kayu, logam - yang membentuk struktur, laluan dan ciri fungsian serta estetik.",
+      "rows": [
+        "T02B01-ROW-003"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Landskap lembut (softscape) ialah semua elemen hidup dan semula jadi; penanaman ialah kerja melaksanakan reka bentuk landskap lembut itu.",
+      "rows": [
+        "T02B01-ROW-018"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Pokok dan palma ialah elemen paling dominan dan bertindak sebagai 'tulang belakang' atau struktur utama sesuatu skema penanaman.",
+      "rows": [
+        "T02B01-ROW-021"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Tapak penanaman pokok mesti mempunyai ruang cukup untuk akar dan kanopi matang; elakkan menanam terlalu dekat dengan bangunan, kabel bawah tanah atau longkang.",
+      "rows": [
+        "T02B01-ROW-035",
+        "T02B01-ROW-036"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Teknik penyediaan lubang, campuran tanah dan pemasangan sokongan (staking) adalah kritikal untuk memastikan pokok hidup dan tumbuh subur.",
+      "rows": [
+        "T02B01-ROW-037",
+        "T02B01-ROW-038"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Akar palma berjenis serabut dan sensitif, jadi pemindahan dan penanaman semula mesti berhati-hati untuk mengelakkan kerosakan bebola akar (root ball).",
+      "rows": [
+        "T02B01-ROW-054",
+        "T02B01-ROW-055"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Tapak tanaman penutup bumi mesti bebas sepenuhnya daripada rumpai sebelum menanam, kerana rumpai yang bercampur amat sukar dikawal kemudian.",
+      "rows": [
+        "T02B01-ROW-094",
+        "T02B01-ROW-095"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Struktur sokongan bagi tumbuhan memanjat mesti cukup kukuh untuk menampung berat tumbuhan apabila ia matang sepenuhnya.",
+      "rows": [
+        "T02B01-ROW-116",
+        "T02B01-ROW-117"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Tanaman akuatik berfungsi sebagai penapis semula jadi (menyerap nutrien berlebihan) dan pengoksigen; ia mesti ditanam dalam bakul akuatik berlubang menggunakan tanah liat berat, bukan potting mix ringan yang akan terapung dan mengotorkan air.",
+      "rows": [
+        "T02B01-ROW-149",
+        "T02B01-ROW-150",
+        "T02B01-ROW-155",
+        "T02B01-ROW-157"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Terdapat tiga kaedah pemasangan rumput dengan pertukaran kos-masa: Tampalan Rapat (hasil segera, kos tertinggi), Tampalan Berjarak (jimat bahan, lambat menutup), dan Semaian Hidro (pantas untuk skala besar/cerun, perlu peralatan khas).",
+      "rows": [
+        "T02B01-ROW-133",
+        "T02B01-ROW-137",
+        "T02B01-ROW-141"
+      ],
+      "cls": "SOURCE_DERIVED"
+    }
+  ],
+  "terminology": [
+    {
+      "term": "Landskap Kejur / Hardscape",
+      "rows": [
+        "T02B01-ROW-002",
+        "T02B01-ROW-003"
+      ]
+    },
+    {
+      "term": "Sirkulasi & Kawasan Berturap",
+      "rows": [
+        "T02B01-ROW-007"
+      ]
+    },
+    {
+      "term": "Perabot Landskap / Street Furniture",
+      "rows": [
+        "T02B01-ROW-013"
+      ]
+    },
+    {
+      "term": "Landskap Lembut / Softscape",
+      "rows": [
+        "T02B01-ROW-017",
+        "T02B01-ROW-018"
+      ]
+    },
+    {
+      "term": "Palma (famili Arecaceae)",
+      "rows": [
+        "T02B01-ROW-041",
+        "T02B01-ROW-042"
+      ]
+    },
+    {
+      "term": "Tanaman Renek / Shrubs",
+      "rows": [
+        "T02B01-ROW-060"
+      ]
+    },
+    {
+      "term": "Tanaman Penutup Bumi / Groundcover",
+      "rows": [
+        "T02B01-ROW-079",
+        "T02B01-ROW-080"
+      ]
+    },
+    {
+      "term": "Tumbuhan Memanjat / Climber",
+      "rows": [
+        "T02B01-ROW-100",
+        "T02B01-ROW-101"
+      ]
+    },
+    {
+      "term": "Rumput / Turfing",
+      "rows": [
+        "T02B01-ROW-124"
+      ]
+    },
+    {
+      "term": "Tanaman Akuatik",
+      "rows": [
+        "T02B01-ROW-145",
+        "T02B01-ROW-146"
+      ]
+    },
+    {
+      "term": "Close Turfing / Spot Turfing / Hydroseeding",
+      "rows": [
+        "T02B01-ROW-133",
+        "T02B01-ROW-137",
+        "T02B01-ROW-141"
+      ]
+    },
+    {
+      "term": "Tanaman Semusim (Annuals) / Perennials",
+      "rows": [
+        "T02B01-ROW-160",
+        "T02B01-ROW-162",
+        "T02B01-ROW-171"
+      ]
+    }
+  ],
+  "compliance_sensitive": [
+    {
+      "statement": "Peralatan taman permainan dicontohkan sebagai 'bertaraf keselamatan SIRIM' - a named certification body appearing inside the hardscape recreation table.",
+      "rows": [
+        "T02B01-ROW-006"
+      ],
+      "why": "NAMED_EXTERNAL_STANDARD"
+    },
+    {
+      "statement": "Penanaman pokok mesti mengelak kedudukan terlalu dekat dengan kabel bawah tanah dan longkang - a buried-utility clearance exposure, not an aesthetic choice.",
+      "rows": [
+        "T02B01-ROW-036"
+      ],
+      "why": "BURIED_UTILITY_CLEARANCE"
+    },
+    {
+      "statement": "Beberapa spesies dinyatakan tumbuh agresif (Wedelia/Sphagneticola trilobata; Duit-duit/Epipremnum) dengan amaran jangan tanam yang agresif pada struktur kecil - an invasive-growth caution carried by the source itself.",
+      "rows": [
+        "T02B01-ROW-092",
+        "T02B01-ROW-119"
+      ],
+      "why": "INVASIVE_GROWTH_CAUTION"
+    }
+  ],
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah maksud landskap kejur (hardscape)?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Semua elemen bukan hidup yang kekal dan padu dalam reka bentuk landskap.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B01-ROW-003"
+        ],
+        "distractors": [
+          "Semua elemen hidup dan semula jadi seperti tumbuh-tumbuhan",
+          "Kerja-kerja penyelenggaraan berkala bagi taman",
+          "Sistem mekanikal dan elektrikal dalam landskap"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah ruang pertumbuhan penting semasa menanam pokok landskap?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Supaya akar dan kanopi mempunyai ruang cukup apabila matang, dan untuk mengelak kedudukan terlalu dekat dengan bangunan, kabel bawah tanah atau longkang.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B01-ROW-035",
+          "T02B01-ROW-036"
+        ],
+        "distractors": [
+          "Supaya pokok kelihatan lebih simetri dari jauh",
+          "Supaya kos penyiraman awal dapat dikurangkan",
+          "Supaya pokok boleh dipindahkan dengan mudah kemudian hari"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Kaedah pemasangan rumput manakah yang memberikan hasil segera (instant lawn) tetapi menanggung kos bahan dan buruh yang paling tinggi?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kaedah Tampalan Rapat (Close Turfing).",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B01-ROW-133",
+          "T02B01-ROW-135",
+          "T02B01-ROW-136"
+        ],
+        "distractors": [
+          "Kaedah Tampalan Berjarak (Spot Turfing)",
+          "Semaian Hidro (Hydroseeding)",
+          "Penyemaian biji benih secara manual"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah tanah liat berat digunakan dan bukan potting mix biasa untuk tanaman akuatik?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kerana potting mix yang ringan akan terapung dan mengotorkan air.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B01-ROW-157"
+        ],
+        "distractors": [
+          "Kerana tanah liat lebih murah daripada potting mix",
+          "Kerana potting mix membunuh ikan dalam kolam",
+          "Kerana tanah liat mempercepatkan pertumbuhan bunga"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA fungsi tanaman akuatik dalam landskap air.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Menapis air dengan menyerap nutrien berlebihan dan mengawal alga",
+          "Melepaskan oksigen melalui fotosintesis untuk hidupan akuatik",
+          "Menyediakan perlindungan, pembiakan dan makanan untuk ikan dan serangga",
+          "Meneduhkan permukaan air untuk mengurangkan suhu dan pertumbuhan alga"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B01-ROW-149",
+          "T02B01-ROW-150",
+          "T02B01-ROW-151",
+          "T02B01-ROW-152"
+        ],
+        "distractors": [
+          "Menggantikan keperluan sistem penapisan mekanikal sepenuhnya",
+          "Menyingkirkan keperluan penyelenggaraan berkala kolam"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": [
+    {
+      "subject": "Empat kategori elemen landskap kejur dengan contoh setiap satu: Kemudahan Rekreasi, Sirkulasi & Kawasan Berturap, Struktur Landskap, Perabot Landskap.",
+      "rows": [
+        "T02B01-ROW-004",
+        "T02B01-ROW-007",
+        "T02B01-ROW-010",
+        "T02B01-ROW-013"
+      ],
+      "has_source_figure": false,
+      "source_tables": [
+        "T02B01-TBL-01",
+        "T02B01-TBL-02",
+        "T02B01-TBL-03",
+        "T02B01-TBL-04"
+      ],
+      "note": "Backed by four source tables of KOMPONEN/CONTOH, not by any raster figure; RP-104 allows a table as a source-attested basis."
+    },
+    {
+      "subject": "Lapisan tumbuhan landskap lembut dari struktur ke permukaan: pokok/palma (tulang belakang), tanaman renek dan penutup bumi (pengisi), tumbuhan memanjat/akuatik/semusim (pelengkap).",
+      "rows": [
+        "T02B01-ROW-021",
+        "T02B01-ROW-058",
+        "T02B01-ROW-079"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Perbandingan tiga kaedah turfing (Tampalan Rapat, Tampalan Berjarak, Semaian Hidro) mengikut kos, kelajuan dan konteks tapak.",
+      "rows": [
+        "T02B01-ROW-133",
+        "T02B01-ROW-137",
+        "T02B01-ROW-141"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Keratan bakul penanaman akuatik: bakul berlubang berlapik kain guni, media tanah liat berat, dan lapisan kerikil penutup.",
+      "rows": [
+        "T02B01-ROW-155",
+        "T02B01-ROW-157"
+      ],
+      "has_source_figure": false
+    }
+  ],
+  "rumusan_beats": [
+    "Dua keluarga elemen landskap: kejur (bukan hidup) dan lembut/penanaman (hidup).",
+    "Empat kategori landskap kejur dan peranan fungsian serta estetik setiap satu.",
+    "Hierarki tumbuhan landskap lembut: pokok dan palma sebagai tulang belakang, renek dan penutup bumi sebagai pengisi, memanjat/akuatik/semusim sebagai pelengkap.",
+    "Titik perhatian kontraktor yang berulang: ruang pertumbuhan, keperluan cahaya, jarak tanaman dan penyelenggaraan.",
+    "Kaedah pemasangan rumput dan pertimbangan kos-masa antara Tampalan Rapat, Tampalan Berjarak dan Semaian Hidro."
+  ],
+  "pattern": {
+    "primary": "click-to-reveal",
+    "secondary": "comparison",
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "reason": "Many parallel categories share one internal shape - definition, then Fungsi, then Kategori/Contoh, then contractor focus points - which is what click-to-reveal fits. Comparison is the alternative for the four hardscape component tables and the three turfing methods, which read better side by side.",
+    "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+    ]
+  },
+  "dialogue": {
+    "verdict": "NOT_JUSTIFIED",
+    "cls": "CAIR_PROPOSAL",
+    "reason": "A taxonomy and catalogue unit: definitions, categories, and repeated contractor focus points across twelve element families. There is no decision, conflict or judgement call in the source for a scenario to be about. AR-06 permits a dialogue only where justified, and nothing here justifies one.",
+    "note": "SUP-03: retained as evidence, not a gate. E1 makes S02 a dialogue regardless of this verdict."
+  },
+  "ambiguities": [
+    {
+      "item": "The subtopic 2.1 heading is written 'Sirkulasi & Kawan Berturap' in the source - 'Kawan' is a typo for 'Kawasan' (cf. T03-B01's 'Kawasan Berturap').",
+      "rows": [
+        "T02B01-ROW-007"
+      ],
+      "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+    },
+    {
+      "item": "The eight softscape category headers (Pokok, Palma, Tanaman Renek, Penutup Bumi, Tumbuhan Memanjat, Rumput, Tanaman Akuatik, Tanaman Semusim) are styled inconsistently - some as HEADING_3, several as PARAGRAPH - so a style-derived heading count does not capture all eight, and the category grouping is a reading rather than a structural fact.",
+      "rows": [
+        "T02B01-ROW-022",
+        "T02B01-ROW-041",
+        "T02B01-ROW-060",
+        "T02B01-ROW-160"
+      ],
+      "resolution": "PENDING_UNIT_EXCEPTION_REVIEW"
+    },
+    {
+      "item": "The markers 'Fungsi Utama ... dalam Landskap:', 'Contoh Popular di Malaysia:' and 'Berikut ialah perkara penting yang perlu diberi perhatian oleh kontraktor' repeat once per plant family and are variously styled LIST_ITEM or PARAGRAPH, so a naive equality match over-counts or under-counts the families.",
+      "rows": [
+        "T02B01-ROW-024",
+        "T02B01-ROW-043",
+        "T02B01-ROW-062",
+        "T02B01-ROW-072",
+        "T02B01-ROW-093"
+      ],
+      "resolution": "heading_path and sequence disambiguate; family grouping is a CAIR reading"
+    }
+  ],
+  "contract_coverage": {
+    "mandatory_propositions": {
+      "count": 10,
+      "floor": 8,
+      "meets": true
+    },
+    "terminology": {
+      "count": 12,
+      "floor": 6,
+      "meets": true
+    },
+    "compliance_sensitive": {
+      "count": 3,
+      "floor": 2,
+      "meets": true
+    },
+    "assessment": {
+      "count": 5,
+      "floor": 5,
+      "meets": true
+    },
+    "visual_subjects": {
+      "count": 4,
+      "floor": 3,
+      "meets": true
+    },
+    "rumusan_beats": {
+      "count": 5,
+      "floor": 3,
+      "meets": true
+    },
+    "ambiguities": {
+      "count": 3,
+      "floor": 2,
+      "meets": true
+    },
+    "dialogue": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    },
+    "pattern": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    }
+  },
+  "all_contract_floors_met": true
+}

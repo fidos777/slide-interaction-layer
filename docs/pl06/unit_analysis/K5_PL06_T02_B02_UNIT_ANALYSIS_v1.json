@@ -1,0 +1,441 @@
+{
+  "artifact": "PL06_UNIT_SOURCE_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1_SOURCE_ANALYSIS",
+  "stage": "4.2F-C",
+  "unit_id": "K5-PL06-T02-B02",
+  "lesson_title": "Kerja-Kerja Berkaitan dengan Mekanikal & Elektrikal (M&E)",
+  "topik": 2,
+  "bahagian": 2,
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T02_B02_SOURCE_EXTRACT_v1.json",
+  "controlled_rows_in_unit": 90,
+  "controlled_rows_read": 90,
+  "every_cited_row_exists_in_extract": true,
+  "cited_row_count": 31,
+  "authorship": "HAND_AUTHORED_CAIR_FROM_CONTROLLED_ROWS",
+  "classification_vocabulary": [
+    "SOURCE_DERIVED",
+    "CAIR_PROPOSAL",
+    "COURSE_RULE_ALREADY_APPROVED",
+    "PENDING_BARIAH_PATTERN_DECISION",
+    "PENDING_UNIT_EXCEPTION_REVIEW"
+  ],
+  "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+  "span_note": "M&E and infrastructure components. 2.3 M&E covers Pencahayaan, Pengairan, Kolam/Fountain; the infrastructure block covers Landform, Swale/dry river bed, Sub-soil drainage, Retaining Wall, Fencing, Gateway, Signage. Module pages 215-225. Four raster figures (Rajah 17-20) and ten CONTOH/PENERANGAN tables.",
+  "analysis_contract": {
+    "reference": "docs/pl06/packets/PL06_ANALYSIS_GAP_MATRIX_v0_1.md",
+    "note": "Fields and floors are the live analysis contract from the gap matrix. Every traced item cites the controlled row(s) that carry it. No PPTX, no generation, no answer-key approval, no authority invented."
+  },
+  "isolation_note": "Isolated per-unit record. Not added to the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py, which was left unedited by instruction. Field names mirror a UNIT_ANALYSIS entry so the record can project into the generator later without rewrite.",
+  "assessment_key_status": "DRAFTED_NOT_APPROVED",
+  "assessment_key_authority": "NONE — stems and distractors are CAIR proposals; only the correct response is SOURCE_DERIVED and cites its rows",
+  "mandatory_propositions": [
+    {
+      "proposition": "Kerja M&E dalam landskap melibatkan sistem yang memerlukan tenaga elektrik atau mekanikal, dan perancangan serta pelaksanaannya mesti cekap dan selamat.",
+      "rows": [
+        "T02B02-ROW-002"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Pencahayaan luaran mesti mengambil kira keselamatan elektrik: kalis air (IP rating) dan perlindungan litar pintas.",
+      "rows": [
+        "T02B02-ROW-004"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Sistem titisan (drip irrigation) menghantar air terus ke zon akar tumbuhan untuk mengurangkan penyejatan dan pembaziran air.",
+      "rows": [
+        "T02B02-ROW-012"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Ciri air (kolam/air pancut) beroperasi pada sistem peredaran air tertutup dan disokong oleh pam, penapis, tangki simpanan air, serta saluran masuk dan keluar air.",
+      "rows": [
+        "T02B02-ROW-019",
+        "T02B02-ROW-027",
+        "T02B02-ROW-028",
+        "T02B02-ROW-029",
+        "T02B02-ROW-030"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Pembentukan landform (earthmound) mempengaruhi saliran dan melibatkan pengiraan isipadu tanah, teknik pemadatan, dan penggredan yang betul.",
+      "rows": [
+        "T02B02-ROW-034"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Saliran bawah tanah (sub-soil drainage) memasang paip berlubang dibalut geotekstil dan ditimbun kerikil untuk mengumpul dan mengalirkan air bawah tanah berlebihan, terutamanya di tanah liat atau kawasan paras air tanah tinggi.",
+      "rows": [
+        "T02B02-ROW-051"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Tembok penahan (retaining wall) memerlukan asas yang betul dan sistem saliran di belakang tembok sebagai aspek penting pembinaan.",
+      "rows": [
+        "T02B02-ROW-058"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Swale ialah saliran cetek bertanam rumput/tumbuhan tahan air, dan dry river bed ialah aliran batu/kerikil; kedua-duanya menguruskan air hujan dan mengawal hakisan.",
+      "rows": [
+        "T02B02-ROW-043"
+      ],
+      "cls": "SOURCE_DERIVED"
+    }
+  ],
+  "terminology": [
+    {
+      "term": "Mekanikal & Elektrikal (M&E)",
+      "rows": [
+        "T02B02-ROW-001"
+      ]
+    },
+    {
+      "term": "IP rating (kalis air)",
+      "rows": [
+        "T02B02-ROW-004"
+      ]
+    },
+    {
+      "term": "Lampu Sorot / Path Lights / Underwater Lights (TBL-01)",
+      "rows": [
+        "T02B02-ROW-010"
+      ]
+    },
+    {
+      "term": "Sistem Semburan (Sprinkler) / Sistem Titisan (Drip Irrigation) (TBL-02)",
+      "rows": [
+        "T02B02-ROW-017"
+      ]
+    },
+    {
+      "term": "Sistem peredaran air tertutup (closed-loop water circulation)",
+      "rows": [
+        "T02B02-ROW-019",
+        "T02B02-ROW-026"
+      ]
+    },
+    {
+      "term": "Landform (Earthmound)",
+      "rows": [
+        "T02B02-ROW-033"
+      ]
+    },
+    {
+      "term": "Swale / Dry River Bed",
+      "rows": [
+        "T02B02-ROW-042"
+      ]
+    },
+    {
+      "term": "Sub-soil drainage / perforated pipes / geotekstil",
+      "rows": [
+        "T02B02-ROW-050",
+        "T02B02-ROW-051"
+      ]
+    },
+    {
+      "term": "Retaining Wall / Tembok Penahan",
+      "rows": [
+        "T02B02-ROW-057"
+      ]
+    },
+    {
+      "term": "Pintu Gerbang (Gateway/Arch Entrance)",
+      "rows": [
+        "T02B02-ROW-075"
+      ]
+    }
+  ],
+  "compliance_sensitive": [
+    {
+      "statement": "Pencahayaan luaran mesti kalis air (IP rating) dan mempunyai perlindungan litar pintas - an electrical-safety boundary for outdoor and underwater fittings.",
+      "rows": [
+        "T02B02-ROW-004"
+      ],
+      "why": "ELECTRICAL_SAFETY_STANDARD"
+    },
+    {
+      "statement": "Tembok penahan mesti mempunyai sistem saliran di belakang tembok - a hydrostatic/structural requirement, not a finish preference.",
+      "rows": [
+        "T02B02-ROW-058"
+      ],
+      "why": "STRUCTURAL_DRAINAGE_REQUIREMENT"
+    },
+    {
+      "statement": "Saliran bawah tanah menetapkan paip berlubang dibalut geotekstil dan ditimbun kerikil - a named material and installation specification.",
+      "rows": [
+        "T02B02-ROW-051"
+      ],
+      "why": "MATERIAL_SPECIFICATION"
+    }
+  ],
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah dua aspek keselamatan elektrik yang ditekankan bagi pencahayaan landskap luaran?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kalis air (IP rating) dan perlindungan litar pintas.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B02-ROW-004"
+        ],
+        "distractors": [
+          "Warna cahaya dan kecerahan lumen",
+          "Ketinggian tiang dan jarak antara lampu",
+          "Jenis mentol dan jenama pengeluar"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah sistem titisan (drip irrigation) sesuai untuk katil bunga dan pokok renek?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Kerana ia menghantar air terus ke zon akar tumbuhan dan mengurangkan penyejatan.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B02-ROW-012"
+        ],
+        "distractors": [
+          "Kerana ia menyembur air ke seluruh kawasan rumput yang luas",
+          "Kerana ia tidak memerlukan sebarang pam atau pemasa",
+          "Kerana ia hanya beroperasi pada waktu hujan"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah ciri utama sistem air bagi kolam hiasan dan air pancut?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Sistem peredaran air tertutup yang disokong oleh pam dan sistem penapisan.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B02-ROW-019",
+          "T02B02-ROW-027",
+          "T02B02-ROW-028"
+        ],
+        "distractors": [
+          "Bekalan air baharu berterusan dari sumber bandar",
+          "Air dilepaskan ke longkang selepas setiap kitaran",
+          "Kolam diisi manual setiap hari tanpa peredaran"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah sistem saliran di belakang tembok penahan (retaining wall) penting?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Untuk menguruskan air dan mengelakkan hakisan atau runtuhan di belakang tembok.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B02-ROW-058",
+          "T02B02-ROW-063"
+        ],
+        "distractors": [
+          "Untuk menambah nilai estetik permukaan hadapan tembok",
+          "Untuk mengurangkan kos konkrit badan tembok",
+          "Untuk menggantikan keperluan tapak asas tembok"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA komponen sistem sokongan bagi ciri air (kolam/air pancut).",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Pam air",
+          "Penapis",
+          "Tangki simpanan air",
+          "Saluran masuk dan keluar air"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T02B02-ROW-027",
+          "T02B02-ROW-028",
+          "T02B02-ROW-029",
+          "T02B02-ROW-030"
+        ],
+        "distractors": [
+          "Paip berlubang dibalut geotekstil",
+          "Silt fence di sempadan tapak"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": [
+    {
+      "subject": "Rajah 17: Contoh Landform dalam Landskap.",
+      "rows": [
+        "T02B02-ROW-035"
+      ],
+      "has_source_figure": true,
+      "asset_ids": [
+        "T02B02-IMG-01"
+      ],
+      "note": "Source-attested raster; caption row 035 precedes the figure content."
+    },
+    {
+      "subject": "Rajah 18: Contoh Tembok Penahanan Hiasan (retaining wall).",
+      "rows": [
+        "T02B02-ROW-059",
+        "T02B02-ROW-060"
+      ],
+      "has_source_figure": true,
+      "asset_ids": [
+        "T02B02-IMG-02"
+      ],
+      "note": "Figure row 059 carries empty text; caption is the following row 060."
+    },
+    {
+      "subject": "Rajah 19: Contoh Pagar Kayu (fencing).",
+      "rows": [
+        "T02B02-ROW-068",
+        "T02B02-ROW-069"
+      ],
+      "has_source_figure": true,
+      "asset_ids": [
+        "T02B02-IMG-03"
+      ]
+    },
+    {
+      "subject": "Rajah 20: Contoh Pintu Gerbang (gateway/arch entrance).",
+      "rows": [
+        "T02B02-ROW-077",
+        "T02B02-ROW-078"
+      ],
+      "has_source_figure": true,
+      "asset_ids": [
+        "T02B02-IMG-04"
+      ]
+    },
+    {
+      "subject": "Rajah sistem peredaran air tertutup kolam: punca/pam, penapis, tangki simpanan, saluran masuk dan keluar.",
+      "rows": [
+        "T02B02-ROW-027",
+        "T02B02-ROW-028",
+        "T02B02-ROW-029",
+        "T02B02-ROW-030"
+      ],
+      "has_source_figure": false,
+      "note": "Composed from prose list, no source figure for this diagram."
+    }
+  ],
+  "rumusan_beats": [
+    "Dua kelompok kerja: M&E (pencahayaan, pengairan, kolam) dan infrastruktur (landform, swale, saliran, tembok penahan, pagar, pintu gerbang, papan tanda).",
+    "Keselamatan elektrik pencahayaan luar: kalis air (IP rating) dan perlindungan litar.",
+    "Kecekapan air: sistem titisan ke zon akar dan sistem peredaran tertutup kolam.",
+    "Prinsip saliran yang berulang: penggredan landform, saliran bawah tanah, dan saliran di belakang tembok penahan."
+  ],
+  "pattern": {
+    "primary": "click-to-reveal",
+    "secondary": "comparison",
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "reason": "About ten parallel components each share one shape - definition, Fungsi, then an example table - which click-to-reveal fits. The closed-loop water-circulation support system (pump, filter, tank, inlet/outlet) is a small sequence embedded inside one component, not the unit's spine; comparison carries the CONTOH/PENERANGAN tables.",
+    "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+    ]
+  },
+  "dialogue": {
+    "verdict": "NOT_JUSTIFIED",
+    "cls": "CAIR_PROPOSAL",
+    "reason": "A component and system catalogue: each M&E and infrastructure element carries a definition, a Fungsi list, and a CONTOH/PENERANGAN table. There is no stakeholder decision or conflict in the source for a scenario to be about. AR-06 permits a dialogue only where justified.",
+    "note": "SUP-03: retained as evidence, not a gate. E1 makes S02 a dialogue regardless of this verdict."
+  },
+  "ambiguities": [
+    {
+      "item": "SOURCE DEFECT - table T02B02-TBL-04 (Landform/Earthmound) contains two rows ('Pembentukan Cerun' and a 'Kolam refleksi (reflection pond)' row) whose PENERANGAN text is copy-pasted verbatim from TBL-03 (Kolam/Fountain) and does not describe landform at all.",
+      "rows": [
+        "T02B02-ROW-041"
+      ],
+      "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+    },
+    {
+      "item": "SOURCE DEFECT - table T02B02-TBL-06 (Sub-soil drainage) has both PENERANGAN cells copy-pasted from TBL-05 (Swale/Dry river bed); they describe surface swale/dry-river-bed drainage, not sub-soil perforated-pipe drainage.",
+      "rows": [
+        "T02B02-ROW-056"
+      ],
+      "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+    },
+    {
+      "item": "Figure captions sit in a separate PARAGRAPH row adjacent to the IMAGE row (e.g. IMG-02 row 059 empty, caption row 060; IMG-01 caption row 035), so figure-to-caption pairing is by adjacency, not a structural relationship.",
+      "rows": [
+        "T02B02-ROW-035",
+        "T02B02-ROW-059",
+        "T02B02-ROW-060",
+        "T02B02-ROW-069",
+        "T02B02-ROW-078"
+      ],
+      "resolution": "adjacency pairing recorded; nearest_heading in assets confirms each figure"
+    }
+  ],
+  "contract_coverage": {
+    "mandatory_propositions": {
+      "count": 8,
+      "floor": 8,
+      "meets": true
+    },
+    "terminology": {
+      "count": 10,
+      "floor": 6,
+      "meets": true
+    },
+    "compliance_sensitive": {
+      "count": 3,
+      "floor": 2,
+      "meets": true
+    },
+    "assessment": {
+      "count": 5,
+      "floor": 5,
+      "meets": true
+    },
+    "visual_subjects": {
+      "count": 5,
+      "floor": 3,
+      "meets": true
+    },
+    "rumusan_beats": {
+      "count": 4,
+      "floor": 3,
+      "meets": true
+    },
+    "ambiguities": {
+      "count": 3,
+      "floor": 2,
+      "meets": true
+    },
+    "dialogue": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    },
+    "pattern": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    }
+  },
+  "all_contract_floors_met": true
+}
