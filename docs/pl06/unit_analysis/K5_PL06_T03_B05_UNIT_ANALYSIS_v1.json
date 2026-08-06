@@ -1,7 +1,7 @@
 {
   "artifact": "PL06_UNIT_SOURCE_ANALYSIS",
   "artifact_version": "v1",
-  "lane": "S1_SOURCE_ANALYSIS",
+  "lane": "S3_SOURCE_ANALYSIS",
   "stage": "4.2F-C",
   "unit_id": "K5-PL06-T03-B05",
   "lesson_title": "Pencahayaan dan Pengairan",
@@ -18,10 +18,8 @@
     "SOURCE_DERIVED",
     "CAIR_PROPOSAL",
     "COURSE_RULE_ALREADY_APPROVED",
-    "PENDING_BARIAH_PATTERN_DECISION",
     "PENDING_UNIT_EXCEPTION_REVIEW"
   ],
-  "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
   "analysis_contract": {
     "reference": "docs/pl06/packets/PL06_ANALYSIS_GAP_MATRIX_v0_1.md",
     "note": "Fields and floors are the live analysis contract from the gap matrix. Every traced item cites the controlled row(s) that carry it. No PPTX, no generation, no answer-key approval, no authority invented."
@@ -371,15 +369,8 @@
   "pattern": {
     "primary": "click-to-reveal",
     "secondary": "comparison",
-    "cls": "PENDING_BARIAH_PATTERN_DECISION",
     "reason": "A large parallel catalogue: seven light fixtures, each written to the same internal shape — a definition, 'Fungsi Utama', then 'Aspek Pemasangan & Pengurusan Kritikal untuk Kontraktor'. That repetition is the shape click-to-reveal fits. Comparison is the strong secondary — flood vs spot beam angles, manual vs automatic irrigation, and the emitter types are contrasts. A progressive-process reading also exists locally for the commissioning sequence (flushing -> pressure test -> adjustment -> programming -> handover), but it governs one sub-block, not the unit.",
-    "vocabulary": [
-      "static content",
-      "click-to-reveal",
-      "progressive process",
-      "comparison",
-      "scenario/dialogue only where justified"
-    ]
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE"
   },
   "dialogue": {
     "verdict": "NOT_JUSTIFIED",
@@ -456,17 +447,10 @@
       "count": 4,
       "floor": 2,
       "meets": true
-    },
-    "dialogue": {
-      "count": 1,
-      "floor": 1,
-      "meets": true
-    },
-    "pattern": {
-      "count": 1,
-      "floor": 1,
-      "meets": true
     }
   },
-  "all_contract_floors_met": true
+  "all_contract_floors_met": true,
+  "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+  "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+  "does_not_override_live_instructional_authority": true
 }
