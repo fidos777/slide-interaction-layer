@@ -2,7 +2,19 @@
 
 > **INTERNAL_GENERATION_DRAFT** — machine-authored engineering record. Not reviewed, not
 > Bariah-approved. **No state is invented in this document.** Where the runtime state set is
-> undetermined, it is recorded as undetermined, not filled in.
+> not computable with the current shared capability, it is recorded as such, not filled in.
+
+> ⚠️ **SUPERSEDE / RECONCILE banner — status: `INTERNAL_GENERATION_DRAFT` ·
+> `NOT_BARIAH_REVIEW_READY` · `NOT_INSTRUCTIONALLY_APPROVED`.** The body below has been
+> **rewritten** to the accurate distinction — `AUTHORITY_STATUS: CONFIRMED` /
+> `IMPLEMENTATION_STATUS: NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY`. The core claim — no
+> states invented — still holds. The original checkpoint wording (which implied a pending
+> Bariah/pattern decision and an unfrozen set) remains auditable in parent commit `9c05cf2`;
+> it is no longer active here. Two corrections were applied:
+> (1) §4's "no STEP grammar exists" is wrong — a STEP grammar exists but is B03-bound, and the
+> shared resolver forces all four T05-B01 groups to click-to-reveal (OBSERVED).
+> (2) **Authority decisions are NOT pending**; the F3 treatment rules are already
+> authority-named. Full corrected report: `PL06_PILOT_DEFECT_REPORT_v2.md`.
 
 ## 0. Purpose
 
@@ -22,31 +34,44 @@ screen contributes one BASE state:
 | 1 | S01 Topik entry | shell | 1 BASE |
 | 2 | S02 Dialog | shell | 1 BASE |
 | 3 | S0x Orientasi | shell | 1 BASE |
-| 4 | G1: Project Quality Plan (PQP) | content | 1 BASE + **N₁ triggered (UNKNOWN)** |
-| 5 | G2: Jaminan Kualiti (QA) | content | 1 BASE + **N₂ triggered (UNKNOWN)** |
-| 6 | G3: Inspection and Testing for Quality Control | content | 1 BASE + **N₃ triggered (UNKNOWN)** |
-| 7 | G4: Penyata Kaedah Kerja (Method Statement) | content | 1 BASE + **N₄ triggered (UNKNOWN)** |
-| 8 | Rumusan | closing | 1 BASE (+ visual state UNKNOWN) |
+| 4 | G1: Project Quality Plan (PQP) | content | 1 BASE + **N₁ triggered (NOT_COMPUTABLE)** |
+| 5 | G2: Jaminan Kualiti (QA) | content | 1 BASE + **N₂ triggered (NOT_COMPUTABLE)** |
+| 6 | G3: Inspection and Testing for Quality Control | content | 1 BASE + **N₃ triggered (NOT_COMPUTABLE)** |
+| 7 | G4: Penyata Kaedah Kerja (Method Statement) | content | 1 BASE + **N₄ triggered (NOT_COMPUTABLE)** |
+| 8 | Rumusan | closing | 1 BASE (+ visual state NOT_COMPUTABLE) |
 | 9 | Kuiz | assessment | 5 QUIZ_ITEM + 1 QUIZ_RESULT (key drafted, approved by nobody) |
 | 10 | Tamat | closing | 1 BASE |
 
 - **base_states_floor = 10** — one per learner screen. This is a *floor*, established.
 - The four content groups G1–G4 are the interaction surface; the Lampiran panels live here.
 
-## 2. What is undetermined (the gap — recorded, not filled)
+## 2. What the current shared capability cannot compute (recorded, not invented)
 
-| quantity | value in committed model | field |
+```
+AUTHORITY_STATUS:       CONFIRMED
+IMPLEMENTATION_STATUS:  NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY
+BLOCKERS:
+  - unit-parameterised generator unavailable
+  - unit-specific source binding unavailable
+  - shared resolve_for_group implementation incomplete
+  - per-unit state-inventory extraction unavailable
+  - required source binary unavailable
+```
+
+| quantity | operative status | field |
 |---|---|---|
-| triggered states per content screen (N₁…N₄) | `UNKNOWN_PENDING_PATTERN_DECISION` | `runtime_state_estimate.triggered_states` |
-| total runtime states | `UNKNOWN_PENDING_PATTERN_DECISION` | `runtime_state_estimate.total_runtime_states` |
-| maximum total screens | `UNKNOWN_PENDING_PATTERN_DECISION` | `screen_sequence.arithmetic.maximum_total_screens` |
-| primary pattern family | `PENDING_BARIAH_PATTERN_DECISION` — candidate "progressive process" | `pattern_family.cls` |
-| Rumusan visual → runtime state? | "depends on the pattern" | `state_model_implications` (k5_policy_apply) |
+| triggered states per content screen (N₁…N₄) | `NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY` | `runtime_state_estimate.triggered_states` |
+| total runtime states | `NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY` | `runtime_state_estimate.total_runtime_states` |
+| maximum total screens | `NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY` | `screen_sequence.arithmetic.maximum_total_screens` |
+| primary treatment (per unit) | `NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY` — candidate "progressive process"; F3 rule present, per-unit classifier not built | `pattern_family.cls` |
+| Rumusan visual → runtime state? | `NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY` — per-unit classification not built | `state_model_implications` (k5_policy_apply) |
 
-The triggered-state count is **not derivable from the source alone**. Per the committed model
-(`runtime_state_estimate.method`): *"base states = learner screens; triggered states depend on
-the pattern family, which is undecided."* The deciding authority document
-—`K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx`— *"is still with Bariah."*
+The triggered-state count is fixed by the authority-named F3 rules applied to the controlled
+source; **authority decisions are CONFIRMED — none pending.** It is not produced because the
+shared code cannot classify or extract it per unit. The parent implementation emits a stale
+`"UNKNOWN_STILL_NOT_FROZEN"` token for these quantities; that token is a defect artefact of the
+parent code, **not** the document status. The normative status is
+`NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY`.
 
 ## 3. Why the base states cannot simply be carried as the Lampiran set
 
@@ -54,38 +79,41 @@ The Lampiran Keadaan carries **every state on a screen with more than one state*
 (`k5_calib_model_v1.py :: _panel_states_uncached`). A screen with only its BASE state
 contributes **no** Lampiran panel. Therefore the Lampiran set is composed *entirely* of the
 triggered states on G1–G4 (plus quiz items) — precisely the quantities that are
-`UNKNOWN_PENDING_PATTERN_DECISION`. The known floor (10 BASE states) contributes almost
-nothing to the Lampiran; the unknown part *is* the Lampiran.
+`NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY`. The known floor (10 BASE states) contributes
+almost nothing to the Lampiran; the not-computed part *is* the Lampiran.
 
-## 4. Why the triggered states cannot be generated by the shared grammar
+## 4. Why the triggered states are not computed by the shared grammar
 
-T05-B01's committed primary pattern is **"progressive process"** — the source states two
-genuine sequences (the NCR workflow and the ITP inspection stages;
-`pattern_family.reason`). The shared state builder implements only:
+T05-B01's committed primary treatment candidate is **"progressive process"** — the source
+states two genuine sequences (the NCR workflow and the ITP inspection stages;
+`pattern_family.reason`). A STEP state kind **exists** in the shared builder:
 
 ```
-STATE_KINDS = ["BASE", "REVEAL", "QUIZ_ITEM", "QUIZ_RESULT", "COMPLETION"]
+STATE_KINDS = ["BASE", "REVEAL", "STEP", "QUIZ_ITEM", "QUIZ_RESULT", "COMPLETION"]
 ```
 
-(`k5_calib_model_v1.py :: _states_uncached`, content states built purely from `sc["reveals"]`
-— i.e. click-to-reveal). There is **no progressive-process / sequential-step state kind**.
-Generating T05-B01's Lampiran therefore forces a choice between two forbidden moves:
+(`k5_calib_model_v1.py:568`) — but its content is **B03-bound**: the only step sequence is
+`subsoil_sequence()` over `SUBSOIL_STEP_ROWS` (B03 rows), and STEP is reached only through a
+B03-only F4 override. For T05-B01, `overrides("K5-PL06-T05-B01") = {}` and the lane hardcodes
+the F3 case to `LAYERED`, so all four groups resolve to click-to-reveal (OBSERVED). Producing
+the Lampiran from this would force a choice between two forbidden moves:
 
-1. **Force the content into REVEAL states** — misrepresents a source sequence as independent
-   click-to-reveal panels (a fabrication of interaction semantics), or
-2. **Author a new progressive-process state grammar** — inventing states the source and
-   policy have not fixed.
+1. **Force the content into click-to-reveal states** — misrepresents a source sequence as
+   independent panels (a fabrication of interaction semantics), or
+2. **Hand-author STEP states from B03's rows or invented rows** — inventing states.
 
-Both violate the standing instruction "Do not invent states." The reconciliation therefore
-terminates here with the triggered-state set **recorded as undetermined**.
+Both violate the standing instruction "Do not invent states." The set is therefore
+`NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY` until the per-unit F3 classifier and per-unit
+sequence extraction exist (Lane G).
 
 ## 5. Reconciliation result
 
 ```
 KNOWN_FLOOR              = 10 BASE states (source-derived)
 QUIZ_STATES              = 5 QUIZ_ITEM + 1 QUIZ_RESULT (key drafted, unapproved)
-LAMPIRAN_PANEL_STATES    = UNDETERMINED  (= triggered states on G1–G4, pattern-gated)
-TOTAL_RUNTIME_STATES     = UNDETERMINED  (UNKNOWN_PENDING_PATTERN_DECISION)
+LAMPIRAN_PANEL_STATES    = NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY  (triggered states on G1–G4)
+TOTAL_RUNTIME_STATES     = NOT_COMPUTABLE_WITH_CURRENT_SHARED_CAPABILITY
+AUTHORITY_STATUS         = CONFIRMED (no authority decision pending)
 RECONCILIATION_STATUS    = HALTED_AT_LAMPIRAN_STATE_INVENTORY — no states invented
 ```
 
