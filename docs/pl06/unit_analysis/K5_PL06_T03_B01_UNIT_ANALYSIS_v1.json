@@ -1,0 +1,561 @@
+{
+  "artifact": "K5_PL06_UNIT_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S2",
+  "lane_note": "Source-analysis-only lane. No PPTX, no generation, no authority invention. Isolated per-unit record; not merged into the shared UNIT_ANALYSIS dictionary or its loaders.",
+  "unit_id": "K5-PL06-T03-B01",
+  "lesson_title": "Kawasan Berturap dan Gelanggang Sukan & Permainan",
+  "topik": 3,
+  "bahagian": 1,
+  "stage": "4.2F-C",
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T03_B01_SOURCE_EXTRACT_v1.json",
+  "source_extract_sha256": "05a2e9992099a8129da98e914a330671091dcd1bd46b3a28bc2b129dec896d62",
+  "controlled_rows_total": 121,
+  "row_id_range": [
+    "T03B01-ROW-001",
+    "T03B01-ROW-121"
+  ],
+  "source_totals": {
+    "body_elements_in_span": 172,
+    "empty_spacing_paragraphs": 51,
+    "content_rows": 121,
+    "headings": 51,
+    "paragraphs": 56,
+    "numbered_paragraphs": 53,
+    "list_item_rows": 7,
+    "tables": 4,
+    "diagrams": 0,
+    "raster_images": 3,
+    "assets": 3
+  },
+  "span_note": "Two subtopics: 3.1 Kawasan Berturap/Paved Areas (Trek, Plaza/Court, Parking) and 3.2 Gelanggang Sukan & Permainan (playground equipment, padang, gelanggang, litar permainan, extreme play, outdoor gym). Module pages 226-237. Three raster figures (Rajah 21-22) and four tables. Heavily Heading-3 styled: 51 headings over 121 rows because 'Fokus Utama Kontraktor' sub-labels are styled as headings, so the structural criterion (<=55 chars, no full stop) is applied. Compliance-heaviest of the three units.",
+  "provenance_posture": {
+    "classification_legend": {
+      "SOURCE_DERIVED": "read off the extract, with the row IDs to check it",
+      "CAIR_PROPOSAL": "ours; reject it freely",
+      "COURSE_RULE_ALREADY_APPROVED": "a rule that already applies course-wide",
+      "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER": "an analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane; not an authority application",
+      "PENDING_UNIT_EXCEPTION_REVIEW": "this unit does not fit the general shape (a source-fit deferral, not an authority hold)"
+    },
+    "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+    "does_not_override_live_instructional_authority": true,
+    "live_authority_reference": {
+      "path": "docs/pl06/contracts/k5_instructional_authority_v1.json",
+      "git_blob_sha1": "66ec8eb3c55c96db6245fe7e604930252d80917c",
+      "captured_at_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+      "handling": "REFERENCED_NOT_RESTATED",
+      "note": "The live instructional authority is active at execution time. This lane references it by path+blob and does not copy, apply or override its rules; authority application is the integration lane's job."
+    },
+    "committed_to_shared_unit_analysis": false,
+    "note": "Every claim carries a classification. SOURCE_DERIVED claims cite the rows to check them. Distractors and analyst pattern/dialogue readings are proposals for the shared resolver; no answer key is approved here. This record neither states nor implies any instructional-authority hold."
+  },
+  "analysis_contract": {
+    "floors": {
+      "mandatory_propositions": 8,
+      "terminology": 6,
+      "compliance_sensitive": 2,
+      "assessment": 5,
+      "visual_subjects": 3,
+      "rumusan_beats": 3,
+      "ambiguities": 2,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "counts": {
+      "mandatory_propositions": 9,
+      "terminology": 11,
+      "compliance_sensitive": 6,
+      "assessment": 5,
+      "visual_subjects": 4,
+      "rumusan_beats": 5,
+      "ambiguities": 5,
+      "dialogue": 1,
+      "pattern": 1
+    },
+    "assessment_composition": {
+      "multiple_choice": 4,
+      "multiple_response": 1,
+      "required": "4 MULTIPLE_CHOICE + 1 MULTIPLE_RESPONSE",
+      "composition_cls": "COURSE_RULE_ALREADY_APPROVED"
+    },
+    "authored_to_floor_note": "Where the PL06 gap matrix marks a field short of mechanical evidence (ambiguities; MR assessment), it is authored by judgment from a genuine reading of the controlled rows, each still row-traced."
+  },
+  "source_row_trace": {
+    "every_cited_row_exists": true,
+    "unresolved_row_citations": [],
+    "distinct_cited_rows": [
+      "T03B01-ROW-002",
+      "T03B01-ROW-003",
+      "T03B01-ROW-013",
+      "T03B01-ROW-020",
+      "T03B01-ROW-025",
+      "T03B01-ROW-034",
+      "T03B01-ROW-035",
+      "T03B01-ROW-036",
+      "T03B01-ROW-039",
+      "T03B01-ROW-040",
+      "T03B01-ROW-041",
+      "T03B01-ROW-042",
+      "T03B01-ROW-046",
+      "T03B01-ROW-047",
+      "T03B01-ROW-048",
+      "T03B01-ROW-049",
+      "T03B01-ROW-050",
+      "T03B01-ROW-051",
+      "T03B01-ROW-052",
+      "T03B01-ROW-053",
+      "T03B01-ROW-054",
+      "T03B01-ROW-055",
+      "T03B01-ROW-061",
+      "T03B01-ROW-062",
+      "T03B01-ROW-063",
+      "T03B01-ROW-064",
+      "T03B01-ROW-066",
+      "T03B01-ROW-068",
+      "T03B01-ROW-077",
+      "T03B01-ROW-079",
+      "T03B01-ROW-080",
+      "T03B01-ROW-081",
+      "T03B01-ROW-083",
+      "T03B01-ROW-106",
+      "T03B01-ROW-108",
+      "T03B01-ROW-110",
+      "T03B01-ROW-115",
+      "T03B01-ROW-117"
+    ],
+    "distinct_cited_row_count": 38
+  },
+  "mandatory_propositions": {
+    "cls": "SOURCE_DERIVED",
+    "count": 9,
+    "propositions": [
+      {
+        "proposition": "Semua peralatan permainan dan pemasangannya di Malaysia wajib mematuhi piawaian MS 966: Playground Equipment and Surfacing, dan kontraktor mesti memastikan pembekal mengemukakan sijil pematuhan produk.",
+        "rows": [
+          "T03B01-ROW-047"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Permukaan penyerap hentakan (getah EPDM, pasir, atau serpihan kayu) adalah mandatori di bawah dan sekeliling peralatan permainan, dengan ketebalan bergantung pada 'ketinggian jatuh kritikal' (critical fall height).",
+        "rows": [
+          "T03B01-ROW-053"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Setiap tiang struktur peralatan permainan mesti dipasang dengan tapak konkrit yang kukuh di bawah tanah mengikut spesifikasi pengeluar untuk mengelakkan pergerakan atau ketidakstabilan.",
+        "rows": [
+          "T03B01-ROW-051"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Kawasan di sekeliling setiap peralatan permainan (zon selamat) mesti bebas daripada sebarang halangan untuk mengelakkan perlanggaran semasa bermain.",
+        "rows": [
+          "T03B01-ROW-054",
+          "T03B01-ROW-055"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Sub-gred padang permainan mesti dipadatkan dengan sempurna dan dibentuk dengan kecerunan minimum (biasanya 1-2%), dan dipasang paip saliran berlubang dibalut geotekstil serta ditimbus batu kelikir untuk mengelakkan takungan air.",
+        "rows": [
+          "T03B01-ROW-062",
+          "T03B01-ROW-064"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Asas gelanggang mestilah papak konkrit bertetulang atau lapisan asphalt di atas tapak dipadatkan untuk mengelakkan keretakan; permukaan mesti benar-benar rata dengan kecerunan minimum; dan garisan permainan mesti ditanda tepat mengikut peraturan rasmi sukan.",
+        "rows": [
+          "T03B01-ROW-077",
+          "T03B01-ROW-079",
+          "T03B01-ROW-083"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Semua lukisan struktur bagi komponen permainan lasak/extreme wajib disemak dan diluluskan oleh Jurutera Profesional (Ir.) yang bertauliah, dan komponen mesti melalui pengujian beban serta pemeriksaan keselamatan oleh badan bebas bertauliah sebelum serahan.",
+        "rows": [
+          "T03B01-ROW-106",
+          "T03B01-ROW-110"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Komponen permainan lasak mesti menggunakan bahan berpensijilan kekuatan dan keselamatan - contohnya konkrit GFRC untuk skatepark, panel dan pemegang panjat yang diiktiraf, serta kabel keluli dan abah-abah (harness) yang diuji beban.",
+        "rows": [
+          "T03B01-ROW-108"
+        ],
+        "cls": "SOURCE_DERIVED"
+      },
+      {
+        "proposition": "Peralatan outdoor gym mesti diperbuat daripada keluli tergalvani panas atau keluli tahan karat bersalut epoksi/powder coating, dan dipasang dengan tapak konkrit tertanam untuk kestabilan.",
+        "rows": [
+          "T03B01-ROW-115",
+          "T03B01-ROW-117"
+        ],
+        "cls": "SOURCE_DERIVED"
+      }
+    ]
+  },
+  "terminology": {
+    "cls": "SOURCE_DERIVED",
+    "count": 11,
+    "terms": [
+      {
+        "term": "Kawasan Berturap / Paved Areas",
+        "rows": [
+          "T03B01-ROW-002",
+          "T03B01-ROW-003"
+        ]
+      },
+      {
+        "term": "Sub-base (lapisan asas)",
+        "rows": [
+          "T03B01-ROW-013"
+        ]
+      },
+      {
+        "term": "Plaza/Court (Taichi, Multipurpose, Amphitheatre)",
+        "rows": [
+          "T03B01-ROW-020"
+        ]
+      },
+      {
+        "term": "Permeable paving / Turapan Berliang (Gravel Stabilizer)",
+        "rows": [
+          "T03B01-ROW-034"
+        ]
+      },
+      {
+        "term": "MS 966 - Playground Equipment and Surfacing",
+        "rows": [
+          "T03B01-ROW-047"
+        ]
+      },
+      {
+        "term": "Critical fall height / ketinggian jatuh kritikal",
+        "rows": [
+          "T03B01-ROW-053"
+        ]
+      },
+      {
+        "term": "Safety Surfacing / Permukaan Keselamatan (EPDM)",
+        "rows": [
+          "T03B01-ROW-052",
+          "T03B01-ROW-053"
+        ]
+      },
+      {
+        "term": "Sub-Gred / subsoil perforated pipes",
+        "rows": [
+          "T03B01-ROW-061",
+          "T03B01-ROW-064"
+        ]
+      },
+      {
+        "term": "Lapisan Permukaan Akrilik/Poliuretana (PU)",
+        "rows": [
+          "T03B01-ROW-080"
+        ]
+      },
+      {
+        "term": "GFRC (Glass Fibre Reinforced Concrete)",
+        "rows": [
+          "T03B01-ROW-108"
+        ]
+      },
+      {
+        "term": "Keluli tergalvani panas (hot-dip galvanized)",
+        "rows": [
+          "T03B01-ROW-115"
+        ]
+      }
+    ]
+  },
+  "compliance_sensitive": {
+    "cls": "SOURCE_DERIVED",
+    "count": 6,
+    "statements": [
+      {
+        "statement": "MS 966: Playground Equipment and Surfacing is a named national standard that playground equipment and installation must comply with, plus a supplier compliance-certificate obligation on the contractor.",
+        "rows": [
+          "T03B01-ROW-047"
+        ],
+        "why": "NAMED_EXTERNAL_STANDARD"
+      },
+      {
+        "statement": "Impact-absorbing safety surfacing is mandatory under and around equipment, with thickness governed by the equipment's critical fall height.",
+        "rows": [
+          "T03B01-ROW-053"
+        ],
+        "why": "MANDATORY_SAFETY_REQUIREMENT"
+      },
+      {
+        "statement": "Playground quality/safety carries the highest QA level because negligence in installation can cause serious injury and legal liability.",
+        "rows": [
+          "T03B01-ROW-040"
+        ],
+        "why": "LEGAL_LIABILITY_EXPOSURE"
+      },
+      {
+        "statement": "Structural drawings for extreme-play components must be reviewed and approved by a certified Professional Engineer (Ir.).",
+        "rows": [
+          "T03B01-ROW-106"
+        ],
+        "why": "NAMED_PROFESSIONAL_AUTHORITY"
+      },
+      {
+        "statement": "Extreme-play components must pass load testing and safety inspection by an independent certified body before handover.",
+        "rows": [
+          "T03B01-ROW-110"
+        ],
+        "why": "INDEPENDENT_CERTIFICATION"
+      },
+      {
+        "statement": "Certified strength/safety materials are specified for extreme play: GFRC, recognised climbing panels/holds, and load-tested steel cable and harness.",
+        "rows": [
+          "T03B01-ROW-108"
+        ],
+        "why": "MATERIAL_CERTIFICATION"
+      }
+    ]
+  },
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "key_status": "DRAFTED_NOT_APPROVED",
+    "key_authority": "NONE — drafted by CAIR from source rows, approved by nobody",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Piawaian manakah yang wajib dipatuhi bagi peralatan dan permukaan taman permainan kanak-kanak di Malaysia?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "MS 966: Playground Equipment and Surfacing.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B01-ROW-047"
+        ],
+        "distractors": [
+          "MS 1183: Fire Precautions in the Design of Buildings",
+          "JKR Standard Specification for Building Works",
+          "Piawaian keselamatan SIRIM untuk perabot taman"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah yang menentukan ketebalan permukaan keselamatan (safety surfacing) penyerap hentakan di bawah peralatan permainan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Ketinggian jatuh kritikal (critical fall height) peralatan tersebut.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B01-ROW-053"
+        ],
+        "distractors": [
+          "Saiz keseluruhan taman permainan",
+          "Jumlah bilangan kanak-kanak yang dijangka",
+          "Jenis rumput yang ditanam di sekelilingnya"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Siapakah yang wajib menyemak dan meluluskan lukisan struktur bagi komponen permainan lasak/extreme seperti dinding panjat dan flying fox?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Jurutera Profesional (Ir.) yang bertauliah.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B01-ROW-106"
+        ],
+        "distractors": [
+          "Penyelia tapak kontraktor",
+          "Pihak Berkuasa Tempatan (PBT) sahaja",
+          "Pembekal peralatan permainan"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah kecerunan minimum yang biasa bagi sub-gred padang permainan untuk membantu aliran air permukaan?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "1-2%.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B01-ROW-062"
+        ],
+        "distractors": [
+          "0% (benar-benar rata)",
+          "5-8%",
+          "Sekurang-kurangnya 15%"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA fokus utama kontraktor bagi pemasangan peralatan taman permainan kanak-kanak.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Pematuhan piawaian MS 966 dan sijil pematuhan pembekal",
+          "Bahan tahan cuaca, tidak toksik dan selamat (cth HDPE, keluli tergalvani)",
+          "Tapak asas konkrit kukuh bagi setiap tiang struktur",
+          "Permukaan keselamatan penyerap hentakan mengikut critical fall height",
+          "Zon selamat bebas halangan di sekeliling peralatan"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T03B01-ROW-047",
+          "T03B01-ROW-049",
+          "T03B01-ROW-051",
+          "T03B01-ROW-053",
+          "T03B01-ROW-055"
+        ],
+        "distractors": [
+          "Lapisan cat akrilik/PU anti-gelincir pada permukaan",
+          "Penandaan garisan permainan mengikut peraturan rasmi sukan"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 4,
+    "source_attested": 2,
+    "rule": "RP-104 — a visual direction is read from the source row's own figure or table, never composed from a component name",
+    "rule_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "subjects": [
+      {
+        "subject": "Rajah 21: Contoh Parkir Menggunakan Paver Grib (permeable paving parking).",
+        "rows": [
+          "T03B01-ROW-035",
+          "T03B01-ROW-036"
+        ],
+        "has_source_figure": true,
+        "asset_ids": [
+          "T03B01-IMG-01"
+        ],
+        "note": "Caption row 036 follows figure row 035."
+      },
+      {
+        "subject": "Rajah 22: Contoh Alat Permainan Kanak-Kanak (integrated playground equipment).",
+        "rows": [
+          "T03B01-ROW-040",
+          "T03B01-ROW-041",
+          "T03B01-ROW-042"
+        ],
+        "has_source_figure": true,
+        "asset_ids": [
+          "T03B01-IMG-02",
+          "T03B01-IMG-03"
+        ],
+        "note": "Two adjacent raster rows (040 carries inline liability prose; 041 empty) share one caption at row 042, styled as a HEADING."
+      },
+      {
+        "subject": "Keratan lapisan padang permainan dari bawah ke atas: sub-gred dipadatkan, sistem saliran bawah tanah, lapisan asas pasir/topsoil, penanaman rumput.",
+        "rows": [
+          "T03B01-ROW-062",
+          "T03B01-ROW-064",
+          "T03B01-ROW-066",
+          "T03B01-ROW-068"
+        ],
+        "has_source_figure": false
+      },
+      {
+        "subject": "Susunan lapisan permukaan gelanggang: tapak konkrit bertetulang/asphalt, kerataan permukaan, lapisan akrilik/PU anti-gelincir, penandaan garisan.",
+        "rows": [
+          "T03B01-ROW-077",
+          "T03B01-ROW-079",
+          "T03B01-ROW-081",
+          "T03B01-ROW-083"
+        ],
+        "has_source_figure": false
+      }
+    ],
+    "note": "Candidate SUBJECTS derived from the controlled rows. Only a subject with has_source_figure=true has a source figure behind it."
+  },
+  "rumusan_beats": {
+    "cls": "CAIR_PROPOSAL",
+    "count": 5,
+    "beats": [
+      "Dua kumpulan komponen: kawasan berturap (trek, plaza/court, parkir) dan gelanggang sukan & permainan.",
+      "Prinsip pembinaan berturap yang berulang: penggredan dan sub-base, saliran, dan kerataan permukaan.",
+      "Pematuhan dan keselamatan taman permainan: MS 966, permukaan penyerap hentakan mengikut critical fall height, dan zon selamat bebas halangan.",
+      "Kawalan liabiliti komponen berisiko tinggi: kelulusan Jurutera (Ir.), bahan berpiawaian, dan pengujian beban oleh badan bebas.",
+      "Susunan lapisan padang permainan dan gelanggang dari sub-gred hingga kemasan permukaan."
+    ],
+    "treatment": "RP-007 — this Bahagian only, contractor perspective, no Kepentingan / Isi Utama / Manfaat labels",
+    "treatment_cls": "COURSE_RULE_ALREADY_APPROVED"
+  },
+  "dialogue": {
+    "cls": "CAIR_PROPOSAL",
+    "verdict": "UNCERTAIN",
+    "reason": "Most of the unit is a component catalogue with contractor focus points, which would be NOT_JUSTIFIED. But it carries a real compliance/liability edge the other two lack: the playground row states negligence causes serious injury and legal liability, and extreme play turns on who approves (certified Ir.) and who tests (independent body) before handover. Whether that decision-with-stakes earns one worked dialogue is a source-fit judgement recorded here, not decided in this lane.",
+    "cast": "NO_CHARACTER_PROPOSED",
+    "cast_cls": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE"
+  },
+  "pattern": {
+    "cls": "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER",
+    "primary": "click-to-reveal",
+    "secondary": "progressive process",
+    "reason": "Paved-area types and play/sport components are parallel categories each with Contoh Komponen and Fokus Utama Kontraktor, which click-to-reveal fits. The padang and gelanggang build-ups are genuine layer sequences (sub-gred to saliran to lapisan asas to rumput; tapak to kerataan to lapisan to penandaan) and read as a progressive process.",
+    "note": "An analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane. This lane does not apply or override instructional authority."
+  },
+  "ambiguities": {
+    "cls": "SOURCE_DERIVED",
+    "count": 5,
+    "items": [
+      {
+        "item": "Heavy Heading-3 styling: the 'Fokus Utama Kontraktor' sub-labels (Pematuhan Piawaian, Bahan, Pemasangan Tapak Asas, Permukaan Keselamatan, Penyediaan Sub-Gred, etc.) are whole labels styled as HEADING_3, inflating a style-derived heading count (51 headings over 121 rows). The structural criterion (<=55 chars, no full stop) reclassifies them.",
+        "rows": [
+          "T03B01-ROW-046",
+          "T03B01-ROW-048",
+          "T03B01-ROW-050",
+          "T03B01-ROW-052",
+          "T03B01-ROW-061",
+          "T03B01-ROW-063"
+        ],
+        "resolution": "structural criterion applied; reclassified rows recorded, not silently kept"
+      },
+      {
+        "item": "SOURCE DEFECT - table T03B01-TBL-03 (Plaza/Court) has its PENERANGAN column copy-pasted from TBL-02 (trek surface materials: concrete, brick, stone, asphalt); the descriptions do not describe Plaza, Taichi Court, Multipurpose Court or Amphitheatre.",
+        "rows": [
+          "T03B01-ROW-025"
+        ],
+        "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+      },
+      {
+        "item": "Table T03B01-TBL-04 (Parking) jams the material name and a 'Contoh Aplikasi:' sentence into one CONTOH cell (e.g. 'Asfalt/TarContoh Aplikasi: ...') as an un-segmented run rather than two fields.",
+        "rows": [
+          "T03B01-ROW-034"
+        ],
+        "resolution": "NORMALISATION_PENDING - recorded, not split here"
+      },
+      {
+        "item": "Figure row T03B01-ROW-040 (IMG-02) carries substantive liability prose ('Kecuaian dalam pemasangan boleh mengakibatkan kecederaan serius dan liabiliti undang-undang') as the image row's own text, while the 'Rajah 22' caption is row 042 styled as a HEADING - figure, inline claim, and caption split across three rows.",
+        "rows": [
+          "T03B01-ROW-040",
+          "T03B01-ROW-041",
+          "T03B01-ROW-042"
+        ],
+        "resolution": "inline claim promoted to a compliance-sensitive finding; pairing recorded"
+      },
+      {
+        "item": "Heading typo in the source: row 039 reads 'Alat pemainan kanan-kanak' for 'Alat permainan kanak-kanak'.",
+        "rows": [
+          "T03B01-ROW-039"
+        ],
+        "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+      }
+    ]
+  }
+}

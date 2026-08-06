@@ -1,0 +1,95 @@
+{
+  "artifact": "K5_PL06_ANALYSIS_VALIDATION",
+  "artifact_version": "v1",
+  "lane": "S2",
+  "unit_id": "K5-PL06-T02-B02",
+  "validates": "docs/pl06/unit_analysis/K5_PL06_T02_B02_UNIT_ANALYSIS_v1.json",
+  "validated_record_sha256": "40016066cfd0a1dbe06436d73fa977dddba7c9bb9a4b10c056595a9668121c3c",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T02_B02_SOURCE_EXTRACT_v1.json",
+  "source_extract_sha256": "40b6921c5d9787c55c7760886b9fc2faeaa808d9fc5304272239c3e5e3015736",
+  "controlled_rows_total": 90,
+  "row_id_range": [
+    "T02B02-ROW-001",
+    "T02B02-ROW-090"
+  ],
+  "contract_floors_TARGET": {
+    "mandatory_propositions": 8,
+    "terminology": 6,
+    "compliance_sensitive": 2,
+    "assessment": 5,
+    "visual_subjects": 3,
+    "rumusan_beats": 3,
+    "ambiguities": 2,
+    "dialogue": 1,
+    "pattern": 1
+  },
+  "observed_counts_OBSERVED": {
+    "mandatory_propositions": 8,
+    "terminology": 10,
+    "compliance_sensitive": 3,
+    "assessment": 5,
+    "visual_subjects": 5,
+    "rumusan_beats": 4,
+    "ambiguities": 3,
+    "dialogue": 1,
+    "pattern": 1
+  },
+  "floor_met_OBSERVED": {
+    "mandatory_propositions": true,
+    "terminology": true,
+    "compliance_sensitive": true,
+    "assessment": true,
+    "visual_subjects": true,
+    "rumusan_beats": true,
+    "ambiguities": true,
+    "dialogue": true,
+    "pattern": true
+  },
+  "assessment_composition_OBSERVED": {
+    "multiple_choice": 4,
+    "multiple_response": 1,
+    "total": 5,
+    "required_TARGET": "4 MULTIPLE_CHOICE + 1 MULTIPLE_RESPONSE",
+    "exactly_five": true,
+    "composition_ok": true
+  },
+  "row_trace_OBSERVED": {
+    "every_cited_row_exists": true,
+    "unresolved_row_citations": [],
+    "distinct_cited_rows": 31
+  },
+  "authority_posture_OBSERVED": {
+    "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+    "does_not_override_live_instructional_authority": true,
+    "posture_ok": true
+  },
+  "forbidden_wording_OBSERVED": {
+    "scanned_tokens": [
+      "PENDING_BARIAH",
+      "Pakej_Keputusan_Corak",
+      "pending_pattern_package",
+      "nothing_frozen",
+      "frozen_nothing",
+      "pending Bariah",
+      "Bariah pending"
+    ],
+    "hits": [],
+    "clean": true
+  },
+  "source_discipline": {
+    "controlled_row_ids_preserved": true,
+    "source_anomalies_recorded_not_repaired": true,
+    "note": "Typos/spelling variants and structural/table copy-paste anomalies are logged in the ambiguities register with resolution=RECORDED_NOT_SILENTLY_CORRECTED / PENDING_UNIT_EXCEPTION_REVIEW, never silently reconciled."
+  },
+  "live_authority_reference": {
+    "path": "docs/pl06/contracts/k5_instructional_authority_v1.json",
+    "git_blob_sha1": "66ec8eb3c55c96db6245fe7e604930252d80917c",
+    "captured_at_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+    "handling": "REFERENCED_NOT_RESTATED"
+  },
+  "lane_self_check_OBSERVED": "PASS",
+  "live_analysis_integration_OBSERVED": "NOT_RUN",
+  "independent_content_review_OBSERVED": "NOT_RUN",
+  "status_note": "Lane self-check only. SOURCE_ANALYSIS_COMPLETE is NOT claimed; integration and independent content review are separate lanes and have NOT_RUN here."
+}
