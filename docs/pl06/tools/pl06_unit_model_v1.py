@@ -27,6 +27,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PL06 = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import pl06_extract_v1 as EX   # noqa: E402
+import copy
+import hashlib
+from pathlib import Path
 
 STAGE = "4.2F-C"
 AUTHORITY = "SRC-AUTH-01"
@@ -682,6 +685,377 @@ UNIT_ANALYSIS = {
                  resolution="RECORDED_NOT_SILENTLY_CORRECTED"),
         ]),
 }
+
+# BEGIN PL06 SOURCE ANALYSIS INTEGRATION
+_SOURCE_ANALYSIS_EXPECTED_IDS = (
+    "K5-PL06-T01-B01",
+    "K5-PL06-T01-B02",
+    "K5-PL06-T01-B03",
+    "K5-PL06-T02-B01",
+    "K5-PL06-T02-B02",
+    "K5-PL06-T03-B01",
+    "K5-PL06-T03-B05",
+    "K5-PL06-T07-B01",
+)
+
+_SOURCE_ANALYSIS_LIST_FIELDS = {
+    "mandatory_propositions": "propositions",
+    "terminology": "terms",
+    "compliance_sensitive": "statements",
+    "ambiguities": "items",
+    "visual_subjects": "subjects",
+    "rumusan_beats": "beats",
+    "assessment": "items",
+}
+
+_SOURCE_ANALYSIS_DIR = (
+    Path(__file__).resolve().parents[1] / "unit_analysis"
+)
+
+
+def _source_analysis_values(value, key):
+    found = []
+
+    if isinstance(value, dict):
+        for current_key, child in value.items():
+            if current_key == key:
+                found.append(child)
+
+            found.extend(
+                _source_analysis_values(child, key)
+            )
+
+    elif isinstance(value, list):
+        for child in value:
+            found.extend(
+                _source_analysis_values(child, key)
+            )
+
+    return found
+
+
+def _source_analysis_project_list(
+    record,
+    field,
+    wrapper_key,
+):
+    value = record.get(field)
+
+    if isinstance(value, list):
+        return copy.deepcopy(value)
+
+    if isinstance(value, dict):
+        projected = value.get(wrapper_key)
+
+        if not isinstance(projected, list):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_FIELD_NOT_PROJECTABLE:"
+                f"{field}.{wrapper_key}"
+            )
+
+        declared_count = value.get("count")
+
+        if (
+            isinstance(declared_count, int)
+            and declared_count != len(projected)
+        ):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_DECLARED_COUNT_MISMATCH:"
+                f"{field}:DECLARED={declared_count}:"
+                f"OBSERVED={len(projected)}"
+            )
+
+        return copy.deepcopy(projected)
+
+    raise RuntimeError(
+        "SOURCE_ANALYSIS_FIELD_NOT_PROJECTABLE:"
+        f"{field}:TYPE={type(value).__name__}"
+    )
+
+
+def _source_analysis_project_record(record):
+    projected = copy.deepcopy(record)
+
+    for field, wrapper_key in (
+        _SOURCE_ANALYSIS_LIST_FIELDS.items()
+    ):
+        projected[field] = _source_analysis_project_list(
+            record,
+            field,
+            wrapper_key,
+        )
+
+    dialogue = record.get("dialogue")
+
+    if not isinstance(dialogue, dict):
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_DIALOGUE_NOT_OBJECT"
+        )
+
+    if not dialogue.get("verdict"):
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_DIALOGUE_VERDICT_ABSENT"
+        )
+
+    if not dialogue.get("reason"):
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_DIALOGUE_REASON_ABSENT"
+        )
+
+    projected["dialogue"] = copy.deepcopy(dialogue)
+
+    pattern = record.get("pattern")
+
+    if not isinstance(pattern, dict):
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_PATTERN_NOT_OBJECT"
+        )
+
+    primary = (
+        pattern.get("primary")
+        or pattern.get("primary_candidate")
+    )
+    secondary = (
+        pattern.get("secondary")
+        or pattern.get("secondary_candidate")
+    )
+    reason = pattern.get("reason")
+
+    if not primary:
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_PATTERN_PRIMARY_ABSENT"
+        )
+
+    if not secondary:
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_PATTERN_SECONDARY_ABSENT"
+        )
+
+    if not reason:
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_PATTERN_REASON_ABSENT"
+        )
+
+    projected_pattern = copy.deepcopy(pattern)
+    projected_pattern["primary"] = primary
+    projected_pattern["secondary"] = secondary
+    projected_pattern["reason"] = reason
+    projected["pattern"] = projected_pattern
+
+    for index, item in enumerate(
+        projected["assessment"]
+    ):
+        if not isinstance(item, dict):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_ASSESSMENT_ITEM_NOT_OBJECT:"
+                f"{index}"
+            )
+
+        for key in (
+            "kind",
+            "stem",
+            "correct",
+            "correct_rows",
+            "distractors",
+        ):
+            if key not in item:
+                raise RuntimeError(
+                    "SOURCE_ANALYSIS_ASSESSMENT_FIELD_ABSENT:"
+                    f"{index}:{key}"
+                )
+
+    return projected
+
+
+def _load_source_analysis_records():
+    expected_ids = set(
+        _SOURCE_ANALYSIS_EXPECTED_IDS
+    )
+
+    files = sorted(
+        _SOURCE_ANALYSIS_DIR.glob(
+            "*_UNIT_ANALYSIS_v1.json"
+        )
+    )
+
+    if len(files) != len(expected_ids):
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_FILE_COUNT_MISMATCH:"
+            f"EXPECTED={len(expected_ids)}:"
+            f"OBSERVED={len(files)}"
+        )
+
+    projected_records = {}
+    metadata = {}
+
+    for path in files:
+        raw = path.read_bytes()
+        source_sha256 = hashlib.sha256(raw).hexdigest()
+        record = json.loads(raw)
+        unit_id = record.get("unit_id")
+
+        filename_unit_id = (
+            path.name
+            .removesuffix(
+                "_UNIT_ANALYSIS_v1.json"
+            )
+            .replace("_", "-")
+        )
+
+        if unit_id != filename_unit_id:
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_FILENAME_ID_MISMATCH:"
+                f"FILE={path.name}:"
+                f"UNIT_ID={unit_id}:"
+                f"EXPECTED={filename_unit_id}"
+            )
+
+        if unit_id not in expected_ids:
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_UNEXPECTED_UNIT:"
+                f"{unit_id}"
+            )
+
+        if unit_id in projected_records:
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_DUPLICATE_UNIT:"
+                f"{unit_id}"
+            )
+
+        validation_path = path.with_name(
+            path.name.replace(
+                "_UNIT_ANALYSIS_v1.json",
+                "_ANALYSIS_VALIDATION_v1.json",
+            )
+        )
+
+        if not validation_path.is_file():
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_VALIDATION_MISSING:"
+                f"{unit_id}"
+            )
+
+        validation = json.loads(
+            validation_path.read_text(
+                encoding="utf-8"
+            )
+        )
+
+        validated_hashes = (
+            _source_analysis_values(
+                validation,
+                "validated_record_sha256",
+            )
+        )
+
+        if source_sha256 not in validated_hashes:
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_VALIDATION_HASH_MISMATCH:"
+                f"{unit_id}:"
+                f"OBSERVED={source_sha256}:"
+                f"VALIDATED={validated_hashes}"
+            )
+
+        if "PASS" not in _source_analysis_values(
+            validation,
+            "lane_self_check_OBSERVED",
+        ):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_SELF_CHECK_NOT_PASS:"
+                f"{unit_id}"
+            )
+
+        if "SOURCE_ANALYSIS_ONLY" not in (
+            _source_analysis_values(
+                record,
+                "analysis_scope",
+            )
+        ):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_SCOPE_INVALID:"
+                f"{unit_id}"
+            )
+
+        if (
+            "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE"
+            not in _source_analysis_values(
+                record,
+                "authority_application",
+            )
+        ):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_AUTHORITY_APPLICATION_INVALID:"
+                f"{unit_id}"
+            )
+
+        if True not in _source_analysis_values(
+            record,
+            (
+                "does_not_override_live_"
+                "instructional_authority"
+            ),
+        ):
+            raise RuntimeError(
+                "SOURCE_ANALYSIS_OVERRIDE_FLAG_INVALID:"
+                f"{unit_id}"
+            )
+
+        projected_records[unit_id] = (
+            _source_analysis_project_record(record)
+        )
+
+        metadata[unit_id] = {
+            "source_record": str(
+                path.relative_to(
+                    Path(__file__).resolve().parents[3]
+                )
+            ),
+            "validation_record": str(
+                validation_path.relative_to(
+                    Path(__file__).resolve().parents[3]
+                )
+            ),
+            "validated_record_sha256": source_sha256,
+        }
+
+    observed_ids = set(projected_records)
+
+    if observed_ids != expected_ids:
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_ID_SET_MISMATCH:"
+            f"MISSING={sorted(expected_ids - observed_ids)}:"
+            f"EXTRA={sorted(observed_ids - expected_ids)}"
+        )
+
+    overlap = set(UNIT_ANALYSIS) & observed_ids
+
+    if overlap:
+        raise RuntimeError(
+            "SOURCE_ANALYSIS_OVERWRITES_STATIC_ANALYSIS:"
+            f"{sorted(overlap)}"
+        )
+
+    return projected_records, metadata
+
+
+STATIC_UNIT_ANALYSIS_IDS = tuple(
+    sorted(UNIT_ANALYSIS)
+)
+
+(
+    _SOURCE_ANALYSIS_PROJECTED,
+    SOURCE_ANALYSIS_IMPORT_METADATA,
+) = _load_source_analysis_records()
+
+SOURCE_ANALYSIS_IMPORTED_IDS = tuple(
+    sorted(_SOURCE_ANALYSIS_PROJECTED)
+)
+
+UNIT_ANALYSIS.update(
+    _SOURCE_ANALYSIS_PROJECTED
+)
+# END PL06 SOURCE ANALYSIS INTEGRATION
+
 
 
 # ==========================================================================================
