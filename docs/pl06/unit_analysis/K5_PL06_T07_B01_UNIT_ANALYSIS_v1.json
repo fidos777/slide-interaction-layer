@@ -1,0 +1,420 @@
+{
+  "artifact": "PL06_UNIT_SOURCE_ANALYSIS",
+  "artifact_version": "v1",
+  "lane": "S1_SOURCE_ANALYSIS",
+  "stage": "4.2F-C",
+  "unit_id": "K5-PL06-T07-B01",
+  "lesson_title": "Demobilisasi",
+  "topik": 7,
+  "bahagian": 1,
+  "authority_inherited": "SRC-AUTH-01",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T07_B01_SOURCE_EXTRACT_v1.json",
+  "controlled_rows_in_unit": 66,
+  "controlled_rows_read": 66,
+  "every_cited_row_exists_in_extract": true,
+  "cited_row_count": 42,
+  "authorship": "HAND_AUTHORED_CAIR_FROM_CONTROLLED_ROWS",
+  "classification_vocabulary": [
+    "SOURCE_DERIVED",
+    "CAIR_PROPOSAL",
+    "COURSE_RULE_ALREADY_APPROVED",
+    "PENDING_BARIAH_PATTERN_DECISION",
+    "PENDING_UNIT_EXCEPTION_REVIEW"
+  ],
+  "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
+  "analysis_contract": {
+    "reference": "docs/pl06/packets/PL06_ANALYSIS_GAP_MATRIX_v0_1.md",
+    "note": "Fields and floors are the live analysis contract from the gap matrix. Every traced item cites the controlled row(s) that carry it. No PPTX, no generation, no answer-key approval, no authority invented."
+  },
+  "isolation_note": "Isolated per-unit record. Not added to the shared UNIT_ANALYSIS dict in docs/pl06/tools/pl06_unit_model_v1.py, which was left unedited by instruction. No per-unit analysis-file convention existed, so this is an isolated JSON file.",
+  "assessment_key_status": "DRAFTED_NOT_APPROVED",
+  "assessment_key_authority": "NONE — stems and distractors are CAIR proposals; only the correct response is SOURCE_DERIVED and cites its rows",
+  "mandatory_propositions": [
+    {
+      "proposition": "Semua peralatan dan jentera berat yang digunakan sepanjang projek perlu dikeluarkan dari tapak; peralatan sewa dikembalikan kepada pembekal dan peralatan syarikat dipindahkan ke depoh atau projek seterusnya.",
+      "rows": [
+        "T07B01-ROW-015"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Semua peralatan mesti berada dalam keadaan bersih dan berfungsi sebelum dikeluarkan, jadual pengangkutan perlu diselaraskan, dan peralatan sewa perlu diperiksa bersama pembekal untuk mengelakkan pertikaian kerosakan.",
+      "rows": [
+        "T07B01-ROW-021"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kontraktor perlu mematuhi Peraturan Kualiti Alam Sekeliling (Buangan Terjadual) jika ada sisa berbahaya dan peraturan pengurusan sisa pepejal perbandaran, serta menguruskan pengangkutan sisa oleh syarikat yang berlesen.",
+      "rows": [
+        "T07B01-ROW-028"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Piawaian kebersihan mesti ditetapkan dalam kontrak, dan tapak perlu bebas daripada semua sisa pembinaan, kesan kotoran dan debu.",
+      "rows": [
+        "T07B01-ROW-036"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kemudahan sementara — pejabat tapak, stor, tandas mudah alih, pagar keselamatan, papan tanda projek — perlu dibongkar dan dikeluarkan.",
+      "rows": [
+        "T07B01-ROW-038"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kawasan tempat kemudahan sementara didirikan perlu dipulihkan, contohnya menanam semula rumput jika tanah rosak.",
+      "rows": [
+        "T07B01-ROW-045"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Kawasan yang dipulihkan perlu sepadan dengan landskap sekitarnya dan mematuhi piawaian pemulihan alam sekitar.",
+      "rows": [
+        "T07B01-ROW-053"
+      ],
+      "cls": "SOURCE_DERIVED"
+    },
+    {
+      "proposition": "Semua senarai semak demobilisasi mesti diisi dan ditandatangani, dan dokumentasi yang lengkap serta tepat perlu disediakan.",
+      "rows": [
+        "T07B01-ROW-063"
+      ],
+      "cls": "SOURCE_DERIVED"
+    }
+  ],
+  "terminology": [
+    {
+      "term": "Demobilisasi (penutupan dan pengosongan tapak selepas projek)",
+      "rows": [
+        "T07B01-ROW-001",
+        "T07B01-ROW-015"
+      ]
+    },
+    {
+      "term": "Low-loader / treler pengangkut jentera berat",
+      "rows": [
+        "T07B01-ROW-017"
+      ]
+    },
+    {
+      "term": "Skid-steer loader dan mini excavator",
+      "rows": [
+        "T07B01-ROW-018",
+        "T07B01-ROW-017"
+      ]
+    },
+    {
+      "term": "Filling material (sisa tanah/batuan earthmound untuk projek lain)",
+      "rows": [
+        "T07B01-ROW-024"
+      ]
+    },
+    {
+      "term": "Buangan Terjadual (scheduled / hazardous waste)",
+      "rows": [
+        "T07B01-ROW-028"
+      ]
+    },
+    {
+      "term": "Skip bins / tong sampah industri",
+      "rows": [
+        "T07B01-ROW-028"
+      ]
+    },
+    {
+      "term": "Final Site Inspection / Pemeriksaan Tapak Akhir",
+      "rows": [
+        "T07B01-ROW-056"
+      ]
+    },
+    {
+      "term": "Pelan as-built / pelan seperti yang dibina",
+      "rows": [
+        "T07B01-ROW-059"
+      ]
+    }
+  ],
+  "compliance_sensitive": [
+    {
+      "statement": "Pematuhan kepada Peraturan Kualiti Alam Sekeliling (Buangan Terjadual) untuk sisa berbahaya dan peraturan sisa pepejal perbandaran, dengan pengangkutan sisa oleh syarikat berlesen — satu peraturan yang dinamakan dengan akibat undang-undang.",
+      "rows": [
+        "T07B01-ROW-028"
+      ],
+      "why": "NAMED_ENVIRONMENTAL_REGULATION"
+    },
+    {
+      "statement": "Piawaian kebersihan dan penerimaan tapak ditetapkan dalam kontrak, dengan senarai semak demobilisasi yang mesti ditandatangani — satu kewajipan kontraktual pada penyerahan.",
+      "rows": [
+        "T07B01-ROW-036",
+        "T07B01-ROW-063"
+      ],
+      "why": "CONTRACTUAL_OBLIGATION"
+    },
+    {
+      "statement": "Peralatan sewa diperiksa bersama pembekal sebelum dikeluarkan untuk mengelakkan pertikaian kerosakan — satu pendedahan liabiliti kontraktual dengan pihak ketiga.",
+      "rows": [
+        "T07B01-ROW-021"
+      ],
+      "why": "THIRD_PARTY_LIABILITY_EXPOSURE"
+    }
+  ],
+  "assessment": {
+    "composition": "4 Multiple Choice + 1 Multiple Response",
+    "composition_cls": "COURSE_RULE_ALREADY_APPROVED",
+    "items": [
+      {
+        "slot": "Q1",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Apakah langkah pertama dan paling jelas dalam proses demobilisasi?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Pengeluaran semua peralatan dan jentera berat dari tapak, dengan penyenaraian dan pemeriksaan setiap satu.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T07B01-ROW-015"
+        ],
+        "distractors": [
+          "Penyerahan invois terakhir kepada pelanggan",
+          "Menanam semula rumput di kawasan yang dipadatkan",
+          "Menyerahkan pelan as-built kepada jurutera landskap"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q2",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Bagaimanakah peralatan sewa dibezakan daripada peralatan syarikat semasa demobilisasi?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Peralatan sewa dikembalikan kepada pembekal, manakala peralatan syarikat dipindahkan ke depoh atau ke tapak projek seterusnya.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T07B01-ROW-015"
+        ],
+        "distractors": [
+          "Kedua-duanya dijual sebagai bahan terpakai selepas projek",
+          "Kedua-duanya dihantar ke tapak pelupusan yang diluluskan",
+          "Peralatan sewa disimpan di gudang, peralatan syarikat dibuang"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q3",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Peraturan manakah yang mesti dipatuhi kontraktor apabila melupuskan sisa binaan yang berbahaya semasa demobilisasi?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Peraturan Kualiti Alam Sekeliling (Buangan Terjadual), dengan pengangkutan sisa oleh syarikat yang berlesen.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T07B01-ROW-028"
+        ],
+        "distractors": [
+          "Peraturan Pemasangan Elektrik Voltan Rendah",
+          "Piawaian Ukur Sempadan Tanah Nasional",
+          "Kod Amalan Pencahayaan Landskap Waktu Malam"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q4",
+        "kind": "MULTIPLE_CHOICE",
+        "stem": "Mengapakah perancangan demobilisasi yang awal dan teliti penting?",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": "Ia mengelakkan kos yang tidak dijangka, menjamin kelancaran penutupan projek, dan memelihara reputasi baik kontraktor.",
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T07B01-ROW-065"
+        ],
+        "distractors": [
+          "Ia membolehkan kontraktor melewatkan penyerahan dokumentasi",
+          "Ia menggantikan keperluan pemeriksaan tapak akhir",
+          "Ia mengurangkan bilangan zon pengairan yang perlu diuji"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      },
+      {
+        "slot": "Q5",
+        "kind": "MULTIPLE_RESPONSE",
+        "stem": "Pilih SEMUA kemudahan sementara yang perlu dibongkar dan dikeluarkan semasa penyingkiran kemudahan sementara.",
+        "stem_cls": "CAIR_PROPOSAL",
+        "correct": [
+          "Pejabat tapak (kabin mudah alih)",
+          "Stor bahan sementara",
+          "Tandas mudah alih",
+          "Pagar keselamatan sementara",
+          "Papan tanda projek"
+        ],
+        "correct_cls": "SOURCE_DERIVED",
+        "correct_rows": [
+          "T07B01-ROW-038",
+          "T07B01-ROW-040",
+          "T07B01-ROW-041",
+          "T07B01-ROW-042",
+          "T07B01-ROW-043"
+        ],
+        "distractors": [
+          "Dinding penahan kekal yang dibina untuk landskap",
+          "Sistem pengairan automatik yang diserahkan kepada klien"
+        ],
+        "distractors_cls": "CAIR_PROPOSAL"
+      }
+    ]
+  },
+  "visual_subjects": [
+    {
+      "subject": "Lima tujuan demobilisasi: keselamatan tapak, kepatuhan kontrak, pengurangan kos, pemulihan alam sekitar, pengurusan logistik",
+      "rows": [
+        "T07B01-ROW-003",
+        "T07B01-ROW-005",
+        "T07B01-ROW-007",
+        "T07B01-ROW-009",
+        "T07B01-ROW-011"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Jujukan proses demobilisasi: pengeluaran jentera, pembuangan sisa, pembersihan akhir, penyingkiran kemudahan sementara, pemulihan tapak, penyerahan dan dokumentasi",
+      "rows": [
+        "T07B01-ROW-014",
+        "T07B01-ROW-022",
+        "T07B01-ROW-029",
+        "T07B01-ROW-037",
+        "T07B01-ROW-046",
+        "T07B01-ROW-054"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Aliran pembuangan sisa mengikut jenis dan destinasi: sisa tanah -> pelupusan/filling, sisa tanaman -> kompos, sisa binaan -> kitar semula",
+      "rows": [
+        "T07B01-ROW-024",
+        "T07B01-ROW-025",
+        "T07B01-ROW-026"
+      ],
+      "has_source_figure": false
+    },
+    {
+      "subject": "Destinasi contoh jentera: mini excavator -> depoh Shah Alam, skid-steer -> projek Cyberjaya, pam air -> gudang peralatan",
+      "rows": [
+        "T07B01-ROW-017",
+        "T07B01-ROW-018",
+        "T07B01-ROW-019"
+      ],
+      "has_source_figure": false
+    }
+  ],
+  "rumusan_beats": [
+    "Demobilisasi dan lima tujuannya: keselamatan tapak, kepatuhan kontrak, pengurangan kos, pemulihan alam sekitar dan pengurusan logistik aset.",
+    "Enam langkah proses demobilisasi, dari pengeluaran jentera hingga penyerahan dan dokumentasi.",
+    "Pengurusan sisa mengikut jenis dan mengikut Peraturan Buangan Terjadual, dengan pengangkutan oleh syarikat berlesen.",
+    "Penyerahan projek: pemeriksaan tapak akhir bersama pelanggan, dokumentasi (waranti, manual, as-built), dan penyelesaian pembayaran.",
+    "Perancangan demobilisasi yang awal mengelakkan kos tidak dijangka dan menjaga reputasi kontraktor."
+  ],
+  "pattern": {
+    "primary": "progressive process",
+    "secondary": "click-to-reveal",
+    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "reason": "The core of the unit is an ordered process — the source names equipment removal as 'langkah pertama' and walks through disposal, final cleanup, temporary-facility removal, restoration and handover in sequence. That is what progressive process fits. The five purposes of demobilisation and each step's worked 'Contoh' are the click-to-reveal secondary.",
+    "vocabulary": [
+      "static content",
+      "click-to-reveal",
+      "progressive process",
+      "comparison",
+      "scenario/dialogue only where justified"
+    ]
+  },
+  "dialogue": {
+    "verdict": "NOT_JUSTIFIED",
+    "cls": "CAIR_PROPOSAL",
+    "reason": "A procedural closeout with worked examples but no decision, conflict or judgement call between parties. The final site inspection brings the contractor, landscape engineer and client together (ROW-057), which is the only scenario-shaped moment, but it is a sign-off, not a decision with competing stakes. AR-06 allows a dialogue only where justified; this does not clear that bar.",
+    "note": "SUP-03: retained as evidence, not a gate. E1 makes S02 a dialogue regardless of this verdict."
+  },
+  "ambiguities": [
+    {
+      "item": "The 'Contoh' and 'Spesifikasi' block markers are styled inconsistently across the six process steps — sometimes PARAGRAPH (ROW-016 'Contoh', ROW-020 'Spesifikasi'), sometimes LIST_ITEM (ROW-023, ROW-027), and once 'Spesifikasi' is a HEADING_3 (ROW-062). A parser keyed on content_type cannot reliably find where each step's example or specification begins.",
+      "rows": [
+        "T07B01-ROW-016",
+        "T07B01-ROW-020",
+        "T07B01-ROW-023",
+        "T07B01-ROW-062"
+      ],
+      "resolution": "Markers treated as structural labels by text, not by style; recorded for PENDING_UNIT_EXCEPTION_REVIEW"
+    },
+    {
+      "item": "'Penyerahan dan Dokumentasi' (ROW-054) is a HEADING_3 at the same level as the process steps, yet it contains three sub-blocks — 'Pemeriksaan Tapak Akhir', 'Dokumentasi', 'Penyelesaian Pembayaran' — that are ALSO HEADING_3. The hierarchy is flat in style but nested in meaning.",
+      "rows": [
+        "T07B01-ROW-054",
+        "T07B01-ROW-056",
+        "T07B01-ROW-058",
+        "T07B01-ROW-060"
+      ],
+      "resolution": "heading_path retains the intended nesting; the flat style is recorded, not corrected"
+    },
+    {
+      "item": "'Contoh' under 'Penyerahan dan Dokumentasi' (ROW-055) is an orphan marker — no example rows follow it; the next rows are the three sub-blocks. The step promises an example the source never supplies.",
+      "rows": [
+        "T07B01-ROW-055"
+      ],
+      "resolution": "MISSING_SOURCE_REGISTER — recorded as an empty example slot, not filled in"
+    },
+    {
+      "item": "The section heading is misspelled 'Proses Demoblisasi' (ROW-013, missing an 'i') and 'Kepentingan Perancangan  Demobilisasi' carries a double space (ROW-064).",
+      "rows": [
+        "T07B01-ROW-013",
+        "T07B01-ROW-064"
+      ],
+      "resolution": "RECORDED_NOT_SILENTLY_CORRECTED"
+    }
+  ],
+  "contract_coverage": {
+    "mandatory_propositions": {
+      "count": 8,
+      "floor": 8,
+      "meets": true
+    },
+    "terminology": {
+      "count": 8,
+      "floor": 6,
+      "meets": true
+    },
+    "compliance_sensitive": {
+      "count": 3,
+      "floor": 2,
+      "meets": true
+    },
+    "assessment": {
+      "count": 5,
+      "floor": 5,
+      "meets": true
+    },
+    "visual_subjects": {
+      "count": 4,
+      "floor": 3,
+      "meets": true
+    },
+    "rumusan_beats": {
+      "count": 5,
+      "floor": 3,
+      "meets": true
+    },
+    "ambiguities": {
+      "count": 4,
+      "floor": 2,
+      "meets": true
+    },
+    "dialogue": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    },
+    "pattern": {
+      "count": 1,
+      "floor": 1,
+      "meets": true
+    }
+  },
+  "all_contract_floors_met": true
+}
