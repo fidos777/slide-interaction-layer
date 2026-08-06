@@ -34,22 +34,21 @@
       "SOURCE_DERIVED": "read off the extract, with the row IDs to check it",
       "CAIR_PROPOSAL": "ours; reject it freely",
       "COURSE_RULE_ALREADY_APPROVED": "a rule that already applies course-wide",
-      "PENDING_BARIAH_PATTERN_DECISION": "waits on the pattern package now under review",
-      "PENDING_UNIT_EXCEPTION_REVIEW": "this unit does not fit the general shape"
+      "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER": "an analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane; not an authority application",
+      "PENDING_UNIT_EXCEPTION_REVIEW": "this unit does not fit the general shape (a source-fit deferral, not an authority hold)"
     },
-    "nothing_frozen": [
-      "screen count",
-      "sequence",
-      "dialogue",
-      "Rumusan form",
-      "pattern family",
-      "assessment key",
-      "visual reuse"
-    ],
-    "pending_pattern_package": "K5_Pakej_Keputusan_Corak_Bariah_Kelompok0_v1_2.docx",
-    "pattern_package_is_not_authority": true,
+    "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+    "does_not_override_live_instructional_authority": true,
+    "live_authority_reference": {
+      "path": "docs/pl06/contracts/k5_instructional_authority_v1.json",
+      "git_blob_sha1": "66ec8eb3c55c96db6245fe7e604930252d80917c",
+      "captured_at_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+      "handling": "REFERENCED_NOT_RESTATED",
+      "note": "The live instructional authority is active at execution time. This lane references it by path+blob and does not copy, apply or override its rules; authority application is the integration lane's job."
+    },
     "committed_to_shared_unit_analysis": false,
-    "note": "Every claim carries a classification. SOURCE_DERIVED claims cite the rows to check them. Distractors, screen/pattern/dialogue treatments are proposals only; no answer key is approved here."
+    "note": "Every claim carries a classification. SOURCE_DERIVED claims cite the rows to check them. Distractors and analyst pattern/dialogue readings are proposals for the shared resolver; no answer key is approved here. This record neither states nor implies any instructional-authority hold."
   },
   "analysis_contract": {
     "floors": {
@@ -472,15 +471,15 @@
     "cls": "CAIR_PROPOSAL",
     "verdict": "NOT_JUSTIFIED",
     "reason": "Unit ini ialah inventori sumber (manusia, jentera, bahan, penanaman) diikuti dokumentasi, aliran tunai, dan prosedur T&C. Tiada keputusan, konflik, atau pertimbangan yang boleh dijadikan senario. AR-06 membenarkan dialog hanya di mana justified, dan tiada apa-apa di sini yang mewajarkannya.",
-    "cast": "NO_CHARACTER_PROPOSED_STOP_006_OPEN",
-    "cast_cls": "PENDING_BARIAH_PATTERN_DECISION"
+    "cast": "NO_CHARACTER_PROPOSED",
+    "cast_cls": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE"
   },
   "pattern": {
-    "cls": "PENDING_BARIAH_PATTERN_DECISION",
+    "cls": "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER",
     "primary_candidate": "click-to-reveal",
     "secondary_candidate": "progressive process",
     "reason": "Empat kategori sumber, setiap satu senarai selari — bentuk yang sesuai dengan click-to-reveal. T&C setiap utiliti (air, elektrik, saliran) dan aliran tunai masuk/keluar ialah jujukan yang membaca sebagai progressive process.",
-    "note": "Named as candidates only; the pattern package is still with Bariah and is not authority."
+    "note": "An analyst reading of the source's interaction shape, offered to the shared resolver in the integration lane. This lane does not apply or override instructional authority."
   },
   "ambiguities": {
     "cls": "SOURCE_DERIVED",
