@@ -1,0 +1,85 @@
+{
+  "artifact": "PL06_UNIT_ANALYSIS_VALIDATION",
+  "artifact_version": "v1",
+  "lane": "S3_SOURCE_ANALYSIS",
+  "unit_id": "K5-PL06-T07-B01",
+  "validates_record": "docs/pl06/unit_analysis/K5_PL06_T07_B01_UNIT_ANALYSIS_v1.json",
+  "validated_record_sha256": "e2276caaee7a7d61f3b5b981e9a076fa488479952bd13f43f0034d8c88d59fcf",
+  "source_extract": "docs/pl06/rest_extract/K5_PL06_T07_B01_SOURCE_EXTRACT_v1.json",
+  "analysis_scope": "SOURCE_ANALYSIS_ONLY",
+  "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
+  "does_not_override_live_instructional_authority": true,
+  "controlled_rows_in_unit": 66,
+  "lane_self_check": {
+    "row_trace_all_cited_rows_exist": true,
+    "cited_row_count": 42,
+    "contract_floors": {
+      "mandatory_propositions": {
+        "count": 8,
+        "floor": 8,
+        "meets": true
+      },
+      "terminology": {
+        "count": 8,
+        "floor": 6,
+        "meets": true
+      },
+      "compliance_sensitive": {
+        "count": 3,
+        "floor": 2,
+        "meets": true
+      },
+      "assessment": {
+        "count": 5,
+        "floor": 5,
+        "meets": true
+      },
+      "visual_subjects": {
+        "count": 4,
+        "floor": 3,
+        "meets": true
+      },
+      "rumusan_beats": {
+        "count": 5,
+        "floor": 3,
+        "meets": true
+      },
+      "ambiguities": {
+        "count": 4,
+        "floor": 2,
+        "meets": true
+      }
+    },
+    "all_floors_met": true,
+    "assessment_composition": {
+      "total": 5,
+      "multiple_choice": 4,
+      "multiple_response": 1,
+      "every_item_has_correct_rows": true,
+      "ok": true
+    },
+    "pattern_fields_present": true,
+    "dialogue_fields_present": true,
+    "authority_deferral_fields_present": true,
+    "forbidden_wording": {
+      "normalised_phrases_checked": 6,
+      "all_absent": true,
+      "note": "Literal forbidden strings are intentionally not reproduced in this file; only the pass/fail is recorded."
+    }
+  },
+  "lane_self_check_OBSERVED": "PASS",
+  "live_analysis_integration_OBSERVED": "NOT_RUN",
+  "independent_content_review_OBSERVED": "NOT_RUN",
+  "counts": {
+    "controlled_rows": 66,
+    "cited_rows": 42,
+    "mandatory_propositions": 8,
+    "terminology": 8,
+    "compliance_sensitive": 3,
+    "assessment_items": 5,
+    "visual_subjects": 4,
+    "rumusan_beats": 5,
+    "ambiguities": 4
+  },
+  "source_analysis_complete_claim": "NOT_CLAIMED"
+}
