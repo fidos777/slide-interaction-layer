@@ -70,13 +70,19 @@ def gate_a1(repo):
     check("A1.record_count_is_11", len(recs) == 11 == obs_meta["record_count"])
     check("A1.b03_absent", all(r["unit_id"] != B03_UNIT for r in recs))
 
-    # TARGET vs OBSERVED: pinned commit + controlling-module blob, observed via git now
-    obs_commit = C.execution_commit(repo)
-    obs_blob = C.blob_sha1(repo, TARGET_A1_MODULE)
-    check("A1.TARGET_base_commit==OBSERVED", obs_commit == TARGET_BASE_COMMIT,
-          f"OBSERVED {obs_commit}")
-    check("A1.TARGET_module_blob==OBSERVED", obs_blob == TARGET_A1_MODULE_BLOB,
-          f"OBSERVED {obs_blob}")
+    # TARGET vs OBSERVED (HEAD-independent provenance): the baseline was captured at
+    # BASE, BASE is in this branch's history, and the controlling module the baseline
+    # names is unchanged AT BASE. HEAD itself advances as the oracle and refactor land.
+    check("A1.baseline_captured_at_TARGET_base",
+          obs_meta["execution_commit"] == TARGET_BASE_COMMIT,
+          f"baseline {obs_meta['execution_commit']}")
+    check("A1.base_is_ancestor_of_HEAD",
+          C.is_ancestor(repo, TARGET_BASE_COMMIT, "HEAD"),
+          f"OBSERVED HEAD {C.execution_commit(repo)}")
+    base_blob = C.blob_at(repo, TARGET_BASE_COMMIT, TARGET_A1_MODULE)
+    check("A1.controlling_module_blob_at_base",
+          base_blob == TARGET_A1_MODULE_BLOB == obs_meta["controlling_module_blob_sha1"],
+          f"OBSERVED@base {base_blob}")
 
     # live parity (needs the module DOCX; skipped-with-notice when absent)
     live = None
@@ -131,12 +137,16 @@ def gate_a2(repo):
     check("A2.spans_tile_unit_disjointly",
           cov["covered_is_disjoint"] and cov["covers_all_rows_after_parent"])
 
-    obs_commit = C.execution_commit(repo)
-    obs_blob = C.blob_sha1(repo, TARGET_A2_EXTRACT)
-    check("A2.TARGET_base_commit==OBSERVED", obs_commit == TARGET_BASE_COMMIT,
-          f"OBSERVED {obs_commit}")
-    check("A2.extract_blob_matches_baseline", obs_blob == obs_meta["extract_blob_sha1"],
-          f"OBSERVED {obs_blob}")
+    check("A2.baseline_captured_at_TARGET_base",
+          obs_meta["execution_commit"] == TARGET_BASE_COMMIT,
+          f"baseline {obs_meta['execution_commit']}")
+    check("A2.base_is_ancestor_of_HEAD",
+          C.is_ancestor(repo, TARGET_BASE_COMMIT, "HEAD"),
+          f"OBSERVED HEAD {C.execution_commit(repo)}")
+    base_blob = C.blob_at(repo, TARGET_BASE_COMMIT, TARGET_A2_EXTRACT)
+    check("A2.controlling_extract_blob_at_base",
+          base_blob == obs_meta["extract_blob_sha1"],
+          f"OBSERVED@base {base_blob}")
 
     # -------------------------------------------------------------- biting fixtures (5)
     def rederive_hash(mrows):

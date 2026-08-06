@@ -69,6 +69,24 @@ def blob_sha1(repo, path_rel):
     return _git(["hash-object", path_rel], repo)
 
 
+def blob_at(repo, commit, path_rel):
+    """OBSERVED: the blob id a path had AT a given commit — `git rev-parse <c>:<p>`.
+
+    HEAD-independent provenance: it stays fixed as HEAD advances, so the gate can
+    prove the module/extract the baseline was captured from is unchanged at BASE
+    without requiring the working tree to still sit at BASE.
+    """
+    return _git(["rev-parse", f"{commit}:{path_rel}"], repo)
+
+
+def is_ancestor(repo, maybe_ancestor, ref="HEAD"):
+    """True when `maybe_ancestor` is an ancestor of `ref` (a commit is its own
+    ancestor). Confirms the capture point BASE is in this branch's history."""
+    r = subprocess.run(["git", "-C", repo, "merge-base", "--is-ancestor",
+                        maybe_ancestor, ref])
+    return r.returncode == 0
+
+
 def repo_root(start):
     """The worktree root that owns `start` — `git rev-parse --show-toplevel`."""
     return _git(["rev-parse", "--show-toplevel"], start)
