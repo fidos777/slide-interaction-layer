@@ -4,7 +4,7 @@
   "lane": "S1",
   "unit_id": "K5-PL06-T01-B01",
   "validates": "docs/pl06/unit_analysis/K5_PL06_T01_B01_UNIT_ANALYSIS_v1.json",
-  "validated_record_sha256": "a1dbb495eeb176dea0cba0519d35a01d52fc6b58cccdc4dafbe3e4e37bc96df8",
+  "validated_record_sha256": "649a4f9e2263d3c4c177471cec0c53d8420b0e0714b56f5109d36a2ca63d8ce0",
   "source_extract": "docs/pl06/rest_extract/K5_PL06_T01_B01_SOURCE_EXTRACT_v1.json",
   "source_extract_sha256": "0761463d360beca893238039d9d86615375a18e7ac1e733bf0a9ea8bbd542569",
   "controlled_rows_total": 258,
@@ -66,12 +66,21 @@
   "provenance_distinction": {
     "source_fact_cls": "SOURCE_DERIVED",
     "analyst_inference_and_proposed_learner_copy_cls": "CAIR_PROPOSAL",
-    "pending_authority_cls": [
-      "PENDING_BARIAH_PATTERN_DECISION",
-      "PENDING_UNIT_EXCEPTION_REVIEW"
-    ],
+    "analyst_pattern_reading_cls": "ANALYST_PATTERN_READING_FOR_SHARED_RESOLVER",
+    "source_fit_deferral_cls": "PENDING_UNIT_EXCEPTION_REVIEW",
+    "authority_application": "DEFERRED_TO_ANALYSIS_INTEGRATION_LANE",
     "answer_key_status": "DRAFTED_NOT_APPROVED"
   },
-  "determinism_note": "Record and this evidence are byte-deterministic from the frozen extract (no timestamps/RNG); rebuild reproduces identical bytes.",
-  "overall_OBSERVED": "PASS"
+  "live_authority_reference": {
+    "path": "docs/pl06/contracts/k5_instructional_authority_v1.json",
+    "git_blob_sha1": "66ec8eb3c55c96db6245fe7e604930252d80917c",
+    "captured_at_commit": "ebd6d81cf9c3b9e842d01d0b571ee16e32b5fb18",
+    "handling": "REFERENCED_NOT_RESTATED",
+    "note": "The live instructional authority is active at execution time. This lane references it by path+blob and does not copy, apply or override its rules; authority application is the integration lane's job."
+  },
+  "reproducibility_note": "WITHDRAWN CLAIM: the lane-local builder that generated this record is NOT part of committed repository state, so byte-identical reproduction from committed repository state alone is NOT claimed. Provenance rests on the committed record, this validation evidence, and source_extract_sha256.",
+  "lane_self_check_OBSERVED": "PASS",
+  "live_analysis_integration_OBSERVED": "NOT_RUN",
+  "independent_content_review_OBSERVED": "NOT_RUN",
+  "completion_claim": "NOT_CLAIMED — lane self-check only; full source-analysis completion is NOT asserted by this lane"
 }
